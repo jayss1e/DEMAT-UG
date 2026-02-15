@@ -1,0 +1,1019 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=prv_tarea1 2026.2.14)  14 FEB 2026 00:44
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**&prv_tarea1 /AUCTEXINPUT{ _region_.tex }
+(./_region_.tex
+Package csquotes Info: Checking for multilingual support...
+Package csquotes Info: ... found 'babel' package.
+Package csquotes Info: Adjusting default style.
+Package csquotes Info: Redefining alias 'default' -> 'spanish'.
+
+No file _region_.aux.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Info: Redefining \. on input line 13.
+LaTeX Info: Redefining \% on input line 13.
+Package babel Info: 'spanish' activates 'spanish' shorthands.
+(babel)             Reported on input line 13.
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(42.67912pt, 512.14963pt, 42.67912pt)
+* v-part:(T,H,B)=(42.67912pt, 759.6886pt, 42.67912pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=512.14963pt
+* \textheight=759.6886pt
+* \oddsidemargin=-29.59087pt
+* \evensidemargin=-29.59087pt
+* \topmargin=-66.59087pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=56.9055pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+(c:/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count381
+\scratchdimen=\dimen322
+\scratchbox=\box122
+\nofMPsegments=\count382
+\nofMParguments=\count383
+\everyMPshowfont=\toks56
+\MPscratchCnt=\count384
+\MPscratchDim=\dimen323
+\MPnumerator=\count385
+\makeMPintoPDFobject=\count386
+\everyMPtoPDFconversion=\toks57
+) (c:/texlive/2025/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (c:/texlive/2025/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+))
+Package pgfplots notification 'compat/show suggested version=true': you might benefit from \pgfplotsset{compat=1.18} (current compat level: 1.15).
+
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
+Package caption Info: End \AtBeginDocument code.
+\providecommand\hyper@newdestlabel[2]{}
+Package hyperref Info: Link coloring ON on input line 13.
+(c:/Users/Radoj/AppData/Roaming/.emacs.d/elpa/auctex-14.1.2/latex/preview.sty
+Package: preview 2024/06/30 14.0.6 (AUCTeX/preview-latex)
+ (c:/texlive/2025/texmf-dist/tex/generic/luatex85/luatex85.sty
+Package: luatex85 2016/06/15 v1.4 pdftex aliases for luatex
+) (c:/Users/Radoj/AppData/Roaming/.emacs.d/elpa/auctex-14.1.2/latex/prtightpage.def
+\PreviewBorder=\dimen324
+) (c:/Users/Radoj/AppData/Roaming/.emacs.d/elpa/auctex-14.1.2/latex/prauctex.def
+No auxiliary output files.
+
+
+\hbadness=\count387
+\hfuzz=\dimen325
+(c:/Users/Radoj/AppData/Roaming/.emacs.d/elpa/auctex-14.1.2/latex/prauctex.cfg)) (c:/Users/Radoj/AppData/Roaming/.emacs.d/elpa/auctex-14.1.2/latex/prfootnotes.def)
+\pr@snippet=\count388
+\pr@box=\box123
+\pr@output=\toks58
+
+Preview: Fontsize 12pt
+Preview: PDFoutput 1
+)  !name(tarea1.tex) !offset(-3) 
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 29.
+
+./_region_.tex:32: Preview: Snippet 1 started.
+<-><->
+      
+l.32             \item[(a)] $
+                             \vec{V}_{1}=\vec{u}_{x}(5)+\vec{u}_{y}(-2)+u_{z...
+Not a real error.
+
+Preview: Tightpage -32891 -32891 32891 32891
+./_region_.tex:32: Preview: Snippet 1 ended.(759342+219909x9558530).
+<-><->
+      
+l.32 ...}=\vec{u}_{x}(5)+\vec{u}_{y}(-2)+u_{z}(1)$
+                                                  
+Not a real error.
+
+[1{c:/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}]
+./_region_.tex:33: Preview: Snippet 2 started.
+<-><->
+      
+l.33             \item[(b)] $
+                             \vec{V}_{2}=\vec{u}_{x}(-3)+\vec{u}_{y}(1)+\vec...
+Not a real error.
+
+./_region_.tex:33: Preview: Snippet 2 ended.(759342+219909x10170201).
+<-><->
+      
+l.33 ...u}_{x}(-3)+\vec{u}_{y}(1)+\vec{u}_{z}(-7)$
+                                                  
+Not a real error.
+
+[2]
+./_region_.tex:34: Preview: Snippet 3 started.
+<-><->
+      
+l.34             \item[(c)] $
+                             \vec{V}_{3}=\vec{u}_{x}(4)+\vec{u}_{y}(7)+\vec{...
+Not a real error.
+
+./_region_.tex:34: Preview: Snippet 3 ended.(759342+219909x8946859).
+<-><->
+      
+l.34 ...c{u}_{x}(4)+\vec{u}_{y}(7)+\vec{u}_{z}(6)$
+                                                  
+Not a real error.
+
+[3]
+./_region_.tex:36: Preview: Snippet 4 started.
+<-><->
+      
+l.36 ...ante y los angulos que hace con los ejes $
+                                                  X,Y$ y $Z$.
+Not a real error.
+
+./_region_.tex:36: Preview: Snippet 4 ended.(537395+152916x1620999).
+<-><->
+      
+l.36 ... y los angulos que hace con los ejes $X,Y$
+                                                   y $Z$.
+Not a real error.
+
+[4]
+./_region_.tex:36: Preview: Snippet 5 started.
+<-><->
+      
+l.36 ...os angulos que hace con los ejes $X,Y$ y $
+                                                  Z$.
+Not a real error.
+
+./_region_.tex:36: Preview: Snippet 5 ended.(537395+0x583538).
+<-><->
+      
+l.36 ... angulos que hace con los ejes $X,Y$ y $Z$
+                                                  .
+Not a real error.
+
+[5]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 37.
+
+./_region_.tex:41: Preview: Snippet 6 started.
+<-><->
+      
+l.41         \begin{align*}
+                           
+Not a real error.
+
+./_region_.tex:43: Preview: Snippet 6 ended.(1140322+0x33111908).
+<-><->
+      
+l.43         \end{align*}
+                         
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 43.
+
+[6]
+./_region_.tex:45: Preview: Snippet 7 started.
+<-><->
+      
+l.45         \begin{align*}
+                           
+Not a real error.
+
+./_region_.tex:47: Preview: Snippet 7 ended.(1140322+0x19792057).
+<-><->
+      
+l.47         \end{align*}
+                         
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 47.
+
+[7]
+./_region_.tex:49: Preview: Snippet 8 started.
+<-><->
+      
+l.49         \begin{align*}
+                           
+Not a real error.
+
+./_region_.tex:51: Preview: Snippet 8 ended.(1140322+0x28792648).
+<-><->
+      
+l.51         \end{align*}
+                         
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 51.
+
+[8]
+./_region_.tex:52: Preview: Snippet 9 started.
+<-><->
+      
+l.52         La magnitud de $
+                             \vec{R}$ viene dada por
+Not a real error.
+
+./_region_.tex:52: Preview: Snippet 9 ended.(759342+0x592596).
+<-><->
+      
+l.52         La magnitud de $\vec{R}$
+                                      viene dada por
+Not a real error.
+
+[9]
+./_region_.tex:53: Preview: Snippet 10 started.
+<-><->
+      
+l.53         \begin{align*}
+                           
+Not a real error.
+
+./_region_.tex:55: Preview: Snippet 10 ended.(1191444+0x22849229).
+<-><->
+      
+l.55         \end{align*}
+                         
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 55.
+
+[10{c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}]
+./_region_.tex:56: Preview: Snippet 11 started.
+<-><->
+      
+l.56         Sean $
+                   \alpha,\beta,\gamma$ los angulos que $\vec{R}$ forma con ...
+Not a real error.
+
+./_region_.tex:56: Preview: Snippet 11 ended.(546132+152916x2105249).
+<-><->
+      
+l.56         Sean $\alpha,\beta,\gamma$
+                                        los angulos que $\vec{R}$ forma con ...
+Not a real error.
+
+[11]
+./_region_.tex:56: Preview: Snippet 12 started.
+<-><->
+      
+l.56 ...an $\alpha,\beta,\gamma$ los angulos que $
+                                                  \vec{R}$ forma con los eje...
+Not a real error.
+
+./_region_.tex:56: Preview: Snippet 12 ended.(759342+0x592596).
+<-><->
+      
+l.56 ...ha,\beta,\gamma$ los angulos que $\vec{R}$
+                                                   forma con los ejes $X,Y,Z...
+Not a real error.
+
+[12]
+./_region_.tex:56: Preview: Snippet 13 started.
+<-><->
+      
+l.56 ...angulos que $\vec{R}$ forma con los ejes $
+                                                  X,Y,Z$ respectivamente. Po...
+Not a real error.
+
+./_region_.tex:56: Preview: Snippet 13 ended.(537395+152916x2421167).
+<-><->
+      
+l.56 ...s que $\vec{R}$ forma con los ejes $X,Y,Z$
+                                                   respectivamente. Por defi...
+Not a real error.
+
+[13]
+./_region_.tex:57: Preview: Snippet 14 started.
+<-><->
+      
+l.57         \begin{align*}
+                           
+Not a real error.
+
+./_region_.tex:59: Preview: Snippet 14 ended.(2144220+0x25697463).
+<-><->
+      
+l.59         \end{align*}
+                         
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 59.
+
+[14]
+./_region_.tex:61: Preview: Snippet 15 started.
+<-><->
+      
+l.61         \begin{align*}
+                           
+Not a real error.
+
+./_region_.tex:63: Preview: Snippet 15 ended.(1740291+0x28798344).
+<-><->
+      
+l.63         \end{align*}
+                         
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 63.
+
+[15]
+./_region_.tex:65: Preview: Snippet 16 started.
+<-><->
+      
+l.65         \begin{align*}
+                           
+Not a real error.
+
+./_region_.tex:67: Preview: Snippet 16 ended.(1410084+0x21968991).
+<-><->
+      
+l.67         \end{align*}
+                         
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 67.
+
+[16]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 70.
+
+./_region_.tex:71: Preview: Snippet 17 started.
+<-><->
+      
+l.71         Encontrar la distancia del punto $
+                                               P(4,5,-7)$ a la recta que pas...
+Not a real error.
+
+./_region_.tex:71: Preview: Snippet 17 ended.(589824+196608x3658883).
+<-><->
+      
+l.71 ...contrar la distancia del punto $P(4,5,-7)$
+                                                   a la recta que pasa por e...
+Not a real error.
+
+[17]
+./_region_.tex:71: Preview: Snippet 18 started.
+<-><->
+      
+l.71 ...,5,-7)$ a la recta que pasa por el punto $
+                                                  Q(-3,6,12)$ y es paralela ...
+Not a real error.
+
+./_region_.tex:71: Preview: Snippet 18 ended.(589824+196608x4050494).
+<-><->
+      
+l.71 ...a recta que pasa por el punto $Q(-3,6,12)$
+                                                   y es paralela al vector
+Not a real error.
+
+[18]
+./_region_.tex:72: Preview: Snippet 19 started.
+<-><->
+      
+l.72         $
+              \vec{V}=\vec{u}_{x}(4)-\vec{u}_{y}(1)+\vec{u}_{z}(3)$. Encontr...
+Not a real error.
+
+./_region_.tex:72: Preview: Snippet 19 ended.(759342+219909x8819420).
+<-><->
+      
+l.72 ...c{u}_{x}(4)-\vec{u}_{y}(1)+\vec{u}_{z}(3)$
+                                                  . Encontrar también la di...
+Not a real error.
+
+[19]
+./_region_.tex:72: Preview: Snippet 20 started.
+<-><->
+      
+l.72 ...ncontrar también la distancia del punto $
+                                                  P$ al plano que pasa por $...
+Not a real error.
+
+./_region_.tex:72: Preview: Snippet 20 ended.(537395+0x603291).
+<-><->
+      
+l.72 ...ontrar también la distancia del punto $P$
+                                                   al plano que pasa por $Q$...
+Not a real error.
+
+[20]
+./_region_.tex:72: Preview: Snippet 21 started.
+<-><->
+      
+l.72 ...ncia del punto $P$ al plano que pasa por $
+                                                  Q$ y es perpendicular
+Not a real error.
+
+./_region_.tex:72: Preview: Snippet 21 ended.(537395+152916x609879).
+<-><->
+      
+l.72 ...ia del punto $P$ al plano que pasa por $Q$
+                                                   y es perpendicular
+Not a real error.
+
+[21]
+./_region_.tex:73: Preview: Snippet 22 started.
+<-><->
+      
+l.73         a $
+                \vec{V}$.
+Not a real error.
+
+./_region_.tex:73: Preview: Snippet 22 ended.(759342+0x620037).
+<-><->
+      
+l.73         a $\vec{V}$
+                        .
+Not a real error.
+
+[22]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 74.
+
+./_region_.tex:77: Preview: Snippet 23 started.
+<-><->
+      
+l.77         La recta considerada pasa por $
+                                            Q$ y tiene como vector director ...
+Not a real error.
+
+./_region_.tex:77: Preview: Snippet 23 ended.(537395+152916x609879).
+<-><->
+      
+l.77         La recta considerada pasa por $Q$
+                                               y tiene como vector director ...
+Not a real error.
+
+[23]
+./_region_.tex:77: Preview: Snippet 24 started.
+<-><->
+      
+l.77 ...asa por $Q$ y tiene como vector director $
+                                                  \vec{V}$. La distancia de ...
+Not a real error.
+
+./_region_.tex:77: Preview: Snippet 24 ended.(759342+0x620037).
+<-><->
+      
+l.77 ...$Q$ y tiene como vector director $\vec{V}$
+                                                  . La distancia de un punto...
+Not a real error.
+
+[24]
+./_region_.tex:77: Preview: Snippet 25 started.
+<-><->
+      
+l.77 ...ctor $\vec{V}$. La distancia de un punto $
+                                                  P$ a una recta que pasa po...
+Not a real error.
+
+./_region_.tex:77: Preview: Snippet 25 ended.(537395+0x603291).
+<-><->
+      
+l.77 ...or $\vec{V}$. La distancia de un punto $P$
+                                                   a una recta que pasa por ...
+Not a real error.
+
+[25]
+./_region_.tex:77: Preview: Snippet 26 started.
+<-><->
+      
+l.77 ...de un punto $P$ a una recta que pasa por $
+                                                  Q$ con
+Not a real error.
+
+./_region_.tex:77: Preview: Snippet 26 ended.(537395+152916x609879).
+<-><->
+      
+l.77 ... un punto $P$ a una recta que pasa por $Q$
+                                                   con
+Not a real error.
+
+[26]
+./_region_.tex:78: Preview: Snippet 27 started.
+<-><->
+      
+l.78         dirección $
+                         \vec{V}$ viene dada por
+Not a real error.
+
+./_region_.tex:78: Preview: Snippet 27 ended.(759342+0x620037).
+<-><->
+      
+l.78         dirección $\vec{V}$
+                                  viene dada por
+Not a real error.
+
+[27]
+./_region_.tex:79: Preview: Snippet 28 started.
+<-><->
+      
+l.79         \begin{align*}
+                           
+Not a real error.
+
+./_region_.tex:81: Preview: Snippet 28 ended.(2542812+0x21119404).
+<-><->
+      
+l.81         \end{align*}
+                         
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 81.
+
+[28]
+./_region_.tex:83: Preview: Snippet 29 started.
+<-><->
+      
+l.83         \begin{align*}
+                           
+Not a real error.
+
+./_region_.tex:85: Preview: Snippet 29 ended.(1140322+0x24771486).
+<-><->
+      
+l.85         \end{align*}
+                         
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 85.
+
+[29]
+./_region_.tex:87: Preview: Snippet 30 started.
+<-><->
+      
+l.87         \begin{align*}
+                           
+Not a real error.
+
+./_region_.tex:95: Preview: Snippet 30 ended.(3420966+0x25409647).
+<-><->
+      
+l.95         \end{align*}
+                         
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 95.
+
+[30]
+./_region_.tex:97: Preview: Snippet 31 started.
+<-><->
+      
+l.97         \begin{align*}
+                           
+Not a real error.
+
+./_region_.tex:99: Preview: Snippet 31 ended.(1274411+0x32376554).
+<-><->
+      
+l.99         \end{align*}
+                         
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 99.
+
+[31]
+./_region_.tex:100: Preview: Snippet 32 started.
+<-><->
+      
+l.100         La distancia del punto $
+                                      P$ a la recta es
+Not a real error.
+
+./_region_.tex:100: Preview: Snippet 32 ended.(537395+0x603291).
+<-><->
+      
+l.100         La distancia del punto $P$
+                                         a la recta es
+Not a real error.
+
+[32]
+./_region_.tex:101: Preview: Snippet 33 started.
+<-><->
+      
+l.101         \begin{align*}
+                            
+Not a real error.
+
+./_region_.tex:103: Preview: Snippet 33 ended.(1949454+0x21098923).
+<-><->
+      
+l.103         \end{align*}
+                          
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 103.
+
+[33]
+./_region_.tex:104: Preview: Snippet 34 started.
+<-><->
+      
+l.104 ...hora consideremos el plano que pasa por $
+                                                  Q$ y es perpendicular a $\...
+Not a real error.
+
+./_region_.tex:104: Preview: Snippet 34 ended.(537395+152916x609879).
+<-><->
+      
+l.104 ...ra consideremos el plano que pasa por $Q$
+                                                   y es perpendicular a $\ve...
+Not a real error.
+
+[34]
+./_region_.tex:104: Preview: Snippet 35 started.
+<-><->
+      
+l.104 ...o que pasa por $Q$ y es perpendicular a $
+                                                  \vec{V}$. Un vector normal...
+Not a real error.
+
+./_region_.tex:104: Preview: Snippet 35 ended.(759342+0x620037).
+<-><->
+      
+l.104 ...sa por $Q$ y es perpendicular a $\vec{V}$
+                                                  . Un vector normal al plan...
+Not a real error.
+
+[35]
+./_region_.tex:104: Preview: Snippet 36 started.
+<-><->
+      
+l.104 ... vector normal al plano es precisamente $
+                                                  \vec{V}$, y la distancia
+Not a real error.
+
+./_region_.tex:104: Preview: Snippet 36 ended.(759342+0x620037).
+<-><->
+      
+l.104 ...normal al plano es precisamente $\vec{V}$
+                                                  , y la distancia
+Not a real error.
+
+[36]
+./_region_.tex:105: Preview: Snippet 37 started.
+<-><->
+      
+l.105         de un punto $
+                           P$ a dicho plano está dada por
+Not a real error.
+
+./_region_.tex:105: Preview: Snippet 37 ended.(537395+0x603291).
+<-><->
+      
+l.105         de un punto $P$
+                              a dicho plano está dada por
+Not a real error.
+
+[37]
+./_region_.tex:106: Preview: Snippet 38 started.
+<-><->
+      
+l.106         \begin{align*}
+                            
+Not a real error.
+
+./_region_.tex:108: Preview: Snippet 38 ended.(2542812+0x20921431).
+<-><->
+      
+l.108         \end{align*}
+                          
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 108.
+
+[38]
+./_region_.tex:110: Preview: Snippet 39 started.
+<-><->
+      
+l.110         \begin{align*}
+                            
+Not a real error.
+
+./_region_.tex:112: Preview: Snippet 39 ended.(1140322+0x26869626).
+<-><->
+      
+l.112         \end{align*}
+                          
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 112.
+
+[39]
+./_region_.tex:114: Preview: Snippet 40 started.
+<-><->
+      
+l.114         \begin{align*}
+                            
+Not a real error.
+
+./_region_.tex:116: Preview: Snippet 40 ended.(1834876+0x20940913).
+<-><->
+      
+l.116         \end{align*}
+                          
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 116.
+
+[40]
+./_region_.tex:117: Preview: Snippet 41 started.
+<-><->
+      
+l.117         Asi, la distancia de $
+                                    P$ a la recta es $\sqrt{381}$, y la dist...
+Not a real error.
+
+./_region_.tex:117: Preview: Snippet 41 ended.(537395+0x603291).
+<-><->
+      
+l.117         Asi, la distancia de $P$
+                                       a la recta es $\sqrt{381}$, y la dist...
+Not a real error.
+
+[41]
+./_region_.tex:117: Preview: Snippet 42 started.
+<-><->
+      
+l.117 ... Asi, la distancia de $P$ a la recta es $
+                                                  \sqrt{381}$, y la distanci...
+Not a real error.
+
+./_region_.tex:117: Preview: Snippet 42 ended.(704402+113485x1810431).
+<-><->
+      
+l.117 ...stancia de $P$ a la recta es $\sqrt{381}$
+                                                  , y la distancia de $P$ al...
+Not a real error.
+
+[42]
+./_region_.tex:117: Preview: Snippet 43 started.
+<-><->
+      
+l.117 ...ecta es $\sqrt{381}$, y la distancia de $
+                                                  P$ al plano es $\frac{28}{...
+Not a real error.
+
+./_region_.tex:117: Preview: Snippet 43 ended.(537395+0x603291).
+<-><->
+      
+l.117 ...ta es $\sqrt{381}$, y la distancia de $P$
+                                                   al plano es $\frac{28}{\s...
+Not a real error.
+
+[43]
+./_region_.tex:117: Preview: Snippet 44 started.
+<-><->
+      
+l.117 ...81}$, y la distancia de $P$ al plano es $
+                                                  \frac{28}{\sqrt{26}}$.
+Not a real error.
+
+./_region_.tex:117: Preview: Snippet 44 ended.(647514+390593x1178562).
+<-><->
+      
+l.117 ...de $P$ al plano es $\frac{28}{\sqrt{26}}$
+                                                  .
+Not a real error.
+
+[44]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 120.
+
+./_region_.tex:121: Preview: Snippet 45 started.
+<-><->
+      
+l.121 ...el conjunto de 3 vectores no-coplaneres $
+                                                  \vec{a}_{1},\vec{a}_{2},\v...
+Not a real error.
+
+./_region_.tex:121: Preview: Snippet 45 ended.(560550+152916x2836503).
+<-><->
+      
+l.121 ...res $\vec{a}_{1},\vec{a}_{2},\vec{a}_{3}$
+                                                  , los vectores
+Not a real error.
+
+[45]
+./_region_.tex:122: Preview: Snippet 46 started.
+<-><->
+      
+l.122         \begin{align*}
+                            
+Not a real error.
+
+./_region_.tex:126: Preview: Snippet 46 ended.(5774273+0x18599909).
+<-><->
+      
+l.126         \end{align*}
+                          
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 126.
+
+[46]
+./_region_.tex:127: Preview: Snippet 47 started.
+<-><->
+      
+l.127 ...nan vectores recíprocos. Demostrar que $
+                                                  \vec{a}^{i}\cdot\vec{a}_{i...
+Not a real error.
+
+./_region_.tex:127: Preview: Snippet 47 ended.(631990+117964x3242133).
+<-><->
+      
+l.127 ...strar que $\vec{a}^{i}\cdot\vec{a}_{i}=1$
+                                                   y que $a^{i}\cdot a_{j}=0...
+Not a real error.
+
+[47]
+./_region_.tex:127: Preview: Snippet 48 started.
+<-><->
+      
+l.127 ...e $\vec{a}^{i}\cdot\vec{a}_{i}=1$ y que $
+                                                  a^{i}\cdot a_{j}=0$ donde ...
+Not a real error.
+
+./_region_.tex:127: Preview: Snippet 48 ended.(631990+219909x3307973).
+<-><->
+      
+l.127 ...\vec{a}_{i}=1$ y que $a^{i}\cdot a_{j}=0$
+                                                   donde $i$ y $j$ toman los...
+Not a real error.
+
+[48]
+./_region_.tex:127: Preview: Snippet 49 started.
+<-><->
+      
+l.127 ...{i}=1$ y que $a^{i}\cdot a_{j}=0$ donde $
+                                                  i$ y $j$ toman los valores
+Not a real error.
+
+./_region_.tex:127: Preview: Snippet 49 ended.(515577+0x262695).
+<-><->
+      
+l.127 ...}=1$ y que $a^{i}\cdot a_{j}=0$ donde $i$
+                                                   y $j$ toman los valores
+Not a real error.
+
+[49]
+./_region_.tex:127: Preview: Snippet 50 started.
+<-><->
+      
+l.127 ... y que $a^{i}\cdot a_{j}=0$ donde $i$ y $
+                                                  j$ toman los valores
+Not a real error.
+
+./_region_.tex:127: Preview: Snippet 50 ended.(515577+152916x362819).
+<-><->
+      
+l.127 ... que $a^{i}\cdot a_{j}=0$ donde $i$ y $j$
+                                                   toman los valores
+Not a real error.
+
+[50]
+./_region_.tex:128: Preview: Snippet 51 started.
+<-><->
+      
+l.128 ...geométrica de los vectores recíprocos $
+                                                  \vec{a}^{1},\vec{a}^{2},\v...
+Not a real error.
+
+./_region_.tex:128: Preview: Snippet 51 ended.(623261+152916x2836503).
+<-><->
+      
+l.128 ...cos $\vec{a}^{1},\vec{a}^{2},\vec{a}^{3}$
+                                                   en relación con $\vec{a}...
+Not a real error.
+
+[51]
+./_region_.tex:128: Preview: Snippet 52 started.
+<-><->
+      
+l.128 ...ec{a}^{2},\vec{a}^{3}$ en relación con $
+                                                  \vec{a}_{1},\vec{a}_{2},\v...
+Not a real error.
+
+./_region_.tex:128: Preview: Snippet 52 ended.(560550+152916x2836503).
+<-><->
+      
+l.128 ...con $\vec{a}_{1},\vec{a}_{2},\vec{a}_{3}$
+                                                  .
+Not a real error.
+
+[52]
+./_region_.tex:129: Preview: Snippet 53 started.
+<-><->
+      
+l.129         \textbf{Sugerencia:}Note que en $
+                                               \vec{a}^{i}\cdot\vec{a}_{j}=0...
+Not a real error.
+
+./_region_.tex:129: Preview: Snippet 53 ended.(631990+219909x3307973).
+<-><->
+      
+l.129 ...te que en $\vec{a}^{i}\cdot\vec{a}_{j}=0$
+                                                   con $i\neq j$.
+Not a real error.
+
+[53]
+./_region_.tex:129: Preview: Snippet 54 started.
+<-><->
+      
+l.129 ... en $\vec{a}^{i}\cdot\vec{a}_{j}=0$ con $
+                                                  i\neq j$.
+Not a real error.
+
+./_region_.tex:129: Preview: Snippet 54 ended.(546133+152916x1661348).
+<-><->
+      
+l.129 ...c{a}^{i}\cdot\vec{a}_{j}=0$ con $i\neq j$
+                                                  .
+Not a real error.
+
+[54]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 130.
+ ***********
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+ ***********
+ ) 
+Here is how much of TeX's memory you used:
+ 1086 strings out of 428803
+ 19582 string characters out of 4555037
+ 1410529 words of memory out of 5000000
+ 67955 multiletter control sequences out of 15000+600000
+ 668785 words of font info for 73 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 46i,19n,56p,573b,1188s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmex10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy8.pfb>
+Output written on _region_.pdf (54 pages, 89291 bytes).
+PDF statistics:
+ 315 PDF objects out of 1000 (max. 8388607)
+ 217 compressed objects within 3 object streams
+ 54 named destinations out of 1000 (max. 500000)
+ 109 words of extra memory for PDF output out of 10000 (max. 10000000)
+

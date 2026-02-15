@@ -1,0 +1,98 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{ugmath}
+\usepackage{float}
+\usepackage{placeins}
+\usepackage[labelfont=bf,labelsep=space]{caption}
+\newcommand{\paren}[1]{\left( #1 \right)}
+\newcommand{\alumno}{Ricardo León Martínez}
+\newcommand{\materia}{Calculo Diferencia e Integral II}
+\newcommand{\profesor}{Fernando Nuñez Medina}
+\newcommand{\tarea}{Tarea 3}
+\newcommand{\fecha}{13/2/2026}
+
+\begin{document}
+    \begin{center}
+    {\large\textbf{UNIVERSIDAD DE GUANAJUATO}}\\[0.3cm]
+    {\normalsize\textbf{DIVISIÓN DE CIENCIAS NATURALES Y EXACTAS}}\\
+    {\normalsize\textbf{CAMPUS GUANAJUATO}}\\[1cm]
+
+    {\Large\textbf{\tarea\ (\materia)}}\\[1cm]
+    \end{center}
+
+    \textbf{Nombre:} \alumno \hfill 
+    \textbf{Fecha:} \fecha \hfill 
+    \textbf{Calificación:} \rule{3cm}{0.4pt} \\[0.3cm]
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 1}]
+        \textbf{(Teorema del valor medio generalizado para integrales)} Sean $f$ y $g$ funciones integrables en un intervalo $[a,b]$. Prueba que si $f$ es continua y $g$ no cambia
+        de signo, entonces existe $c\in[a,b]$ tal que
+        \begin{align*}
+            \int_{a}^{b}fg=f(c)\int_{a}^{b}g.
+        \end{align*}
+        \textbf{Sugerencia:} Supón primero que $g\geq0$ (el caso en que $g\leq0$ se sigue facilmente del caso en que $g\geq0$). Ten en cuenta que
+        \begin{align*}
+            m\leq f(x)\leq M,
+        \end{align*}
+        donde
+        \begin{align*}
+            m=\min\{f(x):x\in[a,b]\}
+        \end{align*}
+        y
+        \begin{align*}
+            M=\max\{f(x):x\in[a,b]\}.
+        \end{align*}
+        En consecuencia, por el ejercicio 2 de la tarea 3,
+        \begin{align*}
+            m\int_{a}^{b}g\leq\int_{a}^{b}fg\leq M\int_{a}^{b}g.
+        \end{align*}
+        Si $\int_{a}^{b}g=0$, entonces $\int_{a}^{b}fg=0$ y el resultado es claro. Si $\int_{a}^{b}g\neq0$, entonces
+        \begin{align*}
+            m\leq\frac{1}{\int_{a}^{b}g}\int_{a}^{b}fg\leq M.
+        \end{align*}
+        Intenta aplicar el teorema del valor intermedio.
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 2}]
+        \textbf{(Integral de una función impar)} Prueba que si $f$ es una función impar e integrable en un intervalo $[-a,a]$, entonces
+        \begin{align*}
+            \int_{-a}^{a}f=0.
+        \end{align*}
+        \textbf{Sugerencia 1:} Sean $P=\{t_{0},\dots,t_{n}\}$ una partición del intervalo $[0,a]$ y $Q=\{-t_{0},\dots,-t_{n}\}$; así, $Q$ es una partición del intervalo $[-a,0]$.
+        Prueba que
+        \begin{align*}
+            L(f,Q)=-U(f,P)
+        \end{align*}
+        y
+        \begin{align*}
+            U(f,Q)=-L(f,P)
+        \end{align*}
+        y usalo para probar lo afirmado. \textbf{Sugerencia 2:} Trata de usar el ejercicio 4 de la tarea 3.
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 3}]
+        Calcula las integrales siguientes:
+        \begin{enumerate}
+            \item[(a)] $\displaystyle\int\sin(x)\cos(x)dx$.
+            \item[(b)] $\displaystyle\int\frac{\ln(x)}{x}dx$.  
+        \end{enumerate}
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 4}]
+        \begin{enumerate}
+            \item[(a)] $\displaystyle\int\frac{1}{\sqrt{4-x^{2}}}dx$.
+            \item[(b)] $\displaystyle\int\frac{1}{\sqrt{9+x^{2}}}dx$.
+            \item[(c)] $\displaystyle\int\frac{1}{\sqrt{x^{2}-2}}dx$.
+        \end{enumerate}
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 4}]
+        Calcula la integral
+        \begin{align*}
+            \int\frac{x+11}{x^{2}-5x-14}dx.
+        \end{align*}
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 4}]
+        Prueba que las integrales impropias en los incisos (c),(d) y (e) de la definición 10 no dependen del punto $p$ en cuestión.
+    \end{mdframed}
+\end{document}

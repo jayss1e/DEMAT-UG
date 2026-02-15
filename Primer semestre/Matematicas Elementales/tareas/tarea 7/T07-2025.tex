@@ -1,0 +1,143 @@
+\documentclass[14pt]{extarticle}
+\usepackage{extsizes}
+\usepackage{enumerate}
+\usepackage[english,activeacute]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb,times}
+\usepackage{graphicx}
+\usepackage{latexsym}
+\usepackage{color}
+\usepackage{pifont}
+\usepackage{bbm}
+\usepackage{multicol}
+\usepackage{appendix}
+%\usepackage{dsfont}
+\usepackage{mathrsfs}
+%\spanishdecimal{.}
+\usepackage[sort&compress]{natbib}
+\bibliographystyle{plainnat}
+%\usepackage{suthesis-2e}
+%\usepackage{verbatim}
+%\spanishdecimal{.}
+\def\theequation{\thesection.\arabic{equation}}
+
+\textwidth=6.5in
+%\lineskip .25cm
+%\lineskiplimit .25cm
+\textheight=9.5in
+\topmargin=-.75in
+\topskip=-4pt
+\evensidemargin=-2pt
+\oddsidemargin=-1pt
+%%%%%%%%%%%%%%%%%%%%
+%\oddsidemargin 0in \textwidth 6.75in \topmargin 0in \textheight
+%8.5in
+\parindent 0em
+\parskip 1ex
+\newcommand{\floor}[1]{\left\lfloor {#1} \right\rfloor}
+
+\def\CC{\mathbb{C}}
+\newcommand{\rr}{\mathbb{R}}
+\newcommand{\pai}{\left(}
+\newcommand{\pad}{\right)}
+\newcommand{\ci}{\left[}
+\newcommand{\cd}{\right]}
+\newcommand{\nn}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\p}{\mathbb{P}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\lphi}{\widehat{\phi}}
+\newcommand{\D}{\mathfrak{D}}
+%\renewcommand{\qedsymbol}{\rule{1ex}{1ex}}
+
+\begin{document}
+ \begin{flushright}
+  \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+  \hline
+  \ \ $E_1$\ \ &\ \ $E_2$\ \ &\ \ $E_3$\ \ &\ \ $E_4$\ \ &Calif.\\
+  \hline
+  & &  & & \\
+    & & &&\\
+   \hline
+ \end{tabular}\\
+ \end{flushright}
+\begin{center}
+\large
+Matemáticas Elementales
+\normalsize
+
+Agosto - Diciembre de 2025\\
+
+Tarea 6
+\end{center}
+
+Resuelve los siguientes ejercicios según el reglamento del curso y \textbf{entrega esta página} con los nombres de los integrantes de equipo colocados en lugar de estas líneas de instrucciones. 
+Todas las demostraciones deben redactarse justificando formalmente todos los pasos necesarios.
+
+Antes de iniciar cada demostración, deberás indicar claramente cuáles son las hipótesis de cada ejercicio y qué es lo que debes demostrar en cada ejercicio.
+
+La tarea debe resolverse con la teoría vista en el curso o con resultados a lo más de los cursos de preparatoria. Está prohibido utilizar resultados de otros cursos de este mismo semestre y/o trucos de alguna olimpiada relacionada con computación y/o matemáticas.
+
+Cada inciso distinto debe ser resuelto por un alumno distinto y, en cada caso, deberá colocarse el nombre de la persona que redactó el inciso.
+
+En cada ejercicio, cada inciso distinto debe ser resuelto y redactado por un miembro distinto del equipo.
+
+\begin{enumerate}
+\item Para las sucesiones de conjuntos $\{A_n\}_n$ dadas en cada inciso, demuestra que ellas convergen y halla su límite.
+
+\begin{enumerate}
+\item $$A_n=\pai\frac{-1}{n},\frac{1}{n}\pad.$$
+
+\item $$A_n=\ci 1-\frac{1}{n},2-\frac{1}{n}\cd.$$
+
+\item $$A_n=[0,g(n)],$$
+
+donde $g(n)=1+1/n^2$.
+
+\item $$A_n=\{k\in\nn: k\leq n\}.$$
+\end{enumerate}
+
+\item Para las sucesiones de conjuntos $\{A_n\}_n$ dadas en cada inciso, halla 
+$$\inf_{k\geq n}A_k,\sup_{k\geq n}A_k.$$
+ Además, determina si la sucesión converge y, en caso afirmativo, especifica su límite.
+
+\begin{enumerate}
+\item $$A_n=\left\{
+\begin{array}{cc}
+(-n,1)&\text{ si $n$ es impar},\\
+(1,n)&\text{ si $n$ es par}.
+\end{array}
+\right.$$
+
+\item  $$A_1=\{1\}, A_n=\left\{\frac{n}{n+1}\right\}\text{ para }n\geq 2.$$
+
+\item $$A_1=(0,1/2], A_n=\pai \frac{1}{n-1}+\frac{n-2}{2},\frac{1}{n-1}+\frac{n-2}{2}\cd, n\geq 2.$$
+
+\item $$A_1=\varnothing, A_n=\pai \frac{1}{n},\frac{1}{n-1}\pad, \text{ para }n\geq 2.$$
+\end{enumerate}
+
+\item Sea $\{x_n,n\in\nn\}$ una colección de números reales.
+
+\begin{enumerate}
+\item Supón que existe $N$ tal que $x_n\neq x_m$ para cualesquiera $n,m\geq N$ distintos. Demuestra que
+$$\lim\limits_{n\to\infty}\{x_n\}=\varnothing.$$
+\item Sea $f:\nn\to\rr$ tal que $f(n)=x_n$. Supón que existe $x\in\rr$ tal que $\lim_{n\to\infty}f(n)=x$.
+Demuestra que el límite $\lim_{n\to\infty}\{x,x_n\}$ existe y hállalo explícitamente.
+\end{enumerate}
+
+\item Sean $\{A_n\}_n, \{B_n\}_n$ dos sucesiones de conjuntos tales que $\lim_{n\to\infty}A_n=A$ y $\lim_{n\to\infty}B_n=B$. Demuestra o refuta las siguientes igualdades:
+
+\begin{enumerate}
+\item $$\lim\limits_{n\to\infty}(A_n\cap B_n)=A\cap B.$$
+\item $$\lim\limits_{n\to\infty}(A_n\cup B_n)=A\cup B.$$
+\end{enumerate}
+
+\item Ejercicio extra: Sea $f:\nn\to\rr$ tal que $\lim_{n\to\infty}f(n)=x$ para algún $x\in(0,\infty]$ ($x$ puede ser infinito). Sea $A_n:=[0,f(n)]$ para $n\in\nn$, demuestra o refuta que 
+
+$$\lim\limits_{n\to\infty}A_n=[0,x].$$
+
+\textbf{Nota}: Este ejercicio contará como una tarea cuya calificación sólo podrá ser 0 ó 100 (100 si todos los argumentos son correctos y no hay errores graves de redacción. En caso contrario, se calificará con cero). Deberá entregarse en físico (escrito a mano o impreso) de manera individual (sólo se darán puntos a las personas que lo entreguen) y la fecha máxima de entrega será el 17 de noviembre a las 9:30. Se aplicarán los mismos criterios del reglamento que se aplican a las tareas.
+\end{enumerate}
+\end{document}

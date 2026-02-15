@@ -1,0 +1,388 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{ugmath}
+\usepackage{float}
+\usepackage{placeins}
+\usepackage[labelfont=bf,labelsep=space]{caption}
+\newcommand{\alumno}{Ricardo León Martínez}
+\newcommand{\materia}{Calculo Diferencia e Integral II}
+\newcommand{\profesor}{Fernando Nuñez Medina}
+\newcommand{\tarea}{Tarea 1}
+\newcommand{\fecha}{30/1/2026}
+
+\begin{document}
+
+\begin{center}
+    {\large\textbf{UNIVERSIDAD DE GUANAJUATO}}\\[0.3cm]
+    {\normalsize\textbf{DIVISIÓN DE CIENCIAS NATURALES Y EXACTAS}}\\
+    {\normalsize\textbf{CAMPUS GUANAJUATO}}\\[1cm]
+
+    {\Large\textbf{\tarea\ (\materia)}}\\[1cm]
+    \end{center}
+
+    \textbf{Nombre:} \alumno \hfill 
+    \textbf{Fecha:} \fecha \hfill 
+    \textbf{Calificación:} \rule{3cm}{0.4pt} \\[0.3cm]
+
+        \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 1}]
+            Prueba la proposición 2.
+        \end{mdframed}
+
+        \begin{proof}
+            Por definición, $f$ es integrable si
+            \begin{align*}
+                \sup_{P\in\mathcal{P}}L(f,P)=\inf_{P\in\mathcal{P}}U(f,P).
+            \end{align*}
+            A este numero se le denota por $\int_{a}^{b}f$. Ahora es inmediato de la definición
+            de supremo que para cualquier partición $P$ se cumple
+            \begin{align*}
+                L(f,P)\leq\sup_{Q\in\mathcal{P}}L(f,Q)=\int_{a}^{b}f.
+            \end{align*}
+            Analogamente,
+            \begin{align*}
+                \int_{a}^{b}f=\inf_{Q\in P}U(f,Q)\leq U(f,P).
+            \end{align*}
+            Combinando ambas desigualdades obtenemos
+            \begin{align*}
+                L(f,P)\leq\int_{a}^{b}\leq U(f,P)\text{ para toda }P\in\mathcal{P}.
+            \end{align*}
+            Ahora veamos que es unico, supongamos que existe un número $A$ tal que
+            \begin{align*}
+                L(f,P)\leq A\leq U(f,P)\text{ para toda }P\in\mathcal{P}.
+            \end{align*}
+            Entonces $A$ es una cota superior par todas las sumas inferiores, luego
+            \begin{align*}
+                A\geq\sup_{p\in\mathcal{P}}L(f,P)=\int_{a}^{b}f.
+            \end{align*}
+            Tambien $A$ es una cota inferior para todas las sumas superiores, luego
+            \begin{align*}
+                A\leq\inf_{P\in\mathcal{P}}U(f,P)=\int_{a}^{b}f.
+            \end{align*}
+            Por tanto $A=\int_{a}^{b}f$.
+        \end{proof}
+
+        \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 2}]
+            Definamos
+            \begin{align*}
+                f(x)=
+                \begin{cases}
+                    0,\text{ si }x\in[0,1),\\
+                    1,\text{ si } x=1.
+                \end{cases}
+            \end{align*}
+            \begin{enumerate}
+                \item[(a)] Dibuja la gráfica de $f$.
+                \item[(b)] Determina si $f$ es integrable en [0,1]. Argumenta tu respuesta.
+                \item[(c)] Si $f$ es integrable, calcula $\int_{0}^{1}f$.   
+            \end{enumerate}
+        \end{mdframed}
+        \begin{solucion}
+            \begin{enumerate}
+                \item[(a)] Dibuja la gráfica de $f$.
+                \begin{center}
+                    \includegraphics[width=0.40\linewidth]{Figuras.pdf}
+                \end{center}
+
+                \item[(b)] Determina si $f$ es integrable en [0,1]. Argumenta tu respuesta.\\
+                Es claro que $f$ es monótona creciente en $[0,1]$, pues es constante en $[0,1)$
+                y solo presenta un salto hacia arriba en el punto $x=1.$ Por la proposición 5,
+                se concluye que $f$ es integrable en $[0,1]$.
+
+                \item[(c)] Para todo subintervalo $[t_{i-1},t_{i}]\subset[0,1]$ se tiene
+                \begin{align*}
+                    m_{i},
+                \end{align*}
+                pues en cualquier intervalo hay puntos $x\lt1$ donde $f(x)=0$. Por lo tanto
+                \begin{align*}
+                    L(f,P)=0,
+                \end{align*}
+                para toda partición $P$. En consecuencia
+                \begin{align*}
+                    \int_{a}^{b}f=0.
+                \end{align*}
+                
+            \end{enumerate}
+        \end{solucion}
+
+        \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 3}]
+            Dada una función $f$ acotada en un intervalo $[a,b]$ y $P=\{t_{0},t_{1},\dots,t_{n}\}$
+            una partición de $[a,b]$, para cada $i=1.\dots,n$, definimos
+            \begin{align*}
+                m_{i}^{f}=\inf\{f(x):x\in[t_{i-1},t_{i}]\}
+            \end{align*}
+            y
+            \begin{align*}
+                M_{i}^{f}=\sup\{f(x):x\in[t_{i-1},t_{i}]\}.
+            \end{align*}
+            Supongamos que $f$ y $g$ son funciones acotadas en un intervalo $[a,b]$, que $c$ es una constante
+            y que $P$ es una partición de $[a,b]$. Prueba lo siguiente:
+            \begin{enumerate}
+                \item[(a)] $m_{i}^{f}+m_{i}^{g}\leq m_{i}^{f+g}\leq M_{i}^{f+g}\leq M_{i}^{f}+M_{i}^{g}$.
+                \item[(b)] Si $c\geq0$, entonces $m_{i}^{cf}=cm_{i}^{f}$ y $M_{i}^{cf}=cM_{i}^{f}$.
+                \item[(c)] Si $c\lt0$, entonces $m_{i}^{cf}=cM_{i}^{f}$ y $M_{i}^{cf}=cm_{i}^{f}$. 
+            \end{enumerate}
+        \end{mdframed}
+
+        \begin{proof}
+            \begin{enumerate}
+                \item[(a)]
+                \(m_i^f + m_i^g \le m_i^{f+g} \le M_i^{f+g} \le M_i^f + M_i^g.\)
+
+                Sea \(I_i=[t_{i-1},t_i]\). Definamos
+                \begin{align*}
+                    A:=\{f(x):x\in I_i\}, \qquad
+                    B:=\{g(x):x\in I_i\},
+                \end{align*}
+                y
+                \begin{align*}
+                    C:=\{f(x)+g(x):x\in I_i\}.
+                \end{align*}
+
+                Por definición,
+                \begin{align*}
+                    m_i^f=\inf A, \quad m_i^g=\inf B, \quad m_i^{f+g}=\inf C,
+                \end{align*}
+                \begin{align*}
+                    M_i^f=\sup A, \quad M_i^g=\sup B, \quad M_i^{f+g}=\sup C.
+                \end{align*}
+
+                Observemos que, para todo \(x\in I_i\),
+                \begin{align*}
+                    f(x)\in A \quad\text{y}\quad g(x)\in B,
+                \end{align*}
+                por lo que
+                \begin{align*}
+                    f(x)+g(x)\in A+B.
+                \end{align*}
+                De aquí se sigue que
+                \begin{align*}
+                    C \subseteq A+B.
+                \end{align*}
+
+                Por un resultado conocido se tiene
+                \begin{align*}
+                    \sup(A+B)=\sup A+\sup B.
+                \end{align*}
+                Como \(C\subseteq A+B\), se sigue que
+                \begin{align*}
+                    \sup C \le \sup(A+B),
+                \end{align*}
+                y por lo tanto
+                \begin{align*}
+                    M_i^{f+g} \le M_i^f + M_i^g.
+                \end{align*}
+
+                Análogamente,
+                \begin{align*}
+                    \inf(A+B)=\inf A+\inf B.
+                \end{align*}
+                Como \(C\subseteq A+B\), se cumple
+                \begin{align*}
+                    \inf(A+B) \le \inf C,
+                \end{align*}
+                y de aquí se obtiene
+                \begin{align*}
+                    m_i^f + m_i^g \le m_i^{f+g}.
+                \end{align*}
+
+                Finalmente, como por definición siempre \(\inf C \le \sup C\), se concluye que
+                \begin{align*}
+                    m_i^f + m_i^g
+                    \le
+                    m_i^{f+g}
+                    \le
+                    M_i^{f+g}
+                    \le
+                    M_i^f + M_i^g.
+                \end{align*}
+
+                \item[(b)] Si $c\geq0$, entonces $m_{i}^{cf}=cm_{i}^{f}$ y $M_{i}^{cf}=cM_{i}^{f}$\\
+                Sea $I_{i}=[t_{i-1},t_{i}]$. Definamos
+                \begin{align*}
+                    A:=\{f(x):x\in I_{i}\} \qquad cA:=\{cf(x):x\in I_{i}\}.
+                \end{align*}
+                Por definición,
+                \begin{align*}
+                    m_{i}^{cf}=\inf(cA), \quad cm_{i}^{f}=c\inf(A)\\
+                    M_{i}^{cf}=\sup(cA), \quad cM_{i}^{f}=c\sup(A).
+                \end{align*}
+                De un resultado conocido sabemos que $\inf(cA)=c\inf(A)$ de esto se tiene directamente
+                \begin{align*}
+                    m_{i}^{cf}=cm_{i}^{f}.
+                \end{align*}
+                Finalmente, sabiendo que $\sup(cA)=c\sup(A)$, obetenemos
+                \begin{align*}
+                    M_{i}^{cf}=cM_{i}^{f}
+                \end{align*}
+                \item[(c)] Si $x\lt0$, entonces $m_{i}^{cf}=cM_{i}^{f}$ y $M_{i}^{cf}=cm_{i}^{f}$.\\
+                Sea $I_{i}$. Definanamos $A=\{f(x):x\in I_{i}\}$ usando las definiciones del inciso
+                anterior y de un resultado conocido que dice que si $c\lt0$ entonces
+                \begin{align*}
+                    \inf(-cA)=-c\sup(A) \qquad \sup(-cA)=-c\inf(A)
+                \end{align*}
+                se sigue inmdiatamente que
+                \begin{align*}
+                    m_{i}^{cf}=cM_{i}^{f} \qquad M_{i}^{cf}=cm_{i}^{f}.
+                \end{align*}
+            \end{enumerate}
+        \end{proof}
+
+        \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 4}]
+            Sean $f$ y $g$ funciones acotadas en un intervalo $[a,b]$ y $P$ una partición de
+            $[a,b]$. Prueba que
+            \begin{align*}
+                L(f, P)+L(g, P)\leq L(f+g, P)\leq U(f+g, P)\leq U(f, P)+U(g, P).
+            \end{align*}
+            \textbf{Sugerencia:} Considera el inciso (a) del ejercicio 8 de las notas
+            (ejercicio 3 de esta tarea).
+        \end{mdframed}
+
+        \begin{proof}
+            Del inciso (a) del ejercicio 3 de esta tarea tenemos que 
+            \begin{align*}
+                m_i^f + m_i^g \leq m_i^{f+g} \leq M_i^{f+g} \leq M_i^f + M_i^g.
+            \end{align*}
+            Multiplicando por $(t_{i-1}-t_{i})$ obtenemos
+            \begin{align*}
+                m_i^f(t_{i-1}-t_{i}) + m_i^g(t_{i-1}-t_{i}) \leq m_i^{f+g}(t_{i-1}-t_{i}) \leq M_i^{f+g}(t_{i-1}-t_{i}) \leq M_i^f(t_{i-1}-t_{i}) + M_i^g(t_{i-1}-t_{i}).
+            \end{align*}
+            Se sigue que
+            \begin{align*}
+                \sum_{i=1}^{n} m_i^f(t_{i-1}-t_{i}) + \sum_{i=1}^{n} m_i^g(t_{i-1}-t_{i}) \leq \sum_{i=1}^{n} m_i^{f+g}(t_{i-1}-t_{i}) \leq \sum_{i=1}^{n} M_i^{f+g}(t_{i-1}-t_{i}) &\leq \\
+                \sum_{i=1}^{n} M_i^f(t_{i-1}-t_{i}) + \sum_{i=1}^{n} M_i^g(t_{i-1}-t_{i}).
+            \end{align*}
+            esto por definición de suma superior e inferior es
+            \begin{align*}
+                L(f, P)+L(g, P)\leq L(f+g, P)\leq U(f+g, P)\leq U(f, P)+U(g, P).
+            \end{align*}
+        \end{proof}
+
+        \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 5}]
+            Sean $f$ una función acotada en un intervalo $[a,b]$, $c$ un número real y $P$ una
+            partición de $[a.b]$. Prueba lo siguiente:
+            \begin{enumerate}
+                \item[(a)] Si $c\geq0$, entonces
+                \begin{align*}
+                    cL(f, P)=L(cf, P)\leq U(cf, P)=cU(f, P).
+                \end{align*}
+                \item[(b)] Si $c\lt0$, entonces
+                \begin{align*}
+                    cU(f, P)=L(cf, P)\leq U(cf, P)=cL(f, P).
+                \end{align*} 
+            \end{enumerate}
+            \textbf{Sugerencia:} Considera los incisos (b) y (c) del ejercicio 8 de las notas
+            (ejercicio 3 de esta tarea).
+        \end{mdframed}
+
+        \begin{proof}
+            \begin{enumerate}
+                \item[(a)]
+                Del inciso (b) del ejercicio 3 de esta tarea tenemos que si $c\geq0$, entonces
+                \begin{align*}
+                    m_{i}^{cf}=cm_{i}^{f}, \quad \text{ y } \quad M_{i}^{cf}=cM_{i}^{f}.
+                \end{align*}
+                tomando $m_{i}^{cf}=cm_{i}^{f}$ y multiplicandolo por $(t_{i-1}-t_{i})$ obtenemos
+                \begin{align*}
+                    m_{i}^{cf}(t_{i-1}-t_{i})=cm_{i}^{f}(t_{i-1}-t_{i}).
+                \end{align*}
+                Se sigue que
+                \begin{align*}
+                    \sum_{i=1}^{n}m_{i}^{cf}(t_{i-1}-t_{i})=c\sum_{i=1}^{n}m_{i}^{f}(t_{i-1}-t_{i}).
+                \end{align*}
+                esto por definición es
+                \begin{align*}
+                    L(f,p)=cL(f,P).
+                \end{align*}
+                Ahora tomando $M_{i}^{cf}=cM_{i}^{f}$ y multiplicandolo por $(t_{i-1}-t_{i})$ tenemos
+                \begin{align*}
+                    M_{i}^{cf}(t_{i-1}-t_{i})=cM_{i}^{f}(t_{i-1}-t_{i}).
+                \end{align*}
+                Se sigue que
+                \begin{align*}
+                    \sum_{i=1}^{n}M_{i}^{cf}(t_{i-1}-t_{i})=c\sum_{i=1}^{n}M_{i}^{f}(t_{i-1}-t_{i}).
+                \end{align*}
+                Nuevamente por definición se tiene
+                \begin{align*}
+                    U(f,p)=cU(f,p).
+                \end{align*}
+                Ahora del inciso (b) proposición 1 y juntando las igualdades tenemos
+                \begin{align*}
+                    cL(f, P)=L(cf, P)\leq U(cf, P)=cU(f, P).
+                \end{align*}
+                \item[(b)]
+                 Del inciso (c) del ejercicio 3 de esta tarea tenemos que si $c\lt0$, entonces
+                 \begin{align*}
+                    m_{i}^{cf}=cM_{i}^{f} \quad \text{ y } \quad M_{i}^{cf}=cm_{i}^{f}.
+                 \end{align*}
+                 Tomando $m_{i}^{cf}=cM_{i}^{f}$ y multiplicandolo por $(t_{i-1}-t_{i})$ obtenemos
+                 \begin{align*}
+                    m_{i}^{cf}(t_{i-1}-t_{i})=cM_{i}^{f}(t_{i-1}-t_{i}),
+                 \end{align*}
+                 se sigue que
+                 \begin{align*}
+                    \sum_{i=1}^{n}m_{i}^{cf}(t_{i-1}-t_{i})=c\sum_{i=1}^{n}M_{i}^{f}(t_{i-1}-t_{i})
+                 \end{align*}
+                 esto por definición es
+                 \begin{align*}
+                    L(cf,P)=cU(f,P).
+                 \end{align*}
+                 La prueba para $M_{i}^{cf}=cM_{i}^{f}$ es analoga. De estas dos igualdades y por la proposición 1 tenemos
+                 \begin{align*}
+                    cU(f, P)=L(cf, P)\leq U(cf, P)=cL(f, P).
+                 \end{align*}
+            \end{enumerate}
+        \end{proof}
+
+        \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 6}]
+            Sea $f$ una función integrable en un intervalo $[a,b]$ y $c$ un número real. Prueba
+            que $cf$ es integrable $[a,b]$ y que
+            \begin{align*}
+                \int_{a}^{b}cf=c\int_{a}^{b}f.
+            \end{align*}
+            \textbf{Sugerencia:} Trata de imitar la prueba del inciso (a) de la proposición 6 y
+            considera el ejercicio 11 de las notas (ejercicio 5 de esta tarea).
+        \end{mdframed}
+        \begin{proof}
+            Para $c\geq0$. Dado que f es integrable tenemos
+            \begin{align*}
+                \sup_{P\in\mathcal{P}}L(f,P)=\inf_{P\in\mathcal{P}}U(f,P)
+            \end{align*}
+            al multiplicarlo por $c\geq0$ a ambos lados obtenemos
+            \begin{align*}
+                c\sup_{P\in\mathcal{P}}L(f,P)=c\inf_{P\in\mathcal{P}}U(f,P)
+            \end{align*}
+            se sigue que
+            \begin{align*}
+                \sup_{P\in\mathcal{P}}cL(f,P)=\inf_{P\in\mathcal{P}}cU(f,P)
+            \end{align*}
+            finalmente por la el ejercicio 5 inciso (a) tenemos que
+            \begin{align*}
+                \sup_{P\in\mathcal{P}}L(cf,P)=\inf_{P\in\mathcal{P}}U(cf,P)
+            \end{align*}
+            Por lo tanto
+            \begin{align*}
+                \int_{a}^{b}cf=c\int_{a}^{b}f.
+            \end{align*}
+            Para el caso donde $c\lt0$. Como $f$ es integrable tenemos
+            \begin{align*}
+                \sup_{P\in\mathcal{P}}L(f,P)=\inf_{P\in\mathcal{P}}U(f,P)
+            \end{align*}
+            multiplicando por $c\lt0$ obtenemos
+            \begin{align*}
+                -c\sup_{P\in\mathcal{P}}L(f,P)=-c\inf_{P\in\mathcal{P}}U(f,P)
+            \end{align*}
+            Por propiedades del infimo y supremo se sigue que
+            \begin{align*}
+                \inf_{P\in\mathcal{P}}-cL(f,P)=\sup_{P\in\mathcal{P}}-cU(f,P)
+            \end{align*}
+            Por el inciso (b) del ejercicio 5 de esta tarea tenemos
+            \begin{align*}
+                \inf_{P\in\mathcal{P}}U(-cf,P)=\sup_{P\in\mathcal{P}}L(-cf,P)
+            \end{align*}
+            Asi,
+            \begin{align*}
+                \int_{a}^{b}-cf=-c\int_{a}^{b}.
+            \end{align*}
+            Quedando asi demostrado para todos los casos.
+        \end{proof}
+
+\end{document}

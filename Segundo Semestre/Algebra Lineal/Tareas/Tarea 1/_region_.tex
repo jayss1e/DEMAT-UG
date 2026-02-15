@@ -1,0 +1,410 @@
+\message{ !name(tarea1.tex)}\documentclass[12pt,a4paper]{article}
+\usepackage{ugmath}
+\usepackage{float}
+\usepackage{placeins}
+\usepackage[labelfont=bf,labelsep=space]{caption}
+\newcommand{\alumno}{Ricardo León Martínez}
+\newcommand{\materia}{Algebra Lineal I}
+\newcommand{\profesor}{Claudia Reynoso Alcántara}
+\newcommand{\tarea}{Tarea 1}
+\newcommand{\fecha}{2/2/2026}
+
+\begin{document}
+
+\message{ !name(tarea1.tex) !offset(-3) }
+
+    \begin{center}
+    {\large\textbf{UNIVERSIDAD DE GUANAJUATO}}\\[0.3cm]
+    {\normalsize\textbf{DIVISIÓN DE CIENCIAS NATURALES Y EXACTAS}}\\
+    {\normalsize\textbf{CAMPUS GUANAJUATO}}\\[1cm]
+
+    {\Large\textbf{\tarea\ (\materia)}}\\[1cm]
+    \end{center}
+
+    \textbf{Nombre:} \alumno \hfill 
+    \textbf{Fecha:} \fecha \hfill 
+    \textbf{Calificación:} \rule{3cm}{0.4pt} \\[0.3cm]
+
+    En todos los problemas, $F$ es el campo $\mathbb{Q}$, $\mathbb{R}$ o $\mathbb{C}$.
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 1}]
+        Demuestra que el cero de $F$ es único y que para todo $a\in F\setminus\{0\}$,
+        su inverso multiplicativo, $a^{-1}$ es único.
+    \end{mdframed}
+    \begin{proof}
+        Supongamos que $a,0\in F$ son elementos neutros para la suma. Entonces para toda
+        $a\in F$ se cumple
+        \begin{align*}
+            a+0=a \quad \text{y} \quad a+b=a.
+        \end{align*}
+        Sumando $-a$ a ambos lados de la segunda igualdad se obtiene $b=0$, por lo que
+        el 0 de $F$ es unico. Ahora sea $a\in F\setminus\{0\}$ y supongamos que $b,c\in F$
+        son tales que
+        \begin{align*}
+            ab=1 \quad \text{y} \quad ac=1.
+        \end{align*}
+        Entonces,
+        \begin{align*}
+            b=b\cdot 1=b(ac)=(ba)c=1\cdot c.
+        \end{align*}
+        Por lo tanto el inverso multiplicativo de $a$ es unico.
+    \end{proof}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 2}]
+        Considera el siguiente sistema de 3 ecuaciones lineales en 2 variables con
+        coeficientes en F:
+        \begin{align*}
+            \begin{cases}
+                x_{1}+6x_{2}=2\\
+                x_{1}-x_{2}=2\\
+                x_{1}+x_{2}=1.
+            \end{cases}
+        \end{align*}
+        Encuentra el conjunto solución. ¿Existe alguna solución del sistema homogéneo? Justifica
+        tus respuestas.
+    \end{mdframed}
+    \begin{solucion}
+        Consideremos el siguiente sistema de ecuaciones
+        \begin{align*}
+            S=
+            \begin{cases}
+                E_{1}:x_{1}+6x_{2}=2\\
+                E_{2}:x_{1}-x_{2}=2\\
+                E_{3}:x_{1}+x_{2}=1.
+            \end{cases}
+        \end{align*}
+        Resolviendo $E_{2}$ a $E_{3}$ se obtiene al par
+        \begin{align*}
+            (x_{1},x_{2})=(\frac{3}{2},-\frac{1}{2}).
+        \end{align*}
+        Pero este par no satisface a $E_{1}$. Ahora si resolvemos $E_{1}$ y $E_{2}$ obtenemos
+        \begin{align*}
+            (x_{1},x_{2})=(2,0).
+        \end{align*}
+        Pero esto no satisface $E_{3}$. Dado que no existe ningun par que satisfaga simultaneamente
+        las tres ecuaciones, se concluye que el sistema es incompatible. Por lo tanto, el conjunto
+        solución es
+        \begin{align*}
+            \text{Sol}(S)=\emptyset
+        \end{align*}
+        Ahora consideremos el siguiente sistema de ecuaciones
+        \begin{align*}
+            A=
+            \begin{cases}
+                E_{1}:x_{1}+6x_{2}=0\\
+                E_{2}:x_{1}-x_{2}=0\\
+                E_{3}:x_{1}+x_{2}=0.
+            \end{cases}
+        \end{align*}
+        De $E_{2}$ se tiene que $x_{1}=x_{2}$ sustituyendo $x_{2}$ en $E_{3}$ se sigue que
+        $x_{1}=0$ y $x_{2}=0$ por lo tanto existe solucion para el sistema homogeneo y su
+        conjunto solucion es,
+        \begin{align*}
+            \text{Sol}(A)=\{(0,0)\}.
+        \end{align*}
+    \end{solucion}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 3}]
+        Sean $m,n\in\mathbb{N}$. Demuestra que la relación definida en el conjutno de sistemas
+        de $m$ ecuaciones lineales en $n$ variables con coeficientes en $F$ de ser \textbf{ser equivalentes},
+        es una relación transitiva.
+    \end{mdframed}
+    \begin{proof}
+        Sea $S$ el conjunto de todos los sistmas de ecuaciones lineales, decimos que dos
+        sistemas estan relacionados o que $S\sim S^{\prime}$ si su conjunto solucion es el mismo.
+        Ahora sean $S_{1},S_{2},S_{3}\in S$ tales que
+        \begin{align*}
+            S_{1}\sim S_{2} \quad \text{y} \quad S_{2}\sim S_{3}
+        \end{align*}
+        Por definicion de la relacion $\sim$, se tiene
+        \begin{align*}
+            \text{Sol}(S_{1})=\text{Sol}(S_{2}) \quad \text{y} \quad \text{Sol}(S_{2})=\text{Sol}(S_{3}).
+        \end{align*}
+        Por transitividad de la igualdad entre conjuntos, se sigue que
+        \begin{align*}
+            \text{Sol}(S_{1})=\text{Sol}(S_{3})
+        \end{align*}
+        Nuevamente por la definicion de relacion entre sistemas de ecuaciones se concluye que
+        \begin{align*}
+        S_{1}\sim S_{3}
+        \end{align*}
+        Y por lo tanto es transititva.
+    \end{proof}
+
+    \vspace{1cm}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 4}]
+        Sean $a_{ij},b_{j}\in F$, $1\leq i\leq 2$, $1\leq j\leq 2$, con $a_{11}\neq0$. Da condiciones
+        necesarias y suficientes para el siguiente sistema lineal de 2 ecuaciones y 2 variables tenga
+        conjunto solución no vacío:
+        \begin{align*}
+            \begin{cases}
+                a_{11}x_{1}+a_{12}x_{2}=b_{1}\\
+                a_{21}x_{1}+a_{22}x_{2}=b_{2}.
+            \end{cases}
+        \end{align*}
+    \end{mdframed}
+    \begin{solucion}
+        Para $a_{11}\neq0$, podemos aplicar operaciones elementales y despejar $x_{1}$ de la primera ecuación obteniendo
+        \begin{align*}
+            x_{1}=\frac{b_{1}}{a_{11}}-\frac{a_{12}}{a_{11}}x_{2}.
+        \end{align*}
+        Sustituyendo en la segunda ecuacion
+        \begin{align*}
+            a_{21}\left(\frac{b_{1}}{a_{11}}-\frac{a_{12}}{a_{11}}x_{2}\right)+a_{22}x_{2}=b_{2}.
+        \end{align*}
+        Reordenando
+        \begin{align*}
+            \left(a_{22}-\frac{a_{21}a_{12}}{a_{11}}\right)x_{2}=b_{2}-\frac{a_{21}}{a_{11}}b_{1}.
+        \end{align*}
+        Ahora consideremos dos casos. Primero supongamos que
+        \begin{align*}
+            a_{22}-\frac{a_{21}a_{12}}{a_{11}}\neq0.
+        \end{align*}
+        Entonces la ecuacion tiene solución unica para $x_{2}$, y por tanto eol sistema tiene solución.
+        Ahora supongamos que
+        \begin{align*}
+            a_{22}-\frac{a_{21}a_{12}}{a_{11}}=0.
+        \end{align*}
+        Entonces la ecuación se reduce a
+        \begin{align*}
+            0\cdot x_{2}=b_{2}.
+        \end{align*}
+        Si
+        \begin{align*}
+            b_{2}-\frac{a_{21}}{a_{11}}b_{1}=0,
+        \end{align*}
+        el sistema tiene infinitas soluciones.Si
+        \begin{align*}
+            b_{2}-\frac{a_{21}}{a_{11}}b_{1}\neq0,
+        \end{align*}
+        el sistema no tiene solución. Asi el sistema tiene conjunto solución no vacio si y solo si
+        cumple
+        \begin{align*}
+            \begin{aligned}
+                a_{22}-\frac{a_{21}a_{12}}{a_{11}}\neq0
+            \end{aligned}
+            \qquad
+            \text{o bien}
+            \qquad
+            \begin{aligned}
+                \begin{cases}
+                    a_{22}-\frac{a_{21}a_{12}}{a_{11}}=0,\\
+                    b_{2}-\frac{a_{21}}{a_{11}}b_{1}=0.
+                \end{cases}
+            \end{aligned}
+        \end{align*}
+    \end{solucion}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 5}]
+        Determina si los siguientes sistemas de ecuaciones son equivalentes, y si lo son, expresa
+        cada ecuación de uno como combinación lineal de las ecuaciones de otro:
+        \begin{enumerate}
+            \item[(a)] 3 ecuaciones y 3 variables:
+            \[
+                \begin{aligned}
+                    \begin{cases}
+                        -x_{1}+x_{2}+4x_{3}=0\\
+                        x_{1}+3x_{2}+8x_{3}=0\\
+                        \frac{1}{2}x_{1}+x_{2}+\frac{5}{2}x_{3}=0
+                    \end{cases}
+                \end{aligned}
+                \qquad
+                \begin{aligned}
+                    \begin{cases}
+                        x_{1}-x_{3}=0\\
+                        x_{2}+3x_{3}=0
+                    \end{cases}
+                \end{aligned}
+            \]
+            \item[(b)] 3 ecuaciones y 3 variables:
+            \begin{align*}
+                \begin{aligned}
+                    \begin{cases}
+                        -x_{1}+x_{2}+4x_{3}=0\\
+                        x_{1}+3x_{2}+8x_{3}=0\\
+                        \frac{1}{2}x_{1}+x_{2}+\frac{5}{2}x_{3}=0
+                    \end{cases}
+                \end{aligned}
+                \qquad
+                \begin{aligned}
+                    \begin{cases}
+                        x_{1}-x_{3}=0\\
+                        x_{2}+x_{3}=0
+                    \end{cases}
+                \end{aligned}
+            \end{align*}
+        \end{enumerate}
+    \end{mdframed}
+    \begin{solucion}
+        Consideremos los dos siguientes sistemas de ecuaciones
+        \begin{align*}
+            \begin{aligned}
+                S_{1}=
+                \begin{cases}
+                    -x_{1}+x_{2}+4x_{3}=0\\
+                    x_{1}+3x_{2}+8x_{3}=0\\
+                    \frac{1}{2}x_{1}+x_{2}+\frac{5}{2}x_{3}=0.
+                \end{cases}
+            \end{aligned}
+            \qquad
+            \begin{aligned}
+                S_{2}=
+                \begin{cases}
+                    x_{1}-x_{3}=0\\
+                    x_{2}+3x_{3}=0.
+                \end{cases}
+            \end{aligned}
+        \end{align*}
+        Veamos si son equivalentes. La matriz aumentanda de $S_{1}$ es
+        \begin{align*}
+            \left(
+                \begin{array}{ccc|c}
+                    -1 & 1 & 4 & 0\\
+                    1 & 3 & 8 & 0\\
+                    \frac{1}{2} & 1 & \frac{5}{2} & 0
+                \end{array}
+            \right)
+        \end{align*}
+        Ahora multiplicamos la fila 1 por $-1$ y la restamos a la fila 2 obteniendo
+        \begin{align*}
+            \left(
+                \begin{array}{ccc|c}
+                    -1 & 1 & 4 & 0\\
+                    0 & 4 & 12 & 0\\
+                    \frac{1}{2} & 1 & \frac{5}{2} & 0
+                \end{array}
+            \right)
+        \end{align*}
+        despues multiplicamos la fila 1 por $-\frac{1}{2}$ y la restamos a la fila 3 teniendo
+        \begin{align*}
+            \left(
+                \begin{array}{ccc|c}
+                    -1 & 1 & 4 & 0\\
+                    0 & 4 & 12 & 0\\
+                    0 & \frac{3}{2} & \frac{9}{2} & 0
+                \end{array}
+            \right)
+        \end{align*}
+        finalmente multiplicamos la fila 2 por $\frac{3}{8}$ y la restamos a la fila 3 obteniendo
+        la siguiente matriz
+        \begin{align*}
+                        \left(
+                \begin{array}{ccc|c}
+                    -1 & 1 & 4 & 0\\
+                    0 & 4 & 12 & 0\\
+                    0 & 0 & 0 & 0
+                \end{array}
+            \right)
+        \end{align*}
+        o bien el sistema de ecuaciones lineales
+        \begin{align}
+            \begin{cases}
+                -x_{1}+x_{2}+4x_{3}=0\\
+                \hfill 4x_{2}+12x_{3}=0.
+            \end{cases}
+        \end{align}
+        De la ecuaciónn 2 de (1) obtenemos
+        \begin{align*}
+            4x_{2}=12_{x_{3}} \implies x_{2}=-3x_{3}
+        \end{align*}
+        y de la ecuación 1 de (1) se obtiene
+        \begin{align*}
+            -x_{1}=-x_{2}-4x_{3}=-(-3x_{3})-4x_{3}=-x_{3} \implies x_{1}=x_{3}.
+        \end{align*}
+        Sea $x_{3}=t$, con $t\in\mathbb{R}$. Entonces
+        \begin{align*}
+            (x_{1},x_{2},x_{3})=(t,-3t,t).
+        \end{align*}
+        y asi su conjunto solución es
+        \begin{align*}
+            S=\{(t,-3t,t):t\in\mathbb{R}\}.
+        \end{align*}
+        Tomemos ahora $S_{2}$
+        \begin{align*}
+            \begin{cases}
+                x_{1}-x_{3}=0\\
+                x_{2}+3_{3}=0
+            \end{cases}
+        \end{align*}
+        de aqui se deduce inmediatamente
+        \begin{align*}
+            x_{1}=x_{3}, \qquad x_{2}=-3x_{3}.
+        \end{align*}
+        Sea $x_{3}=t$, con $t\in\mathbb{R}$. Entonces
+        \begin{align*}
+            (x_{1},x_{2},x_{3})=(t,-3t,t).
+        \end{align*}
+        y asi su conjunto solucion es
+        \begin{align*}
+            S=\{(t,-3t,t):t\in\mathbb{R}\}.
+        \end{align*}
+        Dado que los conjuntos solucion de $S_{1}$ y $S_{2}$ son iguales entonces los sitemas son
+        equivalentes. Se verifica que cada ecuación de $S_{1}$ puede expresarse como combinación lineal de las
+        ecuaciones de $S_{2}$. En efecto
+            \begin{align*}
+                -x_{1}+x_{2}+4x_{3}=-(x_{1}-x_{3})+(x_{2}+3x_{3}),\\
+                x_{1}+3x_{2}+8x_{3}=(x_{1}-x_{3})+3(x_{2}+3x_{3}),\\
+                \frac{1}{2}x_{1}+x_{2}+\frac{5}{2}x_{3}=\frac{1}{2}(x_{1}-x_{3})+(x_{2}+3x_{3}).
+            \end{align*}
+        Ahora consideremos el sistema $S_{2}^{\prime}$ dado por
+        \begin{align*}
+            \begin{cases}
+                x_{1}-x_{3}=0\\
+                x_{2}+x_{3}=0
+            \end{cases}
+        \end{align*}
+        Es claro que
+        \begin{align*}
+            x_{1}=x_{3}, \qquad x_{2}=-x_{3}.
+        \end{align*}
+        y por lo tanto su conjunto solución es
+        \begin{align*}
+            S(S_{2}^{\prime})=\{(t,-t,t):t\in\mathbb{R}\}.
+        \end{align*}
+        Asi, ya que el conjunto solución de $S_{2}^{\prime}$ no es igual al de $S_{1}$
+        no son sistemas equivalentes.
+    \end{solucion}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 6}]
+        ¿Para qué valores de $a\in\mathbb{Q}$ el siguiente sistema tiene una infinidad de soluciones?
+        \begin{align*}
+            \begin{cases}
+                ax_{1}+2x_{2}=0\\
+                2x_{1}+ax_{2}=0.
+            \end{cases}
+        \end{align*}
+    \end{mdframed}
+    \begin{solucion}
+        Queremos que exista $\lambda\in\mathbb{Q}$ tal que
+        \begin{align*}
+            (2x_{1}+ax_{2})=\lambda(ax_{1}+2x_{2}).
+        \end{align*}
+        Igualamos coeficientes
+        \begin{align*}
+            \begin{cases}
+                2=\lambda a\\
+                a=2\lambda
+            \end{cases}
+        \end{align*}
+        De la segunda ecuación obtenemos
+        \begin{align*}
+            \lambda=\frac{a}{2}.
+        \end{align*}
+        Sustituyendo en la primera
+        \begin{align*}
+            2=a\left(\frac{a}{2}\right) \implies a^{2}=4.
+        \end{align*}
+        Por lo tanto
+        \begin{align*}
+            a=\pm2.
+        \end{align*}
+      \end{solucion}
+
+      \begin{align*}
+        \int_{a}^{b}f(x).
+      \end{align*}
+      
+
+\end{document}
+
+\message{ !name(tarea1.tex) !offset(-410) }

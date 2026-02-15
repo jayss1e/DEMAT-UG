@@ -1,0 +1,710 @@
+\documentclass[12pt,a4paper]{article}
+\newcommand{\grupo}{}
+% ------------------------------------------------------
+% Idioma y codificación
+% ------------------------------------------------------
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+% ------------------------------------------------------
+% Tipografía y formato
+% ------------------------------------------------------
+\usepackage{lmodern}    % Fuente Latin Modern
+\usepackage{microtype}  % Mejor espaciado
+\usepackage{xcolor}     % Colores
+\definecolor{UGblue}{RGB}{0,33,71}
+\definecolor{UGgold}{RGB}{212,175,55}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{titlesec}
+% Añade esto en el preámbulo (antes de \begin{document})
+\usepackage{bookmark}
+\bookmarksetup{open,numbered}
+\usepackage{tikz}
+\usetikzlibrary{calc,decorations.pathreplacing,angles,quotes}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{caption}
+
+% ------------------------------------------------------
+% Matemáticas
+% ------------------------------------------------------
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{mathrsfs}
+\usepackage{stmaryrd}
+\usepackage{physics}
+
+% ------------------------------------------------------
+% Otros paquetes útiles
+% ------------------------------------------------------
+\usepackage{enumitem}
+\usepackage{csquotes}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=UGblue,
+    urlcolor=UGgold,
+    citecolor=UGblue
+}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+\usepackage{multicol}
+
+% ------------------------------------------------------
+% Encabezados y pies de página
+% ------------------------------------------------------
+% ------------------------------------------------------
+% Teoremas, definiciones, etc.
+% ------------------------------------------------------
+\theoremstyle{plain}
+\newtheorem{teo}{Teorema}[section]
+\newtheorem{prop}[teo]{Proposición}
+\newtheorem{lema}[teo]{Lema}
+\theoremstyle{definition}
+\newtheorem{defi}[teo]{Definición}
+\theoremstyle{remark}
+\newtheorem{ejemplo}[teo]{Ejemplo}
+\newtheorem{obs}[teo]{Observación}
+
+% ------------------------------------------------------
+% Comandos útiles
+% ------------------------------------------------------
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\pfrac}[2]{\left( \frac{#1}{#2} \right)} %parentesis
+\newcommand{\bfrac}[2]{\left[ \frac{#1}{#2} \right]} %corchetes
+\newcommand{\vecpar}[1]{\left( #1 \right)}
+% En el preámbulo
+\newcommand{\point}[2]{\left( #1, #2 \right)}
+\newcommand{\pointfrac}[4]{\left( \frac{#1}{#2}, \frac{#3}{#4} \right)}
+\newcommand{\pointmix}[4]{\left( #1, \frac{#3}{#4} \right)} % Primera coordenada normal, segunda fracción
+\renewcommand{\qedsymbol}{$\blacksquare$}
+\newcommand{\gt}{\ensuremath{>}}
+\newcommand{\lt}{\ensuremath{<}}
+\renewcommand{\div}{|}
+
+\renewcommand{\baselinestretch}{1.2}
+\setlength{\parindent}{0pt}
+
+\newenvironment{solucion}
+{\par\noindent\textit{Solución.}\ }
+{\hfill$\blacktriangleleft$\par}
+
+% ------------------------------------------------------
+% Datos personales (modificar según tarea)
+% ------------------------------------------------------
+\newcommand{\alumno}{Ricardo León Martínez}
+\newcommand{\materia}{Elementos de Geometría}
+\newcommand{\profesor}{Valentina Muñoz Porras}
+\newcommand{\tarea}{Tarea 5}
+\newcommand{\fecha}{22/09/2025}
+
+\setlength{\parindent}{0pt}
+\begin{document}
+    \textbf{Ejercicio 1 Inciso a}
+    \begin{proof}
+        Sea
+        \[
+        a:=\sqrt[n]{\alpha},\qquad b:=\sqrt[n]{\beta}.
+        \]
+        Por la Proposición 4.24 sabemos que \(a^{n}=\alpha\) y \(b^{n}=\beta\).  
+        Por la Proposición 4.23 inciso 2 se tiene
+        \[
+        (ab)^{n}=a^{n}b^{n}=\alpha\beta.
+        \]
+        De nuevo por la Proposición 4.24, el número real cuya n-ésima potencia es \(\alpha\beta\) es único por tanto
+        \[
+        ab=\sqrt[n]{\alpha\beta}.
+        \]
+        Se sigue que
+        \[
+        \sqrt[n]{\alpha}\,\sqrt[n]{\beta}=\sqrt[n]{\alpha\beta}.
+        \]
+    \end{proof}
+    \textbf{Ejercicio 3, Inciso d}
+    \begin{proof}
+        Sea $a,b\in\mathbb{Z}$ y sea $k$ un entero positivo. Tenemos que
+        \begin{align*}
+            d=(a,b).
+        \end{align*}
+        Por definicion del maximo comun divisor existen enteros $r,s$ tales que
+        \begin{align*}
+            d=ar+bs.
+        \end{align*}
+        Multiplicando por $k$ ambos lados obtenemos
+        \begin{align*}
+            kd=(ka)r+(kb)s,
+        \end{align*}
+        en donde $kd$ es una combinacion lineal de $ka$ y $kb$. Por el corolario
+        5.4, cualquier combinacion lineal positiva minima de dos enteros es igual
+        a su maximo comun divisor. Por lo tanto
+        \begin{align}
+            (ka,kb)\leq kd.
+        \end{align}
+        Ahora, como $d=(a,b)$, se tiene $d\div a$ y $d\mid b$. Como $k\gt0$,
+        se sigue que
+        \begin{align*}
+            kd\mid ka, \qquad kd\mid kb,
+        \end{align*}
+        lo cual significa que $kd$ es un divisor comun de $ka$ y $kb$. Por el
+        teorema 5.2,
+        \begin{align}
+            kd\leq (ka,kb).
+        \end{align}
+        De (1) y (2) obtenemos la igualdad
+        \begin{align*}
+            (ka,kb)=kd=k(a,b).
+        \end{align*}
+        Sea ahora $m=[a,b]$. Por definicion de mcm, $a\mid m$ y $b\mid m$.
+        Multiplicando por $k$ ambos lados tenemos 
+        \begin{align*}
+            ka\mid km, \qquad kb\mid km,
+        \end{align*}
+        por lo que $km$ es un multiplo comun de $ka$ y $kb$. Luego,
+        \begin{align}
+            [ka,kb]\leq km.
+        \end{align}
+        Por otro lado, todo multiplo comun de $ka$ y $kb$ es multiplo de $k$.
+        Si $M$ es un multiplo comun de $ka$ y $kb$, entonces $ka\mid M$ y
+        $kb\mid M$, de forma que $M^{\prime}\in\mathbb{Z}$ tal que $M=kM^{\prime}$.
+        Como $a\mid M^{\prime}$ y $b\mid M^{\prime}$, se sigue que $m=[a,b]$ divide
+        a $M^{\prime}$. Por lo tanto,
+        \begin{align*}
+            km\mid M,
+        \end{align*}
+        y asi $km$ divide a todo multiplo comun de $ka$ y $kb$. Por la proposicion
+        5.13,
+        \begin{align}
+            km\leq [ka,kb].
+        \end{align}
+        De (3) y (4) se sigue que
+        \begin{align*}
+            [ka,kb]=km=k[a,b].
+        \end{align*}
+        Asi, para todo $k$ entero positivo y todo $a,b\in\mathbb{Z}$, se cumple
+        \begin{align*}
+            (ka,kb)=k(a,b), \qquad [ka,kb]=k[a,b].
+        \end{align*}
+    \end{proof}
+    \textbf{Ejercicio 3, inciso e}
+    \begin{solucion}
+        \begin{enumerate}[left=0pt, label=\textbf{\arabic*.}]
+            \item 329, 1005.\\
+            Aplicando la division euclideana entre 1005 y 329 obtenemos
+            \begin{align*}
+                &1005=329\cdot 3+13,\\
+                &329=18\cdot 18+5,\\
+                &18=5\cdot 3+3,\\
+                &5=3\cdot 1+2,\\
+                &3=2\cdot 1+1,\\
+                &2=1\cdot 2+0.
+            \end{align*}
+            El ultimo residuo no nulo es 1. Por la proposicion 5.15 se sigue que
+            \begin{align*}
+                (329,1005)=1.
+            \end{align*}
+            \item 1302, 1224.\\
+            Aplicando la division euclideano entre 1302 y 1224 obtenemos
+            \begin{align*}
+                &1302=1224\cdot 1+78,\\
+                &1224=78\cdot 15+54,\\
+                &78=54\cdot 1+24,\\
+                &54=24\cdot 2+6,\\
+                &24=6\cdot4+0.
+            \end{align*}
+            El ultimo residuo no nulo es 6. Por la proposicion 5.15 se sigue que
+            \begin{align*}
+                (1302,1224)=6.
+            \end{align*}
+            \item 1816, -1789.\\
+            Aplicando la division euclideana entre 1816 y 1789 obtenemos
+            \begin{align*}
+                &1816=1789\cdot 1+27,\\
+                &1789=27\cdot 66+7,\\
+                &27=7\cdot3+6,\\
+                &7=6\cdot1+1,\\
+                &6=1\cdot 6+0.
+            \end{align*}
+            El ultimo residuo no nulo es 1. Por la proposicion 5.15 se sigue que
+            \begin{align*}
+                (1816,1789)=1,
+            \end{align*}
+            y por tanto $(1816,-1789)=1$.
+            \item -666, -12309.\\
+            Aplicando la division euclideana entre 666 y 12309 obtenemos
+            \begin{align*}
+                &12309=666\cdot 18+321,\\
+                &666=321\cdot 2+21,\\
+                &321=24\cdot 13+9,\\
+                &24=9\cdot 2+6,\\
+                &9=6\cdot1+3,\\
+                &6=3\cdot 2+0.
+            \end{align*}
+            El ultimo residuo no nulo es 3. Por proposicion 5.15 se sigue que
+            \begin{align*}
+                (666,12309)=3,
+            \end{align*}
+            y entonces $(-666,-12309)=1$.
+        \end{enumerate}
+    \end{solucion}
+    \textbf{Ejercicio 3, Inciso f}.
+    \begin{solucion}
+        \begin{enumerate}[left=0pt, label=\textbf{\arabic*.}]
+            \item $35x+17y=14$.\\
+            Aplicamos la division euclideana entre 35 y 17 obteniendo
+            \begin{align*}
+                35=17\cdot2+1\\
+                17=1\cdot17+0.
+            \end{align*}
+            El ultimo residuo no nulo es 1. Por la proposicion 5.15 se 
+            sigue que
+            \begin{align*}
+                (35,17)=1.
+            \end{align*}
+            En particular $d=1$ divide a 14, por lo que, por la proposicion 5.16,
+            la ecuacion diofantina tiene soluciones enteras. Del primer paso de
+            la division euclideana obtenemos inmediatamente que
+            \begin{align*}
+                1=35-17\cdot2.
+            \end{align*}
+            Multiplicando por 14 ambos lados
+            \begin{align*}
+                14=35\cdot14+17\cdot(-28).
+            \end{align*}
+            De aqui podemos ver una solucion particular dada por
+            \begin{align*}
+                x_{0}=14, \qquad y_{0}=-28.
+            \end{align*}
+            Como $d=1$, las soliciopnes enteras a la ecuacion $35x+17y=14$ vienen
+            dadas por el corolario 5.6 obteniendo
+            \begin{align*}
+                x=x_{0}+\frac{17}{1}t=14+17t, \qquad y=y_{0}-\frac{35}{1}t=-28-35t,
+            \end{align*}
+            Asi, las soluciones enteras son
+            \begin{align*}
+                x=14+17t, \qquad y=-28-35t, \qquad t\in\mathbb{Z}.
+            \end{align*}
+            \item $1242x+1476y=49$.\\
+            Aplicamos la division euclideana entre 1242 y 1476 obteniendo
+            \begin{align*}
+                &1476=1242\cdot1+234,\\
+                &1242=234\cdot5+72,\\
+                &234=72\cdot3+18,\\
+                &72=18\cdot4+0.
+            \end{align*}
+            El ultimo residuo no nulo es 18. Por la proposicion 5.15 se sigue que
+            \begin{align*}
+                (1242,1476)=18.
+            \end{align*}
+            En particular $d=18$. Dado que $18\nmid49$, por la proposicion 5.16
+            la ecuacion diofantina no tiene soluciones enteras.
+            \item $15x+21y=10$.\\
+            Aplicamos la division euclideana entre 15 y 21 obteniendo
+            \begin{align*}
+                &21=15\cdot1+6,\\
+                &15=6\cdot2+3,\\
+                &6=3\cdot2+0.
+            \end{align*}
+            El ultimo residuo no nulo es 3. Por la proposicion 5.15 se tiene
+            \begin{align*}
+                (15,21)=3.
+            \end{align*}
+            Como $3\nmid10$, por la proposicion 5.16 la ecuacion no tiene soluciones
+            enteras.
+            \item $696x+408y=48$.\\
+            Aplicamos la division euclideana entre 696 y 408 obteniendo
+            \begin{align*}
+                &696=408\cdot1+288,\\
+                &408=288\cdot1+120,\\
+                &288=120\cdot2+48,\\
+                &120=48\cdot2+24,\\
+                &48=24\cdot2+0.
+            \end{align*}
+            El ultimo residuo no nulo es 24. Por la proposicion 5.15 se tiene
+            \begin{align*}
+                (696,408)=24.
+            \end{align*}
+            Como $24\mid48$, por la proposicion 5.16 la ecuacion tiene soluciones
+            enteras. Del de la division euclideana obtenemos
+            \begin{align*}
+                24=120-48\cdot2.
+            \end{align*}
+            Pero
+            \begin{align*}
+                48=288-120\cdot2,
+            \end{align*}
+            entonces
+            \begin{align*}
+                24=120-(288-120\cdot2)\cdot2=120\cdot5-288\cdot2.
+            \end{align*}
+            Sustituimos $120=408-288\cdot1$
+            \begin{align*}
+                24=408\cdot5-(696-408)\cdot7=408\cdot12-697\cdot7.
+            \end{align*}
+            Y sustituimos $288=696-408\cdot1$
+            \begin{align*}
+                24=408\cdot5-(696-408)\cdot7=408\cdot12-696\cdot7.
+            \end{align*}
+            Por lo tanto
+            \begin{align*}
+                24=(-7)\cdot696+12\cdot408.
+            \end{align*}
+            Multiplicando la igualdad anterior por 2 tenemos que
+            \begin{align*}
+                48=(-14)\cdot696+24\cdot408.
+            \end{align*}
+            De aqui vemos una solucion particular de la ecuacion dada por
+            \begin{align*}
+                x_{0}=-14, \qquad y_{0}=24.
+            \end{align*}
+            Si $d=24$, entonces la familia general de soluciones dadas por el
+            corolario 5.6 son
+            \begin{align*}
+                x=x_{0}+\frac{408}{24}t=-14+17t, \qquad y=y_{0}-\frac{696}{24}t=24-29t
+            \end{align*}
+            Asi, las soluciones enteras son
+            \begin{align*}
+                x=-14+17t, \qquad y=24-29t, \qquad t\in\mathbb{Z}.
+            \end{align*}
+            \item Sea $n$ un entero, aplicamos la division euclideana obteniendo
+            \begin{align*}
+                &6n+1=2\cdot(3n)+1,\\
+                &3n=1\cdot(3n)+0.
+            \end{align*}
+            El utlimo residuo no nulo es 1. Por la proposicion 5.15 se tiene
+            \begin{align*}
+                (6n+1,3n)=1.
+            \end{align*}
+            Dado que $1\mid12$, por la proposicion 5.16 la ecacion tiene soluciones
+            enteras para todo entero $n$. De la division euclideana se obtiene
+            inmediatamente que 
+            \begin{align*}
+                1=(6n+1)-2\cdot(3n).
+            \end{align*}
+            Multiplicando por 12 ambos lados se tiene que
+            \begin{align*}
+                12=(6n+1)\cdot12+3n\cdot(-24).
+            \end{align*}
+            De aqui tenemos una solucion particular dada por
+            \begin{align*}
+                x_{0}=12, \qquad y_{0}=-24.
+            \end{align*}
+            Como $d=1$, entonces la familia general de soluciones dadas por el corolario 5.6
+            son
+            \begin{align*}
+                x=x_{0}+\frac{3n}{1}t=12+3nt, \qquad y=y_{0}-\frac{6n+1}{1}t=-24-(6n+1)t.
+            \end{align*} 
+            Asi las soluciones enteras para cada $n$ entero son
+            \begin{align*}
+                x=12+3nt, \qquad y=-24-(6n+1)t, \qquad t\in\mathbb{Z}.
+            \end{align*}
+        \end{enumerate}
+    \end{solucion}
+    \textbf{Ejercicio 4 Inciso h}
+    \begin{proof}
+        Procedemos por inducción sobre \(n\).
+        \textit{Caso \(n=2\).}
+        Como \(m_{1}\) y \(m_{2}\) son primos relativos, existen enteros \(t\) y \(u\) tales que
+        \begin{align*}
+            m_{1}t + m_{2}u = 1
+        \end{align*}
+        por la proposicion 5.10.
+        Multiplicando por \(a_{1}\) y \(a_{2}\) y combinando se obtiene
+        \begin{align*}
+            x := a_{1}m_{2}u + a_{2}m_{1}t,
+        \end{align*}
+        y se verifica directamente que
+        \begin{align*}
+            x \equiv a_{1}\pmod{m_{1}},\qquad x \equiv a_{2}\pmod{m_{2}}.
+        \end{align*}
+        Como \(m_{1}\) y \(m_{2}\) son primos relativos, la solución es única módulo \(m_{1}m_{2}\).
+        Supongamos para \(n-1\) módulos, y consideremos ahora
+        \(m_{1},\dots,m_{n}\).
+        Por la hipótesis inductiva existe un entero \(x_{0}\) tal que
+        \begin{align*}
+            x_{0}\equiv a_{i}\pmod{m_{i}}
+            \qquad (i=1,\dots,n-1).
+        \end{align*}
+        Sea
+        \begin{align*}
+            M' := m_{1}m_{2}\cdots m_{n-1}.
+        \end{align*}
+        Como los \(m_{i}\) son primos relativos dos a dos, \(M'\) y \(m_{n}\) también lo son.
+        Por la proposicion 5.10 existen enteros \(t,u\) tales que
+        \begin{align*}
+            M't + m_{n}u = 1.
+        \end{align*}
+
+        Consideremos entonces
+        \begin{align*}
+            x := x_{0} + (a_{n}-x_{0})\,t\,M'.
+        \end{align*}
+
+        Si \(i\le n-1\), entonces \(m_{i}\mid M'\), por lo que
+         \begin{align*}
+        x \equiv x_{0} \equiv a_{i}\pmod{m_{i}}.
+        \end{align*}
+        Además, como \(M't\equiv 1\pmod{m_{n}}\), se tiene
+         \begin{align*}
+        x \equiv x_{0} + (a_{n}-x_{0})\equiv a_{n}\pmod{m_{n}}.
+        \end{align*}
+
+        Por tanto \(x\) satisface todas las congruencias.  
+        La unicidad módulo \(m_{1}m_{2}\cdots m_{n}\) sigue de que dichos módulos son primos relativos dos a dos, por lo que su producto divide la diferencia de dos soluciones comunes.
+    \end{proof}
+    \textbf{Ejercicio 4 Inciso i}
+    \begin{solucion}
+        \begin{enumerate}[left=0pt, label=\textbf{\arabic*.}]
+            \item $16x-9\equiv0\pmod{35}$.\\
+            Primero notemos que
+            \begin{align*}
+                16x-9\equiv0\pmod{35} \Rightarrow 16x\equiv9\pmod{35}.
+            \end{align*}
+            Por el algorimo de euclides obtenemos
+            \begin{align*}
+                &35=16\cdot2+3\\
+                &16=3\cdot5+1\\
+                &3=1\cdot3+0.
+            \end{align*}
+            El ultimo residuo no nulo es 1. Por la proposicion 5.15,
+            \begin{align*}
+                (16,35)=1
+            \end{align*}
+            Como $(16,35)=1$, por la proposicion 5.10 existe un entero $t$
+            tal que
+            \begin{align*}
+                16t\equiv1 \pmod{35}
+            \end{align*}
+            Tomando $t\equiv11 \pmod{35}$, multiplicando por $t$ la congruencia
+            dada obtenemos
+            \begin{align*}
+                x\equiv9t\equiv9\cdot11\equiv99\equiv29 \pmod{35}.
+            \end{align*}
+            Asi, la solucion es
+            \begin{align*}
+                x\equiv29 \pmod{35}.
+            \end{align*}
+            \item $200x+315\equiv0 \pmod{441}$\\
+            Primero notemos que
+            \begin{align*}
+                200x+315\equiv0 \pmod{441} \Rightarrow 200x\equiv-315 \pmod{441}.
+            \end{align*}
+            Del algoritmo de euclides obtenemos
+            \begin{align*}
+                &441=200\cdot2+41,\\
+                &200=41\cdot4+36,\\
+                &41=36\cdot1+5,\\
+                &36=5\cdot7+1,\\
+                &5=5\cdot1+0.
+            \end{align*}
+            El utlimo residuo no nulo es 1. Por la proposicion 5.15
+            \begin{align*}
+                (200,441)=1.
+            \end{align*}
+            Como $(200,441)=1$, por la proposicion 5.10 existe un entero $t$ tal que
+            \begin{align*}
+                200t\equiv1 \pmod{441}.
+            \end{align*}
+            Tomando $t\equiv86 \pmod{441}$, multiplicamos la congruencia dada por
+            $t$ obteniendo
+            \begin{align*}
+                x\equiv-315\cdot\equiv-315\cdot86\equiv252 \pmod{441}.
+            \end{align*}
+            Asi, la solucion es
+            \begin{align*}
+                x\equiv252 \pmod{441}.
+            \end{align*}
+            \item $(2n+1)x+7\equiv0 \pmod{4n}$\\
+            Primero notemos que
+            \begin{align*}
+                (2n+1)x+7\equiv0 \pmod{441} \Rightarrow (2n+1)x\equiv-7 \pmod{441}.
+            \end{align*}
+            Por el algoritmo de euclides obtenemos
+            \begin{align*}
+                &4n=(2n+1)\cdot1+(2n-1),\\
+                &2n+1=(2n-1)\cdot1+2,\\
+                &2n-1=2\cdot(n-1)+1,\\
+                &2=1\cdot2+0.
+            \end{align*}
+            El utlimo residuo no nulo es 1. Por la proposicion 5.15
+            \begin{align*}
+                (2n+1,4n)=1.
+            \end{align*}
+            Por la proposicion 5.10 existe un entero $t$ tal que
+            \begin{align*}
+                (2n+1)t\equiv1 \pmod{4n}.
+            \end{align*}
+            multiplicando la congruencia por ese $t$ se obtiene
+            \begin{align*}
+                x\equiv-7t \pmod{4n}
+            \end{align*}
+            donde $t$ es cualquier entero que satisfaga $(2n+1)t\equiv1 \pmod{4n}$.
+            \item $(3n-2)x+5n\equiv0\pmod{9n-9}$\\
+            Primero notemos que
+            \begin{align*}
+                (3n-2)x+5n\equiv0\pmod{9n-9} \Rightarrow (3n-2)x\equiv-5n\pmod{9n-9},
+            \end{align*}
+            Por el algoritmo de euclides obtenemos
+            \begin{align*}
+                &9n-9\equiv(3n-2)\cdot2+(3n-5),\\
+                &3n-2=(3n-5)\cdot1+3,\\
+                &3n-5=2\cdot(n-2)+1,\\
+                &3=1\cdot3+0.
+            \end{align*}
+            El ultimo residuo no nulo es 1, Por la proposicion 5.15
+            \begin{align*}
+                (3n-2,9n-9)=1.
+            \end{align*}
+            Por la proposicion 5.10 existe un entero $t$ tal que
+            \begin{align*}
+                (3n-2)t\equiv1 \pmod{9n-9}.
+            \end{align*}
+            Multiplicando la congruencia dada por ese $t$ se obtiene
+            \begin{align*}
+                x\equiv-5nt \pmod{9n-9},
+            \end{align*}
+            donde $t$ satisface $(3n-2)t\equiv1 \pmod{9n-9}$.
+        \end{enumerate}
+    \end{solucion}
+    \textbf{Ejercicio 4 Inciso j}
+    \begin{solucion}
+        \begin{enumerate}[left=0pt, label=\textbf{\arabic*.}]
+            \item
+            $
+            \begin{cases*}
+                x\equiv0 \pmod{3},\\
+                x\equiv0 \pmod{8}.
+            \end{cases*}
+            $\\
+
+            Por el algoritmo de euclides obtenemos
+            \begin{align*}
+                8=3\cdot2+2,\\
+                3=2\cdot1+1,\\
+                2=1\cdot2+0.
+            \end{align*}
+            Como el ultimo residuo no nulo es 1 por la proposicion 5.15
+            \begin{align*}
+                (3,8)=1.
+            \end{align*}
+            Dado que $x\equiv0\pmod{3}$ y $x\equiv0\pmod{8}$, y los modulos son coprimos
+            la solucion es
+            \begin{align*}
+                x\equiv0\pmod{mcm(3,8)}.
+            \end{align*}
+            Pero $mcm(3,8)=24$. Por lo tanto
+            \begin{align*}
+                x\equiv0\pmod24.
+            \end{align*}
+            \item
+            $
+            \begin{cases*}
+                x\equiv1\pmod{25},\\
+                x\equiv7\pmod{35}.
+            \end{cases*}
+            $\\
+
+            Por el algoritmo de euclides obtenemos
+            \begin{align*}
+                &35=25\cdot1+10,\\
+                &25=10\cdot2+5,\\
+                &10=5\cdot2+0.
+            \end{align*}
+            Como el ultimo residuo no nulo es 5, por la proposicion 5.15 se tiene
+            \begin{align*}
+                (25,35)=5
+            \end{align*}
+            Si existiera una solucion $x$, entonces por definicion deberia cumplirse que
+            \begin{align*}
+                5\mid(1-7)=-6
+            \end{align*}
+            Pero $5\nmid-6$. Asi, por la proposicion 5.16, el sistema no tiene
+            solucion.
+            \item
+            $
+            \begin{cases*}
+                x\equiv3 \pmod{17},\\
+                x\equiv4 \pmod{21},\\
+                x\equiv4 \pmod{25}.
+            \end{cases*}
+            $\\
+
+            Por el algoritmo de Euclides obtenemos (entre \(21\) y \(17\)):
+            \begin{align*}
+                21 &= 17\cdot 1 + 4,\\[4pt]
+                17 &= 4\cdot 4 + 1,\\[4pt]
+                4  &= 1\cdot 4 + 0.
+            \end{align*}
+            Como el último residuo no nulo es \(1\), por la Proposición 5.15 se tiene
+            \begin{align*}
+                (17,21)=1
+            \end{align*}
+            Por tanto existe por la proposicion 5.16 existe solucion comun
+            modulo 357. Buscamos \(k\) tal que
+            \begin{align*}
+                x = 3 + 17k \equiv 4 \pmod{21},
+            \end{align*}
+            es decir
+            \begin{align*}
+                17k \equiv 1 \pmod{21}.
+            \end{align*}
+            Tomando \(k=5\) resulta
+            \begin{align*}
+                x \equiv 3 + 17\cdot 5 = 88 \pmod{357}.
+            \end{align*}
+
+            Ahora resolvemos el sistema
+            \begin{align*}
+                \begin{cases}
+                    x\equiv 88 \pmod{357},\\[4pt]
+                    x\equiv 5  \pmod{25}.
+                \end{cases}
+            \end{align*}
+
+            Por el algoritmo de Euclides obtenemos (entre \(357\) y \(25\)):
+            \begin{align*}
+                357 &= 25\cdot 14 + 7,\\[4pt]
+                25  &= 7\cdot 3  + 4,\\[4pt]
+                7   &= 4\cdot 1  + 3,\\[4pt]
+                4   &= 3\cdot 1  + 1,\\[4pt]
+                3   &= 1\cdot 3  + 0.
+            \end{align*}
+            Como el último residuo no nulo es \(1\), por la Proposición 5.15 se tiene
+            \begin{align*}
+                (357,25)=1.
+            \end{align*}
+            Por tanto ya que los modulos son coprimos y por la proposicion 5.16
+            existe solucion comun unica modulo $357\cdot25=8925$.
+            Buscamos \(t\) tal que
+            \begin{align*}
+                x = 88 + 357t \equiv 5 \pmod{25},
+            \end{align*}
+            es decir
+            \begin{align*}
+                357t \equiv 5-88 \equiv -83 \equiv 17 \pmod{25}.
+            \end{align*}
+            Reduciendo \(357\) módulo \(25\): \(357 = 25\cdot 14 + 7\), luego \(357\equiv 7\pmod{25}\). La congruencia queda
+            \begin{align*}
+                7t \equiv 17 \pmod{25}.
+            \end{align*}
+            Multiplicando por \(18\) obtenemos
+            \begin{align*}
+                t \equiv 18\cdot 17 = 306 \equiv 6 \pmod{25}.
+            \end{align*}
+            Tomando \(t=6\) se obtiene
+            \begin{align*}
+                x = 88 + 357\cdot 6 = 2230.
+            \end{align*}
+
+            Por tanto la solución común de las tres congruencias es única módulo \(8925\) y viene dada por
+            \begin{align*}
+                x \equiv 2230 \pmod{8925}.
+            \end{align*}
+        \end{enumerate}
+    \end{solucion}
+
+\end{document}

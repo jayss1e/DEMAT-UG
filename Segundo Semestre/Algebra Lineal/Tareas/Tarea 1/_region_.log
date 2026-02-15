@@ -1,0 +1,2001 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=prv_tarea1 2026.2.8)  8 FEB 2026 17:44
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**&prv_tarea1 /AUCTEXINPUT{ _region_.tex }
+(./_region_.tex
+Package csquotes Info: Checking for multilingual support...
+Package csquotes Info: ... found 'babel' package.
+Package csquotes Info: Adjusting default style.
+Package csquotes Info: Redefining alias 'default' -> 'spanish'.
+
+No file _region_.aux.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Info: Redefining \. on input line 12.
+LaTeX Info: Redefining \% on input line 12.
+Package babel Info: 'spanish' activates 'spanish' shorthands.
+(babel)             Reported on input line 12.
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(42.67912pt, 512.14963pt, 42.67912pt)
+* v-part:(T,H,B)=(42.67912pt, 759.6886pt, 42.67912pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=512.14963pt
+* \textheight=759.6886pt
+* \oddsidemargin=-29.59087pt
+* \evensidemargin=-29.59087pt
+* \topmargin=-66.59087pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=56.9055pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+(c:/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count381
+\scratchdimen=\dimen322
+\scratchbox=\box122
+\nofMPsegments=\count382
+\nofMParguments=\count383
+\everyMPshowfont=\toks56
+\MPscratchCnt=\count384
+\MPscratchDim=\dimen323
+\MPnumerator=\count385
+\makeMPintoPDFobject=\count386
+\everyMPtoPDFconversion=\toks57
+) (c:/texlive/2025/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (c:/texlive/2025/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+))
+Package pgfplots notification 'compat/show suggested version=true': you might benefit from \pgfplotsset{compat=1.18} (current compat level: 1.15).
+
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
+Package caption Info: End \AtBeginDocument code.
+\providecommand\hyper@newdestlabel[2]{}
+Package hyperref Info: Link coloring ON on input line 12.
+(c:/Users/Radoj/AppData/Roaming/.emacs.d/elpa/auctex-14.1.2/latex/preview.sty
+Package: preview 2024/06/30 14.0.6 (AUCTeX/preview-latex)
+ (c:/texlive/2025/texmf-dist/tex/generic/luatex85/luatex85.sty
+Package: luatex85 2016/06/15 v1.4 pdftex aliases for luatex
+) (c:/Users/Radoj/AppData/Roaming/.emacs.d/elpa/auctex-14.1.2/latex/prtightpage.def
+\PreviewBorder=\dimen324
+) (c:/Users/Radoj/AppData/Roaming/.emacs.d/elpa/auctex-14.1.2/latex/prauctex.def
+No auxiliary output files.
+
+
+\hbadness=\count387
+\hfuzz=\dimen325
+(c:/Users/Radoj/AppData/Roaming/.emacs.d/elpa/auctex-14.1.2/latex/prauctex.cfg)) (c:/Users/Radoj/AppData/Roaming/.emacs.d/elpa/auctex-14.1.2/latex/prfootnotes.def)
+\pr@snippet=\count388
+\pr@box=\box123
+\pr@output=\toks58
+
+Preview: Fontsize 12pt
+Preview: PDFoutput 1
+)  !name(tarea1.tex) !offset(-3) 
+./_region_.tex:28: Preview: Snippet 1 started.
+<-><->
+      
+l.28     En todos los problemas, $
+                                  F$ es el campo $\mathbb{Q}$, $\mathbb{R}$ ...
+Not a real error.
+
+Preview: Tightpage -32891 -32891 32891 32891
+./_region_.tex:28: Preview: Snippet 1 ended.(537395+0x605430).
+<-><->
+      
+l.28     En todos los problemas, $F$
+                                     es el campo $\mathbb{Q}$, $\mathbb{R}$ ...
+Not a real error.
+
+[1{c:/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}]
+./_region_.tex:28: Preview: Snippet 2 started.
+<-><->
+      
+l.28     En todos los problemas, $F$ es el campo $
+                                                  \mathbb{Q}$, $\mathbb{R}$ ...
+Not a real error.
+
+./_region_.tex:28: Preview: Snippet 2 ended.(541764+131072x611671).
+<-><->
+      
+l.28 ...os problemas, $F$ es el campo $\mathbb{Q}$
+                                                  , $\mathbb{R}$ o $\mathbb{...
+Not a real error.
+
+[2]
+./_region_.tex:28: Preview: Snippet 3 started.
+<-><->
+      
+l.28 ...problemas, $F$ es el campo $\mathbb{Q}$, $
+                                                  \mathbb{R}$ o $\mathbb{C}$.
+Not a real error.
+
+./_region_.tex:28: Preview: Snippet 3 ended.(541764+0x567980).
+<-><->
+      
+l.28 ...$F$ es el campo $\mathbb{Q}$, $\mathbb{R}$
+                                                   o $\mathbb{C}$.
+Not a real error.
+
+[3]
+./_region_.tex:28: Preview: Snippet 4 started.
+<-><->
+      
+l.28 ...es el campo $\mathbb{Q}$, $\mathbb{R}$ o $
+                                                  \mathbb{C}$.
+Not a real error.
+
+./_region_.tex:28: Preview: Snippet 4 ended.(541764+0x567980).
+<-><->
+      
+l.28 ... $\mathbb{Q}$, $\mathbb{R}$ o $\mathbb{C}$
+                                                  .
+Not a real error.
+
+[4]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 29.
+
+./_region_.tex:30: Preview: Snippet 5 started.
+<-><->
+      
+l.30         Demuestra que el cero de $
+                                       F$ es único y que para todo $a\in F\...
+Not a real error.
+
+./_region_.tex:30: Preview: Snippet 5 ended.(537395+0x605430).
+<-><->
+      
+l.30         Demuestra que el cero de $F$
+                                          es único y que para todo $a\in F\...
+Not a real error.
+
+[5]
+./_region_.tex:30: Preview: Snippet 6 started.
+<-><->
+      
+l.30 ...el cero de $F$ es único y que para todo $
+                                                  a\in F\setminus\{0\}$,
+Not a real error.
+
+./_region_.tex:30: Preview: Snippet 6 ended.(589824+196608x3885038).
+<-><->
+      
+l.30 ...ico y que para todo $a\in F\setminus\{0\}$
+                                                  ,
+Not a real error.
+
+[6{c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}]
+./_region_.tex:31: Preview: Snippet 7 started.
+<-><->
+      
+l.31         su inverso multiplicativo, $
+                                         a^{-1}$ es único.
+Not a real error.
+
+./_region_.tex:31: Preview: Snippet 7 ended.(623261+0x1148793).
+<-><->
+      
+l.31         su inverso multiplicativo, $a^{-1}$
+                                                 es único.
+Not a real error.
+
+[7]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 32.
+
+./_region_.tex:34: Preview: Snippet 8 started.
+<-><->
+      
+l.34         Supongamos que $
+                             a,0\in F$ son elementos neutros para la suma. E...
+Not a real error.
+
+./_region_.tex:34: Preview: Snippet 8 ended.(537395+152916x2700837).
+<-><->
+      
+l.34         Supongamos que $a,0\in F$
+                                       son elementos neutros para la suma. E...
+Not a real error.
+
+[8]
+./_region_.tex:35: Preview: Snippet 9 started.
+<-><->
+      
+l.35         $
+              a\in F$ se cumple
+Not a real error.
+
+./_region_.tex:35: Preview: Snippet 9 ended.(537395+30747x1970844).
+<-><->
+      
+l.35         $a\in F$
+                      se cumple
+Not a real error.
+
+[9]
+./_region_.tex:36: Preview: Snippet 10 started.
+<-><->
+      
+l.36         \begin{align*}
+                           
+Not a real error.
+
+./_region_.tex:38: Preview: Snippet 10 ended.(1140322+0x21011228).
+<-><->
+      
+l.38         \end{align*}
+                         
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 38.
+
+[10{c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}]
+./_region_.tex:39: Preview: Snippet 11 started.
+<-><->
+      
+l.39         Sumando $
+                      -a$ a ambos lados de la segunda igualdad se obtiene $b...
+Not a real error.
+
+./_region_.tex:39: Preview: Snippet 11 ended.(458752+65536x1015896).
+<-><->
+      
+l.39         Sumando $-a$
+                          a ambos lados de la segunda igualdad se obtiene $b...
+Not a real error.
+
+[11]
+./_region_.tex:39: Preview: Snippet 12 started.
+<-><->
+      
+l.39 ... lados de la segunda igualdad se obtiene $
+                                                  b=0$, por lo que
+Not a real error.
+
+./_region_.tex:39: Preview: Snippet 12 ended.(546132+0x1748259).
+<-><->
+      
+l.39 ...os de la segunda igualdad se obtiene $b=0$
+                                                  , por lo que
+Not a real error.
+
+[12]
+./_region_.tex:40: Preview: Snippet 13 started.
+<-><->
+      
+l.40         el 0 de $
+                      F$ es unico. Ahora sea $a\in F\setminus\{0\}$ y supong...
+Not a real error.
+
+./_region_.tex:40: Preview: Snippet 13 ended.(537395+0x605430).
+<-><->
+      
+l.40         el 0 de $F$
+                         es unico. Ahora sea $a\in F\setminus\{0\}$ y supong...
+Not a real error.
+
+[13]
+./_region_.tex:40: Preview: Snippet 14 started.
+<-><->
+      
+l.40         el 0 de $F$ es unico. Ahora sea $
+                                              a\in F\setminus\{0\}$ y supong...
+Not a real error.
+
+./_region_.tex:40: Preview: Snippet 14 ended.(589824+196608x3885038).
+<-><->
+      
+l.40 ...es unico. Ahora sea $a\in F\setminus\{0\}$
+                                                   y supongamos que $b,c\in F$
+Not a real error.
+
+[14]
+./_region_.tex:40: Preview: Snippet 15 started.
+<-><->
+      
+l.40 ... $a\in F\setminus\{0\}$ y supongamos que $
+                                                  b,c\in F$
+Not a real error.
+
+./_region_.tex:40: Preview: Snippet 15 ended.(546132+152916x2570398).
+<-><->
+      
+l.40 ...setminus\{0\}$ y supongamos que $b,c\in F$
+                                                  
+Not a real error.
+
+[15]
+./_region_.tex:42: Preview: Snippet 16 started.
+<-><->
+      
+l.42         \begin{align*}
+                           
+Not a real error.
+
+./_region_.tex:44: Preview: Snippet 16 ended.(1140322+0x20016764).
+<-><->
+      
+l.44         \end{align*}
+                         
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 44.
+
+[16]
+./_region_.tex:46: Preview: Snippet 17 started.
+<-><->
+      
+l.46         \begin{align*}
+                           
+Not a real error.
+
+./_region_.tex:48: Preview: Snippet 17 ended.(1140322+0x22068785).
+<-><->
+      
+l.48         \end{align*}
+                         
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 48.
+
+[17]
+./_region_.tex:49: Preview: Snippet 18 started.
+<-><->
+      
+l.49 ...or lo tanto el inverso multiplicativo de $
+                                                  a$ es unico.
+Not a real error.
+
+./_region_.tex:49: Preview: Snippet 18 ended.(338603+0x404225).
+<-><->
+      
+l.49 ... lo tanto el inverso multiplicativo de $a$
+                                                   es unico.
+Not a real error.
+
+[18]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 52.
+
+./_region_.tex:55: Preview: Snippet 19 started.
+<-><->
+      
+l.55         \begin{align*}
+                           
+Not a real error.
+
+./_region_.tex:61: Preview: Snippet 19 ended.(4105143+0x18542435).
+<-><->
+      
+l.61         \end{align*}
+                         
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 61.
+
+[19{c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 64.
+
+./_region_.tex:67: Preview: Snippet 20 started.
+<-><->
+      
+l.67         \begin{align*}
+                           
+Not a real error.
+
+./_region_.tex:74: Preview: Snippet 20 ended.(4105143+0x21167443).
+<-><->
+      
+l.74         \end{align*}
+                         
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 74.
+
+[20]
+./_region_.tex:75: Preview: Snippet 21 started.
+<-><->
+      
+l.75         Resolviendo $
+                          E_{2}$ a $E_{3}$ se obtiene al par
+Not a real error.
+
+./_region_.tex:75: Preview: Snippet 21 ended.(537395+117964x881317).
+<-><->
+      
+l.75         Resolviendo $E_{2}$
+                                 a $E_{3}$ se obtiene al par
+Not a real error.
+
+[21]
+./_region_.tex:75: Preview: Snippet 22 started.
+<-><->
+      
+l.75         Resolviendo $E_{2}$ a $
+                                    E_{3}$ se obtiene al par
+Not a real error.
+
+./_region_.tex:75: Preview: Snippet 22 ended.(537395+117964x881317).
+<-><->
+      
+l.75         Resolviendo $E_{2}$ a $E_{3}$
+                                           se obtiene al par
+Not a real error.
+
+[22]
+./_region_.tex:76: Preview: Snippet 23 started.
+<-><->
+      
+l.76         \begin{align*}
+                           
+Not a real error.
+
+./_region_.tex:78: Preview: Snippet 23 ended.(1566720+0x19947894).
+<-><->
+      
+l.78         \end{align*}
+                         
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 78.
+
+[23]
+./_region_.tex:79: Preview: Snippet 24 started.
+<-><->
+      
+l.79         Pero este par no satisface a $
+                                           E_{1}$. Ahora si resolvemos $E_{1...
+Not a real error.
+
+./_region_.tex:79: Preview: Snippet 24 ended.(537395+117964x881317).
+<-><->
+      
+l.79         Pero este par no satisface a $E_{1}$
+                                                 . Ahora si resolvemos $E_{1...
+Not a real error.
+
+[24]
+./_region_.tex:79: Preview: Snippet 25 started.
+<-><->
+      
+l.79 ...satisface a $E_{1}$. Ahora si resolvemos $
+                                                  E_{1}$ y $E_{2}$ obtenemos
+Not a real error.
+
+./_region_.tex:79: Preview: Snippet 25 ended.(537395+117964x881317).
+<-><->
+      
+l.79 ...ace a $E_{1}$. Ahora si resolvemos $E_{1}$
+                                                   y $E_{2}$ obtenemos
+Not a real error.
+
+[25]
+./_region_.tex:79: Preview: Snippet 26 started.
+<-><->
+      
+l.79 ...a $E_{1}$. Ahora si resolvemos $E_{1}$ y $
+                                                  E_{2}$ obtenemos
+Not a real error.
+
+./_region_.tex:79: Preview: Snippet 26 ended.(537395+117964x881317).
+<-><->
+      
+l.79 ...1}$. Ahora si resolvemos $E_{1}$ y $E_{2}$
+                                                   obtenemos
+Not a real error.
+
+[26]
+./_region_.tex:80: Preview: Snippet 27 started.
+<-><->
+      
+l.80         \begin{align*}
+                           
+Not a real error.
+
+./_region_.tex:82: Preview: Snippet 27 ended.(1140322+0x19484773).
+<-><->
+      
+l.82         \end{align*}
+                         
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 82.
+
+[27]
+./_region_.tex:83: Preview: Snippet 28 started.
+<-><->
+      
+l.83         Pero esto no satisface $
+                                     E_{3}$. Dado que no existe ningun par q...
+Not a real error.
+
+./_region_.tex:83: Preview: Snippet 28 ended.(537395+117964x881317).
+<-><->
+      
+l.83         Pero esto no satisface $E_{3}$
+                                           . Dado que no existe ningun par q...
+Not a real error.
+
+[28]
+./_region_.tex:86: Preview: Snippet 29 started.
+<-><->
+      
+l.86         \begin{align*}
+                           
+Not a real error.
+
+./_region_.tex:88: Preview: Snippet 29 ended.(1140322+0x18569159).
+<-><->
+      
+l.88         \end{align*}
+                         
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 88.
+
+[29]
+./_region_.tex:90: Preview: Snippet 30 started.
+<-><->
+      
+l.90         \begin{align*}
+                           
+Not a real error.
+
+./_region_.tex:97: Preview: Snippet 30 ended.(4105143+0x21196388).
+<-><->
+      
+l.97         \end{align*}
+                         
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 97.
+
+[30]
+./_region_.tex:98: Preview: Snippet 31 started.
+<-><->
+      
+l.98         De $
+                 E_{2}$ se tiene que $x_{1}=x_{2}$ sustituyendo $x_{2}$ en $...
+Not a real error.
+
+./_region_.tex:98: Preview: Snippet 31 ended.(537395+117964x881317).
+<-><->
+      
+l.98         De $E_{2}$
+                        se tiene que $x_{1}=x_{2}$ sustituyendo $x_{2}$ en $...
+Not a real error.
+
+[31]
+./_region_.tex:98: Preview: Snippet 32 started.
+<-><->
+      
+l.98         De $E_{2}$ se tiene que $
+                                      x_{1}=x_{2}$ sustituyendo $x_{2}$ en $...
+Not a real error.
+
+./_region_.tex:98: Preview: Snippet 32 ended.(338603+117964x2533598).
+<-><->
+      
+l.98         De $E_{2}$ se tiene que $x_{1}=x_{2}$
+                                                   sustituyendo $x_{2}$ en $...
+Not a real error.
+
+[32]
+./_region_.tex:98: Preview: Snippet 33 started.
+<-><->
+      
+l.98 ... se tiene que $x_{1}=x_{2}$ sustituyendo $
+                                                  x_{2}$ en $E_{3}$ se sigue...
+Not a real error.
+
+./_region_.tex:98: Preview: Snippet 33 ended.(338603+117964x748882).
+<-><->
+      
+l.98 ...ene que $x_{1}=x_{2}$ sustituyendo $x_{2}$
+                                                   en $E_{3}$ se sigue que
+Not a real error.
+
+[33]
+./_region_.tex:98: Preview: Snippet 34 started.
+<-><->
+      
+l.98 ...ue $x_{1}=x_{2}$ sustituyendo $x_{2}$ en $
+                                                  E_{3}$ se sigue que
+Not a real error.
+
+./_region_.tex:98: Preview: Snippet 34 ended.(537395+117964x881317).
+<-><->
+      
+l.98 ...{1}=x_{2}$ sustituyendo $x_{2}$ en $E_{3}$
+                                                   se sigue que
+Not a real error.
+
+[34]
+./_region_.tex:99: Preview: Snippet 35 started.
+<-><->
+      
+l.99         $
+              x_{1}=0$ y $x_{2}=0$ por lo tanto existe solucion para el sist...
+Not a real error.
+
+./_region_.tex:99: Preview: Snippet 35 ended.(495239+117964x2169739).
+<-><->
+      
+l.99         $x_{1}=0$
+                       y $x_{2}=0$ por lo tanto existe solucion para el sist...
+Not a real error.
+
+[35]
+./_region_.tex:99: Preview: Snippet 36 started.
+<-><->
+      
+l.99         $x_{1}=0$ y $
+                          x_{2}=0$ por lo tanto existe solucion para el sist...
+Not a real error.
+
+./_region_.tex:99: Preview: Snippet 36 ended.(495239+117964x2169739).
+<-><->
+      
+l.99         $x_{1}=0$ y $x_{2}=0$
+                                   por lo tanto existe solucion para el sist...
+Not a real error.
+
+[36]
+./_region_.tex:101: Preview: Snippet 37 started.
+<-><->
+      
+l.101         \begin{align*}
+                            
+Not a real error.
+
+./_region_.tex:103: Preview: Snippet 37 ended.(1140322+0x19758626).
+<-><->
+      
+l.103         \end{align*}
+                          
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 103.
+
+[37]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 106.
+
+./_region_.tex:107: Preview: Snippet 38 started.
+<-><->
+      
+l.107         Sean $
+                    m,n\in\mathbb{N}$. Demuestra que la relación definida e...
+Not a real error.
+
+./_region_.tex:107: Preview: Snippet 38 ended.(541764+152916x3007353).
+<-><->
+      
+l.107         Sean $m,n\in\mathbb{N}$
+                                     . Demuestra que la relación definida e...
+Not a real error.
+
+[38]
+./_region_.tex:108: Preview: Snippet 39 started.
+<-><->
+      
+l.108         de $
+                  m$ ecuaciones lineales en $n$ variables con coeficientes e...
+Not a real error.
+
+./_region_.tex:108: Preview: Snippet 39 ended.(338603+0x673557).
+<-><->
+      
+l.108         de $m$
+                     ecuaciones lineales en $n$ variables con coeficientes e...
+Not a real error.
+
+[39]
+./_region_.tex:108: Preview: Snippet 40 started.
+<-><->
+      
+l.108         de $m$ ecuaciones lineales en $
+                                             n$ variables con coeficientes e...
+Not a real error.
+
+./_region_.tex:108: Preview: Snippet 40 ended.(338603+0x459657).
+<-><->
+      
+l.108         de $m$ ecuaciones lineales en $n$
+                                                variables con coeficientes e...
+Not a real error.
+
+[40]
+./_region_.tex:108: Preview: Snippet 41 started.
+<-><->
+      
+l.108 ...es en $n$ variables con coeficientes en $
+                                                  F$ de ser \textbf{ser equi...
+Not a real error.
+
+./_region_.tex:108: Preview: Snippet 41 ended.(537395+0x605430).
+<-><->
+      
+l.108 ... en $n$ variables con coeficientes en $F$
+                                                   de ser \textbf{ser equiva...
+Not a real error.
+
+[41]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 110.
+
+./_region_.tex:112: Preview: Snippet 42 started.
+<-><->
+      
+l.112         Sea $
+                   S$ el conjunto de todos los sistmas de ecuaciones lineale...
+Not a real error.
+
+./_region_.tex:112: Preview: Snippet 42 ended.(537395+0x519368).
+<-><->
+      
+l.112         Sea $S$
+                      el conjunto de todos los sistmas de ecuaciones lineale...
+Not a real error.
+
+[42]
+./_region_.tex:113: Preview: Snippet 43 started.
+<-><->
+      
+l.113         sistemas estan relacionados o que $
+                                                 S\sim S^{\prime}$ si su con...
+Not a real error.
+
+./_region_.tex:113: Preview: Snippet 43 ended.(576662+0x2271172).
+<-><->
+      
+l.113 ...tan relacionados o que $S\sim S^{\prime}$
+                                                   si su conjunto solucion e...
+Not a real error.
+
+[43]
+./_region_.tex:114: Preview: Snippet 44 started.
+<-><->
+      
+l.114         Ahora sean $
+                          S_{1},S_{2},S_{3}\in S$ tales que
+Not a real error.
+
+./_region_.tex:114: Preview: Snippet 44 ended.(537395+152916x4525140).
+<-><->
+      
+l.114         Ahora sean $S_{1},S_{2},S_{3}\in S$
+                                                  tales que
+Not a real error.
+
+[44]
+./_region_.tex:115: Preview: Snippet 45 started.
+<-><->
+      
+l.115         \begin{align*}
+                            
+Not a real error.
+
+./_region_.tex:117: Preview: Snippet 45 ended.(1140322+0x20373661).
+<-><->
+      
+l.117         \end{align*}
+                          
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 117.
+
+[45]
+./_region_.tex:118: Preview: Snippet 46 started.
+<-><->
+      
+l.118         Por definicion de la relacion $
+                                             \sim$, se tiene
+Not a real error.
+
+./_region_.tex:118: Preview: Snippet 46 ended.(288522+0x611671).
+<-><->
+      
+l.118         Por definicion de la relacion $\sim$
+                                                  , se tiene
+Not a real error.
+
+[46]
+./_region_.tex:119: Preview: Snippet 47 started.
+<-><->
+      
+l.119         \begin{align*}
+                            
+Not a real error.
+
+./_region_.tex:121: Preview: Snippet 47 ended.(1140322+0x23710420).
+<-><->
+      
+l.121         \end{align*}
+                          
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 121.
+
+[47]
+./_region_.tex:123: Preview: Snippet 48 started.
+<-><->
+      
+l.123         \begin{align*}
+                            
+Not a real error.
+
+./_region_.tex:125: Preview: Snippet 48 ended.(1140322+0x19706190).
+<-><->
+      
+l.125         \end{align*}
+                          
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 125.
+
+[48]
+./_region_.tex:127: Preview: Snippet 49 started.
+<-><->
+      
+l.127         \begin{align*}
+                            
+Not a real error.
+
+./_region_.tex:129: Preview: Snippet 49 ended.(1140322+0x18091285).
+<-><->
+      
+l.129         \end{align*}
+                          
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 129.
+
+[49]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 135.
+
+./_region_.tex:136: Preview: Snippet 50 started.
+<-><->
+      
+l.136         Sean $
+                    a_{ij},b_{j}\in F$, $1\leq i\leq 2$, $1\leq j\leq 2$, co...
+Not a real error.
+
+./_region_.tex:136: Preview: Snippet 50 ended.(546132+219909x3409406).
+<-><->
+      
+l.136         Sean $a_{ij},b_{j}\in F$
+                                      , $1\leq i\leq 2$, $1\leq j\leq 2$, co...
+Not a real error.
+
+[50]
+./_region_.tex:136: Preview: Snippet 51 started.
+<-><->
+      
+l.136         Sean $a_{ij},b_{j}\in F$, $
+                                         1\leq i\leq 2$, $1\leq j\leq 2$, co...
+Not a real error.
+
+./_region_.tex:136: Preview: Snippet 51 ended.(515577+106932x3129883).
+<-><->
+      
+l.136 ...Sean $a_{ij},b_{j}\in F$, $1\leq i\leq 2$
+                                                  , $1\leq j\leq 2$, con $a_...
+Not a real error.
+
+[51]
+./_region_.tex:136: Preview: Snippet 52 started.
+<-><->
+      
+l.136 ...n $a_{ij},b_{j}\in F$, $1\leq i\leq 2$, $
+                                                  1\leq j\leq 2$, con $a_{11...
+Not a real error.
+
+./_region_.tex:136: Preview: Snippet 52 ended.(515577+152916x3230007).
+<-><->
+      
+l.136 ...}\in F$, $1\leq i\leq 2$, $1\leq j\leq 2$
+                                                  , con $a_{11}\neq0$. Da co...
+Not a real error.
+
+[52]
+./_region_.tex:136: Preview: Snippet 53 started.
+<-><->
+      
+l.136 ..., $1\leq i\leq 2$, $1\leq j\leq 2$, con $
+                                                  a_{11}\neq0$. Da condiciones
+Not a real error.
+
+./_region_.tex:136: Preview: Snippet 53 ended.(546133+152916x2414906).
+<-><->
+      
+l.136 ...eq 2$, $1\leq j\leq 2$, con $a_{11}\neq0$
+                                                  . Da condiciones
+Not a real error.
+
+[53]
+./_region_.tex:139: Preview: Snippet 54 started.
+<-><->
+      
+l.139         \begin{align*}
+                            
+Not a real error.
+
+./_region_.tex:144: Preview: Snippet 54 ended.(2752540+0x19577760).
+<-><->
+      
+l.144         \end{align*}
+                          
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 144.
+
+[54]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 145.
+
+./_region_.tex:147: Preview: Snippet 55 started.
+<-><->
+      
+l.147         Para $
+                    a_{11}\neq0$, podemos aplicar operaciones elementales y ...
+Not a real error.
+
+./_region_.tex:147: Preview: Snippet 55 ended.(546133+152916x2414906).
+<-><->
+      
+l.147         Para $a_{11}\neq0$
+                                , podemos aplicar operaciones elementales y ...
+Not a real error.
+
+[55]
+./_region_.tex:147: Preview: Snippet 56 started.
+<-><->
+      
+l.147 ...icar operaciones elementales y despejar $
+                                                  x_{1}$ de la primera ecuac...
+Not a real error.
+
+./_region_.tex:147: Preview: Snippet 56 ended.(338603+117964x748882).
+<-><->
+      
+l.147 ...peraciones elementales y despejar $x_{1}$
+                                                   de la primera ecuación o...
+Not a real error.
+
+[56]
+./_region_.tex:148: Preview: Snippet 57 started.
+<-><->
+      
+l.148         \begin{align*}
+                            
+Not a real error.
+
+./_region_.tex:150: Preview: Snippet 57 ended.(1735577+0x19787798).
+<-><->
+      
+l.150         \end{align*}
+                          
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 150.
+
+[57]
+./_region_.tex:152: Preview: Snippet 58 started.
+<-><->
+      
+l.152         \begin{align*}
+                            
+Not a real error.
+
+./_region_.tex:154: Preview: Snippet 58 ended.(1966099+0x22159786).
+<-><->
+      
+l.154         \end{align*}
+                          
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 154.
+
+[58]
+./_region_.tex:156: Preview: Snippet 59 started.
+<-><->
+      
+l.156         \begin{align*}
+                            
+Not a real error.
+
+./_region_.tex:158: Preview: Snippet 59 ended.(1640465+0x22074655).
+<-><->
+      
+l.158         \end{align*}
+                          
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 158.
+
+[59]
+./_region_.tex:160: Preview: Snippet 60 started.
+<-><->
+      
+l.160         \begin{align*}
+                            
+Not a real error.
+
+./_region_.tex:162: Preview: Snippet 60 ended.(1528048+0x19649809).
+<-><->
+      
+l.162         \end{align*}
+                          
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 162.
+
+[60]
+./_region_.tex:163: Preview: Snippet 61 started.
+<-><->
+      
+l.163 ... la ecuacion tiene solución unica para $
+                                                  x_{2}$, y por tanto eol si...
+Not a real error.
+
+./_region_.tex:163: Preview: Snippet 61 ended.(338603+117964x748882).
+<-><->
+      
+l.163 ...uacion tiene solución unica para $x_{2}$
+                                                  , y por tanto eol sistema ...
+Not a real error.
+
+[61]
+./_region_.tex:165: Preview: Snippet 62 started.
+<-><->
+      
+l.165         \begin{align*}
+                            
+Not a real error.
+
+./_region_.tex:167: Preview: Snippet 62 ended.(1528048+0x19649809).
+<-><->
+      
+l.167         \end{align*}
+                          
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 167.
+
+[62]
+./_region_.tex:169: Preview: Snippet 63 started.
+<-><->
+      
+l.169         \begin{align*}
+                            
+Not a real error.
+
+./_region_.tex:171: Preview: Snippet 63 ended.(1140322+0x18577274).
+<-><->
+      
+l.171         \end{align*}
+                          
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 171.
+
+[63]
+./_region_.tex:173: Preview: Snippet 64 started.
+<-><->
+      
+l.173         \begin{align*}
+                            
+Not a real error.
+
+./_region_.tex:175: Preview: Snippet 64 ended.(1528048+0x19294458).
+<-><->
+      
+l.175         \end{align*}
+                          
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 175.
+
+[64]
+./_region_.tex:177: Preview: Snippet 65 started.
+<-><->
+      
+l.177         \begin{align*}
+                            
+Not a real error.
+
+./_region_.tex:179: Preview: Snippet 65 ended.(1528048+0x19294458).
+<-><->
+      
+l.179         \end{align*}
+                          
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 179.
+
+[65]
+./_region_.tex:182: Preview: Snippet 66 started.
+<-><->
+      
+l.182         \begin{align*}
+                            
+Not a real error.
+
+./_region_.tex:195: Preview: Snippet 66 ended.(2752540+0x25508175).
+<-><->
+      
+l.195         \end{align*}
+                          
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 195.
+
+[66]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 198.
+
+./_region_.tex:203: Preview: Snippet 67 started.
+<-><->
+      
+l.203             \[
+                    
+Not a real error.
+
+./_region_.tex:218: Preview: Snippet 67 ended.(4105143+0x23308637).
+<-><->
+      
+l.218             \]
+                    
+Not a real error.
+
+[67]
+./_region_.tex:220: Preview: Snippet 68 started.
+<-><->
+      
+l.220             \begin{align*}
+                                
+Not a real error.
+
+./_region_.tex:235: Preview: Snippet 68 ended.(4105143+0x23122493).
+<-><->
+      
+l.235             \end{align*}
+                              
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 235.
+
+[68]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 237.
+
+./_region_.tex:240: Preview: Snippet 69 started.
+<-><->
+      
+l.240         \begin{align*}
+                            
+Not a real error.
+
+./_region_.tex:257: Preview: Snippet 69 ended.(4105143+0x26362062).
+<-><->
+      
+l.257         \end{align*}
+                          
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 257.
+
+[69]
+./_region_.tex:258: Preview: Snippet 70 started.
+<-><->
+      
+l.258 ...n equivalentes. La matriz aumentanda de $
+                                                  S_{1}$ es
+Not a real error.
+
+./_region_.tex:258: Preview: Snippet 70 ended.(537395+117964x784881).
+<-><->
+      
+l.258 ...valentes. La matriz aumentanda de $S_{1}$
+                                                   es
+Not a real error.
+
+[70]
+./_region_.tex:259: Preview: Snippet 71 started.
+<-><->
+      
+l.259         \begin{align*}
+                            
+Not a real error.
+
+./_region_.tex:267: Preview: Snippet 71 ended.(3420966+0x19767557).
+<-><->
+      
+l.267         \end{align*}
+                          
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 267.
+
+[71]
+./_region_.tex:268: Preview: Snippet 72 started.
+<-><->
+      
+l.268         Ahora multiplicamos la fila 1 por $
+                                                 -1$ y la restamos a la fila...
+Not a real error.
+
+./_region_.tex:268: Preview: Snippet 72 ended.(495239+65536x996694).
+<-><->
+      
+l.268 ...   Ahora multiplicamos la fila 1 por $-1$
+                                                   y la restamos a la fila 2...
+Not a real error.
+
+[72]
+./_region_.tex:269: Preview: Snippet 73 started.
+<-><->
+      
+l.269         \begin{align*}
+                            
+Not a real error.
+
+./_region_.tex:277: Preview: Snippet 73 ended.(3420966+0x19934673).
+<-><->
+      
+l.277         \end{align*}
+                          
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 277.
+
+[73]
+./_region_.tex:278: Preview: Snippet 74 started.
+<-><->
+      
+l.278 ...    despues multiplicamos la fila 1 por $
+                                                  -\frac{1}{2}$ y la restamo...
+Not a real error.
+
+./_region_.tex:278: Preview: Snippet 74 ended.(647514+271194x1047485).
+<-><->
+      
+l.278 ...ultiplicamos la fila 1 por $-\frac{1}{2}$
+                                                   y la restamos a la fila 3...
+Not a real error.
+
+[74]
+./_region_.tex:279: Preview: Snippet 75 started.
+<-><->
+      
+l.279         \begin{align*}
+                            
+Not a real error.
+
+./_region_.tex:287: Preview: Snippet 75 ended.(3420966+0x19960068).
+<-><->
+      
+l.287         \end{align*}
+                          
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 287.
+
+[75]
+./_region_.tex:288: Preview: Snippet 76 started.
+<-><->
+      
+l.288 ... finalmente multiplicamos la fila 2 por $
+                                                  \frac{3}{8}$ y la restamos...
+Not a real error.
+
+./_region_.tex:288: Preview: Snippet 76 ended.(647514+271194x435814).
+<-><->
+      
+l.288 ...multiplicamos la fila 2 por $\frac{3}{8}$
+                                                   y la restamos a la fila 3...
+Not a real error.
+
+[76]
+./_region_.tex:290: Preview: Snippet 77 started.
+<-><->
+      
+l.290         \begin{align*}
+                            
+Not a real error.
+
+./_region_.tex:298: Preview: Snippet 77 ended.(3420966+0x19934673).
+<-><->
+      
+l.298         \end{align*}
+                          
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 298.
+
+[77]
+./_region_.tex:300: Preview: Snippet 78 started.
+<-><->
+      
+l.300         \begin{align}
+                           
+Not a real error.
+
+./_region_.tex:305: Preview: Snippet 78 ended.(2752540+0x33564238).
+<-><->
+      
+l.305         \end{align}
+                         
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 305.
+
+[78]
+./_region_.tex:307: Preview: Snippet 79 started.
+<-><->
+      
+l.307         \begin{align*}
+                            
+Not a real error.
+
+./_region_.tex:309: Preview: Snippet 79 ended.(1140322+0x21390911).
+<-><->
+      
+l.309         \end{align*}
+                          
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 309.
+
+[79]
+./_region_.tex:311: Preview: Snippet 80 started.
+<-><->
+      
+l.311         \begin{align*}
+                            
+Not a real error.
+
+./_region_.tex:313: Preview: Snippet 80 ended.(1140322+0x26387673).
+<-><->
+      
+l.313         \end{align*}
+                          
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 313.
+
+[80]
+./_region_.tex:314: Preview: Snippet 81 started.
+<-><->
+      
+l.314         Sea $
+                   x_{3}=t$, con $t\in\mathbb{R}$. Entonces
+Not a real error.
+
+./_region_.tex:314: Preview: Snippet 81 ended.(483719+117964x2062786).
+<-><->
+      
+l.314         Sea $x_{3}=t$
+                           , con $t\in\mathbb{R}$. Entonces
+Not a real error.
+
+[81]
+./_region_.tex:314: Preview: Snippet 82 started.
+<-><->
+      
+l.314         Sea $x_{3}=t$, con $
+                                  t\in\mathbb{R}$. Entonces
+Not a real error.
+
+./_region_.tex:314: Preview: Snippet 82 ended.(541764+30747x1807239).
+<-><->
+      
+l.314         Sea $x_{3}=t$, con $t\in\mathbb{R}$
+                                                 . Entonces
+Not a real error.
+
+[82]
+./_region_.tex:315: Preview: Snippet 83 started.
+<-><->
+      
+l.315         \begin{align*}
+                            
+Not a real error.
+
+./_region_.tex:317: Preview: Snippet 83 ended.(1140322+0x20734613).
+<-><->
+      
+l.317         \end{align*}
+                          
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 317.
+
+[83]
+./_region_.tex:319: Preview: Snippet 84 started.
+<-><->
+      
+l.319         \begin{align*}
+                            
+Not a real error.
+
+./_region_.tex:321: Preview: Snippet 84 ended.(1140322+0x20848789).
+<-><->
+      
+l.321         \end{align*}
+                          
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 321.
+
+[84]
+./_region_.tex:322: Preview: Snippet 85 started.
+<-><->
+      
+l.322         Tomemos ahora $
+                             S_{2}$
+Not a real error.
+
+./_region_.tex:322: Preview: Snippet 85 ended.(537395+117964x784881).
+<-><->
+      
+l.322         Tomemos ahora $S_{2}$
+                                   
+Not a real error.
+
+[85]
+./_region_.tex:323: Preview: Snippet 86 started.
+<-><->
+      
+l.323         \begin{align*}
+                            
+Not a real error.
+
+./_region_.tex:328: Preview: Snippet 86 ended.(2752540+0x19437636).
+<-><->
+      
+l.328         \end{align*}
+                          
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 328.
+
+[86]
+./_region_.tex:330: Preview: Snippet 87 started.
+<-><->
+      
+l.330         \begin{align*}
+                            
+Not a real error.
+
+./_region_.tex:332: Preview: Snippet 87 ended.(1140322+0x20863536).
+<-><->
+      
+l.332         \end{align*}
+                          
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 332.
+
+[87]
+./_region_.tex:333: Preview: Snippet 88 started.
+<-><->
+      
+l.333         Sea $
+                   x_{3}=t$, con $t\in\mathbb{R}$. Entonces
+Not a real error.
+
+./_region_.tex:333: Preview: Snippet 88 ended.(483719+117964x2062786).
+<-><->
+      
+l.333         Sea $x_{3}=t$
+                           , con $t\in\mathbb{R}$. Entonces
+Not a real error.
+
+[88]
+./_region_.tex:333: Preview: Snippet 89 started.
+<-><->
+      
+l.333         Sea $x_{3}=t$, con $
+                                  t\in\mathbb{R}$. Entonces
+Not a real error.
+
+./_region_.tex:333: Preview: Snippet 89 ended.(541764+30747x1807239).
+<-><->
+      
+l.333         Sea $x_{3}=t$, con $t\in\mathbb{R}$
+                                                 . Entonces
+Not a real error.
+
+[89]
+./_region_.tex:334: Preview: Snippet 90 started.
+<-><->
+      
+l.334         \begin{align*}
+                            
+Not a real error.
+
+./_region_.tex:336: Preview: Snippet 90 ended.(1140322+0x20734613).
+<-><->
+      
+l.336         \end{align*}
+                          
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 336.
+
+[90]
+./_region_.tex:338: Preview: Snippet 91 started.
+<-><->
+      
+l.338         \begin{align*}
+                            
+Not a real error.
+
+./_region_.tex:340: Preview: Snippet 91 ended.(1140322+0x20848789).
+<-><->
+      
+l.340         \end{align*}
+                          
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 340.
+
+[91]
+./_region_.tex:341: Preview: Snippet 92 started.
+<-><->
+      
+l.341         Dado que los conjuntos solucion de $
+                                                  S_{1}$ y $S_{2}$ son igual...
+Not a real error.
+
+./_region_.tex:341: Preview: Snippet 92 ended.(537395+117964x784881).
+<-><->
+      
+l.341 ...ado que los conjuntos solucion de $S_{1}$
+                                                   y $S_{2}$ son iguales ent...
+Not a real error.
+
+[92]
+./_region_.tex:341: Preview: Snippet 93 started.
+<-><->
+      
+l.341 ...que los conjuntos solucion de $S_{1}$ y $
+                                                  S_{2}$ son iguales entonce...
+Not a real error.
+
+./_region_.tex:341: Preview: Snippet 93 ended.(537395+117964x784881).
+<-><->
+      
+l.341 ...s conjuntos solucion de $S_{1}$ y $S_{2}$
+                                                   son iguales entonces los ...
+Not a real error.
+
+[93]
+./_region_.tex:342: Preview: Snippet 94 started.
+<-><->
+      
+l.342 ...ntes. Se verifica que cada ecuación de $
+                                                  S_{1}$ puede expresarse co...
+Not a real error.
+
+./_region_.tex:342: Preview: Snippet 94 ended.(537395+117964x784881).
+<-><->
+      
+l.342 ...Se verifica que cada ecuación de $S_{1}$
+                                                   puede expresarse como com...
+Not a real error.
+
+[94]
+./_region_.tex:343: Preview: Snippet 95 started.
+<-><->
+      
+l.343         ecuaciones de $
+                             S_{2}$. En efecto
+Not a real error.
+
+./_region_.tex:343: Preview: Snippet 95 ended.(537395+117964x784881).
+<-><->
+      
+l.343         ecuaciones de $S_{2}$
+                                   . En efecto
+Not a real error.
+
+[95]
+./_region_.tex:344: Preview: Snippet 96 started.
+<-><->
+      
+l.344             \begin{align*}
+                                
+Not a real error.
+
+./_region_.tex:348: Preview: Snippet 96 ended.(4306117+0x24010463).
+<-><->
+      
+l.348             \end{align*}
+                              
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 348.
+
+[96]
+./_region_.tex:349: Preview: Snippet 97 started.
+<-><->
+      
+l.349         Ahora consideremos el sistema $
+                                             S_{2}^{\prime}$ dado por
+Not a real error.
+
+./_region_.tex:349: Preview: Snippet 97 ended.(576662+194419x784881).
+<-><->
+      
+l.349 ... consideremos el sistema $S_{2}^{\prime}$
+                                                   dado por
+Not a real error.
+
+[97]
+./_region_.tex:350: Preview: Snippet 98 started.
+<-><->
+      
+l.350         \begin{align*}
+                            
+Not a real error.
+
+./_region_.tex:355: Preview: Snippet 98 ended.(2752540+0x19437636).
+<-><->
+      
+l.355         \end{align*}
+                          
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 355.
+
+[98]
+./_region_.tex:357: Preview: Snippet 99 started.
+<-><->
+      
+l.357         \begin{align*}
+                            
+Not a real error.
+
+./_region_.tex:359: Preview: Snippet 99 ended.(1140322+0x20671024).
+<-><->
+      
+l.359         \end{align*}
+                          
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 359.
+
+[99]
+./_region_.tex:361: Preview: Snippet 100 started.
+<-><->
+      
+l.361         \begin{align*}
+                            
+Not a real error.
+
+./_region_.tex:363: Preview: Snippet 100 ended.(1140322+0x21348174).
+<-><->
+      
+l.363         \end{align*}
+                          
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 363.
+
+[100]
+./_region_.tex:364: Preview: Snippet 101 started.
+<-><->
+      
+l.364 ...   Asi, ya que el conjunto solución de $
+                                                  S_{2}^{\prime}$ no es igua...
+Not a real error.
+
+./_region_.tex:364: Preview: Snippet 101 ended.(576662+194419x784881).
+<-><->
+      
+l.364 ...el conjunto solución de $S_{2}^{\prime}$
+                                                   no es igual al de $S_{1}$
+Not a real error.
+
+[101]
+./_region_.tex:364: Preview: Snippet 102 started.
+<-><->
+      
+l.364 ...n de $S_{2}^{\prime}$ no es igual al de $
+                                                  S_{1}$
+Not a real error.
+
+./_region_.tex:364: Preview: Snippet 102 ended.(537395+117964x784881).
+<-><->
+      
+l.364 ...S_{2}^{\prime}$ no es igual al de $S_{1}$
+                                                  
+Not a real error.
+
+[102]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 368.
+
+./_region_.tex:369: Preview: Snippet 103 started.
+<-><->
+      
+l.369         ¿Para qué valores de $
+                                      a\in\mathbb{Q}$ el siguiente sistema t...
+Not a real error.
+
+./_region_.tex:369: Preview: Snippet 103 ended.(541764+131072x1977085).
+<-><->
+      
+l.369 ...  ¿Para qué valores de $a\in\mathbb{Q}$
+                                                   el siguiente sistema tien...
+Not a real error.
+
+[103]
+./_region_.tex:370: Preview: Snippet 104 started.
+<-><->
+      
+l.370         \begin{align*}
+                            
+Not a real error.
+
+./_region_.tex:375: Preview: Snippet 104 ended.(2752540+0x18851498).
+<-><->
+      
+l.375         \end{align*}
+                          
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 375.
+
+[104]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 376.
+
+./_region_.tex:378: Preview: Snippet 105 started.
+<-><->
+      
+l.378         Queremos que exista $
+                                   \lambda\in\mathbb{Q}$ tal que
+Not a real error.
+
+./_region_.tex:378: Preview: Snippet 105 ended.(546132+131072x2022050).
+<-><->
+      
+l.378 ...ueremos que exista $\lambda\in\mathbb{Q}$
+                                                   tal que
+Not a real error.
+
+[105]
+./_region_.tex:379: Preview: Snippet 106 started.
+<-><->
+      
+l.379         \begin{align*}
+                            
+Not a real error.
+
+./_region_.tex:381: Preview: Snippet 106 ended.(1140322+0x21465959).
+<-><->
+      
+l.381         \end{align*}
+                          
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 381.
+
+[106]
+./_region_.tex:383: Preview: Snippet 107 started.
+<-><->
+      
+l.383         \begin{align*}
+                            
+Not a real error.
+
+./_region_.tex:388: Preview: Snippet 107 ended.(2752540+0x18634866).
+<-><->
+      
+l.388         \end{align*}
+                          
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 388.
+
+[107]
+./_region_.tex:390: Preview: Snippet 108 started.
+<-><->
+      
+l.390         \begin{align*}
+                            
+Not a real error.
+
+./_region_.tex:392: Preview: Snippet 108 ended.(1410084+0x17912336).
+<-><->
+      
+l.392         \end{align*}
+                          
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 392.
+
+[108]
+./_region_.tex:394: Preview: Snippet 109 started.
+<-><->
+      
+l.394         \begin{align*}
+                            
+Not a real error.
+
+./_region_.tex:396: Preview: Snippet 109 ended.(1572879+0x20762558).
+<-><->
+      
+l.396         \end{align*}
+                          
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 396.
+
+[109]
+./_region_.tex:398: Preview: Snippet 110 started.
+<-><->
+      
+l.398         \begin{align*}
+                            
+Not a real error.
+
+./_region_.tex:400: Preview: Snippet 110 ended.(1140322+0x18107445).
+<-><->
+      
+l.400         \end{align*}
+                          
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 400.
+
+[110]
+./_region_.tex:403: Preview: Snippet 111 started.
+<-><->
+      
+l.403       \begin{align*}
+                          
+Not a real error.
+
+./_region_.tex:405: Preview: Snippet 111 ended.(1645697+0x18167831).
+<-><->
+      
+l.405       \end{align*}
+                        
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 405.
+
+[111]
+ ***********
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+ ***********
+ ) 
+Here is how much of TeX's memory you used:
+ 1165 strings out of 428804
+ 20426 string characters out of 4555043
+ 1411530 words of memory out of 5000000
+ 67970 multiletter control sequences out of 15000+600000
+ 683297 words of font info for 77 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 46i,23n,56p,573b,1188s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmex10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr6.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on _region_.pdf (111 pages, 146991 bytes).
+PDF statistics:
+ 589 PDF objects out of 1000 (max. 8388607)
+ 425 compressed objects within 5 object streams
+ 112 named destinations out of 1000 (max. 500000)
+ 109 words of extra memory for PDF output out of 10000 (max. 10000000)
+

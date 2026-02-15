@@ -1,0 +1,366 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{ugmath}
+\usepackage{float}
+\usepackage{placeins}
+\usepackage[labelfont=bf,labelsep=space]{caption}
+\newcommand{\alumno}{Ricardo León Martínez}
+\newcommand{\materia}{Calculo Diferencia e Integral II}
+\newcommand{\profesor}{Fernando Nuñez Medina}
+\newcommand{\tarea}{Tarea 2}
+\newcommand{\fecha}{6/2/2026}
+
+\begin{document}
+    \begin{center}
+    {\large\textbf{UNIVERSIDAD DE GUANAJUATO}}\\[0.3cm]
+    {\normalsize\textbf{DIVISIÓN DE CIENCIAS NATURALES Y EXACTAS}}\\
+    {\normalsize\textbf{CAMPUS GUANAJUATO}}\\[1cm]
+
+    {\Large\textbf{\tarea\ (\materia)}}\\[1cm]
+    \end{center}
+
+    \textbf{Nombre:} \alumno \hfill 
+    \textbf{Fecha:} \fecha \hfill 
+    \textbf{Calificación:} \rule{3cm}{0.4pt} \\[0.3cm]
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 1}]
+        Definamos
+        \begin{align*}
+            f(x)=
+            \begin{cases}
+                1,\text{ si }x=\frac{1}{2},\\
+                0,\text{ si }x\in[0,1]\setminus\{\frac{1}{2}\},
+            \end{cases}
+        \end{align*}
+        \begin{enumerate}
+            \item[(a)] Dibuja la gráfica de $f$.
+            \item[(b)] Determina si $f$ es integrable en $[0,1]$. Argumenta tu
+            respuesta.
+            \item[(c)] Si $f$ es integrable, calcula $\int_{0}^{1}f$.  
+        \end{enumerate}
+    \end{mdframed}
+    \begin{solucion}
+        \begin{enumerate}
+            \item[(a)] Dibuja la gráfica de $f$.
+            \begin{center}
+                \includegraphics[width=0.40\linewidth]{Figura.pdf}
+            \end{center}
+            \item[(b)]  Determina si $f$ es integrable en $[0,1]$. Argumenta tu
+            respuesta.\\
+            Sea $P$ una partición arbitraria de $[0,1]$. Para todo $i=1,\dots,n$ se tiene $m_{i}=0$,
+            ya que en cada subintervalo $[x_{i-1},x_{i}]$ existen puntos distintos de $\frac{1}{2}$
+            donde $f(x)=0$. En consecuencia,
+            \begin{align*}
+                L(f,P)=0,
+            \end{align*}
+            y como esto vale para toda partición $P$,
+            \begin{align*}
+                \sup_{P\in\mathcal{P}}L(f,P)=0.
+            \end{align*}
+            Para la misma particion $P$, existe un único índice $j$ tal que $\frac{1}{2}\in[x_{j-1},x_{j}]$.
+            En este caso se tiene $M_{j}=1$, mientras que $M_{i}=0$ para $i\neq j$. Por lo tanto,
+            \begin{align*}
+                U(f,P)=x_{j}-x_{j-1}.
+            \end{align*}
+            Sea $\varepsilon\gt0$. Podemos elegir una partición $P$ tal que
+            \begin{align*}
+                x_{j}-x_{j-1}\lt\varepsilon,
+            \end{align*}
+            y entonces
+            \begin{align*}
+                U(f,P)\lt\varepsilon.
+            \end{align*}
+            Dado que siempre $L(f,P)=0$, se obtiene
+            \begin{align*}
+                0\leq U(f,P)-L(f,P)\lt\varepsilon.
+            \end{align*}
+            Se sigue que
+            \begin{align*}
+                \inf_{P\in\mathcal{P}}U(f,P)=0=\sup_{P\in\mathcal{P}}L(f,P),
+            \end{align*}
+            y por lo tanto $f$ es integrable en $[0,1]$.
+            \item[(c)] Si $f$ es integrable, calcula $\int_{a}^{b}f$.\\
+            Del inciso anteior es inmediato que
+            \begin{align*}
+                \int_{0}^{1}f=0.
+            \end{align*}
+        \end{enumerate}
+    \end{solucion}
+    
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 2}]
+        Sea $f$ una función acotada en un intervalo $[a,b]$. Prueba que si $f$ es continua en $[a,b]$,
+        excepto en un punto $p\in[a,b]$, entonces $f$ es integrable en $[a,b]$.\\
+        \textbf{Sugerencia:}
+        Supón que $p\in(a,b)$, los casos en que $p=a$ y $p=b$ se prueban de manera similar. Como $f$
+        es acotada, existe $M\gt0$ tal que $\abs{f(x)}\leq M$ para toda $x\in[a,b]$. Dado $\epsilon\gt0$
+        dos puntos $c$ y $d$ tales que $a\lt c\lt p\lt d\lt b$ y $(d-c)2M\lt \epsilon/3$, es decir,
+        el area del rectangulo $[c,d]\times[-M,M]$ es menor que $\epsilon/3$. Como $f$ es integrable
+        en $[a,c]$ y en $[d,b]$, existen particiones $P$ y $Q$ de $[a,c]$ y $[d,b]$, respectivamente,
+        tales que
+        \begin{align*}
+            U(f,P)-L(f,P)\lt\frac{\epsilon}{3}
+        \end{align*}
+        y
+        \begin{align*}
+            U(f,Q)-L(f,Q)\lt\frac{\epsilon}{3}.
+        \end{align*}
+        Aplica el criterio de integrabilidad con la particion $P\cup Q$ de $[a,b]$.
+    \end{mdframed}
+
+    \begin{proof}
+        Supongamos que $p\in(a,b)$, los casos $p=a$ y $p=b$ se prueban de manera análoga. Como $f$ es acotada en $[a,b]$, existe $M\gt0$ tal que
+        \begin{align*}
+            \abs{f(x)}\leq M\text{ para toda }x\in[a,b].
+        \end{align*}
+        Sea $\varepsilon\gt0$. Elegimos $c,d$ tales que
+        \begin{align*}
+            a\lt c\lt p\lt d\lt b \text{ y }(d-c)2M\lt\frac{\varepsilon}{3}.
+        \end{align*}
+        La funcion $f$ es continua en los intervalos cerrados $[a,c]$ y $[d,b]$. Por la proposición 4,
+        $f$ es integrable en $[a,c]$ y en $[d,b]$. Por la proposición 3, existen particiones $P$ de
+        $[a,c]$ y $Q$ de $[d,b]$ tales que
+        \begin{align*}
+            U(f,P)-L(f,P)\lt\frac{\varepsilon}{3},\\
+            U(f,Q)-L(f,Q)\lt\frac{\varepsilon}{3}.
+        \end{align*}
+        En el intervalo $[c,d]$, por la acotación de $f$,
+        \begin{align*}
+            \sup_{x\in[c,d]}f(x)\leq M, \qquad \inf_{x\in[c,d]}f(x)\geq-M.
+        \end{align*}
+        Luego,
+        \begin{align*}
+            U(f,[c,d])-L(f,[c,d])\leq(M-(-M))(d-c)=2M(d-c)\lt\frac{\varepsilon}{3}.
+        \end{align*}
+        Sea
+        \begin{align*}
+            R:=P\cup Q\cup\{c,d\},
+        \end{align*}
+        que es una partición de $[a,b]$. Por la definición de suma superior e inferior,
+        \begin{align*}
+            U(f,R)-L(f,R)&=(U(f,P)-L(f,P))+(U(f,[c,d])-L(f,[c,d]))\\
+            &+ (U(f,Q)-L(f,Q))\\
+            &\lt\frac{\varepsilon}{3}+\frac{\varepsilon}{3}+\frac{\varepsilon}{3}=\varepsilon.
+        \end{align*}
+        Como para todo $\varepsilon\gt0$ existe una partición $R$ de $[a,b]$ tal que
+        \begin{align*}
+            U(f,R)-L(f,R)\lt\varepsilon,
+        \end{align*}
+        por la proposición 3 concluimos que $f$ es integrable en $[a,b]$.
+    \end{proof}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 3}]
+        Muestra funciones $f$ y $g$ integrables en $[a,b]$ tales que
+        \begin{align*}
+            \int_{a}^{b}fg\neq\left(\int_{a}^{b}f\right)\left(\int_{a}^{b}g\right).
+        \end{align*}
+    \end{mdframed}
+    
+    \begin{solucion}
+        Sean $m,n\in\mathbb{R}$ y sea $f(x)=m$ y $g(x)=n$. Asi,
+        \begin{align*}
+            \int_{a}^{b}fg&=\int_{a}^{b}mn\\
+            &=mn(b-a),
+        \end{align*}
+        y tambien
+        \begin{align*}
+            \left(\int_{a}^{b}f\right)\left(\int_{a}^{b}g\right)&=\left(\int_{a}^{b}m\right)\left(\int_{a}^{b}n\right)\\
+            &=m(b-a)n(b-a)\\
+            &=mn(b-a)^{2}.
+        \end{align*}
+        De esta forma es claro que
+        \begin{align*}
+            \int_{a}^{b}fg\neq\left(\int_{a}^{b}f\right)\left(\int_{a}^{b}g\right).
+        \end{align*}
+    \end{solucion}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 4}]
+        Sea $f$ una función integrable en un intervalo $[a,b]$ tal que para toda $x\in[a,b]$,
+        \begin{align*}
+            m\leq f(x)\leq M.
+        \end{align*}
+        Prueba que
+        \begin{align*}
+            m(b-a)\leq\int_{a}^{b}f\leq M(b-a).
+        \end{align*}
+    \end{mdframed}
+
+    \begin{proof}
+        Por hipotesis sabemos que
+        \begin{align*}
+            m\leq f(x)\leq M.
+        \end{align*}
+        Luego, por la monotonia de la integral se sigue que
+        \begin{align*}
+            \int_{a}^{b}m\leq\int_{a}^{b}f(x)\leq\int_{a}^{b}M.
+        \end{align*}
+        Asi, por la integral de una funcion constante obtenemos
+        \begin{align*}
+            m(b-a)\leq\int_{a}^{b}f\leq M(b-a).
+         \end{align*}
+    \end{proof}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 5}]
+        \textbf{(Una función que es integrable en un intervalo $[a,b]$ y que no tiene antiderivada en $[a,b]$)}
+        Considera la función
+        \begin{align*}
+            f(x)=
+            \begin{cases}
+                0,\text{ si }0\leq x\leq1,\\
+                1,\text{ si }1\leq x\leq2.
+            \end{cases}
+        \end{align*}
+        Muestra que $f$ es integrable en $[0,2]$ y que no tiene una antiderivada en $[0,2]$.\\
+        \textbf{Sugerencia:} Para mostrar que $f$ no tiene una antiderivada ten presente el teorema
+        del valor intermedio para derivadas. Una vez que hayas realizado correctamente este ejercicio
+        podrás probar sin dificultad que toda función con un doscontinuidad de salto no posee una
+        antiderivada.
+    \end{mdframed}
+
+    \begin{proof}
+        La función $f$ es acotada y es continua en $[0,2]$ excepto en el punto $x=1$, donde presenta
+        una discontinuidad de salto. Por la proposicion 4 $f$ es integrable en $[0,2]$.
+        Supongamos, por contradicción, que existe una función
+        \begin{align*}
+            F:[0,2]\to\mathbb{R}
+        \end{align*}
+        tal que
+        \begin{align*}
+            F^{\prime}(x)=f(x)\text{ para todo }x\in[0,2].
+        \end{align*}
+        Entonces para todo $x\in(0,1)$, se tiene $F^{\prime}(x)=0$ y para todo $x\in(1,2)$, se tiene
+        $F^{\prime}(X)=1$. Observamos que $F^{\prime}$ toma los valores de 0 y 1 en el intervalo (0,2).
+        Por el teorema del valor intermedio para derivadas, si una derivada toma dos valores distintos
+        en un intervalo, entonces debe tomar todos los valores intermedios. En particular, debería
+        existir algún $c\in(0,2)$ tal que
+        \begin{align*}
+            F^{\prime}(c)=\frac{1}{2}.
+        \end{align*}
+        Sin embargo, esto es imposible, pues por definición
+        \begin{align*}
+            F^{\prime}(x)=f(x)\in\{0,1\}\text{ para todo }x\in(0,2).
+        \end{align*}
+        Asi, $f$ es integrable en $[0,2]$, pero no tiene antiderivada en $[0,2]$.
+    \end{proof}
+
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 6}]
+        Calcula la derivada de la función
+        \begin{align*}
+            g(x)=\int_{0}^{x^{2}}\sqrt{1+t^{2}+t^{4}}dt
+        \end{align*}
+    \end{mdframed}
+
+    \begin{proof}
+        Sea
+        \begin{align*}
+            g(x)=\int_{0}^{x^{2}}\sqrt{1+t^{2}+t^{4}}dt.
+        \end{align*}
+        Definimos
+        \begin{align*}
+            f(t)=\sqrt{1+t^{2}+t^{4}}.
+        \end{align*}
+        La funcion $1+t^{2}+t^{4}$ es un polinomio, por lo tanto es continua en $\mathbb{R}$.
+        La función raiz cuadrada es continua en $(0,\infty)$. En consecuencia, $f$ es continua
+        en $\mathbb{R}$. Por la proposicion 4, $f$ es integrable en todo intervalo cerrado.
+        Definimos la función
+        \begin{align*}
+            F(u)=\int_{0}^{u}f(t)dt=\int_{0}^{u}\sqrt{1+t^{2}+t^{4}}dt.
+        \end{align*}
+        Como $f$ es integrable en cualquier intervalo y continua en todo punto $u$, por el
+        Teorema Fundamental del Cálculo I, se cumple que $F$ es derivable y
+        \begin{align*}
+            F^{\prime}(u)=f(u)=\sqrt{1+u^{2}+u^{4}}\text{ para todo }u\in\mathbb{R}.
+        \end{align*}
+        Observamos que
+        \begin{align*}
+            g(x)=F(x^{2}).
+        \end{align*}
+        Por la regla de la cadena,
+        \begin{align*}
+            g^{\prime}(x)=F^{\prime}(x^{2})\cdot(x^{2})^{\prime}.
+        \end{align*}
+        Sustituyendo la expresion de $F^{\prime}$,
+        \begin{align*}
+            g^{\prime}(x)=\sqrt{1+(x^{2})^{2}+(x^{2})^{4}}\cdot2x=2x\sqrt{1+x^{4}+x^{8}}.
+        \end{align*}
+        Concluyendo que
+        \begin{align*}
+            g^{\prime}(x)=2x\sqrt{1+x^{4}+x^{8}}.
+        \end{align*}
+    \end{proof}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 7}]
+        Calcula las integrales siguientes:
+        \begin{multicols}{2}
+            \begin{enumerate}
+                \item[(a)] $\int\left(3x^{2}-2x+6\right)dx.$
+                \item[(b)]  $\int\left(5x+4\cos\left(x\right)\right)dx.$
+                \item[(c)]  $\int xe^{x}dx.$
+                \item[(d)]  $\int x^{2}e^{x}dx.$
+                \item[(e)]  $\int x\left(x^{2}-7\right)dx.$
+                \item[(f)]  $\int5x\left(5x^{2}-4\right)dx.$
+            \end{enumerate}
+        \end{multicols}
+    \end{mdframed}
+    \begin{solucion}
+        \begin{enumerate}
+            \item[(a)] $\int(3x^{2}-2x+6)dx$.\\
+            Puesto que
+            \begin{align*}
+                \int x^{2}dx=\frac{x^{3}}{3},\int xdx=\frac{x^{2}}{2}\text{ y }\int dx
+            \end{align*}
+            entonces, por la linealidad de la integral indefinida obtenemos que
+            \begin{align*}
+                \int(3x^{2}-2x+6)dx&=3\int x^{2}dx-2\int xdx+6\int dx\\
+                &=x^{3}-x^{2}+6x.
+            \end{align*}
+            \item[(b)] $\int(5x+\cos(x))dx$.\\
+            Puesto que
+            \begin{align*}
+                \int x dx=\frac{x^{2}}{2}\text{ y }\int\cos(x)dx=\sin(x)
+            \end{align*}
+            entonces por la linealidad de la integral indefinida obtenemos que
+            \begin{align*}
+                \int(5x+4\cos(x))dx&=5\int xdx+4\int\cos(x)dx\\
+                &=\frac{5}{2}x^{2}+4\sin(x).
+            \end{align*}
+            \item[(c)] $\int xe^{x}dx$.\\
+            Sea $u=x$ y $dv=e^{x}dx$. Entonces $du=2xdx$ y $v=e^{x}$. En consecuencia
+            \begin{align*}
+                \int xe^{x}dx&=\int udv\\
+                &=uv-\int vdu\\
+                &=xe^{x}-\int e^{x}dx\\
+                &=xe^{x}-e^{x}.
+            \end{align*}
+            \item[(d)] $\int x^{2}e^{x}dx$.\\
+            Sean $u=x^{2}$ y $dv=e^{x}dx$. Entonces $du=2xdx$ y $v=e^{x}$. En consecuencia
+            \begin{align*}
+                \int x^{2}e^{x}&=\int udv\\
+                &=uv-\int vdu\\
+                &=x^{2}e^{x}-\int e^{x}2xdx.
+            \end{align*}
+            Integrando nuevamente por partes y del inciso anterior, obtenemos que
+            \begin{align*}
+                \int e^{x}2xdx&=2\int xe^{x}dx\\
+                &=2xe^{x}-2e^{x}.
+            \end{align*}
+            Así,
+            \begin{align*}
+                \int x^{2}e^{x}dx=x^{2}e^{x}-2xe^{x}+2e^{x}.
+            \end{align*}
+            \item[(e)] $\int x(x^{2}-7)dx$.\\
+            Hagamos $u=x^{2}-7$ y $du=2xdx$. Así
+            \begin{align*}
+                \int x(x^{2}-7)dx&=\frac{1}{2}\int udu\\
+                &=\frac{1}{2}\frac{u^{2}}{2}\\
+                &=\frac{(x^{2}-7)^{2}}{4}.
+            \end{align*}
+            \item[(f)] $\int 5x(5x^{2}-4)$.\\
+            Hagamos $u=5x^{2}-4$ y $du=10xdx$. Así,
+            \begin{align*}
+                \int 5x(5x^{2}-4)&=\frac{1}{2}\int udu\\
+                &=\frac{1}{2}\frac{u^{2}}{2}\\
+                &=\frac{(5x^{2}-4)^{2}}{4}.
+            \end{align*}
+        \end{enumerate}
+    \end{solucion}
+\end{document}

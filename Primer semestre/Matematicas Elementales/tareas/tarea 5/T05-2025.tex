@@ -1,0 +1,143 @@
+\documentclass[14pt]{extarticle}
+\usepackage{extsizes}
+\usepackage{enumerate}
+\usepackage[english,activeacute]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb,times}
+\usepackage{graphicx}
+\usepackage{latexsym}
+\usepackage{color}
+\usepackage{pifont}
+\usepackage{bbm}
+\usepackage{multicol}
+\usepackage{appendix}
+%\usepackage{dsfont}
+\usepackage{mathrsfs}
+%\spanishdecimal{.}
+\usepackage[sort&compress]{natbib}
+\bibliographystyle{plainnat}
+%\usepackage{suthesis-2e}
+%\usepackage{verbatim}
+%\spanishdecimal{.}
+\def\theequation{\thesection.\arabic{equation}}
+
+\textwidth=6.5in
+%\lineskip .25cm
+%\lineskiplimit .25cm
+\textheight=9.5in
+\topmargin=-.75in
+\topskip=-4pt
+\evensidemargin=-2pt
+\oddsidemargin=-1pt
+%%%%%%%%%%%%%%%%%%%%
+%\oddsidemargin 0in \textwidth 6.75in \topmargin 0in \textheight
+%8.5in
+\parindent 0em
+\parskip 1ex
+\newcommand{\floor}[1]{\left\lfloor {#1} \right\rfloor}
+
+\def\CC{\mathbb{C}}
+\newcommand{\rr}{\mathbb{R}}
+\newcommand{\pai}{\left(}
+\newcommand{\pad}{\right)}
+\newcommand{\ci}{\left[}
+\newcommand{\cd}{\right]}
+\newcommand{\nn}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\p}{\mathbb{P}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\lphi}{\widehat{\phi}}
+\newcommand{\D}{\mathfrak{D}}
+%\renewcommand{\qedsymbol}{\rule{1ex}{1ex}}
+
+\begin{document}
+ \begin{flushright}
+  \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+  \hline
+  \ \ $E_1$\ \ &\ \ $E_2$\ \ &\ \ $E_3$\ \ &\ \ $E_4$\ \ &Calif.\\
+  \hline
+  & &  & & \\
+    & & &&\\
+   \hline
+ \end{tabular}\\
+ \end{flushright}
+\begin{center}
+\large
+Matemáticas Elementales
+\normalsize
+
+Agosto - Diciembre de 2025\\
+
+Tarea 5
+\end{center}
+
+Resuelve los siguientes ejercicios según el reglamento del curso y \textbf{entrega esta página} con los nombres de los integrantes de equipo colocados en lugar de estas líneas de instrucciones. 
+Todas las demostraciones deben redactarse justificando formalmente todos los pasos necesarios.
+
+Antes de iniciar cada demostración, deberás indicar claramente cuáles son las hipótesis de cada ejercicio y qué es lo que debes demostrar en cada ejercicio.
+
+La tarea debe resolverse con la teoría vista en el curso o con resultados a lo más de los cursos de preparatoria. Está prohibido utilizar resultados de otros cursos de este mismo semestre y/o trucos de alguna olimpiada relacionada con computación y/o matemáticas.
+
+\begin{enumerate}
+
+\item Calcula las siguientes sumas:
+\begin{enumerate}
+\item $\sum\limits_{j=1}^n\binom{n}{j}j.$
+\item $\sum\limits_{j=0}^n\binom{n}{j}(j+1)^{-1}.$
+\item $\sum\limits_{j=1}^n\frac{1}{j(j+1)}.$
+\end{enumerate}
+
+\item Demuestra lo siguiente:
+
+\begin{enumerate}
+\item $\binom{n}{m}\binom{m}{r}=\binom{n}{r}\binom{n-r}{m-r}$.
+\item $\sum\limits_{k=m}^n\binom{k}{m}=\binom{n+1}{m+1}.$
+\item Para números reales no negativos $x_1, \cdots , x_n$ es válida la desigualdad
+\begin{equation*}
+    \frac{x_1 + x_2 + \cdots + x_n}{n} \geq \sqrt[n]{x_1x_2\cdots x_n}.
+\end{equation*}
+\end{enumerate}
+
+
+\item \begin{enumerate}
+\item Demuestra que para cada primo $p\geq 3$, $\binom{2p-1}{p-1}-1$ es divisible entre $p^2$.
+
+\item Muestra que $3^{n+1}$ divide a $2^{3^{n}} + 1$ para cada entero $n \geq 0$.
+
+\item Demuestra que para $n \geq 1$ se cumple que 
+$$\floor{\frac{1}{2}} + \floor{\frac{2}{2}} + \floor{\frac{3}{2}} + \cdots + \floor{\frac{n}{2}} = \floor{\frac{n}{2}}\floor{\frac{n+1}{2}},$$
+
+donde $\lfloor x\rfloor$ es la parte entera inferior de $x$ (función piso evaluada en $x$).
+\end{enumerate}
+
+\item Realiza lo siguiente:
+
+\begin{enumerate}
+\item Considera el arreglo $1,2,\dots,n$. Denotemos por $\sigma(1),\sigma(2),\dots,\sigma(n)$ un \textbf{reordenamiento o permutación} de $1,2,\dots,n$.
+
+Por ejemplo, si tomamos $1,2,3$ y definimos $\sigma$ como 
+
+$$\sigma(1)=3,\sigma(2)=1,\sigma(3)=2,$$
+$\sigma$ es el reordenamiento que convierte a $1,2,3$ en $3,1,2$. En cambio, si definimos $s$ como $s(1)=2$, $s(2)=3$ y $s(3)=2$, $s$ no es un reordenamiento, ya que no asigna el valor 1 a ninguno de los números en el arreglo original.
+
+Supón que tenemos $n$ de afirmaciones, $P(1),P(2),\dots,P(n)$. Demuestra que todas las afirmaciones son equivalentes dos a dos si y sólo si para cualquier reordenamiento $\sigma$, aplicado a los índices, se cumple que $P(\sigma(n))\Rightarrow P(\sigma(1))$ y $P(\sigma(k))\Rightarrow P(\sigma(k+1))$ para todo $k=1,2,\dots,n-1$.
+
+
+
+\item Jonás tiene un conejo al que apoda Cheñol Bunnyño. El Cheñol Bunnyño tiene un juguete de madera (para morder) que consta de $n$ cuadrados acomodados en un patrón rectangular. El juguete completo o cualquier pieza más pequeña, puede partirse sobre la recta vertical o sobre la recta horizontal que separa los cuadrados.
+
+El Cheñol Bunnyño es tan listo que, cada vez que muerde el juguete, separa un pedazo según las reglas descritas anteriormente (sólo se\-para un pedazo en cada mordida). Determina cuántas veces el Cheñol Bunnyño debe morder el juguete para que éste se parta en $n$ piezas distintas (por supuesto, considera que el Cheñol Bunnyño \textbf{no} se come las piezas una vez separadas y no puede romper los cuadrados que forman el juguete).
+\end{enumerate}
+
+
+\item (150 puntos extra sobre el total de las tareas, previo al promedio). Para $n\geq 2$, sean $a_1,\dots,a_n$ números reales distintos entre sí y distintos de cero. Calcula la suma
+
+$$\sum\limits_{j=1}^n\frac{p(a_j)}{\prod\limits_{k=1,k\neq j}^n(a_k-a_j)},$$
+
+donde $p$ es un polinomio arbitrario (con coeficientes reales) cuyo grado es $n-1$.
+
+\textbf{Sugerencia}: considera primero el caso $p(x)=C x^k$ para alguna constante real $C$ y $k\leq n-1$.
+\end{enumerate}
+\end{document}

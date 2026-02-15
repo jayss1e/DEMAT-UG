@@ -1,0 +1,163 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{ugmath}
+\usepackage{float}
+\usepackage{placeins}
+\usepackage[labelfont=bf,labelsep=space]{caption}
+\newcommand{\paren}[1]{\left( #1 \right)}
+\newcommand{\alumno}{Ricardo León Martínez}
+\newcommand{\materia}{Fisica I}
+\newcommand{\profesor}{Lucero Uscanga Aguilera}
+\newcommand{\tarea}{Tarea 1}
+\newcommand{\fecha}{16/2/2026}
+
+\begin{document}
+    \begin{center}
+    {\large\textbf{UNIVERSIDAD DE GUANAJUATO}}\\[0.3cm]
+    {\normalsize\textbf{DIVISIÓN DE CIENCIAS NATURALES Y EXACTAS}}\\
+    {\normalsize\textbf{CAMPUS GUANAJUATO}}\\[1cm]
+
+    {\Large\textbf{\tarea\ (\materia)}}\\[1cm]
+    \end{center}
+
+    \textbf{Nombre:} \alumno \hfill 
+    \textbf{Fecha:} \fecha \hfill 
+    \textbf{Calificación:} \rule{3cm}{0.4pt} \\[0.3cm]
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 1}]
+        Encontrar el resultado de la suma de los siguientes vectores:
+        \begin{enumerate}
+            \item[(a)] $\vec{V}_{1}=\vec{u}_{x}(5)+\vec{u}_{y}(-2)+u_{z}(1)$
+            \item[(b)] $\vec{V}_{2}=\vec{u}_{x}(-3)+\vec{u}_{y}(1)+\vec{u}_{z}(-7)$
+            \item[(c)] $\vec{V}_{3}=\vec{u}_{x}(4)+\vec{u}_{y}(7)+\vec{u}_{z}(6)$ 
+        \end{enumerate}
+        Obtener la magnitud de la resultante y los angulos que hace con los ejes $X,Y$ y $Z$.
+    \end{mdframed}
+
+    \begin{solucion}
+        Consideremos los siguientes vectores
+        \begin{align*}
+            \vec{V}_{1}=\vec{u}_{x}(5)+\vec{u}_{y}(-2)+u_{z}(1), \qquad \vec{V}_{2}=\vec{u}_{x}(-3)+\vec{u}_{y}(1)+\vec{u}_{z}(-7), \qquad \vec{V}_{3}=\vec{u}_{x}(4)+\vec{u}_{y}(7)+\vec{u}_{z}(6).
+        \end{align*}
+        La resultante se define como
+        \begin{align*}
+            \vec{R}=\vec{V}_{1}+\vec{V}_{2}+\vec{V}_{3}.
+        \end{align*}
+        Sumando componente a componente se obtiene
+        \begin{align*}
+            \vec{R}=(5-3+4)\vec{u}_{x}+(-2+1+7)\vec{u}_{y}+(1-7+6)\vec{u}_{z}=6\vec{u}_{x}+6\vec{u}_{y}+0\vec{u}_{z}.
+        \end{align*}
+        La magnitud de $\vec{R}$ viene dada por
+        \begin{align*}
+            \norm{\vec{R}}=\sqrt{6^{2}+6^{2}+0^{2}}=\sqrt{72}=6\sqrt{2}.
+        \end{align*}
+        Sean $\alpha,\beta,\gamma$ los angulos que $\vec{R}$ forma con los ejes $X,Y,Z$ respectivamente. Por definición de cosenos directores,
+        \begin{align*}
+            \cos(\alpha)=\frac{R_{x}}{\norm{\vec{R}}},\qquad \cos(\beta)=\frac{R_{y}}{\norm{\vec{R}}},\qquad \cos(\gamma)=\frac{R_{z}}{\norm{\vec{R}}}.
+        \end{align*}
+        En este caso,
+        \begin{align*}
+            \cos(\alpha)=\frac{6}{6\sqrt{2}}=\frac{1}{\sqrt{2}},\qquad \cos(\beta)=\frac{6}{6\sqrt{2}}=\frac{1}{\sqrt{2}},\qquad \cos(\gamma)=\frac{0}{6\sqrt{2}}=0.
+        \end{align*}
+        Por lo tanto,
+        \begin{align*}
+            \alpha=\frac{\pi}{4},\qquad\beta=\frac{\pi}{4},\qquad\gamma=\frac{\pi}{2}.
+        \end{align*}
+    \end{solucion}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 2}]
+        Encontrar la distancia del punto $P(4,5,-7)$ a la recta que pasa por el punto $Q(-3,6,12)$ y es paralela al vector
+        $\vec{V}=\vec{u}_{x}(4)-\vec{u}_{y}(1)+\vec{u}_{z}(3)$. Encontrar también la distancia del punto $P$ al plano que pasa por $Q$ y es perpendicular
+        a $\vec{V}$.
+    \end{mdframed}
+
+    \begin{solucion}
+        La recta considerada pasa por $Q$ y tiene como vector director $\vec{V}$. La distancia de un punto $P$ a una recta que pasa por $Q$ con
+        dirección $\vec{V}$ viene dada por
+        \begin{align*}
+            d(P,\ell)=\frac{\norm{(P-Q)\times\vec{V}}}{\norm{\vec{V}}}.
+        \end{align*}
+        Se tiene
+        \begin{align*}
+            P-Q=(4+3,5-6,-7-12)=(7,-1,-19).
+        \end{align*}
+        El producto cruz es
+        \begin{align*}
+            (P-Q)\times\vec{V}=\abs{
+                \begin{array}{ccc}
+                    \vec{u}_{x} & \vec{u}_{y} & \vec{u}_{z}\\
+                    7 & -1 & -19\\
+                    4 & -1 & 3
+                \end{array}
+            } =(-22,-97,-3).
+        \end{align*}
+        Por lo tanto,
+        \begin{align*}
+            \norm{(P-Q)\times\vec{V}}=\sqrt{(-22)^{2}+(-97)^{2}+(-3)^{2}}=\sqrt{9902}, \qquad \norm{\vec{V}}=\sqrt{4^{2}+(-1)^{2}+3^{2}}=\sqrt{26}.
+        \end{align*}
+        La distancia del punto $P$ a la recta es
+        \begin{align*}
+            d(P,\ell)=\frac{\sqrt{9902}}{\sqrt{26}}=\sqrt{381}.
+        \end{align*}
+        Ahora consideremos el plano que pasa por $Q$ y es perpendicular a $\vec{V}$. Un vector normal al plano es precisamente $\vec{V}$, y la distancia
+        de un punto $P$ a dicho plano está dada por
+        \begin{align*}
+            d(P,\mathcal{P})=\frac{\abs{(P-Q)\cdot\vec{V}}}{\norm{\vec{V}}}.
+        \end{align*}
+        Calculamos al producto punto
+        \begin{align*}
+            (P-Q)\cdot\vec{V}=(7,-1,-19)\cdot(4,-1,3)=28+1-57=-28.
+        \end{align*}
+        Luego,
+        \begin{align*}
+            d(P,\mathcal{P})=\frac{\abs{-28}}{\sqrt{26}}=\frac{28}{\sqrt{26}}.
+        \end{align*}
+        Asi, la distancia de $P$ a la recta es $\sqrt{381}$, y la distancia de $P$ al plano es $\frac{28}{\sqrt{26}}$.
+    \end{solucion}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 3}]
+        Dado el conjunto de 3 vectores no-coplaneres $\vec{a}_{1},\vec{a}_{2},\vec{a}_{3}$, los vectores
+        \begin{align*}
+            \vec{a}^{1}=\frac{\vec{a}_{2}\times\vec{a}_{3}}{\vec{a}_{1}\cdot\vec{a}_{2}\times\vec{a}_{3}},\\
+            \vec{a}^{2}=\frac{\vec{a}_{3}\times\vec{a}_{1}}{\vec{a}_{1}\cdot\vec{a}_{2}\times\vec{a}_{3}},\\
+            \vec{a}^{3}=\frac{\vec{a}_{1}\times\vec{a}_{2}}{\vec{a}_{1}\cdot\vec{a}_{2}\times\vec{a}_{3}}
+        \end{align*}
+        se denominan vectores recíprocos. Demostrar que $\vec{a}^{i}\cdot\vec{a}_{i}=1$ y que $a^{i}\cdot a_{j}=0$ donde $i$ y $j$ toman los valores
+        de 1,2,3. Discutir la disposición geométrica de los vectores recíprocos $\vec{a}^{1},\vec{a}^{2},\vec{a}^{3}$ en relación con $\vec{a}_{1},\vec{a}_{2},\vec{a}_{3}$.
+        \textbf{Sugerencia:}Note que en $\vec{a}^{i}\cdot\vec{a}_{j}=0$ con $i\neq j$.
+    \end{mdframed}
+
+    \begin{proof}
+        Procederemos por casos. Caso $i=j$. Por ejemplo,
+        \begin{align*}
+            \vec{a}^{1}\cdot \vec{a}_{1}=\frac{(\vec{a}_{2}\times\vec{a}_{3})\cdot\vec{a}_{1}}{\vec{a}_{1}\cdot(a_{2}\times\vec{a}_{3})}
+        \end{align*}
+        entonces
+        \begin{align*}
+            \vec{a}^{1}\cdot \vec{a}_{1}=\frac{\vec{a}_{1}\cdot(\vec{a}_{2}\times\vec{a}_{3})}{\vec{a}_{1}\cdot(a_{2}\times\vec{a}_{3})}.
+        \end{align*}
+        Luego
+        \begin{align*}
+            \vec{a}^{1}\cdot \vec{a}_{1}=1
+        \end{align*}
+        De forma analoga podemos ver que
+        \begin{align*}
+            \vec{a}^{2}\cdot \vec{a}_{2}=1, \qquad \vec{a}^{3}\cdot \vec{a}_{3}=1.
+        \end{align*}
+        Caso $i\neq j$. Consideremos, por ejemplo,
+        \begin{align*}
+            \vec{a}^{1}\cdot\vec{a}_{2}=\frac{(\vec{a}_{2}\times\vec{a}_{3})\cdot\vec{a}_{2}}{\vec{a}_{1}\cdot(\vec{a}_{2}\times\vec{a}_{3})}.
+        \end{align*}
+        Pero $\vec{a}_{2}\times\vec{a}_{3}$ es ortogonal a $\vec{a}_{2}$, por tanto,
+        \begin{align*}
+            (\vec{a}_{2}\times\vec{a}_{3})\cdot\vec{a}_{2}=0.
+        \end{align*}
+        Luego
+        \begin{align*}
+            \vec{a}^{1}\cdot\vec{a}_{2}=0.
+        \end{align*}
+        Analogamente,
+        \begin{align*}
+            \vec{a}^{1}\cdot\vec{a}_{3}=0,\quad\vec{a}^{2}\cdot\vec{a}_{1}=0\quad\vec{a}^{2}\cdot\vec{a}_{3}=0\quad\vec{a}^{3}\cdot\vec{a}_{1}=0\quad\vec{a}^{3}\cdot\vec{a}_{2}=0.
+        \end{align*}
+    \end{proof}
+\end{document}

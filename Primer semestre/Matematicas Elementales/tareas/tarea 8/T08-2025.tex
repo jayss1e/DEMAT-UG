@@ -1,0 +1,147 @@
+\documentclass[14pt]{extarticle}
+\usepackage{extsizes}
+\usepackage{enumerate}
+\usepackage[english,activeacute]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb,times}
+\usepackage{graphicx}
+\usepackage{latexsym}
+\usepackage{color}
+\usepackage{pifont}
+\usepackage{bbm}
+\usepackage{multicol}
+\usepackage{appendix}
+%\usepackage{dsfont}
+\usepackage{mathrsfs}
+%\spanishdecimal{.}
+\usepackage[sort&compress]{natbib}
+\bibliographystyle{plainnat}
+%\usepackage{suthesis-2e}
+%\usepackage{verbatim}
+%\spanishdecimal{.}
+\def\theequation{\thesection.\arabic{equation}}
+
+\textwidth=6.5in
+%\lineskip .25cm
+%\lineskiplimit .25cm
+\textheight=9.5in
+\topmargin=-.75in
+\topskip=-4pt
+\evensidemargin=-2pt
+\oddsidemargin=-1pt
+%%%%%%%%%%%%%%%%%%%%
+%\oddsidemargin 0in \textwidth 6.75in \topmargin 0in \textheight
+%8.5in
+\parindent 0em
+\parskip 1ex
+\newcommand{\floor}[1]{\left\lfloor {#1} \right\rfloor}
+
+\def\CC{\mathbb{C}}
+\newcommand{\rr}{\mathbb{R}}
+\newcommand{\pai}{\left(}
+\newcommand{\pad}{\right)}
+\newcommand{\ci}{\left[}
+\newcommand{\cd}{\right]}
+\newcommand{\nn}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\p}{\mathbb{P}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\lphi}{\widehat{\phi}}
+\newcommand{\D}{\mathfrak{D}}
+%\renewcommand{\qedsymbol}{\rule{1ex}{1ex}}
+
+\begin{document}
+ \begin{flushright}
+  \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+  \hline
+  \ \ $E_1$\ \ &\ \ $E_2$\ \ &\ \ $E_3$\ \ &\ \ $E_4$\ \ &Calif.\\
+  \hline
+  & &  & & \\
+    & & &&\\
+   \hline
+ \end{tabular}\\
+ \end{flushright}
+\begin{center}
+\large
+Matemáticas Elementales
+\normalsize
+
+Agosto - Diciembre de 2025\\
+
+Tarea 8
+\end{center}
+
+Resuelve los siguientes ejercicios según el reglamento del curso y \textbf{entrega esta página} con los nombres de los integrantes de equipo colocados en lugar de estas líneas de instrucciones. 
+Todas las demostraciones deben redactarse justificando formalmente todos los pasos necesarios.
+
+La tarea debe resolverse \textbf{con la teoría vista en el curso o con resultados a lo más de los cursos de preparatoria}. Está prohibido utilizar resultados de otros cursos de este mismo semestre o de semestres posteriores. Tampoco está permitido utilizar trucos de alguna olimpiada relacionada con computación y/o matemáticas.
+
+Cada inciso distinto debe ser resuelto por un alumno distinto y, en cada caso, deberá colocarse el nombre de la persona que redactó el inciso.
+
+\begin{enumerate}
+\item Realiza lo siguiente:
+\begin{enumerate}
+\item Sea $A$ un conjunto no vacío arbitrario y sea
+$$R=\{(a,a): a\in A\}.$$
+
+Demuestra que $R$ es una relación de equivalencia sobre $A$ y que si $S$ es cualquier otra relación de equivalencia sobre $A$, entonces $R\subseteq S$. Además, halla la partición inducida por $R$.
+\bigskip
+
+\item Considera en $\rr$ la relaci\'on $R=\{(a,b) \in \rr \times \rr: a^2-b^2=a-b\}$. Demuestra que $R$ es una relaci\'on de equivalencia y halla la partición inducida por $R$.
+
+\item Determina si la siguiente ``demostración'' es correcta o no. En caso de que no sea correcta, halla el error.
+
+\textbf{Proposición}. Sea $A$ un conjunto arbitrario no vacío y sea $\sim$ una relación binaria sobre $A$ que es simétrica y transitiva, se cumple que $\sim$ es reflexiva.
+
+\textbf{Prueba}: \textit{Sean $x,y\in A$ tales que $x\sim y$. Por simetría tenemos que $y\sim x$ y por transitividad obtenemos también que $x\sim x$}. $\blacksquare$
+\end{enumerate}
+
+ 
+
+
+\item  Sea $A=\Z \times (\Z - \{0\})$. Considera la relaci\'on en $A$ dada por 
+$$R=\Bigg\{\Big((a,b),(c,d)\Big) \in A \times A: ad=bc \Bigg\}.$$
+
+\begin{enumerate}
+\item  Demuestra que $R$ es una relaci\'on de equivalencia y halla la partición inducida por ella.
+\item Denotemos por $\sim$ a la relación de equivalencia $R$ y sea
+
+\begin{align*}
+f: (A/\sim )\times (A/\sim)& \longrightarrow A/\sim \\
+\big( [(a,b)], [(c,d)] \big) &\mapsto [(ad+bc,bd)].
+\end{align*}
+
+Demuestra que $f$ es una función bien definida.
+
+\item ¿Se cumple que $Rango(f)=A/\sim$ para $f$ como en el inciso anterior? Justifica formalmente tu respuesta.
+\end{enumerate}
+
+
+\item Sean $A=\nn \times \nn$ y 
+$$R=\{((a,b),(c,d)) \in A \times A: a+d=b+c\}.$$
+
+En todo el ejercicio se considerará la relación $R$.
+\begin{enumerate}
+\item Demuestra que $R$ es una relaci\'on de equivalencia. 
+
+\item Denotemos por $\sim$ a la relación $R$ y sea \begin{align*}
+g: (A/\sim) \times (A/\sim) &\to (A/\sim) \\
+\Big([(a,b)], [(c,d)] \Big) &\mapsto [(a \cdot c+b \cdot d,a \cdot d+ b \cdot c)].
+\end{align*}
+Determina si $g$ es una función bien definida y si lo es, halla su rango.
+
+
+\end{enumerate}
+
+\item Demuestra que los siguientes conjuntos son numerables:
+\begin{enumerate}
+\item $\mathbb{Q}^n$.
+\item $\Z^n$.
+\item $\{ (a,b)\subseteq \rr: a<b, a,b\in\mathbb{Q}\}$.
+\item $\{q\in\mathbb{Q}: q\in [0,1]\}$.
+\end{enumerate}
+
+\end{enumerate}
+\end{document}

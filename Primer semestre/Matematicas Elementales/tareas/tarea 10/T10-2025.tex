@@ -1,0 +1,236 @@
+\documentclass[14pt]{extarticle}
+\usepackage{extsizes}
+\usepackage{enumerate}
+\usepackage[english,activeacute]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb,times}
+\usepackage{graphicx}
+\usepackage{latexsym}
+\usepackage{color}
+\usepackage{pifont}
+\usepackage{bbm}
+\usepackage{multicol}
+\usepackage{appendix}
+%\usepackage{dsfont}
+\usepackage{mathrsfs}
+%\spanishdecimal{.}
+\usepackage[sort&compress]{natbib}
+\bibliographystyle{plainnat}
+%\usepackage{suthesis-2e}
+%\usepackage{verbatim}
+%\spanishdecimal{.}
+\def\theequation{\thesection.\arabic{equation}}
+
+\textwidth=6.5in
+%\lineskip .25cm
+%\lineskiplimit .25cm
+\textheight=9.5in
+\topmargin=-.75in
+\topskip=-4pt
+\evensidemargin=-2pt
+\oddsidemargin=-1pt
+%%%%%%%%%%%%%%%%%%%%
+%\oddsidemargin 0in \textwidth 6.75in \topmargin 0in \textheight
+%8.5in
+\parindent 0em
+\parskip 1ex
+\newcommand{\floor}[1]{\left\lfloor {#1} \right\rfloor}
+
+\def\CC{\mathbb{C}}
+\newcommand{\rr}{\mathbb{R}}
+\newcommand{\pai}{\left(}
+\newcommand{\pad}{\right)}
+\newcommand{\ci}{\left[}
+\newcommand{\cd}{\right]}
+\newcommand{\nn}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\p}{\mathbb{P}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\lphi}{\widehat{\phi}}
+\newcommand{\D}{\mathfrak{D}}
+\newcommand{\Bmod}{\bmod \hspace{1mm}}
+\newcommand{\Vmod}[2]{ {#1} \mom{\Bmod{#2}} }
+%\renewcommand{\qedsymbol}{\rule{1ex}{1ex}}
+
+\begin{document}
+ \begin{flushright}
+  \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+  \hline
+  \ \ $E_1$\ \ &\ \ $E_2$\ \ &\ \ $E_3$\ \ &\ \ $E_4$\ \ &Calif.\\
+  \hline
+  & &  & & \\
+    & & &&\\
+   \hline
+ \end{tabular}\\
+ \end{flushright}
+\begin{center}
+\large
+Matemáticas Elementales
+\normalsize
+
+Agosto - Diciembre de 2025\\
+
+Tarea 10
+\end{center}
+
+Resuelve los siguientes ejercicios según el reglamento del curso y \textbf{entrega esta página} con los nombres de los integrantes de equipo colocados en lugar de estas líneas de instrucciones. 
+Todas las demostraciones deben redactarse justificando formalmente todos los pasos necesarios.
+
+La tarea debe resolverse \textbf{con la teoría vista en el curso o con resultados a lo más de los cursos de preparatoria}. Está prohibido utilizar resultados de otros cursos de este mismo semestre o de semestres posteriores. Tampoco está permitido utilizar trucos de alguna olimpiada relacionada con computación y/o matemáticas.
+
+Cada inciso distinto debe ser resuelto por un alumno distinto y, en cada caso, deberá colocarse el nombre de la persona que redactó el inciso.
+
+\begin{enumerate}
+\item Considera $(\rr,+,\cdot)$ como se definieron en clase. 
+
+Dado un entero $n\geq2$ y un real $x>0$, consideramos
+
+$$\alpha_n:=\{r\in\rr:r^n<x\}.$$
+
+Definimos
+
+$$\sqrt[n]{x}:=\sup\alpha_n. $$
+
+Demuestra que para $\alpha, \beta \in \rr^{+}, n \in \Z^{+}, m \in \Z^+$, se cumple lo siguiente:
+                
+                    \begin{enumerate}
+                    	\item
+                    	$\sqrt[n]{\alpha} \sqrt[n]{\beta} = \sqrt[n]{\alpha \beta}$
+                    	\item
+                    	$\sqrt[m]{\sqrt[n]{\alpha}} = \sqrt[mn]{\alpha}$
+                    	\item
+                    	$\pai\sqrt[n]{\alpha}\pad^{m} = \sqrt[n]{\alpha^{m}}$
+                    	\item
+                    	$\sqrt[n]{\alpha^{m}} = \sqrt[s]{\alpha^{r}} \Longleftrightarrow \frac{m}{n} = \frac{r}{s}.$
+                    \end{enumerate}
+
+\item Considera $\rr$, $\mathbb{Q}$, $\mathbb{Z}$ y $\nn_0$ como se construyeron en clase. Definimos una función $F:\nn_0\to \nn$ tal que $F(0)=1$ y para $n\in\nn$, $F(n)=n\cdot F(n-1)$. a $F$ le llamaremos \textbf{factorial} de $n$ y escribiremos $n!=F(n)$.
+
+Sea
+
+$$a_n=\sum\limits_{k=0}^n\frac{1}{k!}.$$
+
+\begin{enumerate}
+\item Considera $b_1=1$ y $b_n$ para $n\in\nn\backslash\{1\}$ tal que $b_n=-\frac{1}{n!}+b_{n-1}$ y
+
+$$\frac{1}{(n+1)!}<b_n<3.$$
+
+Demuestra que $a_n<3-b_n$ para todo $n\in\nn$.
+
+\item Sea 
+
+$$A_n:=\{q\in\mathbb{Q}:q<a_n\}.$$
+
+Demuestra que el conjunto 
+
+$$e:=\bigcup_{n\in\nn}A_n,$$
+
+es un número real. Dicho número real es la base del logaritmo nepe\-riano.
+\end{enumerate}
+
+\item \leavevmode
+
+\begin{enumerate}
+ \item
+                    Sean $a,b \in \Z$. Demuestra que
+                    \[
+                        (a,b) = \pai|a|,|b|\pad.
+                    \]
+                    \item
+                    Demuestra  que si $d = (a,b)$ y $d = ar + bs$, entonces $(r,s)=1$.
+                    
+                    \item Sean $a,b\in\mathbb{Z}$ y $d=(a,b)$. Sean $a',b'$ tales que $a=da'$, $b=db'$. Demuestra que si $a|c$ y $b|c$, entonces $a'b'd | c$.
+                    
+\item Sea $k$ un entero positivo, demuestra que
+
+$$(ka,kb)=k(a,b),\quad [ka,kb]=k[a,b],\quad \forall a,b\in\mathbb{Z}.$$
+
+\item Utiliza el algoritmo de Euclides para hallar el MCD de las siguientes parejas de números. Además, utiliza este mismo algoritmo para escribir al MCD de cada pareja como combinación lineal de los números en dicha pareja.
+
+\begin{enumerate}
+\item 329, 1005.
+\item 1302, 1224.
+\item 1816, -1789.
+\item -666, -12309.
+\end{enumerate}
+
+\item Determina cuáles de las siguientes ecuaciones diofantinas tienen soluciones enteras. Para aquellas en las que sea posible, halla el conjunto de todas sus soluciones enteras.
+                       
+\begin{enumerate}
+ \item $35x + 17y = 14$;
+                        \item
+                        $1242x + 1476y = 49$;
+                        \item
+                        $15x + 21y = 10.$
+                         \item
+                        $696 x+408 y=48$
+                        \item
+                        $(6 n+1) x+3 n y=12$
+\end{enumerate}                       
+
+\end{enumerate}
+
+\item \leavevmode
+
+\begin{enumerate}
+\item Utilizando el principio del buen orden, demuestra que todo entero mayor a 1 es divisible entre al menos un número primo.
+
+\item Demuestra que el conjunto de números primos no es finito.
+
+\item Demuestra que si $a\equiv b(\Bmod m)$ y $b \equiv c(\Bmod m)$, entonces  $$a \equiv c(\Bmod m).$$
+                    \item
+                    Prueba que $a \equiv 0(\Bmod m)$ si y solo si $m|a$.
+                    \item
+                    Demuestra que  que si $a \equiv b(\Bmod m)$ entonces  $a c \equiv b c(\Bmod m)$ para cualquier entero $c$.
+                    \item
+                    Demuestra que si $a+c \equiv b+c(\Bmod m),$ entonces $$a \equiv b (\Bmod m).$$
+                    
+                    \item
+                    Demuestra que si $a c \equiv b c(\Bmod m)$ y $m$ y $c$ son primos entre sí entonces $a \equiv b(\Bmod m)$.
+                    
+                    \item
+                    Supón que $m_{1}, m_{2}, \dots, m_{n}$ son primos relativos dos a dos. Demuestra que las congruencias
+                    \[
+                        x \equiv a_{1}\left(\bmod m_{1}\right), x \equiv a_{2}\left(\bmod m_{2}\right), \cdots, x \equiv a_{n}\left(\bmod m_{n}\right),
+                    \]
+                    tienen solución común.
+                    \item
+                    Resuelve las siguientes congruencias:
+                    \begin{enumerate}
+                        \item
+                        $16 x-9\equiv 0(\bmod 35)$.
+                        \item
+                        $200 x+315 \equiv 0(\bmod 441)$.
+                        \item
+                        $(2 n+1) x+7 \equiv 0(\bmod 4 n)$.
+                        \item
+                        $(3 n-2) x+5 n\equiv 0(\bmod 9 n-9)$.
+                    \end{enumerate}
+                    \item
+                    Resuelve los siguientes sistemas de congruencias:
+                        \begin{multicols}{3}
+                            \begin{enumerate}
+                                \item
+                                $x \equiv 0 (\Bmod 3)$
+                                
+                                $x \equiv 0(\Bmod 8)$
+                                \item
+                                $x \equiv 1 (\Bmod 25)$
+                                
+                                $x \equiv 7(\Bmod 35)$
+                                \item
+                                $x \equiv 3 (\Bmod 17)$
+                                
+                                $x \equiv 4(\Bmod 21)$
+                                
+                                
+                                $x \equiv 5 (\Bmod 25)$
+                            \end{enumerate}
+                        \end{multicols}
+\end{enumerate}
+\end{enumerate}
+
+ 
+\end{document}

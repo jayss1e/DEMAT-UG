@@ -1,0 +1,36 @@
+PWD g:/Mi unidad/folder/Segundo Semestre/Estruc. de Datos y Algoritmos/Tareas/Reto epico
+INPUT c:/texlive/2025/texmf.cnf
+INPUT c:/texlive/2025/texmf-dist/web2c/texmf.cnf
+INPUT c:/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt
+INPUT g:/Mi unidad/folder/Segundo Semestre/Estruc. de Datos y Algoritmos/Tareas/Reto epico/retoepico.tex
+OUTPUT retoepico.log
+INPUT c:/texlive/2025/texmf-dist/tex/latex/base/article.cls
+INPUT c:/texlive/2025/texmf-dist/tex/latex/base/article.cls
+INPUT c:/texlive/2025/texmf-dist/tex/latex/base/size12.clo
+INPUT c:/texlive/2025/texmf-dist/tex/latex/base/size12.clo
+INPUT c:/texlive/2025/texmf-dist/tex/latex/base/size12.clo
+INPUT c:/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map
+INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
+INPUT c:/texlive/2025/texmf-dist/tex/latex/geometry/geometry.sty
+INPUT c:/texlive/2025/texmf-dist/tex/latex/geometry/geometry.sty
+INPUT c:/texlive/2025/texmf-dist/tex/latex/graphics/keyval.sty
+INPUT c:/texlive/2025/texmf-dist/tex/latex/graphics/keyval.sty
+INPUT c:/texlive/2025/texmf-dist/tex/generic/iftex/ifvtex.sty
+INPUT c:/texlive/2025/texmf-dist/tex/generic/iftex/ifvtex.sty
+INPUT c:/texlive/2025/texmf-dist/tex/generic/iftex/iftex.sty
+INPUT c:/texlive/2025/texmf-dist/tex/generic/iftex/iftex.sty
+INPUT c:/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+INPUT c:/texlive/2025/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+INPUT ./retoepico.aux
+INPUT ./retoepico.aux
+INPUT retoepico.aux
+OUTPUT retoepico.aux
+INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmr17.tfm
+INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
+INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmtt12.tfm
+OUTPUT retoepico.pdf
+INPUT c:/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map
+INPUT retoepico.aux
+INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
+INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
+INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb

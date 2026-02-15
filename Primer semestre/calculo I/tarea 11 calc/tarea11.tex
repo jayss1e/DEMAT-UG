@@ -1,0 +1,424 @@
+\documentclass[12pt,a4paper]{article}
+\newcommand{\grupo}{}
+% ------------------------------------------------------
+% Idioma y codificación
+% ------------------------------------------------------
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+% ------------------------------------------------------
+% Tipografía y formato
+% ------------------------------------------------------
+\usepackage{lmodern}    % Fuente Latin Modern
+\usepackage{microtype}  % Mejor espaciado
+\usepackage{xcolor}     % Colores
+\definecolor{UGblue}{RGB}{0,33,71}
+\definecolor{UGgold}{RGB}{212,175,55}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{titlesec}
+% Añade esto en el preámbulo (antes de \begin{document})
+\usepackage{bookmark}
+\bookmarksetup{open,numbered}
+\usepackage{tikz}
+\usetikzlibrary{calc,decorations.pathreplacing,angles,quotes}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{caption}
+
+% ------------------------------------------------------
+% Matemáticas
+% ------------------------------------------------------
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{mathrsfs}
+\usepackage{stmaryrd}
+\usepackage{physics}
+
+% ------------------------------------------------------
+% Otros paquetes útiles
+% ------------------------------------------------------
+\usepackage{enumitem}
+\usepackage{csquotes}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=UGblue,
+    urlcolor=UGgold,
+    citecolor=UGblue
+}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+\usepackage{multicol}
+
+% ------------------------------------------------------
+% Encabezados y pies de página
+% ------------------------------------------------------
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{Elementos de Geometría}
+\rhead{Ricardo Leon Martinez}
+\cfoot{\thepage}
+% ------------------------------------------------------
+% Teoremas, definiciones, etc.
+% ------------------------------------------------------
+\theoremstyle{plain}
+\newtheorem{teo}{Teorema}[section]
+\newtheorem{prop}[teo]{Proposición}
+\newtheorem{lema}[teo]{Lema}
+\theoremstyle{definition}
+\newtheorem{defi}[teo]{Definición}
+\theoremstyle{remark}
+\newtheorem{ejemplo}[teo]{Ejemplo}
+\newtheorem{obs}[teo]{Observación}
+
+% ------------------------------------------------------
+% graficas
+% ------------------------------------------------------
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{siunitx}
+% ------------------------------------------------------
+% Comandos útiles
+% ------------------------------------------------------
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\pfrac}[2]{\left( \frac{#1}{#2} \right)} %parentesis
+\newcommand{\bfrac}[2]{\left[ \frac{#1}{#2} \right]} %corchetes
+\newcommand{\vecpar}[1]{\left( #1 \right)}
+% En el preámbulo
+\newcommand{\point}[2]{\left( #1, #2 \right)}
+\newcommand{\pointfrac}[4]{\left( \frac{#1}{#2}, \frac{#3}{#4} \right)}
+\newcommand{\pointmix}[4]{\left( #1, \frac{#3}{#4} \right)} % Primera coordenada normal, segunda fracción
+\renewcommand{\qedsymbol}{$\blacksquare$}
+\newcommand{\gt}{\ensuremath{>}}
+\newcommand{\lt}{\ensuremath{<}}
+\renewcommand{\div}{$÷$}
+
+\renewcommand{\baselinestretch}{1.2}
+\setlength{\parindent}{0pt}
+
+\newenvironment{solucion}
+{\par\noindent\textbf{Solución.}\ }
+{\hfill$\blacktriangleleft$\par}
+
+% ------------------------------------------------------
+% Datos personales (modificar según tarea)
+% ------------------------------------------------------
+\newcommand{\alumno}{Ricardo León Martínez}
+\newcommand{\materia}{Calculo Diferencial e Integral I}
+\newcommand{\profesor}{Fernando Nuñez Medina}
+\newcommand{\tarea}{Tarea 11}
+\newcommand{\fecha}{06/11/2025}
+
+\setlength{\parindent}{0pt}
+
+\begin{document}
+    \begin{center}
+        {\large\textbf{UNIVERSIDAD DE GUANAJUATO}}\\[0.3cm]
+        {\normalsize\textbf{DIVISIÓN DE CIENCIAS NATURALES Y EXACTAS}}\\
+        {\normalsize\textbf{CAMPUS GUANAJUATO}}\\[1cm]
+
+        {\Large\textbf{\tarea\ (\materia)}}\\[1cm]
+    \end{center}
+    \textbf{Nombre:} \alumno \hfill 
+    \textbf{Fecha:} \fecha \hfill 
+    \textbf{Calificación:} \rule{3cm}{0.4pt} \\[0.3cm]
+    \begin{enumerate}[left=0pt, label=\textbf{\arabic*.}]
+        \item Prueba las leyes de los exponentes cuando $m$ y $n$ son numeros racionales.
+        \item \textbf{(Funciones trigonometricas Inversas)} Por el criterio de la recta
+        horizontal para determinar si una funcion es 1-1, es claro que las funciones trigonometricas
+        no son funciones 1-1 y, en consecuancia, no son invertibles, sin embargo, restringiremos
+        su dominio para que si lo sean. Las restricciones que se suelen utilizar  se muestran
+        en el cuadro siguiente \\
+        \begin{center}
+            \begin{tabular}{|c|c|c|}
+                \hline
+                \textbf{Funcion} & \textbf{Restriccion} & \textbf{Rango de la restriccion} \\
+                \hline
+                $\sin(x)$ & $[-\pi/2,\pi/2]$ & $[-1,1]$ \\
+                \hline
+                $\cos(x)$ & $[0,\pi]$ & $[-1,1]$ \\
+                \hline
+                $\tan(x)$ & $(-\pi/2,\pi/2)$ & $\mathbb{R}$ \\
+                \hline
+                $\cot(x)$ & $(0,\pi)$ & $\mathbb{R}$ \\
+                \hline
+                $\sec(x)$ & $[0,\pi/2)\cup(\pi/2,\pi]$ & $(-\infty,-1]\cup[1,\infty)$ \\
+                \hline
+                $\csc(x)$ & $[-\pi/2,0)\cup(0,\pi/2]$ & $(-\infty,-1]\cup[1,\infty)$ \\
+                \hline
+            \end{tabular}
+        \end{center}
+        Las restricciones de las funciones trigonometricas señaladas en el cuadro anterior son
+        1-1 y sobre (su rango) y, en consecuencia, invertibles. A las funciones inversas de las
+        restricciones señaladas en el cuadro anterior se les llama arcoseno, arcocoseno, arcotangente,
+        arcocotangente, arcosecante, arcocosecante, y se les denota por $\arcsin(x)$, $\arccos(x)$,
+        $\arctan(x)$, $\arccot(x)$, $\arcsec(x)$ y $\arccsc(x)$, respectivamente; son las llamadas
+        funciones trigonometricas inversas.
+        \begin{enumerate}[label=(\alph*)]
+            \item Dibuja las graficas de las restricciones del cuadro anterior.
+            \item A partir de las graficas del inciso (a) dibuja las graficas de las funciones
+            trigonometricas inversas.
+        \end{enumerate}
+        \begin{solucion}
+            (a) Gráficas de las restricciones.\\[2mm]
+            % --- SIN(x) y COS(x) ---
+            \begin{minipage}[b]{0.48\textwidth}
+                \centering
+                \begin{tikzpicture}
+                    \begin{axis}[
+                    domain=-1.7:1.7, samples=200,
+                    xmin=-1.8, xmax=1.8, ymin=-1.2, ymax=1.2,
+                    axis lines=middle, xlabel={$x$}, ylabel={$y$},
+                    xtick={-1.5708,-0.7854,0,0.7854,1.5708},
+                    xticklabels={\(-\tfrac{\pi}{2}\),\(-\tfrac{\pi}{4}\),0,\(\tfrac{\pi}{4}\),\(\tfrac{\pi}{2}\)},
+                    ytick={-1,0,1}, title={\(\sin(x)\) en \([-\tfrac{\pi}{2},\tfrac{\pi}{2}]\)}
+                    ]
+                    \addplot+[thick]{sin(deg(x))};
+                    \addplot[only marks,mark=*,mark size=1pt] coordinates {(-1.5708,-1) (1.5708,1)};
+                    \draw[dashed](axis cs:-1.5708,-1.2)--(axis cs:-1.5708,1.2);
+                    \draw[dashed](axis cs:1.5708,-1.2)--(axis cs:1.5708,1.2);
+                    \end{axis}
+                \end{tikzpicture}
+            \end{minipage}
+            \hfill
+            \begin{minipage}[b]{0.48\textwidth}
+                \centering
+                \begin{tikzpicture}
+                    \begin{axis}[
+                    domain=0:3.1416,samples=200,
+                    xmin=-0.2,xmax=3.3,ymin=-1.2,ymax=1.2,
+                    axis lines=middle,xlabel={$x$},ylabel={$y$},
+                    xtick={0,1.5708,3.1416},
+                    xticklabels={0,\(\tfrac{\pi}{2}\),\(\pi\)},
+                    ytick={-1,0,1},title={\(\cos(x)\) en \([0,\pi]\)}
+                    ]
+                    \addplot+[thick]{cos(deg(x))};
+                    \addplot[only marks,mark=*,mark size=1pt] coordinates {(0,1)(3.1416,-1)};
+                    \draw[dashed](axis cs:0,-1.2)--(axis cs:0,1.2);
+                    \draw[dashed](axis cs:3.1416,-1.2)--(axis cs:3.1416,1.2);
+                    \end{axis}
+                \end{tikzpicture}
+            \end{minipage}
+
+            \vspace{5mm}
+
+            % --- TAN(x) y COT(x) ---
+            \begin{minipage}[b]{0.48\textwidth}
+                \centering
+                \begin{tikzpicture}
+                    \begin{axis}[
+                    domain=-1.4:1.4,samples=200,
+                    xmin=-1.6,xmax=1.6,ymin=-6,ymax=6,
+                    axis lines=middle,xlabel={$x$},ylabel={$y$},
+                    xtick={-1.5708,-0.7854,0,0.7854,1.5708},
+                    xticklabels={\(-\tfrac{\pi}{2}\),\(-\tfrac{\pi}{4}\),0,\(\tfrac{\pi}{4}\),\(\tfrac{\pi}{2}\)},
+                    title={\(\tan(x)\) en \((-\tfrac{\pi}{2},\tfrac{\pi}{2})\)}
+                    ]
+                    \addplot+[thick]{tan(deg(x))};
+                    \draw[dashed](axis cs:-1.5708,-6)--(axis cs:-1.5708,6);
+                    \draw[dashed](axis cs:1.5708,-6)--(axis cs:1.5708,6);
+                    \end{axis}
+                \end{tikzpicture}
+            \end{minipage}
+            \hfill
+            \begin{minipage}[b]{0.48\textwidth}
+                \centering
+                \begin{tikzpicture}
+                    \begin{axis}[
+                    domain=0.01:3.1316,samples=200,
+                    xmin=-0.1,xmax=3.2,ymin=-6,ymax=6,
+                    axis lines=middle,xlabel={$x$},ylabel={$y$},
+                    xtick={0,0.7854,1.5708,2.3562,3.1416},
+                    xticklabels={0,\(\tfrac{\pi}{4}\),\(\tfrac{\pi}{2}\),\(\tfrac{3\pi}{4}\),\(\pi\)},
+                    title={\(\cot(x)\) en \((0,\pi)\)}
+                    ]
+                    \addplot+[thick]{cos(deg(x))/sin(deg(x))};
+                    \draw[dashed](axis cs:0,-6)--(axis cs:0,6);
+                    \draw[dashed](axis cs:3.1416,-6)--(axis cs:3.1416,6);
+                    \end{axis}
+                \end{tikzpicture}
+            \end{minipage}
+
+            \vspace{5mm}
+
+            % --- SEC(x) y CSC(x) ---
+            \begin{minipage}[b]{0.48\textwidth}
+                \centering
+                \begin{tikzpicture}
+                    \begin{axis}[
+                    xmin=-0.1,xmax=3.2,ymin=-6,ymax=6,
+                    axis lines=middle,xlabel={$x$},ylabel={$y$},
+                    xtick={0,0.7854,1.5708,2.3562,3.1416},
+                    xticklabels={0,\(\tfrac{\pi}{4}\),\(\tfrac{\pi}{2}\),\(\tfrac{3\pi}{4}\),\(\pi\)},
+                    title={\(\sec(x)\) en \([0,\tfrac{\pi}{2})\cup(\tfrac{\pi}{2},\pi]\)}
+                    ]
+                    \addplot+[thick,domain=0:1.47]{1/cos(deg(x))};
+                    \addplot+[thick,domain=1.671:3.1416]{1/cos(deg(x))};
+                    \draw[dashed](axis cs:1.5708,-6)--(axis cs:1.5708,6);
+                    \end{axis}
+                \end{tikzpicture}
+            \end{minipage}
+            \hfill
+            \begin{minipage}[b]{0.48\textwidth}
+                \centering
+                \begin{tikzpicture}
+                    \begin{axis}[
+                    domain=-1.4708:1.4708,samples=250,
+                    xmin=-1.7,xmax=1.7,ymin=-6,ymax=6,
+                    axis lines=middle,xlabel={$x$},ylabel={$y$},
+                    xtick={-1.5708,-0.7854,0,0.7854,1.5708},
+                    xticklabels={\(-\tfrac{\pi}{2}\),\(-\tfrac{\pi}{4}\),0,\(\tfrac{\pi}{4}\),\(\tfrac{\pi}{2}\)},
+                    title={\(\csc(x)\) en \([-\tfrac{\pi}{2},0)\cup(0,\tfrac{\pi}{2}]\)}
+                    ]
+                    \addplot+[thick,domain=-1.4708:-0.01]{1/sin(deg(x))};
+                    \addplot+[thick,domain=0.01:1.4708]{1/sin(deg(x))};
+                    \draw[dashed](axis cs:0,-6)--(axis cs:0,6);
+                    \end{axis}
+                \end{tikzpicture}
+            \end{minipage}
+
+            \captionof{figure}{Gráficas de las funciones trigonométricas restringidas.}
+
+            \vspace{1cm}
+            (b) Gráficas de las funciones trigonométricas inversas.\\[2mm]
+
+            \begin{center}
+                % --- ARCSIN y ARCCOS ---
+                \begin{minipage}[b]{0.48\textwidth}
+                    \centering
+                    \begin{tikzpicture}
+                        \begin{axis}[
+                        domain=-1:1,samples=200,
+                        xmin=-1.2,xmax=1.2,ymin=-1.7,ymax=1.7,
+                        axis lines=middle,xlabel={$x$},ylabel={$y$},
+                        xtick={-1,0,1},ytick={-1.5708,0,1.5708},
+                        yticklabels={\(-\tfrac{\pi}{2}\),0,\(\tfrac{\pi}{2}\)},
+                        title={\(\operatorname{arcsin}(x)\)}
+                        ]
+                        \addplot+[thick]{asin(x)*pi/180};
+                        \end{axis}
+                    \end{tikzpicture}
+                \end{minipage}
+                \hfill
+                \begin{minipage}[b]{0.48\textwidth}
+                    \centering
+                    \begin{tikzpicture}
+                        \begin{axis}[
+                        domain=-1:1,samples=200,
+                        xmin=-1.2,xmax=1.2,ymin=-0.2,ymax=3.3,
+                        axis lines=middle,xlabel={$x$},ylabel={$y$},
+                        xtick={-1,0,1},ytick={0,1.5708,3.1416},
+                        yticklabels={0,\(\tfrac{\pi}{2}\),\(\pi\)},
+                        title={\(\operatorname{arccos}(x)\)}
+                        ]
+                        \addplot+[thick]{acos(x)*pi/180};
+                        \end{axis}
+                    \end{tikzpicture}
+                \end{minipage}
+
+                \vspace{5mm}
+
+                % --- ARCTAN y ARCCOT ---
+                \begin{minipage}[b]{0.48\textwidth}
+                    \centering
+                    \begin{tikzpicture}
+                        \begin{axis}[
+                        domain=-8:8,samples=400,
+                        xmin=-8,xmax=8,ymin=-1.8,ymax=1.8,
+                        axis lines=middle,xlabel={$x$},ylabel={$y$},
+                        ytick={-1.5708,0,1.5708},
+                        yticklabels={\(-\tfrac{\pi}{2}\),0,\(\tfrac{\pi}{2}\)},
+                        title={\(\operatorname{arctan}(x)\)}
+                        ]
+                        \addplot+[thick]{atan(x)*pi/180};
+                        \end{axis}
+                    \end{tikzpicture}
+                \end{minipage}
+                \hfill
+                \begin{minipage}[b]{0.48\textwidth}
+                    \centering
+                    \begin{tikzpicture}
+                        \begin{axis}[
+                        domain=-8:8,samples=400,
+                        xmin=-8,xmax=8,ymin=-0.2,ymax=3.3,
+                        axis lines=middle,xlabel={$x$},ylabel={$y$},
+                        ytick={0,1.5708,3.1416},
+                        yticklabels={0,\(\tfrac{\pi}{2}\),\(\pi\)},
+                        title={\(\operatorname{arccot}(x)=\tfrac{\pi}{2}-\arctan(x)\)}
+                        ]
+                        \addplot+[thick]{pi/2 - atan(x)*pi/180};
+                        \end{axis}
+                    \end{tikzpicture}
+                \end{minipage}
+
+                \vspace{5mm}
+
+                % --- ARCSEC y ARCCSC ---
+                \begin{minipage}[b]{0.48\textwidth}
+                    \centering
+                    \begin{tikzpicture}
+                        \begin{axis}[
+                        xmin=-6,xmax=6,ymin=-0.1,ymax=3.3,
+                        axis lines=middle,xlabel={$x$},ylabel={$y$},
+                        xtick={-5,-2,-1,1,2,5},
+                        ytick={0,0.7854,1.5708,2.3562,3.1416},
+                        yticklabels={0,\(\tfrac{\pi}{4}\),\(\tfrac{\pi}{2}\),\(\tfrac{3\pi}{4}\),\(\pi\)},
+                        title={\(\operatorname{arcsec}(x)=\arccos(1/x)\)}
+                        ]
+                        \addplot+[thick,domain=-6:-1]{acos(1/x)*pi/180};
+                        \addplot+[thick,domain=1:6]{acos(1/x)*pi/180};
+                        \end{axis}
+                    \end{tikzpicture}
+                \end{minipage}
+                \hfill
+                \begin{minipage}[b]{0.48\textwidth}
+                    \centering
+                    \begin{tikzpicture}
+                        \begin{axis}[
+                        xmin=-6,xmax=6,ymin=-1.7,ymax=1.7,
+                        axis lines=middle,xlabel={$x$},ylabel={$y$},
+                        xtick={-5,-2,-1,1,2,5},
+                        ytick={-1.5708,-0.7854,0,0.7854,1.5708},
+                        yticklabels={\(-\tfrac{\pi}{2}\),\(-\tfrac{\pi}{4}\),0,\(\tfrac{\pi}{4}\),\(\tfrac{\pi}{2}\)},
+                        title={\(\operatorname{arccsc}(x)=\arcsin(1/x)\)}
+                        ]
+                        \addplot+[thick,domain=-6:-1]{asin(1/x)*pi/180};
+                        \addplot+[thick,domain=1:6]{asin(1/x)*pi/180};
+                        \end{axis}
+                    \end{tikzpicture}
+                \end{minipage}
+
+                \captionof{figure}{Gráficas de las funciones trigonométricas inversas con sus dominios principales.}
+            \end{center}
+        \end{solucion}
+        \vspace{1cm}
+        \item Da un ejemplo de una funcion $f:\mathbb{R}\to\mathbb{R}$ que sea continua solo
+        en un numero finito de puntos $p_1,\dots,p_n$.
+        \item Prueba que
+            \begin{align*}
+                \derivative{}{x}\ln(\abs{x})=\frac{1}{x},\text{ }x\neq0.
+            \end{align*}
+        \item Prueba que si $f:\mathbb{R}\to\mathbb{R}$ tiene derivada acotada, entonces es
+        uniformemente continua.
+        \item Construye la grafica de una funcion cuya derivada siempre sea positiva.
+        \item Sea $n$ un numero natural.
+            \begin{enumerate}[label=(\alph*)]
+                \item Prueba, utilizando los resultados de la seccion 5.8.1, que si $n$ es par,
+                entonces la funcion $x^n$ es decreciente en $(-\infty,0]$ y es creciente en
+                $[0,\infty)$.
+                \item Prueba, utilizando los resultados de la seccion 5.8.1, que si $n$ es impar,
+                entonces la funcion $x^n$ es creciente en todo $\mathbb{R}$.
+            \end{enumerate}
+        \item Analiza la grafica de la funcion $f(x)=x^3+3x^2$ siguiendo el procedimiento mencionado
+        en la subseccion 5.8.5.
+    \end{enumerate}
+\end{document}

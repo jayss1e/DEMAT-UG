@@ -1,0 +1,146 @@
+\documentclass[14pt]{extarticle}
+\usepackage{extsizes}
+\usepackage{enumerate}
+\usepackage[english,activeacute]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb,times}
+\usepackage{graphicx}
+\usepackage{latexsym}
+\usepackage{color}
+\usepackage{pifont}
+\usepackage{bbm}
+\usepackage{multicol}
+\usepackage{appendix}
+%\usepackage{dsfont}
+\usepackage{mathrsfs}
+%\spanishdecimal{.}
+\usepackage[sort&compress]{natbib}
+\bibliographystyle{plainnat}
+%\usepackage{suthesis-2e}
+%\usepackage{verbatim}
+%\spanishdecimal{.}
+\def\theequation{\thesection.\arabic{equation}}
+
+\textwidth=6.5in
+%\lineskip .25cm
+%\lineskiplimit .25cm
+\textheight=9.5in
+\topmargin=-.75in
+\topskip=-4pt
+\evensidemargin=-2pt
+\oddsidemargin=-1pt
+%%%%%%%%%%%%%%%%%%%%
+%\oddsidemargin 0in \textwidth 6.75in \topmargin 0in \textheight
+%8.5in
+\parindent 0em
+\parskip 1ex
+\newcommand{\floor}[1]{\left\lfloor {#1} \right\rfloor}
+
+\def\CC{\mathbb{C}}
+\newcommand{\rr}{\mathbb{R}}
+\newcommand{\pai}{\left(}
+\newcommand{\pad}{\right)}
+\newcommand{\ci}{\left[}
+\newcommand{\cd}{\right]}
+\newcommand{\nn}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\p}{\mathbb{P}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\lphi}{\widehat{\phi}}
+\newcommand{\D}{\mathfrak{D}}
+%\renewcommand{\qedsymbol}{\rule{1ex}{1ex}}
+
+\begin{document}
+ \begin{flushright}
+  \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+  \hline
+  \ \ $E_1$\ \ &\ \ $E_2$\ \ &\ \ $E_3$\ \ &\ \ $E_4$\ \ &Calif.\\
+  \hline
+  & &  & & \\
+    & & &&\\
+   \hline
+ \end{tabular}\\
+ \end{flushright}
+\begin{center}
+\large
+Matemáticas Elementales
+\normalsize
+
+Agosto - Diciembre de 2025\\
+
+Tarea 6
+\end{center}
+
+Resuelve los siguientes ejercicios según el reglamento del curso y \textbf{entrega esta página} con los nombres de los integrantes de equipo colocados en lugar de estas líneas de instrucciones. 
+Todas las demostraciones deben redactarse justificando formalmente todos los pasos necesarios.
+
+Antes de iniciar cada demostración, deberás indicar claramente cuáles son las hipótesis de cada ejercicio y qué es lo que debes demostrar en cada ejercicio.
+
+La tarea debe resolverse con la teoría vista en el curso o con resultados a lo más de los cursos de preparatoria. Está prohibido utilizar resultados de otros cursos de este mismo semestre y/o trucos de alguna olimpiada relacionada con computación y/o matemáticas.
+
+En cada ejercicio, cada inciso distinto debe ser resuelto y redactado por un miembro distinto del equipo.
+
+\begin{enumerate}
+
+\item Sea $f:\rr\to \rr$ dada por $f(x)=(x-1)^2$. Realiza lo siguiente:
+
+\begin{enumerate}
+\item Halla el rango de $f$.
+\item Halla la imagen directa bajo $f$ de
+
+$$A=[0,\infty), B=\nn, C=\mathbb{Z}, D=[-1,1].$$
+
+\item Halla la imagen inversa bajo $f$ de  
+
+$$A=[0,\infty), B=\nn, C=\mathbb{Z}, D=[-1,1].$$
+\item Determina si $f$ es inyectiva y/o suprayectiva.
+\end{enumerate}
+
+\item Sean $f:A\to B$ y $g:B\to C$ funciones biyectivas.
+\begin{enumerate}
+\item  Demuestra que $g\circ f$ es biyectiva.
+
+\item Demuestra que para todo $G\subseteq C$, se cumple
+
+$$(g\circ f)^{-1}(G)=(f^{-1}\circ g^{-1})(G).$$
+\end{enumerate}
+
+\item Sean $f:A\to B$ y $A'\subset A$, $B'\subset B$.
+
+\begin{enumerate}
+\item Demuestra que si $f$ es inyectiva, entonces 
+
+$$f^{-1}(f(A'))=A'.$$
+
+\item Demuestra que si $f$ es suprayectiva, entonces
+
+$$f(f^{-1}(B'))=B'.$$
+
+\item Demuestra que, en general,
+
+$$A'\subseteq f^{-1}(f(A')), f(f^{-1}(B'))\subseteq B'.$$
+\end{enumerate}
+
+
+\item \leavevmode
+\begin{enumerate}
+\item Sea $A$ un conjunto no vacío. Demuestra por definición que 
+$$\{\{x\}:x\in A\},$$
+ es una partición de $A$.
+\item Sea $f:\rr\to(0,1)$ dada por $f(x)=\frac{1}{1+e^{-x}}$. Demuestra que $f$ es una biyección.
+\item Considera la colección de subconjuntos de $\rr$ dada por
+
+$$\{[-n,n],n\in\nn\}.$$
+
+Determina formalmente si esta colección es una partición de $\rr$.
+
+\item Para cada $x\in\rr$ definamos
+
+$$E_x:=\{y\in\rr: x-y\in\mathbb{Q}\}.$$
+
+Determina formalmente si $\{E_x:x\in\rr\}$ es una partición de $\rr$. \textbf{Nota}: Si para $x,y$ distintos se cumple que $E_x=E_y$, solo se considera una vez al conjunto dado. Es decir, se debe entender que la colección $\{E_x:x\in\rr\}$ consta de todos los conjuntos $E_x$ distintos.
+\end{enumerate}
+\end{enumerate}
+\end{document}

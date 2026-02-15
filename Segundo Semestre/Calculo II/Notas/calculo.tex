@@ -1,0 +1,166 @@
+\documentclass[12pt,a4paper]{book}
+\raggedbottom
+
+\usepackage{ugmath}
+\usepackage{float}
+\usepackage{placeins}
+\usepackage[labelfont=bf,labelsep=space]{caption}
+
+\begin{document}
+    \begin{titlepage}
+        \centering
+        
+        \rule{1\textwidth}{0.4pt}
+        \vspace{-2.2em}  % Ajuste negativo para acercar
+
+        {\Large\bfseries Cálculo Integral de Una Variable\par}
+
+        \vspace{-0.9em}  % Ajuste negativo para acercar
+        \rule{1\textwidth}{0.4pt}
+
+        \vspace{2.5cm}
+
+        \includegraphics[width=0.60\linewidth]{DEMAT_LOGO.png}
+
+        \vspace{2.5cm}
+
+        {\normalsize
+        Notas del curso impartido por\par
+        Fernando Nuñez Medina
+        \vspace{0.2cm}
+        \textbf{}\par
+        \textit{Departamento de Matemáticas}\par
+        \textit{Universidad de Guanajuato}\par
+        }
+
+        \vspace{1.3cm}
+
+        {\normalsize
+        Escritas por\par
+        \vspace{0.2cm}
+        \textbf{Ricardo León Martínez}\par
+        \textit{Departamento de Matemáticas}\par
+        \textit{Universidad de Guanajuato}\par
+        }
+
+    \end{titlepage}
+
+    \tableofcontents
+    \clearpage
+
+    \chapter{La Integral}
+
+    La integral de riemann, o simplemente la integral, es otro de los conceptos fundamentales
+    del Cálculo. En este capítulo veremos su definición y sus propiedades básicas. Enbrte otras cosas,
+    con la integral definiremos el área bajo la curva de una función (más adelante veremos con
+    presición que significa esto) y posteriormente veremos que, sorprendentemente, está relacionada con
+    la derivada.
+
+    \section{Introducción}
+    En este texto trabajaremos con la definición de integral dada por Gastón Darboux (1842-1917).
+    En el apéndice A damos la definición original de integral dad por Bernard Riemann (1822-1866)
+    y mostramos que ambas son equivalentes. En la practica, la definición de integral dada por Darboux
+    es mas sencilla de manejar que la dada por Riemann, por lo cual en este texto trabajaremos con
+    la definición de Darboux. De aquí en adelante, a menos que se especifique lo contrario, cuando
+    consideremos un intervalo cerrado $[a,b]$, supondremos que $a\lt b$.
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Definición 1: Partición de un intervalo}]
+        Una partición de un intervalo $[a,b]$ es una colección de puntos $P=\{t_{0},t_{1},\dots,t_{n}\}$
+        tal que
+        \begin{align*}
+            a=t_{0}\lt t_{1}\lt\cdots\lt t_{n}=b.
+        \end{align*}
+    \end{mdframed}
+
+    Denotaremos por $\mathcal{P}[a,b]$, o simplemente por $\mathcal{P}$ si no hay confusión,
+    al conjunto de todas las particiones de $[a,b]$. Al número
+    \begin{align*}
+        \norm{P}=\max\{t_{i}-t_{i-1}:i=1,\dots,n\},
+    \end{align*}
+    Le llamaremos la norma de la partición $P$, es decir, $\norm{P}$ es el máximo de las
+    longitudes de los intervalos $[t_{i-1},t_{i}],i=1,\dots n$.
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Definición 2: Refinamiento de una partición}]
+        Dadas dos particiones $P$ y $Q$ de un intervalo $[a,b]$, se dice que $Q$ es un refinamiento
+        de $P$ (o que $Q$ es mas fina que $P$) si $P\subset Q$. Notemos que $P\cup Q$ sigue siendo
+        partición de $[a,b]$; a $P\cup Q$ se le llama el refinamiento común de $P$ y $Q$.
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Definición 3: Sumas inferiores y superiores}]
+        Sea $f$ una función acotada en un intervalo $[a,b]$ y consideremos una partición $P=\{t_{0},t_{1},\dots,t_{n}\}$
+        de $[a,b]$. Para cada $i=1,\dots,n$ definimos
+        \begin{align*}
+            m_{i}=\inf\{f(x):x\in[t_{i-1},t_{i}]\}
+        \end{align*}
+        y
+        \begin{align*}
+            M_{i}=\sup\{f(x):x\in[t_{i-1},t_{i}]\}.
+        \end{align*}
+        Definimos la suma inferior de $f$ respecto de $P$ como
+        \begin{align*}
+            L(f,P)=\sum_{i=1}^{n}m_{i}(t_{i}-t_{i-1})
+        \end{align*}
+        y la suma superior de $f$ respecto de $P$ como
+        \begin{align*}
+            U(f,P)=\sum_{i=1}^{n}M_{i}(t_{i}-t_{i-1})
+        \end{align*}
+    \end{mdframed}
+    Es claro que $m_{i}\leq M_{i}$ para $i=1,\dots,n$; en consecuencia,
+    \begin{align}
+        L(f,P)\leq U(f,P).
+    \end{align}
+    La proposición siguiente establece otras propiedades de la sumas inferiores y de las 
+    sumas superiores que usaremos posteriormente.
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Proposición 1}]
+        Sea $f$ una función acotada en un intervalo $[a,b]$ y supongamos que $P$ y $Q$ son
+        particiones de $[a,b]$. Se cumple lo siguiente:
+        \begin{enumerate}
+            \item[(a)] Si $Q$ es un refinamiento de $P$, es decir, si $P\subset Q$, entonces
+            \begin{align*}
+                L(f,P)\leq L(f,Q)\text{ y } U(f,Q)\leq U(f,P).
+            \end{align*}
+            \item[(b)]
+            \begin{align}
+                L(f,P)\leq U(f,Q).
+            \end{align}
+            \item[(c)]
+            \begin{align}
+                \sup_{P\in\mathcal{P}}L(f,P)\leq\inf_{P\in\mathcal{P}}U(f,P).
+            \end{align}
+        \end{enumerate}
+        En base al inciso (a) podemos decir que las sumas inferiores (superiores) son
+        monótonas crecientes (decrecientes) respecto a los refinamientos. El inciso (b)
+        afirma que cualquier suma inferior es menor o igual que cualquier suma superior,
+        sin importar que particiones se consideren
+    \end{mdframed}
+    \begin{proof}
+        \begin{enumerate}
+            \item[(a)] Supongamos que $P\subset Q$.Probaremos que $L(f,P)\leq L(f,Q)$, la
+            prueba de que $U(f,Q)\leq U(f,P)$ es similar. Si $P=Q$ es claro que $L(f,P)\leq L(f,Q)$.
+            Supongamos ahora que $Q$ tiene más puntos que $P$. Consideremos primero el caso en que $Q$
+            contiene un punto más que $P$, digamos que $P\{t_{0},t_{1},\dots,t_{n}\}$ y que
+            $Q=\{t_{0},t_{1},\dots,t_{j-1},c,t_{j},\dots,t_{n}\}$, para algún $1\leq j\leq n$.
+            Sea $m_{i}$ como en la definición 3, es decir,
+            \begin{align*}
+                m_{i}=\inf\{f(x):x\in[t_{i-1},t_{i}\},\text{ }1\leq i\leq n.
+            \end{align*}
+            Definamos
+            \begin{align*}
+                s_{1}=\inf\{f(x):x\in[t_{j-1},c]\}
+            \end{align*}
+            y
+            \begin{align*}
+                s_{2}=\inf\{f(x):x\in[c,t_{j}]\}.
+            \end{align*}
+            Así, $m_{j}\leq s_{1}$ y $m_{j}\leq s_{2}$. En consecuencia,
+            \begin{align*}
+                L(f,P)&=\sum_{i=1}^{n}m_{i}(t_{i}-t_{t-1})\\
+                &=\sum_{i=1}^{j-1}m_{i}(t_{j}-t_{j-1})+\sum_{i=j+1}^{n}m_{i}(t_{j}-t_{j-1})
+            \end{align*}
+        \end{enumerate}
+    \end{proof}
+
+
+
+\end{document}

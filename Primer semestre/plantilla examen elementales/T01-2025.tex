@@ -1,0 +1,177 @@
+\documentclass[12pt]{extarticle}
+\newcommand{\grupo}{}
+% ------------------------------------------------------
+% Idioma y codificación
+% ------------------------------------------------------
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+% ------------------------------------------------------
+% Tipografía y formato
+% ------------------------------------------------------
+\usepackage{lmodern}    % Fuente Latin Modern
+\usepackage{microtype}  % Mejor espaciado
+\usepackage{xcolor}     % Colores
+\definecolor{UGblue}{RGB}{0,33,71}
+\definecolor{UGgold}{RGB}{212,175,55}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{titlesec}
+% Añade esto en el preámbulo (antes de \begin{document})
+\usepackage{bookmark}
+\bookmarksetup{open,numbered}
+\usepackage{tikz}
+\usetikzlibrary{calc,decorations.pathreplacing,angles,quotes}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{caption}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+% ------------------------------------------------------
+% Matemáticas
+% ------------------------------------------------------
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{mathrsfs}
+\usepackage{stmaryrd}
+\usepackage{physics}
+
+% ------------------------------------------------------
+% Otros paquetes útiles
+% ------------------------------------------------------
+\usepackage{enumitem}
+\usepackage{csquotes}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=UGblue,
+    urlcolor=UGgold,
+    citecolor=UGblue
+}
+\usepackage{multicol}
+
+% ------------------------------------------------------
+% Encabezados y pies de página
+% ------------------------------------------------------
+% ------------------------------------------------------
+% Teoremas, definiciones, etc.
+% ------------------------------------------------------
+\theoremstyle{plain}
+\newtheorem{teo}{Teorema}[section]
+\newtheorem{prop}[teo]{Proposición}
+\newtheorem{lema}[teo]{Lema}
+\theoremstyle{definition}
+\newtheorem{defi}[teo]{Definición}
+\theoremstyle{remark}
+\newtheorem{ejemplo}[teo]{Ejemplo}
+\newtheorem{obs}[teo]{Observación}
+
+% ------------------------------------------------------
+% Comandos útiles
+% ------------------------------------------------------
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\pfrac}[2]{\left( \frac{#1}{#2} \right)} %parentesis
+\newcommand{\bfrac}[2]{\left[ \frac{#1}{#2} \right]} %corchetes
+\newcommand{\vecpar}[1]{\left( #1 \right)}
+% En el preámbulo
+\newcommand{\point}[2]{\left( #1, #2 \right)}
+\newcommand{\pointfrac}[4]{\left( \frac{#1}{#2}, \frac{#3}{#4} \right)}
+\newcommand{\pointmix}[4]{\left( #1, \frac{#3}{#4} \right)} % Primera coordenada normal, segunda fracción
+\renewcommand{\qedsymbol}{$\blacksquare$}
+\newcommand{\gt}{\ensuremath{>}}
+\newcommand{\lt}{\ensuremath{<}}
+\renewcommand{\div}{|}
+
+\renewcommand{\baselinestretch}{1.2}
+\setlength{\parindent}{0pt}
+
+\newenvironment{solucion}
+{\par\noindent\textit{Solución.}\ }
+{\hfill$\blacktriangleleft$\par}
+
+% ------------------------------------------------------
+% Datos personales (modificar según tarea)
+% ------------------------------------------------------
+\newcommand{\alumno}{Ricardo León Martínez}
+\newcommand{\materia}{Elementos de Geometría}
+\newcommand{\profesor}{Valentina Muñoz Porras}
+\newcommand{\tarea}{Tarea 5}
+\newcommand{\fecha}{22/09/2025}
+
+\setlength{\parindent}{0pt}
+\begin{document}
+  \begin{flushright}
+    \begin{minipage}{0.55\textwidth}
+        \large
+        Matemáticas Elementales\\
+        \normalsize
+        x de y de 2025\\
+        Parcial 3 
+    \end{minipage}%
+    \begin{minipage}{0.4\textwidth}
+      \begin{flushright}
+        \begin{tabular}{|c|c|c|c|c|}
+          \hline
+          \ \ $E_1$\ \ &\ \ $E_2$\ \ &\ \ $E_3$\ \ &\ \ $E_4$\ \ &Calif.\\
+          \hline
+          &  &  &  &  \\
+          &  &  &  &  \\
+          \hline
+        \end{tabular}
+      \end{flushright}
+    \end{minipage}
+  \end{flushright}
+  Resuelve los siguientes ejercicios justificando totalmente cada paso en tu
+  procedimiento. La falta de alguna justificación y/o la mala redacción, serán
+  severamente penalizadas.
+
+  \vspace{0.3cm}
+
+  El examen debe resolverse utilizando únicamente tinta azul estándar y sin escribir
+  en esta hoja algo mas que tu nombre y numero de inscripción.
+
+  \vspace{0.3cm}
+
+  Utiliza ambos lados de las hojas de respuestas e indica claramente donde termina
+  un ejercicio/inciso y comienza uno nuevo.
+
+  \vspace{0.3cm}
+
+  Puedes utilizar todos los resultados vistos en cursos previos siempre y cuando
+  estos no sean lo que se pide demostrar. \textbf{No} puede utilizar resultados probados
+  en las tareas y/o en las ayudantías. En caso de requerir alguno de tales resultados,
+  deberás incluir su demostración.
+
+  \vspace{0.3cm}
+
+  Se penalizarán los pasos innecesarios.
+
+  \vspace{0.3cm}
+
+  La calificacion final del examen será el promedio de las puntuaciones obtenidas
+  en cada ejercicio.
+
+  \vspace{0.3cm}
+
+  \begin{enumerate}
+    \item (100 pts.) Demuestra que el conjunto
+    \begin{align*}
+      \{q\in\mathbb{Q}:q<0\}
+    \end{align*}
+    es una cortadura de dedekind.
+    \item (100 pts.) Demuestra que el siguiente par de congruencias tiene solución
+    común y halla el conjunto de todas las soluciones comunes.
+    \begin{align*}
+      &x\equiv 6 \pmod{10}\\
+      &x\equiv 7 \pmod{11}.
+    \end{align*}
+    \item (100 pts.) Sea $A\subset\mathbb{N}$ infinito. Utilizando el principio del
+    buen orden demuestra que $\abs{A}=\abs{\mathbb{N}}$.
+    \item Demuestra que $\mathbb{Q}$ es numerable.
+  \end{enumerate}
+\end{document}

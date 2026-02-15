@@ -1,0 +1,2722 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=prv_tarea1 2026.2.8)  8 FEB 2026 19:06
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**&prv_tarea1 /AUCTEXINPUT{ _region_.tex }
+(./_region_.tex
+Package csquotes Info: Checking for multilingual support...
+Package csquotes Info: ... found 'babel' package.
+Package csquotes Info: Adjusting default style.
+Package csquotes Info: Redefining alias 'default' -> 'spanish'.
+
+No file _region_.aux.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Info: Redefining \. on input line 12.
+LaTeX Info: Redefining \% on input line 12.
+Package babel Info: 'spanish' activates 'spanish' shorthands.
+(babel)             Reported on input line 12.
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(42.67912pt, 512.14963pt, 42.67912pt)
+* v-part:(T,H,B)=(42.67912pt, 759.6886pt, 42.67912pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=512.14963pt
+* \textheight=759.6886pt
+* \oddsidemargin=-29.59087pt
+* \evensidemargin=-29.59087pt
+* \topmargin=-66.59087pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=56.9055pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+(c:/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count381
+\scratchdimen=\dimen322
+\scratchbox=\box122
+\nofMPsegments=\count382
+\nofMParguments=\count383
+\everyMPshowfont=\toks56
+\MPscratchCnt=\count384
+\MPscratchDim=\dimen323
+\MPnumerator=\count385
+\makeMPintoPDFobject=\count386
+\everyMPtoPDFconversion=\toks57
+) (c:/texlive/2025/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (c:/texlive/2025/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+))
+Package pgfplots notification 'compat/show suggested version=true': you might benefit from \pgfplotsset{compat=1.18} (current compat level: 1.15).
+
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
+Package caption Info: End \AtBeginDocument code.
+\providecommand\hyper@newdestlabel[2]{}
+Package hyperref Info: Link coloring ON on input line 12.
+(c:/Users/Radoj/AppData/Roaming/.emacs.d/elpa/auctex-14.1.2/latex/preview.sty
+Package: preview 2024/06/30 14.0.6 (AUCTeX/preview-latex)
+ (c:/texlive/2025/texmf-dist/tex/generic/luatex85/luatex85.sty
+Package: luatex85 2016/06/15 v1.4 pdftex aliases for luatex
+) (c:/Users/Radoj/AppData/Roaming/.emacs.d/elpa/auctex-14.1.2/latex/prtightpage.def
+\PreviewBorder=\dimen324
+) (c:/Users/Radoj/AppData/Roaming/.emacs.d/elpa/auctex-14.1.2/latex/prauctex.def
+No auxiliary output files.
+
+
+\hbadness=\count387
+\hfuzz=\dimen325
+(c:/Users/Radoj/AppData/Roaming/.emacs.d/elpa/auctex-14.1.2/latex/prauctex.cfg)) (c:/Users/Radoj/AppData/Roaming/.emacs.d/elpa/auctex-14.1.2/latex/prfootnotes.def)
+\pr@snippet=\count388
+\pr@box=\box123
+\pr@output=\toks58
+
+Preview: Fontsize 12pt
+Preview: PDFoutput 1
+)  !name(tarea1.tex) !offset(-3) 
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 28.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 30.
+
+./_region_.tex:33: Preview: Snippet 1 started.
+<-><->
+      
+l.33             Por definición, $
+                                   f$ es integrable si
+Not a real error.
+
+Preview: Tightpage -32891 -32891 32891 32891
+./_region_.tex:33: Preview: Snippet 1 ended.(546132+152916x463527).
+<-><->
+      
+l.33             Por definición, $f$
+                                      es integrable si
+Not a real error.
+
+[1{c:/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}]
+./_region_.tex:34: Preview: Snippet 2 started.
+<-><->
+      
+l.34             \begin{align*}
+                               
+Not a real error.
+
+./_region_.tex:36: Preview: Snippet 2 ended.(1517259+0x21305688).
+<-><->
+      
+l.36             \end{align*}
+                             
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 36.
+
+[2{c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}]
+./_region_.tex:37: Preview: Snippet 3 started.
+<-><->
+      
+l.37             A este numero se le denota por $
+                                                 \int_{a}^{b}f$. Ahora es in...
+Not a real error.
+
+./_region_.tex:37: Preview: Snippet 3 ended.(717258+200253x1302572).
+<-><->
+      
+l.37 ...te numero se le denota por $\int_{a}^{b}f$
+                                                  . Ahora es inmediato de la...
+Not a real error.
+
+[3{c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}]
+./_region_.tex:38: Preview: Snippet 4 started.
+<-><->
+      
+l.38 ...de supremo que para cualquier partición $
+                                                  P$ se cumple
+Not a real error.
+
+./_region_.tex:38: Preview: Snippet 4 ended.(537395+0x603291).
+<-><->
+      
+l.38 ... supremo que para cualquier partición $P$
+                                                   se cumple
+Not a real error.
+
+[4]
+./_region_.tex:39: Preview: Snippet 5 started.
+<-><->
+      
+l.39             \begin{align*}
+                               
+Not a real error.
+
+./_region_.tex:41: Preview: Snippet 5 ended.(1869237+0x21852461).
+<-><->
+      
+l.41             \end{align*}
+                             
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 41.
+
+[5]
+./_region_.tex:43: Preview: Snippet 6 started.
+<-><->
+      
+l.43             \begin{align*}
+                               
+Not a real error.
+
+./_region_.tex:45: Preview: Snippet 6 ended.(1716321+0x21953695).
+<-><->
+      
+l.45             \end{align*}
+                             
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 45.
+
+[6]
+./_region_.tex:47: Preview: Snippet 7 started.
+<-><->
+      
+l.47             \begin{align*}
+                               
+Not a real error.
+
+./_region_.tex:49: Preview: Snippet 7 ended.(1645697+0x23844910).
+<-><->
+      
+l.49             \end{align*}
+                             
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 49.
+
+[7{c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}]
+./_region_.tex:50: Preview: Snippet 8 started.
+<-><->
+      
+l.50 ... unico, supongamos que existe un número $
+                                                  A$ tal que
+Not a real error.
+
+./_region_.tex:50: Preview: Snippet 8 ended.(537395+0x577257).
+<-><->
+      
+l.50 ...nico, supongamos que existe un número $A$
+                                                   tal que
+Not a real error.
+
+[8]
+./_region_.tex:51: Preview: Snippet 9 started.
+<-><->
+      
+l.51             \begin{align*}
+                               
+Not a real error.
+
+./_region_.tex:53: Preview: Snippet 9 ended.(1140322+0x23670324).
+<-><->
+      
+l.53             \end{align*}
+                             
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 53.
+
+[9]
+./_region_.tex:54: Preview: Snippet 10 started.
+<-><->
+      
+l.54             Entonces $
+                           A$ es una cota superior par todas las sumas infer...
+Not a real error.
+
+./_region_.tex:54: Preview: Snippet 10 ended.(537395+0x577257).
+<-><->
+      
+l.54             Entonces $A$
+                              es una cota superior par todas las sumas infer...
+Not a real error.
+
+[10]
+./_region_.tex:55: Preview: Snippet 11 started.
+<-><->
+      
+l.55             \begin{align*}
+                               
+Not a real error.
+
+./_region_.tex:57: Preview: Snippet 11 ended.(1869237+0x20850164).
+<-><->
+      
+l.57             \end{align*}
+                             
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 57.
+
+[11]
+./_region_.tex:58: Preview: Snippet 12 started.
+<-><->
+      
+l.58             Tambien $
+                          A$ es una cota inferior para todas las sumas super...
+Not a real error.
+
+./_region_.tex:58: Preview: Snippet 12 ended.(537395+0x577257).
+<-><->
+      
+l.58             Tambien $A$
+                             es una cota inferior para todas las sumas super...
+Not a real error.
+
+[12]
+./_region_.tex:59: Preview: Snippet 13 started.
+<-><->
+      
+l.59             \begin{align*}
+                               
+Not a real error.
+
+./_region_.tex:61: Preview: Snippet 13 ended.(1647472+0x20928676).
+<-><->
+      
+l.61             \end{align*}
+                             
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 61.
+
+[13]
+./_region_.tex:62: Preview: Snippet 14 started.
+<-><->
+      
+l.62             Por tanto $
+                            A=\int_{a}^{b}f$.
+Not a real error.
+
+./_region_.tex:62: Preview: Snippet 14 ended.(717258+200253x2915663).
+<-><->
+      
+l.62             Por tanto $A=\int_{a}^{b}f$
+                                            .
+Not a real error.
+
+[14]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 65.
+
+./_region_.tex:67: Preview: Snippet 15 started.
+<-><->
+      
+l.67             \begin{align*}
+                               
+Not a real error.
+
+./_region_.tex:73: Preview: Snippet 15 ended.(2752540+0x20187615).
+<-><->
+      
+l.73             \end{align*}
+                             
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 73.
+
+[15]
+./_region_.tex:75: Preview: Snippet 16 started.
+<-><->
+      
+l.75 ...        \item[(a)] Dibuja la gráfica de $
+                                                  f$.
+Not a real error.
+
+./_region_.tex:75: Preview: Snippet 16 ended.(546132+152916x463527).
+<-><->
+      
+l.75 ...      \item[(a)] Dibuja la gráfica de $f$
+                                                  .
+Not a real error.
+
+[16]
+./_region_.tex:76: Preview: Snippet 17 started.
+<-><->
+      
+l.76                 \item[(b)] Determina si $
+                                              f$ es integrable en [0,1]. Arg...
+Not a real error.
+
+./_region_.tex:76: Preview: Snippet 17 ended.(546132+152916x463527).
+<-><->
+      
+l.76                 \item[(b)] Determina si $f$
+                                                 es integrable en [0,1]. Arg...
+Not a real error.
+
+[17]
+./_region_.tex:77: Preview: Snippet 18 started.
+<-><->
+      
+l.77                 \item[(c)] Si $
+                                    f$ es integrable, calcula $\int_{0}^{1}f$.
+Not a real error.
+
+./_region_.tex:77: Preview: Snippet 18 ended.(546132+152916x463527).
+<-><->
+      
+l.77                 \item[(c)] Si $f$
+                                       es integrable, calcula $\int_{0}^{1}f$.
+Not a real error.
+
+[18]
+./_region_.tex:77: Preview: Snippet 19 started.
+<-><->
+      
+l.77 ...\item[(c)] Si $f$ es integrable, calcula $
+                                                  \int_{0}^{1}f$.
+Not a real error.
+
+./_region_.tex:77: Preview: Snippet 19 ended.(691040+200253x1342800).
+<-><->
+      
+l.77 ...$f$ es integrable, calcula $\int_{0}^{1}f$
+                                                  .
+Not a real error.
+
+[19]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 79.
+
+./_region_.tex:82: Preview: Snippet 20 started.
+<-><->
+      
+l.82 ...        \item[(a)] Dibuja la gráfica de $
+                                                  f$.
+Not a real error.
+
+./_region_.tex:82: Preview: Snippet 20 ended.(546132+152916x463527).
+<-><->
+      
+l.82 ...      \item[(a)] Dibuja la gráfica de $f$
+                                                  .
+Not a real error.
+
+[20]
+./_region_.tex:84: Preview: Snippet 21 started.
+<-><->
+      
+l.84                     \includegraphics
+                                         [width=0.40\linewidth]{Figuras.pdf}
+Not a real error.
+
+<Figuras.pdf, id=124, 205.39937pt x 172.39807pt>
+File: Figuras.pdf Graphic file (type pdf)
+<use Figuras.pdf>
+Package pdftex.def Info: Figuras.pdf  used on input line 84.
+(pdftex.def)             Requested size: 204.85672pt x 171.94781pt.
+./_region_.tex:84: Preview: Snippet 21 ended.(11268772+0x13425490).
+<-><->
+      
+l.84 ...raphics[width=0.40\linewidth]{Figuras.pdf}
+                                                  
+Not a real error.
+
+[21 <./Figuras.pdf>]
+./_region_.tex:87: Preview: Snippet 22 started.
+<-><->
+      
+l.87                 \item[(b)] Determina si $
+                                              f$ es integrable en [0,1]. Arg...
+Not a real error.
+
+./_region_.tex:87: Preview: Snippet 22 ended.(546132+152916x463527).
+<-><->
+      
+l.87                 \item[(b)] Determina si $f$
+                                                 es integrable en [0,1]. Arg...
+Not a real error.
+
+[22]
+./_region_.tex:88: Preview: Snippet 23 started.
+<-><->
+      
+l.88                 Es claro que $
+                                   f$ es monótona creciente en $[0,1]$, pue...
+Not a real error.
+
+./_region_.tex:88: Preview: Snippet 23 ended.(546132+152916x463527).
+<-><->
+      
+l.88                 Es claro que $f$
+                                      es monótona creciente en $[0,1]$, pue...
+Not a real error.
+
+[23]
+./_region_.tex:88: Preview: Snippet 24 started.
+<-><->
+      
+l.88 ... claro que $f$ es monótona creciente en $
+                                                  [0,1]$, pues es constante ...
+Not a real error.
+
+./_region_.tex:88: Preview: Snippet 24 ended.(589824+196608x1547378).
+<-><->
+      
+l.88 ... que $f$ es monótona creciente en $[0,1]$
+                                                  , pues es constante en $[0...
+Not a real error.
+
+[24]
+./_region_.tex:88: Preview: Snippet 25 started.
+<-><->
+      
+l.88 ...eciente en $[0,1]$, pues es constante en $
+                                                  [0,1)$
+Not a real error.
+
+./_region_.tex:88: Preview: Snippet 25 ended.(589824+196608x1632925).
+<-><->
+      
+l.88 ...e en $[0,1]$, pues es constante en $[0,1)$
+                                                  
+Not a real error.
+
+[25]
+./_region_.tex:89: Preview: Snippet 26 started.
+<-><->
+      
+l.89 ...esenta un salto hacia arriba en el punto $
+                                                  x=1.$ Por la proposición 5,
+Not a real error.
+
+./_region_.tex:89: Preview: Snippet 26 ended.(495239+0x2072343).
+<-><->
+      
+l.89 ...a un salto hacia arriba en el punto $x=1.$
+                                                   Por la proposición 5,
+Not a real error.
+
+[26]
+./_region_.tex:90: Preview: Snippet 27 started.
+<-><->
+      
+l.90                 se concluye que $
+                                      f$ es integrable en $[0,1]$.
+Not a real error.
+
+./_region_.tex:90: Preview: Snippet 27 ended.(546132+152916x463527).
+<-><->
+      
+l.90                 se concluye que $f$
+                                         es integrable en $[0,1]$.
+Not a real error.
+
+[27]
+./_region_.tex:90: Preview: Snippet 28 started.
+<-><->
+      
+l.90 ...    se concluye que $f$ es integrable en $
+                                                  [0,1]$.
+Not a real error.
+
+./_region_.tex:90: Preview: Snippet 28 ended.(589824+196608x1547378).
+<-><->
+      
+l.90 ... concluye que $f$ es integrable en $[0,1]$
+                                                  .
+Not a real error.
+
+[28]
+./_region_.tex:92: Preview: Snippet 29 started.
+<-><->
+      
+l.92 ...       \item[(c)] Para todo subintervalo $
+                                                  [t_{i-1},t_{i}]\subset[0,1...
+Not a real error.
+
+./_region_.tex:92: Preview: Snippet 29 ended.(589824+196608x5086073).
+<-><->
+      
+l.92 ...subintervalo $[t_{i-1},t_{i}]\subset[0,1]$
+                                                   se tiene
+Not a real error.
+
+[29]
+./_region_.tex:93: Preview: Snippet 30 started.
+<-><->
+      
+l.93                 \begin{align*}
+                                   
+Not a real error.
+
+./_region_.tex:95: Preview: Snippet 30 ended.(1140322+0x17337060).
+<-><->
+      
+l.95                 \end{align*}
+                                 
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 95.
+
+[30]
+./_region_.tex:96: Preview: Snippet 31 started.
+<-><->
+      
+l.96 ...  pues en cualquier intervalo hay puntos $
+                                                  x\lt1$ donde $f(x)=0$. Por...
+Not a real error.
+
+./_region_.tex:96: Preview: Snippet 31 ended.(495239+20972x1858429).
+<-><->
+      
+l.96 ... en cualquier intervalo hay puntos $x\lt1$
+                                                   donde $f(x)=0$. Por lo tanto
+Not a real error.
+
+[31]
+./_region_.tex:96: Preview: Snippet 32 started.
+<-><->
+      
+l.96 ...quier intervalo hay puntos $x\lt1$ donde $
+                                                  f(x)=0$. Por lo tanto
+Not a real error.
+
+./_region_.tex:96: Preview: Snippet 32 ended.(589824+196608x2920882).
+<-><->
+      
+l.96 ...ntervalo hay puntos $x\lt1$ donde $f(x)=0$
+                                                  . Por lo tanto
+Not a real error.
+
+[32]
+./_region_.tex:97: Preview: Snippet 33 started.
+<-><->
+      
+l.97                 \begin{align*}
+                                   
+Not a real error.
+
+./_region_.tex:99: Preview: Snippet 33 ended.(1140322+0x18845417).
+<-><->
+      
+l.99                 \end{align*}
+                                 
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 99.
+
+[33]
+./_region_.tex:100: Preview: Snippet 34 started.
+<-><->
+      
+l.100                 para toda partición $
+                                            P$. En consecuencia
+Not a real error.
+
+./_region_.tex:100: Preview: Snippet 34 ended.(537395+0x603291).
+<-><->
+      
+l.100                 para toda partición $P$
+                                              . En consecuencia
+Not a real error.
+
+[34]
+./_region_.tex:101: Preview: Snippet 35 started.
+<-><->
+      
+l.101                 \begin{align*}
+                                    
+Not a real error.
+
+./_region_.tex:103: Preview: Snippet 35 ended.(1645697+0x18360010).
+<-><->
+      
+l.103                 \end{align*}
+                                  
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 103.
+
+[35]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 108.
+
+./_region_.tex:109: Preview: Snippet 36 started.
+<-><->
+      
+l.109             Dada una función $
+                                     f$ acotada en un intervalo $[a,b]$ y $P...
+Not a real error.
+
+./_region_.tex:109: Preview: Snippet 36 ended.(546132+152916x463527).
+<-><->
+      
+l.109             Dada una función $f$
+                                        acotada en un intervalo $[a,b]$ y $P...
+Not a real error.
+
+[36]
+./_region_.tex:109: Preview: Snippet 37 started.
+<-><->
+      
+l.109 ...na función $f$ acotada en un intervalo $
+                                                  [a,b]$ y $P=\{t_{0},t_{1},...
+Not a real error.
+
+./_region_.tex:109: Preview: Snippet 37 ended.(589824+196608x1508959).
+<-><->
+      
+l.109 ...ción $f$ acotada en un intervalo $[a,b]$
+                                                   y $P=\{t_{0},t_{1},\dots,...
+Not a real error.
+
+[37]
+./_region_.tex:109: Preview: Snippet 38 started.
+<-><->
+      
+l.109 ...n $f$ acotada en un intervalo $[a,b]$ y $
+                                                  P=\{t_{0},t_{1},\dots,t_{n...
+Not a real error.
+
+./_region_.tex:109: Preview: Snippet 38 ended.(589824+196608x6322949).
+<-><->
+      
+l.109 ...$[a,b]$ y $P=\{t_{0},t_{1},\dots,t_{n}\}$
+                                                  
+Not a real error.
+
+[38]
+./_region_.tex:110: Preview: Snippet 39 started.
+<-><->
+      
+l.110             una partición de $
+                                     [a,b]$, para cada $i=1.\dots,n$, definimos
+Not a real error.
+
+./_region_.tex:110: Preview: Snippet 39 ended.(589824+196608x1508959).
+<-><->
+      
+l.110             una partición de $[a,b]$
+                                           , para cada $i=1.\dots,n$, definimos
+Not a real error.
+
+[39]
+./_region_.tex:110: Preview: Snippet 40 started.
+<-><->
+      
+l.110 ...   una partición de $[a,b]$, para cada $
+                                                  i=1.\dots,n$, definimos
+Not a real error.
+
+./_region_.tex:110: Preview: Snippet 40 ended.(515577+152916x3868059).
+<-><->
+      
+l.110 ...ción de $[a,b]$, para cada $i=1.\dots,n$
+                                                  , definimos
+Not a real error.
+
+[40]
+./_region_.tex:111: Preview: Snippet 41 started.
+<-><->
+      
+l.111             \begin{align*}
+                                
+Not a real error.
+
+./_region_.tex:113: Preview: Snippet 41 ended.(1140322+0x20613907).
+<-><->
+      
+l.113             \end{align*}
+                              
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 113.
+
+[41]
+./_region_.tex:115: Preview: Snippet 42 started.
+<-><->
+      
+l.115             \begin{align*}
+                                
+Not a real error.
+
+./_region_.tex:117: Preview: Snippet 42 ended.(1140322+0x20911057).
+<-><->
+      
+l.117             \end{align*}
+                              
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 117.
+
+[42]
+./_region_.tex:118: Preview: Snippet 43 started.
+<-><->
+      
+l.118             Supongamos que $
+                                  f$ y $g$ son funciones acotadas en un inte...
+Not a real error.
+
+./_region_.tex:118: Preview: Snippet 43 ended.(546132+152916x463527).
+<-><->
+      
+l.118             Supongamos que $f$
+                                     y $g$ son funciones acotadas en un inte...
+Not a real error.
+
+[43]
+./_region_.tex:118: Preview: Snippet 44 started.
+<-><->
+      
+l.118             Supongamos que $f$ y $
+                                        g$ son funciones acotadas en un inte...
+Not a real error.
+
+./_region_.tex:118: Preview: Snippet 44 ended.(338603+152916x396944).
+<-><->
+      
+l.118             Supongamos que $f$ y $g$
+                                           son funciones acotadas en un inte...
+Not a real error.
+
+[44]
+./_region_.tex:118: Preview: Snippet 45 started.
+<-><->
+      
+l.118 ... son funciones acotadas en un intervalo $
+                                                  [a,b]$, que $c$ es una con...
+Not a real error.
+
+./_region_.tex:118: Preview: Snippet 45 ended.(589824+196608x1508959).
+<-><->
+      
+l.118 ...unciones acotadas en un intervalo $[a,b]$
+                                                  , que $c$ es una constante
+Not a real error.
+
+[45]
+./_region_.tex:118: Preview: Snippet 46 started.
+<-><->
+      
+l.118 ...s acotadas en un intervalo $[a,b]$, que $
+                                                  c$ es una constante
+Not a real error.
+
+./_region_.tex:118: Preview: Snippet 46 ended.(338603+0x331407).
+<-><->
+      
+l.118 ...acotadas en un intervalo $[a,b]$, que $c$
+                                                   es una constante
+Not a real error.
+
+[46]
+./_region_.tex:119: Preview: Snippet 47 started.
+<-><->
+      
+l.119             y que $
+                         P$ es una partición de $[a,b]$. Prueba lo siguiente:
+Not a real error.
+
+./_region_.tex:119: Preview: Snippet 47 ended.(537395+0x603291).
+<-><->
+      
+l.119             y que $P$
+                            es una partición de $[a,b]$. Prueba lo siguiente:
+Not a real error.
+
+[47]
+./_region_.tex:119: Preview: Snippet 48 started.
+<-><->
+      
+l.119             y que $P$ es una partición de $
+                                                  [a,b]$. Prueba lo siguiente:
+Not a real error.
+
+./_region_.tex:119: Preview: Snippet 48 ended.(589824+196608x1508959).
+<-><->
+      
+l.119 ...   y que $P$ es una partición de $[a,b]$
+                                                  . Prueba lo siguiente:
+Not a real error.
+
+[48]
+./_region_.tex:121: Preview: Snippet 49 started.
+<-><->
+      
+l.121                 \item[(a)] $
+                                  m_{i}^{f}+m_{i}^{g}\leq m_{i}^{f+g}\leq M_...
+Not a real error.
+
+./_region_.tex:121: Preview: Snippet 49 ended.(736915+180571x13044994).
+<-><->
+      
+l.121 ...\leq M_{i}^{f+g}\leq M_{i}^{f}+M_{i}^{g}$
+                                                  .
+Not a real error.
+
+[49]
+./_region_.tex:122: Preview: Snippet 50 started.
+<-><->
+      
+l.122                 \item[(b)] Si $
+                                     c\geq0$, entonces $m_{i}^{cf}=cm_{i}^{f...
+Not a real error.
+
+./_region_.tex:122: Preview: Snippet 50 ended.(500148+106932x1765001).
+<-><->
+      
+l.122                 \item[(b)] Si $c\geq0$
+                                            , entonces $m_{i}^{cf}=cm_{i}^{f...
+Not a real error.
+
+[50]
+./_region_.tex:122: Preview: Snippet 51 started.
+<-><->
+      
+l.122 ...       \item[(b)] Si $c\geq0$, entonces $
+                                                  m_{i}^{cf}=cm_{i}^{f}$ y $...
+Not a real error.
+
+./_region_.tex:122: Preview: Snippet 51 ended.(736915+180571x3671978).
+<-><->
+      
+l.122 ...c\geq0$, entonces $m_{i}^{cf}=cm_{i}^{f}$
+                                                   y $M_{i}^{cf}=cM_{i}^{f}$.
+Not a real error.
+
+[51]
+./_region_.tex:122: Preview: Snippet 52 started.
+<-><->
+      
+l.122 ...q0$, entonces $m_{i}^{cf}=cm_{i}^{f}$ y $
+                                                  M_{i}^{cf}=cM_{i}^{f}$.
+Not a real error.
+
+./_region_.tex:122: Preview: Snippet 52 ended.(736915+180571x3979092).
+<-><->
+      
+l.122 ...cf}=cm_{i}^{f}$ y $M_{i}^{cf}=cM_{i}^{f}$
+                                                  .
+Not a real error.
+
+[52]
+./_region_.tex:123: Preview: Snippet 53 started.
+<-><->
+      
+l.123                 \item[(c)] Si $
+                                     c\lt0$, entonces $m_{i}^{cf}=cM_{i}^{f}...
+Not a real error.
+
+./_region_.tex:123: Preview: Snippet 53 ended.(495239+20972x1752250).
+<-><->
+      
+l.123                 \item[(c)] Si $c\lt0$
+                                           , entonces $m_{i}^{cf}=cM_{i}^{f}...
+Not a real error.
+
+[53]
+./_region_.tex:123: Preview: Snippet 54 started.
+<-><->
+      
+l.123 ...        \item[(c)] Si $c\lt0$, entonces $
+                                                  m_{i}^{cf}=cM_{i}^{f}$ y $...
+Not a real error.
+
+./_region_.tex:123: Preview: Snippet 54 ended.(736915+180571x3825535).
+<-><->
+      
+l.123 ...$c\lt0$, entonces $m_{i}^{cf}=cM_{i}^{f}$
+                                                   y $M_{i}^{cf}=cm_{i}^{f}$.
+Not a real error.
+
+[54]
+./_region_.tex:123: Preview: Snippet 55 started.
+<-><->
+      
+l.123 ...t0$, entonces $m_{i}^{cf}=cM_{i}^{f}$ y $
+                                                  M_{i}^{cf}=cm_{i}^{f}$.
+Not a real error.
+
+./_region_.tex:123: Preview: Snippet 55 ended.(736915+180571x3825535).
+<-><->
+      
+l.123 ...cf}=cM_{i}^{f}$ y $M_{i}^{cf}=cm_{i}^{f}$
+                                                  .
+Not a real error.
+
+[55]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 125.
+
+./_region_.tex:130: Preview: Snippet 56 started.
+<-><->
+      
+l.130                 \(
+                        m_i^f + m_i^g \le m_i^{f+g} \le M_i^{f+g} \le M_i^f ...
+Not a real error.
+
+./_region_.tex:130: Preview: Snippet 56 ended.(736915+180571x13258894).
+<-><->
+      
+l.130 ...^{f+g} \le M_i^{f+g} \le M_i^f + M_i^g.\)
+                                                  
+Not a real error.
+
+[56]
+./_region_.tex:132: Preview: Snippet 57 started.
+<-><->
+      
+l.132                 Sea \(
+                            I_i=[t_{i-1},t_i]\). Definamos
+Not a real error.
+
+./_region_.tex:132: Preview: Snippet 57 ended.(589824+196608x4088008).
+<-><->
+      
+l.132                 Sea \(I_i=[t_{i-1},t_i]\)
+                                               . Definamos
+Not a real error.
+
+[57]
+./_region_.tex:133: Preview: Snippet 58 started.
+<-><->
+      
+l.133                 \begin{align*}
+                                    
+Not a real error.
+
+./_region_.tex:136: Preview: Snippet 58 ended.(1140322+0x24563499).
+<-><->
+      
+l.136                 \end{align*}
+                                  
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 136.
+
+[58]
+./_region_.tex:138: Preview: Snippet 59 started.
+<-><->
+      
+l.138                 \begin{align*}
+                                    
+Not a real error.
+
+./_region_.tex:140: Preview: Snippet 59 ended.(1140322+0x21457636).
+<-><->
+      
+l.140                 \end{align*}
+                                  
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 140.
+
+[59]
+./_region_.tex:143: Preview: Snippet 60 started.
+<-><->
+      
+l.143                 \begin{align*}
+                                    
+Not a real error.
+
+./_region_.tex:145: Preview: Snippet 60 ended.(1140322+0x23938329).
+<-><->
+      
+l.145                 \end{align*}
+                                  
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 145.
+
+[60]
+./_region_.tex:146: Preview: Snippet 61 started.
+<-><->
+      
+l.146                 \begin{align*}
+                                    
+Not a real error.
+
+./_region_.tex:148: Preview: Snippet 61 ended.(1140322+0x24508929).
+<-><->
+      
+l.148                 \end{align*}
+                                  
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 148.
+
+[61]
+./_region_.tex:150: Preview: Snippet 62 started.
+<-><->
+      
+l.150                 Observemos que, para todo \(
+                                                  x\in I_i\),
+Not a real error.
+
+./_region_.tex:150: Preview: Snippet 62 ended.(537395+117964x1960825).
+<-><->
+      
+l.150 ...   Observemos que, para todo \(x\in I_i\)
+                                                  ,
+Not a real error.
+
+[62]
+./_region_.tex:151: Preview: Snippet 63 started.
+<-><->
+      
+l.151                 \begin{align*}
+                                    
+Not a real error.
+
+./_region_.tex:153: Preview: Snippet 63 ended.(1140322+0x20891169).
+<-><->
+      
+l.153                 \end{align*}
+                                  
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 153.
+
+[63]
+./_region_.tex:155: Preview: Snippet 64 started.
+<-><->
+      
+l.155                 \begin{align*}
+                                    
+Not a real error.
+
+./_region_.tex:157: Preview: Snippet 64 ended.(1140322+0x20385819).
+<-><->
+      
+l.157                 \end{align*}
+                                  
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 157.
+
+[64]
+./_region_.tex:159: Preview: Snippet 65 started.
+<-><->
+      
+l.159                 \begin{align*}
+                                    
+Not a real error.
+
+./_region_.tex:161: Preview: Snippet 65 ended.(1140322+0x18792251).
+<-><->
+      
+l.161                 \end{align*}
+                                  
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 161.
+
+[65]
+./_region_.tex:164: Preview: Snippet 66 started.
+<-><->
+      
+l.164                 \begin{align*}
+                                    
+Not a real error.
+
+./_region_.tex:166: Preview: Snippet 66 ended.(1140322+0x21726964).
+<-><->
+      
+l.166                 \end{align*}
+                                  
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 166.
+
+[66]
+./_region_.tex:167: Preview: Snippet 67 started.
+<-><->
+      
+l.167                 Como \(
+                             C\subseteq A+B\), se sigue que
+Not a real error.
+
+./_region_.tex:167: Preview: Snippet 67 ended.(537395+106932x3806365).
+<-><->
+      
+l.167                 Como \(C\subseteq A+B\)
+                                             , se sigue que
+Not a real error.
+
+[67]
+./_region_.tex:168: Preview: Snippet 68 started.
+<-><->
+      
+l.168                 \begin{align*}
+                                    
+Not a real error.
+
+./_region_.tex:170: Preview: Snippet 68 ended.(1140322+0x20316616).
+<-><->
+      
+l.170                 \end{align*}
+                                  
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 170.
+
+[68]
+./_region_.tex:172: Preview: Snippet 69 started.
+<-><->
+      
+l.172                 \begin{align*}
+                                    
+Not a real error.
+
+./_region_.tex:174: Preview: Snippet 69 ended.(1140322+0x20003342).
+<-><->
+      
+l.174                 \end{align*}
+                                  
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 174.
+
+[69]
+./_region_.tex:177: Preview: Snippet 70 started.
+<-><->
+      
+l.177                 \begin{align*}
+                                    
+Not a real error.
+
+./_region_.tex:179: Preview: Snippet 70 ended.(1140322+0x21386699).
+<-><->
+      
+l.179                 \end{align*}
+                                  
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 179.
+
+[70]
+./_region_.tex:180: Preview: Snippet 71 started.
+<-><->
+      
+l.180                 Como \(
+                             C\subseteq A+B\), se cumple
+Not a real error.
+
+./_region_.tex:180: Preview: Snippet 71 ended.(537395+106932x3806365).
+<-><->
+      
+l.180                 Como \(C\subseteq A+B\)
+                                             , se cumple
+Not a real error.
+
+[71]
+./_region_.tex:181: Preview: Snippet 72 started.
+<-><->
+      
+l.181                 \begin{align*}
+                                    
+Not a real error.
+
+./_region_.tex:183: Preview: Snippet 72 ended.(1140322+0x20068383).
+<-><->
+      
+l.183                 \end{align*}
+                                  
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 183.
+
+[72]
+./_region_.tex:185: Preview: Snippet 73 started.
+<-><->
+      
+l.185                 \begin{align*}
+                                    
+Not a real error.
+
+./_region_.tex:187: Preview: Snippet 73 ended.(1140322+0x19773007).
+<-><->
+      
+l.187                 \end{align*}
+                                  
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 187.
+
+[73]
+./_region_.tex:189: Preview: Snippet 74 started.
+<-><->
+      
+l.189 ...nalmente, como por definición siempre \(
+                                                  \inf C \le \sup C\), se co...
+Not a real error.
+
+./_region_.tex:189: Preview: Snippet 74 ended.(549453+152916x4617422).
+<-><->
+      
+l.189 ...definición siempre \(\inf C \le \sup C\)
+                                                  , se concluye que
+Not a real error.
+
+[74]
+./_region_.tex:190: Preview: Snippet 75 started.
+<-><->
+      
+l.190                 \begin{align*}
+                                    
+Not a real error.
+
+./_region_.tex:198: Preview: Snippet 75 ended.(1140322+0x23411566).
+<-><->
+      
+l.198                 \end{align*}
+                                  
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 198.
+
+[75]
+./_region_.tex:200: Preview: Snippet 76 started.
+<-><->
+      
+l.200                 \item[(b)] Si $
+                                     c\geq0$, entonces $m_{i}^{cf}=cm_{i}^{f...
+Not a real error.
+
+./_region_.tex:200: Preview: Snippet 76 ended.(500148+106932x1765001).
+<-><->
+      
+l.200                 \item[(b)] Si $c\geq0$
+                                            , entonces $m_{i}^{cf}=cm_{i}^{f...
+Not a real error.
+
+[76]
+./_region_.tex:200: Preview: Snippet 77 started.
+<-><->
+      
+l.200 ...       \item[(b)] Si $c\geq0$, entonces $
+                                                  m_{i}^{cf}=cm_{i}^{f}$ y $...
+Not a real error.
+
+./_region_.tex:200: Preview: Snippet 77 ended.(736915+180571x3671978).
+<-><->
+      
+l.200 ...c\geq0$, entonces $m_{i}^{cf}=cm_{i}^{f}$
+                                                   y $M_{i}^{cf}=cM_{i}^{f}$\\
+Not a real error.
+
+[77]
+./_region_.tex:200: Preview: Snippet 78 started.
+<-><->
+      
+l.200 ...q0$, entonces $m_{i}^{cf}=cm_{i}^{f}$ y $
+                                                  M_{i}^{cf}=cM_{i}^{f}$\\
+Not a real error.
+
+./_region_.tex:200: Preview: Snippet 78 ended.(736915+180571x3979092).
+<-><->
+      
+l.200 ...cf}=cm_{i}^{f}$ y $M_{i}^{cf}=cM_{i}^{f}$
+                                                  \\
+Not a real error.
+
+[78]
+./_region_.tex:201: Preview: Snippet 79 started.
+<-><->
+      
+l.201                 Sea $
+                           I_{i}=[t_{i-1},t_{i}]$. Definamos
+Not a real error.
+
+./_region_.tex:201: Preview: Snippet 79 ended.(589824+196608x4088008).
+<-><->
+      
+l.201                 Sea $I_{i}=[t_{i-1},t_{i}]$
+                                                 . Definamos
+Not a real error.
+
+[79]
+./_region_.tex:202: Preview: Snippet 80 started.
+<-><->
+      
+l.202                 \begin{align*}
+                                    
+Not a real error.
+
+./_region_.tex:204: Preview: Snippet 80 ended.(1140322+0x24732001).
+<-><->
+      
+l.204                 \end{align*}
+                                  
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 204.
+
+[80]
+./_region_.tex:206: Preview: Snippet 81 started.
+<-><->
+      
+l.206                 \begin{align*}
+                                    
+Not a real error.
+
+./_region_.tex:209: Preview: Snippet 81 ended.(2477253+0x22694718).
+<-><->
+      
+l.209                 \end{align*}
+                                  
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 209.
+
+[81]
+./_region_.tex:210: Preview: Snippet 82 started.
+<-><->
+      
+l.210 ...   De un resultado conocido sabemos que $
+                                                  \inf(cA)=c\inf(A)$ de esto...
+Not a real error.
+
+./_region_.tex:210: Preview: Snippet 82 ended.(589824+196608x6047118).
+<-><->
+      
+l.210 ... conocido sabemos que $\inf(cA)=c\inf(A)$
+                                                   de esto se tiene directam...
+Not a real error.
+
+[82]
+./_region_.tex:211: Preview: Snippet 83 started.
+<-><->
+      
+l.211                 \begin{align*}
+                                    
+Not a real error.
+
+./_region_.tex:213: Preview: Snippet 83 ended.(1140322+0x18725058).
+<-><->
+      
+l.213                 \end{align*}
+                                  
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 213.
+
+[83]
+./_region_.tex:214: Preview: Snippet 84 started.
+<-><->
+      
+l.214                 Finalmente, sabiendo que $
+                                                \sup(cA)=c\sup(A)$, obetenemos
+Not a real error.
+
+./_region_.tex:214: Preview: Snippet 84 ended.(589824+196608x6500804).
+<-><->
+      
+l.214 ...almente, sabiendo que $\sup(cA)=c\sup(A)$
+                                                  , obetenemos
+Not a real error.
+
+[84]
+./_region_.tex:215: Preview: Snippet 85 started.
+<-><->
+      
+l.215                 \begin{align*}
+                                    
+Not a real error.
+
+./_region_.tex:217: Preview: Snippet 85 ended.(1140322+0x18771665).
+<-><->
+      
+l.217                 \end{align*}
+                                  
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 217.
+
+[85]
+./_region_.tex:218: Preview: Snippet 86 started.
+<-><->
+      
+l.218                 \item[(c)] Si $
+                                     x\lt0$, entonces $m_{i}^{cf}=cM_{i}^{f}...
+Not a real error.
+
+./_region_.tex:218: Preview: Snippet 86 ended.(495239+20972x1858429).
+<-><->
+      
+l.218                 \item[(c)] Si $x\lt0$
+                                           , entonces $m_{i}^{cf}=cM_{i}^{f}...
+Not a real error.
+
+[86]
+./_region_.tex:218: Preview: Snippet 87 started.
+<-><->
+      
+l.218 ...        \item[(c)] Si $x\lt0$, entonces $
+                                                  m_{i}^{cf}=cM_{i}^{f}$ y $...
+Not a real error.
+
+./_region_.tex:218: Preview: Snippet 87 ended.(736915+180571x3825535).
+<-><->
+      
+l.218 ...$x\lt0$, entonces $m_{i}^{cf}=cM_{i}^{f}$
+                                                   y $M_{i}^{cf}=cm_{i}^{f}$.\\
+Not a real error.
+
+[87]
+./_region_.tex:218: Preview: Snippet 88 started.
+<-><->
+      
+l.218 ...t0$, entonces $m_{i}^{cf}=cM_{i}^{f}$ y $
+                                                  M_{i}^{cf}=cm_{i}^{f}$.\\
+Not a real error.
+
+./_region_.tex:218: Preview: Snippet 88 ended.(736915+180571x3825535).
+<-><->
+      
+l.218 ...cf}=cM_{i}^{f}$ y $M_{i}^{cf}=cm_{i}^{f}$
+                                                  .\\
+Not a real error.
+
+[88]
+./_region_.tex:219: Preview: Snippet 89 started.
+<-><->
+      
+l.219                 Sea $
+                           I_{i}$. Definanamos $A=\{f(x):x\in I_{i}\}$ usand...
+Not a real error.
+
+./_region_.tex:219: Preview: Snippet 89 ended.(537395+117964x562050).
+<-><->
+      
+l.219                 Sea $I_{i}$
+                                 . Definanamos $A=\{f(x):x\in I_{i}\}$ usand...
+Not a real error.
+
+[89]
+./_region_.tex:219: Preview: Snippet 90 started.
+<-><->
+      
+l.219                 Sea $I_{i}$. Definanamos $
+                                                A=\{f(x):x\in I_{i}\}$ usand...
+Not a real error.
+
+./_region_.tex:219: Preview: Snippet 90 ended.(589824+196608x6511184).
+<-><->
+      
+l.219 ...{i}$. Definanamos $A=\{f(x):x\in I_{i}\}$
+                                                   usando las definiciones d...
+Not a real error.
+
+[90]
+./_region_.tex:220: Preview: Snippet 91 started.
+<-><->
+      
+l.220 ...e un resultado conocido que dice que si $
+                                                  c\lt0$ entonces
+Not a real error.
+
+./_region_.tex:220: Preview: Snippet 91 ended.(495239+20972x1752250).
+<-><->
+      
+l.220 ...esultado conocido que dice que si $c\lt0$
+                                                   entonces
+Not a real error.
+
+[91]
+./_region_.tex:221: Preview: Snippet 92 started.
+<-><->
+      
+l.221                 \begin{align*}
+                                    
+Not a real error.
+
+./_region_.tex:223: Preview: Snippet 92 ended.(1140322+0x25131389).
+<-><->
+      
+l.223                 \end{align*}
+                                  
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 223.
+
+[92]
+./_region_.tex:225: Preview: Snippet 93 started.
+<-><->
+      
+l.225                 \begin{align*}
+                                    
+Not a real error.
+
+./_region_.tex:227: Preview: Snippet 93 ended.(1140322+0x21501036).
+<-><->
+      
+l.227                 \end{align*}
+                                  
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 227.
+
+[93]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 231.
+
+./_region_.tex:232: Preview: Snippet 94 started.
+<-><->
+      
+l.232             Sean $
+                        f$ y $g$ funciones acotadas en un intervalo $[a,b]$ ...
+Not a real error.
+
+./_region_.tex:232: Preview: Snippet 94 ended.(546132+152916x463527).
+<-><->
+      
+l.232             Sean $f$
+                           y $g$ funciones acotadas en un intervalo $[a,b]$ ...
+Not a real error.
+
+[94]
+./_region_.tex:232: Preview: Snippet 95 started.
+<-><->
+      
+l.232             Sean $f$ y $
+                              g$ funciones acotadas en un intervalo $[a,b]$ ...
+Not a real error.
+
+./_region_.tex:232: Preview: Snippet 95 ended.(338603+152916x396944).
+<-><->
+      
+l.232             Sean $f$ y $g$
+                                 funciones acotadas en un intervalo $[a,b]$ ...
+Not a real error.
+
+[95]
+./_region_.tex:232: Preview: Snippet 96 started.
+<-><->
+      
+l.232 ... $g$ funciones acotadas en un intervalo $
+                                                  [a,b]$ y $P$ una partició...
+Not a real error.
+
+./_region_.tex:232: Preview: Snippet 96 ended.(589824+196608x1508959).
+<-><->
+      
+l.232 ...unciones acotadas en un intervalo $[a,b]$
+                                                   y $P$ una partición de
+Not a real error.
+
+[96]
+./_region_.tex:232: Preview: Snippet 97 started.
+<-><->
+      
+l.232 ...ones acotadas en un intervalo $[a,b]$ y $
+                                                  P$ una partición de
+Not a real error.
+
+./_region_.tex:232: Preview: Snippet 97 ended.(537395+0x603291).
+<-><->
+      
+l.232 ...es acotadas en un intervalo $[a,b]$ y $P$
+                                                   una partición de
+Not a real error.
+
+[97]
+./_region_.tex:233: Preview: Snippet 98 started.
+<-><->
+      
+l.233             $
+                   [a,b]$. Prueba que
+Not a real error.
+
+./_region_.tex:233: Preview: Snippet 98 ended.(589824+196608x1508959).
+<-><->
+      
+l.233             $[a,b]$
+                         . Prueba que
+Not a real error.
+
+[98]
+./_region_.tex:234: Preview: Snippet 99 started.
+<-><->
+      
+l.234             \begin{align*}
+                                
+Not a real error.
+
+./_region_.tex:236: Preview: Snippet 99 ended.(1140322+0x27290742).
+<-><->
+      
+l.236             \end{align*}
+                              
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 236.
+
+[99]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 239.
+
+./_region_.tex:243: Preview: Snippet 100 started.
+<-><->
+      
+l.243             \begin{align*}
+                                
+Not a real error.
+
+./_region_.tex:245: Preview: Snippet 100 ended.(1140322+0x23411566).
+<-><->
+      
+l.245             \end{align*}
+                              
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 245.
+
+[100]
+./_region_.tex:246: Preview: Snippet 101 started.
+<-><->
+      
+l.246             Multiplicando por $
+                                     (t_{i-1}-t_{i})$ obtenemos
+Not a real error.
+
+./_region_.tex:246: Preview: Snippet 101 ended.(589824+196608x3272895).
+<-><->
+      
+l.246 ...      Multiplicando por $(t_{i-1}-t_{i})$
+                                                   obtenemos
+Not a real error.
+
+[101]
+./_region_.tex:247: Preview: Snippet 102 started.
+<-><->
+      
+l.247             \begin{align*}
+                                
+Not a real error.
+
+./_region_.tex:249: Preview: Snippet 102 ended.(1140322+0x33230251).
+<-><->
+      
+l.249             \end{align*}
+                              
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 249.
+
+[102]
+./_region_.tex:251: Preview: Snippet 103 started.
+<-><->
+      
+l.251             \begin{align*}
+                                
+Not a real error.
+
+./_region_.tex:254: Preview: Snippet 103 ended.(4246720+0x30257823).
+<-><->
+      
+l.254             \end{align*}
+                              
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 254.
+
+[103]
+./_region_.tex:256: Preview: Snippet 104 started.
+<-><->
+      
+l.256             \begin{align*}
+                                
+Not a real error.
+
+./_region_.tex:258: Preview: Snippet 104 ended.(1140322+0x28372086).
+<-><->
+      
+l.258             \end{align*}
+                              
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 258.
+
+[104]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 261.
+
+./_region_.tex:262: Preview: Snippet 105 started.
+<-><->
+      
+l.262             Sean $
+                        f$ una función acotada en un intervalo $[a,b]$, $c$...
+Not a real error.
+
+./_region_.tex:262: Preview: Snippet 105 ended.(546132+152916x463527).
+<-><->
+      
+l.262             Sean $f$
+                           una función acotada en un intervalo $[a,b]$, $c$...
+Not a real error.
+
+[105]
+./_region_.tex:262: Preview: Snippet 106 started.
+<-><->
+      
+l.262 ...f$ una función acotada en un intervalo $
+                                                  [a,b]$, $c$ un número rea...
+Not a real error.
+
+./_region_.tex:262: Preview: Snippet 106 ended.(589824+196608x1508959).
+<-><->
+      
+l.262 ... función acotada en un intervalo $[a,b]$
+                                                  , $c$ un número real y $P...
+Not a real error.
+
+[106]
+./_region_.tex:262: Preview: Snippet 107 started.
+<-><->
+      
+l.262 ...nción acotada en un intervalo $[a,b]$, $
+                                                  c$ un número real y $P$ una
+Not a real error.
+
+./_region_.tex:262: Preview: Snippet 107 ended.(338603+0x331407).
+<-><->
+      
+l.262 ...ión acotada en un intervalo $[a,b]$, $c$
+                                                   un número real y $P$ una
+Not a real error.
+
+[107]
+./_region_.tex:262: Preview: Snippet 108 started.
+<-><->
+      
+l.262 ...ntervalo $[a,b]$, $c$ un número real y $
+                                                  P$ una
+Not a real error.
+
+./_region_.tex:262: Preview: Snippet 108 ended.(537395+0x603291).
+<-><->
+      
+l.262 ...ervalo $[a,b]$, $c$ un número real y $P$
+                                                   una
+Not a real error.
+
+[108]
+./_region_.tex:263: Preview: Snippet 109 started.
+<-><->
+      
+l.263             partición de $
+                                 [a.b]$. Prueba lo siguiente:
+Not a real error.
+
+./_region_.tex:263: Preview: Snippet 109 ended.(589824+196608x1377889).
+<-><->
+      
+l.263             partición de $[a.b]$
+                                       . Prueba lo siguiente:
+Not a real error.
+
+[109]
+./_region_.tex:265: Preview: Snippet 110 started.
+<-><->
+      
+l.265                 \item[(a)] Si $
+                                     c\geq0$, entonces
+Not a real error.
+
+./_region_.tex:265: Preview: Snippet 110 ended.(500148+106932x1765001).
+<-><->
+      
+l.265                 \item[(a)] Si $c\geq0$
+                                            , entonces
+Not a real error.
+
+[110]
+./_region_.tex:266: Preview: Snippet 111 started.
+<-><->
+      
+l.266                 \begin{align*}
+                                    
+Not a real error.
+
+./_region_.tex:268: Preview: Snippet 111 ended.(1140322+0x23095546).
+<-><->
+      
+l.268                 \end{align*}
+                                  
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 268.
+
+[111]
+./_region_.tex:269: Preview: Snippet 112 started.
+<-><->
+      
+l.269                 \item[(b)] Si $
+                                     c\lt0$, entonces
+Not a real error.
+
+./_region_.tex:269: Preview: Snippet 112 ended.(495239+20972x1752250).
+<-><->
+      
+l.269                 \item[(b)] Si $c\lt0$
+                                           , entonces
+Not a real error.
+
+[112]
+./_region_.tex:270: Preview: Snippet 113 started.
+<-><->
+      
+l.270                 \begin{align*}
+                                    
+Not a real error.
+
+./_region_.tex:272: Preview: Snippet 113 ended.(1140322+0x23095546).
+<-><->
+      
+l.272                 \end{align*}
+                                  
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 272.
+
+[113]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 276.
+
+./_region_.tex:281: Preview: Snippet 114 started.
+<-><->
+      
+l.281 ...jercicio 3 de esta tarea tenemos que si $
+                                                  c\geq0$, entonces
+Not a real error.
+
+./_region_.tex:281: Preview: Snippet 114 ended.(500148+106932x1765001).
+<-><->
+      
+l.281 ...o 3 de esta tarea tenemos que si $c\geq0$
+                                                  , entonces
+Not a real error.
+
+[114]
+./_region_.tex:282: Preview: Snippet 115 started.
+<-><->
+      
+l.282                 \begin{align*}
+                                    
+Not a real error.
+
+./_region_.tex:284: Preview: Snippet 115 ended.(1140322+0x22135548).
+<-><->
+      
+l.284                 \end{align*}
+                                  
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 284.
+
+[115]
+./_region_.tex:285: Preview: Snippet 116 started.
+<-><->
+      
+l.285                 tomando $
+                               m_{i}^{cf}=cm_{i}^{f}$ y multiplicandolo por ...
+Not a real error.
+
+./_region_.tex:285: Preview: Snippet 116 ended.(736915+180571x3671978).
+<-><->
+      
+l.285 ...          tomando $m_{i}^{cf}=cm_{i}^{f}$
+                                                   y multiplicandolo por $(t...
+Not a real error.
+
+[116]
+./_region_.tex:285: Preview: Snippet 117 started.
+<-><->
+      
+l.285 ...^{cf}=cm_{i}^{f}$ y multiplicandolo por $
+                                                  (t_{i-1}-t_{i})$ obtenemos
+Not a real error.
+
+./_region_.tex:285: Preview: Snippet 117 ended.(589824+196608x3272895).
+<-><->
+      
+l.285 ...$ y multiplicandolo por $(t_{i-1}-t_{i})$
+                                                   obtenemos
+Not a real error.
+
+[117]
+./_region_.tex:286: Preview: Snippet 118 started.
+<-><->
+      
+l.286                 \begin{align*}
+                                    
+Not a real error.
+
+./_region_.tex:288: Preview: Snippet 118 ended.(1140322+0x21997953).
+<-><->
+      
+l.288                 \end{align*}
+                                  
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 288.
+
+[118]
+./_region_.tex:290: Preview: Snippet 119 started.
+<-><->
+      
+l.290                 \begin{align*}
+                                    
+Not a real error.
+
+./_region_.tex:292: Preview: Snippet 119 ended.(1992288+0x23141191).
+<-><->
+      
+l.292                 \end{align*}
+                                  
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 292.
+
+[119]
+./_region_.tex:294: Preview: Snippet 120 started.
+<-><->
+      
+l.294                 \begin{align*}
+                                    
+Not a real error.
+
+./_region_.tex:296: Preview: Snippet 120 ended.(1140322+0x19956121).
+<-><->
+      
+l.296                 \end{align*}
+                                  
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 296.
+
+[120]
+./_region_.tex:297: Preview: Snippet 121 started.
+<-><->
+      
+l.297                 Ahora tomando $
+                                     M_{i}^{cf}=cM_{i}^{f}$ y multiplicandol...
+Not a real error.
+
+./_region_.tex:297: Preview: Snippet 121 ended.(736915+180571x3979092).
+<-><->
+      
+l.297 ...    Ahora tomando $M_{i}^{cf}=cM_{i}^{f}$
+                                                   y multiplicandolo por $(t...
+Not a real error.
+
+[121]
+./_region_.tex:297: Preview: Snippet 122 started.
+<-><->
+      
+l.297 ...^{cf}=cM_{i}^{f}$ y multiplicandolo por $
+                                                  (t_{i-1}-t_{i})$ tenemos
+Not a real error.
+
+./_region_.tex:297: Preview: Snippet 122 ended.(589824+196608x3272895).
+<-><->
+      
+l.297 ...$ y multiplicandolo por $(t_{i-1}-t_{i})$
+                                                   tenemos
+Not a real error.
+
+[122]
+./_region_.tex:298: Preview: Snippet 123 started.
+<-><->
+      
+l.298                 \begin{align*}
+                                    
+Not a real error.
+
+./_region_.tex:300: Preview: Snippet 123 ended.(1140322+0x22151510).
+<-><->
+      
+l.300                 \end{align*}
+                                  
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 300.
+
+[123]
+./_region_.tex:302: Preview: Snippet 124 started.
+<-><->
+      
+l.302                 \begin{align*}
+                                    
+Not a real error.
+
+./_region_.tex:304: Preview: Snippet 124 ended.(1992288+0x23294748).
+<-><->
+      
+l.304                 \end{align*}
+                                  
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 304.
+
+[124]
+./_region_.tex:306: Preview: Snippet 125 started.
+<-><->
+      
+l.306                 \begin{align*}
+                                    
+Not a real error.
+
+./_region_.tex:308: Preview: Snippet 125 ended.(1140322+0x19928924).
+<-><->
+      
+l.308                 \end{align*}
+                                  
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 308.
+
+[125]
+./_region_.tex:310: Preview: Snippet 126 started.
+<-><->
+      
+l.310                 \begin{align*}
+                                    
+Not a real error.
+
+./_region_.tex:312: Preview: Snippet 126 ended.(1140322+0x24176890).
+<-><->
+      
+l.312                 \end{align*}
+                                  
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 312.
+
+[126]
+./_region_.tex:314: Preview: Snippet 127 started.
+<-><->
+      
+l.314 ...jercicio 3 de esta tarea tenemos que si $
+                                                  c\lt0$, entonces
+Not a real error.
+
+./_region_.tex:314: Preview: Snippet 127 ended.(495239+20972x1752250).
+<-><->
+      
+l.314 ...io 3 de esta tarea tenemos que si $c\lt0$
+                                                  , entonces
+Not a real error.
+
+[127]
+./_region_.tex:315: Preview: Snippet 128 started.
+<-><->
+      
+l.315                  \begin{align*}
+                                     
+Not a real error.
+
+./_region_.tex:317: Preview: Snippet 128 ended.(1140322+0x21963063).
+<-><->
+      
+l.317                  \end{align*}
+                                   
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 317.
+
+[128]
+./_region_.tex:318: Preview: Snippet 129 started.
+<-><->
+      
+l.318                  Tomando $
+                                m_{i}^{cf}=cM_{i}^{f}$ y multiplicandolo por...
+Not a real error.
+
+./_region_.tex:318: Preview: Snippet 129 ended.(736915+180571x3825535).
+<-><->
+      
+l.318 ...          Tomando $m_{i}^{cf}=cM_{i}^{f}$
+                                                   y multiplicandolo por $(t...
+Not a real error.
+
+[129]
+./_region_.tex:318: Preview: Snippet 130 started.
+<-><->
+      
+l.318 ...^{cf}=cM_{i}^{f}$ y multiplicandolo por $
+                                                  (t_{i-1}-t_{i})$ obtenemos
+Not a real error.
+
+./_region_.tex:318: Preview: Snippet 130 ended.(589824+196608x3272895).
+<-><->
+      
+l.318 ...$ y multiplicandolo por $(t_{i-1}-t_{i})$
+                                                   obtenemos
+Not a real error.
+
+[130]
+./_region_.tex:319: Preview: Snippet 131 started.
+<-><->
+      
+l.319                  \begin{align*}
+                                     
+Not a real error.
+
+./_region_.tex:321: Preview: Snippet 131 ended.(1140322+0x22074731).
+<-><->
+      
+l.321                  \end{align*}
+                                   
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 321.
+
+[131]
+./_region_.tex:323: Preview: Snippet 132 started.
+<-><->
+      
+l.323                  \begin{align*}
+                                     
+Not a real error.
+
+./_region_.tex:325: Preview: Snippet 132 ended.(1992288+0x23111019).
+<-><->
+      
+l.325                  \end{align*}
+                                   
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 325.
+
+[132]
+./_region_.tex:327: Preview: Snippet 133 started.
+<-><->
+      
+l.327                  \begin{align*}
+                                     
+Not a real error.
+
+./_region_.tex:329: Preview: Snippet 133 ended.(1140322+0x20270837).
+<-><->
+      
+l.329                  \end{align*}
+                                   
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 329.
+
+[133]
+./_region_.tex:330: Preview: Snippet 134 started.
+<-><->
+      
+l.330                  La prueba para $
+                                       M_{i}^{cf}=cM_{i}^{f}$ es analoga. De...
+Not a real error.
+
+./_region_.tex:330: Preview: Snippet 134 ended.(736915+180571x3979092).
+<-><->
+      
+l.330 ...   La prueba para $M_{i}^{cf}=cM_{i}^{f}$
+                                                   es analoga. De estas dos ...
+Not a real error.
+
+[134]
+./_region_.tex:331: Preview: Snippet 135 started.
+<-><->
+      
+l.331                  \begin{align*}
+                                     
+Not a real error.
+
+./_region_.tex:333: Preview: Snippet 135 ended.(1140322+0x24176890).
+<-><->
+      
+l.333                  \end{align*}
+                                   
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 333.
+
+[135]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 337.
+
+./_region_.tex:338: Preview: Snippet 136 started.
+<-><->
+      
+l.338             Sea $
+                       f$ una función integrable en un intervalo $[a,b]$ y ...
+Not a real error.
+
+./_region_.tex:338: Preview: Snippet 136 ended.(546132+152916x463527).
+<-><->
+      
+l.338             Sea $f$
+                          una función integrable en un intervalo $[a,b]$ y ...
+Not a real error.
+
+[136]
+./_region_.tex:338: Preview: Snippet 137 started.
+<-><->
+      
+l.338 ...una función integrable en un intervalo $
+                                                  [a,b]$ y $c$ un número re...
+Not a real error.
+
+./_region_.tex:338: Preview: Snippet 137 ended.(589824+196608x1508959).
+<-><->
+      
+l.338 ...nción integrable en un intervalo $[a,b]$
+                                                   y $c$ un número real. Pr...
+Not a real error.
+
+[137]
+./_region_.tex:338: Preview: Snippet 138 started.
+<-><->
+      
+l.338 ...�n integrable en un intervalo $[a,b]$ y $
+                                                  c$ un número real. Prueba
+Not a real error.
+
+./_region_.tex:338: Preview: Snippet 138 ended.(338603+0x331407).
+<-><->
+      
+l.338 ... integrable en un intervalo $[a,b]$ y $c$
+                                                   un número real. Prueba
+Not a real error.
+
+[138]
+./_region_.tex:339: Preview: Snippet 139 started.
+<-><->
+      
+l.339             que $
+                       cf$ es integrable $[a,b]$ y que
+Not a real error.
+
+./_region_.tex:339: Preview: Snippet 139 ended.(546132+152916x794934).
+<-><->
+      
+l.339             que $cf$
+                           es integrable $[a,b]$ y que
+Not a real error.
+
+[139]
+./_region_.tex:339: Preview: Snippet 140 started.
+<-><->
+      
+l.339             que $cf$ es integrable $
+                                          [a,b]$ y que
+Not a real error.
+
+./_region_.tex:339: Preview: Snippet 140 ended.(589824+196608x1508959).
+<-><->
+      
+l.339             que $cf$ es integrable $[a,b]$
+                                                 y que
+Not a real error.
+
+[140]
+./_region_.tex:340: Preview: Snippet 141 started.
+<-><->
+      
+l.340             \begin{align*}
+                                
+Not a real error.
+
+./_region_.tex:342: Preview: Snippet 141 ended.(1645697+0x18222220).
+<-><->
+      
+l.342             \end{align*}
+                              
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 342.
+
+[141]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 345.
+
+./_region_.tex:347: Preview: Snippet 142 started.
+<-><->
+      
+l.347             Para $
+                        c\geq0$. Dado que f es integrable tenemos
+Not a real error.
+
+./_region_.tex:347: Preview: Snippet 142 ended.(500148+106932x1765001).
+<-><->
+      
+l.347             Para $c\geq0$
+                               . Dado que f es integrable tenemos
+Not a real error.
+
+[142]
+./_region_.tex:348: Preview: Snippet 143 started.
+<-><->
+      
+l.348             \begin{align*}
+                                
+Not a real error.
+
+./_region_.tex:350: Preview: Snippet 143 ended.(1517259+0x21198738).
+<-><->
+      
+l.350             \end{align*}
+                              
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 350.
+
+[143]
+./_region_.tex:351: Preview: Snippet 144 started.
+<-><->
+      
+l.351             al multiplicarlo por $
+                                        c\geq0$ a ambos lados obtenemos
+Not a real error.
+
+./_region_.tex:351: Preview: Snippet 144 ended.(500148+106932x1765001).
+<-><->
+      
+l.351             al multiplicarlo por $c\geq0$
+                                                a ambos lados obtenemos
+Not a real error.
+
+[144]
+./_region_.tex:352: Preview: Snippet 145 started.
+<-><->
+      
+l.352             \begin{align*}
+                                
+Not a real error.
+
+./_region_.tex:354: Preview: Snippet 145 ended.(1517259+0x21661215).
+<-><->
+      
+l.354             \end{align*}
+                              
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 354.
+
+[145]
+./_region_.tex:356: Preview: Snippet 146 started.
+<-><->
+      
+l.356             \begin{align*}
+                                
+Not a real error.
+
+./_region_.tex:358: Preview: Snippet 146 ended.(1517259+0x21530145).
+<-><->
+      
+l.358             \end{align*}
+                              
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 358.
+
+[146]
+./_region_.tex:360: Preview: Snippet 147 started.
+<-><->
+      
+l.360             \begin{align*}
+                                
+Not a real error.
+
+./_region_.tex:362: Preview: Snippet 147 ended.(1517259+0x21530145).
+<-><->
+      
+l.362             \end{align*}
+                              
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 362.
+
+[147]
+./_region_.tex:364: Preview: Snippet 148 started.
+<-><->
+      
+l.364             \begin{align*}
+                                
+Not a real error.
+
+./_region_.tex:366: Preview: Snippet 148 ended.(1645697+0x19303564).
+<-><->
+      
+l.366             \end{align*}
+                              
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 366.
+
+[148]
+./_region_.tex:367: Preview: Snippet 149 started.
+<-><->
+      
+l.367             Para el caso donde $
+                                      c\lt0$. Como $f$ es integrable tenemos
+Not a real error.
+
+./_region_.tex:367: Preview: Snippet 149 ended.(495239+20972x1752250).
+<-><->
+      
+l.367             Para el caso donde $c\lt0$
+                                            . Como $f$ es integrable tenemos
+Not a real error.
+
+[149]
+./_region_.tex:367: Preview: Snippet 150 started.
+<-><->
+      
+l.367 ...       Para el caso donde $c\lt0$. Como $
+                                                  f$ es integrable tenemos
+Not a real error.
+
+./_region_.tex:367: Preview: Snippet 150 ended.(546132+152916x463527).
+<-><->
+      
+l.367 ...     Para el caso donde $c\lt0$. Como $f$
+                                                   es integrable tenemos
+Not a real error.
+
+[150]
+./_region_.tex:368: Preview: Snippet 151 started.
+<-><->
+      
+l.368             \begin{align*}
+                                
+Not a real error.
+
+./_region_.tex:370: Preview: Snippet 151 ended.(1517259+0x21198738).
+<-><->
+      
+l.370             \end{align*}
+                              
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 370.
+
+[151]
+./_region_.tex:371: Preview: Snippet 152 started.
+<-><->
+      
+l.371             multiplicando por $
+                                     c\lt0$ obtenemos
+Not a real error.
+
+./_region_.tex:371: Preview: Snippet 152 ended.(495239+20972x1752250).
+<-><->
+      
+l.371             multiplicando por $c\lt0$
+                                            obtenemos
+Not a real error.
+
+[152]
+./_region_.tex:372: Preview: Snippet 153 started.
+<-><->
+      
+l.372             \begin{align*}
+                                
+Not a real error.
+
+./_region_.tex:374: Preview: Snippet 153 ended.(1517259+0x22272886).
+<-><->
+      
+l.374             \end{align*}
+                              
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 374.
+
+[153]
+./_region_.tex:376: Preview: Snippet 154 started.
+<-><->
+      
+l.376             \begin{align*}
+                                
+Not a real error.
+
+./_region_.tex:378: Preview: Snippet 154 ended.(1517259+0x22141816).
+<-><->
+      
+l.378             \end{align*}
+                              
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 378.
+
+[154]
+./_region_.tex:380: Preview: Snippet 155 started.
+<-><->
+      
+l.380             \begin{align*}
+                                
+Not a real error.
+
+./_region_.tex:382: Preview: Snippet 155 ended.(1517259+0x22141816).
+<-><->
+      
+l.382             \end{align*}
+                              
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 382.
+
+[155]
+./_region_.tex:384: Preview: Snippet 156 started.
+<-><->
+      
+l.384             \begin{align*}
+                                
+Not a real error.
+
+./_region_.tex:386: Preview: Snippet 156 ended.(1645697+0x19704861).
+<-><->
+      
+l.386             \end{align*}
+                              
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 386.
+
+[156]
+ ***********
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+ ***********
+ ) 
+Here is how much of TeX's memory you used:
+ 1212 strings out of 428804
+ 20762 string characters out of 4555043
+ 1412544 words of memory out of 5000000
+ 67973 multiletter control sequences out of 15000+600000
+ 683297 words of font info for 77 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 46i,19n,56p,573b,1188s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmex10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy8.pfb>
+Output written on _region_.pdf (156 pages, 146222 bytes).
+PDF statistics:
+ 791 PDF objects out of 1000 (max. 8388607)
+ 580 compressed objects within 6 object streams
+ 156 named destinations out of 1000 (max. 500000)
+ 114 words of extra memory for PDF output out of 10000 (max. 10000000)
+

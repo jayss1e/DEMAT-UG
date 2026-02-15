@@ -1,0 +1,128 @@
+\documentclass[14pt]{extarticle}
+\usepackage{extsizes}
+\usepackage{enumerate}
+\usepackage[english,activeacute]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb,times}
+\usepackage{graphicx}
+\usepackage{latexsym}
+\usepackage{color}
+\usepackage{pifont}
+\usepackage{bbm}
+\usepackage{multicol}
+\usepackage{appendix}
+%\usepackage{dsfont}
+\usepackage{mathrsfs}
+%\spanishdecimal{.}
+\usepackage[sort&compress]{natbib}
+\bibliographystyle{plainnat}
+%\usepackage{suthesis-2e}
+%\usepackage{verbatim}
+%\spanishdecimal{.}
+\def\theequation{\thesection.\arabic{equation}}
+
+\textwidth=6.5in
+%\lineskip .25cm
+%\lineskiplimit .25cm
+\textheight=9.5in
+\topmargin=-.75in
+\topskip=-4pt
+\evensidemargin=-2pt
+\oddsidemargin=-1pt
+%%%%%%%%%%%%%%%%%%%%
+%\oddsidemargin 0in \textwidth 6.75in \topmargin 0in \textheight
+%8.5in
+\parindent 0em
+\parskip 1ex
+
+\def\CC{\mathbb{C}}
+\newcommand{\rr}{\mathbb{R}}
+\newcommand{\pai}{\left(}
+\newcommand{\pad}{\right)}
+\newcommand{\ci}{\left[}
+\newcommand{\cd}{\right]}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\B}{\mathcal{B}}
+\newcommand{\p}{\mathbb{P}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\lphi}{\widehat{\phi}}
+\newcommand{\D}{\mathfrak{D}}
+%\renewcommand{\qedsymbol}{\rule{1ex}{1ex}}
+
+\begin{document}
+ \begin{flushright}
+  \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+  \hline
+  \ \ $E_1$\ \ &\ \ $E_2$\ \ &\ \ $E_3$\ \ &\ \ $E_4$\ \ &Calif.\\
+  \hline
+  & &  & & \\
+    & & &&\\
+   \hline
+ \end{tabular}\\
+ \end{flushright}
+\begin{center}
+\large
+Matemáticas Elementales
+\normalsize
+
+Agosto - Diciembre de 2025\\
+
+Tarea 2
+\end{center}
+
+Resuelve los siguientes ejercicios según el reglamento del curso y \textbf{entrega esta página} con los nombres de los integrantes de equipo colocados en lugar de estas líneas de instrucciones. Los ejercicios 2 y 3 deberán resolverse usando el esquema del Ejemplo 1.12 de las notas (afirmaciones puestas en filas, con sus justificaciones escritas a la derecha) y posteriormente, dicho esquema deberá traducirse en una demostración redactada.
+
+
+En toda esta tarea las letras mayúsculas denotan afirmaciones.
+
+\begin{enumerate}
+
+\item Traduce los siguientes textos en símbolos con cuantificadores. Una vez hecha la traducción, escribe la negación en símbolos y finalmente, traduce dicha negación en texto.
+
+\begin{enumerate}
+\item Todo profesor de matemáticas tiene un curso que adora impartir y que se sabe de memoria.
+
+\item No todos los matemáticos disfrutan hacer cuentas y ningún matemático sabe practicar una cirugía plástica.
+
+\item Existen fanáticos del metal góticos a quienes, aunque les guste mucho cualquier banda de este género, no irían al concierto de dicha banda.
+
+\item No todo lo que brilla es oro y no todo el oro brilla.
+\end{enumerate}
+
+\item Demuestra que las siguientes afirmaciones son, en efecto, implicaciones.
+
+\begin{enumerate}
+\item $$[P\rightarrow Q]\wedge [\neg Q\rightarrow (P\vee S)]\wedge [(T\vee S)\rightarrow R]\wedge \neg R\Longrightarrow Q.$$
+\item \begin{align*}
+&[(P\vee Q)\rightarrow S]\wedge [\neg Q \leftrightarrow T] \wedge [X\leftrightarrow Y]\\
+&\wedge [X\vee H]\wedge [H\rightarrow (\neg Q\vee \neg S)]\wedge \neg T\Longrightarrow P\rightarrow Y.
+\end{align*}
+\end{enumerate}
+
+\item Deriva los siguientes argumentos, en caso de que ellos sean válidos. Si no lo son, demuestra formalmente que no lo son.
+
+\begin{enumerate}
+\item Si Emilio va al cine, no terminará de estudiar. Si Emilio no termina de estudiar, no saldrá bien en el examen. Emilio se fue al cine, luego Emilio no salió bien en el examen.
+
+\item Todo conejo es lagomorfo y ningún conejo es roedor. Los roedores no viajan en avión. Harry ha viajado en avión, luego Harry es un conejo.
+
+\item Los roedores no son conejos y tampoco son gatos. Los lagomorfos son conejos o no son roedores. Si un animal viaja en la cabina de pasajeros de algún avión, entonces es un conejo o un gato. Fergus es un roedor, luego Fergus no puede viajar en la cabina de pasajeros de algún avión.
+
+\item Los conejos no son roedores y los lagomorfos son conejos o son liebres. Fergus es un roedor, por lo tanto, si Fergus es lagomorfo, entonces es un conejo.
+\end{enumerate}
+\item Encuentra la falacia (o falacias) en los siguientes argumentos, si las hay. En caso de no haber falacias, demuestra la validez del argumento.
+
+\begin{enumerate}
+\item Un día soleado pone a Jonás de buenas. Si Jonás está de buenas, algún comité lo pone de malas. Hoy Jonás no está de buenas, así que hoy no es un día soleado y ningún comité puso de malas a Jonás.
+
+\item Ir de fiesta es divertido. Escuchar música es divertido. Trabajar no es divertido. No estoy trabajando, así que me divierto mientras estoy de fiesta o me divierto mientras escucho música.
+
+\item Comer chocolate es disfrutar la vida. Si como chocolate no duermo, por lo tanto estoy disfrutando mi vida.
+
+\item Toda computadora es divertida. Si un objeto es difícil de usar, no es divertido. Luego, las computadoras son fáciles de usar.
+\end{enumerate}
+
+\end{enumerate}
+\end{document}

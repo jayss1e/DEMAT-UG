@@ -1,0 +1,149 @@
+
+\documentclass[12pt,oneside,spanish]{amsbook}
+\newcommand{\grupo}{}
+% ------------------------------------------------------
+% Idioma y codificación
+% ------------------------------------------------------
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+% ------------------------------------------------------
+% Tipografía y formato
+% ------------------------------------------------------
+\usepackage{lmodern}    % Fuente Latin Modern
+\usepackage{microtype}  % Mejor espaciado
+\usepackage{xcolor}     % Colores
+\definecolor{UGblue}{RGB}{0,33,71}
+\definecolor{UGgold}{RGB}{212,175,55}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{titlesec}
+% Añade esto en el preámbulo (antes de \begin{document})
+\usepackage{bookmark}
+\bookmarksetup{open,numbered}
+\usepackage{tikz}
+\usetikzlibrary{calc,decorations.pathreplacing,angles,quotes}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{caption}
+
+% ------------------------------------------------------
+% Matemáticas
+% ------------------------------------------------------
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{mathrsfs}
+\usepackage{stmaryrd}
+\usepackage{physics}
+
+% ------------------------------------------------------
+% Otros paquetes útiles
+% ------------------------------------------------------
+\usepackage{enumitem}
+\usepackage{csquotes}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=UGblue,
+    urlcolor=UGgold,
+    citecolor=UGblue
+}
+\usepackage{multicol}
+
+% ------------------------------------------------------
+% Encabezados y pies de página
+% ------------------------------------------------------
+% ------------------------------------------------------
+% Teoremas, definiciones, etc.
+% ------------------------------------------------------
+\theoremstyle{plain}
+\newtheorem{teo}{Teorema}[section]
+\newtheorem{prop}[teo]{Proposición}
+\newtheorem{lema}[teo]{Lema}
+\theoremstyle{definition}
+\newtheorem{defi}[teo]{Definición}
+\theoremstyle{remark}
+\newtheorem{ejemplo}[teo]{Ejemplo}
+\newtheorem{obs}[teo]{Observación}
+
+% ------------------------------------------------------
+% Comandos útiles
+% ------------------------------------------------------
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\pfrac}[2]{\left( \frac{#1}{#2} \right)} %parentesis
+\newcommand{\bfrac}[2]{\left[ \frac{#1}{#2} \right]} %corchetes
+\newcommand{\vecpar}[1]{\left( #1 \right)}
+% En el preámbulo
+\newcommand{\point}[2]{\left( #1, #2 \right)}
+\newcommand{\pointfrac}[4]{\left( \frac{#1}{#2}, \frac{#3}{#4} \right)}
+\newcommand{\pointmix}[4]{\left( #1, \frac{#3}{#4} \right)} % Primera coordenada normal, segunda fracción
+\renewcommand{\qedsymbol}{$\blacksquare$}
+\newcommand{\gt}{\ensuremath{>}}
+\newcommand{\lt}{\ensuremath{<}}
+\renewcommand{\div}{|}
+
+\renewcommand{\baselinestretch}{1.2}
+\setlength{\parindent}{0pt}
+
+\newenvironment{solucion}
+{\par\noindent\textit{Solución.}\ }
+{\hfill$\blacktriangleleft$\par}
+
+% ------------------------------------------------------
+% Datos personales (modificar según tarea)
+% ------------------------------------------------------
+\newcommand{\alumno}{Ricardo León Martínez}
+\newcommand{\materia}{Elementos de Geometría}
+\newcommand{\profesor}{Valentina Muñoz Porras}
+\newcommand{\tarea}{Tarea 5}
+\newcommand{\fecha}{22/09/2025}
+
+\setlength{\parindent}{0pt}
+\begin{document}
+    \begin{center}
+        \begin{tabular}{c}
+            \includegraphics[width=2.5cm,height=2.5cm]{C:/Users/Radoj/Documents/logo.png}\tabularnewline
+        \end{tabular}%
+        \begin{tabular}{c}
+            \textbf{UNIVERSIDAD DE GUANAJUATO}\tabularnewline
+            \textbf{\scriptsize{}DIVISIÓN DE CIENCIAS NATURALES Y EXACTAS}\tabularnewline
+            \textbf{\scriptsize{}CAMPUS GUANAJUATO}\tabularnewline
+        \end{tabular}
+    \par\end{center}
+
+    \begin{center}
+        \textbf{Examen Parcial 1 (Cálculo Diferencial e Integral I)}
+    \par\end{center}
+
+    \begin{tabular}{|l|l|l|}
+        \hline 
+        \multicolumn{3}{|l|}{\textbf{Nombre:\hspace*{10cm}}}\tabularnewline
+        \hline 
+        \textbf{Grupo:\hspace*{2cm}} & \textbf{Fecha:\hspace*{2cm}} & \textbf{Calificación:}\tabularnewline
+        \hline 
+        \multicolumn{3}{|l|}{\textbf{Profesor:} Fernando Núñez Medina.}\tabularnewline
+        \hline 
+    \end{tabular}
+
+    \vspace{0.5cm}
+
+    \textbf{Instrucciones:} Escribe limpia y ordenadamente el procedimiento
+    (si lo hay) de cada ejercicio y no escribas las respuestas en la hoja
+    del examen. ¡Suerte! 
+    \begin{enumerate}
+        \item Muestra que la ecuación $x^{5}\cos^{1000}(x)+4x-3=0$ tiene una
+        solución en el intervalo $[0,1]$.
+        \item Si $g(x)=7(x-1)^{3}e^{x-2}$, calcula $(g^{-1})^{\prime}(7)$. Ten
+        en cuenta que $g(2)=7$.
+        \item La recta tangente a la gráfica de una función $f$ en el punto $(0,3)$
+        pasa por el punto $(1,5)$. Encuentra $f(0)$ y $f^{\prime}(0)$.
+        \item Analiza la gráfica de la función $f(x)=-x^{4}+2x^{2}$ siguiendo el
+        procedimiento que vimos en clase (el de los diez pasos).
+        \item Muestra que el rectángulo de menor perimetro y área fija $A$ es
+        un cuadrado.
+    \end{enumerate}
+\end{document}

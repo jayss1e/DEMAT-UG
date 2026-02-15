@@ -1,0 +1,110 @@
+\documentclass[14pt]{extarticle}
+\usepackage{extsizes}
+\usepackage{enumerate}
+\usepackage[english,activeacute]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb,times}
+\usepackage{graphicx}
+\usepackage{latexsym}
+\usepackage{color}
+\usepackage{pifont}
+\usepackage{bbm}
+\usepackage{multicol}
+\usepackage{appendix}
+%\usepackage{dsfont}
+\usepackage{mathrsfs}
+%\spanishdecimal{.}
+\usepackage[sort&compress]{natbib}
+\bibliographystyle{plainnat}
+%\usepackage{suthesis-2e}
+%\usepackage{verbatim}
+%\spanishdecimal{.}
+\def\theequation{\thesection.\arabic{equation}}
+
+\textwidth=6.5in
+%\lineskip .25cm
+%\lineskiplimit .25cm
+\textheight=9.5in
+\topmargin=-.75in
+\topskip=-4pt
+\evensidemargin=-2pt
+\oddsidemargin=-1pt
+%%%%%%%%%%%%%%%%%%%%
+%\oddsidemargin 0in \textwidth 6.75in \topmargin 0in \textheight
+%8.5in
+\parindent 0em
+\parskip 1ex
+\newcommand{\floor}[1]{\left\lfloor {#1} \right\rfloor}
+
+\def\CC{\mathbb{C}}
+\newcommand{\rr}{\mathbb{R}}
+\newcommand{\pai}{\left(}
+\newcommand{\pad}{\right)}
+\newcommand{\ci}{\left[}
+\newcommand{\cd}{\right]}
+\newcommand{\nn}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\p}{\mathbb{P}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\lphi}{\widehat{\phi}}
+\newcommand{\D}{\mathfrak{D}}
+%\renewcommand{\qedsymbol}{\rule{1ex}{1ex}}
+
+\begin{document}
+ \begin{flushright}
+  \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+  \hline
+  \ \ $E_1$\ \ &\ \ $E_2$\ \ &\ \ $E_3$\ \ &\ \ $E_4$\ \ &Calif.\\
+  \hline
+  & &  & & \\
+    & & &&\\
+   \hline
+ \end{tabular}\\
+ \end{flushright}
+\begin{center}
+\large
+Matemáticas Elementales
+\normalsize
+
+Agosto - Diciembre de 2025\\
+
+Tarea 4
+\end{center}
+
+Resuelve los siguientes ejercicios según el reglamento del curso y \textbf{entrega esta página} con los nombres de los integrantes de equipo colocados en lugar de estas líneas de instrucciones. 
+Todas las demostraciones deben redactarse justificando formalmente todos los pasos necesarios.
+
+Antes de iniciar cada demostración, deberás indicar claramente cuáles son las hipótesis de cada ejercicio y qué es lo que debes demostrar en cada ejercicio.
+
+La tarea debe resolverse con la teoría vista en el curso o con resultados a lo más de los cursos de preparatoria. Está prohibido utilizar resultados de otros cursos de este mismo semestre y/o trucos de alguna olimpiada relacionada con computación y/o matemáticas.
+
+\begin{enumerate}
+
+\item Dadas dos funciones $f,g:\rr\to\rr$, definimos la \textbf{composición} de $f,g$, denotada por $f\circ g$, como
+$$(f\circ g)(x):=f(g(x)),\forall\ x\in\rr.$$
+
+Supón que $g$ es continua en $z$ y $f$ es continua en $g(z)$. Demuestra que $f\circ g$ es continua en $z$.
+
+\item \begin{enumerate}
+\item Define formalmente $\lim\limits_{x\to y} f(x)=\pm \infty$ y demuestra que los límites laterales de $f(x)=1/x$, cuando $x\to0$, no coinciden y ninguno es finito.
+
+\item Dadas dos funciones $f,g:\rr\to\rr$ tales que $\lim\limits_{x\to z}f(x)g(x)$ existe y es finito ¿se cumple que $\lim\limits_{x\to z}f(x)$ y $\lim\limits_{x\to z}g(x)$ existen y son finitos? Justifica formalmete tu respuesta.
+
+
+\end{enumerate}
+
+\item Sean $f,g:\rr\to [0,\infty)$ funciones continuas, demuestra que $h:\rr\to [0,\infty)$ dada por
+
+$$h(x)=\ci 1+g(x)\cd^{f(x)},$$
+
+es continua.
+
+\item Demuestra utilizando la definición que si $f:\rr\to\rr$ y
+$g:\rr\to [0,\infty)$ son funciones continuas, entonces $h:\rr\to\rr$ dada por
+$$h(x)=\frac{f(x)}{1+g(x)},$$
+es continua.
+
+\end{enumerate}
+\end{document}

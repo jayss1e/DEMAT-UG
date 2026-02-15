@@ -1,0 +1,134 @@
+\documentclass[14pt]{extarticle}
+\usepackage{extsizes}
+\usepackage{enumerate}
+\usepackage[english,activeacute]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb,times}
+\usepackage{graphicx}
+\usepackage{latexsym}
+\usepackage{color}
+\usepackage{pifont}
+\usepackage{bbm}
+\usepackage{multicol}
+\usepackage{appendix}
+%\usepackage{dsfont}
+\usepackage{mathrsfs}
+%\spanishdecimal{.}
+\usepackage[sort&compress]{natbib}
+\bibliographystyle{plainnat}
+%\usepackage{suthesis-2e}
+%\usepackage{verbatim}
+%\spanishdecimal{.}
+\def\theequation{\thesection.\arabic{equation}}
+
+\textwidth=6.5in
+%\lineskip .25cm
+%\lineskiplimit .25cm
+\textheight=9.5in
+\topmargin=-.75in
+\topskip=-4pt
+\evensidemargin=-2pt
+\oddsidemargin=-1pt
+%%%%%%%%%%%%%%%%%%%%
+%\oddsidemargin 0in \textwidth 6.75in \topmargin 0in \textheight
+%8.5in
+\parindent 0em
+\parskip 1ex
+
+\def\CC{\mathbb{C}}
+\newcommand{\rr}{\mathbb{R}}
+\newcommand{\pai}{\left(}
+\newcommand{\pad}{\right)}
+\newcommand{\ci}{\left[}
+\newcommand{\cd}{\right]}
+\newcommand{\nn}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\p}{\mathbb{P}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\lphi}{\widehat{\phi}}
+\newcommand{\D}{\mathfrak{D}}
+%\renewcommand{\qedsymbol}{\rule{1ex}{1ex}}
+
+\begin{document}
+ \begin{flushright}
+  \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+  \hline
+  \ \ $E_1$\ \ &\ \ $E_2$\ \ &\ \ $E_3$\ \ &\ \ $E_4$\ \ &Calif.\\
+  \hline
+  & &  & & \\
+    & & &&\\
+   \hline
+ \end{tabular}\\
+ \end{flushright}
+\begin{center}
+\large
+Matemáticas Elementales
+\normalsize
+
+Agosto - Diciembre de 2025\\
+
+Tarea 3
+\end{center}
+
+Resuelve los siguientes ejercicios según el reglamento del curso y \textbf{entrega esta página} con los nombres de los integrantes de equipo colocados en lugar de estas líneas de instrucciones. 
+Todas las demostraciones deben redactarse justificando formalmente todos los pasos necesarios.
+
+Antes de iniciar cada demostración, deberás indicar claramente cuáles son las hipótesis de cada ejercicio y qué es lo que debes demostrar en cada ejercicio.
+
+La tarea debe resolverse con la teoría vista en el curso o con resultados a lo más de los cursos de preparatoria. Está prohibido utilizar resultados de otros cursos de este mismo semestre y/o trucos de alguna olimpiada relacionada con computación y/o matemáticas.
+
+\begin{enumerate}
+
+\item Demuestras los siguientes resultados, utilizando el método indicado en cada caso.
+
+\begin{enumerate}
+\item Para $n\in\nn$ definimos
+
+$$n!:=n(n-1)(n-2)\dots (2)(1).$$
+
+Además, definimos $0!:=1$. Para $k,n\in\nn\cup\{0\}$ con $k\leq n$ definimos el coeficiente binomial $n$ en $k$ como
+
+$$\binom{n}{k}:=\frac{n!}{(n-k)!k!}.$$
+
+Para $n,k\in\nn$, prueba por vía directa que 
+
+$$\binom{n}{k}+\binom{n}{k-1}=\binom{n+1}{k}.$$
+
+\item Sean $a,b,c\in\Z$. Prueba por contrapositiva que si $bc$ no es divisible entre $a$, entonces $b$ y $c$ no son divisibles entre $a$.
+
+\item Sean $a,b,c\in\Z$. Supón que existe $d\in \Z$ tal que $a,b$ son divisibles entre $d$, pero $c$ no es divisible entre $d$. Demuestra por contradicción que no existen $x,y\in \Z$ tales que
+
+$$ax+by=c.$$
+\end{enumerate}
+
+\item Sean $x,y\in\rr$. 
+
+\begin{enumerate}
+\item Demuestra que 
+
+$$x^2+y^2-xy\geq 0\text{ y }x^2+y^2+xy\geq 0.$$
+
+\item Si $x,y$ son ambos positivos, prueba que
+
+$$\frac{x}{y}+\frac{y}{x}\geq 2.$$
+
+\item Prueba que 
+
+$$\frac{x^2+2}{\sqrt{x^2+1}}\geq 2.$$
+\end{enumerate}
+
+\item \begin{enumerate}
+\item Sea $n\in \Z$ tal que $n^2$ es múltiplo de 3. Demuestra que $n$ también es múltiplo de 3.
+
+\item Demuestra que $\sqrt{3}$ no es racional.
+\end{enumerate}
+\item Sean $a,b\in [0,1]$ tales que $a< b$. Prueba que 
+
+\begin{enumerate}
+\item $$0\leq \frac{b-a}{1-ab}\leq 1.$$
+\item $$0\leq \frac{a}{1+b}+\frac{b}{1+a}\leq 1.$$
+\end{enumerate}
+\end{enumerate}
+\end{document}

@@ -1,0 +1,479 @@
+\documentclass[12pt,a4paper]{article}
+\newcommand{\grupo}{}
+% ------------------------------------------------------
+% Idioma y codificación
+% ------------------------------------------------------
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+% ------------------------------------------------------
+% Tipografía y formato
+% ------------------------------------------------------
+\usepackage{lmodern}    % Fuente Latin Modern
+\usepackage{microtype}  % Mejor espaciado
+\usepackage{xcolor}     % Colores
+\definecolor{UGblue}{RGB}{0,33,71}
+\definecolor{UGgold}{RGB}{212,175,55}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{titlesec}
+% Añade esto en el preámbulo (antes de \begin{document})
+\usepackage{bookmark}
+\bookmarksetup{open,numbered}
+\usepackage{tikz}
+\usetikzlibrary{calc,decorations.pathreplacing,angles,quotes}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{caption}
+
+% ------------------------------------------------------
+% Matemáticas
+% ------------------------------------------------------
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{mathrsfs}
+\usepackage{stmaryrd}
+\usepackage{physics}
+
+% ------------------------------------------------------
+% Otros paquetes útiles
+% ------------------------------------------------------
+\usepackage{enumitem}
+\usepackage{csquotes}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=UGblue,
+    urlcolor=UGgold,
+    citecolor=UGblue
+}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+\usepackage{multicol}
+
+% ------------------------------------------------------
+% Encabezados y pies de página
+% ------------------------------------------------------
+% ------------------------------------------------------
+% Teoremas, definiciones, etc.
+% ------------------------------------------------------
+\theoremstyle{plain}
+\newtheorem{teo}{Teorema}[section]
+\newtheorem{prop}[teo]{Proposición}
+\newtheorem{lema}[teo]{Lema}
+\theoremstyle{definition}
+\newtheorem{defi}[teo]{Definición}
+\theoremstyle{remark}
+\newtheorem{ejemplo}[teo]{Ejemplo}
+\newtheorem{obs}[teo]{Observación}
+
+% ------------------------------------------------------
+% Comandos útiles
+% ------------------------------------------------------
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\pfrac}[2]{\left( \frac{#1}{#2} \right)} %parentesis
+\newcommand{\bfrac}[2]{\left[ \frac{#1}{#2} \right]} %corchetes
+\newcommand{\vecpar}[1]{\left( #1 \right)}
+% En el preámbulo
+\newcommand{\point}[2]{\left( #1, #2 \right)}
+\newcommand{\pointfrac}[4]{\left( \frac{#1}{#2}, \frac{#3}{#4} \right)}
+\newcommand{\pointmix}[4]{\left( #1, \frac{#3}{#4} \right)} % Primera coordenada normal, segunda fracción
+\renewcommand{\qedsymbol}{$\blacksquare$}
+\newcommand{\gt}{\ensuremath{>}}
+\newcommand{\lt}{\ensuremath{<}}
+\renewcommand{\div}{$÷$}
+
+\renewcommand{\baselinestretch}{1.2}
+\setlength{\parindent}{0pt}
+
+\newenvironment{solucion}
+{\par\noindent\textit{Solución.}\ }
+{\hfill$\blacktriangleleft$\par}
+
+% ------------------------------------------------------
+% Datos personales (modificar según tarea)
+% ------------------------------------------------------
+\newcommand{\alumno}{Ricardo León Martínez}
+\newcommand{\materia}{Elementos de Geometría}
+\newcommand{\profesor}{Valentina Muñoz Porras}
+\newcommand{\tarea}{Tarea 5}
+\newcommand{\fecha}{22/09/2025}
+
+\setlength{\parindent}{0pt}
+
+\begin{document}
+    \textbf{Ejercicio 1, Inciso a} 
+    \begin{proof}
+        Para $m\in\mathbb{N}_{0}$, consideremos el siguiente conjunto
+        \begin{align*}
+            S=\{n\in\mathbb{N}_{0}:m+n=n+m\}.
+        \end{align*}
+        Probemos que $S\subseteq\mathbb{N}_{0}$ es un conjunto de sucesores.
+        Primero notemos que, por definicion de la suma se tiene
+        \begin{align*}
+            m+0=m=0+m,
+        \end{align*}
+        y por lo tanto $0\in S$. Supongamos ahora que $n\in S$, esto significa que
+        \begin{align*}
+            m+n=n+m.
+        \end{align*}
+        Por definicion de la suma se tiene que
+        \begin{align*}
+            S_{m}(n+)=s(m+n) \quad \text{ y } \quad S_{n+}(m)=s(n+m).
+        \end{align*}
+        Como $m+n=n+m$, se obtiene
+        \begin{align*}
+            S_{m}(n+)=s(m+n)=s(n+m)=S_{n+}(m),
+        \end{align*}
+        por lo que, $n+\in S$. Asi, $S$ es un conjunto de sucesores que contiene al
+        0. Por el teorema 4.1, se sigue que $S=\mathbb{N}_{0}$. En consecuencia, para
+        todo $n\in\mathbb{N}_{0}$ se cumple
+        \begin{align*}
+            m+n=n+m.
+        \end{align*}
+    \end{proof}
+    \textbf{Ejercicio 1, Inciso b} 
+    \begin{proof}
+        Para $n,m\in\mathbb{N}_{0}$, definimos el conjunto
+        \begin{align*}
+            S=\{k\in\mathbb{N}_{0}:n+(m+k)=(n+m)+k\}.
+        \end{align*}
+        Probemos que $S\subseteq\mathbb{N}_{0}$ es un conjunto de sucesores. Por
+        definición de la suma y lo probado en el inciso anterior,
+        \begin{align*}
+            m+0=m, \qquad n+m=n+m,
+        \end{align*}
+        y ademas
+        \begin{align*}
+            n+(m+0)=n+m=(n+m)+0.
+        \end{align*}
+        Por lo tanto, $0\in S$. Sea ahora $k\in S$ esto es,
+        \begin{align}
+            n+(m+k)=(n+m)+k.
+        \end{align}
+        Consideremos $k+$. Usando la definición de la suma, se tiene
+        \begin{align*}
+            S_{m}(k+)=s(m+k),\qquad S_{n}(S_{m}(k+))=n+s(m+k),
+        \end{align*}
+        y también
+        \begin{align*}
+            S_{n+m}(k+)=s((n+m)+k)
+        \end{align*}
+        De (1), obtenemos
+        \begin{align*}
+            n+s(m+k)=s(n+(m+k))=s((n+m)+k).
+        \end{align*}
+        Se sigue que
+        \begin{align*}
+            n+(m+k+)=(n+m)+k+,
+        \end{align*}
+        lo cual prueba que $k+\in S$. Así, $S$ es un conjunto de sucesores que
+        contiene al 0. Por el teorema 4.1, se concluye que $S=\mathbb{N}_{0}$.
+        Por lo tanto, para todo $k\in\mathbb{N}_{0}$ se cumple
+        \begin{align*}
+            n+(m+k)=(n+m)+k.
+        \end{align*}
+    \end{proof}
+
+    \vspace{1cm}
+
+    \textbf{Ejercicio 2, Inciso a} 
+    \begin{proof}
+        Primero probemos que $1\cdot n=n$. Consideremos el conjunto
+        \begin{align*}
+            S=\{n\in\mathbb{N}_{0}:1\cdot n=n\}.
+        \end{align*}
+        Por definición del producto,
+        \begin{align*}
+            1\cdot0=0,
+        \end{align*}
+        de modo que $0\in S$. Supongamos $n\in S$ esto es,
+        \begin{align*}
+            1\cdot n=n.
+        \end{align*}
+        Entonces, por la definición del producto y de la suma,
+        \begin{align*}
+            1\cdot s(n)=1\cdot n+1=n+1=s(n).
+        \end{align*}
+        Así, $s(n)\in S$. Por lo tanto, $S$ es un conjunto de sucesores que contiene
+        al 0. Por el teorema 4.1, se sigue que $S=\mathbb{N}_{0}$, y por ende
+        \begin{align*}
+            1\cdot n=n\text{ para todo }n\in\mathbb{N}_{0}.
+        \end{align*}
+        Ahora probemos que $n\cdot1=n$. como $1=s(0)$, por la definición del producto,
+        \begin{align*}
+            n\cdot1=n\cdot s(0)=n\cdot 0+n.
+        \end{align*}
+        Pero $n\cdot0=0$ y $0+n=n$, de modo que
+        \begin{align*}
+            n\cdot1=0+n=n.
+        \end{align*} 
+        De donde se sigue el resultado.
+    \end{proof}
+
+    \textbf{Ejercicio 2, Inciso b}
+    \begin{proof}
+        Recordemos que $n+1=n+$ por el teorema 4.3. Usando esta igualdad y la 
+        definición del producto, obtenemos
+        \begin{align*}
+            m(n+1)=m(n+)=P_{m}(n+).
+        \end{align*}
+        Por como se define a $P_{m}$, se tiene
+        \begin{align*}
+            P_{m}(n+)=S_{m}(P_{m}(n)),
+        \end{align*}
+        y por la definición de $S_{m}$,
+        \begin{align*}
+            S_{m}(P_{m}(n))=m+P_{m}(n).
+        \end{align*}
+        Como $P_{m}(n)=mn$, entonces
+        \begin{align*}
+            m(n+1)=m+mn.
+        \end{align*}
+        Dado que la suma es conmutativa, se sigue le resultado.
+    \end{proof}
+
+    \vspace{1cm}
+    
+    \textbf{Ejercicio 3, Inciso a}
+    \begin{proof}
+        Sean
+        \begin{align*}
+            a=[(a_1,a_2)],\qquad b=[(b_1,b_2)],\qquad c=[(c_1,c_2)]
+        \end{align*}
+        sus representaciones en $\mathbb{Z}$. Por definición de la suma en $\mathbb{Z}$,
+        \begin{align*}
+            a+b=[(a_1+b_1,a_2+b_2)].
+        \end{align*}
+        Entonces,
+        \begin{align*}
+            (a+b)+c=[(a_1+b_1)+c_1,(a_2+b_2)+c_2)].
+        \end{align*}
+        Por otra parte,
+        \begin{align*}
+            b+c=[(b_1+c_1,b_2+c_2)],
+        \end{align*}
+        y por la misma definición
+        \begin{align*}
+            a+(b+c)=[(a_1+(b_1+c_1),a_2+(b_2+c_2))].
+        \end{align*}
+        Así,
+        \begin{align*}
+            (a+b)+c=a+(b+c).
+        \end{align*}
+    \end{proof}
+
+    \textbf{Ejercicio 3, Inciso b}
+    \begin{proof}
+        Sea $a=[(a_1,a_2)]$ su representación en $\mathbb{Z}$. El entero 0
+        corresponde a la clase $[(0,0)]$. Por definición de la suma en $\mathbb{Z}$,
+        \begin{align*}
+            a+0=[(a_1,a_2)]+[(0,0)]=[(a_1+0,a_2+0)]=[(a_1,a_2)].
+        \end{align*}
+        Por lo tanto,
+        \begin{align*}
+            a+0=a.
+        \end{align*}
+    \end{proof}
+
+    \textbf{Ejercicio 3, Inciso c}
+    \begin{proof}
+        \setcounter{equation}{0}
+        Sean
+        \begin{align*}
+            a=[(a_1,a_2)],\qquad b=[(b_1,b_2)]\qquad c=[(c_1,c_2)]
+        \end{align*}
+        sus representaciones en $\mathbb{Z}$. Por definición de la suma en $\mathbb{Z}$,
+        \begin{align*}
+            a+b=[(a_1+b_1,a_2+b_2)],\qquad c+b=[(c_1+b_1,c_2+b_2)].
+        \end{align*}
+        Usando el criterio de igualdad en $\mathbb{Z}$,
+        \begin{align*}
+            [(x,y)]=[(u,v)] \Longleftrightarrow x+v=y+u,
+        \end{align*}
+        se tiene que
+        \begin{align*}
+            a+b=c+b
+        \end{align*}
+        si y solo si
+        \begin{align}
+            (a_1+b_1)+(c_2+b_2)=(a_2+b_2)+(c_1+b_1).
+        \end{align}
+        Aplicando asociatividad,
+        \begin{align*}
+            (a_1+b_1)+(c_2+b_2)=a_1+(b_1+(c_2+b_2)),\\
+            (a_2+b_2)+(c_1+b_1)=a_2+(b_2+(c_1+b_1)).
+        \end{align*}
+        Aplicando conmutatividad,
+        \begin{align*}
+            b_1+(c_2+b_2)=c_2+(b_1+b_2),\\
+            b_2+(c_1+b_1)=c_1+(b_2+b_1)=c_1+(b_1+b_2).
+        \end{align*}
+        sustituyendo esto en $(1)$, obtenemos
+        \begin{align}
+            a_1+(c_2+(b_1+b_2))=a_2+(c_1+(b_1+b_2)).
+        \end{align}
+        Por asociatividad nuevamente,
+        \begin{align}
+            a_1+c_2+(b_1+b_2)=a_2+c_1+(b_1+b_2).
+        \end{align}
+        Por el ejercicio 1 inciso d de esta tarea sabemos que
+        \begin{align*}
+            x+u=y+u \Longleftrightarrow x=y.
+        \end{align*}
+        Aplicando esto a $(3)$ con $u=b_1+b_2,x=a_1+c_1$ y $y=a_2+c_1$ se obtiene
+        \begin{align*}
+            a_1+c_2=a_2+c_1.
+        \end{align*}
+        Por definición de igualdad en $\mathbb{Z}$,
+        \begin{align*}
+            [(a_1,a_2)]=[(c_1,c_2)],
+        \end{align*}
+        es decir
+        \begin{align*}
+            a=c.
+        \end{align*}
+        La suficiencia es inmediata sustituyendo $a=c$ en la definición de la suma,
+        concluyendo así el resultado.
+    \end{proof}
+
+    \vspace{1.4cm}
+
+    \textbf{Ejercicio 4, Inciso a}
+    \begin{proof}
+        Sean $[(a,b)]_q$ y $[(c,d)]_q$ elementos de $\mathbb{Q}$ con $b\neq0$
+        y $d\neq0$. Por definición de la suma en $\mathbb{Q}$,
+        \begin{align*}
+            [(a,b)]_q+[(c,d)]_q=[(ad+bc,bc)]_q,
+        \end{align*}
+        mientras que
+        \begin{align*}
+            [(c,d)]_q+[(a,b)]_q=[(cb+da,db)]_q.
+        \end{align*}
+        Como en $\mathbb{Z}$ la suma y el producto son conmutativos, se tiene
+        $ad+bc=cb+da$ y $bd=db$. Entonces, por la proposición 4.12, ambas expresiones
+        representan la misma clase, de modo que
+        \begin{align*}
+            [(a,b)]_q+[(c,d)]_q=[(c,d)]_q+[(a,b)]_q.
+        \end{align*}
+        Para el producto, de la definición se obtiene
+        \begin{align*}
+            [(a,b)]_q \cdot [(c,d)]_q=[(ac,bd)]_q,\qquad [(c,d)]_q \cdot [(a,b)]_q=[(ca,db)]_q.
+        \end{align*}
+        Dado que en $\mathbb{Z}$ se cumple $ac=ca$ y $bd=db$, estas dos parejas determinan la misma
+        clase en $\mathbb{Q}$. Por lo tanto,
+        \begin{align*}
+            [(a,b)]_q\cdot[(c,d)]_q=[(c,d)]_q\cdot[(a,b)]_q.
+        \end{align*}
+        Así, las dos operaciones son conmutativas.
+    \end{proof}
+
+    \vspace{0.5cm}
+
+    \textbf{Ejercicio 4, Inciso b}
+    \begin{proof}
+        Sean $[(a,b)]_q,[(c,d)]_q,[(e,f)]_q\in\mathbb{Q}$ con $b,d,f\neq0$.
+        Por definición de la suma en $\mathbb{Q}$,
+        \begin{align*}
+            \big([(a,b)]_q+[(c,d)]_q\big)+[(e,f)]_q=[(ad+bc,bd)]_q+[(e,f)]_q=\big((ad+bc)f+bde,bdf\big)_q,
+        \end{align*}
+        mientras que
+        \begin{align*}
+            [(a,b)]_q+\big([(c,d)]_q+[(e,f)]_q\big)=[(a,b)]_q+[(cf+de,df)]_q=\big(a(df)+b(cf+de),bdf\big)_q.
+        \end{align*}
+        Por asociatividad y conmutatividad de la suma y el producto en $\mathbb{Z}$ se tiene
+        \begin{align*}
+            (ad+bc)f+bde=adf+bcf+bde=a(df)+b(cf+de),
+        \end{align*}
+        y ademas $(bd)f=b(df)$. Por la proposición 4.12, las parejas anteriores representan
+        la misma clase, por lo que
+        \begin{align*}
+            \big([(a,b)]_q+[(c,d)]_q\big)+[(e,f)]_q=[(a,b)]_q+\big([(c,d)]_q+[(e,f)]_q\big).
+        \end{align*}
+        Por la definición del producto en $\mathbb{Q}$,
+        \begin{align*}
+            \big([(a,b)]_q\cdot[(c,d)]_q\big)\cdot[(e,f)]_q=[(ac,bd)]_q\cdot[(e,f)]_q=\big((ac)e,(bd)f\big)_q,
+        \end{align*}
+        y
+        \begin{align*}
+            [(a,b)]_q\cdot\big([(c,d)]_q\cdot[(e,f)]_q\big)=[(a,b)]_q\cdot[(cd,df)]_q=\big(a(ce),b(df)\big)_q.
+        \end{align*}
+        Por la asociatividad del producto en $\mathbb{Z}$ se cumple $(ac)e=a(ce)$ y
+        $(bd)f=b(df)$, luego las dos parejas son la misma clase y
+        \begin{align*}
+            \big([(a,b)]_q\cdot[(c,d)]_q\big)\cdot[(e,f)]_q=[(a,b)]_q\cdot\big([(c,d)]_q\cdot[(e,f)]_q\big)
+        \end{align*}
+        Por lo tanto ambas operaciones son asociativas.
+    \end{proof}
+
+    \vspace{0.5cm}
+
+    \textbf{Ejercicio 4, Inciso c}
+    \begin{proof}
+        Sean $[(a,b)]_q\in\mathbb{Q}$ con $b\neq0$. Consideremos las clases
+        $[(0,1)]_q$ y $[(1,1)]_q$. Por definición de la suma en $\mathbb{Q}$,
+        \begin{align*}
+            [(a,b)]+[(0,1)]_q=[(a\cdot1+b\cdot0,b\cdot1)]_q=[(a,b)]_q.
+        \end{align*}
+        Por lo tanto $[(0,1)]_q$ es neutro aditivo. Por la definición del 
+        producto en $\mathbb{Q}$,
+        \begin{align*}
+            [(a,b)]_q\cdot[(1,1)]_q=[(a\cdot1,b\cdot1)]_q=[(a,b)]_q.
+        \end{align*}
+        Así, $[(1,1)]_q$ es neutro multiplicativo.
+    \end{proof}
+
+    \vspace{0.5cm}
+
+    \textbf{Ejercicio 4, Inciso d}
+    \begin{proof}
+        Sea $e\in\mathbb{Q}$ un neutro aditivo, para todo $a\in\mathbb{Q}$ se cumple
+        \begin{align*}
+            a+e=a.
+        \end{align*}
+        Sea $e^{\prime}\in\mathbb{Q}$ otro neutro aditivo, de modo que también
+        \begin{align*}
+            a+e^{\prime}=a
+        \end{align*}
+        para todo $a\in\mathbb{Q}$. Tomando $a=e^{\prime}$ en la igualdad que define a $e$, obtenemos
+        \begin{align*}
+            e^{\prime}+e=e^{\prime}.
+        \end{align*}
+        Tomando ahora $a=e$ en al igualdad que define a $e^{\prime}$, obtenemos
+        \begin{align*}
+            e+e^{\prime}=e.
+        \end{align*}
+        Como la suma en conmutativa en $\mathbb{Q}$, $e+e^{\prime}=e^{\prime}+e$.
+        Sustituyendo en las igualdades anteriores se obtiene
+        \begin{align*}
+            e=e^{\prime}.
+        \end{align*}
+        Por lo tanto el neutro aditivo es único. Sea ahora $u\in\mathbb{Q}$ un neutro
+        multiplicativo, para todo $a\in\mathbb{Q}$,
+        \begin{align*}
+            a\cdot u=a.
+        \end{align*}
+        Sea $u^{\prime}\in\mathbb{Q}$ otro neutro multiplicativo, con
+        \begin{align*}
+            a\cdot u^{\prime}=a
+        \end{align*}
+        para todo $a\in\mathbb{Q}$. Tomando $a=u^{\prime}$ en la igualdad para $u$, se obtiene
+        \begin{align*}
+            u^{\prime}\cdot u=u^{\prime}.
+        \end{align*}
+        Tomando $a=u$ en la igualdad para $u^{\prime}$,
+        \begin{align*}
+            u\cdot u^{\prime}=u.
+        \end{align*}
+        Como el producto en $\mathbb{Q}$ es conmutativo, $u\cdot u^{\prime}=u^{\prime}\cdot u$.
+        Sustituyendo en las igualdades anteriores se obtiene
+        \begin{align*}
+            u=u^{\prime}.
+        \end{align*}
+        Asi, el neutro multiplicativo es único.
+    \end{proof}
+\end{document}

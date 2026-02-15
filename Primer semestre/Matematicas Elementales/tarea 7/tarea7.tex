@@ -1,0 +1,349 @@
+\documentclass[12pt,a4paper]{article}
+\newcommand{\grupo}{}
+% ------------------------------------------------------
+% Idioma y codificación
+% ------------------------------------------------------
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+% ------------------------------------------------------
+% Tipografía y formato
+% ------------------------------------------------------
+\usepackage{lmodern}    % Fuente Latin Modern
+\usepackage{microtype}  % Mejor espaciado
+\usepackage{xcolor}     % Colores
+\definecolor{UGblue}{RGB}{0,33,71}
+\definecolor{UGgold}{RGB}{212,175,55}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{titlesec}
+% Añade esto en el preámbulo (antes de \begin{document})
+\usepackage{bookmark}
+\bookmarksetup{open,numbered}
+\usepackage{tikz}
+\usetikzlibrary{calc,decorations.pathreplacing,angles,quotes}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{caption}
+
+% ------------------------------------------------------
+% Matemáticas
+% ------------------------------------------------------
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{mathrsfs}
+\usepackage{stmaryrd}
+\usepackage{physics}
+
+% ------------------------------------------------------
+% Otros paquetes útiles
+% ------------------------------------------------------
+\usepackage{enumitem}
+\usepackage{csquotes}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=UGblue,
+    urlcolor=UGgold,
+    citecolor=UGblue
+}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+\usepackage{multicol}
+
+% ------------------------------------------------------
+% Encabezados y pies de página
+% ------------------------------------------------------
+% ------------------------------------------------------
+% Teoremas, definiciones, etc.
+% ------------------------------------------------------
+\theoremstyle{plain}
+\newtheorem{teo}{Teorema}[section]
+\newtheorem{prop}[teo]{Proposición}
+\newtheorem{lema}[teo]{Lema}
+\theoremstyle{definition}
+\newtheorem{defi}[teo]{Definición}
+\theoremstyle{remark}
+\newtheorem{ejemplo}[teo]{Ejemplo}
+\newtheorem{obs}[teo]{Observación}
+
+% ------------------------------------------------------
+% Comandos útiles
+% ------------------------------------------------------
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\pfrac}[2]{\left( \frac{#1}{#2} \right)} %parentesis
+\newcommand{\bfrac}[2]{\left[ \frac{#1}{#2} \right]} %corchetes
+\newcommand{\vecpar}[1]{\left( #1 \right)}
+% En el preámbulo
+\newcommand{\point}[2]{\left( #1, #2 \right)}
+\newcommand{\pointfrac}[4]{\left( \frac{#1}{#2}, \frac{#3}{#4} \right)}
+\newcommand{\pointmix}[4]{\left( #1, \frac{#3}{#4} \right)} % Primera coordenada normal, segunda fracción
+\renewcommand{\qedsymbol}{$\blacksquare$}
+\newcommand{\gt}{\ensuremath{>}}
+\newcommand{\lt}{\ensuremath{<}}
+\renewcommand{\div}{$÷$}
+
+\renewcommand{\baselinestretch}{1.2}
+\setlength{\parindent}{0pt}
+
+\newenvironment{solucion}
+{\par\noindent\textbf{Solución.}\ }
+{\hfill$\blacktriangleleft$\par}
+
+% ------------------------------------------------------
+% Datos personales (modificar según tarea)
+% ------------------------------------------------------
+\newcommand{\alumno}{Ricardo León Martínez}
+\newcommand{\materia}{Elementos de Geometría}
+\newcommand{\profesor}{Valentina Muñoz Porras}
+\newcommand{\tarea}{Tarea 5}
+\newcommand{\fecha}{22/09/2025}
+
+\setlength{\parindent}{0pt}
+
+\begin{document}
+\textbf{Ejercicio 1(a)} Para la sucesiones de conjuntos $\{A_n\}_n$ dadas en cada inciso,
+demuestra que ellas convergen y halla su limite
+(a)
+\begin{align*}
+    A_n=\left(\frac{-1}{n},\frac{1}{n}\right).
+\end{align*}
+
+\begin{proof}
+
+Recordemos que por definicion:
+\begin{align*}
+    \liminf_{n \to \infty} A_n = \bigcup_{n=1}^\infty \bigcap_{k=n}^\infty A_k, \quad
+ \limsup_{n \to \infty} A_n = \bigcap_{n=1}^\infty \bigcup_{k=n}^\infty A_k.
+\end{align*}
+
+$\liminf A_n = \{0\}$\\
+Primero mostremos $\{0\} \subseteq \liminf A_n$. Para todo $n \in \mathbb{N}$, $0 \in A_k$ para todo $k \geq n$, pues $0 \in (-1/k, 1/k)$. 
+Entonces $0 \in \bigcap_{k=n}^\infty A_k$ para todo $n$, luego $0 \in \liminf A_n$. Ahora 
+mostremos $\liminf A_n \subseteq \{0\}$. Sea $x \in \liminf A_n$. Entonces existe $n_0$ tal 
+que $x \in A_k$ para todo $k \geq n_0$. Es decir, $|x| < 1/k$ para todo $k \geq n_0$.
+Si $x \neq 0$, entonces $|x| > 0$. Tomando $k > 1/|x|$, se tiene $1/k < |x|$, contradicción.
+Luego $x = 0$
+Por tanto, $\liminf A_n = \{0\}$.\\
+$\limsup A_n = \{0\}$\\
+Primero mostremos $\limsup A_n \subseteq \{0\}$. Sea $x \in \limsup A_n$. Entonces para todo
+$n$ existe $k_n \geq n$ tal que $x \in A_{k_n}$, es decir, $|x| < 1/k_n$. Si $x \neq 0$,
+$|x| > 0$. Tomemos $n > 1/|x|$. Existe $k_n \geq n$ con $|x| < 1/k_n \leq 1/n < |x|$, 
+contradicción. Luego $x = 0$. Ahora mostremos $\{0\} \subseteq \limsup A_n$. Para cada $n$,
+$0 \in A_k$ para todo $k$, en particular para algún $k \geq n$. Luego $0 \in 
+\bigcup_{k=n}^\infty A_k$ para todo $n$, así $0 \in \limsup A_n$. Por tanto, $\limsup A_n = 
+\{0\}$. Como los limites son iguales entonces la sucecion de conjuntos converge a $\{0\}$.
+\end{proof}
+
+\textbf{Ejercicio 2(a)} Para la suecion de conjuntos $\{A_n\}_n$ dadas en cada inciso, halla
+\begin{align*}
+    \inf_{k\geq n}A_k, \sup_{k\geq n}A_k.
+\end{align*}
+Ademas su la suecion converge y en caso afirmativo, especifica su limite.
+\begin{align*}
+    A_n=
+    \begin{cases*}
+        (-n,1) \text{ si } $n$ \text{ es impar},\\
+        (1,n)\hfill \text{ si } $n$ \text{ es par}.
+    \end{cases*}
+\end{align*}
+
+\begin{solucion}
+
+Priero calculemos $\inf_{k \ge n} A_k$. Observemos que:
+\begin{align*}
+\text{Si }k \text{ es impar } A_k = (-k, 1) \quad
+\text{Si } k \text{ es par } A_k = (1, k)
+\end{align*}
+
+Para $n$ fijo, consideremos:
+\[
+\bigcap_{k=n}^\infty A_k =\left[\bigcap_{k\geq n}(-k,1)\right]\cap\left[\bigcap_{k\geq n}(1,k)\right].
+\]
+
+ Primer término para $k$ impar:
+\[
+\bigcap_{k \ge n } (-k, 1) = (-\infty, 1)
+\]
+pues $-k \to -\infty$ cuando $k$ impar crece.
+
+Segundo término:
+\[
+\bigcap_{k \ge n} (1, k) = \varnothing
+\]
+pues para cualquier $x \in \mathbb{R}$:\\
+Si $x > 1$, existe $k$ par tal que $k < x$, luego $x \notin (1, k)$\\
+Si $x \le 1$, $x \notin (1, k)$ para todo $k$ par
+
+
+
+Por tanto:
+\[
+\inf_{k \ge n} A_k = \varnothing.
+\]
+
+Cálculo de $\sup_{k \ge n} A_k$
+
+\[
+\sup_{k \ge n} A_k = \bigcup_{k=n}^\infty A_k = \left[ \bigcup_{k \ge n} (-k, 1) \right] \cup \left[ \bigcup_{k \ge n} (1, k) \right].
+\]
+
+Primer término:
+\[
+\bigcup_{k \ge n} (-k, 1) = (-\infty, 1)
+\]
+Segundo término:
+\[
+\bigcup_{k \ge n} (1, k) = (1, \infty)
+\]
+
+
+Unión: $(-\infty, 1) \cup (1, \infty) = \mathbb{R} \setminus \{1\}$. Verifiquemos que 
+$1 \notin A_k$ para todo $k$:\\
+Si $k$ impar: $A_k = (-k, 1)$\\
+Si $k$ par: $A_k = (1, k)$ 
+
+
+Por tanto
+\[
+\sup_{k \ge n} A_k = \mathbb{R} \setminus \{1\}.
+\]
+
+ Calculo límite inferior y superior.
+
+\[
+\liminf_{n \to \infty} A_n = \bigcup_{n=1}^\infty \inf_{k \ge n} A_k = \bigcup_{n=1}^\infty \varnothing = \varnothing.
+\]
+
+\[
+\limsup_{n \to \infty} A_n = \bigcap_{n=1}^\infty \sup_{k \ge n} A_k = \bigcap_{n=1}^\infty (\mathbb{R} \setminus \{1\}) = \mathbb{R} \setminus \{1\}.
+\]
+
+Ahora notemos que
+
+\[
+\liminf A_n = \varnothing \neq \mathbb{R} \setminus \{1\} = \limsup A_n.
+\]
+
+Por tanto, la sucesión no converge.
+\end{solucion}
+
+\textbf{Ejercicio 3(a)} Sea $\{x_n,n\in\mathbb{N}\}$ una coleccion de numeros reales.\\
+Supon que existe $N$ tal que $x_n\neq x_m$ para cualesquiera $n,m\geq N$ distintos. Demuestra
+que
+\begin{align*}
+    \lim_{n\to\infty}\{x_n\}=\varnothing
+\end{align*}
+\begin{proof}
+    
+Recordemos las definiciones:
+\[
+\liminf_{n \to \infty} C_n = \bigcup_{n=1}^\infty \bigcap_{k=n}^\infty C_k,
+\]
+\[
+\limsup_{n \to \infty} C_n = \bigcap_{n=1}^\infty \bigcup_{k=n}^\infty C_k.
+\]
+
+En este caso, $C_n = \{x_n\}$.
+
+Cálculo de $\limsup C_n$
+
+Sea $y \in \limsup C_n$. Entonces, para todo $n \in \mathbb{N}$, existe 
+$k \geq n$ tal que $y \in C_k = \{x_k\}$, es decir, $y = x_k$. En particular para $n = N$, 
+existe $k_1 \geq N$ con $y = x_{k_1}$. Para $n = k_1 + 1$, existe $k_2 \geq k_1 + 1$ 
+con $y = x_{k_2}$.
+
+
+Pero $k_2 > k_1 \geq N$, y $x_{k_1} = x_{k_2} = y$, lo que contradice la hipótesis de 
+que $x_n \neq x_m$ para $n, m \geq N$ distintos.
+
+Por tanto, no existe tal $y$, es decir:
+\[
+\limsup_{n \to \infty} C_n = \varnothing.
+\]
+
+Cálculo de $\liminf C_n$
+
+Sabemos que $\liminf C_n \subseteq \limsup C_n$. \\
+Como $\limsup C_n = \varnothing$, entonces:
+\[
+\liminf_{n \to \infty} C_n = \varnothing.
+\]
+
+le sigue que
+
+\[
+\liminf C_n = \limsup C_n = \varnothing,
+\]
+luego
+\[
+\lim_{n \to \infty} \{x_n\} = \varnothing.
+\]
+
+\end{proof}
+
+\textbf{Ejercicio 4(a)} Sean $\{A_n\}_n,\{B_n\}_n$ dos sucesiones de conjuntos tales que
+$\lim_{n\to\infty}A_n=A$ y $\lim_{n\to\infty}B_n=B$. Demuestra o refuta las siguientes
+igualdades
+\begin{align*}
+    \lim_{n\to\infty}(A_n\cap B_n)=A\cap B.
+\end{align*}
+\begin{solucion}
+\textbf{Respuesta:}
+La igualdad es falsa en general.
+
+\textbf{Contraejemplo:}
+
+Definamos:
+\[
+A_n = \left(0, 1 + \frac{(-1)^n}{n}\right), \quad 
+B_n = \left(1 - \frac{(-1)^n}{n}, 2\right).
+\]
+
+Cálculo de $\lim A_n$:\\
+Para $n$ par: $A_n = \left(0, 1 + \frac{1}{n}\right)$\\
+Para $n$ impar: $A_n = \left(0, 1 - \frac{1}{n}\right)$
+
+\[
+\liminf A_n = \bigcup_{n=1}^\infty \bigcap_{k \ge n} A_k = (0,1], \quad
+\limsup A_n = \bigcap_{n=1}^\infty \bigcup_{k \ge n} A_k = (0,1]
+\]
+Luego $\lim A_n = (0,1]$.
+
+Cálculo de $\lim B_n$:\\
+Para $n$ par: $B_n = \left(1 - \frac{1}{n}, 2\right)$\\
+Para $n$ impar: $B_n = \left(1 + \frac{1}{n}, 2\right)$
+
+\[
+\liminf B_n = [1,2), \quad \limsup B_n = [1,2)
+\]
+Luego $\lim B_n = [1,2)$.
+
+Entonces:
+\[
+A \cap B = (0,1] \cap [1,2) = \{1\}.
+\]
+
+Cálculo de $A_n \cap B_n$:\\
+Si $n$ par: $A_n \cap B_n = \left(1 - \frac{1}{n}, 1 + \frac{1}{n}\right)$\\
+Si $n$ impar: $A_n \cap B_n = \varnothing$
+
+
+Cálculo de $\lim (A_n \cap B_n)$:
+\[
+\liminf (A_n \cap B_n) = \bigcup_{n=1}^\infty \bigcap_{k \ge n} (A_k \cap B_k) = \varnothing
+\]
+pues para todo $n$ existe $k \ge n$ impar con $A_k \cap B_k = \varnothing$.
+
+\[
+\limsup (A_n \cap B_n) = \bigcap_{n=1}^\infty \bigcup_{k \ge n} (A_k \cap B_k) = \{1\}
+\]
+Como $\liminf \neq \limsup$, $\lim (A_n \cap B_n)$ no existe.
+
+\end{solucion}
+
+\end{document}
