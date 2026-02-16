@@ -1,0 +1,236 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{ugmath}[2025/01/01 Estilo matemático personal]
+
+% ========== CONFIGURACIÓN INICIAL ==========
+\RequirePackage[spanish]{babel}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[T1]{fontenc}
+\RequirePackage{lmodern}
+
+% ========== GEOMETRÍA (MÁRGENES) ==========
+% ¡IMPORTANTE! Esto debe ir ANTES de otros paquetes que usen geometry
+\RequirePackage[%
+    top=1.5cm,      % Margen superior
+    bottom=1.5cm,   % Margen inferior
+    left=1.5cm,     % Margen izquierdo
+    right=1.5cm,    % Margen derecho
+    marginparwidth=2.0cm,  % Ancho del margen para notas
+    marginparsep=10pt      % Separación del texto principal
+]{geometry}
+
+% ========== COLORES ==========
+\RequirePackage[dvipsnames]{xcolor}
+\definecolor{UGblue}{RGB}{0,51,102}
+\definecolor{UGgold}{RGB}{212,175,55}
+\definecolor{mutedyellow}{RGB}{180, 170, 110}
+\definecolor{myblue}{RGB}{30,100,200}
+\definecolor{softgray}{RGB}{100, 100, 100}
+\definecolor{lightgray}{RGB}{250, 250, 250}
+\definecolor{elegantpurple}{RGB}{120, 100, 150}
+\definecolor{lightpurple}{RGB}{245, 240, 250}
+\definecolor{darkred}{RGB}{150, 50, 50}
+\definecolor{lightred}{RGB}{255, 240, 240}
+
+% ========== PAQUETES ==========
+\RequirePackage{setspace}
+\setstretch{1.2}
+
+\RequirePackage{amsmath,amssymb,amsthm,mathtools}
+\RequirePackage{physics}
+\RequirePackage{graphicx}
+\RequirePackage{tikz}
+\usetikzlibrary{calc,decorations.pathreplacing,angles,quotes,shadows,shadows.blur,arrows}
+\RequirePackage{pgfplots}
+\pgfplotsset{compat=1.15}
+\RequirePackage{caption}
+\RequirePackage{thmtools}
+\RequirePackage{mathrsfs}
+\RequirePackage{stmaryrd}
+\RequirePackage{physics}
+\RequirePackage{enumitem}
+\RequirePackage{csquotes}
+\RequirePackage{multicol}
+\RequirePackage{tocloft}
+\RequirePackage{tikz-3dplot}
+
+% ========== MDFRAMED ==========
+\RequirePackage[framemethod=TikZ]{mdframed}
+
+\mdfdefinestyle{mdpinkbox}{
+    linecolor=purple!80!black,
+    linewidth=1.5pt,
+    backgroundcolor=purple!3,
+    roundcorner=8pt,
+    frametitlebackgroundcolor=purple!30,
+    frametitlefont=\bfseries\color{white},
+    frametitlealignment=\raggedright, %\raggedleft o \centering
+    innertopmargin=12pt,
+    innerbottommargin=12pt,
+    innerleftmargin=15pt,
+    innerrightmargin=15pt,
+    skipabove=20pt,     % Espacio antes de la caja
+    skipbelow=15pt,     % Espacio después de la caja
+    nobreak=false,      % Permite que se rompa en páginas
+    splitbottomskip=10pt,
+    splittopskip=10pt
+}
+
+\mdfdefinestyle{mdbluebox}{
+    linecolor=blue!70!black,        % Borde azul oscuro
+    linewidth=1.5pt,
+    backgroundcolor=blue!3,         % Fondo azul muy claro
+    roundcorner=8pt,
+    frametitlebackgroundcolor=blue!50, % Fondo del título azul medio
+    frametitlefont=\bfseries\color{white},
+    frametitlealignment=\raggedright,
+    innertopmargin=12pt,
+    innerbottommargin=12pt,
+    innerleftmargin=15pt,
+    innerrightmargin=15pt,
+    skipabove=20pt,
+    skipbelow=15pt,
+    nobreak=false,
+    splitbottomskip=10pt,
+    splittopskip=10pt
+}
+
+\mdfdefinestyle{mdorangebox}{
+    linecolor=orange!80!black,
+    linewidth=1.5pt,
+    backgroundcolor=orange!3,
+    roundcorner=8pt,
+    frametitlebackgroundcolor=orange!50,
+    frametitlefont=\bfseries\color{white},
+    frametitlealignment=\raggedright,
+    innertopmargin=12pt,
+    innerbottommargin=12pt,
+    innerleftmargin=15pt,
+    innerrightmargin=15pt,
+    skipabove=20pt,
+    skipbelow=15pt,
+    nobreak=false,
+    splitbottomskip=10pt,
+    splittopskip=10pt
+}
+
+\mdfdefinestyle{mdgreenbox}{
+    linecolor=green!30!gray!70,
+    linewidth=1.5pt,
+    backgroundcolor=green!2!gray!2,
+    roundcorner=8pt,
+    frametitlebackgroundcolor=green!40!gray!40,
+    frametitlefont=\bfseries\color{white},
+    frametitlealignment=\raggedright,
+    innertopmargin=12pt,
+    innerbottommargin=12pt,
+    innerleftmargin=15pt,
+    innerrightmargin=15pt,
+    skipabove=20pt,
+    skipbelow=15pt,
+    nobreak=false,
+    splitbottomskip=10pt,
+    splittopskip=10pt
+}
+
+\mdfdefinestyle{mdgraybox}{
+    linecolor=softgray,
+    linewidth=1.5pt,
+    backgroundcolor=lightgray,
+    roundcorner=8pt,
+    frametitlebackgroundcolor=softgray,
+    frametitlefont=\bfseries\color{white},
+    frametitlealignment=\raggedright,
+    innertopmargin=12pt,
+    innerbottommargin=12pt,
+    innerleftmargin=15pt,
+    innerrightmargin=15pt,
+    skipabove=20pt,
+    skipbelow=15pt,
+    nobreak=false,
+    splitbottomskip=10pt,
+    splittopskip=10pt
+}
+
+\mdfdefinestyle{mdpurplebox}{
+    linecolor=elegantpurple,
+    linewidth=1.5pt,
+    backgroundcolor=lightpurple,
+    roundcorner=8pt,
+    frametitlebackgroundcolor=elegantpurple,
+    frametitlefont=\bfseries\color{white},
+    frametitlealignment=\raggedright,
+    innertopmargin=12pt,
+    innerbottommargin=12pt,
+    innerleftmargin=15pt,
+    innerrightmargin=15pt,
+    skipabove=20pt,
+    skipbelow=15pt,
+    nobreak=false,
+    splitbottomskip=10pt,
+    splittopskip=10pt
+}
+
+\mdfdefinestyle{mdredbox}{
+    linecolor=darkred,
+    linewidth=1.5pt,
+    backgroundcolor=lightred,
+    roundcorner=8pt,
+    frametitlebackgroundcolor=darkred,
+    frametitlefont=\bfseries\color{white},
+    frametitlealignment=\raggedright,
+    innertopmargin=12pt,
+    innerbottommargin=12pt,
+    innerleftmargin=15pt,
+    innerrightmargin=15pt,
+    skipabove=20pt,
+    skipbelow=15pt,
+    nobreak=false,
+    splitbottomskip=10pt,
+    splittopskip=10pt
+}
+
+% ========== HIPERVÍNCULOS ==========
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=UGblue,
+    urlcolor=UGgold,
+    citecolor=UGblue,
+    pdftitle={Documento},
+    pdfauthor={Autor}
+}
+
+% ========== COMANDOS MATEMÁTICOS ==========
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\pfrac}[2]{\left( \frac{#1}{#2} \right)} %
+\newcommand{\bfrac}[2]{\left[ \frac{#1}{#2} \right]} %corchetes
+\newcommand{\vecpar}[1]{\left( #1 \right)}
+\newcommand{\point}[2]{\left( #1, #2 \right)}
+\newcommand{\pointfrac}[4]{\left( \frac{#1}{#2}, \frac{#3}{#4} \right)}
+\newcommand{\pointmix}[4]{\left( #1, \frac{#3}{#4} \right)}
+\renewcommand{\qedsymbol}{$\blacksquare$}
+\newcommand{\gt}{\ensuremath{>}}
+\newcommand{\lt}{\ensuremath{<}}
+\DeclareMathOperator{\nul}{nul}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+  
+% ========== CONFIGURACIÓN DE PÁRRAFOS ==========
+\setlength{\parindent}{0pt}      % Sin sangría
+\setlength{\parskip}{6pt}        % Espacio entre párrafos
+
+% ========== ENTORNOS ==========
+\newenvironment{solucion}
+  {\par\noindent\textit{Solución. }\ignorespaces}
+  {\hfill$\blacktriangle$\par}
+
+%\newcounter{ejemplo}[chapter]
+%\renewcommand{\theejemplo}{\thechapter.\arabic{ejemplo}}
+
+\newenvironment{ejemplo}
+  {\par\refstepcounter{ejemplo}%
+   \noindent\textbf{Ejemplo \theejemplo. }\ignorespaces}
+  {\par\vspace{\baselineskip}\noindent\hfill$\blacktriangle$\par}
