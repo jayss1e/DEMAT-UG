@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1771230150.04152 "g:/Mi unidad/Demat/Segundo Semestre/Probab. y Estadistica/Tareas/Tarea 2/tarea2.tex" "tarea2.pdf" "tarea2" 1771230152.99956 0
+["pdflatex"] 1771233196.02178 "g:/Mi unidad/Demat/Segundo Semestre/Probab. y Estadistica/Tareas/Tarea 2/tarea2.tex" "tarea2.pdf" "tarea2" 1771233199.05609 0
   "c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1769152670 2375 baa924870cfb487815765f9094cf3728 ""
   "c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc" 1769152670 3486 c7eadf5dcc57b3b2d11736679f6636ba ""
   "c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1769152670 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
@@ -270,10 +270,10 @@
   "c:/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1769156806 5587484 49bd08ff372a6985d7d70778694ddaac ""
   "c:/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1769156976 3636146 3c13a89ab62703b0a303158aa622f27f ""
   "c:/texlive/2025/texmf.cnf" 1769156779 713 e69b156964470283e0530f5060668171 ""
-  "g:/Mi unidad/Demat/Segundo Semestre/Probab. y Estadistica/Tareas/Tarea 2/tarea2.tex" 1771230149 14713 8ef11c2b701b6bcc00ab237257672fed ""
-  "tarea2.aux" 1771230152 741 687391f937e4dbee0a6f5de8f8b274ab "pdflatex"
-  "tarea2.out" 1771230152 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "tarea2.tex" 1771230149 14713 8ef11c2b701b6bcc00ab237257672fed ""
+  "g:/Mi unidad/Demat/Segundo Semestre/Probab. y Estadistica/Tareas/Tarea 2/tarea2.tex" 1771233195 23053 549cbde2213400594ed635dc93e9a573 ""
+  "tarea2.aux" 1771233198 742 ba6d2c1e9a9678a6b57e9821680b4c90 "pdflatex"
+  "tarea2.out" 1771233198 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "tarea2.tex" 1771233195 23053 549cbde2213400594ed635dc93e9a573 ""
   "ugmath.sty" 1771207194 7083 f053490863865e6b5c329d52000b2f3a ""
   (generated)
   "tarea2.aux"

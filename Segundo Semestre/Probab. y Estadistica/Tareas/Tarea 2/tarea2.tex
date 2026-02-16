@@ -273,12 +273,80 @@
             \item[(b)] Si escogemos un niño al azar, ¿cuál es la probabilidad de que dicho niñ@ pertenezca a una familia con exactamente $k$ hijos para $k=1,2,\dots,5$?
         \end{enumerate}
     \end{mdframed}
+
+    \begin{solucion}
+        El número total de familias es
+        \begin{equation*}
+            4+8+5+2+1=20.
+        \end{equation*}
+        El número total de niños es
+        \begin{equation*}
+            4(1)+8(2)+5(3)+2(4)+1(15)=48.
+        \end{equation*}
+        \begin{enumerate}
+            \item[(a)] Si escogemos una familia al azar, ¿cuál es la probabilidad de que dicha familia tenga $k$ hijos para $k=1,2,\dots,5$?\\
+            Aquí el espacio muestral son las 20 familias. Por tanto,
+            \begin{equation*}
+                \mathbb{P}(k)=\frac{\text{familias con }k\text{ hijos}}{20}
+            \end{equation*}
+            Explicitamente,
+            \begin{align*}
+                \mathbb{P}(1)&=\frac{4}{20}=\frac{1}{5},\\
+                \mathbb{P}(2)&=\frac{8}{20}=\frac{2}{5},\\
+                \mathbb{P}(3)&=\frac{5}{20}=\frac{1}{4},\\
+                \mathbb{P}(4)&=\frac{2}{20}=\frac{1}{10},\\
+                \mathbb{P}(5)&=\frac{1}{20}.
+            \end{align*}
+            \item[(b)] Si escogemos un niño al azar, ¿cuál es la probabilidad de que dicho niñ@ pertenezca a una familia con exactamente $k$ hijos para $k=1,2,\dots,5$?\\
+            Ahora el espacio muestral son los 48 niños. Los niños que pertenecen a las familias con $k$ hijos son:
+            \begin{equation*}
+                k\times(\text{familias con }k\text{ hijos}).
+            \end{equation*}
+            Por lo tanto,
+            \begin{equation*}
+                \mathbb{P}(k)=\frac{k\cdot(\text{familias con }k\text{ hijos})}{48}.
+            \end{equation*}
+            Explicitamente,
+            \begin{align*}
+                \mathbb{P}(1)&=\frac{1\cdot4}{48}=\frac{4}{48}=\frac{1}{12},\\
+                \mathbb{P}(2)&=\frac{2\cdot8}{48}=\frac{16}{48}=\frac{1}{3},\\
+                \mathbb{P}(3)&=\frac{3\cdot5}{48}=\frac{15}{48}=\frac{5}{16},\\
+                \mathbb{P}(4)&=\frac{4\cdot2}{48}=\frac{8}{48}=\frac{1}{6},\\
+                \mathbb{P}(5)&=\frac{5\cdot1}{48}=\frac{5}{48}.
+            \end{align*}
+        \end{enumerate}
+    \end{solucion}
     
     \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 6}]
         Supongamos que tenemos $m$ pelotas distintas y $m$ cajas distintas. 
         Si colocamos al azar cada una de las pelotas en alguna de las cajas, 
         ¿cuál es la probabilidad de que exactamente una caja quede vacía?
     \end{mdframed}
+
+    \begin{solucion}
+        Sea $m\geq2$. Cada pelota puede colocarse en cualquiera de las $m$ cajas de manera independiente, por lo que
+        el número total de configuraciones es $m^{m}$. Queremos que exactamente una caja quede vacía. Hay $m$
+        formas de elegirla. Como tenemos $m$ pelotas y $m-1$ cajas, y ninguna puede quedar vacía, necesariamente:
+        una caja contendrá exactamente 2 pelotas, las demás $m-2$ cajas contendrán exactamente 1 pelota.
+        No hay otra posibilidad, pues
+        \begin{align*}
+            2+(m-2)\cdot1=m.
+        \end{align*}
+        Hay $\binom{m}{2}$ formas de escogerlas. Fijadas las dos pelotas que irán juntas: elegimos la caja donde irán esas
+        dos pelotas, distribuimos las restantes $m-2$ pelotas, una en cada una de las otras $m-2$ cajas.
+        Numero de formas
+        \begin{equation*}
+            (m-1)(m-2)!=(m-1)!
+        \end{equation*}
+        Multiplicando
+        \begin{equation*}
+            N=m\binom{m}{2}(m-1)!.
+        \end{equation*}
+        Así, la probabilidad es
+        \begin{equation*}
+            \mathbb{P}=\frac{m\binom{m}{2}(m-1)!}{m^{m}}.
+        \end{equation*}
+    \end{solucion}
 
     \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 7}]
         Cierta urna contiene $46$ pelotas en total: $12$ rojas, $16$ azules y $18$ verdes. 
@@ -293,7 +361,68 @@
         \end{enumerate}
     \end{mdframed}
 
-    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 7}]
+    \begin{solucion}
+        Sea el experimento consistente en extraer 7 pelotas sin reemplazo de una urna con
+        \begin{align*}
+            12\text{ rojas},\qquad16\text{ azules}\qquad18\text{ verdes},
+        \end{align*}
+        en total 46 pelotas. El espacio muestral tiene cardinalidad
+        \begin{equation*}
+            \binom{46}{7}.
+        \end{equation*}
+        \begin{enumerate}
+            \item[(a)] $3$ rojas, $2$ azules y $2$ verdes.
+            \begin{equation*}
+                \mathbb{P}=\frac{\binom{12}{3}\binom{16}{2}\binom{18}{2}}{\binom{46}{7}}
+            \end{equation*}
+            \item[(b)] Al menos 2 rojas.\\
+            Sea $X$ el número de pelotas rojas extraídas.
+            \begin{align*}
+                \mathbb{P}(X\geq2)=1-\mathbb{P}(X=0)-\mathbb{P}(X=1).\\
+            \end{align*}
+            Con
+            \begin{align*}
+                \mathbb{P}(X=0)=\frac{\binom{34}{7}}{\binom{46}{7}}
+            \end{align*}
+            y
+            \begin{align*}
+                \mathbb{P}(X=1)=\frac{\binom{12}{1}\binom{34}{6}}{\binom{46}{7}}.
+            \end{align*}
+            Por tanto,
+            \begin{align*}
+                \mathbb{P}(x\geq2)=1-\frac{\binom{34}{7}}{\binom{46}{7}}-\frac{12\binom{34}{6}}{\binom{46}{7}}.
+            \end{align*}
+            \item[(c)] Todas del mismo color\\
+            Tres casos mutuamente excluyentes
+            \begin{align*}
+                7\text{ rojas: }\binom{12}{7},\\
+                7\text{ azules: }\binom{16}{7},\\
+                7\text{ verdes: }\binom{18}{7}.
+            \end{align*}
+            Entonces
+            \begin{align*}
+                \mathbb{P}=\frac{\binom{12}{7}+\binom{16}{7}+\binom{18}{7}}{\binom{46}{7}}.
+            \end{align*}
+            \item[(d)] Exactamente 3 rojas o exactamente 3 azules.\\
+            Sea $R$ el evento “exactamente 3 rojas” y $B$ el evento “exactamente 3 azules”.
+            Estos eventos no son disjuntos, pues pueden ocurrir simultaneamente.
+            \begin{align*}
+                \mathbb{P}(R\cup B)=\mathbb{P}(R)+\mathbb{P}(B)-\mathbb{P}(R\cap B).
+            \end{align*}
+            Calculamos cada termino
+            \begin{align*}
+                \mathbb{P}(R)&=\frac{\binom{12}{3}\binom{34}{4}}{\binom{46}{7}}\\
+                \mathbb{P}(B)&=\frac{\binom{16}{3}\binom{30}{4}}{\binom{46}{7}}\\
+                \mathbb{P}(R\cap B)=\frac{\binom{12}{3}\binom{16}{3}\binom{18}{1}}{\binom{46}{7}}.
+            \end{align*}
+            Así, la probabilidad es
+            \begin{align*}
+                \mathbb{P}(R\cup B)=\frac{\binom{12}{3}\binom{34}{4}+\binom{16}{3}\binom{30}{4}-\binom{12}{3}\binom{16}{3}\binom{18}{1}}{\binom{46}{7}}
+            \end{align*}
+        \end{enumerate}
+    \end{solucion}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 8}]
         Consideremos el siguiente reordenamiento aleatorio de $n$ elementos. 
         Iniciamos con los números $1,2,\dots,n$ en ese mismo orden. Luego, en el primer paso, 
         lanzamos una moneda balanceada con lados $S$ (sol) y $A$ (águila). 
@@ -307,5 +436,37 @@
 
         Calcule la probabilidad de que $1,2,\dots,n$ terminen en el mismo orden.
     \end{mdframed}
+
+    \begin{solucion}
+        Sea $\omega=(\omega_1,\dots,\omega_n)\in\{S,A\}^n$ la sucesión de resultados de los lanzamientos de la moneda. 
+        Cada lanzamiento es independiente y balanceado, por lo que todas las $2^n$ sucesiones posibles son equiprobables y cada una ocurre con probabilidad $2^{-n}$.
+
+        El procedimiento descrito tiene la siguiente estructura: al procesar los números $1,2,\dots,n$ en orden creciente, si en el paso $i$ ocurre $S$, el número $i$ permanece en su posición relativa actual; mientras que si ocurre $A$, el número $i$ se envía al final de la fila en ese instante. Obsérvese que los elementos que se envían al final conservan entre sí el orden creciente en el que fueron procesados.
+
+        Si definimos
+        \[
+        K=\{\, i : \omega_i=S \,\}, 
+        \qquad 
+        L=\{\, i : \omega_i=A \,\},
+        \]
+        entonces el orden final de la fila queda determinado por la concatenación de los elementos de $K$ en orden creciente seguida de los elementos de $L$ también en orden creciente. Es decir, la permutación resultante siempre es de la forma
+        \[
+        (k_1<k_2<\dots<k_r,\;\ell_1<\ell_2<\dots<\ell_{n-r}).
+        \]
+
+        Para que el orden final coincida con $(1,2,\dots,n)$ es necesario y suficiente que no exista ningún par $i<j$ tal que $\omega_i=A$ y $\omega_j=S$, pues en tal caso el elemento $j$ aparecería antes que $i$ en la disposición final, produciendo una inversión. Por consiguiente, la única manera de conservar el orden natural es que la sucesión de lanzamientos tenga la forma
+        \[
+        \underbrace{S\,S\,\dots\,S}_{r\text{ veces}}
+        \underbrace{A\,A\,\dots\,A}_{n-r\text{ veces}},
+        \]
+        para algún $r\in\{0,1,\dots,n\}$.
+
+        Para cada valor posible de $r$ existe exactamente una sucesión de esta forma, de modo que el número total de sucesiones favorables es $n+1$. Dado que el espacio muestral tiene cardinal $2^n$, se concluye que
+        \[
+        \mathbb{P}\big((1,2,\dots,n)\text{ es el orden final}\big)
+        =
+        \frac{n+1}{2^n}.
+        \]
+    \end{solucion}
 
 \end{document}
