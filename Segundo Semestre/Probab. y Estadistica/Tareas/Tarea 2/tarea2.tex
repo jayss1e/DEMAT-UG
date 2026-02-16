@@ -39,6 +39,50 @@
             \item[(b)] ¿Cuál es la probabilidad de que la sucesión de números obtenida sea no decreciente?
         \end{enumerate}
     \end{mdframed}
+
+    \begin{solucion}
+        Sea $\Omega=\{1,\dots,n\}^{k}$ el espcio muestra de todas las suceciones posibles
+        $(x_{1},\dots,x_{k})$ obtenidas al realizar $k$ extracciones con reemplazo.
+        Como en cada extraccion todas las pelotas son independientes
+        \begin{align*}
+            \abs{\Omega}=n^{k},\qquad \mathbb{P}(\{(x_{1},\dots,x_{k})\})=\frac{1}{n^{k}}
+        \end{align*}
+        Por tanto, para cualquier evento $A\subseteq\Omega$,
+        \begin{equation*}
+            \mathbb{P}(A)=\frac{\abs{A}}{n^{k}}.
+        \end{equation*}
+        \begin{enumerate}
+            \item[(a)] ¿Cuál es la probabilidad de que la sucesión de números obtenida sea estrictamente creciente?\\
+            Queremos encontrar las sucesiones $x_{1}\lt x_{2}\lt\cdots\lt x_{k}$, con $k\in\{1,\dots,n\}$.
+            Elegir una suceción estrictamente creciente equivale a elegir un subconjunto de $k$ elementos
+            distintos de $\{1,\dots,n\}$. Por lo tanto, el número de tales sucesiones es
+            \begin{equation*}
+                \binom{n}{k}.
+            \end{equation*}
+            Asi la probabilidad es
+            \begin{equation*}
+                \mathbb{P}(x_{1}\lt\cdots\lt x_{k})=\frac{\binom{n}{k}}{n^{k}} \qquad (k\leq n),
+            \end{equation*}
+            y es 0 si $k\gt n$.
+            \item[(b)] ¿Cuál es la probabilidad de que la sucesión de números obtenida sea no decreciente?\\
+            Ahora queremos contar las sucesiones $x_{1}\leq x_{2}\leq\cdots\leq x_{k}$, con $i\in\{1,\dots,n\}$.
+            Aqui se permiten repeticiones.
+            Sea $a_{j}$ el numero de veces que aparece el valor $j$. Entonces
+            \begin{equation*}
+                a_{1}+a_{2}+\cdots+a_{n}=k,\qquad a_{j}\geq0.
+            \end{equation*}
+            Cada solución $(a_{1},\dots,a_{n})$ determina exactamnete una sucesión no decreciente.
+            El numero de soluciones enteras no negativas de esa ecuación es el numero de combinaciones con
+            repetición
+            \begin{equation*}
+                \binom{n+k-1}{k}.
+            \end{equation*}
+            Así, la probabilidad es
+            \begin{equation*}
+                \mathbb{P}(x_{1}\leq\cdots\leq x_{k})=\frac{\binom{n+k-1}{k}}{n^{k}}.
+            \end{equation*}
+        \end{enumerate}
+    \end{solucion}
     
     \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 2}]
         ¿Tres personas están en el primer piso de un edificio de diez pisos y cada una elige de manera 
@@ -50,11 +94,96 @@
         \end{enumerate}
     \end{mdframed}
 
+    \begin{solucion}
+        \begin{enumerate}
+            \item[(a)] Si las elecciones son independientes, es decir, se permite que dos o tres vayan al mismo piso.\\
+            Cada persona elige independientemente uno de los 9 pisos, por tanto
+            \begin{equation*}
+                \abs{\Omega}=9^{3}.
+            \end{equation*}
+            Cada resultado tiene probabilidad $\frac{1}{9^{3}}$. Fijemos una terna consecutiva $\{k,k+1,k+2\}$.
+            Para que ocurra el evento $A$, las tres personas deben ocupar exactamente esos tres pisos, pues si
+            hubiera repetición no habría tres pisos distintos consecutivos. Para cada bloque existen
+            \begin{equation*}
+                3!=6
+            \end{equation*}
+            formas de asignar esos pisos a las tres personas. Como existen 7 bloques consecutivos,
+            \begin{equation*}
+                \abs{A}=7\cdot3!=42.
+            \end{equation*}
+            Así, la probabilidad es
+            \begin{equation*}
+                \mathbb{P}_{a}(A)=\frac{42}{9^{3}}=\frac{42}{729}=\frac{14}{243}.
+            \end{equation*}
+            \item[(b)] Si las elecciones no son independientes, en el sentido de que deben ir a pisos distintos.\\
+            Ahora el espacio muestral está formado por ternas ordenadas sin repetición. Número de maneras
+            de asignar 3 pisos distintos a 3 personas
+            \begin{equation*}
+                \abs{\Omega^{\prime}}=P(9,3)=9\cdot8\cdot7=504.
+            \end{equation*}
+            El conteo favorable es el mismo que el anterior
+            \begin{align*}
+                \abs{A}=3\cdot3!=42.
+            \end{align*}
+            Así, la probabilidad es
+            \begin{equation*}
+                \mathbb{P}_{b}(A)=\frac{42}{504}=\frac{1}{12}.
+            \end{equation*}
+        \end{enumerate}
+    \end{solucion}
+
     \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 3}]
         En un cajón de calcetines solamente $3$ son azules. Si al escoger dos calcetines al azar 
         tenemos que la probabilidad de que ambos sean azules es de $\frac{1}{2}$, 
         ¿cuántos calcetines en total tiene el cajón?
     \end{mdframed}
+
+    \begin{solucion}
+        Sea $N$ el número total de calcentines en el cajón. Se sabe que exactamente 3 son azules y que se extraen
+        dos calcetines al azar sin reemplazo. El espacio muestral está formado por todas las parejas no ordenadas
+        de calcetines
+        \begin{equation*}
+            \abs{\Omega}=\binom{N}{2}.
+        \end{equation*}
+        El evento $A$ es: ambos calcetines son azules. El numero de parejas favorables es
+        \begin{equation*}
+            \abs{A}=\binom{3}{2}
+        \end{equation*}
+        Por tanto
+        \begin{equation*}
+            \mathbb{P}(A)=\frac{\binom{3}{2}}{\binom{N}{2}}.
+        \end{equation*}
+        Sustituyendo los valores
+        \begin{equation*}
+            \binom{3}{2}=3, \qquad \binom{N}{2}=\frac{N(N-1)}{2}.
+        \end{equation*}
+        La condición del problema es
+        \begin{equation*}
+            \frac{\binom{3}{2}}{\binom{N}{2}}=\frac{1}{2}.
+        \end{equation*}
+        Sustituyendo
+        \begin{equation*}
+            \frac{3}{\frac{N(N-1)}{2}}=\frac{1}{2}
+        \end{equation*}
+        Luego,
+        \begin{equation*}
+            \frac{6}{N(N-1)}=\frac{1}{2}.
+        \end{equation*}
+        Por lo tanto
+        \begin{align*}
+            12=N(N-1)\\
+            N^{2}-N-12=0.
+        \end{align*}
+        Factorizamos 
+        \begin{equation*}
+            (N-4)(N+3)=0.
+        \end{equation*}
+        Como $N\gt0$,
+        \begin{equation*}
+            N=4.
+        \end{equation*}
+        Así, el cajon tiene exactamente 4 calcetines en total.
+    \end{solucion}
 
     \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 4}]
         Supongamos que tomamos $5$ cartas al azar de un mazo de póker estándar con $52$ cartas 
@@ -68,6 +197,68 @@
             \item[(e)] Póker (cuatro cartas con la misma numeración).
         \end{enumerate}
     \end{mdframed}
+
+    \begin{solucion}
+        El espacio muestral es
+        \begin{align*}
+            \Omega=\{\text{manos de 5 cartas}\},\qquad \abs{\Omega}=\binom{52}{5}=2598960.
+        \end{align*}
+        Por tanto, para cualquier evento $A$,
+        \begin{equation*}
+            \mathbb{P}(A)=\frac{\abs{A}}{\binom{52}{5}}.
+        \end{equation*}
+        \begin{enumerate}
+            \item[(a)] Cinco cartas del mismo tipo\\
+            Elegimos, el palo: 4 maneras. 5 cartas dentro de las 13 de ese palo $\binom{13}{5}$.
+            Entonces
+            \begin{align*}
+                \abs{A}=4\binom{13}{4}.
+            \end{align*}
+            Así, la probabilidad es
+            \begin{align*}
+                \mathbb{P}(a)=\frac{4\binom{13}{5}}{\binom{52}{5}}=\frac{5148}{2598960}\approx0.00198.
+            \end{align*}
+            \item[(b)] Exactamente un par\\
+            El valor del par: 13 maneras. Las 2 cartas de ese valor $\binom{4}{2}$. Los otros 3 valores distintos entre los 12 restantes: $\binom{12}{3}$.
+            Para cada uno de esos valores, elegimos un palo: $4^{3}$.
+            \begin{equation*}
+                \abs{B}=13\binom{4}{2}\binom{12}{3}4^{3}.
+            \end{equation*}
+            Así, la probabilidad es
+            \begin{equation*}
+                \mathbb{P}(b)=\frac{13\binom{4}{2}\binom{12}{3}4^{3}}{\binom{52}{5}}=\frac{1098240}{2598960}\approx0.4226.
+            \end{equation*}
+            \item[(c)] Exactamente dos pares distintos\\
+            Elegimos, los 2 valores de los pares: $\binom{13}{2}$. Para cada par: $\binom{4}{2}^{2}$.
+            El valor de la quinta carta: 11. Su palo: 4.
+            \begin{equation*}
+                \abs{C}=\binom{13}{4}\binom{4}{2}^{2}\cdot11\cdot4.
+            \end{equation*}
+            Así, la probabilidad es
+            \begin{equation*}
+                \mathbb{P}(c)=\frac{123552}{2598960}\approx0.0475.
+            \end{equation*}
+            \item[(d)] Exactamente una tercia\\
+            Valor de la tercia: 13. Las 3 cartas: $\binom{4}{3}$. 2 valores distintos entre los 12 restantes:
+            $\binom{12}{2}$. Palo de cada una $4^{2}$.
+            \begin{equation*}
+                \abs{D}=13\binom{4}{3}\binom{12}{2}4^{2}.
+            \end{equation*}
+            Así, la probabilidad es
+            \begin{equation*}
+                \mathbb{P}(d)=\frac{54912}{2598960}\approx0.0211.
+            \end{equation*}
+            \item[(e)] Póker\\
+            Valor del póker: 13. Las 4 cartas: $\binom{4}{4}=1$. La quinta carta: 12. Su palo: 4.
+            \begin{equation*}
+                \abs{E}=13\cdot12\cdot4=624.
+            \end{equation*}
+            Así, la probabilidad es
+            \begin{equation*}
+                \mathbb{P}(e)=\frac{624}{2598960}\approx0.00024.
+            \end{equation*}
+        \end{enumerate}
+    \end{solucion}
 
     \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 5}]
         Cierta comunidad se compone de $20$ familias en total. De estas, 
