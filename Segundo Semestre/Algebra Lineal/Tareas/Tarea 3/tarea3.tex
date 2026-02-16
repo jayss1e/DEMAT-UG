@@ -38,6 +38,107 @@
         Escribe 0 y 1 donde corresponda; y usa * para lugares donde pueda ir cualquier elemento de $F$.
     \end{mdframed}
 
+    \begin{solucion}
+        Para $r=0$
+        \begin{equation*}
+            \begin{pmatrix}
+                0 & 0 & 0 & 0\\
+                0 & 0 & 0 & 0\\
+                0 & 0 & 0 & 0
+            \end{pmatrix}
+        \end{equation*}
+        Para $r=1$. El pivote puede estar en cualquiera de las 4 columnas.
+        \begin{align*}
+            \begin{pmatrix}
+                1 & * & * & *\\
+                0 & 0 & 0 & 0\\
+                0 & 0 & 0 & 0
+            \end{pmatrix}
+            \quad
+            \begin{pmatrix}
+                0 & 1 & * & *\\
+                0 & 0 & 0 & 0\\
+                0 & 0 & 0 & 0
+            \end{pmatrix}
+            \quad
+            \begin{pmatrix}
+                0 & 0 & 1 & *\\
+                0 & 0 & 0 & 0\\
+                0 & 0 & 0 & 0
+            \end{pmatrix}
+            \quad
+            \begin{pmatrix}
+                0 & 0 & 0 & 1\\
+                0 & 0 & 0 & 0\\
+                0 & 0 & 0 & 0
+            \end{pmatrix}
+        \end{align*}
+        Para $r=2$. Tomamos dos columnas $i\lt j$ para los pivotes.
+        \begin{align*}
+            \begin{pmatrix}
+                1 & 0 & * & *\\
+                0 & 1 & * & *\\
+                0 & 0 & 0 & 0
+            \end{pmatrix}
+            \qquad
+            \begin{pmatrix}
+                1 & * & 0 & *\\
+                0 & 0 & 1 & *\\
+                0 & 0 & 0 & 0
+            \end{pmatrix}
+            \qquad
+            \begin{pmatrix}
+                1 & * & * & 0\\
+                0 & 0 & 0 & 1\\
+                0 & 0 & 0 & 0
+            \end{pmatrix}\\
+            \begin{pmatrix}
+                0 & 1 & 0 & *\\
+                0 & 0 & 1 & *\\
+                0 & 0 & 0 & 0
+            \end{pmatrix}
+            \qquad
+            \begin{pmatrix}
+                0 & 1 & * & 0\\
+                0 & 0 & 0 & 1\\
+                0 & 0 & 0 & 0
+            \end{pmatrix}
+            \qquad
+            \begin{pmatrix}
+                0 & 0 & 1 & 0\\
+                0 & 0 & 0 & 1\\
+                0 & 0 & 0 & 0
+            \end{pmatrix}
+        \end{align*}
+        Para $r=3$. Elegimos tres columnas $i\lt j\lt k$.
+        \begin{align*}
+            \begin{pmatrix}
+                1 & 0 & 0 & *\\
+                0 & 1 & 0 & *\\
+                0 & 0 & 1 & *
+            \end{pmatrix}
+            \qquad
+            \begin{pmatrix}
+                1 & 0 & * & 0\\
+                0 & 1 & * & 0\\
+                0 & 0 & 0 & 1
+            \end{pmatrix}
+            \qquad
+            \begin{pmatrix}
+                1 & * & 0 & 0\\
+                0 & 0 & 1 & 0\\
+                0 & 0 & 0 & 1
+            \end{pmatrix}
+            \qquad
+            \begin{pmatrix}
+                0 & 1 & 0 & 0\\
+                0 & 0 & 1 & 0\\
+                0 & 0 & 0 & 1
+            \end{pmatrix}
+        \end{align*}
+        Por lo tanto existen 15 posibles matrices.
+    \end{solucion}
+
     \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 2}]
         Responde si es falso (F) o verdadero (V) y justifica tu respuesta:
         \begin{enumerate}
@@ -50,6 +151,46 @@
             el sistema es consistente. 
         \end{enumerate}
     \end{mdframed}
+
+    \begin{solucion}
+        \begin{enumerate}
+            \item[(a)] \textbf{Falso}\\
+            Tener más variables que ecuaciones no garantiza que el sistema sea consistente. Por ejemplo,
+            \begin{equation*}
+                \begin{cases}
+                    x+y+z=1\\
+                    x+y+z=2
+                \end{cases}
+            \end{equation*}
+            Aquí hay mas variables que ecuaciones pero el sistema es incompatible, pues al restar ambas
+            ecuaciones se obtiene $0=1$. Por lo tanto, no necesariamente hay soluciones.
+            \item[(b)] \textbf{Verdadero}\\
+            Una variable libre aparece cuando su columna no contiene pivote en la forma escalonada. Si el sistema
+            es consistente y no hay variables libres, entonces cada variables corresponde a un pivote y todas las variables
+            quedan determinadas de manera unica. Por lo tanto existe solucion unica. De igual manera, si existe almenos una
+            variable libre, esta puede tomar infinitos valores, generando infinitas soluciones.
+            \item[(c)] \textbf{Falso}\\
+            Que el sistema homogéneo tenga variable libre implica que tiene infinitas soluciones. Pero no garantiza
+            que el sistema no homogéneo sea consistente. Puede ocurrir que para cierto $B$ el sistema sea incompatible.
+            Por ejemplo,
+            \begin{equation*}
+                \begin{cases}
+                    x+y=1\\
+                    x+y=2
+                \end{cases}
+            \end{equation*}
+            El sistema homogéneo asociado es
+            \begin{equation*}
+                x+y=0
+            \end{equation*}
+            tiene variable libre, pero el sistema original es incompatible.
+            \item[(d)] \textbf{Verdadero}\\
+            Si al reducir la matriz aumentada a forma escalonada aparece una variable libre, significa que
+            no todas las columnas contienen pivotes. Pero no aparece una fila de ceros, pues en tal caso el
+            sistema sería incompatible y no se hablaría de variables libres en la solución. La presencia
+            de variables libres solo sucede cuando el sistema es consisitente y tiene infinitas soluciones.
+        \end{enumerate}
+    \end{solucion}
 
     \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 3}]
         En este problema se trabajará sobre $\mathbb{R}$. Encuentra la matriz reducida por filas y escalonada
@@ -228,8 +369,75 @@
         encuentra todas las ternas $(b_{1},b_{2},b_{3})$ para las que el sistema tiene alguna solución (justifica tu respuesta).
     \end{mdframed}
 
+    \begin{solucion}
+        Sea el sistema de ecuaciones lineales
+        \begin{equation*}
+            \begin{cases}
+                3x_{1}-x_{2}+2x_{3}=b_{1}\\
+                2x_{1}+x_{2}+x_{3}=b_{2}\\
+                x_{1}-3x_{2}=b_{3}
+            \end{cases}
+        \end{equation*}
+        Su matriz extendida asociada es
+        \begin{equation*}
+            \left(
+                \begin{array}{ccc|c}
+                    3 & -1 & 2 & b_{1}\\
+                    2 & 1 & 1 & b_{2}\\
+                    1 & -3 & 0 & b_{3}
+                \end{array}
+            \right)
+        \end{equation*}
+        El sistema reducido por filas escalonado es
+        \begin{align*}
+            \left(
+                \begin{array}{ccc|c}
+                    1 & 0 & 0 & \frac{-b_{1}+2b_{2}+b_{3}}{2}\\
+                    0 & 1 & 0 & \frac{-b_{1}+2b_{2}-b_{3}}{6}\\
+                    0 & 0 & 1 & \frac{7b_{1}-8b_{2}-5b_{3}}{6}
+                \end{array}
+            \right)
+        \end{align*}
+        Por lo tanto, el sistema tiene solución para todo $(b_{1},b_{2},b_{3})\in\mathbb{R}$.
+    \end{solucion}
+
     \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 5}]
         Sea $A\in M_{n\times n}(F)$. Demuestra que $A$ es equivalente por filas a la matriz identidad si y solo si, el sistema homogéneo
         asociado a $A$ tiene solo la solución trivial $(0,\dots,0)\in F^{n}$.
     \end{mdframed}
+
+    \begin{proof}
+        Supongamos que $A$ es equivalente por filas a $I_{n}$. Entonces existe una suceción finita
+        de operaciones elementales por filas que transforma $A$ en $I_{n}$. Aplicando esas mismas operaciones
+        al sistema homogéneo $A\textbf{x}=0$, obtenemos un sistema equialente
+        \begin{equation*}
+            I_{n}\textbf{x}=0.
+        \end{equation*}
+        Pero
+        \begin{equation*}
+            I_{n}\textbf{x}=0 \Longleftrightarrow x_{1}=0,\dots,x_{n}=0.
+        \end{equation*}
+        Por tanto, $A$ solo tiene la solución trivial. Supongamos ahora que el sistema
+        homogéneo
+        \begin{equation*}
+            A\textbf{x}=0
+        \end{equation*}
+        tiene únicamente la solución trivial. Reducimos $A$ por filas hasta obtener su forma
+        reducida por filas y escalonada $R$. El sistema
+        \begin{equation*}
+            R\textbf{x}=0
+        \end{equation*}
+        es equivalente al sistema original, luego también tiene solo la solución trivial.
+        Si $R$ tuviera una fila nula, entonces habría menos de $n$ pivotes, y por lo tanto existiria
+        al menos una variable libre. Una variable libre permitiría soluciones no triviales
+        del sistema homogéneo, contradicción. Por lo tanto no hay filas nulas, cada columna contiene
+        un pivote y hay exactamente $n$ pivotes. Dado que la matriz es $n\times n$, esto implica que
+        los pivotes están necesariamente en todas las columnas. Ademas, al estar en forma reducida por filas
+        cada pivote es 1 y cada columna tiene ceros en las demas entradas. Luego,
+        \begin{equation*}
+            R=I_{n}
+        \end{equation*}
+        Como $R$ se obtuvo mediante operaciones elementales por filas, concluimos que $A$ es equivalente por filas
+        a $I_{n}$.
+    \end{proof}
 \end{document}
