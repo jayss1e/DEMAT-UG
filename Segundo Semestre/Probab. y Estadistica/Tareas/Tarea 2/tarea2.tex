@@ -1,0 +1,120 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{ugmath}
+\usepackage{float}
+\usepackage{placeins}
+\usepackage{array}
+\usepackage[labelfont=bf,labelsep=space]{caption}
+\newcommand{\paren}[1]{\left( #1 \right)}
+\newcommand{\alumno}{Ricardo León Martínez}
+\newcommand{\materia}{Elementos de Probabilidad y Estadistica}
+\newcommand{\profesor}{Claudia Reynoso Alcántara}
+\newcommand{\tarea}{Tarea 2}
+\newcommand{\fecha}{17/2/2026}
+
+\begin{document}
+
+    \begin{center}
+        {\large\textbf{UNIVERSIDAD DE GUANAJUATO}}\\[0.3cm]
+        {\normalsize\textbf{DIVISIÓN DE CIENCIAS NATURALES Y EXACTAS}}\\
+        {\normalsize\textbf{CAMPUS GUANAJUATO}}\\[1cm]
+
+        {\Large\textbf{\tarea\ (\materia)}}\\[1cm]
+    \end{center}
+
+    \noindent
+    \textbf{Nombre:} \alumno 
+    \hfill 
+    \textbf{Fecha:} \fecha 
+    \hfill 
+    \textbf{Calificación:} \rule{3cm}{0.4pt}
+
+    \vspace{0.3cm}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 1}]
+        En una tómbola se colocan $n$ pelotas identificadas cada una por un número del $1$ al $n$. 
+        En cada una de $k$ ocasiones consecutivas, hacemos girar la tómbola, tomamos una pelota al azar, 
+        anotamos el número de la pelota que tomamos y, finalmente, la devolvemos a la tómbola.
+        \begin{enumerate}
+            \item[(a)] ¿Cuál es la probabilidad de que la sucesión de números obtenida sea estrictamente creciente?
+            \item[(b)] ¿Cuál es la probabilidad de que la sucesión de números obtenida sea no decreciente?
+        \end{enumerate}
+    \end{mdframed}
+    
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 2}]
+        ¿Tres personas están en el primer piso de un edificio de diez pisos y cada una elige de manera 
+        aleatoria un piso de los nueve restantes al cual ir. ¿Cuál es la probabilidad de que las tres 
+        personas vayan a pisos consecutivos?
+        \begin{enumerate}
+            \item[(a)] Si las elecciones son independientes, es decir, se permite que dos o tres vayan al mismo piso.
+            \item[(b)] Si las elecciones no son independientes, en el sentido de que deben ir a pisos distintos.
+        \end{enumerate}
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 3}]
+        En un cajón de calcetines solamente $3$ son azules. Si al escoger dos calcetines al azar 
+        tenemos que la probabilidad de que ambos sean azules es de $\frac{1}{2}$, 
+        ¿cuántos calcetines en total tiene el cajón?
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 4}]
+        Supongamos que tomamos $5$ cartas al azar de un mazo de póker estándar con $52$ cartas 
+        (13 cartas numeradas por cada tipo entre corazones, tréboles, diamantes y picas). 
+        Encuentre la probabilidad de obtener lo siguiente:
+        \begin{enumerate}
+            \item[(a)] Cinco cartas del mismo tipo (palo).
+            \item[(b)] Exactamente un par (dos cartas con la misma numeración).
+            \item[(c)] Exactamente dos pares distintos.
+            \item[(d)] Exactamente una tercia (tres cartas con la misma numeración).
+            \item[(e)] Póker (cuatro cartas con la misma numeración).
+        \end{enumerate}
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 5}]
+        Cierta comunidad se compone de $20$ familias en total. De estas, 
+        $4$ familias tienen exactamente un hij@, 
+        $8$ familias tienen exactamente dos hijos, 
+        $5$ familias tienen exactamente tres hijos, 
+        $2$ familias tienen exactamente cuatro hijos y 
+        $1$ familia tiene exactamente cinco hijos.
+
+        \begin{enumerate}
+            \item[(a)] Si escogemos una familia al azar, ¿cuál es la probabilidad de que dicha familia tenga $k$ hijos para $k=1,2,\dots,5$?
+            \item[(b)] Si escogemos un niño al azar, ¿cuál es la probabilidad de que dicho niñ@ pertenezca a una familia con exactamente $k$ hijos para $k=1,2,\dots,5$?
+        \end{enumerate}
+    \end{mdframed}
+    
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 6}]
+        Supongamos que tenemos $m$ pelotas distintas y $m$ cajas distintas. 
+        Si colocamos al azar cada una de las pelotas en alguna de las cajas, 
+        ¿cuál es la probabilidad de que exactamente una caja quede vacía?
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 7}]
+        Cierta urna contiene $46$ pelotas en total: $12$ rojas, $16$ azules y $18$ verdes. 
+        Si tomamos $7$ pelotas de la urna de manera aleatoria, 
+        ¿cuál es la probabilidad de obtener cada uno de los siguientes escenarios?
+
+        \begin{enumerate}
+            \item[(a)] $3$ rojas, $2$ azules y $2$ verdes.
+            \item[(b)] Al menos $2$ rojas.
+            \item[(c)] Todas las pelotas del mismo color.
+            \item[(d)] Exactamente $3$ rojas o exactamente $3$ azules.
+        \end{enumerate}
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 7}]
+        Consideremos el siguiente reordenamiento aleatorio de $n$ elementos. 
+        Iniciamos con los números $1,2,\dots,n$ en ese mismo orden. Luego, en el primer paso, 
+        lanzamos una moneda balanceada con lados $S$ (sol) y $A$ (águila). 
+
+        Si sale sol, dejamos al $1$ en su lugar y pasamos al siguiente número. 
+        Si sale águila, colocamos $1$ al final de la fila y pasamos al siguiente número. 
+        Repetimos este procedimiento hasta llegar al número $n$. 
+
+        Por ejemplo, para $n=4$, si la sucesión de lanzamientos es $S A A S$, 
+        el orden inicial $1,2,3,4$ se convierte en $1,4,2,3$.
+
+        Calcule la probabilidad de que $1,2,\dots,n$ terminen en el mismo orden.
+    \end{mdframed}
+
+\end{document}
