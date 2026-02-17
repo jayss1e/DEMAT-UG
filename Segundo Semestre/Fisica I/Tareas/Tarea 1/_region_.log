@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=prv_tarea1 2026.2.17)  17 FEB 2026 01:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=prv_tarea1 2026.2.17)  17 FEB 2026 12:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -104,7 +104,7 @@ No auxiliary output files.
 
 \hbadness=\count373
 \hfuzz=\dimen318
-(/home/void/.emacs.d/elpa/auctex-14.1.2/latex/prauctex.cfg))
+(/home/void/.emacs.d/elpa/auctex-14.1.2/latex/prauctex.cfg)) (/home/void/.emacs.d/elpa/auctex-14.1.2/latex/prfootnotes.def)
 \pr@snippet=\count374
 \pr@box=\box123
 \pr@output=\toks61
@@ -1208,10 +1208,10 @@ L3 programming layer <2025-01-18>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 1080 strings out of 434455
- 19009 string characters out of 4855993
- 1392219 words of memory out of 5000000
- 62285 multiletter control sequences out of 15000+600000
+ 1087 strings out of 434455
+ 19222 string characters out of 4855993
+ 1392230 words of memory out of 5000000
+ 62289 multiletter control sequences out of 15000+600000
  599901 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  46i,19n,56p,573b,1192s stack positions out of 10000i,1000n,20000p,200000b,200000s
