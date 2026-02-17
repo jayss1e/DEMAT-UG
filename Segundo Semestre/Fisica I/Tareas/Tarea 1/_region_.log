@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=prv_tarea1 2026.2.14)  14 FEB 2026 00:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=prv_tarea1 2026.2.17)  17 FEB 2026 01:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -31,8 +31,6 @@ LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 13.
 LaTeX Font Info:    ... okay on input line 13.
 LaTeX Info: Redefining \. on input line 13.
 LaTeX Info: Redefining \% on input line 13.
-Package babel Info: 'spanish' activates 'spanish' shorthands.
-(babel)             Reported on input line 13.
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -67,23 +65,23 @@ Package babel Info: 'spanish' activates 'spanish' shorthands.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-(c:/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+(/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count381
-\scratchdimen=\dimen322
+\scratchcounter=\count367
+\scratchdimen=\dimen315
 \scratchbox=\box122
-\nofMPsegments=\count382
-\nofMParguments=\count383
-\everyMPshowfont=\toks56
-\MPscratchCnt=\count384
-\MPscratchDim=\dimen323
-\MPnumerator=\count385
-\makeMPintoPDFobject=\count386
-\everyMPtoPDFconversion=\toks57
-) (c:/texlive/2025/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+\nofMPsegments=\count368
+\nofMParguments=\count369
+\everyMPshowfont=\toks59
+\MPscratchCnt=\count370
+\MPscratchDim=\dimen316
+\MPnumerator=\count371
+\makeMPintoPDFobject=\count372
+\everyMPtoPDFconversion=\toks60
+) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
- (c:/texlive/2025/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+ (/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 Package pgfplots notification 'compat/show suggested version=true': you might benefit from \pgfplotsset{compat=1.18} (current compat level: 1.15).
@@ -94,22 +92,22 @@ Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \providecommand\hyper@newdestlabel[2]{}
 Package hyperref Info: Link coloring ON on input line 13.
-(c:/Users/Radoj/AppData/Roaming/.emacs.d/elpa/auctex-14.1.2/latex/preview.sty
+(/home/void/.emacs.d/elpa/auctex-14.1.2/latex/preview.sty
 Package: preview 2024/06/30 14.0.6 (AUCTeX/preview-latex)
- (c:/texlive/2025/texmf-dist/tex/generic/luatex85/luatex85.sty
+ (/usr/share/texmf-dist/tex/generic/luatex85/luatex85.sty
 Package: luatex85 2016/06/15 v1.4 pdftex aliases for luatex
-) (c:/Users/Radoj/AppData/Roaming/.emacs.d/elpa/auctex-14.1.2/latex/prtightpage.def
-\PreviewBorder=\dimen324
-) (c:/Users/Radoj/AppData/Roaming/.emacs.d/elpa/auctex-14.1.2/latex/prauctex.def
+) (/home/void/.emacs.d/elpa/auctex-14.1.2/latex/prtightpage.def
+\PreviewBorder=\dimen317
+) (/home/void/.emacs.d/elpa/auctex-14.1.2/latex/prauctex.def
 No auxiliary output files.
 
 
-\hbadness=\count387
-\hfuzz=\dimen325
-(c:/Users/Radoj/AppData/Roaming/.emacs.d/elpa/auctex-14.1.2/latex/prauctex.cfg)) (c:/Users/Radoj/AppData/Roaming/.emacs.d/elpa/auctex-14.1.2/latex/prfootnotes.def)
-\pr@snippet=\count388
+\hbadness=\count373
+\hfuzz=\dimen318
+(/home/void/.emacs.d/elpa/auctex-14.1.2/latex/prauctex.cfg))
+\pr@snippet=\count374
 \pr@box=\box123
-\pr@output=\toks58
+\pr@output=\toks61
 
 Preview: Fontsize 12pt
 Preview: PDFoutput 1
@@ -133,7 +131,7 @@ l.32 ...}=\vec{u}_{x}(5)+\vec{u}_{y}(-2)+u_{z}(1)$
                                                   
 Not a real error.
 
-[1{c:/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}]
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}]
 ./_region_.tex:33: Preview: Snippet 2 started.
 <-><->
       
@@ -284,7 +282,7 @@ Not a real error.
 
 LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 55.
 
-[10{c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}]
+[10{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}]
 ./_region_.tex:56: Preview: Snippet 11 started.
 <-><->
       
@@ -481,6 +479,7 @@ Not a real error.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 74.
+
 
 ./_region_.tex:77: Preview: Snippet 23 started.
 <-><->
@@ -996,24 +995,231 @@ Not a real error.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 130.
+
+./_region_.tex:133: Preview: Snippet 55 started.
+<-><->
+      
+l.133         Procederemos por casos. Caso $
+                                            i=j$. Por ejemplo,
+Not a real error.
+
+./_region_.tex:133: Preview: Snippet 55 ended.(515577+152916x1661348).
+<-><->
+      
+l.133         Procederemos por casos. Caso $i=j$
+                                                . Por ejemplo,
+Not a real error.
+
+[55]
+./_region_.tex:134: Preview: Snippet 56 started.
+<-><->
+      
+l.134         \begin{align*}
+                            
+Not a real error.
+
+./_region_.tex:136: Preview: Snippet 56 ended.(1857913+0x20515507).
+<-><->
+      
+l.136         \end{align*}
+                          
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 136.
+
+[56]
+./_region_.tex:138: Preview: Snippet 57 started.
+<-><->
+      
+l.138         \begin{align*}
+                            
+Not a real error.
+
+./_region_.tex:140: Preview: Snippet 57 ended.(1857913+0x20622457).
+<-><->
+      
+l.140         \end{align*}
+                          
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 140.
+
+[57]
+./_region_.tex:142: Preview: Snippet 58 started.
+<-><->
+      
+l.142         \begin{align*}
+                            
+Not a real error.
+
+./_region_.tex:144: Preview: Snippet 58 ended.(1140322+0x18492055).
+<-><->
+      
+l.144         \end{align*}
+                          
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 144.
+
+[58]
+
+./_region_.tex:146: Preview: Snippet 59 started.
+<-><->
+      
+l.146         \begin{align*}
+                            
+Not a real error.
+
+./_region_.tex:148: Preview: Snippet 59 ended.(1140322+0x21267859).
+<-><->
+      
+l.148         \end{align*}
+                          
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 148.
+
+[59]
+./_region_.tex:149: Preview: Snippet 60 started.
+<-><->
+      
+l.149         Caso $
+                    i\neq j$. Consideremos, por ejemplo,
+Not a real error.
+
+./_region_.tex:149: Preview: Snippet 60 ended.(546133+152916x1661348).
+<-><->
+      
+l.149         Caso $i\neq j$
+                            . Consideremos, por ejemplo,
+Not a real error.
+
+[60]
+./_region_.tex:150: Preview: Snippet 61 started.
+<-><->
+      
+l.150         \begin{align*}
+                            
+Not a real error.
+
+./_region_.tex:152: Preview: Snippet 61 ended.(1857913+0x20622457).
+<-><->
+      
+l.152         \end{align*}
+                          
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 152.
+
+[61]
+./_region_.tex:153: Preview: Snippet 62 started.
+<-><->
+      
+l.153         Pero $
+                    \vec{a}_{2}\times\vec{a}_{3}$ es ortogonal a $\vec{a}_{2...
+Not a real error.
+
+./_region_.tex:153: Preview: Snippet 62 ended.(560550+117964x2392233).
+<-><->
+      
+l.153         Pero $\vec{a}_{2}\times\vec{a}_{3}$
+                                                  es ortogonal a $\vec{a}_{2...
+Not a real error.
+
+[62]
+./_region_.tex:153: Preview: Snippet 63 started.
+<-><->
+      
+l.153 ...a}_{2}\times\vec{a}_{3}$ es ortogonal a $
+                                                  \vec{a}_{2}$, por tanto,
+Not a real error.
+
+./_region_.tex:153: Preview: Snippet 63 ended.(560550+117964x715521).
+<-><->
+      
+l.153 ...\vec{a}_{3}$ es ortogonal a $\vec{a}_{2}$
+                                                  , por tanto,
+Not a real error.
+
+[63]
+./_region_.tex:154: Preview: Snippet 64 started.
+<-><->
+      
+l.154         \begin{align*}
+                            
+Not a real error.
+
+./_region_.tex:156: Preview: Snippet 64 ended.(1140322+0x19736817).
+<-><->
+      
+l.156         \end{align*}
+                          
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 156.
+
+[64]
+./_region_.tex:158: Preview: Snippet 65 started.
+<-><->
+      
+l.158         \begin{align*}
+                            
+Not a real error.
+
+./_region_.tex:160: Preview: Snippet 65 ended.(1140322+0x18599005).
+<-><->
+      
+l.160         \end{align*}
+                          
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 160.
+
+[65]
+./_region_.tex:162: Preview: Snippet 66 started.
+<-><->
+      
+l.162         \begin{align*}
+                            
+Not a real error.
+
+./_region_.tex:164: Preview: Snippet 66 ended.(1140322+0x27184100).
+<-><->
+      
+l.164         \end{align*}
+                          
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 164.
+
+[66]
+
  ***********
-LaTeX2e <2025-11-01>
-L3 programming layer <2026-01-19>
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-01-18>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 1086 strings out of 428803
- 19582 string characters out of 4555037
- 1410529 words of memory out of 5000000
- 67955 multiletter control sequences out of 15000+600000
- 668785 words of font info for 73 fonts, out of 8000000 for 9000
+ 1080 strings out of 434455
+ 19009 string characters out of 4855993
+ 1392219 words of memory out of 5000000
+ 62285 multiletter control sequences out of 15000+600000
+ 599901 words of font info for 69 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 46i,19n,56p,573b,1188s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmex10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy8.pfb>
-Output written on _region_.pdf (54 pages, 89291 bytes).
+ 46i,19n,56p,573b,1192s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsy8.pfb>
+Output written on _region_.pdf (66 pages, 92996 bytes).
 PDF statistics:
- 315 PDF objects out of 1000 (max. 8388607)
- 217 compressed objects within 3 object streams
- 54 named destinations out of 1000 (max. 500000)
+ 367 PDF objects out of 1000 (max. 8388607)
+ 257 compressed objects within 3 object streams
+ 66 named destinations out of 1000 (max. 500000)
  109 words of extra memory for PDF output out of 10000 (max. 10000000)
 

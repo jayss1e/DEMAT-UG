@@ -8,7 +8,7 @@
 \newcommand{\materia}{Fisica I}
 \newcommand{\profesor}{Lucero Uscanga Aguilera}
 \newcommand{\tarea}{Tarea 1}
-\newcommand{\fecha}{13/2/2026}
+\newcommand{\fecha}{16/2/2026}
 
 \begin{document}
 
@@ -128,5 +128,40 @@
         de 1,2,3. Discutir la disposición geométrica de los vectores recíprocos $\vec{a}^{1},\vec{a}^{2},\vec{a}^{3}$ en relación con $\vec{a}_{1},\vec{a}_{2},\vec{a}_{3}$.
         \textbf{Sugerencia:}Note que en $\vec{a}^{i}\cdot\vec{a}_{j}=0$ con $i\neq j$.
     \end{mdframed}
+
+    \begin{proof}
+        Procederemos por casos. Caso $i=j$. Por ejemplo,
+        \begin{align*}
+            \vec{a}^{1}\cdot \vec{a}_{1}=\frac{(\vec{a}_{2}\times\vec{a}_{3})\cdot\vec{a}_{1}}{\vec{a}_{1}\cdot(a_{2}\times\vec{a}_{3})}
+        \end{align*}
+        entonces
+        \begin{align*}
+            \vec{a}^{1}\cdot \vec{a}_{1}=\frac{\vec{a}_{1}\cdot(\vec{a}_{2}\times\vec{a}_{3})}{\vec{a}_{1}\cdot(a_{2}\times\vec{a}_{3})}.
+        \end{align*}
+        Luego
+        \begin{align*}
+            \vec{a}^{1}\cdot \vec{a}_{1}=1
+        \end{align*}
+        De forma analoga podemos ver que
+        \begin{align*}
+            \vec{a}^{2}\cdot \vec{a}_{2}=1, \qquad \vec{a}^{3}\cdot \vec{a}_{3}=1.
+        \end{align*}
+        Caso $i\neq j$. Consideremos, por ejemplo,
+        \begin{align*}
+            \vec{a}^{1}\cdot\vec{a}_{2}=\frac{(\vec{a}_{2}\times\vec{a}_{3})\cdot\vec{a}_{2}}{\vec{a}_{1}\cdot(\vec{a}_{2}\times\vec{a}_{3})}.
+        \end{align*}
+        Pero $\vec{a}_{2}\times\vec{a}_{3}$ es ortogonal a $\vec{a}_{2}$, por tanto,
+        \begin{align*}
+            (\vec{a}_{2}\times\vec{a}_{3})\cdot\vec{a}_{2}=0.
+        \end{align*}
+        Luego
+        \begin{align*}
+            \vec{a}^{1}\cdot\vec{a}_{2}=0.
+        \end{align*}
+        Analogamente,
+        \begin{align*}
+            \vec{a}^{1}\cdot\vec{a}_{3}=0,\quad\vec{a}^{2}\cdot\vec{a}_{1}=0\quad\vec{a}^{2}\cdot\vec{a}_{3}=0\quad\vec{a}^{3}\cdot\vec{a}_{1}=0\quad\vec{a}^{3}\cdot\vec{a}_{2}=0.
+        \end{align*}
+    \end{proof}
 \end{document}
-\message{ !name(tarea1.tex) !offset(-132) }
+\message{ !name(tarea1.tex) !offset(-167) }
