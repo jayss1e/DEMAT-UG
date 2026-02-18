@@ -457,6 +457,7 @@ INPUT c:/texlive/2025/texmf-dist/tex/latex/stmaryrd/Ustmry.fd
 INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/stmaryrd/stmary10.tfm
 INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/stmaryrd/stmary8.tfm
 INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/stmaryrd/stmary6.tfm
+INPUT c:/texlive/2025/texmf-dist/fonts/tfm/public/lm/ec-lmri12.tfm
 INPUT c:/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc
 INPUT c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc
@@ -472,6 +473,8 @@ INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi12.pfb
 INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmmi8.pfb
 INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr12.pfb
 INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmr8.pfb
+INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmri12.pfb
 INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy10.pfb
 INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/lm/lmsy8.pfb
+INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb
 INPUT c:/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb
