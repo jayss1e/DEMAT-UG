@@ -77,6 +77,23 @@
         \end{enumerate}
     \end{mdframed}
 
+    \begin{solucion}
+        (a) $\displaystyle\int\sin(x)\cos(x)dx$.\\
+        Hagamos $u=\sin(x)$ y $du=\cos(x)dx$. Por lo tanto
+        \begin{align*}
+            \int\sin(x)\cos(x)dx&=\int udu.\\
+            &=\frac{1}{2}u^{2}\\
+            &=\frac{1}{2}\sin^{2}(x).
+        \end{align*}
+        (b) $\displaystyle\int\frac{\ln(x)}{x}dx$.\\
+        Sea $u=\ln(x)$ y $du=\frac{1}{x}dx$. En consecuencia
+        \begin{align*}
+            \int\frac{\ln(x)}{x}dx&=\int udu\\
+            &=\frac{1}{2}u^{2}\\
+            &=\frac{1}{2}\ln^{2}(x)
+        \end{align*}
+    \end{solucion}
+
     \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 4}]
         \begin{enumerate}
             \item[(a)] $\displaystyle\int\frac{1}{\sqrt{4-x^{2}}}dx$.
@@ -85,6 +102,48 @@
         \end{enumerate}
     \end{mdframed}
 
+    \begin{solucion}
+        (a) $\displaystyle\int\frac{1}{\sqrt{4-x^{2}}}dx$.\\
+        Hagamos $x=2\sin\paren{\theta}$ y $dx=2\cos\paren{\theta}d\theta$.
+        Por lo tanto
+        \begin{align*}
+            \int\frac{1}{\sqrt{4-x^{2}}}dx&=\int\frac{2\cos\paren{\theta}}{\sqrt{4-4\sin^{2}\paren{\theta}}}\\
+            &=\int\frac{2\cos\paren{\theta}}{\sqrt{4\cos^{2}\paren{\theta}}}\\
+            &=\theta.
+        \end{align*}
+        Notemos que $\theta=\arcsin\paren{\frac{x}{2}}$. Así,
+        \begin{equation*}
+            \int\frac{1}{\sqrt{4-x^{2}}}dx=\arcsin\paren{\frac{x}{2}}.
+        \end{equation*}
+        (b) $\displaystyle\int\frac{1}{\sqrt{9+x^{2}}}dx$.\\
+        Sea $x=3\tan\paren{\theta}$ y $dx=3\sec^{2}\paren{\theta}d\theta$. Entonces
+        $\tan\paren{\theta}=\frac{x}{3}$ y $\sec\paren{\theta}=\frac{\sqrt{x^{2}+9}}{3}$.
+        En consecuencia,
+        \begin{align*}
+            \int\frac{1}{\sqrt{9+x^{2}}}dx&=\int\frac{3\sec^{2}\paren{\theta}}{\sqrt{9+9\tan^{2}\paren{\theta}}}d\theta\\
+            &=\int\frac{3\sec^{2}\paren{\theta}}{\sqrt{9\sec^{2}(\theta)}}d\theta\\
+            &=\int\sec\paren{\theta}d\theta\\
+            &=\ln\paren{\abs{\sec\paren{\theta}+\tan\paren{\theta}}}.
+        \end{align*}
+        Así,
+        \begin{equation*}
+            \int\frac{1}{\sqrt{9+x^{2}}}dx=\ln\paren{\abs{\frac{\sqrt{x^{2}+9}}{3}+\frac{x}{3}}}.
+        \end{equation*}
+        (c) $\displaystyle\int\frac{1}{\sqrt{x^{2}-2}}dx$.\\
+        Sea $x=\sqrt{2}\sec\paren{\theta}$ y $dx=\sqrt{2}\sec\paren{\theta}\tan\paren{\theta}d\theta$. Entonces
+        $\sec\paren{\theta}=\frac{x\sqrt{2}}{2}$ y $\tan\paren{\theta}=\frac{\sqrt{2x^{2}-4}}{2}$. En consecuencia,
+        \begin{align*}
+            \int\frac{1}{\sqrt{x^{2}-2}}dx&=\int\frac{\sqrt{2}\sec\paren{\theta}\tan\paren{\theta}}{\sqrt{2\sec^{2}(\theta)-2}}d\theta\\
+            &=\int\frac{\sqrt{2}\sec\paren{\theta}\tan\paren{\theta}}{\sqrt{2\tan^{2}(\theta)}}d\theta\\
+            &=\int\sec(\theta)d\theta\\
+            &=\ln\paren{\abs{\sec(\theta)+\tan(\theta)}}.
+        \end{align*}
+        Así,
+        \begin{equation*}
+            \int\frac{1}{\sqrt{x^{2}-2}}dx=\ln\paren{\abs{\frac{x\sqrt{2}}{2}+\frac{\sqrt{2x^{2}-4}}{2}}}.
+        \end{equation*}
+    \end{solucion}
+
     \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 4}]
         Calcula la integral
         \begin{align*}
@@ -92,7 +151,53 @@
         \end{align*}
     \end{mdframed}
 
-    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 4}]
+    \begin{solucion}
+        Notemos que el integrando es una funcion racional propia, así que seguiremos el método
+        citado para descomponerlo en fracciones simples. Descomponemos el denominador del integrando
+        en factores lineales y cuadraticos irreducibles
+        \begin{equation*}
+            x^{2}-5x-14=(x-7)(x+2).
+        \end{equation*}
+        Por el factor $(x-7)$ la descomposición del integrando en fracciones simples incluye
+        una fraccion de la forma
+        \begin{equation*}
+            \frac{A}{x-2}
+        \end{equation*}
+        y por el factor $(x+2)$ la descomposición del integrando en fracciones simples incluye
+        una fracción de la forma
+        \begin{equation*}
+            \frac{B}{x+2}.
+        \end{equation*}
+        Así, la descomposición del integrando en fracciones simples es
+        \begin{equation}
+            \frac{x+11}{x^{2}-5x-14}=\frac{A}{x-7}+\frac{B}{x+2}.
+        \end{equation}
+        Notemos que $A$ y $B$ cumplen (1) si y solo si $A$ y $B$ cumple que
+        \begin{equation}
+            x+11=A(x+2)+B(x-7).
+        \end{equation}
+        Reexpresemos (2) como
+        \begin{equation}
+            x+11=(A+B)x+2A-7B.
+        \end{equation}
+        Puesto que dos polinomios son iguales si sus coeficientes son iguales, de (3)
+        obtenemos que $A$ y $B$ satisfacen el sistema de ecuaciones
+        \begin{align*}
+            A+B&=1\\
+            2A-7B&=11
+        \end{align*}
+        cuya solución es $A=2$ y $B=-1$. Por lo cual
+        \begin{equation*}
+            \frac{x+11}{x^{2}-5x-14}=\frac{2}{x-7}-\frac{1}{x+2}
+        \end{equation*}
+        y, en consecuencia
+        \begin{align*}
+            \frac{x+11}{x^{2}-5x-14}&=2\int\frac{1}{x-7}dx-\int\frac{1}{x+2}\\
+            &=2\ln\paren{x-7}-\ln\paren{x+2}.
+        \end{align*}
+    \end{solucion}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 5}]
         Prueba que las integrales impropias en los incisos (c),(d) y (e) de la definición 10 no dependen del punto $p$ en cuestión.
     \end{mdframed}
 \end{document}
