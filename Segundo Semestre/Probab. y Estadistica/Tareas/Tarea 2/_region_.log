@@ -1,0 +1,2947 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=prv_tarea2 2026.2.19)  19 FEB 2026 12:38
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**&prv_tarea2 /AUCTEXINPUT{ _region_.tex }
+(./_region_.tex
+Package csquotes Info: Checking for multilingual support...
+Package csquotes Info: ... found 'babel' package.
+Package csquotes Info: Adjusting default style.
+Package csquotes Info: Redefining alias 'default' -> 'spanish'.
+
+No file _region_.aux.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 14.
+LaTeX Font Info:    ... okay on input line 14.
+LaTeX Info: Redefining \. on input line 14.
+LaTeX Info: Redefining \% on input line 14.
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(42.67912pt, 512.14963pt, 42.67912pt)
+* v-part:(T,H,B)=(42.67912pt, 759.6886pt, 42.67912pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=512.14963pt
+* \textheight=759.6886pt
+* \oddsidemargin=-29.59087pt
+* \evensidemargin=-29.59087pt
+* \topmargin=-66.59087pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=56.9055pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+(/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count367
+\scratchdimen=\dimen317
+\scratchbox=\box124
+\nofMPsegments=\count368
+\nofMParguments=\count369
+\everyMPshowfont=\toks60
+\MPscratchCnt=\count370
+\MPscratchDim=\dimen318
+\MPnumerator=\count371
+\makeMPintoPDFobject=\count372
+\everyMPtoPDFconversion=\toks61
+) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+))
+Package pgfplots notification 'compat/show suggested version=true': you might benefit from \pgfplotsset{compat=1.18} (current compat level: 1.15).
+
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
+Package caption Info: End \AtBeginDocument code.
+\providecommand\hyper@newdestlabel[2]{}
+Package hyperref Info: Link coloring ON on input line 14.
+(/home/void/.emacs.d/elpa/auctex-14.1.2/latex/preview.sty
+Package: preview 2024/06/30 14.0.6 (AUCTeX/preview-latex)
+ (/usr/share/texmf-dist/tex/generic/luatex85/luatex85.sty
+Package: luatex85 2016/06/15 v1.4 pdftex aliases for luatex
+) (/home/void/.emacs.d/elpa/auctex-14.1.2/latex/prtightpage.def
+\PreviewBorder=\dimen319
+) (/home/void/.emacs.d/elpa/auctex-14.1.2/latex/prauctex.def
+No auxiliary output files.
+
+
+\hbadness=\count373
+\hfuzz=\dimen320
+(/home/void/.emacs.d/elpa/auctex-14.1.2/latex/prauctex.cfg)) (/home/void/.emacs.d/elpa/auctex-14.1.2/latex/prfootnotes.def)
+\pr@snippet=\count374
+\pr@box=\box125
+\pr@output=\toks62
+
+Preview: Fontsize 12pt
+Preview: PDFoutput 1
+)  !name(tarea2.tex) !offset(-3) 
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 36.
+
+./_region_.tex:37: Preview: Snippet 1 started.
+<-><->
+      
+l.37         En una tómbola se colocan $
+                                         n$ pelotas identificadas cada una p...
+Not a real error.
+
+Preview: Tightpage -32891 -32891 32891 32891
+./_region_.tex:37: Preview: Snippet 1 ended.(338603+0x459657).
+<-><->
+      
+l.37         En una tómbola se colocan $n$
+                                            pelotas identificadas cada una p...
+Not a real error.
+
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}]
+./_region_.tex:37: Preview: Snippet 2 started.
+<-><->
+      
+l.37 ...dentificadas cada una por un número del $
+                                                  1$ al $n$.
+Not a real error.
+
+./_region_.tex:37: Preview: Snippet 2 ended.(495239+0x385023).
+<-><->
+      
+l.37 ...ntificadas cada una por un número del $1$
+                                                   al $n$.
+Not a real error.
+
+[2{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}]
+./_region_.tex:37: Preview: Snippet 3 started.
+<-><->
+      
+l.37 ...cadas cada una por un número del $1$ al $
+                                                  n$.
+Not a real error.
+
+./_region_.tex:37: Preview: Snippet 3 ended.(338603+0x459657).
+<-><->
+      
+l.37 ...das cada una por un número del $1$ al $n$
+                                                  .
+Not a real error.
+
+[3]
+./_region_.tex:38: Preview: Snippet 4 started.
+<-><->
+      
+l.38         En cada una de $
+                             k$ ocasiones consecutivas, hacemos girar la tó...
+Not a real error.
+
+./_region_.tex:38: Preview: Snippet 4 ended.(546132+0x426891).
+<-><->
+      
+l.38         En cada una de $k$
+                                ocasiones consecutivas, hacemos girar la tó...
+Not a real error.
+
+[4]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 44.
+
+./_region_.tex:47: Preview: Snippet 5 started.
+<-><->
+      
+l.47         Sea $
+                  \Omega=\{1,\dots,n\}^{k}$ el espcio muestra de todas las s...
+Not a real error.
+
+./_region_.tex:47: Preview: Snippet 5 ended.(649479+196608x5284721).
+<-><->
+      
+l.47         Sea $\Omega=\{1,\dots,n\}^{k}$
+                                            el espcio muestra de todas las s...
+Not a real error.
+
+[5{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}]
+./_region_.tex:48: Preview: Snippet 6 started.
+<-><->
+      
+l.48         $
+              (x_{1},\dots,x_{k})$ obtenidas al realizar $k$ extracciones co...
+Not a real error.
+
+./_region_.tex:48: Preview: Snippet 6 ended.(589824+196608x3847016).
+<-><->
+      
+l.48         $(x_{1},\dots,x_{k})$
+                                   obtenidas al realizar $k$ extracciones co...
+Not a real error.
+
+[6]
+./_region_.tex:48: Preview: Snippet 7 started.
+<-><->
+      
+l.48 ..._{1},\dots,x_{k})$ obtenidas al realizar $
+                                                  k$ extracciones con reempl...
+Not a real error.
+
+./_region_.tex:48: Preview: Snippet 7 ended.(546132+0x426891).
+<-><->
+      
+l.48 ...1},\dots,x_{k})$ obtenidas al realizar $k$
+                                                   extracciones con reemplazo.
+Not a real error.
+
+[7]
+./_region_.tex:50: Preview: Snippet 8 started.
+<-><->
+      
+l.50         \begin{align*}
+                           
+Not a real error.
+
+./_region_.tex:52: Preview: Snippet 8 ended.(1566720+0x22988563).
+<-><->
+      
+l.52         \end{align*}
+                         
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 52.
+
+[8]
+./_region_.tex:53: Preview: Snippet 9 started.
+<-><->
+      
+l.53         Por tanto, para cualquier evento $
+                                               A\subseteq\Omega$,
+Not a real error.
+
+./_region_.tex:53: Preview: Snippet 9 ended.(549453+106932x2181965).
+<-><->
+      
+l.53 ..., para cualquier evento $A\subseteq\Omega$
+                                                  ,
+Not a real error.
+
+[9]
+./_region_.tex:54: Preview: Snippet 10 started.
+<-><->
+      
+l.54         \begin{equation*}
+                              
+Not a real error.
+
+./_region_.tex:56: Preview: Snippet 10 ended.(1661305+0x18821095).
+<-><->
+      
+l.56         \end{equation*}
+                            
+Not a real error.
+
+[10]
+./_region_.tex:59: Preview: Snippet 11 started.
+<-><->
+      
+l.59 ...       Queremos encontrar las sucesiones $
+                                                  x_{1}\lt x_{2}\lt\cdots\lt...
+Not a real error.
+
+./_region_.tex:59: Preview: Snippet 11 ended.(414188+117964x6297098).
+<-><->
+      
+l.59 ...esiones $x_{1}\lt x_{2}\lt\cdots\lt x_{k}$
+                                                  , con $k\in\{1,\dots,n\}$.
+Not a real error.
+
+[11]
+./_region_.tex:59: Preview: Snippet 12 started.
+<-><->
+      
+l.59 ... $x_{1}\lt x_{2}\lt\cdots\lt x_{k}$, con $
+                                                  k\in\{1,\dots,n\}$.
+Not a real error.
+
+./_region_.tex:59: Preview: Snippet 12 ended.(589824+196608x4744044).
+<-><->
+      
+l.59 ...t\cdots\lt x_{k}$, con $k\in\{1,\dots,n\}$
+                                                  .
+Not a real error.
+
+[12]
+./_region_.tex:60: Preview: Snippet 13 started.
+<-><->
+      
+l.60 ...ente equivale a elegir un subconjunto de $
+                                                  k$ elementos
+Not a real error.
+
+./_region_.tex:60: Preview: Snippet 13 ended.(546132+0x426891).
+<-><->
+      
+l.60 ...te equivale a elegir un subconjunto de $k$
+                                                   elementos
+Not a real error.
+
+[13]
+./_region_.tex:61: Preview: Snippet 14 started.
+<-><->
+      
+l.61             distintos de $
+                               \{1,\dots,n\}$. Por lo tanto, el número de t...
+Not a real error.
+
+./_region_.tex:61: Preview: Snippet 14 ended.(589824+196608x3355964).
+<-><->
+      
+l.61             distintos de $\{1,\dots,n\}$
+                                             . Por lo tanto, el número de t...
+Not a real error.
+
+[14]
+./_region_.tex:62: Preview: Snippet 15 started.
+<-><->
+      
+l.62             \begin{equation*}
+                                  
+Not a real error.
+
+./_region_.tex:64: Preview: Snippet 15 ended.(1966099+0x17637726).
+<-><->
+      
+l.64             \end{equation*}
+                                
+Not a real error.
+
+[15{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}]
+./_region_.tex:66: Preview: Snippet 16 started.
+<-><->
+      
+l.66             \begin{equation*}
+                                  
+Not a real error.
+
+./_region_.tex:68: Preview: Snippet 16 ended.(2007467+0x22879031).
+<-><->
+      
+l.68             \end{equation*}
+                                
+Not a real error.
+
+[16]
+./_region_.tex:69: Preview: Snippet 17 started.
+<-><->
+      
+l.69             y es 0 si $
+                            k\gt n$.
+Not a real error.
+
+./_region_.tex:69: Preview: Snippet 17 ended.(546132+20972x1922368).
+<-><->
+      
+l.69             y es 0 si $k\gt n$
+                                   .
+Not a real error.
+
+[17]
+./_region_.tex:71: Preview: Snippet 18 started.
+<-><->
+      
+l.71 ...    Ahora queremos contar las sucesiones $
+                                                  x_{1}\leq x_{2}\leq\cdots\...
+Not a real error.
+
+./_region_.tex:71: Preview: Snippet 18 ended.(500148+117964x6335351).
+<-><->
+      
+l.71 ...ones $x_{1}\leq x_{2}\leq\cdots\leq x_{k}$
+                                                  , con $i\in\{1,\dots,n\}$.
+Not a real error.
+
+[18]
+./_region_.tex:71: Preview: Snippet 19 started.
+<-><->
+      
+l.71 ..._{1}\leq x_{2}\leq\cdots\leq x_{k}$, con $
+                                                  i\in\{1,\dots,n\}$.
+Not a real error.
+
+./_region_.tex:71: Preview: Snippet 19 ended.(589824+196608x4579848).
+<-><->
+      
+l.71 ...\cdots\leq x_{k}$, con $i\in\{1,\dots,n\}$
+                                                  .
+Not a real error.
+
+[19]
+./_region_.tex:73: Preview: Snippet 20 started.
+<-><->
+      
+l.73             Sea $
+                      a_{j}$ el numero de veces que aparece el valor $j$. En...
+Not a real error.
+
+./_region_.tex:73: Preview: Snippet 20 ended.(338603+219909x692491).
+<-><->
+      
+l.73             Sea $a_{j}$
+                             el numero de veces que aparece el valor $j$. En...
+Not a real error.
+
+[20]
+./_region_.tex:73: Preview: Snippet 21 started.
+<-><->
+      
+l.73 ... el numero de veces que aparece el valor $
+                                                  j$. Entonces
+Not a real error.
+
+./_region_.tex:73: Preview: Snippet 21 ended.(515577+152916x362819).
+<-><->
+      
+l.73 ...l numero de veces que aparece el valor $j$
+                                                  . Entonces
+Not a real error.
+
+[21]
+./_region_.tex:74: Preview: Snippet 22 started.
+<-><->
+      
+l.74             \begin{equation*}
+                                  
+Not a real error.
+
+./_region_.tex:76: Preview: Snippet 22 ended.(766041+0x22610446).
+<-><->
+      
+l.76             \end{equation*}
+                                
+Not a real error.
+
+[22]
+./_region_.tex:77: Preview: Snippet 23 started.
+<-><->
+      
+l.77             Cada solución $
+                                 (a_{1},\dots,a_{n})$ determina exactamnete ...
+Not a real error.
+
+./_region_.tex:77: Preview: Snippet 23 ended.(589824+196608x3814276).
+<-><->
+      
+l.77 ...      Cada solución $(a_{1},\dots,a_{n})$
+                                                   determina exactamnete una...
+Not a real error.
+
+[23]
+./_region_.tex:80: Preview: Snippet 24 started.
+<-><->
+      
+l.80             \begin{equation*}
+                                  
+Not a real error.
+
+./_region_.tex:82: Preview: Snippet 24 ended.(1966099+0x18998505).
+<-><->
+      
+l.82             \end{equation*}
+                                
+Not a real error.
+
+[24]
+./_region_.tex:84: Preview: Snippet 25 started.
+<-><->
+      
+l.84             \begin{equation*}
+                                  
+Not a real error.
+
+./_region_.tex:86: Preview: Snippet 25 ended.(2007467+0x21579267).
+<-><->
+      
+l.86             \end{equation*}
+                                
+Not a real error.
+
+[25]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 90.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 98.
+
+
+./_region_.tex:104: Preview: Snippet 26 started.
+<-><->
+      
+l.104             \begin{equation*}
+                                   
+Not a real error.
+
+./_region_.tex:106: Preview: Snippet 26 ended.(859190+0x18251668).
+<-><->
+      
+l.106             \end{equation*}
+                                 
+Not a real error.
+
+[26]
+./_region_.tex:107: Preview: Snippet 27 started.
+<-><->
+      
+l.107 ...      Cada resultado tiene probabilidad $
+                                                  \frac{1}{9^{3}}$. Fijemos ...
+Not a real error.
+
+./_region_.tex:107: Preview: Snippet 27 ended.(647514+271194x708880).
+<-><->
+      
+l.107 ...tado tiene probabilidad $\frac{1}{9^{3}}$
+                                                  . Fijemos una terna consec...
+Not a real error.
+
+[27]
+./_region_.tex:107: Preview: Snippet 28 started.
+<-><->
+      
+l.107 ...{9^{3}}$. Fijemos una terna consecutiva $
+                                                  \{k,k+1,k+2\}$.
+Not a real error.
+
+./_region_.tex:107: Preview: Snippet 28 ended.(589824+196608x5424001).
+<-><->
+      
+l.107 ...mos una terna consecutiva $\{k,k+1,k+2\}$
+                                                  .
+Not a real error.
+
+[28]
+./_region_.tex:108: Preview: Snippet 29 started.
+<-><->
+      
+l.108             Para que ocurra el evento $
+                                             A$, las tres personas deben ocu...
+Not a real error.
+
+./_region_.tex:108: Preview: Snippet 29 ended.(537395+0x577257).
+<-><->
+      
+l.108             Para que ocurra el evento $A$
+                                               , las tres personas deben ocu...
+Not a real error.
+
+[29]
+./_region_.tex:110: Preview: Snippet 30 started.
+<-><->
+      
+l.110             \begin{equation*}
+                                   
+Not a real error.
+
+./_region_.tex:112: Preview: Snippet 30 ended.(549453+0x17792014).
+<-><->
+      
+l.112             \end{equation*}
+                                 
+Not a real error.
+
+[30]
+./_region_.tex:114: Preview: Snippet 31 started.
+<-><->
+      
+l.114             \begin{equation*}
+                                   
+Not a real error.
+
+./_region_.tex:116: Preview: Snippet 31 ended.(786432+0x19592973).
+<-><->
+      
+l.116             \end{equation*}
+                                 
+Not a real error.
+
+[31]
+./_region_.tex:118: Preview: Snippet 32 started.
+<-><->
+      
+l.118             \begin{equation*}
+                                   
+Not a real error.
+
+./_region_.tex:120: Preview: Snippet 32 ended.(1566720+0x21211552).
+<-><->
+      
+l.120             \end{equation*}
+                                 
+Not a real error.
+
+[32]
+./_region_.tex:124: Preview: Snippet 33 started.
+<-><->
+      
+l.124             \begin{equation*}
+                                   
+Not a real error.
+
+./_region_.tex:126: Preview: Snippet 33 ended.(812591+0x21912928).
+<-><->
+      
+l.126             \end{equation*}
+                                 
+Not a real error.
+
+[33]
+./_region_.tex:128: Preview: Snippet 34 started.
+<-><->
+      
+l.128             \begin{align*}
+                                
+Not a real error.
+
+./_region_.tex:130: Preview: Snippet 34 ended.(1140322+0x19592973).
+<-><->
+      
+l.130             \end{align*}
+                              
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 130.
+
+[34]
+./_region_.tex:132: Preview: Snippet 35 started.
+<-><->
+      
+l.132             \begin{equation*}
+                                   
+Not a real error.
+
+./_region_.tex:134: Preview: Snippet 35 ended.(1566720+0x20008664).
+<-><->
+      
+l.134             \end{equation*}
+                                 
+Not a real error.
+
+[35]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 138.
+
+./_region_.tex:139: Preview: Snippet 36 started.
+<-><->
+      
+l.139 ...   En un cajón de calcetines solamente $
+                                                  3$ son azules. Si al escog...
+Not a real error.
+
+./_region_.tex:139: Preview: Snippet 36 ended.(495239+0x385023).
+<-><->
+      
+l.139 ... En un cajón de calcetines solamente $3$
+                                                   son azules. Si al escoger...
+Not a real error.
+
+[36]
+./_region_.tex:140: Preview: Snippet 37 started.
+<-><->
+      
+l.140 ...abilidad de que ambos sean azules es de $
+                                                  \frac{1}{2}$,
+Not a real error.
+
+./_region_.tex:140: Preview: Snippet 37 ended.(647514+271194x435814).
+<-><->
+      
+l.140 ...que ambos sean azules es de $\frac{1}{2}$
+                                                  ,
+Not a real error.
+
+[37]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 142.
+
+./_region_.tex:145: Preview: Snippet 38 started.
+<-><->
+      
+l.145         Sea $
+                   N$ el número total de calcentines en el cajón. Se sabe ...
+Not a real error.
+
+./_region_.tex:145: Preview: Snippet 38 ended.(537395+0x698774).
+<-><->
+      
+l.145         Sea $N$
+                      el número total de calcentines en el cajón. Se sabe ...
+Not a real error.
+
+[38]
+./_region_.tex:148: Preview: Snippet 39 started.
+<-><->
+      
+l.148         \begin{equation*}
+                               
+Not a real error.
+
+./_region_.tex:150: Preview: Snippet 39 ended.(1966099+0x18771724).
+<-><->
+      
+l.150         \end{equation*}
+                             
+Not a real error.
+
+[39]
+./_region_.tex:151: Preview: Snippet 40 started.
+<-><->
+      
+l.151         El evento $
+                         A$ es: ambos calcetines son azules. El numero de pa...
+Not a real error.
+
+./_region_.tex:151: Preview: Snippet 40 ended.(537395+0x577257).
+<-><->
+      
+l.151         El evento $A$
+                            es: ambos calcetines son azules. El numero de pa...
+Not a real error.
+
+[40]
+./_region_.tex:152: Preview: Snippet 41 started.
+<-><->
+      
+l.152         \begin{equation*}
+                               
+Not a real error.
+
+./_region_.tex:154: Preview: Snippet 41 ended.(1966099+0x18518458).
+<-><->
+      
+l.154         \end{equation*}
+                             
+Not a real error.
+
+[41]
+./_region_.tex:156: Preview: Snippet 42 started.
+<-><->
+      
+l.156         \begin{equation*}
+                               
+Not a real error.
+
+./_region_.tex:158: Preview: Snippet 42 ended.(2542810+0x18954403).
+<-><->
+      
+l.158         \end{equation*}
+                             
+Not a real error.
+
+[42]
+./_region_.tex:160: Preview: Snippet 43 started.
+<-><->
+      
+l.160         \begin{equation*}
+                               
+Not a real error.
+
+./_region_.tex:162: Preview: Snippet 43 ended.(1966099+0x22389471).
+<-><->
+      
+l.162         \end{equation*}
+                             
+Not a real error.
+
+[43]
+./_region_.tex:164: Preview: Snippet 44 started.
+<-><->
+      
+l.164         \begin{equation*}
+                               
+Not a real error.
+
+./_region_.tex:166: Preview: Snippet 44 ended.(2542810+0x18397174).
+<-><->
+      
+l.166         \end{equation*}
+                             
+Not a real error.
+
+[44]
+./_region_.tex:168: Preview: Snippet 45 started.
+<-><->
+      
+l.168         \begin{equation*}
+                               
+Not a real error.
+
+./_region_.tex:170: Preview: Snippet 45 ended.(1953814+0x18799005).
+<-><->
+      
+l.170         \end{equation*}
+                             
+Not a real error.
+
+[45]
+./_region_.tex:172: Preview: Snippet 46 started.
+<-><->
+      
+l.172         \begin{equation*}
+                               
+Not a real error.
+
+./_region_.tex:174: Preview: Snippet 46 ended.(1763328+0x19428121).
+<-><->
+      
+l.174         \end{equation*}
+                             
+Not a real error.
+
+[46]
+./_region_.tex:176: Preview: Snippet 47 started.
+<-><->
+      
+l.176         \begin{align*}
+                            
+Not a real error.
+
+./_region_.tex:179: Preview: Snippet 47 ended.(2477253+0x19800133).
+<-><->
+      
+l.179         \end{align*}
+                          
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 179.
+
+[47]
+./_region_.tex:181: Preview: Snippet 48 started.
+<-><->
+      
+l.181         \begin{equation*}
+                               
+Not a real error.
+
+./_region_.tex:183: Preview: Snippet 48 ended.(786432+0x20237029).
+<-><->
+      
+l.183         \end{equation*}
+                             
+Not a real error.
+
+[48]
+./_region_.tex:184: Preview: Snippet 49 started.
+<-><->
+      
+l.184         Como $
+                    N\gt0$,
+Not a real error.
+
+./_region_.tex:184: Preview: Snippet 49 ended.(537395+20972x2119617).
+<-><->
+      
+l.184         Como $N\gt0$
+                          ,
+Not a real error.
+
+[49]
+./_region_.tex:185: Preview: Snippet 50 started.
+<-><->
+      
+l.185         \begin{equation*}
+                               
+Not a real error.
+
+./_region_.tex:187: Preview: Snippet 50 ended.(537395+0x17948885).
+<-><->
+      
+l.187         \end{equation*}
+                             
+Not a real error.
+
+[50]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 191.
+
+./_region_.tex:192: Preview: Snippet 51 started.
+<-><->
+      
+l.192         Supongamos que tomamos $
+                                      5$ cartas al azar de un mazo de póker...
+Not a real error.
+
+./_region_.tex:192: Preview: Snippet 51 ended.(495239+0x385023).
+<-><->
+      
+l.192         Supongamos que tomamos $5$
+                                         cartas al azar de un mazo de póker...
+Not a real error.
+
+[51]
+./_region_.tex:192: Preview: Snippet 52 started.
+<-><->
+      
+l.192 ...azar de un mazo de póker estándar con $
+                                                  52$ cartas
+Not a real error.
+
+./_region_.tex:192: Preview: Snippet 52 ended.(495239+0x770046).
+<-><->
+      
+l.192 ...r de un mazo de póker estándar con $52$
+                                                   cartas
+Not a real error.
+
+[52]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 202.
+
+
+./_region_.tex:206: Preview: Snippet 53 started.
+<-><->
+      
+l.206         \begin{align*}
+                            
+Not a real error.
+
+./_region_.tex:208: Preview: Snippet 53 ended.(1966099+0x25846262).
+<-><->
+      
+l.208         \end{align*}
+                          
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 208.
+
+[53{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}]
+./_region_.tex:209: Preview: Snippet 54 started.
+<-><->
+      
+l.209         Por tanto, para cualquier evento $
+                                                A$,
+Not a real error.
+
+./_region_.tex:209: Preview: Snippet 54 ended.(537395+0x577257).
+<-><->
+      
+l.209         Por tanto, para cualquier evento $A$
+                                                  ,
+Not a real error.
+
+[54]
+./_region_.tex:210: Preview: Snippet 55 started.
+<-><->
+      
+l.210         \begin{equation*}
+                               
+Not a real error.
+
+./_region_.tex:212: Preview: Snippet 55 ended.(2196648+0x18983937).
+<-><->
+      
+l.212         \end{equation*}
+                             
+Not a real error.
+
+[55]
+./_region_.tex:215: Preview: Snippet 56 started.
+<-><->
+      
+l.215 .... 5 cartas dentro de las 13 de ese palo $
+                                                  \binom{13}{5}$.
+Not a real error.
+
+./_region_.tex:215: Preview: Snippet 56 ended.(786437+393222x1339848).
+<-><->
+      
+l.215 ...tro de las 13 de ese palo $\binom{13}{5}$
+                                                  .
+Not a real error.
+
+[56]
+./_region_.tex:217: Preview: Snippet 57 started.
+<-><->
+      
+l.217             \begin{align*}
+                                
+Not a real error.
+
+./_region_.tex:219: Preview: Snippet 57 ended.(1966099+0x19010431).
+<-><->
+      
+l.219             \end{align*}
+                              
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 219.
+
+[57]
+./_region_.tex:221: Preview: Snippet 58 started.
+<-><->
+      
+l.221             \begin{align*}
+                                
+Not a real error.
+
+./_region_.tex:223: Preview: Snippet 58 ended.(2542810+0x22820377).
+<-><->
+      
+l.223             \end{align*}
+                              
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 223.
+
+[58]
+./_region_.tex:225: Preview: Snippet 59 started.
+<-><->
+      
+l.225 ...: 13 maneras. Las 2 cartas de ese valor $
+                                                  \binom{4}{2}$. Los otros 3...
+Not a real error.
+
+./_region_.tex:225: Preview: Snippet 59 ended.(786437+393222x1061320).
+<-><->
+      
+l.225 ... Las 2 cartas de ese valor $\binom{4}{2}$
+                                                  . Los otros 3 valores dist...
+Not a real error.
+
+[59]
+./_region_.tex:225: Preview: Snippet 60 started.
+<-><->
+      
+l.225 ...lores distintos entre los 12 restantes: $
+                                                  \binom{12}{3}$.
+Not a real error.
+
+./_region_.tex:225: Preview: Snippet 60 ended.(786437+393222x1339848).
+<-><->
+      
+l.225 ...s entre los 12 restantes: $\binom{12}{3}$
+                                                  .
+Not a real error.
+
+[60]
+./_region_.tex:226: Preview: Snippet 61 started.
+<-><->
+      
+l.226 ... uno de esos valores, elegimos un palo: $
+                                                  4^{3}$.
+Not a real error.
+
+./_region_.tex:226: Preview: Snippet 61 ended.(623261+0x696319).
+<-><->
+      
+l.226 ...e esos valores, elegimos un palo: $4^{3}$
+                                                  .
+Not a real error.
+
+[61]
+./_region_.tex:227: Preview: Snippet 62 started.
+<-><->
+      
+l.227             \begin{equation*}
+                                   
+Not a real error.
+
+./_region_.tex:229: Preview: Snippet 62 ended.(1966099+0x20286153).
+<-><->
+      
+l.229             \end{equation*}
+                                 
+Not a real error.
+
+[62]
+./_region_.tex:231: Preview: Snippet 63 started.
+<-><->
+      
+l.231             \begin{equation*}
+                                   
+Not a real error.
+
+./_region_.tex:233: Preview: Snippet 63 ended.(2542810+0x23660785).
+<-><->
+      
+l.233             \end{equation*}
+                                 
+Not a real error.
+
+[63]
+./_region_.tex:235: Preview: Snippet 64 started.
+<-><->
+      
+l.235 ...  Elegimos, los 2 valores de los pares: $
+                                                  \binom{13}{2}$. Para cada ...
+Not a real error.
+
+./_region_.tex:235: Preview: Snippet 64 ended.(786437+393222x1339848).
+<-><->
+      
+l.235 ...s 2 valores de los pares: $\binom{13}{2}$
+                                                  . Para cada par: $\binom{4...
+Not a real error.
+
+[64]
+./_region_.tex:235: Preview: Snippet 65 started.
+<-><->
+      
+l.235 ... pares: $\binom{13}{2}$. Para cada par: $
+                                                  \binom{4}{2}^{2}$.
+Not a real error.
+
+./_region_.tex:235: Preview: Snippet 65 ended.(916777+393222x1372616).
+<-><->
+      
+l.235 ...3}{2}$. Para cada par: $\binom{4}{2}^{2}$
+                                                  .
+Not a real error.
+
+[65]
+./_region_.tex:237: Preview: Snippet 66 started.
+<-><->
+      
+l.237             \begin{equation*}
+                                   
+Not a real error.
+
+./_region_.tex:239: Preview: Snippet 66 ended.(2096439+0x20845489).
+<-><->
+      
+l.239             \end{equation*}
+                                 
+Not a real error.
+
+[66]
+./_region_.tex:241: Preview: Snippet 67 started.
+<-><->
+      
+l.241             \begin{equation*}
+                                   
+Not a real error.
+
+./_region_.tex:243: Preview: Snippet 67 ended.(1566720+0x21132461).
+<-><->
+      
+l.243             \end{equation*}
+                                 
+Not a real error.
+
+[67]
+./_region_.tex:245: Preview: Snippet 68 started.
+<-><->
+      
+l.245 ...  Valor de la tercia: 13. Las 3 cartas: $
+                                                  \binom{4}{3}$. 2 valores d...
+Not a real error.
+
+./_region_.tex:245: Preview: Snippet 68 ended.(786437+393222x1061320).
+<-><->
+      
+l.245 ... tercia: 13. Las 3 cartas: $\binom{4}{3}$
+                                                  . 2 valores distintos entr...
+Not a real error.
+
+[68]
+./_region_.tex:246: Preview: Snippet 69 started.
+<-><->
+      
+l.246             $
+                   \binom{12}{2}$. Palo de cada una $4^{2}$.
+Not a real error.
+
+./_region_.tex:246: Preview: Snippet 69 ended.(786437+393222x1339848).
+<-><->
+      
+l.246             $\binom{12}{2}$
+                                 . Palo de cada una $4^{2}$.
+Not a real error.
+
+[69]
+./_region_.tex:246: Preview: Snippet 70 started.
+<-><->
+      
+l.246 ...      $\binom{12}{2}$. Palo de cada una $
+                                                  4^{2}$.
+Not a real error.
+
+./_region_.tex:246: Preview: Snippet 70 ended.(623261+0x696319).
+<-><->
+      
+l.246 ...$\binom{12}{2}$. Palo de cada una $4^{2}$
+                                                  .
+Not a real error.
+
+[70]
+./_region_.tex:247: Preview: Snippet 71 started.
+<-><->
+      
+l.247             \begin{equation*}
+                                   
+Not a real error.
+
+./_region_.tex:249: Preview: Snippet 71 ended.(1966099+0x20304185).
+<-><->
+      
+l.249             \end{equation*}
+                                 
+Not a real error.
+
+[71]
+./_region_.tex:251: Preview: Snippet 72 started.
+<-><->
+      
+l.251             \begin{equation*}
+                                   
+Not a real error.
+
+./_region_.tex:253: Preview: Snippet 72 ended.(1566720+0x21166823).
+<-><->
+      
+l.253             \end{equation*}
+                                 
+Not a real error.
+
+[72]
+./_region_.tex:255: Preview: Snippet 73 started.
+<-><->
+      
+l.255 ...    Valor del póker: 13. Las 4 cartas: $
+                                                  \binom{4}{4}=1$. La quinta...
+Not a real error.
+
+./_region_.tex:255: Preview: Snippet 73 ended.(786437+393222x2482177).
+<-><->
+      
+l.255 ...óker: 13. Las 4 cartas: $\binom{4}{4}=1$
+                                                  . La quinta carta: 12. Su ...
+Not a real error.
+
+[73]
+./_region_.tex:256: Preview: Snippet 74 started.
+<-><->
+      
+l.256             \begin{equation*}
+                                   
+Not a real error.
+
+./_region_.tex:258: Preview: Snippet 74 ended.(786432+0x20559485).
+<-><->
+      
+l.258             \end{equation*}
+                                 
+Not a real error.
+
+[74]
+./_region_.tex:260: Preview: Snippet 75 started.
+<-><->
+      
+l.260             \begin{equation*}
+                                   
+Not a real error.
+
+./_region_.tex:262: Preview: Snippet 75 ended.(1566720+0x21337717).
+<-><->
+      
+l.262             \end{equation*}
+                                 
+Not a real error.
+
+[75]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 266.
+
+./_region_.tex:267: Preview: Snippet 76 started.
+<-><->
+      
+l.267         Cierta comunidad se compone de $
+                                              20$ familias en total. De estas,
+Not a real error.
+
+./_region_.tex:267: Preview: Snippet 76 ended.(495239+0x770046).
+<-><->
+      
+l.267         Cierta comunidad se compone de $20$
+                                                  familias en total. De estas,
+Not a real error.
+
+[76]
+./_region_.tex:268: Preview: Snippet 77 started.
+<-><->
+      
+l.268         $
+               4$ familias tienen exactamente un hij@,
+Not a real error.
+
+./_region_.tex:268: Preview: Snippet 77 ended.(495239+0x385023).
+<-><->
+      
+l.268         $4$
+                  familias tienen exactamente un hij@,
+Not a real error.
+
+[77]
+./_region_.tex:269: Preview: Snippet 78 started.
+<-><->
+      
+l.269         $
+               8$ familias tienen exactamente dos hijos,
+Not a real error.
+
+./_region_.tex:269: Preview: Snippet 78 ended.(495239+0x385023).
+<-><->
+      
+l.269         $8$
+                  familias tienen exactamente dos hijos,
+Not a real error.
+
+[78]
+./_region_.tex:270: Preview: Snippet 79 started.
+<-><->
+      
+l.270         $
+               5$ familias tienen exactamente tres hijos,
+Not a real error.
+
+./_region_.tex:270: Preview: Snippet 79 ended.(495239+0x385023).
+<-><->
+      
+l.270         $5$
+                  familias tienen exactamente tres hijos,
+Not a real error.
+
+[79]
+./_region_.tex:271: Preview: Snippet 80 started.
+<-><->
+      
+l.271         $
+               2$ familias tienen exactamente cuatro hijos y
+Not a real error.
+
+./_region_.tex:271: Preview: Snippet 80 ended.(495239+0x385023).
+<-><->
+      
+l.271         $2$
+                  familias tienen exactamente cuatro hijos y
+Not a real error.
+
+[80]
+./_region_.tex:272: Preview: Snippet 81 started.
+<-><->
+      
+l.272         $
+               1$ familia tiene exactamente cinco hijos.
+Not a real error.
+
+./_region_.tex:272: Preview: Snippet 81 ended.(495239+0x385023).
+<-><->
+      
+l.272         $1$
+                  familia tiene exactamente cinco hijos.
+Not a real error.
+
+[81]
+./_region_.tex:275: Preview: Snippet 82 started.
+<-><->
+      
+l.275 ...probabilidad de que dicha familia tenga $
+                                                  k$ hijos para $k=1,2,\dots...
+Not a real error.
+
+./_region_.tex:275: Preview: Snippet 82 ended.(546132+0x426891).
+<-><->
+      
+l.275 ...obabilidad de que dicha familia tenga $k$
+                                                   hijos para $k=1,2,\dots,5$?
+Not a real error.
+
+[82]
+./_region_.tex:275: Preview: Snippet 83 started.
+<-><->
+      
+l.275 ... que dicha familia tenga $k$ hijos para $
+                                                  k=1,2,\dots,5$?
+Not a real error.
+
+./_region_.tex:275: Preview: Snippet 83 ended.(546132+152916x4687614).
+<-><->
+      
+l.275 ...ilia tenga $k$ hijos para $k=1,2,\dots,5$
+                                                  ?
+Not a real error.
+
+[83]
+./_region_.tex:276: Preview: Snippet 84 started.
+<-><->
+      
+l.276 ...ertenezca a una familia con exactamente $
+                                                  k$ hijos para $k=1,2,\dots...
+Not a real error.
+
+./_region_.tex:276: Preview: Snippet 84 ended.(546132+0x426891).
+<-><->
+      
+l.276 ...tenezca a una familia con exactamente $k$
+                                                   hijos para $k=1,2,\dots,5$?
+Not a real error.
+
+[84]
+./_region_.tex:276: Preview: Snippet 85 started.
+<-><->
+      
+l.276 ... familia con exactamente $k$ hijos para $
+                                                  k=1,2,\dots,5$?
+Not a real error.
+
+./_region_.tex:276: Preview: Snippet 85 ended.(546132+152916x4687614).
+<-><->
+      
+l.276 ...xactamente $k$ hijos para $k=1,2,\dots,5$
+                                                  ?
+Not a real error.
+
+[85]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 278.
+
+
+./_region_.tex:282: Preview: Snippet 86 started.
+<-><->
+      
+l.282         \begin{equation*}
+                               
+Not a real error.
+
+./_region_.tex:284: Preview: Snippet 86 ended.(555794+0x20651475).
+<-><->
+      
+l.284         \end{equation*}
+                             
+Not a real error.
+
+[86]
+./_region_.tex:286: Preview: Snippet 87 started.
+<-><->
+      
+l.286         \begin{equation*}
+                               
+Not a real error.
+
+./_region_.tex:288: Preview: Snippet 87 ended.(786432+0x23303824).
+<-><->
+      
+l.288         \end{equation*}
+                             
+Not a real error.
+
+[87]
+./_region_.tex:290: Preview: Snippet 88 started.
+<-><->
+      
+l.290 ...probabilidad de que dicha familia tenga $
+                                                  k$ hijos para $k=1,2,\dots...
+Not a real error.
+
+./_region_.tex:290: Preview: Snippet 88 ended.(546132+0x426891).
+<-><->
+      
+l.290 ...obabilidad de que dicha familia tenga $k$
+                                                   hijos para $k=1,2,\dots,5...
+Not a real error.
+
+[88]
+./_region_.tex:290: Preview: Snippet 89 started.
+<-><->
+      
+l.290 ... que dicha familia tenga $k$ hijos para $
+                                                  k=1,2,\dots,5$?\\
+Not a real error.
+
+./_region_.tex:290: Preview: Snippet 89 ended.(546132+152916x4687614).
+<-><->
+      
+l.290 ...ilia tenga $k$ hijos para $k=1,2,\dots,5$
+                                                  ?\\
+Not a real error.
+
+[89]
+./_region_.tex:292: Preview: Snippet 90 started.
+<-><->
+      
+l.292             \begin{equation*}
+                                   
+Not a real error.
+
+./_region_.tex:294: Preview: Snippet 90 ended.(1617613+0x21387032).
+<-><->
+      
+l.294             \end{equation*}
+                                 
+Not a real error.
+
+[90]
+./_region_.tex:296: Preview: Snippet 91 started.
+<-><->
+      
+l.296             \begin{align*}
+                                
+Not a real error.
+
+./_region_.tex:302: Preview: Snippet 91 ended.(8882176+0x19584501).
+<-><->
+      
+l.302             \end{align*}
+                              
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 302.
+
+[91]
+./_region_.tex:303: Preview: Snippet 92 started.
+<-><->
+      
+l.303 ...ertenezca a una familia con exactamente $
+                                                  k$ hijos para $k=1,2,\dots...
+Not a real error.
+
+./_region_.tex:303: Preview: Snippet 92 ended.(546132+0x426891).
+<-><->
+      
+l.303 ...tenezca a una familia con exactamente $k$
+                                                   hijos para $k=1,2,\dots,5...
+Not a real error.
+
+[92]
+./_region_.tex:303: Preview: Snippet 93 started.
+<-><->
+      
+l.303 ... familia con exactamente $k$ hijos para $
+                                                  k=1,2,\dots,5$?\\
+Not a real error.
+
+./_region_.tex:303: Preview: Snippet 93 ended.(546132+152916x4687614).
+<-><->
+      
+l.303 ...xactamente $k$ hijos para $k=1,2,\dots,5$
+                                                  ?\\
+Not a real error.
+
+[93]
+./_region_.tex:304: Preview: Snippet 94 started.
+<-><->
+      
+l.304 ...iños que pertenecen a las familias con $
+                                                  k$ hijos son:
+Not a real error.
+
+./_region_.tex:304: Preview: Snippet 94 ended.(546132+0x426891).
+<-><->
+      
+l.304 ...�os que pertenecen a las familias con $k$
+                                                   hijos son:
+Not a real error.
+
+[94]
+./_region_.tex:305: Preview: Snippet 95 started.
+<-><->
+      
+l.305             \begin{equation*}
+                                   
+Not a real error.
+
+./_region_.tex:307: Preview: Snippet 95 ended.(786432+0x21137719).
+<-><->
+      
+l.307             \end{equation*}
+                                 
+Not a real error.
+
+[95]
+./_region_.tex:309: Preview: Snippet 96 started.
+<-><->
+      
+l.309             \begin{equation*}
+                                   
+Not a real error.
+
+./_region_.tex:311: Preview: Snippet 96 ended.(1661305+0x22290871).
+<-><->
+      
+l.311             \end{equation*}
+                                 
+Not a real error.
+
+[96]
+./_region_.tex:313: Preview: Snippet 97 started.
+<-><->
+      
+l.313             \begin{align*}
+                                
+Not a real error.
+
+./_region_.tex:319: Preview: Snippet 97 ended.(8882176+0x20850071).
+<-><->
+      
+l.319             \end{align*}
+                              
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 319.
+
+[97]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 323.
+
+./_region_.tex:324: Preview: Snippet 98 started.
+<-><->
+      
+l.324         Supongamos que tenemos $
+                                      m$ pelotas distintas y $m$ cajas disti...
+Not a real error.
+
+./_region_.tex:324: Preview: Snippet 98 ended.(338603+0x673557).
+<-><->
+      
+l.324         Supongamos que tenemos $m$
+                                         pelotas distintas y $m$ cajas disti...
+Not a real error.
+
+[98]
+./_region_.tex:324: Preview: Snippet 99 started.
+<-><->
+      
+l.324 ...mos que tenemos $m$ pelotas distintas y $
+                                                  m$ cajas distintas.
+Not a real error.
+
+./_region_.tex:324: Preview: Snippet 99 ended.(338603+0x673557).
+<-><->
+      
+l.324 ...s que tenemos $m$ pelotas distintas y $m$
+                                                   cajas distintas.
+Not a real error.
+
+[99]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 327.
+
+./_region_.tex:330: Preview: Snippet 100 started.
+<-><->
+      
+l.330         Sea $
+                   m\geq2$. Cada pelota puede colocarse en cualquiera de las...
+Not a real error.
+
+./_region_.tex:330: Preview: Snippet 100 ended.(500148+106932x2107151).
+<-><->
+      
+l.330         Sea $m\geq2$
+                          . Cada pelota puede colocarse en cualquiera de las...
+Not a real error.
+
+[100]
+./_region_.tex:330: Preview: Snippet 101 started.
+<-><->
+      
+l.330 ...ta puede colocarse en cualquiera de las $
+                                                  m$ cajas de manera indepen...
+Not a real error.
+
+./_region_.tex:330: Preview: Snippet 101 ended.(338603+0x673557).
+<-><->
+      
+l.330 ... puede colocarse en cualquiera de las $m$
+                                                   cajas de manera independi...
+Not a real error.
+
+[101]
+./_region_.tex:331: Preview: Snippet 102 started.
+<-><->
+      
+l.331 ... el número total de configuraciones es $
+                                                  m^{m}$. Queremos que exact...
+Not a real error.
+
+./_region_.tex:331: Preview: Snippet 102 ended.(511125+0x1199065).
+<-><->
+      
+l.331 ...�mero total de configuraciones es $m^{m}$
+                                                  . Queremos que exactamente...
+Not a real error.
+
+[102]
+./_region_.tex:331: Preview: Snippet 103 started.
+<-><->
+      
+l.331 ... exactamente una caja quede vacía. Hay $
+                                                  m$
+Not a real error.
+
+./_region_.tex:331: Preview: Snippet 103 ended.(338603+0x673557).
+<-><->
+      
+l.331 ...xactamente una caja quede vacía. Hay $m$
+                                                  
+Not a real error.
+
+[103]
+./_region_.tex:332: Preview: Snippet 104 started.
+<-><->
+      
+l.332         formas de elegirla. Como tenemos $
+                                                m$ pelotas y $m-1$ cajas, y ...
+Not a real error.
+
+./_region_.tex:332: Preview: Snippet 104 ended.(338603+0x673557).
+<-><->
+      
+l.332         formas de elegirla. Como tenemos $m$
+                                                   pelotas y $m-1$ cajas, y ...
+Not a real error.
+
+[104]
+./_region_.tex:332: Preview: Snippet 105 started.
+<-><->
+      
+l.332 ...de elegirla. Como tenemos $m$ pelotas y $
+                                                  m-1$ cajas, y ninguna pued...
+Not a real error.
+
+./_region_.tex:332: Preview: Snippet 105 ended.(495239+65536x2019771).
+<-><->
+      
+l.332 ...legirla. Como tenemos $m$ pelotas y $m-1$
+                                                   cajas, y ninguna puede qu...
+Not a real error.
+
+[105]
+./_region_.tex:333: Preview: Snippet 106 started.
+<-><->
+      
+l.333 ...ndrá exactamente 2 pelotas, las demás $
+                                                  m-2$ cajas contendrán exa...
+Not a real error.
+
+./_region_.tex:333: Preview: Snippet 106 ended.(495239+65536x2019771).
+<-><->
+      
+l.333 ...� exactamente 2 pelotas, las demás $m-2$
+                                                   cajas contendrán exactam...
+Not a real error.
+
+[106]
+./_region_.tex:335: Preview: Snippet 107 started.
+<-><->
+      
+l.335         \begin{align*}
+                            
+Not a real error.
+
+./_region_.tex:337: Preview: Snippet 107 ended.(1140322+0x20196343).
+<-><->
+      
+l.337         \end{align*}
+                          
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 337.
+
+[107]
+./_region_.tex:338: Preview: Snippet 108 started.
+<-><->
+      
+l.338         Hay $
+                   \binom{m}{2}$ formas de escogerlas. Fijadas las dos pelot...
+Not a real error.
+
+./_region_.tex:338: Preview: Snippet 108 ended.(786437+393222x1275532).
+<-><->
+      
+l.338         Hay $\binom{m}{2}$
+                                 formas de escogerlas. Fijadas las dos pelot...
+Not a real error.
+
+[108]
+./_region_.tex:339: Preview: Snippet 109 started.
+<-><->
+      
+l.339 ...dos pelotas, distribuimos las restantes $
+                                                  m-2$ pelotas, una en cada ...
+Not a real error.
+
+./_region_.tex:339: Preview: Snippet 109 ended.(495239+65536x2019771).
+<-><->
+      
+l.339 ...pelotas, distribuimos las restantes $m-2$
+                                                   pelotas, una en cada una ...
+Not a real error.
+
+[109]
+./_region_.tex:339: Preview: Snippet 110 started.
+<-><->
+      
+l.339 ...$ pelotas, una en cada una de las otras $
+                                                  m-2$ cajas.
+Not a real error.
+
+./_region_.tex:339: Preview: Snippet 110 ended.(495239+65536x2019771).
+<-><->
+      
+l.339 ...lotas, una en cada una de las otras $m-2$
+                                                   cajas.
+Not a real error.
+
+[110]
+./_region_.tex:341: Preview: Snippet 111 started.
+<-><->
+      
+l.341         \begin{equation*}
+                               
+Not a real error.
+
+./_region_.tex:343: Preview: Snippet 111 ended.(786432+0x21441970).
+<-><->
+      
+l.343         \end{equation*}
+                             
+Not a real error.
+
+[111]
+./_region_.tex:345: Preview: Snippet 112 started.
+<-><->
+      
+l.345         \begin{equation*}
+                               
+Not a real error.
+
+./_region_.tex:347: Preview: Snippet 112 ended.(1966099+0x20365054).
+<-><->
+      
+l.347         \end{equation*}
+                             
+Not a real error.
+
+[112]
+./_region_.tex:349: Preview: Snippet 113 started.
+<-><->
+      
+l.349         \begin{equation*}
+                               
+Not a real error.
+
+./_region_.tex:351: Preview: Snippet 113 ended.(2007467+0x20116769).
+<-><->
+      
+l.351         \end{equation*}
+                             
+Not a real error.
+
+[113]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 354.
+
+./_region_.tex:355: Preview: Snippet 114 started.
+<-><->
+      
+l.355         Cierta urna contiene $
+                                    46$ pelotas en total: $12$ rojas, $16$ a...
+Not a real error.
+
+./_region_.tex:355: Preview: Snippet 114 ended.(495239+0x770046).
+<-><->
+      
+l.355         Cierta urna contiene $46$
+                                        pelotas en total: $12$ rojas, $16$ a...
+Not a real error.
+
+[114]
+./_region_.tex:355: Preview: Snippet 115 started.
+<-><->
+      
+l.355 ...ta urna contiene $46$ pelotas en total: $
+                                                  12$ rojas, $16$ azules y $...
+Not a real error.
+
+./_region_.tex:355: Preview: Snippet 115 ended.(495239+0x770046).
+<-><->
+      
+l.355 ...urna contiene $46$ pelotas en total: $12$
+                                                   rojas, $16$ azules y $18$...
+Not a real error.
+
+[115]
+./_region_.tex:355: Preview: Snippet 116 started.
+<-><->
+      
+l.355 ...iene $46$ pelotas en total: $12$ rojas, $
+                                                  16$ azules y $18$ verdes.
+Not a real error.
+
+./_region_.tex:355: Preview: Snippet 116 ended.(495239+0x770046).
+<-><->
+      
+l.355 ...e $46$ pelotas en total: $12$ rojas, $16$
+                                                   azules y $18$ verdes.
+Not a real error.
+
+[116]
+./_region_.tex:355: Preview: Snippet 117 started.
+<-><->
+      
+l.355 ...tas en total: $12$ rojas, $16$ azules y $
+                                                  18$ verdes.
+Not a real error.
+
+./_region_.tex:355: Preview: Snippet 117 ended.(495239+0x770046).
+<-><->
+      
+l.355 ... en total: $12$ rojas, $16$ azules y $18$
+                                                   verdes.
+Not a real error.
+
+[117]
+./_region_.tex:356: Preview: Snippet 118 started.
+<-><->
+      
+l.356         Si tomamos $
+                          7$ pelotas de la urna de manera aleatoria,
+Not a real error.
+
+./_region_.tex:356: Preview: Snippet 118 ended.(495239+0x385023).
+<-><->
+      
+l.356         Si tomamos $7$
+                             pelotas de la urna de manera aleatoria,
+Not a real error.
+
+[118]
+./_region_.tex:360: Preview: Snippet 119 started.
+<-><->
+      
+l.360             \item[(a)] $
+                              3$ rojas, $2$ azules y $2$ verdes.
+Not a real error.
+
+./_region_.tex:360: Preview: Snippet 119 ended.(495239+0x385023).
+<-><->
+      
+l.360             \item[(a)] $3$
+                                 rojas, $2$ azules y $2$ verdes.
+Not a real error.
+
+[119]
+./_region_.tex:360: Preview: Snippet 120 started.
+<-><->
+      
+l.360             \item[(a)] $3$ rojas, $
+                                         2$ azules y $2$ verdes.
+Not a real error.
+
+./_region_.tex:360: Preview: Snippet 120 ended.(495239+0x385023).
+<-><->
+      
+l.360             \item[(a)] $3$ rojas, $2$
+                                            azules y $2$ verdes.
+Not a real error.
+
+[120]
+./_region_.tex:360: Preview: Snippet 121 started.
+<-><->
+      
+l.360 ...     \item[(a)] $3$ rojas, $2$ azules y $
+                                                  2$ verdes.
+Not a real error.
+
+./_region_.tex:360: Preview: Snippet 121 ended.(495239+0x385023).
+<-><->
+      
+l.360 ...   \item[(a)] $3$ rojas, $2$ azules y $2$
+                                                   verdes.
+Not a real error.
+
+[121]
+./_region_.tex:361: Preview: Snippet 122 started.
+<-><->
+      
+l.361             \item[(b)] Al menos $
+                                       2$ rojas.
+Not a real error.
+
+./_region_.tex:361: Preview: Snippet 122 ended.(495239+0x385023).
+<-><->
+      
+l.361             \item[(b)] Al menos $2$
+                                          rojas.
+Not a real error.
+
+[122]
+./_region_.tex:363: Preview: Snippet 123 started.
+<-><->
+      
+l.363             \item[(d)] Exactamente $
+                                          3$ rojas o exactamente $3$ azules.
+Not a real error.
+
+./_region_.tex:363: Preview: Snippet 123 ended.(495239+0x385023).
+<-><->
+      
+l.363             \item[(d)] Exactamente $3$
+                                             rojas o exactamente $3$ azules.
+Not a real error.
+
+[123]
+./_region_.tex:363: Preview: Snippet 124 started.
+<-><->
+      
+l.363 ...d)] Exactamente $3$ rojas o exactamente $
+                                                  3$ azules.
+Not a real error.
+
+./_region_.tex:363: Preview: Snippet 124 ended.(495239+0x385023).
+<-><->
+      
+l.363 ...] Exactamente $3$ rojas o exactamente $3$
+                                                   azules.
+Not a real error.
+
+[124]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 365.
+
+
+./_region_.tex:369: Preview: Snippet 125 started.
+<-><->
+      
+l.369         \begin{align*}
+                            
+Not a real error.
+
+./_region_.tex:371: Preview: Snippet 125 ended.(1140322+0x23014397).
+<-><->
+      
+l.371         \end{align*}
+                          
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 371.
+
+[125]
+./_region_.tex:373: Preview: Snippet 126 started.
+<-><->
+      
+l.373         \begin{equation*}
+                               
+Not a real error.
+
+./_region_.tex:375: Preview: Snippet 126 ended.(1966099+0x17792920).
+<-><->
+      
+l.375         \end{equation*}
+                             
+Not a real error.
+
+[126]
+./_region_.tex:377: Preview: Snippet 127 started.
+<-><->
+      
+l.377             \item[(a)] $
+                              3$ rojas, $2$ azules y $2$ verdes.
+Not a real error.
+
+./_region_.tex:377: Preview: Snippet 127 ended.(495239+0x385023).
+<-><->
+      
+l.377             \item[(a)] $3$
+                                 rojas, $2$ azules y $2$ verdes.
+Not a real error.
+
+[127]
+./_region_.tex:377: Preview: Snippet 128 started.
+<-><->
+      
+l.377             \item[(a)] $3$ rojas, $
+                                         2$ azules y $2$ verdes.
+Not a real error.
+
+./_region_.tex:377: Preview: Snippet 128 ended.(495239+0x385023).
+<-><->
+      
+l.377             \item[(a)] $3$ rojas, $2$
+                                            azules y $2$ verdes.
+Not a real error.
+
+[128]
+./_region_.tex:377: Preview: Snippet 129 started.
+<-><->
+      
+l.377 ...     \item[(a)] $3$ rojas, $2$ azules y $
+                                                  2$ verdes.
+Not a real error.
+
+./_region_.tex:377: Preview: Snippet 129 ended.(495239+0x385023).
+<-><->
+      
+l.377 ...   \item[(a)] $3$ rojas, $2$ azules y $2$
+                                                   verdes.
+Not a real error.
+
+[129]
+./_region_.tex:378: Preview: Snippet 130 started.
+<-><->
+      
+l.378             \begin{equation*}
+                                   
+Not a real error.
+
+./_region_.tex:380: Preview: Snippet 130 ended.(2542810+0x19628750).
+<-><->
+      
+l.380             \end{equation*}
+                                 
+Not a real error.
+
+[130]
+./_region_.tex:382: Preview: Snippet 131 started.
+<-><->
+      
+l.382             Sea $
+                       X$ el número de pelotas rojas extraídas.
+Not a real error.
+
+./_region_.tex:382: Preview: Snippet 131 ended.(537395+0x700911).
+<-><->
+      
+l.382             Sea $X$
+                          el número de pelotas rojas extraídas.
+Not a real error.
+
+[131]
+./_region_.tex:383: Preview: Snippet 132 started.
+<-><->
+      
+l.383             \begin{align*}
+                                
+Not a real error.
+
+./_region_.tex:385: Preview: Snippet 132 ended.(2477253+0x23368974).
+<-><->
+      
+l.385             \end{align*}
+                              
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 385.
+
+[132]
+./_region_.tex:387: Preview: Snippet 133 started.
+<-><->
+      
+l.387             \begin{align*}
+                                
+Not a real error.
+
+./_region_.tex:389: Preview: Snippet 133 ended.(2542810+0x19649242).
+<-><->
+      
+l.389             \end{align*}
+                              
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 389.
+
+[133]
+./_region_.tex:391: Preview: Snippet 134 started.
+<-><->
+      
+l.391             \begin{align*}
+                                
+Not a real error.
+
+./_region_.tex:393: Preview: Snippet 134 ended.(2542810+0x20426116).
+<-><->
+      
+l.393             \end{align*}
+                              
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 393.
+
+[134]
+./_region_.tex:395: Preview: Snippet 135 started.
+<-><->
+      
+l.395             \begin{align*}
+                                
+Not a real error.
+
+./_region_.tex:397: Preview: Snippet 135 ended.(2542810+0x21918190).
+<-><->
+      
+l.397             \end{align*}
+                              
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 397.
+
+[135]
+./_region_.tex:400: Preview: Snippet 136 started.
+<-><->
+      
+l.400             \begin{align*}
+                                
+Not a real error.
+
+./_region_.tex:404: Preview: Snippet 136 ended.(6422585+0x19399314).
+<-><->
+      
+l.404             \end{align*}
+                              
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 404.
+
+[136]
+./_region_.tex:406: Preview: Snippet 137 started.
+<-><->
+      
+l.406             \begin{align*}
+                                
+Not a real error.
+
+./_region_.tex:408: Preview: Snippet 137 ended.(2542810+0x20684154).
+<-><->
+      
+l.408             \end{align*}
+                              
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 408.
+
+[137]
+./_region_.tex:410: Preview: Snippet 138 started.
+<-><->
+      
+l.410             Sea $
+                       R$ el evento “exactamente 3 rojas” y $B$ el event...
+Not a real error.
+
+./_region_.tex:410: Preview: Snippet 138 ended.(537395+0x592596).
+<-><->
+      
+l.410             Sea $R$
+                          el evento “exactamente 3 rojas” y $B$ el event...
+Not a real error.
+
+[138]
+./_region_.tex:410: Preview: Snippet 139 started.
+<-><->
+      
+l.410 ...$ el evento “exactamente 3 rojas” y $
+                                                  B$ el evento “exactament...
+Not a real error.
+
+./_region_.tex:410: Preview: Snippet 139 ended.(537395+0x624680).
+<-><->
+      
+l.410 ...el evento “exactamente 3 rojas” y $B$
+                                                   el evento “exactamente ...
+Not a real error.
+
+[139]
+./_region_.tex:412: Preview: Snippet 140 started.
+<-><->
+      
+l.412             \begin{align*}
+                                
+Not a real error.
+
+./_region_.tex:414: Preview: Snippet 140 ended.(1140322+0x23220551).
+<-><->
+      
+l.414             \end{align*}
+                              
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 414.
+
+[140]
+./_region_.tex:416: Preview: Snippet 141 started.
+<-><->
+      
+l.416             \begin{align*}
+                                
+Not a real error.
+
+./_region_.tex:420: Preview: Snippet 141 ended.(8152718+0x23017106).
+<-><->
+      
+l.420             \end{align*}
+                              
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 420.
+
+[141]
+./_region_.tex:422: Preview: Snippet 142 started.
+<-><->
+      
+l.422             \begin{align*}
+                                
+Not a real error.
+
+./_region_.tex:424: Preview: Snippet 142 ended.(2542810+0x24608267).
+<-><->
+      
+l.424             \end{align*}
+                              
+Not a real error.
+
+
+LaTeX Warning: Command \pdfstringdef invalid in math mode on input line 424.
+
+[142]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 428.
+
+./_region_.tex:429: Preview: Snippet 143 started.
+<-><->
+      
+l.429 ...l siguiente reordenamiento aleatorio de $
+                                                  n$ elementos.
+Not a real error.
+
+./_region_.tex:429: Preview: Snippet 143 ended.(338603+0x459657).
+<-><->
+      
+l.429 ...siguiente reordenamiento aleatorio de $n$
+                                                   elementos.
+Not a real error.
+
+[143]
+./_region_.tex:430: Preview: Snippet 144 started.
+<-><->
+      
+l.430         Iniciamos con los números $
+                                          1,2,\dots,n$ en ese mismo orden. L...
+Not a real error.
+
+./_region_.tex:430: Preview: Snippet 144 ended.(495239+152916x3299523).
+<-><->
+      
+l.430 ... Iniciamos con los números $1,2,\dots,n$
+                                                   en ese mismo orden. Luego...
+Not a real error.
+
+[144]
+./_region_.tex:431: Preview: Snippet 145 started.
+<-><->
+      
+l.431 ...anzamos una moneda balanceada con lados $
+                                                  S$ (sol) y $A$ (águila).
+Not a real error.
+
+./_region_.tex:431: Preview: Snippet 145 ended.(537395+0x519368).
+<-><->
+      
+l.431 ...zamos una moneda balanceada con lados $S$
+                                                   (sol) y $A$ (águila).
+Not a real error.
+
+[145]
+./_region_.tex:431: Preview: Snippet 146 started.
+<-><->
+      
+l.431 ...moneda balanceada con lados $S$ (sol) y $
+                                                  A$ (águila).
+Not a real error.
+
+./_region_.tex:431: Preview: Snippet 146 ended.(537395+0x577257).
+<-><->
+      
+l.431 ...neda balanceada con lados $S$ (sol) y $A$
+                                                   (águila).
+Not a real error.
+
+[146]
+./_region_.tex:433: Preview: Snippet 147 started.
+<-><->
+      
+l.433         Si sale sol, dejamos al $
+                                       1$ en su lugar y pasamos al siguiente...
+Not a real error.
+
+./_region_.tex:433: Preview: Snippet 147 ended.(495239+0x385023).
+<-><->
+      
+l.433         Si sale sol, dejamos al $1$
+                                          en su lugar y pasamos al siguiente...
+Not a real error.
+
+[147]
+./_region_.tex:434: Preview: Snippet 148 started.
+<-><->
+      
+l.434         Si sale águila, colocamos $
+                                          1$ al final de la fila y pasamos a...
+Not a real error.
+
+./_region_.tex:434: Preview: Snippet 148 ended.(495239+0x385023).
+<-><->
+      
+l.434         Si sale águila, colocamos $1$
+                                             al final de la fila y pasamos a...
+Not a real error.
+
+[148]
+./_region_.tex:435: Preview: Snippet 149 started.
+<-><->
+      
+l.435 ...e procedimiento hasta llegar al número $
+                                                  n$.
+Not a real error.
+
+./_region_.tex:435: Preview: Snippet 149 ended.(338603+0x459657).
+<-><->
+      
+l.435 ...procedimiento hasta llegar al número $n$
+                                                  .
+Not a real error.
+
+[149]
+./_region_.tex:437: Preview: Snippet 150 started.
+<-><->
+      
+l.437         Por ejemplo, para $
+                                 n=4$, si la sucesión de lanzamientos es $S...
+Not a real error.
+
+./_region_.tex:437: Preview: Snippet 150 ended.(495239+0x1880514).
+<-><->
+      
+l.437         Por ejemplo, para $n=4$
+                                     , si la sucesión de lanzamientos es $S...
+Not a real error.
+
+[150]
+./_region_.tex:437: Preview: Snippet 151 started.
+<-><->
+      
+l.437 ...=4$, si la sucesión de lanzamientos es $
+                                                  S A A S$,
+Not a real error.
+
+./_region_.tex:437: Preview: Snippet 151 ended.(537395+0x2193250).
+<-><->
+      
+l.437 ...la sucesión de lanzamientos es $S A A S$
+                                                  ,
+Not a real error.
+
+[151]
+./_region_.tex:438: Preview: Snippet 152 started.
+<-><->
+      
+l.438         el orden inicial $
+                                1,2,3,4$ se convierte en $1,4,2,3$.
+Not a real error.
+
+./_region_.tex:438: Preview: Snippet 152 ended.(495239+152916x2575002).
+<-><->
+      
+l.438         el orden inicial $1,2,3,4$
+                                         se convierte en $1,4,2,3$.
+Not a real error.
+
+[152]
+./_region_.tex:438: Preview: Snippet 153 started.
+<-><->
+      
+l.438 ...orden inicial $1,2,3,4$ se convierte en $
+                                                  1,4,2,3$.
+Not a real error.
+
+./_region_.tex:438: Preview: Snippet 153 ended.(495239+152916x2575002).
+<-><->
+      
+l.438 ...icial $1,2,3,4$ se convierte en $1,4,2,3$
+                                                  .
+Not a real error.
+
+[153]
+./_region_.tex:440: Preview: Snippet 154 started.
+<-><->
+      
+l.440         Calcule la probabilidad de que $
+                                              1,2,\dots,n$ terminen en el mi...
+Not a real error.
+
+./_region_.tex:440: Preview: Snippet 154 ended.(495239+152916x3299523).
+<-><->
+      
+l.440 ...cule la probabilidad de que $1,2,\dots,n$
+                                                   terminen en el mismo orden.
+Not a real error.
+
+[154]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 441.
+
+
+./_region_.tex:444: Preview: Snippet 155 started.
+<-><->
+      
+l.444         Sea $
+                   \omega=(\omega_1,\dots,\omega_n)\in\{S,A\}^n$ la sucesió...
+Not a real error.
+
+./_region_.tex:444: Preview: Snippet 155 ended.(589824+196608x9025580).
+<-><->
+      
+l.444 ...ga=(\omega_1,\dots,\omega_n)\in\{S,A\}^n$
+                                                   la sucesión de resultado...
+Not a real error.
+
+[155]
+./_region_.tex:445: Preview: Snippet 156 started.
+<-><->
+      
+l.445 ...ente y balanceado, por lo que todas las $
+                                                  2^n$ sucesiones posibles s...
+Not a real error.
+
+./_region_.tex:445: Preview: Snippet 156 ended.(511125+0x755791).
+<-><->
+      
+l.445 ... y balanceado, por lo que todas las $2^n$
+                                                   sucesiones posibles son e...
+Not a real error.
+
+[156]
+./_region_.tex:445: Preview: Snippet 157 started.
+<-><->
+      
+l.445 ...bles y cada una ocurre con probabilidad $
+                                                  2^{-n}$.
+Not a real error.
+
+./_region_.tex:445: Preview: Snippet 157 ended.(602150+0x1189063).
+<-><->
+      
+l.445 ...cada una ocurre con probabilidad $2^{-n}$
+                                                  .
+Not a real error.
+
+[157]
+./_region_.tex:447: Preview: Snippet 158 started.
+<-><->
+      
+l.447 ...te estructura: al procesar los números $
+                                                  1,2,\dots,n$ en orden crec...
+Not a real error.
+
+./_region_.tex:447: Preview: Snippet 158 ended.(495239+152916x3299523).
+<-><->
+      
+l.447 ...a: al procesar los números $1,2,\dots,n$
+                                                   en orden creciente, si en...
+Not a real error.
+
+[158]
+./_region_.tex:447: Preview: Snippet 159 started.
+<-><->
+      
+l.447 ...ts,n$ en orden creciente, si en el paso $
+                                                  i$ ocurre $S$, el número ...
+Not a real error.
+
+./_region_.tex:447: Preview: Snippet 159 ended.(515577+0x262695).
+<-><->
+      
+l.447 ...,n$ en orden creciente, si en el paso $i$
+                                                   ocurre $S$, el número $i...
+Not a real error.
+
+[159]
+./_region_.tex:447: Preview: Snippet 160 started.
+<-><->
+      
+l.447 ...den creciente, si en el paso $i$ ocurre $
+                                                  S$, el número $i$ permane...
+Not a real error.
+
+./_region_.tex:447: Preview: Snippet 160 ended.(537395+0x519368).
+<-><->
+      
+l.447 ...n creciente, si en el paso $i$ ocurre $S$
+                                                  , el número $i$ permanece...
+Not a real error.
+
+[160]
+./_region_.tex:447: Preview: Snippet 161 started.
+<-><->
+      
+l.447 ...i en el paso $i$ ocurre $S$, el número $
+                                                  i$ permanece en su posici�...
+Not a real error.
+
+./_region_.tex:447: Preview: Snippet 161 ended.(515577+0x262695).
+<-><->
+      
+l.447 ...en el paso $i$ ocurre $S$, el número $i$
+                                                   permanece en su posición...
+Not a real error.
+
+[161]
+./_region_.tex:447: Preview: Snippet 162 started.
+<-><->
+      
+l.447 ...relativa actual; mientras que si ocurre $
+                                                  A$, el número $i$ se env�...
+Not a real error.
+
+./_region_.tex:447: Preview: Snippet 162 ended.(537395+0x577257).
+<-><->
+      
+l.447 ...lativa actual; mientras que si ocurre $A$
+                                                  , el número $i$ se envía...
+Not a real error.
+
+[162]
+./_region_.tex:447: Preview: Snippet 163 started.
+<-><->
+      
+l.447 ... mientras que si ocurre $A$, el número $
+                                                  i$ se envía al final de l...
+Not a real error.
+
+./_region_.tex:447: Preview: Snippet 163 ended.(515577+0x262695).
+<-><->
+      
+l.447 ...ientras que si ocurre $A$, el número $i$
+                                                   se envía al final de la ...
+Not a real error.
+
+[163]
+./_region_.tex:450: Preview: Snippet 164 started.
+<-><->
+      
+l.450         \[
+                
+Not a real error.
+
+./_region_.tex:454: Preview: Snippet 164 ended.(786432+0x23733337).
+<-><->
+      
+l.454         \]
+                
+Not a real error.
+
+[164]
+./_region_.tex:455: Preview: Snippet 165 started.
+<-><->
+      
+l.455 ...r la concatenación de los elementos de $
+                                                  K$ en orden creciente segu...
+Not a real error.
+
+./_region_.tex:455: Preview: Snippet 165 ended.(537395+0x711606).
+<-><->
+      
+l.455 ...la concatenación de los elementos de $K$
+                                                   en orden creciente seguid...
+Not a real error.
+
+[165]
+./_region_.tex:455: Preview: Snippet 166 started.
+<-><->
+      
+l.455 ...n creciente seguida de los elementos de $
+                                                  L$ también en orden creci...
+Not a real error.
+
+./_region_.tex:455: Preview: Snippet 166 ended.(537395+0x523919).
+<-><->
+      
+l.455 ...creciente seguida de los elementos de $L$
+                                                   también en orden crecien...
+Not a real error.
+
+[166]
+./_region_.tex:456: Preview: Snippet 167 started.
+<-><->
+      
+l.456         \[
+                
+Not a real error.
+
+./_region_.tex:458: Preview: Snippet 167 ended.(786432+0x23874813).
+<-><->
+      
+l.458         \]
+                
+Not a real error.
+
+[167]
+./_region_.tex:460: Preview: Snippet 168 started.
+<-><->
+      
+l.460 ...   Para que el orden final coincida con $
+                                                  (1,2,\dots,n)$ es necesari...
+Not a real error.
+
+./_region_.tex:460: Preview: Snippet 168 ended.(589824+196608x3898435).
+<-><->
+      
+l.460 ... orden final coincida con $(1,2,\dots,n)$
+                                                   es necesario y suficiente...
+Not a real error.
+
+[168]
+./_region_.tex:460: Preview: Snippet 169 started.
+<-><->
+      
+l.460 ... y suficiente que no exista ningún par $
+                                                  i<j$ tal que $\omega_i=A$ ...
+Not a real error.
+
+./_region_.tex:460: Preview: Snippet 169 ended.(515577+152916x1661334).
+<-><->
+      
+l.460 ...uficiente que no exista ningún par $i<j$
+                                                   tal que $\omega_i=A$ y $\...
+Not a real error.
+
+[169]
+./_region_.tex:460: Preview: Snippet 170 started.
+<-><->
+      
+l.460 ...que no exista ningún par $i<j$ tal que $
+                                                  \omega_i=A$ y $\omega_j=S$...
+Not a real error.
+
+./_region_.tex:460: Preview: Snippet 170 ended.(537395+117964x2315016).
+<-><->
+      
+l.460 ...ta ningún par $i<j$ tal que $\omega_i=A$
+                                                   y $\omega_j=S$, pues en t...
+Not a real error.
+
+[170]
+./_region_.tex:460: Preview: Snippet 171 started.
+<-><->
+      
+l.460 ...ingún par $i<j$ tal que $\omega_i=A$ y $
+                                                  \omega_j=S$, pues en tal c...
+Not a real error.
+
+./_region_.tex:460: Preview: Snippet 171 ended.(537395+219909x2322967).
+<-><->
+      
+l.460 ...$i<j$ tal que $\omega_i=A$ y $\omega_j=S$
+                                                  , pues en tal caso el elem...
+Not a real error.
+
+[171]
+./_region_.tex:460: Preview: Snippet 172 started.
+<-><->
+      
+l.460 ...mega_j=S$, pues en tal caso el elemento $
+                                                  j$ aparecería antes que $...
+Not a real error.
+
+./_region_.tex:460: Preview: Snippet 172 ended.(515577+152916x362819).
+<-><->
+      
+l.460 ...ga_j=S$, pues en tal caso el elemento $j$
+                                                   aparecería antes que $i$...
+Not a real error.
+
+[172]
+./_region_.tex:460: Preview: Snippet 173 started.
+<-><->
+      
+l.460 ...o el elemento $j$ aparecería antes que $
+                                                  i$ en la disposición fina...
+Not a real error.
+
+./_region_.tex:460: Preview: Snippet 173 ended.(515577+0x262695).
+<-><->
+      
+l.460 ...el elemento $j$ aparecería antes que $i$
+                                                   en la disposición final,...
+Not a real error.
+
+[173]
+./_region_.tex:461: Preview: Snippet 174 started.
+<-><->
+      
+l.461         \[
+                
+Not a real error.
+
+./_region_.tex:464: Preview: Snippet 174 ended.(1568495+0x20158732).
+<-><->
+      
+l.464         \]
+                
+Not a real error.
+
+[174]
+./_region_.tex:465: Preview: Snippet 175 started.
+<-><->
+      
+l.465         para algún $
+                           r\in\{0,1,\dots,n\}$.
+Not a real error.
+
+./_region_.tex:465: Preview: Snippet 175 ended.(589824+196608x5415555).
+<-><->
+      
+l.465         para algún $r\in\{0,1,\dots,n\}$
+                                               .
+Not a real error.
+
+[175]
+./_region_.tex:467: Preview: Snippet 176 started.
+<-><->
+      
+l.467         Para cada valor posible de $
+                                          r$ existe exactamente una sucesió...
+Not a real error.
+
+./_region_.tex:467: Preview: Snippet 176 ended.(338603+0x368409).
+<-><->
+      
+l.467         Para cada valor posible de $r$
+                                             existe exactamente una sucesió...
+Not a real error.
+
+[176]
+./_region_.tex:467: Preview: Snippet 177 started.
+<-><->
+      
+l.467 ...�mero total de sucesiones favorables es $
+                                                  n+1$. Dado que el espacio ...
+Not a real error.
+
+./_region_.tex:467: Preview: Snippet 177 ended.(495239+60555x1793134).
+<-><->
+      
+l.467 ...o total de sucesiones favorables es $n+1$
+                                                  . Dado que el espacio mues...
+Not a real error.
+
+[177]
+./_region_.tex:467: Preview: Snippet 178 started.
+<-><->
+      
+l.467 ... que el espacio muestral tiene cardinal $
+                                                  2^n$, se concluye que
+Not a real error.
+
+./_region_.tex:467: Preview: Snippet 178 ended.(511125+0x755791).
+<-><->
+      
+l.467 ... el espacio muestral tiene cardinal $2^n$
+                                                  , se concluye que
+Not a real error.
+
+[178]
+./_region_.tex:468: Preview: Snippet 179 started.
+<-><->
+      
+l.468         \[
+                
+Not a real error.
+
+./_region_.tex:472: Preview: Snippet 179 ended.(1566720+0x23745974).
+<-><->
+      
+l.472         \]
+                
+Not a real error.
+
+[179]
+
+ ***********
+LaTeX2e <2024-11-01> patch level 2
+L3 programming layer <2025-01-18>
+ ***********
+ ) 
+Here is how much of TeX's memory you used:
+ 1211 strings out of 434388
+ 20245 string characters out of 4855058
+ 1398517 words of memory out of 5000000
+ 62362 multiletter control sequences out of 15000+600000
+ 605881 words of font info for 71 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 46i,12n,56p,573b,1196s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on _region_.pdf (179 pages, 155503 bytes).
+PDF statistics:
+ 884 PDF objects out of 1000 (max. 8388607)
+ 651 compressed objects within 7 object streams
+ 179 named destinations out of 1000 (max. 500000)
+ 109 words of extra memory for PDF output out of 10000 (max. 10000000)
+
