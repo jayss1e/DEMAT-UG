@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1771388307.9541 "g:/Mi unidad/Demat/Segundo Semestre/Calculo II/Tareas/Tarea 4/tarea4.tex" "tarea4.pdf" "tarea4" 1771388310.79739 0
+["pdflatex"] 1771553055.84867 "g:/Mi unidad/Demat/Segundo Semestre/Calculo II/Tareas/Tarea 4/tarea4.tex" "tarea4.pdf" "tarea4" 1771553058.68926 0
   "c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1769152670 2375 baa924870cfb487815765f9094cf3728 ""
   "c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc" 1769152670 3486 c7eadf5dcc57b3b2d11736679f6636ba ""
   "c:/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1769152670 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
@@ -266,10 +266,10 @@
   "c:/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1769156806 5587484 49bd08ff372a6985d7d70778694ddaac ""
   "c:/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1769156976 3636146 3c13a89ab62703b0a303158aa622f27f ""
   "c:/texlive/2025/texmf.cnf" 1769156779 713 e69b156964470283e0530f5060668171 ""
-  "g:/Mi unidad/Demat/Segundo Semestre/Calculo II/Tareas/Tarea 4/tarea4.tex" 1771388307 8807 f9531b975aae4d97117371451639c9d7 ""
-  "tarea4.aux" 1771388310 654 e88c6d55aed1fd1b04a999634979236f "pdflatex"
-  "tarea4.out" 1771388309 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "tarea4.tex" 1771388307 8807 f9531b975aae4d97117371451639c9d7 ""
+  "g:/Mi unidad/Demat/Segundo Semestre/Calculo II/Tareas/Tarea 4/tarea4.tex" 1771553051 10185 3db586bf7fd4c4497e8215c8a788c689 ""
+  "tarea4.aux" 1771553058 654 2e45713fa9836ea1c2108ec9831690ea "pdflatex"
+  "tarea4.out" 1771553057 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "tarea4.tex" 1771553051 10185 3db586bf7fd4c4497e8215c8a788c689 ""
   "ugmath.sty" 1769402514 7083 f053490863865e6b5c329d52000b2f3a ""
   (generated)
   "tarea4.aux"

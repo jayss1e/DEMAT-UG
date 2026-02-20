@@ -52,6 +52,43 @@
         Intenta aplicar el teorema del valor intermedio.
     \end{mdframed}
 
+    \begin{proof}
+        Supongamos que $g\geq0$, el caso en que $g\leq0$ se sigue
+        facilmente del caso en que $g\geq0$. Tengamos en cuenta que
+        \begin{align*}
+            m=\min\{f(x):x\in[a,b]\}
+        \end{align*}
+        y
+        \begin{align*}
+            M=\max\{f(x):x\in[a,b]\}.
+        \end{align*}
+        En consecuencia por el ejercicio 2 de la tarea 3,
+        \begin{align*}
+            m\int_{a}^{b}g\leq\int_{a}^{b}fg\leq M\int_{a}^{b}g.
+        \end{align*}
+        Si $\int_{a}^{b}g=0$, entonces $\int_{a}^{b}fg=0$ y el resultado es claro. Si $\int_{a}^{b}g\neq0$, entonces
+        \begin{align*}
+            m\leq\frac{1}{\int_{a}^{b}g}\int_{a}^{b}fg\leq M.
+        \end{align*}
+        Definamos
+        \begin{align*}
+            A:=\frac{1}{\int_{a}^{b}g}\int_{a}^{b}fg.
+        \end{align*}
+        Por el paso anterior,
+        \begin{align*}
+            A\in[m,M].
+        \end{align*}
+        Dado que $f$ es continua en $[a,b]$, su imagen es el intervalo cerrado $[m,M]$. Por el teorema del
+        valor intermedio, existe un punto $c\in[a,b]$ tal que
+        \begin{align*}
+            f(c)=A
+        \end{align*}
+        Mutliplicando la igualdad anterior por $\int_{a}^{b}g$, obtenemos
+        \begin{align*}
+            \int_{a}^{b}fg=f(c)\int_{a}^{b}g.
+        \end{align*}
+    \end{proof}
+
     \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 2}]
         \textbf{(Integral de una función impar)} Prueba que si $f$ es una función impar e integrable en un intervalo $[-a,a]$, entonces
         \begin{align*}
