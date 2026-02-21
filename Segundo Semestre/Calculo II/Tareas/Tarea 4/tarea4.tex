@@ -2,6 +2,7 @@
 \usepackage{ugmath}
 \usepackage{float}
 \usepackage{placeins}
+\usepackage [spanish]{babel}
 \usepackage[labelfont=bf,labelsep=space]{caption}
 \newcommand{\paren}[1]{\left( #1 \right)}
 \newcommand{\alumno}{Ricardo León Martínez}
@@ -106,6 +107,114 @@
         y usalo para probar lo afirmado. \textbf{Sugerencia 2:} Trata de usar el ejercicio 4 de la tarea 3.
     \end{mdframed}
 
+    \begin{proof}
+        Sea $f$ una función impar e integrable en $[-a,a]$. Entonces
+        \[
+        f(-x)=-f(x)
+        \quad \text{para todo } x\in[-a,a].
+        \]
+
+        Sea $P=\{t_0,\dots,t_n\}$ una partición de $[0,a]$, con
+        \[
+        0=t_0<t_1<\cdots<t_n=a,
+        \]
+        y sea
+        \[
+        Q=\{-t_0,\dots,-t_n\}
+        \]
+        la partición correspondiente de $[-a,0]$, ordenada crecientemente:
+        \[
+        -a=-t_n<\cdots<-t_1<-t_0=0.
+        \]
+
+        Para cada $i=1,\dots,n$, consideremos los subintervalos
+        \[
+        I_i=[t_{i-1},t_i]
+        \quad \text{y} \quad
+        J_i=[-t_i,-t_{i-1}].
+        \]
+
+        Sea
+        \[
+        m_i=\inf\{f(x):x\in I_i\},
+        \qquad
+        M_i=\sup\{f(x):x\in I_i\}.
+        \]
+
+        Como $f$ es impar, para $x\in J_i$ se tiene $x=-y$ con $y\in I_i$, y por tanto
+        \[
+        f(x)=f(-y)=-f(y).
+        \]
+        De aquí se deduce que
+        \[
+        \inf_{x\in J_i} f(x)
+        =
+        -\sup_{y\in I_i} f(y)
+        =
+        - M_i,
+        \]
+        y
+        \[
+        \sup_{x\in J_i} f(x)
+        =
+        -\inf_{y\in I_i} f(y)
+        =
+        - m_i.
+        \]
+
+        Observando que
+        \[
+        |J_i|=t_i-t_{i-1}=|I_i|,
+        \]
+        se obtiene
+        \[
+        L(f,Q)
+        =
+        \sum_{i=1}^n (-M_i)(t_i-t_{i-1})
+        =
+        - U(f,P),
+        \]
+        y
+        \[
+        U(f,Q)
+        =
+        \sum_{i=1}^n (-m_i)(t_i-t_{i-1})
+        =
+        - L(f,P).
+        \]
+
+        Ahora, como
+        \[
+        \int_{-a}^a f
+        =
+        \int_{-a}^0 f+\int_0^a f,
+        \]
+        y por definición de integral como supremo de sumas inferiores e ínfimo de sumas superiores, se tiene
+
+        \[
+        \int_{-a}^0 f
+        =
+        \sup_{Q\in\mathcal{P}} L(f,Q)
+        =
+        \sup_{P\in\mathcal{P}} (-U(f,P))
+        =
+        - \inf_{P\in\mathcal{P}} U(f,P)
+        =
+        -\int_0^a f.
+        \]
+
+        Por lo tanto,
+        \[
+        \int_{-a}^a f
+        =
+        \int_{-a}^0 f+\int_0^a f
+        =
+        -\int_0^a f+\int_0^a f
+        =
+        0.
+        \]
+    \end{proof}
+
     \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 3}]
         Calcula las integrales siguientes:
         \begin{enumerate}
@@ -181,7 +290,7 @@
         \end{equation*}
     \end{solucion}
 
-    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 4}]
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 5}]
         Calcula la integral
         \begin{align*}
             \int\frac{x+11}{x^{2}-5x-14}dx.
@@ -237,10 +346,256 @@
     \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 5}]
         Prueba que las integrales impropias en los incisos (c),(d) y (e) de la definición 10 no dependen del punto $p$ en cuestión.
     \end{mdframed}
-
+    
     \begin{proof}
-      Para (c), supongamos que existe un punto $p$ tal que la integral impropia en $(a,b)$ esta bien definida. Tomemos un punto $P^{\prime}$ y supongamos que $p\lt p^{\prime}$ el otro
-      caso es analogo. Notemos que para $a\lt x\lt p$ se tiene
+        Para (c), supongamos que existe un punto $p$ tal que la integral impropia en $(a,b)$ está bien definida. Tomemos ahora un punto $p'$ y supongamos que $p<p'$ (el otro caso es análogo). Notemos que para $a<x<p$ se tiene
+        \[
+        \int_x^{p'} f
+        =
+        \int_x^{p} f
+        +
+        \int_{p}^{p'} f,
+        \]
+        porque $f$ es integrable en todo subintervalo cerrado de $(a,b)$, en particular en $[x,p']$.
+
+        Luego, como $\lim_{x\to a^+}\int_x^{p} f$ existe (aunque podría no ser finito) y además
+        \[
+        \left|\int_p^{p'} f\right|<\infty
+        \]
+        por ser $f$ integrable en $[p,p']$, se tiene que el límite
+        \[
+        \lim_{x\to a^+}\int_x^{p'} f
+        \]
+        existe (podría no ser finito), pues
+        \[
+        \int_x^{p'} f
+        =
+        \int_x^{p} f+\int_p^{p'} f
+        \]
+        y el segundo término es constante respecto de $x$. Por lo tanto,
+        \[
+        \int_a^{p'} f
+        =
+        \lim_{x\to a^+}\int_x^{p'} f
+        =
+        \lim_{x\to a^+}\int_x^{p} f
+        +
+        \int_p^{p'} f
+        =
+        \int_a^{p} f+\int_p^{p'} f.
+        \]
+
+        De igual manera, se tiene que
+        \[
+        \int_{p'}^{b} f
+        =
+        \int_{p}^{b} f-\int_{p}^{p'} f.
+        \]
+        En efecto, para $p'<y<b$,
+        \[
+        \int_{p'}^{y} f
+        =
+        \int_{p}^{y} f-\int_{p}^{p'} f,
+        \]
+        y pasando al límite cuando $y\to b^{-}$ se obtiene la igualdad.
+
+        Estas igualdades garantizan que
+        \[
+        \int_a^{p'} f+\int_{p'}^{b} f
+        \]
+        no presenta la forma $\infty-\infty$ o $-\infty+\infty$, ya que
+        \[
+        \int_a^{p'} f+\int_{p'}^{b} f
+        =
+        \left(\int_a^{p} f+\int_p^{p'} f\right)
+        +
+        \left(\int_{p}^{b} f-\int_p^{p'} f\right),
+        \]
+        y el término $\int_p^{p'} f$ es un número real finito que se cancela, por lo que la suma coincide exactamente con
+        \[
+        \int_a^{p} f+\int_{p}^{b} f,
+        \]
+        la cual está bien definida por hipótesis y no es de tipo indeterminado.
+
+        Finalmente,
+        \[
+        \int_a^{p} f+\int_{p}^{b} f
+        =
+        \int_a^{p'} f+\int_{p'}^{b} f,
+        \]
+        con lo que la integral impropia en $(a,b)$ no depende del punto intermedio elegido.
+        Para (d), supongamos que existe un punto $p\in(a,\infty)$ tal que la integral impropia en $(a,\infty)$ está bien definida, es decir,
+        \[
+        \int_a^\infty f
+        =
+        \int_a^p f+\int_p^\infty f,
+        \]
+        sin que aparezca una indeterminación del tipo $\infty-\infty$.
+
+        Tomemos ahora un punto $p'\in(a,\infty)$ y supongamos $p<p'$ (el otro caso es análogo).
+
+        Notemos que para $a<x<p$ se tiene
+        \[
+        \int_x^{p'} f
+        =
+        \int_x^{p} f
+        +
+        \int_{p}^{p'} f,
+        \]
+        porque $f$ es integrable en todo intervalo cerrado y acotado, en particular en $[x,p']$.
+
+        Luego, como $\lim_{x\to a^+}\int_x^{p} f$ existe (aunque podría no ser finito) y además
+        \[
+        \left|\int_p^{p'} f\right|<\infty
+        \]
+        por ser $f$ integrable en $[p,p']$, se tiene que el límite
+        \[
+        \lim_{x\to a^+}\int_x^{p'} f
+        \]
+        existe (podría no ser finito), pues
+        \[
+        \int_x^{p'} f
+        =
+        \int_x^{p} f+\int_p^{p'} f
+        \]
+        y el segundo término es constante respecto de $x$. Por lo tanto,
+        \[
+        \int_a^{p'} f
+        =
+        \lim_{x\to a^+}\int_x^{p'} f
+        =
+        \lim_{x\to a^+}\int_x^{p} f
+        +
+        \int_p^{p'} f
+        =
+        \int_a^{p} f+\int_p^{p'} f.
+        \]
+
+        De igual manera, para $p'<y$ se tiene
+        \[
+        \int_{p'}^{y} f
+        =
+        \int_{p}^{y} f-\int_{p}^{p'} f,
+        \]
+        Pasando al límite cuando $y\to\infty$, se obtiene
+        \[
+        \int_{p'}^{\infty} f
+        =
+        \int_{p}^{\infty} f-\int_{p}^{p'} f.
+        \]
+
+        Estas igualdades garantizan que
+        \[
+        \int_a^{p'} f+\int_{p'}^{\infty} f
+        \]
+        no presenta la forma $\infty-\infty$ o $-\infty+\infty$, ya que
+        \[
+        \int_a^{p'} f+\int_{p'}^{\infty} f
+        =
+        \left(\int_a^{p} f+\int_p^{p'} f\right)
+        +
+        \left(\int_{p}^{\infty} f-\int_p^{p'} f\right),
+        \]
+        y el término $\int_p^{p'} f$ es un número real finito que se cancela, por lo que la suma coincide exactamente con
+        \[
+        \int_a^{p} f+\int_{p}^{\infty} f,
+        \]
+        la cual está bien definida por hipótesis y no es de tipo indeterminado.
+
+        Finalmente,
+        \[
+        \int_a^{p} f+\int_{p}^{\infty} f
+        =
+        \int_a^{p'} f+\int_{p'}^{\infty} f,
+        \]
+        con lo que la integral impropia en $(a,\infty)$ no depende del punto intermedio elegido.
+        Para (e), supongamos que existe un punto $p\in\mathbb{R}$ tal que la integral impropia en $(-\infty,\infty)$ está bien definida, es decir,
+        \[
+        \int_{-\infty}^{\infty} f
+        =
+        \int_{-\infty}^{p} f+\int_p^{\infty} f,
+        \]
+        sin que aparezca una indeterminación del tipo $\infty-\infty$.
+
+        Tomemos ahora un punto $p'\in\mathbb{R}$ y supongamos $p<p'$ (el otro caso es análogo).
+
+        Notemos que para $x<p$ se tiene
+        \[
+        \int_x^{p'} f
+        =
+        \int_x^{p} f
+        +
+        \int_{p}^{p'} f,
+        \]
+        porque $f$ es integrable en todo intervalo cerrado y acotado, en particular en $[x,p']$.
+
+        Luego, como $\lim_{x\to -\infty}\int_x^{p} f$ existe (aunque podría no ser finito) y además
+        \[
+        \left|\int_p^{p'} f\right|<\infty
+        \]
+        por ser $f$ integrable en $[p,p']$, se tiene que el límite
+        \[
+        \lim_{x\to -\infty}\int_x^{p'} f
+        \]
+        existe (podría no ser finito), pues
+        \[
+        \int_x^{p'} f
+        =
+        \int_x^{p} f+\int_p^{p'} f
+        \]
+        y el segundo término es constante respecto de $x$. Por lo tanto,
+        \[
+        \int_{-\infty}^{p'} f
+        =
+        \lim_{x\to -\infty}\int_x^{p'} f
+        =
+        \lim_{x\to -\infty}\int_x^{p} f
+        +
+        \int_p^{p'} f
+        =
+        \int_{-\infty}^{p} f+\int_p^{p'} f.
+        \]
+
+        De igual manera, para $p'<y$ se tiene
+        \[
+        \int_{p'}^{y} f
+        =
+        \int_{p}^{y} f-\int_{p}^{p'} f,
+        \]
+        por aditividad en el intervalo compacto $[p,y]$. Pasando al límite cuando $y\to\infty$, se obtiene
+        \[
+        \int_{p'}^{\infty} f
+        =
+        \int_{p}^{\infty} f-\int_{p}^{p'} f.
+        \]
+
+        Estas igualdades garantizan que
+        \[
+        \int_{-\infty}^{p'} f+\int_{p'}^{\infty} f
+        \]
+        no presenta la forma $\infty-\infty$ o $-\infty+\infty$, ya que
+        \[
+        \int_{-\infty}^{p'} f+\int_{p'}^{\infty} f
+        =
+        \left(\int_{-\infty}^{p} f+\int_p^{p'} f\right)
+        +
+        \left(\int_{p}^{\infty} f-\int_p^{p'} f\right),
+        \]
+        y el término $\int_p^{p'} f$ es un número real finito que se cancela, por lo que la suma coincide exactamente con
+        \[
+        \int_{-\infty}^{p} f+\int_p^{\infty} f,
+        \]
+        la cual está bien definida por hipótesis y no es de tipo indeterminado.
+
+        Finalmente,
+        \[
+        \int_{-\infty}^{p} f+\int_p^{\infty} f
+        =
+        \int_{-\infty}^{p'} f+\int_{p'}^{\infty} f,
+        \]
+        con lo que la integral impropia en $(-\infty,\infty)$ no depende del punto intermedio elegido.
     \end{proof}
-      
+    
 \end{document}
+
+

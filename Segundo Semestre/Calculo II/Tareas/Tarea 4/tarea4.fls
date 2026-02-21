@@ -1,7 +1,7 @@
 PWD /home/void/DEMAT-UG/Segundo Semestre/Calculo II/Tareas/Tarea 4
 INPUT /usr/share/texmf-dist/web2c/texmf.cnf
 INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
-INPUT tarea4.tex
+INPUT /home/void/DEMAT-UG/Segundo Semestre/Calculo II/Tareas/Tarea 4/tarea4.tex
 OUTPUT tarea4.log
 INPUT /usr/share/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/share/texmf-dist/tex/latex/base/article.cls
@@ -12,16 +12,6 @@ INPUT /usr/share/texmf-dist/fonts/map/fontname/texfonts.map
 INPUT /usr/share/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
 INPUT ./ugmath.sty
 INPUT ugmath.sty
-INPUT /usr/share/texmf-dist/tex/generic/babel/babel.sty
-INPUT /usr/share/texmf-dist/tex/generic/babel/babel.sty
-INPUT /usr/share/texmf-dist/tex/generic/babel/txtbabel.def
-INPUT /usr/share/texmf-dist/tex/generic/babel-spanish/spanish.ldf
-INPUT /usr/share/texmf-dist/tex/generic/babel-spanish/spanish.ldf
-INPUT /usr/share/texmf-dist/tex/generic/babel-spanish/spanish.ldf
-INPUT /usr/share/texmf-dist/tex/generic/babel/locale/es/babel-spanish.tex
-INPUT /usr/share/texmf-dist/tex/generic/babel/locale/es/babel-spanish.tex
-INPUT /usr/share/texmf-dist/tex/generic/babel/locale/es/babel-spanish.tex
-INPUT /usr/share/texmf-dist/tex/generic/babel/locale/es/babel-es.ini
 INPUT /usr/share/texmf-dist/tex/latex/base/inputenc.sty
 INPUT /usr/share/texmf-dist/tex/latex/base/inputenc.sty
 INPUT /usr/share/texmf-dist/tex/latex/base/fontenc.sty
@@ -386,6 +376,16 @@ INPUT /usr/share/texmf-dist/tex/latex/float/float.sty
 INPUT /usr/share/texmf-dist/tex/latex/float/float.sty
 INPUT /usr/share/texmf-dist/tex/latex/placeins/placeins.sty
 INPUT /usr/share/texmf-dist/tex/latex/placeins/placeins.sty
+INPUT /usr/share/texmf-dist/tex/generic/babel/babel.sty
+INPUT /usr/share/texmf-dist/tex/generic/babel/babel.sty
+INPUT /usr/share/texmf-dist/tex/generic/babel/txtbabel.def
+INPUT /usr/share/texmf-dist/tex/generic/babel-spanish/spanish.ldf
+INPUT /usr/share/texmf-dist/tex/generic/babel-spanish/spanish.ldf
+INPUT /usr/share/texmf-dist/tex/generic/babel-spanish/spanish.ldf
+INPUT /usr/share/texmf-dist/tex/generic/babel/locale/es/babel-spanish.tex
+INPUT /usr/share/texmf-dist/tex/generic/babel/locale/es/babel-spanish.tex
+INPUT /usr/share/texmf-dist/tex/generic/babel/locale/es/babel-spanish.tex
+INPUT /usr/share/texmf-dist/tex/generic/babel/locale/es/babel-es.ini
 INPUT /usr/share/texmf-dist/tex/latex/lm/t1lmr.fd
 INPUT /usr/share/texmf-dist/tex/latex/lm/t1lmr.fd
 INPUT /usr/share/texmf-dist/tex/latex/lm/t1lmr.fd
@@ -399,6 +399,8 @@ INPUT /usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 INPUT /usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+INPUT /usr/share/texmf-dist/tex/latex/grfext/grfext.sty
+INPUT /usr/share/texmf-dist/tex/latex/grfext/grfext.sty
 INPUT /usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 INPUT /usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 INPUT /usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
@@ -467,17 +469,22 @@ INPUT /usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc
 INPUT /usr/share/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc
 INPUT /usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc
 INPUT /usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc
+INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/ec-lmr8.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/ec-lmr6.tfm
 INPUT tarea4.aux
 INPUT ./tarea4.out
 INPUT ./tarea4.out
 INPUT /usr/share/texmf-dist/fonts/type1/public/lm/lmbx12.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/lm/lmex10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/lm/lmmi12.pfb
+INPUT /usr/share/texmf-dist/fonts/type1/public/lm/lmmi6.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/lm/lmmi8.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/lm/lmr12.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/lm/lmr6.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/lm/lmr8.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/lm/lmri12.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/lm/lmsy10.pfb
+INPUT /usr/share/texmf-dist/fonts/type1/public/lm/lmsy6.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/lm/lmsy8.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb
+INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb
