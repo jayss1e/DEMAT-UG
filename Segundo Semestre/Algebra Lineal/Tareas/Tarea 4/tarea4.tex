@@ -37,10 +37,130 @@
         con coeficientes en un capo $F$ es asociativo.
     \end{mdframed}
 
+    \begin{proof}
+        Sea $A=(a_{1r})$ una matriz $1\times n$. Caso base $m=1$. Para cada $j$, la entrada $(1,j)$ de $(AB)C$ es
+        \begin{equation*}
+            ((AB)C)_{1j}=\sum_{k=1}^{n}(AB)_{1k}c_{kj}=\sum_{k=1}^{n}\left(\sum_{r=1}^{p}a_{1r}b_{rk}\right)c_{kj}.
+        \end{equation*}
+        Por distributiidad en $F$
+        \begin{equation*}
+            ((AB)C)_{1j}=\sum_{k=1}^{n}\sum_{r=1}^{p}a_{1r}b_{rk}c_{kj}.
+        \end{equation*}
+        Como las sumsa son finitas, podemos cambiar el orden
+        \begin{equation*}
+            ((AB)C)_{1j}=\sum_{r=1}^{p}\sum_{k=1}^{n}a_{1r}b_{rk}c_{kj}.
+        \end{equation*}
+        Factorizando $a_{1r}$,
+        \begin{equation*}
+            ((AB)C)_{1j}=\sum_{r=1}^{p}a_{1r}\left(\sum_{k=1}^{n}b_{rk}c_{kj}\right).
+        \end{equation*}
+        De esta forma, se obtiene
+        \begin{equation*}
+            ((AB)C)_{1j}=(A(BC))_{1j},
+        \end{equation*}
+        cuando $A$ tiene una fila. Supongamos que el resultado es valido para
+        matrices con $m$ filas. Definimos
+        \begin{equation*}
+            A=
+            \begin{pmatrix}
+                A^{\prime}\\
+                r
+            \end{pmatrix},
+        \end{equation*}
+        Donde $A^{\prime}$ tiene $m$ filas y $r$ es la ultima fila. Por hipotesis inductiva,
+        \begin{equation*}
+            (A^{\prime}B)C=A^{\prime}(BC).
+        \end{equation*}
+        Por el caso base,
+        \begin{equation*}
+            (rB)C=r(BC).
+        \end{equation*}
+        Por lo tanto, las primeras $m$ filas coinciden y la ultima fila tambien coincide. Luego,
+        \begin{equation*}
+            (AB)C=A(BC).
+        \end{equation*}
+    \end{proof}
+
     \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 2}]
         Sean $A$,$B$ matrices con coeficientes en un campo $F$, de tamaño $2\times 1$, $1\times2$,
         respectivamente. Demuestra que $AB$ no es invertible.
     \end{mdframed}
+
+    \begin{proof}
+        Sea
+        \begin{equation*}
+            A=
+            \begin{pmatrix}
+                a\\
+                b
+            \end{pmatrix},
+            \qquad
+            B=
+            \begin{pmatrix}
+                c & d
+            \end{pmatrix}
+        \end{equation*}
+        Entonces
+        \begin{equation*}
+            AB=
+            \begin{pmatrix}
+                ac & ad\\
+                bc & bd
+            \end{pmatrix}.
+        \end{equation*}
+        Si $AB$ es invertible, entonces existe $C$ tal que
+        \begin{equation*}
+            (AB)C=I_{2}.
+        \end{equation*}
+        Pero observa que las columnas de $AB$ son
+        \begin{equation*}
+            \begin{pmatrix}
+                ac\\
+                bc
+            \end{pmatrix}
+            =c
+            \begin{pmatrix}
+                a\\
+                b
+            \end{pmatrix},
+            \qquad
+            \begin{pmatrix}
+                ad\\
+                bd
+            \end{pmatrix}
+            =d
+            \begin{pmatrix}                
+                a\\
+                b
+            \end{pmatrix}.
+        \end{equation*}
+        Es decir, ambas columnas son multiplos de la misma matriz
+        $\displaystyle\begin{pmatrix}
+                a\\
+                b  
+        \end{pmatrix}$
+        Por lo tanto, no pueden coincidir on las columnas de la identidad
+        \begin{equation*}
+            I_{2}=
+            \begin{pmatrix}
+                1 & 0\\
+                0 & 1
+            \end{pmatrix}.
+        \end{equation*}
+        cuyas columnas
+        \begin{equation*}
+            \begin{pmatrix}
+                1\\
+                0
+            \end{pmatrix},
+            \qquad
+            \begin{pmatrix}
+                0\\
+                1
+            \end{pmatrix}
+        \end{equation*}
+        no son multiplos entre si. Esto nos da una contradicción, por lo tanto $AB$ no es invertible.  
+    \end{proof}
 
     \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 3}]
         Determina si la matriz
@@ -105,6 +225,34 @@
         izquierda, entonces $A$ es invertible.
     \end{mdframed}
 
+    \begin{proof}
+        Supongamos que existe $B$ tal que
+        \begin{equation*}
+            AB=I_{n}.
+        \end{equation*}
+        Tambien supongamos que existe $C$ tal que
+        \begin{equation*}
+            CA=I_{n}.
+        \end{equation*}
+        Multiplicando la primera igualdad por $C$ a la izquierda, se obtiene
+        \begin{equation*}
+            CAB=CI_{n}.
+        \end{equation*}
+        Por la asociatividad del producto de matrices y por definicion de la identidad,
+        \begin{equation*}
+            (CA)B=C.
+        \end{equation*}
+        Luego,
+        \begin{equation*}
+            I_{n}B=C.
+        \end{equation*}
+        Nuevamente por definición de la identidad,
+        \begin{equation*}
+            B=C.
+        \end{equation*}
+        Asi, como la inversa por la izquierda y por la derecha coinciden, se concluye que $A$ es invertible.
+    \end{proof}
+
     \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 6}]
         Sea $A$ una matriz $n\times n$. Demuestra que si $A$ es invertible y $AB=0_{n\times n}$
         para alguna matriz $B$ de tamaño $n\times n$, entonces $B=0_{n\times n}$.
@@ -142,6 +290,7 @@
                 \end{array}
             \right),
             \qquad
+            A_{2}=
             \left(
                 \begin{array}{cccc}
                     1 & 2 & 1 & 0\\
@@ -154,4 +303,203 @@
         $R_{1}$, $R_{2}$ equivalentes a $A_{1}$ y $A_{2}$, respectivamente. Encuentra las matrices
         invertibles $P_{1}$, $P_{2}$ tales que $R_{1}=P_{1}A_{1}$ y $R_{2}=P_{2}A_{2}$
     \end{mdframed}
+
+    \begin{solucion}
+        Sea
+        \begin{equation*}
+            A_{1}=
+            \left(
+                \begin{array}{ccc}
+                    2 & 0 & 0\\
+                    1 & -3 & 1\\
+                    0 & 1 & 3
+                \end{array}
+            \right),
+        \end{equation*}
+        Aplicamos las siguientes operaciones elementales
+        \begin{align*}
+            F_{1}/(2)\to F_{1},\quad F_{2}-1\cdot F_{1}\to F_{2}, \quad F_{2}/(-3)\to F_{2},\\
+            F_{3}-1\cdot F_{2}\to F_{3}, \quad F_{3}/(\frac{10}{3})\to F_{3}, \quad F_{2}-(-\frac{1}{3})\cdot F_{3}\to F_{2}.
+        \end{align*}
+        Entonces obtenemos
+        \begin{equation*}
+            R_{1}=
+            \left(
+                \begin{array}{ccc}
+                    1 & 0 & 0\\
+                    0 & 1 & 0\\
+                    0 & 0 & 1
+                \end{array}
+            \right),
+        \end{equation*}
+        Las operaciones elementales que efectuamos corresponden a las siguientes matrices elementales
+        \begin{align*}
+            E_1=
+            \begin{pmatrix}
+                \frac12 & 0 & 0\\
+                0 & 1 & 0\\
+                0 & 0 & 1
+            \end{pmatrix}
+            \quad
+            E_2=
+            \begin{pmatrix}
+                1 & 0 & 0\\
+                -1 & 1 & 0\\
+                0 & 0 & 1
+            \end{pmatrix}
+            \quad
+            E_3=
+            \begin{pmatrix}
+                1 & 0 & 0\\
+                0 & -\frac13 & 0\\
+                0 & 0 & 1
+            \end{pmatrix}
+            \\
+            E_4=
+            \begin{pmatrix}
+                1 & 0 & 0\\
+                0 & 1 & 0\\
+                0 & -1 & 1
+            \end{pmatrix}
+            \quad
+            E_5=
+            \begin{pmatrix}
+                1 & 0 & 0\\
+                0 & 1 & 0\\
+                0 & 0 & \frac{3}{10}
+            \end{pmatrix}
+            \quad
+            E_6=
+            \begin{pmatrix}
+                1 & 0 & 0\\
+                0 & 1 & \frac13\\
+                0 & 0 & 1
+            \end{pmatrix}
+        \end{align*}
+        Por definición de matriz elemental,
+        \begin{align*}
+            E_{6}E_5E_4E_3E_2E_1A_{1}=R_{1}.
+        \end{align*}
+        Definimos
+        \begin{equation*}
+            P_{1}=E_{6}E_5E_4E_3E_2E_1,
+        \end{equation*}
+        Como las matrices elementales son invertibles, $P_{1}$ es invertible. Calculando el producto, obtenemos
+        \begin{equation*}
+            P_{1}=
+            \begin{pmatrix}
+                \frac12 & 0 & 0\\
+                \frac{3}{20} & -\frac{3}{10} & \frac{1}{10}\\
+                -\frac{1}{20} & \frac{1}{10} & \frac{3}{10}
+            \end{pmatrix}.
+        \end{equation*}
+        Sea
+        \begin{equation*}
+            A_{2}=
+            \left(
+                \begin{array}{cccc}
+                    1 & 2 & 1 & 0\\
+                    1 & 0 & 3 & 5\\
+                    1 & 0 & 1 & 1
+                \end{array}
+            \right).
+        \end{equation*}
+        Aplicamos las siguientes operaciones elementales
+        \begin{align*}
+            F_{2}-1\cdot F_{1} \to F_{2}, \quad
+            F_{3}-1\cdot F_{1} \to F_{3}, \quad
+            F_{2}/(-2) \to F_{2}, \quad
+            F_{3}-(-2)\cdot F_{2} \to F_{3}, \\
+            F_{3}/(-2) \to F_{3}, \quad
+            F_{2}-\left(-\frac{1}{2}\right)\cdot F_{3} \to F_{2}, \quad
+            F_{1}-1\cdot F_{3} \to F_{1}, \quad
+            F_{1}-2\cdot F_{2} \to F_{1}.
+        \end{align*}
+        Entonces obtenemos
+        \begin{equation*}
+            R_{2}=
+            \left(
+                \begin{array}{cccc}
+                    1 & 0 & 0 & -1\\
+                    0 & 1 & 0 & -\frac{1}{2}\\
+                    0 & 0 & 1 & 2
+                \end{array}
+            \right).
+        \end{equation*}
+        Las operaciones elementales que efectuamos corresponden a las siguientes matrices elementales
+        \begin{align*}
+            E_{1}=
+            \begin{pmatrix}
+                1 & 0 & 0\\
+                -1 & 1 & 0\\
+                0 & 0 & 1
+            \end{pmatrix}
+            \quad
+            E_{2}=
+            \begin{pmatrix}
+                1 & 0 & 0\\
+                0 & 1 & 0\\
+                -1 & 0 & 1
+            \end{pmatrix}
+            \quad
+            E_{3}=
+            \begin{pmatrix}
+                1 & 0 & 0\\
+                0 & -\frac12 & 0\\
+                0 & 0 & 1
+            \end{pmatrix}
+            \quad
+            E_{4}=
+            \begin{pmatrix}
+                1 & 0 & 0\\
+                0 & 1 & 0\\
+                0 & 2 & 1
+            \end{pmatrix}
+            \\
+            E_{5}=
+            \begin{pmatrix}
+                1 & 0 & 0\\
+                0 & 1 & 0\\
+                0 & 0 & -\frac12
+            \end{pmatrix}
+            \quad
+            E_{6}=
+            \begin{pmatrix}
+                1 & 0 & 0\\
+                0 & 1 & \frac12\\
+                0 & 0 & 1
+            \end{pmatrix}
+            \quad
+            E_{7}=
+            \begin{pmatrix}
+                1 & 0 & -1\\
+                0 & 1 & 0\\
+                0 & 0 & 1
+            \end{pmatrix}
+            \quad
+            E_{8}=
+            \begin{pmatrix}
+                1 & -2 & 0\\
+                0 & 1 & 0\\
+                0 & 0 & 1
+            \end{pmatrix}
+        \end{align*}
+        Por definición de matriz elemental,
+        \begin{align*}
+            E_{8}E_{7}E_6E_5E_4E_3E_2E_1A_{2}=R_{2}.
+        \end{align*}
+        Definimos
+        \begin{equation*}
+            P_{2}=E_{8}E_{7}E_6E_5E_4E_3E_2E_1,
+        \end{equation*}
+        Como las matrices elementales son invertibles, $P_{2}$ es invertible. Calculando el producto, obtenemos
+        \begin{equation*}
+            P_{2}=
+            \begin{pmatrix}
+                1 & -2 & -1\\
+                \frac12 & -1 & \frac{1}{2}\\
+                -1 & 2 & -\frac12
+            \end{pmatrix}.
+        \end{equation*}
+    \end{solucion}
 \end{document}
