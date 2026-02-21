@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1771640498.11607 "/home/void/DEMAT-UG/Segundo Semestre/Calculo II/Tareas/Tarea 4/tarea4.tex" "tarea4.pdf" "tarea4" 1771640499.01978 0
-  "/home/void/DEMAT-UG/Segundo Semestre/Calculo II/Tareas/Tarea 4/tarea4.tex" 1771640497.9512 19768 01532a09f70438ec7d7c2399a5bf3212 ""
+["pdflatex"] 1771640619.94544 "/home/void/DEMAT-UG/Segundo Semestre/Calculo II/Tareas/Tarea 4/tarea4.tex" "tarea4.pdf" "tarea4" 1771640620.81558 0
+  "/home/void/DEMAT-UG/Segundo Semestre/Calculo II/Tareas/Tarea 4/tarea4.tex" 1771640619.77648 19768 ac39f9c908389dcb6d9e9fc68a1db472 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1767555874 2375 baa924870cfb487815765f9094cf3728 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc" 1767555874 3486 c7eadf5dcc57b3b2d11736679f6636ba ""
   "/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1767555874 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
@@ -276,9 +276,9 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1767555874 42087 b0f9697c952c8f5a8eede4134282cb0d ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1771638064 5467117 e063ce8e53b0cc3d0312473583ebc51c ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1771638029 3459355 e070e82f0dd9eabc5d9cb727295d7c05 ""
-  "tarea4.aux" 1771640498.95147 655 f6bd5d48c35c022ace83b08f64a36f16 "pdflatex"
-  "tarea4.out" 1771640498.75043 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "tarea4.tex" 1771640497.9512 19768 01532a09f70438ec7d7c2399a5bf3212 ""
+  "tarea4.aux" 1771640620.74602 655 f6bd5d48c35c022ace83b08f64a36f16 "pdflatex"
+  "tarea4.out" 1771640620.54768 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "tarea4.tex" 1771640619.77648 19768 ac39f9c908389dcb6d9e9fc68a1db472 ""
   "ugmath.sty" 1771637856.20638 7050 7a361c18b0738c8b7419ac5f8b7ab0b2 ""
   (generated)
   "tarea4.aux"
