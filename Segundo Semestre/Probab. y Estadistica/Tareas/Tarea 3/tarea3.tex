@@ -1,0 +1,124 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{ugmath}
+\usepackage{float}
+\usepackage{placeins}
+\usepackage{array}
+\usepackage[labelfont=bf,labelsep=space]{caption}
+\newcommand{\paren}[1]{\left( #1 \right)}
+\newcommand{\alumno}{Ricardo León Martínez}
+\newcommand{\materia}{Elementos de Probabilidad y Estadistica}
+\newcommand{\profesor}{Claudia Reynoso Alcántara}
+\newcommand{\tarea}{Tarea 3}
+\newcommand{\fecha}{24/2/2026}
+
+\begin{document}
+
+    \begin{center}
+        {\large\textbf{UNIVERSIDAD DE GUANAJUATO}}\\[0.3cm]
+        {\normalsize\textbf{DIVISIÓN DE CIENCIAS NATURALES Y EXACTAS}}\\
+        {\normalsize\textbf{CAMPUS GUANAJUATO}}\\[1cm]
+
+        {\Large\textbf{\tarea\ (\materia)}}\\[1cm]
+    \end{center}
+
+    \noindent
+    \textbf{Nombre:} \alumno 
+    \hfill 
+    \textbf{Fecha:} \fecha 
+    \hfill 
+    \textbf{Calificación:} \rule{3cm}{0.4pt}
+
+    \vspace{0.3cm}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 1}]
+        Demuestre que no existe conjunto $X$ que contenga a su conjunto potencia, esto es, no existe conjunto $X$ tal que
+        \begin{equation*}
+            2^X \subset X.
+        \end{equation*}
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 2}]
+        Sean $A, B, C, D \subset \Omega$. Demuestre las siguientes igualdades.
+        \begin{enumerate}[label=(\alph*)]
+            \item $((A \cap B) \cup (C \cap D))^c = (A^c \cup B^c) \cap (C^c \cup D^c)$
+            \item $A \Delta \Omega = A^c$
+            \item $(A \cup B) \cap (A \cup B^c) \cap (A^c \cup B) \cap (A^c \cup B^c) = \varnothing$
+            \item $A \setminus B = A \cap (A \Delta B)$
+            \item $A \cup B = (A \Delta B) \Delta (A \cap B)$
+            \item $(A \cap B^c) \Delta (B \cap A^c) = A \Delta B$
+            \item $A \Delta B = C \Delta D \Rightarrow A \Delta C = B \Delta D$
+            \item $A \cap (B \Delta C) = (A \cap B) \Delta (A \cap C)$
+            \item $A \Delta B = (A \Delta C) \Delta (C \Delta B)$
+        \end{enumerate}
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 3}]
+        Sean $A, B, C, D \subset \Omega$. En cada una de las siguientes demuestre la igualdad, o bien, en caso de no ser cierta, dé condiciones necesarias y suficientes para que ocurra.
+        \begin{enumerate}[label=(\alph*)]
+            \item $A \cup (B \cap C) = (A \cup B) \cap (A \cup C)$
+            \item $A \cup (B \cup C) = A \setminus (B \setminus C)$
+            \item $(A \setminus B) \setminus C = A \setminus (B \setminus C)$
+            \item $A \Delta (B \Delta C) = (A \Delta B) \Delta C$
+            \item $A \setminus (B \cap C) = (A \setminus B) \cup (A \setminus C)$
+            \item $A \setminus (B \cup C) = (A \setminus B) \cap (A \setminus C)$
+        \end{enumerate}
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 4}]
+        Sean $A_1, A_2, A_3$ eventos de un espacio muestral $\Omega$. Describa mediante uniones, intersecciones y complementos cada uno de los siguientes eventos.
+        \begin{enumerate}[label=(\alph*)]
+            \item Los tres eventos ocurren.
+            \item Sólo ocurre $A_2$.
+            \item Ocurren $A_1$ y $A_2$ pero no $A_3$.
+            \item Ocurre al menos uno de los tres eventos.
+            \item No ocurre ninguno de los tres eventos.
+            \item Ocurren al menos dos eventos simultáneamente.
+            \item Ocurren exactamente dos eventos.
+        \end{enumerate}
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 5}]
+        Sea
+        \begin{equation*}
+            \Omega = \{AAA, AAS, ASA, SAA, ASS, SAS, SSA, SSS\}
+        \end{equation*}
+        el espacio muestral de lanzar una moneda tres veces donde $A$ es águila y $S$ es sol. Describa con palabras cada uno de los siguientes eventos.
+        \begin{enumerate}[label=(\alph*)]
+            \item $E_1 = \{AAA, AAS, ASA, ASS\}$
+            \item $E_2 = \{AAA, SSS\}$
+            \item $E_3 = \{AAS, ASA, SAA\}$
+            \item $E_4 = \{AAS, ASA, SAA, ASS, SAS, SSA\}$
+        \end{enumerate}
+        Por ejemplo, $\{ASS, SAS, SSA\}$ es el evento de obtener exactamente una águila en los tres lanzamientos.
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 6}]
+        En los años 2010, se realizó una encuesta de opinión pública que contenía las siguientes tres preguntas:
+        \begin{enumerate}
+            \item ¿Está afiliado a algún partido político?
+            \item ¿Aprueba el desempeño del actual presidente?
+            \item ¿Está a favor de que el INE organice las elecciones?
+        \end{enumerate}
+        Se encuestaron a 1000 personas en total cuyas respuestas a cada pregunta sólo podían ser ``sí'' o ``no''. Lamentablemente, se perdieron los registros de esta encuesta excepto por la siguiente información:
+        \begin{itemize}
+            \item 550 personas respondieron ``sí'' a la tercera pregunta y 450 respondieron ``no'',
+            \item 325 personas respondieron ``sí'' exactamente dos veces,
+            \item 100 personas respondieron ``sí'' a las tres preguntas,
+            \item 125 personas afiliadas a algún partido aprobaban además el desempeño del presidente en turno.
+        \end{itemize}
+        Determine el número de personas encuestadas que estaban a favor de que el INE organizara las elecciones pero que ni aprobaban el desempeño del presidente ni tenían afiliación a partido político alguno.
+        \textbf{Sugerencia:} Dibuje un diagrama de Venn.
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 7}]
+        Supongamos que $\mathcal{F}$ es un subconjunto del conjunto potencia $2^\Omega$ tal que $\Omega \in \mathcal{F}$. Demuestre que si $\mathcal{F}$ es cerrado bajo diferencias, es decir, $A, B \in \mathcal{F}$ implica $A \setminus B \in \mathcal{F}$, entonces $\mathcal{F}$ también es cerrado bajo las operaciones de unión, intersección y complemento.
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 8}]
+        Sea $(\Omega, \mathcal{F}, P)$ un espacio de probabilidad con espacio muestral finito. Demuestre que para cualesquiera eventos $A, B \in \mathcal{F}$ se satisfacen las siguientes desigualdades:
+        \begin{equation*}
+            P(A) + P(B) - 1 \le P(A \cap B) \le P(A \cup B) \le P(A) + P(B).
+        \end{equation*}
+        Más aún, para cada desigualdad, dé condiciones necesarias y suficientes para que la igualdad ocurra.
+    \end{mdframed}
+\end{document}
