@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2026.2.20)  22 FEB 2026 18:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2026.2.20)  23 FEB 2026 17:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1017,7 +1017,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--25
 
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 27.
+(mdframed)              on input line 26.
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 27.
 (/usr/share/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
@@ -1054,6 +1054,16 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 LaTeX Font Info:    Trying to load font information for U+stmry on input line 27.
  (/usr/share/texmf-dist/tex/latex/stmaryrd/Ustmry.fd)
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 29.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 31.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 37.
+
 
 [1
 
@@ -1069,15 +1079,15 @@ Package rerunfilecheck Info: File `tarea2.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 39360 strings out of 473190
- 878253 string characters out of 5722593
- 1388239 words of memory out of 5000000
- 61928 multiletter control sequences out of 15000+600000
+ 39404 strings out of 473190
+ 879291 string characters out of 5722593
+ 1393286 words of memory out of 5000000
+ 61972 multiletter control sequences out of 15000+600000
  591272 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,10n,107p,809b,1014s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,10n,107p,809b,1190s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr12.pfb>
-Output written on tarea2.pdf (1 page, 64159 bytes).
+Output written on tarea2.pdf (1 page, 68470 bytes).
 PDF statistics:
  61 PDF objects out of 1000 (max. 8388607)
  34 compressed objects within 1 object stream
