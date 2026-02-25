@@ -28,6 +28,57 @@
         y soporta las masas como se indica en la figura. Calcular la reacción en los soportes.
     \end{mdframed}
 
+    \begin{solucion}
+        Sea $g$ la aceleración de la gravedad. Las fuerzas verticales que actúan sobre la viga son:
+        \begin{itemize}
+            \item Peso de la viga: $100g$, aplicado en su punto medio, a $3m$ de $A$.
+            \item Peso de la carga de $300kg$: $300g$, a $2m$ de $A$.
+            \item Peso de la carga de \( 500\text{ kg} \): \( 500g \), a \( 4\text{ m} \) de \( A \).
+            \item Reacción en \( A \): \( R_A \), hacia arriba.
+            \item Reacción en \( B \): \( R_B \), hacia arriba.
+        \end{itemize}
+        Del equilibrio de fuerzas verticales se tiene
+        \[
+            R_A + R_B = 100g + 300g + 500g = 900g. \tag{1}
+        \]
+        Tomando momentos respecto del punto \( A \) (positivo el sentido antihorario), la suma de momentos debe ser nula:
+        \[
+            - (300g)(2) - (100g)(3) - (500g)(4) + R_B(6) = 0.
+        \]
+        Esto es
+        \[
+            -600g - 300g - 2000g + 6R_B = 0,
+        \]
+        \[
+            -2900g + 6R_B = 0,
+        \]
+        de donde
+        \[
+            6R_B = 2900g \quad \Rightarrow \quad R_B = \frac{2900g}{6} = \frac{1450g}{3}. \tag{2}
+        \]
+        Sustituyendo (2) en (1):
+        \[
+            R_A + \frac{1450g}{3} = 900g,
+        \]
+        \[
+            R_A = 900g - \frac{1450g}{3} = \frac{2700g - 1450g}{3} = \frac{1250g}{3}. \tag{3}
+        \]
+        Tomando \( g = 9.81\ \text{m/s}^2 \), se obtiene
+        \[
+            R_A = \frac{1250 \times 9.81}{3} = 4087.5\ \text{N},
+            \qquad
+            R_B = \frac{1450 \times 9.81}{3} = 4741.5\ \text{N}.
+        \]
+        En kilogramos–fuerza (\( 1\ \text{kgf} = 9.81\ \text{N} \)):
+        \[
+            R_A \approx 416.7\ \text{kgf}, \qquad R_B \approx 483.3\ \text{kgf}.
+        \]
+        Por tanto, las reacciones en los apoyos son
+        \[
+            R_A = 4087.5\ \text{N},\quad R_B = 4741.5\ \text{N}.
+        \]
+    \end{solucion}
+
     \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 2}]
         La viga uniforme $AB$ de la figura tiene $4cm$ de largo y pesa $100kgf$. La viga puede
         rotar alrededor del punto fijo $C$. La viga reposa en el punto $A$. Un hombre que pesa
