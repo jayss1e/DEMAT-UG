@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2026.2.20)  23 FEB 2026 23:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2026/dev/Arch Linux) (preloaded format=pdflatex 2026.2.20)  23 FEB 2026 23:22
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1044,12 +1044,12 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 ))
-<Figura.pdf, id=51, 455.24379pt x 625.96059pt>
+<Figura.pdf, id=55, 455.24379pt x 625.96059pt>
 File: Figura.pdf Graphic file (type pdf)
 <use Figura.pdf>
 Package pdftex.def Info: Figura.pdf  used on input line 15.
 (pdftex.def)             Requested size: 455.24268pt x 625.95905pt.
-<Figura.pdf, id=53, page=1, 455.24379pt x 625.96059pt>
+<Figura.pdf, id=57, page=1, 455.24379pt x 625.96059pt>
 File: Figura.pdf Graphic file (type pdf)
 <use Figura.pdf, page 1>
 Package pdftex.def Info: Figura.pdf , page1 used on input line 15.
@@ -1143,7 +1143,17 @@ LaTeX Info: Redefining \% on input line 83.
 
 LaTeX Info: Redefining \. on input line 84.
 LaTeX Info: Redefining \% on input line 84.
-[5] (./notafisica.aux
+[5]
+
+LaTeX Info: Redefining \. on input line 84.
+LaTeX Info: Redefining \% on input line 84.
+[6
+
+]
+Cap\'{\i }tulo 2.
+
+
+[7] (./notafisica.aux
 LaTeX Info: Redefining \. on input line 12.
 LaTeX Info: Redefining \% on input line 12.
 )
@@ -1152,21 +1162,21 @@ LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `notafisica.out' has not changed.
-(rerunfilecheck)             Checksum: 38C4FEC27D6CD8B2E02DB0D79197CB92;959.
+(rerunfilecheck)             Checksum: 19BC8362C3E164F85409445977789538;1042.
  ) 
 Here is how much of TeX's memory you used:
- 40026 strings out of 473190
- 888312 string characters out of 5722593
+ 40030 strings out of 473190
+ 888344 string characters out of 5722593
  1411127 words of memory out of 5000000
- 62558 multiletter control sequences out of 15000+600000
+ 62559 multiletter control sequences out of 15000+600000
  597310 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,17n,107p,804b,635s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmro12.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsy8.pfb>
-Output written on notafisica.pdf (6 pages, 220382 bytes).
+Output written on notafisica.pdf (8 pages, 221613 bytes).
 PDF statistics:
- 188 PDF objects out of 1000 (max. 8388607)
- 129 compressed objects within 2 object streams
- 11 named destinations out of 1000 (max. 500000)
- 164 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 204 PDF objects out of 1000 (max. 8388607)
+ 143 compressed objects within 2 object streams
+ 14 named destinations out of 1000 (max. 500000)
+ 172 words of extra memory for PDF output out of 10000 (max. 10000000)
 
