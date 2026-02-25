@@ -37,6 +37,25 @@
         \end{equation*}
     \end{mdframed}
 
+    \begin{proof}
+        Supongamos, que existe un conjunto $X$ tal que
+        \begin{equation*}
+            \mathcal{P}(X)\subseteq X.
+        \end{equation*}
+        Definimos el siguiente subconjunto de $X$
+        \begin{equation*}
+            A:=\{x\in X:x\notin x\}.
+        \end{equation*}
+        Como $A\subseteq X$, se sigue que
+        \begin{equation*}
+            A\in\mathcal{P}(X).
+        \end{equation*}
+        Por hipotesis, $\mathcal{P}(X)\subseteq X$, luego
+        \begin{equation*}
+            A\in X
+        \end{equation*}
+    \end{proof}
+
     \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 2}]
         Sean $A, B, C, D \subset \Omega$. Demuestre las siguientes igualdades.
         \begin{enumerate}[label=(\alph*)]
