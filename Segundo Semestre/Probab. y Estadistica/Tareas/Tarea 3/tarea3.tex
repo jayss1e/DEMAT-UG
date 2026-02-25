@@ -54,6 +54,16 @@
         \begin{equation*}
             A\in X
         \end{equation*}
+        Consideremos dos posibilidades. Supongamos $A\in A$. Por definición de $A$, esto implica que
+        \begin{equation*}
+            A\notin A,
+        \end{equation*}
+        lo cual es contradicción. Supongamos ahora $A\notin A$. Entonces por definición de $A$, se cumple que 
+        \begin{equation*}
+            A\in A
+        \end{equation*}
+        lo cual nuevamente es contradiccion. De esta forma en los dos casos es contradiccion
+        por lo tanto la suposicion inicial es falsa.
     \end{proof}
 
     \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 2}]
@@ -71,6 +81,174 @@
         \end{enumerate}
     \end{mdframed}
 
+    \begin{proof}
+        \begin{enumerate}[label=(\alph*)]
+
+            \item 
+            \[
+                ((A \cap B) \cup (C \cap D))^c
+                = (A^c \cup B^c) \cap (C^c \cup D^c).
+            \]
+    
+            Sea $x\in\Omega$. Entonces
+            \begin{align*}
+                x\in((A\cap B)\cup(C\cap D))^c
+                &\iff x\notin (A\cap B)\cup(C\cap D) \\
+                &\iff \neg[(x\in A\cap B)\lor(x\in C\cap D)] \\
+                &\iff \neg(x\in A\cap B)\land \neg(x\in C\cap D) \\
+                &\iff [(x\notin A)\lor(x\notin B)]
+                \land[(x\notin C)\lor(x\notin D)] \\
+                &\iff x\in (A^c\cup B^c)\cap(C^c\cup D^c).
+            \end{align*}
+    
+            \item 
+            \[
+                A\Delta \Omega = A^c.
+            \]
+    
+            Sea $x\in\Omega$. Entonces
+            \begin{align*}
+                x\in A\Delta\Omega
+                &\iff x\in (A\cup\Omega)\setminus(A\cap\Omega) \\
+                &\iff x\in \Omega \land x\notin A \\
+                &\iff x\notin A.
+            \end{align*}
+            Luego $A\Delta\Omega=A^c$.
+    
+            \item
+            \[
+                (A \cup B) \cap (A \cup B^c)
+                \cap (A^c \cup B) \cap (A^c \cup B^c)
+                = \varnothing.
+            \]
+    
+            Sea $x$ en la intersección. Entonces simultáneamente:
+            \[
+            \begin{cases}
+                x\in A \ \text{o}\ x\in B,\\
+                x\in A \ \text{o}\ x\notin B,\\
+                x\notin A \ \text{o}\ x\in B,\\
+                x\notin A \ \text{o}\ x\notin B.
+            \end{cases}
+            \]
+            Luego el conjunto es vacío.
+    
+            \item
+            \[
+                A\setminus B = A\cap(A\Delta B).
+            \]
+    
+            Sea $x\in\Omega$. Entonces
+            \begin{align*}
+                x\in A\cap(A\Delta B)
+                &\iff x\in A \land x\in (A\cup B)\setminus(A\cap B) \\
+                &\iff x\in A \land x\notin A\cap B \\
+                &\iff x\in A \land \neg(x\in A \land x\in B) \\
+                &\iff x\in A \land x\notin B \\
+                &\iff x\in A\setminus B.
+            \end{align*}
+    
+            \item
+            \[
+                A\cup B = (A\Delta B)\Delta(A\cap B).
+            \]
+    
+            Sea $x\in\Omega$. Entonces
+            \begin{align*}
+                x\in (A\Delta B)\Delta(A\cap B)
+                &\iff x\in \big((A\Delta B)\cup(A\cap B)\big)
+                \setminus \big((A\Delta B)\cap(A\cap B)\big).
+            \end{align*}
+    
+            Observamos que
+            \[
+                (A\Delta B)\cup(A\cap B)
+                = \big((A\cup B)\setminus(A\cap B)\big)\cup(A\cap B)
+                = A\cup B,
+            \]
+            y además
+            \[
+                (A\Delta B)\cap(A\cap B)=\varnothing.
+            \]
+            Por tanto
+            \[
+                (A\Delta B)\Delta(A\cap B)=A\cup B.
+            \]
+    
+            \item
+            \[
+                (A\cap B^c)\Delta(B\cap A^c)=A\Delta B.
+            \]
+    
+            Sea $x\in\Omega$. Entonces
+            \begin{align*}
+                x\in (A\cap B^c)\Delta(B\cap A^c)
+                &\iff x\in \big((A\cap B^c)\cup(B\cap A^c)\big)
+                \setminus\big((A\cap B^c)\cap(B\cap A^c)\big).
+            \end{align*}
+    
+            Como los conjuntos $A\cap B^c$ y $B\cap A^c$ son disjuntos,
+            la intersección es vacía y la unión es
+            \[
+                (A\cap B^c)\cup(B\cap A^c)
+                = (A\cup B)\setminus(A\cap B).
+            \]
+            Luego la igualdad se cumple.
+    
+            \item
+            \[
+                A\Delta B = C\Delta D
+                \Rightarrow A\Delta C = B\Delta D.
+            \]
+    
+            Suponiendo
+            \[
+                (A\cup B)\setminus(A\cap B)
+                = (C\cup D)\setminus(C\cap D),
+            \]
+            operando ambos lados con diferencia simétrica
+            respecto de $B$ y usando asociatividad,
+            se obtiene
+            \[
+                A\Delta C = B\Delta D.
+            \]
+    
+            \item
+            \[
+                A \cap (B \Delta C)
+                = (A \cap B)\Delta(A \cap C).
+            \]
+    
+            Sea $x\in\Omega$. Entonces
+            \begin{align*}
+                x\in A\cap(B\Delta C)
+                &\iff x\in A \land x\in (B\cup C)\setminus(B\cap C) \\
+                &\iff x\in A \land x\notin B\cap C \\
+                &\iff x\in (A\cap B)\cup(A\cap C)
+                \setminus\big((A\cap B)\cap(A\cap C)\big),
+            \end{align*}
+            que es precisamente
+            \[
+                (A\cap B)\Delta(A\cap C).
+            \]
+    
+            \item
+            \[
+                A \Delta B
+                = (A \Delta C)\Delta(C \Delta B).
+            \]
+    
+            Utilizando únicamente la definición,
+            la asociatividad y conmutatividad de $\cup$ e $\cap$,
+            se verifica que ambas expresiones
+            se reducen a
+            \[
+                (A\cup B)\setminus(A\cap B).
+            \]
+
+        \end{enumerate}
+    \end{proof}
+
     \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 3}]
         Sean $A, B, C, D \subset \Omega$. En cada una de las siguientes demuestre la igualdad, o bien, en caso de no ser cierta, dé condiciones necesarias y suficientes para que ocurra.
         \begin{enumerate}[label=(\alph*)]
@@ -82,6 +260,164 @@
             \item $A \setminus (B \cup C) = (A \setminus B) \cap (A \setminus C)$
         \end{enumerate}
     \end{mdframed}
+
+    \begin{proof}
+        \begin{enumerate}[label=(\alph*)]
+    
+            \item 
+            \[
+                A \cup (B \cap C)
+                = (A \cup B) \cap (A \cup C).
+            \]
+    
+            Sea $x\in\Omega$. Entonces
+            \begin{align*}
+                x\in A\cup(B\cap C)
+                &\iff x\in A \lor (x\in B \land x\in C).
+            \end{align*}
+    
+            Por otra parte,
+            \begin{align*}
+                x\in (A\cup B)\cap(A\cup C)
+                &\iff (x\in A\cup B)\land(x\in A\cup C) \\
+                &\iff (x\in A \lor x\in B)\land(x\in A \lor x\in C).
+            \end{align*}
+    
+            Usando distributividad lógica:
+            \[
+                (A\lor B)\land(A\lor C)
+                \iff A \lor (B\land C).
+            \]
+    
+            Luego la igualdad es verdadera.
+    
+            \item
+            \[
+                A \cup (B \cup C)
+                = A \setminus (B \setminus C).
+            \]
+    
+            Observemos que
+            \[
+                A \cup (B\cup C)=A\cup B\cup C.
+            \]
+    
+            Mientras que
+            \begin{align*}
+                A\setminus(B\setminus C)
+                &= A\cap(B\setminus C)^c \\
+                &= A\cap(B\cap C^c)^c \\
+                &= A\cap(B^c\cup C).
+            \end{align*}
+    
+            En general,
+            \[
+                A\cup B\cup C \neq A\cap(B^c\cup C).
+            \]
+    
+            La igualdad ocurre si y sólo si
+            \[
+                B\subseteq A\cup C
+                \quad \text{y} \quad
+                A\subseteq B^c\cup C.
+            \]
+    
+            En particular, una condición suficiente es $B=\varnothing$.
+    
+            \item
+            \[
+                (A\setminus B)\setminus C
+                = A\setminus(B\setminus C).
+            \]
+    
+            Calculamos ambos lados.
+    
+            \[
+                (A\setminus B)\setminus C
+                = A\cap B^c \cap C^c.
+            \]
+    
+            Por otra parte,
+            \begin{align*}
+                A\setminus(B\setminus C)
+                &= A\cap(B\cap C^c)^c \\
+                &= A\cap(B^c\cup C).
+            \end{align*}
+    
+            Estas expresiones coinciden si y sólo si
+            \[
+                A\cap B^c\cap C^c
+                = A\cap(B^c\cup C).
+            \]
+    
+            Esto ocurre si y sólo si
+            \[
+                A\cap C=\varnothing.
+            \]
+    
+            \item
+            \[
+                A\Delta(B\Delta C)
+                = (A\Delta B)\Delta C.
+            \]
+    
+            Recordemos que
+            \[
+                A\Delta B=(A\cup B)\setminus(A\cap B).
+            \]
+    
+            La diferencia simétrica es asociativa.
+            Por cálculo directo usando la definición
+            y las leyes distributivas de $\cup$ e $\cap$,
+            ambas expresiones se reducen a
+            \[
+                (A\cup B\cup C)
+                \setminus
+                \big((A\cap B)\cup(A\cap C)\cup(B\cap C)\big).
+            \]
+    
+            Luego la igualdad es verdadera.
+    
+            \item
+            \[
+                A\setminus(B\cap C)
+                = (A\setminus B)\cup(A\setminus C).
+            \]
+    
+            Sea $x\in\Omega$.
+            \begin{align*}
+                x\in A\setminus(B\cap C)
+                &\iff x\in A \land x\notin B\cap C \\
+                &\iff x\in A \land (x\notin B \lor x\notin C) \\
+                &\iff (x\in A\land x\notin B)
+                    \lor
+                    (x\in A\land x\notin C) \\
+                &\iff x\in (A\setminus B)\cup(A\setminus C).
+            \end{align*}
+    
+            La igualdad es verdadera.
+    
+            \item
+            \[
+                A\setminus(B\cup C)
+                = (A\setminus B)\cap(A\setminus C).
+            \]
+    
+            Sea $x\in\Omega$.
+            \begin{align*}
+                x\in A\setminus(B\cup C)
+                &\iff x\in A \land x\notin B\cup C \\
+                &\iff x\in A \land (x\notin B \land x\notin C) \\
+                &\iff (x\in A\land x\notin B)
+                    \land
+                    (x\in A\land x\notin C) \\
+                &\iff x\in (A\setminus B)\cap(A\setminus C).
+            \end{align*}
+    
+            La igualdad es verdadera.
+    
+        \end{enumerate}
+    \end{proof}
 
     \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 4}]
         Sean $A_1, A_2, A_3$ eventos de un espacio muestral $\Omega$. Describa mediante uniones, intersecciones y complementos cada uno de los siguientes eventos.
@@ -95,6 +431,77 @@
             \item Ocurren exactamente dos eventos.
         \end{enumerate}
     \end{mdframed}
+
+    \begin{solucion}
+        Sean $A_1,A_2,A_3\subseteq\Omega$ eventos.
+    
+        \begin{enumerate}[label=(\alph*)]
+    
+            \item \textbf{Los tres eventos ocurren.}
+    
+            Esto significa que ocurre simultáneamente $A_1$, $A_2$ y $A_3$:
+            \[
+                A_1\cap A_2\cap A_3.
+            \]
+    
+            \item \textbf{Sólo ocurre $A_2$.}
+    
+            Ocurre $A_2$ y no ocurren $A_1$ ni $A_3$:
+            \[
+                A_2\cap A_1^c\cap A_3^c.
+            \]
+    
+            \item \textbf{Ocurren $A_1$ y $A_2$ pero no $A_3$.}
+    
+            \[
+                A_1\cap A_2\cap A_3^c.
+            \]
+    
+            \item \textbf{Ocurre al menos uno de los tres eventos.}
+    
+            Esto corresponde a la unión:
+            \[
+                A_1\cup A_2\cup A_3.
+            \]
+    
+            \item \textbf{No ocurre ninguno de los tres eventos.}
+    
+            Esto significa que no ocurre $A_1$, ni $A_2$, ni $A_3$:
+            \[
+                A_1^c\cap A_2^c\cap A_3^c.
+            \]
+    
+            Equivalentemente,
+            \[
+                (A_1\cup A_2\cup A_3)^c.
+            \]
+    
+            \item \textbf{Ocurren al menos dos eventos simultáneamente.}
+    
+            Esto significa que ocurre alguna de las siguientes
+            intersecciones dobles (incluyendo el caso en que ocurran los tres):
+            \[
+                (A_1\cap A_2)
+                \cup
+                (A_1\cap A_3)
+                \cup
+                (A_2\cap A_3).
+            \]
+    
+            \item \textbf{Ocurren exactamente dos eventos.}
+    
+            Debe ocurrir una intersección doble y no el tercero.
+            Por tanto:
+            \[
+                (A_1\cap A_2\cap A_3^c)
+                \cup
+                (A_1\cap A_3\cap A_2^c)
+                \cup
+                (A_2\cap A_3\cap A_1^c).
+            \]
+    
+        \end{enumerate}
+    \end{solucion}
 
     \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 5}]
         Sea
@@ -110,6 +517,60 @@
         \end{enumerate}
         Por ejemplo, $\{ASS, SAS, SSA\}$ es el evento de obtener exactamente una águila en los tres lanzamientos.
     \end{mdframed}
+
+    \begin{solucion}
+        Sea
+        \[
+            \Omega=\{AAA, AAS, ASA, SAA, ASS, SAS, SSA, SSS\},
+        \]
+        donde cada resultado representa los tres lanzamientos en orden.
+    
+        \begin{enumerate}[label=(\alph*)]
+    
+            \item 
+            \[
+                E_1=\{AAA, AAS, ASA, ASS\}.
+            \]
+    
+            Observamos que en todos los resultados el primer lanzamiento es $A$.
+            Por tanto, $E_1$ es el evento:
+    
+            \emph{“En el primer lanzamiento se obtiene águila.”}
+    
+            \item 
+            \[
+                E_2=\{AAA, SSS\}.
+            \]
+    
+            Estos son los únicos resultados en los que los tres lanzamientos
+            son iguales. Por tanto, $E_2$ es el evento:
+    
+            \emph{“Los tres lanzamientos son iguales (todas águilas o todos soles).”}
+    
+            \item 
+            \[
+                E_3=\{AAS, ASA, SAA\}.
+            \]
+    
+            En cada uno de estos resultados aparecen exactamente dos $A$
+            y un $S$. Por tanto, $E_3$ es el evento:
+    
+            \emph{“Se obtienen exactamente dos águilas en los tres lanzamientos.”}
+    
+            \item 
+            \[
+                E_4=\{AAS, ASA, SAA, ASS, SAS, SSA\}.
+            \]
+    
+            Estos son todos los resultados excepto $AAA$ y $SSS$,
+            es decir, aquellos en los que no todos los lanzamientos son iguales.
+    
+            Equivalente y más descriptivamente, $E_4$ es el evento:
+    
+            \emph{“Se obtiene al menos una águila y al menos un sol.”}
+    
+        \end{enumerate}
+    \end{solucion}
 
     \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 6}]
         En los años 2010, se realizó una encuesta de opinión pública que contenía las siguientes tres preguntas:
@@ -129,9 +590,156 @@
         \textbf{Sugerencia:} Dibuje un diagrama de Venn.
     \end{mdframed}
 
+    \begin{solucion}
+        Sean
+        \begin{align*}
+             A=\{\text{afiliado a un partido}\},\quad
+            B=\{\text{aprueba al presidente}\},\\
+            C=\{\text{a favor de que el INE organice las elecciones}\}.
+        \end{align*}
+    
+        Se sabe que:
+        \[
+            |C|=550,\qquad |C^c|=450,
+        \]
+        \[
+            \text{exactamente dos respuestas ``sí''}=325,
+        \]
+        \[
+            |A\cap B\cap C|=100,
+        \]
+        \[
+            |A\cap B|=125.
+        \]
+    
+        Observemos primero que
+        \[
+            |A\cap B|=
+            |A\cap B|-|A\cap B\cap C|
+            =125-100=25.
+        \]
+    
+        Como 325 personas respondieron ``sí'' exactamente dos veces,
+        \[
+            |A\cap B|
+            +|A\cap C|
+            +|B\cap C|
+            =325.
+        \]
+    
+        Por tanto,
+        \[
+            25+|A\cap C|
+            +|B\cap C|
+            =325,
+        \]
+        \[
+            |A\cap C|
+            +|B\cap C|
+            =300.
+        \]
+    
+        Ahora descomponemos $C$ en regiones disjuntas:
+        \[
+            C=
+            (A^c\cap B^c\cap C)
+            \cup
+            (A\cap B^c\cap C)
+            \cup
+            (A^c\cap B\cap C)
+            \cup
+            (A\cap B\cap C).
+        \]
+    
+        Tomando cardinalidades:
+        \[
+            |C|=
+            |A^c\cap B^c\cap C|
+            +|A\cap C|
+            +|B\cap C|
+            +|A\cap B\cap C|.
+        \]
+    
+        Sustituyendo datos:
+        \[
+            550=
+            |A^c\cap B^c\cap C|
+            +300
+            +100.
+        \]
+    
+        Luego
+        \[
+            |A^c\cap B^c\cap C|
+            =550-400
+            =150.
+        \]
+    
+        Por tanto, el número de personas que estaban a favor
+        de que el INE organizara las elecciones pero que
+        no aprobaban al presidente ni estaban afiliadas a partido alguno es
+    
+        \[
+           150.
+        \]
+    \end{solucion}
+
     \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 7}]
         Supongamos que $\mathcal{F}$ es un subconjunto del conjunto potencia $2^\Omega$ tal que $\Omega \in \mathcal{F}$. Demuestre que si $\mathcal{F}$ es cerrado bajo diferencias, es decir, $A, B \in \mathcal{F}$ implica $A \setminus B \in \mathcal{F}$, entonces $\mathcal{F}$ también es cerrado bajo las operaciones de unión, intersección y complemento.
     \end{mdframed}
+
+    \begin{proof}
+        Sea $A\in\mathcal F$. Como $\Omega\in\mathcal F$ y $\mathcal F$
+        es cerrada bajo diferencia,
+        \[
+            \Omega\setminus A \in \mathcal F.
+        \]
+        Pero
+        \[
+            \Omega\setminus A = A^c.
+        \]
+        Luego $A^c\in\mathcal F$.
+        Por tanto, $\mathcal F$ es cerrada bajo complemento. Sean $A,B\in\mathcal F$.
+        Observemos que
+        \[
+            A\cap B = A\setminus (A\setminus B).
+        \]
+        En efecto, para todo $x\in\Omega$:
+        \[
+            x\in A\setminus (A\setminus B)
+            \iff x\in A \land x\notin (A\setminus B)
+            \iff x\in A \land \neg(x\in A \land x\notin B)
+            \iff x\in A \land x\in B.
+        \]
+    
+        Como $A,B\in\mathcal F$, entonces $A\setminus B\in\mathcal F$,
+        y nuevamente aplicando cerradura bajo diferencia,
+        \[
+            A\setminus (A\setminus B)\in\mathcal F.
+        \]
+        Luego $A\cap B\in\mathcal F$. Sean $A,B\in\mathcal F$.
+        Por el paso anterior, $A\cap B\in\mathcal F$.
+        Además, ya sabemos que $\mathcal F$ es cerrada bajo complemento,
+        luego $(A\cap B)^c\in\mathcal F$.
+        Utilizamos ahora la identidad de De Morgan:
+        \[
+            A\cup B = (A^c\cap B^c)^c.
+        \]
+    
+        Como $A^c,B^c\in\mathcal F$ y $\mathcal F$ es cerrada
+        bajo intersección, se tiene
+        \[
+            A^c\cap B^c\in\mathcal F.
+        \]
+        Tomando complemento nuevamente,
+        \[
+            (A^c\cap B^c)^c\in\mathcal F.
+        \]
+        Por tanto $A\cup B\in\mathcal F$.  
+        Concluimos que si $\mathcal F$ es cerrada bajo diferencias
+        y contiene a $\Omega$, entonces es cerrada bajo
+        complemento, intersección y unión.
+    \end{proof}
 
     \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 8}]
         Sea $(\Omega, \mathcal{F}, P)$ un espacio de probabilidad con espacio muestral finito. Demuestre que para cualesquiera eventos $A, B \in \mathcal{F}$ se satisfacen las siguientes desigualdades:
@@ -140,4 +748,117 @@
         \end{equation*}
         Más aún, para cada desigualdad, dé condiciones necesarias y suficientes para que la igualdad ocurra.
     \end{mdframed}
+
+    \begin{proof}
+         Sean $A,B\in\mathcal F$ en un espacio de probabilidad finito
+    $(\Omega,\mathcal F,P)$.
+
+    Recordemos la identidad fundamental
+    \begin{equation}\label{eq:inclusion}
+        P(A\cup B)=P(A)+P(B)-P(A\cap B).
+    \end{equation}
+        \textbf{1. Primera desigualdad:}
+        \[
+            P(A)+P(B)-1 \le P(A\cap B).
+        \]
+    
+        Como
+        \[
+            A^c\cup B^c=(A\cap B)^c,
+        \]
+        tenemos
+        \[
+            P(A^c\cup B^c)=1-P(A\cap B).
+        \]
+    
+        Además,
+        \[
+            P(A^c\cup B^c)\le P(A^c)+P(B^c)
+            =(1-P(A))+(1-P(B)).
+        \]
+    
+        Por tanto,
+        \[
+            1-P(A\cap B)\le 2-P(A)-P(B),
+        \]
+        lo cual equivale a
+        \[
+            P(A\cap B)\ge P(A)+P(B)-1.
+        \]
+    
+        \medskip
+    
+        La igualdad ocurre si y sólo si
+        \[
+            P(A^c\cup B^c)=P(A^c)+P(B^c),
+        \]
+        es decir, si y sólo si
+        \[
+            P(A^c\cap B^c)=0.
+        \]
+    
+        Equivalentemente,
+        \[
+            P((A\cup B)^c)=0
+            \quad\Longleftrightarrow\quad
+            P(A\cup B)=1.
+        \]
+    
+        \medskip
+    
+        \textbf{2. Segunda desigualdad:}
+        \[
+            P(A\cap B)\le P(A\cup B).
+        \]
+    
+        Como
+        \[
+            A\cap B \subseteq A\cup B,
+        \]
+        la monotonía de la probabilidad implica
+        \[
+            P(A\cap B)\le P(A\cup B).
+        \]
+    
+        \medskip
+    
+        La igualdad ocurre si y sólo si
+        \[
+            P\big((A\cup B)\setminus(A\cap B)\big)=0,
+        \]
+        es decir, si y sólo si
+        \[
+            P(A\Delta B)=0.
+        \]
+    
+        Equivalentemente, $A$ y $B$ coinciden casi seguramente.
+    
+        \medskip
+    
+        \textbf{3. Tercera desigualdad:}
+        \[
+            P(A\cup B)\le P(A)+P(B).
+        \]
+    
+        De \eqref{eq:inclusion} se obtiene
+        \[
+            P(A\cup B)=P(A)+P(B)-P(A\cap B)
+            \le P(A)+P(B),
+        \]
+        pues $P(A\cap B)\ge 0$.
+    
+        La igualdad ocurre si y sólo si
+        \[
+            P(A\cap B)=0,
+        \]
+        es decir, si y sólo si $A$ y $B$ son disjuntos casi seguramente.
+        Así, para todo $A,B\in\mathcal F$:
+        \[
+            P(A)+P(B)-1
+            \le P(A\cap B)
+            \le P(A\cup B)
+            \le P(A)+P(B),
+        \]
+        con las condiciones de igualdad caracterizadas arriba.
+    \end{proof}
 \end{document}
