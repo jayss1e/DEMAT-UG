@@ -7,8 +7,8 @@
 \newcommand{\alumno}{Ricardo León Martínez}
 \newcommand{\materia}{Fisica I}
 \newcommand{\profesor}{Lucero Uscanga Aguilera}
-\newcommand{\tarea}{Tarea 1}
-\newcommand{\fecha}{16/2/2026}
+\newcommand{\tarea}{Tarea 2}
+\newcommand{\fecha}{24/2/2026}
 
 \begin{document}
     \begin{center}
@@ -29,54 +29,74 @@
     \end{mdframed}
 
     \begin{solucion}
-        Sea $g$ la aceleración de la gravedad. Las fuerzas verticales que actúan sobre la viga son:
-        \begin{itemize}
-            \item Peso de la viga: $100g$, aplicado en su punto medio, a $3m$ de $A$.
-            \item Peso de la carga de $300kg$: $300g$, a $2m$ de $A$.
-            \item Peso de la carga de \( 500\text{ kg} \): \( 500g \), a \( 4\text{ m} \) de \( A \).
-            \item Reacción en \( A \): \( R_A \), hacia arriba.
-            \item Reacción en \( B \): \( R_B \), hacia arriba.
-        \end{itemize}
-        Del equilibrio de fuerzas verticales se tiene
-        \[
-            R_A + R_B = 100g + 300g + 500g = 900g. \tag{1}
-        \]
-        Tomando momentos respecto del punto \( A \) (positivo el sentido antihorario), la suma de momentos debe ser nula:
-        \[
-            - (300g)(2) - (100g)(3) - (500g)(4) + R_B(6) = 0.
-        \]
-        Esto es
-        \[
-            -600g - 300g - 2000g + 6R_B = 0,
-        \]
-        \[
-            -2900g + 6R_B = 0,
-        \]
-        de donde
-        \[
-            6R_B = 2900g \quad \Rightarrow \quad R_B = \frac{2900g}{6} = \frac{1450g}{3}. \tag{2}
-        \]
-        Sustituyendo (2) en (1):
-        \[
-            R_A + \frac{1450g}{3} = 900g,
-        \]
-        \[
-            R_A = 900g - \frac{1450g}{3} = \frac{2700g - 1450g}{3} = \frac{1250g}{3}. \tag{3}
-        \]
-        Tomando \( g = 9.81\ \text{m/s}^2 \), se obtiene
-        \[
-            R_A = \frac{1250 \times 9.81}{3} = 4087.5\ \text{N},
+        Denotemos por $R_A$ y $R_B$ las reacciones en los apoyos $A$ y $B$.
+        Como el sistema se encuentra en equilibrio estático, se satisfacen las
+        ecuaciones
+        \begin{equation*}
+            \sum F_y = 0
             \qquad
-            R_B = \frac{1450 \times 9.81}{3} = 4741.5\ \text{N}.
-        \]
-        En kilogramos–fuerza (\( 1\ \text{kgf} = 9.81\ \text{N} \)):
-        \[
-            R_A \approx 416.7\ \text{kgf}, \qquad R_B \approx 483.3\ \text{kgf}.
-        \]
-        Por tanto, las reacciones en los apoyos son
-        \[
-            R_A = 4087.5\ \text{N},\quad R_B = 4741.5\ \text{N}.
-        \]
+            \sum \tau_A = 0
+        \end{equation*}
+        La viga es uniforme, por tanto su peso actúa en su centro geométrico,
+        esto es, a una distancia de $2\,\text{m}$ del punto $A$. Sea $g=9.8\,\text{m/s}^2$. Entonces los pesos correspondientes son
+        \begin{align*}
+            P_1 &= 50g, \\
+            P_2 &= 150g, \\
+            P_v &= 100g.
+        \end{align*}
+        La ecuación de equilibrio de fuerzas verticales en este caso es
+        \begin{equation*}
+            R_A + R_B - P_1 - P_2 - P_v = 0
+        \end{equation*}
+        Sustituyendo,
+        \begin{equation*}
+            R_A + R_B - 50g - 150g - 100g = 0
+        \end{equation*}
+        \begin{equation*}
+            R_A + R_B = 300g
+        \end{equation*}
+        Tomando momentos positivos en sentido antihorario,
+
+        \begin{equation*}
+            R_B(4) - P_1(1) - P_v(2) - P_2(3) = 0
+        \end{equation*}
+
+        Sustituyendo los valores,
+
+        \begin{equation*}
+            4R_B - 50g(1) - 100g(2) - 150g(3) = 0
+        \end{equation*}
+
+        \begin{equation*}
+            4R_B - 50g - 200g - 450g = 0
+        \end{equation*}
+
+        \begin{equation*}
+            4R_B - 700g = 0
+        \end{equation*}
+
+        \begin{equation*}
+            R_B = 175g
+        \end{equation*}
+
+        Sustituyendo en la ecuación de fuerzas,
+
+        \begin{equation*}
+            R_A + 175g = 300g
+        \end{equation*}
+
+        \begin{equation*}
+            R_A = 125g
+        \end{equation*}
+
+        \textbf{Conclusión}
+
+        Las reacciones en los apoyos son
+
+        \begin{align*}
+            R_A &= 125g = 1225\,\text{N}, \\
+            R_B &= 175g = 1715\,\text{N}.
+        \end{align*}
     \end{solucion}
 
     \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 2}]
@@ -86,4 +106,75 @@
         el hombre puede caminar a partir de $A$ manteniendo el equilibrio. Representar
         la fuerza de reaccion en $A$ como una función de la distancia $x$.
     \end{mdframed}
+
+    \begin{solucion}
+        Sea $AB$ una viga uniforme de longitud $4\,\text{m}$ y peso 
+        $P_v=100\,\text{kgf}$.  
+
+        Los puntos están dispuestos en el orden $A-C-B$ con
+
+        \begin{equation*}
+            AC = 2.5\,\text{m}.
+        \end{equation*}
+
+        El punto $C$ es el pivote fijo.
+        En $A$ existe una reacción vertical $R_A$.
+        Un hombre de peso $P_h=75\,\text{kgf}$ se encuentra a una distancia $x$
+        medida desde $A$. El centro de masa de la viga está a $2\text{ m}$
+        desde $A$. Tomamos momentos positivos en sentido antihorario.
+        La distancia de $A$ a $C$ es $2.5\,\text{m}$. La distancia del centro de masa al punto $C$ es
+        \begin{equation*}
+            2 - 2.5 = -0.5\,\text{m}.
+        \end{equation*}
+        La distancia del hombre al punto $C$ es
+        \begin{equation*}
+            x - 2.5.
+        \end{equation*}
+        La ecuación de momentos queda
+        \begin{equation*}
+            - R_A(2.5) + 100(-0.5) + 75(x-2.5) = 0
+        \end{equation*}
+        \begin{equation*}
+            -2.5R_A -50 + 75x -187.5 = 0
+        \end{equation*}
+        \begin{equation*}
+            -2.5R_A + 75x -237.5 = 0
+        \end{equation*}
+        \begin{equation*}
+            2.5R_A = 75x -237.5
+        \end{equation*}
+        \begin{equation*}
+            R_A(x) = \frac{75x -237.5}{2.5}
+        \end{equation*}
+        El equilibrio requiere
+        \begin{equation*}
+            R_A(x) \ge 0.
+        \end{equation*}
+        El valor crítico ocurre cuando
+        \begin{equation*}
+            R_A(x)=0.
+        \end{equation*}
+        Entonces
+        \begin{equation*}
+            75x -237.5 = 0
+        \end{equation*}
+        \begin{equation*}
+            x = \frac{237.5}{75}
+        \end{equation*}
+        \begin{equation*}
+            x = \frac{19}{6}
+        \end{equation*}
+        \begin{equation*}
+            x \approx 3.17\,\text{m}.
+        \end{equation*}
+        La reacción en $A$ es
+        \begin{equation*}
+            R_A(x)=\frac{75x-237.5}{2.5}
+        \end{equation*}
+        y la distancia máxima que el hombre puede caminar sin que la viga
+        pierda contacto en $A$ es
+        \begin{equation*}
+            x_{\max} = \frac{19}{6}\,\text{m}.
+        \end{equation*}
+    \end{solucion}
 \end{document}
