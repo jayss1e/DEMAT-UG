@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1772255615.8057 "/home/void/DEMAT-UG/Segundo Semestre/Algebra Lineal/Tareas/Tarea 5/tarea5.tex" "tarea5.pdf" "tarea5" 1772255616.86497 0
-  "/home/void/DEMAT-UG/Segundo Semestre/Algebra Lineal/Tareas/Tarea 5/tarea5.tex" 1772255614.5522 3493 34721700426fe5722f5bfb58828c06a3 ""
+["pdflatex"] 1772256071.88666 "/home/void/DEMAT-UG/Segundo Semestre/Algebra Lineal/Tareas/Tarea 5/tarea5.tex" "tarea5.pdf" "tarea5" 1772256072.96947 0
+  "/home/void/DEMAT-UG/Segundo Semestre/Algebra Lineal/Tareas/Tarea 5/tarea5.tex" 1772256071.70654 3492 937cb26f7c29f3f2ad032b89d68c213d ""
   "/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1767555874 2375 baa924870cfb487815765f9094cf3728 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1767555874 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
   "/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc" 1767555874 2840 216e6e45ad352e2456e1149f28885bee ""
@@ -267,9 +267,9 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1767555874 42087 b0f9697c952c8f5a8eede4134282cb0d ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1771575696 5467117 e063ce8e53b0cc3d0312473583ebc51c ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1771575618 3459354 f8086c430d01394e663b8bb7d0a4cad3 ""
-  "tarea5.aux" 1772255616.77167 612 c3bc644d819c5d8f99eccf6db95bd597 "pdflatex"
-  "tarea5.out" 1772255616.57253 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "tarea5.tex" 1772255614.5522 3493 34721700426fe5722f5bfb58828c06a3 ""
+  "tarea5.aux" 1772256072.87554 612 c3bc644d819c5d8f99eccf6db95bd597 "pdflatex"
+  "tarea5.out" 1772256072.66877 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "tarea5.tex" 1772256071.70654 3492 937cb26f7c29f3f2ad032b89d68c213d ""
   "ugmath.sty" 1772252062.03333 6848 f053490863865e6b5c329d52000b2f3a ""
   (generated)
   "tarea5.aux"
