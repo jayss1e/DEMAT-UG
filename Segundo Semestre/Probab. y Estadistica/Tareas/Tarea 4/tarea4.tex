@@ -1,0 +1,80 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{ugmath}
+\usepackage{float}
+\usepackage{placeins}
+\usepackage{array}
+\usepackage[labelfont=bf,labelsep=space]{caption}
+\newcommand{\paren}[1]{\left( #1 \right)}
+\newcommand{\alumno}{Ricardo León Martínez}
+\newcommand{\materia}{Elementos de Probabilidad y Estadistica}
+\newcommand{\profesor}{Claudia Reynoso Alcántara}
+\newcommand{\tarea}{Tarea 4}
+\newcommand{\fecha}{3/3/2026}
+
+\begin{document}
+
+    \begin{center}
+        {\large\textbf{UNIVERSIDAD DE GUANAJUATO}}\\[0.3cm]
+        {\normalsize\textbf{DIVISIÓN DE CIENCIAS NATURALES Y EXACTAS}}\\
+        {\normalsize\textbf{CAMPUS GUANAJUATO}}\\[1cm]
+
+        {\Large\textbf{\tarea\ (\materia)}}\\[1cm]
+    \end{center}
+
+    \noindent
+    \textbf{Nombre:} \alumno 
+    \hfill 
+    \textbf{Fecha:} \fecha 
+    \hfill 
+    \textbf{Calificación:} \rule{3cm}{0.4pt}
+
+    \vspace{0.3cm}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 1}]
+        Sean $A_1, A_2, \dots, A_n$ eventos dados. Demuestre que existen eventos $B_1, B_2, \dots, B_n$ disjuntos a pares, es decir,
+        $B_i \cap B_j = \varnothing$ si $i \neq j,$ tales que
+        \begin{equation*}
+            \bigcup_{i=1}^{n} A_i = \bigcup_{i=1}^{n} B_i.
+        \end{equation*}
+        \textit{Sugerencia.} Resuelva el caso $n = 2$ e intente usar inducción para el caso general.
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 2}]
+        A partir de las propiedades que definen una función de probabilidad, demuestre que para cualesquiera eventos $A$ y $B$ se cumple que
+        \[
+            P(A \Delta B) = P(A) + P(B) - 2P(A \cap B).
+        \]
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 3}]
+        Sean $A_1, A_2, \dots, A_n$ eventos dados. Para cada entero $k \in [0,n-1]$, sea $B_k$ el evento de que se cumplen exactamente $k$ de los $A_i$ y sea $C_k$ el evento de que se cumplen al menos $k$ de los $A_i$.
+        \begin{enumerate}
+            \item[(a)] Describa $B_k$ y $C_k$ mediante uniones, intersecciones y complementos de los eventos dados.
+            \item[(b)] Dé una expresión para $P(B_k)$ en términos de $P(C_k)$ y $P(C_{k+1})$.
+        \end{enumerate}
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 4}]
+        Si $A, B, C$ son eventos tales que $P(A) = 0.5, P(A \cap B) = 0.25, P(A \cap C) = 0.2, P(A \cap B \cap C) = 0,$
+        ¿cuál es la probabilidad de que ocurra $A$ pero no $B$ ni $C$?
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 5}]
+        Dos eventos $A$ y $B$ se dicen independientes si se cumple que $P(A \cap B) = P(A) \cdot P(B).$
+        Demuestre que si $A$ y $B$ son independientes, entonces $P(A \cup B) = 1 - P(A^c)\, P(B^c).$
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 6}]
+        Sean $A, B, C$ eventos tales que $P(A) = P(B) = P(C) = 0.2, P(A \cap B) = P(B \cap C) = 0,$
+        y $P(A \cap C) = 0.1$. Calcule la probabilidad de que ninguno de los eventos dados ocurra.
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 7}]
+        Suponga que se establece aleatoriamente una contraseña de 8 caracteres a elegir entre 27 letras minúsculas $a, b, \dots, z$, 27 letras mayúsculas $A, B, \dots, Z$ y 10 dígitos $0,1,\dots,9$.
+        \begin{enumerate}
+            \item[(a)] ¿Cuál es la probabilidad de que la contraseña contenga al menos una letra minúscula?
+            \item[(b)] ¿Cuál es la probabilidad de que la contraseña contenga al menos una letra minúscula y al menos una letra mayúscula?
+            \item[(c)] ¿Cuál es la probabilidad de que la contraseña contenga al menos una letra minúscula, al menos una letra mayúscula y al menos un dígito?
+        \end{enumerate}
+    \end{mdframed}
+\end{document}
