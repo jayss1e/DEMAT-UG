@@ -1,0 +1,82 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{ugmath}
+\usepackage{float}
+\usepackage{placeins}
+\usepackage{array}
+\usepackage[labelfont=bf,labelsep=space]{caption}
+\newcommand{\paren}[1]{\left( #1 \right)}
+\newcommand{\alumno}{Ricardo León Martínez}
+\newcommand{\materia}{Algebra Lineal I}
+\newcommand{\profesor}{Claudia Reynoso Alcántara}
+\newcommand{\tarea}{Tarea 5}
+\newcommand{\fecha}{2/3/2026}
+
+\begin{document}
+
+    \begin{center}
+        {\large\textbf{UNIVERSIDAD DE GUANAJUATO}}\\[0.3cm]
+        {\normalsize\textbf{DIVISIÓN DE CIENCIAS NATURALES Y EXACTAS}}\\
+        {\normalsize\textbf{CAMPUS GUANAJUATO}}\\[1cm]
+
+        {\Large\textbf{\tarea\ (\materia)}}\\[1cm]
+    \end{center}
+
+    \noindent
+    \textbf{Nombre:} \alumno 
+    \hfill 
+    \textbf{Fecha:} \fecha 
+    \hfill 
+    \textbf{Calificación:} \rule{3cm}{0.4pt}
+
+    \vspace{0.3cm}
+
+    Sea $F$ el campo $\mathbb{Q},\mathbb{R}$ o $\mathbb{C}$.
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 1}]
+        Sea $V$ un espacio vectorial sobre $F$. Demuestra que
+        \begin{enumerate}
+            \item[(a)] El vector cero $0\in V$ es unico.
+            \item[(b)] Para todos $v_{1},v_{2}\in V$, existe un único $v_{3}\in V$ tal que
+            $v_{1}+v_{3}=v_{2}$.
+            \item[(c)] Para todo $v\in V$, se tiene que $(-1)v=-v$ y $0v=0$. 
+        \end{enumerate}
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 2}]
+        Considera $V=\left\{(x_{1},x_{2}):x_{1},x_{2}\in\mathbb{C}\right\}$ y define las operaciones:
+        \begin{align*}
+            +:V\times V&\to V\\
+            \left((x_{1},x_{2}),(y_{1},y_{2})\right)&\mapsto(x_{1}+y_{1}+1,x_{2}+y_{2}+1)
+        \end{align*}
+        \begin{align*}
+            \cdot :\mathbb{C}\times V&\to V\\
+            \left(c,(x_{1},x_{2})\right)&\mapsto(cx_{1}+c-1,cx_{2}+x-1).
+        \end{align*}
+        ¿Es $V$ un espacio vectorial sobre $\mathbb{C}$ con estas operaciones? (justifica tu respuesta).
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 3}]
+        Considera el espacio usual $\mathbb{R}^{n}$ sobre $\mathbb{R}$, determina cuáles de los siguientes
+        subconjuntos son subespacios vectoriales de $\mathbb{R}^{n}$:
+        \begin{enumerate}
+            \item[(a)] $W=\left\{(a_{1},\dots,a_{n})\in\mathbb{R}^{n}:a_{1}\geq0\right\}$,
+            \item[(b)] $W=\left\{(a_{1},\dots,a_{n})\in\mathbb{R}^{n}:a_{1}+3a_{2}=a_{3}\right\}$,
+            \item[(c)] $W=\left\{(a_{1},\dots,a_{n})\in\mathbb{R}^{n}:a_{1}=a_{2}\right\}$,
+            \item[(d)] $W=\left\{(a_{1},\dots,a_{n})\in\mathbb{R}^{n}:a_{j}\in\mathbb{Q}\text{ para todo }1\leq j\leq n\right\}$,  
+        \end{enumerate}
+        justifica tu respuesta.
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 4}]
+        Sean $W_{1},W_{2}$ subespacios vectoriales de un espacio vectorial $V$ sobre el campo
+        $F$. Demuestra que si $W_{1}\cup W_{2}$ es un subespacio vectorial $V$ entonces uno de los espacios
+        $W_{j}$ está contenido en el otro.
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 5}]
+        Considera el $\mathbb{R}$-espacio vectorial, $V=\left\{f:\mathbb{R}\to\mathbb{R}:f\text{ es una función continua}\right\}$.
+        Demuestra que la función $f(x)=\sin(x)$ no es combinación lineal de las funciones $x,x^{2},x^{3}$ (puedes usar todo lo que
+        sabes de tus clases de calculo )
+    \end{mdframed}
+
+\end{document}
