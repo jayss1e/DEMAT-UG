@@ -42,6 +42,125 @@
         \end{enumerate}
     \end{mdframed}
 
+    \begin{proof}
+        \begin{enumerate}
+            \item[(a)] El vector cero $0\in V$ es unico.\\
+            Sabemos por axiomas que existe un elemento $0\in V$ tal que
+            \begin{equation*}
+                v+0=v, \quad \forall v\in V.
+            \end{equation*}
+            Supongamos que existe $b\in V$ que tambien satisfacen la propiedad del neutro aditivo, es decir,
+            \begin{equation*}
+                v+b=v,\quad \forall v\in V.
+            \end{equation*}
+            Sumando $(-v)$ a ambos lados
+            \begin{equation*}
+                (-v)+(v+b)=(-v)+v.
+            \end{equation*}
+            Por asociatividad
+            \begin{equation*}
+                ((-v)+v)+b=0.
+            \end{equation*}
+            Luego
+            \begin{equation*}
+                0+b=0.
+            \end{equation*}
+            Por propiedad del elemento neutro
+            \begin{equation*}
+                b=0.
+            \end{equation*}
+            Así, el elemento neutro es único.
+            \item[(b)] Para todos $v_{1},v_{2}\in V$, existe un único $v_{3}\in V$ tal que
+            $v_{1}+v_{3}=v_{2}$.\\
+            Sean $v_{1},v_{2}\in V$. Sabemos por axiomas que existe el inverso aditivo de $v_{1}$, denotado por
+            $-v_{1}$, tal que
+            \begin{equation*}
+                v_{1}+(-v_{1})=0.
+            \end{equation*}
+            Tomemos
+            \begin{equation*}
+                v_{3}=(-v_{1})+v_{2}.
+            \end{equation*}
+            Entonces
+            \begin{equation*}
+                v_{1}+v_{3}=v_{1}+((-v_{1})+v_{2}).
+            \end{equation*}
+            Por asociatividad y definicion de inverso
+            \begin{align*}
+                v_{1}+((-v_{1})+v_{2})&=((-v_{1})+v_{1})+v_{2}\\
+                &=0+v_{2}.
+            \end{align*}
+            Y por definicion de neutro aditivo
+            \begin{equation*}
+                0+v_{2}=v_{2}
+            \end{equation*}
+            Así, $v_{3}$ existe. Ahora supongamos que $w\in V$ satisface que
+            \begin{equation*}
+                v_{1}+w=v_{2}.
+            \end{equation*}
+            Entonces,
+            \begin{equation*}
+                v_{1}+v_{3}=v_{1}+w.
+            \end{equation*}
+            Sumamos $(-v_{1})$ a ambos lados
+            \begin{equation*}
+                (-v_{1})+(v_{1}+v_{3})=(-v_{1})+(v_{1}+w).
+            \end{equation*}
+            Por asociatividad
+            \begin{equation*}
+                ((-v_{1})+v_{1})+v_{3}=((-v_{1})+v_{1})+w.
+            \end{equation*}
+            Por propiedad del inverso aditivo
+            \begin{equation*}
+                0+v_{3}=0+w.
+            \end{equation*}
+            Por propiedad del neutro aditivo
+            \begin{equation*}
+                v_{3}=w.
+            \end{equation*}
+            Así, $v_{3}$ es unico.
+            \item[(c)] Para todo $v\in V$, se tiene que $(-1)v=-v$ y $0v=0$.\\
+            Notemos que
+            \begin{equation*}
+                1+(-1)=0.
+            \end{equation*}
+            Sea $v\in V$. Multplicamos $v$ a ambos lados
+            \begin{equation*}
+                (1+(-1))v=0v.
+            \end{equation*}
+            Por distributividad
+            \begin{equation*}
+                1v+(-1)v=0v.
+            \end{equation*}
+            En consecuencia
+            \begin{equation*}
+                v+(-1)v=0.
+            \end{equation*}
+            Luego,
+            \begin{equation*}
+                (-1)v=-v.
+            \end{equation*}
+            Ahora observamos que
+            \begin{equation*}
+                0=0+0.
+            \end{equation*}
+            Sea $v\in V$. Multplicamos $v$ a ambos lados
+            \begin{equation*}
+                0v=(0+0)v.
+            \end{equation*}
+            Por distributividad
+            \begin{equation*}
+                0v=0v+0v.
+            \end{equation*}
+            Sumamos $(-0v)$ a ambos lados. Y de esta forma por propiedad del inverso aditivo
+            \begin{align*}
+                0v&=0v-0v\\
+                &=0
+            \end{align*}
+            Así, $(-1)v=-v$ y $0v=0$.
+        \end{enumerate}
+    \end{proof}
+
     \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 2}]
         Considera $V=\left\{(x_{1},x_{2}):x_{1},x_{2}\in\mathbb{C}\right\}$ y define las operaciones:
         \begin{align*}
@@ -50,10 +169,110 @@
         \end{align*}
         \begin{align*}
             \cdot :\mathbb{C}\times V&\to V\\
-            \left(c,(x_{1},x_{2})\right)&\mapsto(cx_{1}+c-1,cx_{2}+x-1).
+            \left(c,(x_{1},x_{2})\right)&\mapsto(cx_{1}+c-1,cx_{2}+c-1).
         \end{align*}
         ¿Es $V$ un espacio vectorial sobre $\mathbb{C}$ con estas operaciones? (justifica tu respuesta).
     \end{mdframed}
+
+    \begin{proof}
+        Verifiquemos que $V$ satisface los axiomas de espacio vectorial sobre $\mathbb{C}$.\\
+        \textbf{Cerrado bajo suma}.\\
+        Si $u=(x_{1},x_{2}),v=(y_{1},y_{2})\in V$, entonces
+        \begin{equation*}
+            u+v=(x_{1}+y_{1}+1,x_{2}+y_{2}+1)\in V,
+        \end{equation*}
+        Pues $\mathbb{C}$ es cerrado bajo suma.\\
+        \textbf{Asociatividad}\\
+        Sea $u,v,w\in V$. Entonces
+        \begin{align*}
+            (u+v)+w&=(x_{1}+y_{1}+1+z_{1}+1,x_{2}+y_{2}+1+z_{1}+1),\\
+            &=(x_{1}+y_{1}+z_{1}+2,x_{2}+y_{2}+z_{2}+2).
+        \end{align*}
+        Por otro lado,
+        \begin{equation*}
+            u+(v+w)=(x_{1}+y_{1}+z_{1}+2,x_{2}+y_{2}+z_{2}+2).
+        \end{equation*}
+        Luego, la suma es asociativa.\\
+        \textbf{Conmutatividad}\\
+        \begin{equation*}
+            u+v=(x_{1}+y_{1}+1,x_{2}+y_{2}+1)=(y_{1}+x_{1}+1,y_{2}+x_{2}+1)=v+u.
+        \end{equation*}
+        \textbf{Existencia del neutro aditivo}\\
+        Buscamos $(a,b)$ tal que
+        \begin{equation*}
+            (x_{1},x_{2})+(a,b)=(x_{1},x_{2}).
+        \end{equation*}
+        Esto exige que
+        \begin{equation*}
+            x_{1}+a=x_{1}, \quad x_{2}+b=x_{2}.
+        \end{equation*}
+        de donde $a=b=-1$. Luego el neutro es
+        \begin{equation*}
+            0_{V}=(-1,-1).
+        \end{equation*}
+        \textbf{Existencia de inverso aditivo}\\
+        Dado $v=(x_{1},x_{2})$, buscmos $w=(a,b)$ tal que
+        \begin{equation*}
+            u+v=(-1,-1).
+        \end{equation*}
+        Esto exige que
+        \begin{equation*}
+            x_{1}+a+1=-1,\quad x_{2}+b+1=-1,
+        \end{equation*}
+        de donde
+        \begin{equation*}
+            a=-x_{1}-2,\quad b=-x_{2}-2.
+        \end{equation*}
+        Así, todo elemento tiene inverso.\\
+        \textbf{Cerrado bajo el producto por escalares}\\
+        Si $c\in\mathbb{C}$ y $c\in V$,
+        \begin{equation*}
+            cv=(cx_{1}+c-1,cx_{2}+c-1)\in V,
+        \end{equation*}
+        porque $\mathbb{C}$ es cerrado bajo suma y producto.\\
+        \textbf{Distributividad respecto a suma en $V$}
+        Sea $c\in\mathbb{C}$ y $u,v\in V$. Entonces
+        \begin{align*}
+            c(u+v)&=c((x_{1}+y_{1}+1,x_{2}+y_{2}+1)),\\
+            &=(c(x_{1}+y_{1}+1)+c-1,c(x_{2}+y_{2}+1)+c-1),\\
+            &=(cx_{1}+cy_{1}+2c-1,cx_{2}+cy_{2}+2c-1).
+        \end{align*}
+        Por otro lado,
+        \begin{equation*}
+            cu+cv=(cx_{1}+cy_{1}+2c-1,cx_{2}+cy_{2}+2c-1)
+        \end{equation*}
+        Así, el producto de es distributivo respecto a la suma en $V$.\\
+        \textbf{Distributividad respecto a suma en $\mathbb{C}$}\\
+        Sea $c,d\in\mathbb{C}$ y $v\in V$. Entonces
+        \begin{equation*}
+            (c+d)v=((c+d)x_{1}+(c+d)-1,(c+d)x_{2}+(c+d)-1).
+        \end{equation*}
+        Por otro lado,
+        \begin{align*}
+            cv+vd&=(cx_{1}+c-1,cx_{2}+c-1)+(dx_{1}+d-1,dx_{2}+d-1)\\
+            &=((cx_{1}+c-1)+(dx_{1}+d-1)+1,(cx_{2}+c-1)+(dx_{2}+d-1)+1)\\
+            &=((c+d)x_{1}+(c+d)-1,(c+d)x_{2}+(c+d)-1).
+        \end{align*}
+        Luego, el producto es distributivo respecto a la suma en $\mathbb{C}$.\\
+        \textbf{Asociatividad respecto a el producto en $\mathbb{C}$}\\
+        Sea $c,d\in\mathbb{C}$ y $v\in V$. Entonces
+        \begin{equation*}
+            (cd)v=((cd)x_{1}+(cd)-1,(cd)x_{2}+(cd)-1)
+        \end{equation*}
+        Por otro lado,
+        \begin{align*}
+            c(dv)&=c(dx_{1}+d-1,dx_{2}+d-1)\\
+            &=(c(dx_{1}+d-1)+c-1,c(dx_{2}+d-1)+c-1)\\
+            &=(cd)x_{1}+(cd)-1,(cd)x_{2}+(cd)-1.
+        \end{align*}
+        En consecuencia, hay asociatividad respecto al producto en $\mathbb{C}$.\\
+        \textbf{Existencia del neutro multiplicativo}\\
+        \begin{equation*}
+            1(x_{1},x_{2})=(1\cdot x_{1}+1-1,1\cdot x_{2}+1-1)=(x_{1},x_{2}).
+        \end{equation*}
+        Así, existe el neutro multiplicativo. Finalmente concluimos que $V$ es un
+        espacio vectorial sobre $\mathbb{C}$.
+    \end{proof}
 
     \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 3}]
         Considera el espacio usual $\mathbb{R}^{n}$ sobre $\mathbb{R}$, determina cuáles de los siguientes
@@ -67,16 +286,135 @@
         justifica tu respuesta.
     \end{mdframed}
 
+    \begin{solucion}
+        \begin{enumerate}
+            \item[(a)] $W=\left\{(a_{1},\dots,a_{n})\in\mathbb{R}^{n}:a_{1}\geq0\right\}$\\
+            Veremos si es un subespacio. Primero el vector cero pertence a $W$, pues $0\geq0$.
+            Ahora tomemos
+            \begin{equation*}
+                v=(1,0,\dots,0)\in W.
+            \end{equation*}
+            Si multiplicamos por -1
+            \begin{equation*}
+                (-1)v=(-1,0,\dots,0),
+            \end{equation*}
+            y su primero coordenada es negativa, luego $(-1)v\notin W$. Por lo tanto, no es subespacio.
+            \item[(b)] $W=\left\{(a_{1},\dots,a_{n})\in\mathbb{R}^{n}:a_{1}+3a_{2}=a_{3}\right\}$\\
+            Veremos si es un subespacio. Primero, el vector cero satisface
+            \begin{equation*}
+                0+3\cdot0=0,
+            \end{equation*}
+            luego $0\in W$. Sea $u,v\in W$. Entonces
+            \begin{equation*}
+                u_{1}+3u_{2}=u_{3},\qquad v_{1}+3v_{2}=v_{3}.
+            \end{equation*}
+            Para $u+v$
+            \begin{equation*}
+                (u_{1}+v_{1})+3(u_{2}+v_{2})=(u_{1}+3_{2})+(v_{1}+3v_{2})=u_{3}+v_{3}.
+            \end{equation*}
+            Luego $u+v\in W$. Sea $c\in\mathbb{R}$. Entonces
+            \begin{equation*}
+                cu_{1}+3cu_{2}=c(u_{1}+3u_{2})=cu_{3}.
+            \end{equation*}
+            Luego $cu\in W$. Por tanto, si es subespacio.
+            \item[(c)] $W=\left\{(a_{1},\dots,a_{n})\in\mathbb{R}^{n}:a_{1}=a_{2}\right\}$\\
+            Veamos si es un subespacio. Primero el vector cero cumple 0=0 entonces $0\in W$.
+            Si $u,v\in W$, entonces
+            \begin{equation*}
+                u_{1}=u_{2},\qquad v_{1}=v_{2}.
+            \end{equation*}
+            Entonces
+            \begin{equation*}
+                (u_{1}+v_{1})=(u_{2}+v_{2}).
+            \end{equation*}
+            Luego, es cerrado bajo suma,
+            \begin{equation*}
+                cu_{1}=cu_{2}.
+            \end{equation*}
+            Luego es cerrado bajo escaleres. Por tanto si es un subespacio.
+            \item[(d)] $W=\left\{(a_{1},\dots,a_{n})\in\mathbb{R}^{n}:a_{j}\in\mathbb{Q}\text{ para todo }1\leq j\leq n\right\}$\\
+            Veamos si es un subespacio. El vector cero pertenece a $W$. Es cerrado bajo la suma pues la suma de racionales es racional.
+            Ahora tomemos
+            \begin{equation*}
+                v=(1,0,\dots,0)\in W.
+            \end{equation*}
+            Multiplicando por $\sqrt{2}\in\mathbb{R}\setminus\mathbb{Q}$,
+            \begin{equation*}
+                \sqrt{2}v=(\sqrt{2},0,\dots,0),
+            \end{equation*}
+            que no pertenece a $W$. Por tanto no es un subespacio.
+        \end{enumerate}
+    \end{solucion}
+
     \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 4}]
         Sean $W_{1},W_{2}$ subespacios vectoriales de un espacio vectorial $V$ sobre el campo
         $F$. Demuestra que si $W_{1}\cup W_{2}$ es un subespacio vectorial $V$ entonces uno de los espacios
         $W_{j}$ está contenido en el otro.
     \end{mdframed}
 
+    \begin{proof}
+        Supongamos que $W_{1}\cup W_{2}$ es subespacio y que
+        \begin{equation*}
+            W_{1}\nsubseteq W_{2}\quad\text{ y }\quad W_{2}\nsubseteq W_{1}
+        \end{equation*}
+        Entonces existen
+        \begin{equation*}
+            u\in W_{1}\setminus W_{2},\qquad v\in W_{1}\setminus W_{2}.
+        \end{equation*}
+        Como $W_{1}\cup W_{2}$ es subespacio, es cerrado bajo suma, luego
+        \begin{equation*}
+            u+v\in W_{1}\cup W_{2}.
+        \end{equation*}
+        Por definición de unión, entonces ocurre una de dos cosas. Primer caso, $u+v\in W_{1}$.
+        Como $u\in W_{1}$ y $W_{1}$ es subespacio, entonces también
+        \begin{equation*}
+            (u+v)-u\in W_{1}.
+        \end{equation*}
+        Pero
+        \begin{equation*}
+            (u+v)-u=v.
+        \end{equation*}
+        Luego $v\in W_{1}$, lo cual contradice que $v\notin W_{1}$. Segundo caso, $u+v\in W_{2}$.
+        Como $v\in W_{2}$, entonces
+        \begin{equation*}
+            (u+v)-v\in W_{2}.
+        \end{equation*}
+        Pero
+        \begin{equation*}
+            (u+v)-u=u.
+        \end{equation*}
+        Luego $u\in W_{2}$, contradicción. En ambos casos llegamos a contradicción Luego
+        \begin{equation*}
+            W_{1}\subseteq W_{2}\quad\text{ o }\quad W_{2}\subseteq W_{1}
+        \end{equation*}
+    \end{proof}
+
     \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 5}]
         Considera el $\mathbb{R}$-espacio vectorial, $V=\left\{f:\mathbb{R}\to\mathbb{R}:f\text{ es una función continua}\right\}$.
         Demuestra que la función $f(x)=\sin(x)$ no es combinación lineal de las funciones $x,x^{2},x^{3}$ (puedes usar todo lo que
         sabes de tus clases de calculo)
     \end{mdframed}
+
+    \begin{proof}
+        SUpongamos que existen $a,b,c\in\mathbb{R}$ tales que
+        \begin{equation*}
+            \sin(x)=ax+bx^{2}+cx^{3}
+        \end{equation*}
+        sabemos que
+        \begin{equation*}
+            \sin(x)=\sum_{n=0}^{\infty}\frac{(-1)^{n}}{(2n+1)!}x^{2n+1}=x-\frac{x^{3}}{3!}+\frac{x^{5}}{5!}-\frac{x^{7}}{7!}+\cdots
+        \end{equation*}
+        Esta expansión converge para todo $x\in\mathbb{R}$. Si dos funciones analíticas coinciden en un intervalo,
+        entonces coinciden sus series de taylor termino a termino. Por tanto si la igualdad fuese cierta, deberia cumplirse
+        \begin{equation*}
+            x-\frac{x^{3}}{6}+\frac{x^{5}}{120}-\cdots=ax+bx^{2}+cx^{3}.
+        \end{equation*}
+        Pero entonces en el término $x^{5}$ deberia tener coeficiente 0 en el polinomio,
+        mientras que en la seria de $\sin(x)$ el coeficiente es
+        \begin{equation*}
+            \frac{1}{120}\neq0.
+        \end{equation*}
+        Contradicción. Por tanto no puede existir tal combinación lineal.
+    \end{proof}
 
 \end{document}
