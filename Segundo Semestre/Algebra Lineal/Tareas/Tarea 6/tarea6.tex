@@ -1,0 +1,74 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{ugmath}
+\usepackage{float}
+\usepackage{placeins}
+\usepackage{array}
+\usepackage[labelfont=bf,labelsep=space]{caption}
+\newcommand{\paren}[1]{\left( #1 \right)}
+\newcommand{\alumno}{Ricardo León Martínez}
+\newcommand{\materia}{Algebra Lineal I}
+\newcommand{\profesor}{Claudia Reynoso Alcántara}
+\newcommand{\tarea}{Tarea 6}
+\newcommand{\fecha}{9/3/2026}
+
+\begin{document}
+
+    \begin{center}
+        {\large\textbf{UNIVERSIDAD DE GUANAJUATO}}\\[0.3cm]
+        {\normalsize\textbf{DIVISIÓN DE CIENCIAS NATURALES Y EXACTAS}}\\
+        {\normalsize\textbf{CAMPUS GUANAJUATO}}\\[1cm]
+
+        {\Large\textbf{\tarea\ (\materia)}}\\[1cm]
+    \end{center}
+
+    \noindent
+    \textbf{Nombre:} \alumno 
+    \hfill 
+    \textbf{Fecha:} \fecha 
+    \hfill 
+    \textbf{Calificación:} \rule{3cm}{0.4pt}
+
+    \vspace{0.3cm}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 1}]
+        Sea $V$ un espacio vectorial sobre un campo $F$ y sean
+        $W_{1},\dots,W_{k}$ subespacios vectoriales de $V$.
+        Demuestra que
+        \begin{equation*}
+            W_{1}+\cdots+W_{k}:=\{w_{1}+\cdots+w_{k}:w_{i}\in W_{i},\forall i\in\{1,\dots,n\},
+        \end{equation*}
+        es un subespacio vectorial de $V$.
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={EJercicio 2}]
+        Falso o verdadero (justifica tus respuestas: si es verdadero
+        demuestralo y si es falso da un contraejemplo):
+        \begin{enumerate}
+            \item[(a)] El vacío es un subconjunto linealmente independiente.
+            \item[(b)] Sea $V$ un espacio vectorial sobre $F$, si $S\subset V$
+            es linealmente dependiente entonces cualquier subconjunto propio
+            de $S$ es linealmente independiente.
+            \item[(c)] Sea $V$ un espacio vectorial sobre $F$, si $S\subset V$
+            es linealmente independiente entonces cualquier subconjunto
+            de $S$ es linealmente independiente.
+            \item[(d)] Si un conjunto de 4 vectores en $\mathbb{R}^{4}$ es
+            linealmente independiente, entonces necesariamente genera a $\mathbb{R}^{4}$
+        \end{enumerate}
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 3}]
+        Demuestra que en el espacio vectorial $V=\{f:\mathbb{R}\to\mathbb{R}:f\text{ es función}\}$
+        sobre $\mathbb{R}$, existe un conjunto infinito que es linealmente independiente.
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 4}]
+        Encuentra un conjunto $\{v_{1},v_{2},v_{3}\}$ de vectores linealmente dependientes en
+        $\mathbb{R}^{3}$ tales que dos a dos son linealmente independientes.
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 5}]
+        Sean $a,b,c\in\mathbb{R}$ distintos entre sí. Demuestra que
+        $\{(1,1,1),(a,b,c),(a^{2},b^{2},c^{2})\}$ es linealmente independiente
+        en $\mathbb{R}^{3}$.
+    \end{mdframed}
+\end{document}
