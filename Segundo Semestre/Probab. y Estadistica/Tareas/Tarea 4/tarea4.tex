@@ -39,12 +39,134 @@
         \textit{Sugerencia.} Resuelva el caso $n = 2$ e intente usar inducción para el caso general.
     \end{mdframed}
 
+    \begin{proof}
+        Procederemos por inducción. Sean $A_{1},A_{2}\in\Omega$. Definimos
+        \begin{equation*}
+            B_{1}:=A_{1},\qquad B_{2}:=A_{2}\setminus A_{1}.
+        \end{equation*}
+        Observemos que
+        \begin{equation*}
+            B_{1}\cap B_{2}=A_{1}\cap(A_{2}\setminus A_{1}).
+        \end{equation*}
+        Pero
+        \begin{equation*}
+            A_{2}\setminus A_{1}=A_{2}\cap A_{1}^{c},
+        \end{equation*}
+        por lo tanto
+        \begin{equation*}
+            B_{1}\cap B_{2}=A_{1}\cap A_{2}\cap A_{1}^{c}=\emptyset.
+        \end{equation*}
+        Notemos que
+        \begin{equation*}
+            B_{1}\cup B_{2}=A_{1}\cup(A_{2}\setminus A_{1}).
+        \end{equation*}
+        Sea $x\in A_{1}\cup A_{2}$. Entonces si $x\in A_{1}$, claramente $x\in B_{1}$.
+        Si $x\in A_{2}$ y $x \notin A_{1}$, entonces $x\in A_{2}\setminus A_{1}=B_{2}$ y
+        si $x\in A_{2}\cap A_{1}$, entonces ya pertenece a $B_{1}$. Por lo tanto
+        \begin{equation*}
+            A_{1}\cup A_{2}=B_{1}\cup B_{2}.
+        \end{equation*}
+        El caso $n=2$ queda demostrado. Supongamos que el resultado es cierto para $n$.
+        Es decir, dados $A_{1},\dots,A_{n}$, existen conjuntos disjuntos
+        \begin{equation*}
+            B_{1},\dots,B_{n}
+        \end{equation*}
+        tales que
+        \begin{equation*}
+            \bigcup_{i=1}^{n}A_{i}=\bigcup_{i=1}^{n}B_{i}.
+        \end{equation*}
+        Consideremos ahora $A_{1},\dots,A_{n},A_{n+1}$. Por hipótesis inductiva, existen
+        $B_{1},\dots,B_{n}$ disjuntos tales que
+        \begin{equation*}
+            \bigcup_{i=1}^{n}A_{i}=\bigcup_{i=1}^{n}B_{i}.
+        \end{equation*}
+        Definimos
+        \begin{equation*}
+            B_{n+1}:=A_{n+1}\setminus\bigcup_{i=1}^{n}B_{i}.
+        \end{equation*}
+        y para $i=1,\dots,n$ mantenemos los mismos $B_{i}$. Por construcción,
+        \begin{equation*}
+            B_{n+1}\cap B_{i}=\left(A_{n+1}\setminus\bigcup_{j=1}^{n}B_{j}\right)\cap B_{i}.
+        \end{equation*}
+        Pero $B_{i}\subseteq\bigcup_{j=1}^{n}B_{j}$, de modo que
+        \begin{equation*}
+            B_{n+1}\cap B_{i}=\emptyset.
+        \end{equation*}
+        Como los $B_{1},\dots,B_{n}$ ya eran disjuntos entre sí, obtenemos que
+        \begin{equation*}
+            B_{i}\cap B_{j}=\emptyset\text{ si }i\neq j,
+        \end{equation*}
+        para todos $i,j\in\{1,\dots,n+1\}$. Tenemos
+        \begin{equation*}
+            \bigcup_{i=1}^{n+1}B_{i}=\left(\bigcup_{i=1}^{n}B_{i}\right)\cup\left(A_{n+1}\setminus\bigcup_{i=1}^{n}B_{i}\right)
+        \end{equation*}
+        Pero
+        \begin{equation*}
+            \bigcup_{i=1}^{n}B_{i}=\bigcup_{i=1}^{n}A_{i},
+        \end{equation*}
+        por hipótesis inductiva. Entonces
+        \begin{equation*}
+            \bigcup_{i=1}^{n+1}B_{i}=\left(\bigcup_{i=1}^{n}A_{i}\right)\cup\left(A_{n+1}\setminus\bigcup_{i=1}^{n}A_{i}\right).
+        \end{equation*}
+        Finalmente de forma similar al caso $n=2$ concluimos que
+        \begin{equation*}
+            \bigcup_{i=1}^{n+1}A_{i}=\bigcup_{i=1}^{n+1}B_{i}.
+        \end{equation*}
+    \end{proof}
+
     \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 2}]
         A partir de las propiedades que definen una función de probabilidad, demuestre que para cualesquiera eventos $A$ y $B$ se cumple que
         \[
             P(A \Delta B) = P(A) + P(B) - 2P(A \cap B).
         \]
     \end{mdframed}
+
+    \begin{proof}
+        Observemos que
+        \begin{equation*}
+            (A\cap B^{c})\cap(B\cap A^{c})=\emptyset.
+        \end{equation*}
+        En efecto,
+        \begin{equation*}
+            (A\cap B^{c})\cap(B\cap A^{c})=A\cap B\cap A^{c}\cap B^{c}=\emptyset.
+        \end{equation*}
+        Por lo tanto,
+        \begin{equation}
+            P(A\Delta B)=P(A\cap B^{c})+P(B\cap A^{c}).
+        \end{equation}
+        Notemos ahora que
+        \begin{equation*}
+            A=(A\cap B)\cup(A\cap B^{c}),
+        \end{equation*}
+        siendo unión disjunta. Por aditividad
+        \begin{equation*}
+            P(A)=P(A\cap B)+P(A\cap B^{c}).
+        \end{equation*}
+        Luego,
+        \begin{equation}
+            P(A\cap B^{c})=P(A)-P(A\cap B).
+        \end{equation}
+        Analogamente,
+        \begin{equation*}
+            B=(A\cap B)\cup(B\cap A^{c}),
+        \end{equation*}
+        unión disjunta, y entonces
+        \begin{equation*}
+            P(B)=P(A\cap B)+P(B\cap A^{c}),
+        \end{equation*}
+        de donde
+        \begin{equation}
+            P(B\cap A^{c})=P(B)-P(A\cap B).
+        \end{equation}
+        Sustituyendo (2) y (3) en (1)
+        \begin{equation*}
+            P(A\Delta B)=(P(A)-P(A\cap B))+(P(B)-P(A\cap B)).
+        \end{equation*}
+        Agrupando terminos,
+        \begin{equation*}
+            P(A \Delta B) = P(A) + P(B) - 2P(A \cap B).
+        \end{equation*}
+    \end{proof}
 
     \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 3}]
         Sean $A_1, A_2, \dots, A_n$ eventos dados. Para cada entero $k \in [0,n-1]$, sea $B_k$ el evento de que se cumplen exactamente $k$ de los $A_i$ y sea $C_k$ el evento de que se cumplen al menos $k$ de los $A_i$.
@@ -54,20 +176,172 @@
         \end{enumerate}
     \end{mdframed}
 
+    \begin{solucion}
+        \begin{enumerate}
+            \item[(a)] Describa $B_k$ y $C_k$ mediante uniones, intersecciones y complementos de los eventos dados.\\
+            Diremos que ocurre exactamente $k$ de los eventos si existe un subconjunto  de índices de tamaño $k$ para los
+            cuales los eventos ocurren, y los restantes no. Sea
+            \begin{equation*}
+                I\subseteq\{1,\dots,n\},\qquad\abs{I}=k.
+            \end{equation*}
+            Definimos
+            \begin{equation*}
+                E_{I}=\left(\bigcap_{i\in I}A_{i}\right)\cap\left(\bigcap_{j\notin I}A_{j}^{c}\right).
+            \end{equation*}
+            Entonces
+            \begin{equation*}
+                B_{k}=\bigcup_{I\subseteq\{1,\dots,n\}}\left(\bigcap_{i\in I}A_{i}\cap\bigcap_{j\notin I}A_{j}^{c}\right).
+            \end{equation*}
+            Ahora decimos que ocurren al menos $k$ eventos si existe un subconjunto de indices de tamaño $k$ tal que
+            todos esos eventos ocurren. Así,
+            \begin{equation*}
+                C_{k}=\bigcup_{I\subseteq\{1,\dots,n\}}\bigcap_{i\in I}A_{i}.
+            \end{equation*}
+            Equivalentemente,
+            \begin{equation*}
+                C_{k}=\bigcup_{m=k}^{n}B_{m}.
+            \end{equation*}
+            \item[(b)] Dé una expresión para $P(B_k)$ en términos de $P(C_k)$ y $P(C_{k+1})$.\\
+            Observemos que
+            \begin{equation*}
+                C_{k}=\bigcup_{m=k}^{n}B_{m}.
+            \end{equation*}
+            y la unión es disjunta porque los $B_{m}$ son disjuntos a pares. Por aditividad
+            \begin{equation}
+                P(C_{k})=\sum_{m=k}^{n}P(B_{m}).
+            \end{equation}
+            Analogamente,
+            \begin{equation}
+                P(C_{k+1})=\sum_{m=k+1}^{n}P(B_{m}).
+            \end{equation}
+            Restando (5) de (4)
+            \begin{equation*}
+                P(B_{k})=P(C_{k})-P(C_{k+1}).
+            \end{equation*}
+        \end{enumerate}
+    \end{solucion}
+
     \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 4}]
         Si $A, B, C$ son eventos tales que $P(A) = 0.5, P(A \cap B) = 0.25, P(A \cap C) = 0.2, P(A \cap B \cap C) = 0,$
         ¿cuál es la probabilidad de que ocurra $A$ pero no $B$ ni $C$?
     \end{mdframed}
+
+    \begin{solucion}
+        Observemos que
+        \begin{equation*}
+            A=(A\cap(B\cup C))\cup(A\cap B^{c}\cap C^{c}),
+        \end{equation*}
+        y la unión es disjunta. Por aditividad,
+        \begin{equation*}
+            P(A)=P(A\cap(B\cup C))+P(A\cap B^{c}\cap C^{c}).
+        \end{equation*}
+        Luego,
+        \begin{equation}
+            P(A\cap B^{c}\cap C^{c})=P(A)-P(A\cap(B\cup C)).
+        \end{equation}
+        Usando distributividad,
+        \begin{equation*}
+            A\cap(B\cup C)=(A\cap B)\cup(A\cap C).
+        \end{equation*}
+        Aplicando la fórmula de inclusión-exclusión para dos eventos,
+        \begin{equation*}
+            P((A\cap B)\cup(A\cap C))=P(A\cap B)+P(A\cap C)-P(A\cap B\cap C).
+        \end{equation*}
+        Sustituyendo los datos
+        \begin{align*}
+            P(A\cap B)=0.25,\\
+            P(A\cap C)=0.2,\\
+            P(A\cap B\cap C)=0.
+        \end{align*}
+        Entonces,
+        \begin{equation}
+            P(A\cap(B\cup C))=0.25+0.2-0=0.45
+        \end{equation}
+        De (6) y (7)
+        \begin{equation*}
+            P(A\cap B^{c}\cap C^{c})=0.5-0.45=0.05.
+        \end{equation*}
+    \end{solucion}
 
     \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 5}]
         Dos eventos $A$ y $B$ se dicen independientes si se cumple que $P(A \cap B) = P(A) \cdot P(B).$
         Demuestre que si $A$ y $B$ son independientes, entonces $P(A \cup B) = 1 - P(A^c)\, P(B^c).$
     \end{mdframed}
 
+    \begin{proof}
+        Observemos que
+        \begin{equation*}
+            A^{c}\cap B^{c}=(A\cap B)^{c}.
+        \end{equation*}
+        Por inclusión-exclusión,
+        \begin{equation*}
+            P(A\cup B)=P(A)+P(B)-P(A\cap B).
+        \end{equation*}
+        Usando la independencia,
+        \begin{equation*}
+            P(A\cup B)=P(A)+P(B)-P(A)P(B).
+        \end{equation*}
+        Entonces,
+        \begin{equation*}
+            P(A^{c}\cap B^{c})=1-P(A\cup B)=1-(P(A)+P(B)-P(A)P(B)).
+        \end{equation*}
+        Simplificando,
+        \begin{equation*}
+            P(A^{c}\cap B^{c})=1-P(A)-P(B)+P(A)P(B).
+        \end{equation*}
+        Factorizando,
+        \begin{equation*}
+            P(A^{c}\cap B^{c})=(1-P(A))(1-P(B)).
+        \end{equation*}
+        Pero
+        \begin{equation*}
+            P(A^{c})=1-P(A),\qquad P(B^{c})1-P(B).
+        \end{equation*}
+        Luego,
+        \begin{equation*}
+            P(A^{c}\cap B^{c})=P(A^{c})P(B^{c}).
+        \end{equation*}
+        Es decir, los complementos también son independientes. Por la ley del coplemento
+        \begin{equation*}
+            P(A\cup B)=1-P((A\cup B)^{c})=1-P(A^{c}\cap B^{c}).
+        \end{equation*}
+        Usando lo probado anteriormente
+        \begin{equation*}
+            P(A \cup B) = 1 - P(A^c)\, P(B^c).
+        \end{equation*}
+    \end{proof}
+
     \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 6}]
         Sean $A, B, C$ eventos tales que $P(A) = P(B) = P(C) = 0.2, P(A \cap B) = P(B \cap C) = 0,$
         y $P(A \cap C) = 0.1$. Calcule la probabilidad de que ninguno de los eventos dados ocurra.
     \end{mdframed}
+
+     \begin{solucion}
+        Usando la fórmula de inclusión-exclusión para tres eventos
+        \begin{equation*}
+            P(A\cup B\cup C)=P(A)+P(B)+P(C)-P(A\cap B)-P(A\cap C)-P(B\cap C)+P(A\cap B\cap C).
+        \end{equation*}
+        Observemos que
+        \begin{equation*}
+            A\cap B\cap C\subseteq A\cap B,
+        \end{equation*}
+        pero $P(A\cap B)=0$. Luego
+        \begin{equation*}
+            P(A\cap B\cap C)=0.
+        \end{equation*}
+        Sustituyendo los datos
+        \begin{equation*}
+            P(A\cup B\cup C)=0.2+0.2+0.2-0-0.1-0+0.
+        \end{equation*}
+        Por tanto,
+        \begin{equation*}
+            P(A\cup B\cup C)=0.6-0.1=0.5
+        \end{equation*}
+        Así, la probabilidad de que niguno ocurra
+        \begin{equation*}
+            P(A^{c}\cap B^{c}\cap C^{c})=1-0.5=0.5.
+        \end{equation*}
+     \end{solucion}
 
     \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 7}]
         Suponga que se establece aleatoriamente una contraseña de 8 caracteres a elegir entre 27 letras minúsculas $a, b, \dots, z$, 27 letras mayúsculas $A, B, \dots, Z$ y 10 dígitos $0,1,\dots,9$.
@@ -77,4 +351,50 @@
             \item[(c)] ¿Cuál es la probabilidad de que la contraseña contenga al menos una letra minúscula, al menos una letra mayúscula y al menos un dígito?
         \end{enumerate}
     \end{mdframed}
+
+    \begin{solucion}
+        Sea $\Omega$ el conjunto de todas las cadenas de longitud 8 formadas con los caracteres
+        permitidos. Hay 27 letras minúsculas, 27 letras mayúsculas y 10 digitos. Total de simbolos disponibles
+        \begin{equation*}
+            27+27+10=64.
+        \end{equation*}
+        Como cada posición se elige independientemente y con igual probabilidad,
+        \begin{equation*}
+            \abs{\Omega}=64^{8}.
+        \end{equation*}
+        Todas las probabilidades se calculan contando casos favorables y dividiendo entre $64^{8}$.
+        \begin{enumerate}
+            \item[(a)] ¿Cuál es la probabilidad de que la contraseña contenga al menos una letra minúscula?\\
+            Sea $A$ el evento $A=\{\text{la contraseña contiene al menos una minúscula}\}$. Usamos complemento
+            \begin{equation*}
+                P(A)=1-P(\text{ninguna minúscula}).
+            \end{equation*}
+            Si no hay minúscula, cada carácter debe ser mayuscula (27 opciones), o digito (10 opciones).
+            Dando un total de 37 opciones por posición. Numero de cadenas sin minúsculas
+            \begin{equation*}
+                37^{8}.
+            \end{equation*}
+            Entonces,
+            \begin{equation*}
+                P(A)=1-\left(\frac{37}{64}\right)^{8}.
+            \end{equation*}
+            \item[(b)] ¿Cuál es la probabilidad de que la contraseña contenga al menos una letra minúscula y al menos una letra mayúscula?\\
+            Sea $M$: no hay minusculas y $U$: no hay mayusculas. Por inclusión-exclusión
+            \begin{equation*}
+                P(M\cup U)=P(M)+P(U)-P(M\cap U).
+            \end{equation*}
+            Ya sabemos
+            \begin{equation*}
+                P(M)=\left(\frac{37}{64}\right)^{8},\qquad P(U)=\left(\frac{37}{64}\right)^{8}.
+            \end{equation*}
+            Si no hay minusculas ni mayusculas, solo pueden aparecer digitos
+            \begin{equation*}
+                P(M\cap U)=\left(\frac{10}{64}\right)^{8}.
+            \end{equation*}
+            Por tanto,
+            \begin{equation*}
+                P=1-2\left(\frac{37}{64}\right)^{8}+\left(\frac{10}{64}\right)^{8}.
+            \end{equation*}
+        \end{enumerate}
+    \end{solucion}
 \end{document}
