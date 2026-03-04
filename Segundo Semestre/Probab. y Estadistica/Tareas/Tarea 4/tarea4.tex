@@ -395,6 +395,39 @@
             \begin{equation*}
                 P=1-2\left(\frac{37}{64}\right)^{8}+\left(\frac{10}{64}\right)^{8}.
             \end{equation*}
+            \item[(c)] ¿Cuál es la probabilidad de que la contraseña contenga al menos una letra minúscula, al menos una letra mayúscula y al menos un dígito?\\
+            Sea $M$: no hay minusculas, $D$: no hay mayusculas y $D$: no hay digitos. Queremos
+            \begin{equation*}
+                P(\text{al menos una de cada tipo})=1-P(M\cup U\cup D).
+            \end{equation*}
+            Aplicamos inclusión-exclusión
+            \begin{equation*}
+                P(M\cup U\cup D)=P(M)+P(U)+P(D)-P(M\cap U)-P(M\cap D)-P(U\cap D)+P(M\cap U\cap D).
+            \end{equation*}
+            Ya tenemos
+            \begin{equation*}
+                P(M)=P(U)=\left(\frac{34}{64}\right)^{8}
+            \end{equation*}
+            Si no hay digitos, solo letras
+            \begin{equation*}
+                P(D)=\left(\frac{54}{64}\right)^{8}
+            \end{equation*}
+            y las interesecciones dobles son
+            \begin{equation*}
+                P(M\cap U)=\left(\frac{10}{64}\right)^{8},\quad P(M\cap D)=\left(\frac{27}{64}\right)^{8},\quad P(U\cap D)=\left(\frac{27}{64}\right)^{8}.
+            \end{equation*}
+            y la triple intersección
+            \begin{equation*}
+                P(M\cap U\cap D)=0.
+            \end{equation*}
+            Sustituyendo
+            \begin{equation*}
+                P(M\cup U\cap D)=2\left(\frac{34}{64}\right)^{8}+\left(\frac{54}{64}\right)^{8}-\left(\frac{10}{64}\right)^{8}-2\left(\frac{27}{64}\right)^{8}.
+            \end{equation*}
+            Concluyendo que
+            \begin{equation*}
+                P=1-2\left(\frac{34}{64}\right)^{8}-\left(\frac{54}{64}\right)^{8}+\left(\frac{10}{64}\right)^{8}+2\left(\frac{27}{64}\right)^{8}.
+            \end{equation*}
         \end{enumerate}
     \end{solucion}
 \end{document}
