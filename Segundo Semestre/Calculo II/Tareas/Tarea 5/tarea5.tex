@@ -40,12 +40,109 @@
         \end{enumerate}
     \end{mdframed}
 
+    \begin{solucion}
+        \begin{enumerate}
+            \item[(a)] $\displaystyle\int\frac{x}{x^{2}+1}dx$.\\
+            Hagamos $u=x^{2}+1$ y $du=2xdx$. Por lo tanto
+            \begin{align*}
+                \int\frac{x}{x^{2}+1}dx&=\frac{1}{2}\int\frac{1}{u}du\\
+                &=\frac{1}{2}\ln(\abs{u})\\
+                &=\frac{1}{2}\ln(\abs{x^{2}+1}).
+            \end{align*}
+            \item[(b)] $\displaystyle\int\sin^{2}(x)\cos(x)dx$.\\
+            Hagamos $u=\sin(x)$ y $du=\cos(x)dx$. En consecuencia
+            \begin{align*}
+                \int\sin^{2}(x)\cos(x)dx&=\int u^{2}du\\
+                &=\frac{1}{3}u^{3}\\
+                &=\frac{1}{3}\sin^{3}(x)
+            \end{align*}
+            \item[(c)] $\displaystyle\int\frac{x}{\sqrt{4-x^{2}}}dx$.\\
+            Sea $x=2\sin(\theta)$ y $dx=2\cos(\theta)d\theta$. Entonces $-2\cos(\theta)=-\sqrt{4-x^{2}}$. En
+            consecuencia,
+            \begin{align*}
+                \int\frac{x}{\sqrt{4-x^{2}}}dx&=\int\frac{2\sin(\theta)}{\sqrt{4-4\sin^{2}(\theta)}}2\cos(\theta)d\theta\\
+                &=\int\frac{2\sin(\theta)}{2\cos(\theta)}2\cos(\theta)d\theta\\
+                &=\int2\sin(\theta)d\theta\\
+                &=-2\cos(\theta)\\
+                &=-\sqrt{4-x^{2}}.
+            \end{align*}
+            \item[(d)] $\displaystyle\int\frac{x}{\sqrt{9+x^{2}}}dx$.\\
+            Sea $x=3\tan(\theta)$ y $dx=3\sec^{2}(\theta)d\theta$. Entonces $3\sec(\theta)=\sqrt{x^{2}+9}$. En consecuencia,
+            \begin{align*}
+                \int\frac{x}{\sqrt{9+x^{2}}}&=\int\frac{3\tan(\theta)}{\sqrt{9+9\tan^{2}(\theta)}}3\sec^{2}(\theta)d\theta\\
+                &=\int\frac{3\tan(\theta)}{3\sec(\theta)}3\sec^{2}(\theta)d\theta\\
+                &=3\int\tan(\theta)\sec(\theta)d\theta
+            \end{align*}
+            Ahora, hagamos $u=\sec(\theta)$ y $du=\sec(\theta)\tan(\theta)d\theta$. Por lo tanto
+            \begin{align*}
+                3\int\tan(\theta)\sec(\theta)d\theta&=\int du\\
+                &=3u\\
+                &=3\sec(\theta)\\
+                &=\sqrt{x^{2}+9}.
+            \end{align*}
+            Así,
+            \begin{equation*}
+                \int\frac{x}{\sqrt{x^{2}+9}}dx=\sqrt{x^{2}+9}.
+            \end{equation*}
+            \item[(e)] $\displaystyle\int\frac{x}{\sqrt{x^{2}-2}}dx$.\\
+            Sea $x=\sqrt{2}\sec(\theta)$ y $dx=\sqrt{2}\sec(\theta)\tan(\theta)d\theta$. Entonces $\sqrt{2}\tan(\theta)=\sqrt{x^{2}-2}$. En consecuencia,
+            \begin{align*}
+                \int\frac{x}{\sqrt{x^{2}-2}}dx&=\int\frac{\sqrt{2}\sec(\theta)}{\sqrt{2\sec^{2}(\theta)-2}}\sqrt{2}\sec(\theta)\tan(\theta)d\theta\\
+                &=\int\frac{\sqrt{2}\sec(\theta)}{\sqrt{2}\tan(\theta)}\sqrt{2}\sec(\theta)\tan(\theta)d\theta\\
+                &=\sqrt{2}\int\sec^{2}(\theta)d\theta\\
+                &=\sqrt{2}\tan(\theta)\\
+                &=\sqrt{x^{2}-2}.
+            \end{align*}
+        \end{enumerate}
+    \end{solucion}
+
     \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 3}]
         Calcula la integral
         \begin{equation*}
             \int\frac{x^{2}+5x-14}{(x+4)(x^{2}+2)}dx.
         \end{equation*}
     \end{mdframed}
+
+    \begin{solucion}
+        Notemos que el integrando es una funcion racional propia, así que seguiremos el método citado para descomponerlo en fracciones simples.
+        En este caso el denominador ya esta descompuesto en factores lineales y cuadraticos irreducibles. Por el factor $(x+4)$ la descomposición
+        del integrando en fracciones simples incluye una fracción de la forma
+        \begin{equation*}
+            \frac{A}{x+4}
+        \end{equation*}
+        y por el factor $(x^{2}+2)$ la descomposición del integrando en fracciones simples incluye una fracción de la forma
+        \begin{equation*}
+            \frac{Bx+C}{x^{2}+2}
+        \end{equation*}
+        Así, la descomposición en fracciones simples es
+        \begin{equation}
+            \frac{x^{2}+5x-14}{(x+4)(x^{2}+2)}=\frac{A}{x+4}+\frac{Bx+C}{x^{2}+2}
+        \end{equation}
+        Notemos que $A,B$ y $C$ cumplen (1) si y solo si $A,B$ y $C$ cumplen que
+        \begin{equation}
+            x^{2}+5x-14=A(x^{2}+2)+(Bx+C)(x+4).
+        \end{equation}
+        Reexpresamos (2) como
+        \begin{equation}
+            x^{2}+5x-14=(A+B)x^{2}+(4B+C)x+(2A+4C).
+        \end{equation}
+        Puesto que dos polinomios son iguales si sus coeficientes son iguales, de (3) obtenemos que $A,B$ y $C$ satisfacen el sistema de ecuaciones
+        \begin{align*}
+            A+B=1\\
+            4B+C=5\\
+            2A+4C=-14
+        \end{align*}
+        cuya solución es $A=-1$, $B=2$ y $C=-3$. Por lo cual
+        \begin{equation*}
+            \frac{x^{2}+5x-14}{(x+4)(x^{2}+2)}=-\frac{1}{x+4}+\frac{2x-3}{x^{2}+2}
+        \end{equation*}
+        y, en consecuencia
+        \begin{align*}
+            \int\frac{x^{2}+5x-14}{(x+4)(x^{2}+2)}&=\int-\frac{1}{x+4}+\frac{2x-3}{x^{2}+2}dx\\
+            &=-\int\frac{1}{x+4}dx+\int\frac{2x}{x^{2}+2}dx-3\int\frac{1}{x^{2}+2}dx\\
+            &=-\ln(\abs{x+4})+\ln(\abs{x^{2}+2})-3\arctan(\frac{x}{\sqrt{2}}).
+        \end{align*}
+    \end{solucion}
 
     \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 4}]
         Considera las funciones $f:(0,1]\to\mathbb{R}$,$g:(0,1]\to\mathbb{R}$ y $h:(0,1]\to\mathbb{R}$ dadas por
@@ -57,6 +154,93 @@
             \item[(b)] Calcula el área bajó la gráfica de cada una de las funciones $f,g$ y $h$.  
         \end{enumerate}
     \end{mdframed}
+
+    \begin{solucion}
+        \begin{enumerate}
+            \item[(a)] Dibuja las graficas de $f,g$ y $h$\\
+            \begin{figure}[h]
+                \centering
+                \includegraphics[width=0.32\textwidth]{f.pdf}
+                \includegraphics[width=0.32\textwidth]{g.pdf}
+                \includegraphics[width=0.32\textwidth]{h.pdf}
+            \end{figure}
+            \item[(b)] Calcula el área bajó la gráfica de cada una de las funciones $f,g$ y $h$.
+            \begin{enumerate}
+                \item[1.] $f(x)=\frac{1}{\sqrt{x}}$.\\
+                El area bajo la gráfica de $f$ en el intervalo $(0,1]$ se describe mediante la integral impropia
+                \begin{equation*}
+                    \int_{0}^{1}\frac{1}{\sqrt{x}}dx,
+                \end{equation*}
+                la cual es impropia debido a que la función no está definida en $x=0$ y adémas
+                \begin{equation*}
+                    \lim_{x\to0^{+}}\frac{1}{\sqrt{x}}=+\infty.
+                \end{equation*}
+                Por definición de integral impropia en un extremo, se define
+                \begin{equation*}
+                    \int_{0}^{1}\frac{1}{\sqrt{x}}dx:=\lim_{t\to0^{+}}\int_{t}^{1}\frac{1}{\sqrt{x}}dx
+                \end{equation*}
+                Calculamos primero la integral $[t,1]$
+                \begin{align*}
+                    \int_{t}^{1}\frac{1}{\sqrt{x}}dx&=\int_{t}^{1}t^{-\frac{1}{2}}dt\\
+                    &=\left[2x^{\frac{1}{2}}\right]_{t}^{1}\\
+                    &=2-2t^{\frac12}
+                \end{align*}
+                Tomando el limite cuando $t\to0^{+}$
+                \begin{equation*}
+                    \int_{0}^{1}\frac{1}{\sqrt{x}}=\lim_{t\to0^{+}}2-2t^{\frac12}=2.
+                \end{equation*}
+                Así, el area bajo la grafica es 2
+                \item[2.] $g(x)=\frac1x$\\
+                El area bajo la gráfica de $f$ en el intervalo $(0,1]$ se describe mediante la integral impropia
+                \begin{equation*}
+                    \int_{0}^{1}\frac{1}{x}dx
+                \end{equation*}
+                la cual es impropia debido a que la función no está definida en $x=0$ y adémas
+                \begin{equation*}
+                    \lim_{x\to0^{+}}\frac1x=+\infty
+                \end{equation*}
+                Por definición de la integral impropio en un extremo, se define
+                \begin{equation*}
+                    \int_{0}^{1}\frac{1}{x}dx:=\lim_{t\to0^{+}}\int_{t}^{1}\frac{1}{x}dx
+                \end{equation*}
+                Calculamos primero la integral en $[t,1]$
+                \begin{align*}
+                    \int_{t}^{1}\frac1xdx&=\left[\ln(x)\right]_{t}^{1}\\
+                    &=\ln(1)-\ln(t)\\
+                    &=\ln(\frac1t)
+                \end{align*}
+                Tomando el limite cuando $t\to0^{+}$
+                \begin{equation*}
+                    \int_{0}^{1}\frac{1}{x}dx=\lim_{t\to0^{+}}\ln(\frac{1}{t})=+\infty
+                \end{equation*}
+                Así, el area bajo la gráfica diverge.
+                \item[3.] $h(x)=\frac{1}{x^{2}}$\\
+                El area bajo la gráfica de $f$ en el intervalo $(0,1]$ se describe mediante la integral impropia
+                \begin{equation*}
+                    \int_{0}^{1}\frac{1}{x^{2}}dx
+                \end{equation*}
+                la cual es impropia debido a que la función no está definida en $x=0$ y adémas
+                \begin{equation*}
+                    \lim_{x\to0^{+}}\frac{1}{x^{2}}=+\infty
+                \end{equation*}
+                Por definición de la integral impropio en un extremo, se define
+                \begin{equation*}
+                    \int_{0}^{1}\frac{1}{x^{2}}dx:=\lim_{t\to0^{+}}\int_{t}^{1}\frac{1}{x^{2}}dx
+                \end{equation*}
+                Calculamos primero la integral en $[t,1]$
+                \begin{align*}
+                    \int_{t}^{1}\frac{1}{x^{2}}dx&=\int_{t}^{1}x^{-2}\\
+                    &=\left[-\frac{1}{x}\right]_{t}^{1}\\
+                    &=-1+\frac{1}{t}
+                \end{align*}
+                Tomando el limite cuando $t\to0^{+}$
+                \begin{equation*}
+                    \int_{0}^{1}\frac{1}{x}dx=\lim_{t\to0^{+}}-1+\frac{1}{t}=+\infty
+                \end{equation*}
+                Así, el area bajo la gráfica diverge.
+            \end{enumerate}
+        \end{enumerate}
+    \end{solucion}
 
     \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 5}]
         Calcula lo siguiente:
