@@ -252,6 +252,53 @@
         \end{enumerate}
     \end{mdframed}
 
+    \begin{solucion}
+        \begin{enumerate}
+            \item[(a)] El área entre las gráficas de las funciones $f(x)=x^{2}$ y $g(x)=1$ sobre el intevervalo $[-1,1]$.\\
+            Como $x^{2}\leq1$ en $[-1,1]$, entonces
+            \begin{align*}
+                A(f,g)&=\int_{-1}^{1}\abs{f-g}dx\\
+                &=\int_{-1}^{1}(1-x^{2})dx\\
+                &=\left[x-\frac{x^{3}}{3}\right]_{-1}^{1}\\
+                &=\frac{2}{3}-\left(-\frac{2}{3}\right)\\
+                &=\frac{4}{3}.
+            \end{align*}
+            \item[(b)] El área entre las gráficas de las funciones $f(x)=\sin(x)$ y $g(x)=\cos(x)$ sobre el intervalo
+            $[0,\pi]$.
+            Se resuelve
+            \begin{equation*}
+                \sin(x)=\cos(x).
+            \end{equation*}
+            Equivalentemente
+            \begin{equation*}
+                \tan(x)=1.
+            \end{equation*}
+            En el intervalo $[0,\pi]$ esto ocurre en
+            \begin{equation*}
+                x=\frac{\pi}{4}.
+            \end{equation*}
+            Ahora determinamos el orden. En $0\leq x\leq\frac{\pi}{4}$. Por ejemplo evaluando en $x=0$
+            \begin{equation*}
+                \sin(0)=0,\qquad\cos(0)=1.
+            \end{equation*}
+            Luego $\cos(x)\lt\sin(x)$. En $\frac{\pi}{4}\lt x\leq\pi$. Por ejemplo en $x=\frac{\pi}{2}$
+            \begin{equation*}
+                \sin(\frac{\pi}{2})=1,\qquad\cos(\frac{\pi}{2})=0.
+            \end{equation*}
+            Luego $\sin(x)\gt\cos(x)$. Por lo tanto el intervalo debe partirse en dos
+            \begin{equation*}
+                [0,\pi]=[0,\frac{\pi}{4}]\cup[\frac{\pi}{4},\pi].
+            \end{equation*}
+            De esta forma el area es
+            \begin{align*}
+                A(f,g)&=\int_{0}^{\frac{\pi}{4}}(\cos(x)-\sin(x))dx+\int_{\frac{\pi}{4}}^{\pi}(\sin(x)-\cos(x))dx.\\
+                &=\big[\sin(x)+\cos(x)\big]_{0}^{\frac{\pi}{4}}+\big[-\cos(x)-\sin(x)\big]_{\frac{\pi}{4}}^{\pi}\\
+                &=(\sqrt{2}-1)+(1+\sqrt{2})\\
+                &=2\sqrt{2}.
+            \end{align*}
+        \end{enumerate}
+    \end{solucion}
+
     \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 6}]
         Muestra que la longitud de la circunferencia con centro en el origen  y radio $r$ es $2\pi r$.
     \end{mdframed}
