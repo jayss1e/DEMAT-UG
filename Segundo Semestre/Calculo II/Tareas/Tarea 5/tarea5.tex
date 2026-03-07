@@ -8,8 +8,8 @@
 \newcommand{\alumno}{Ricardo León Martínez}
 \newcommand{\materia}{Calculo Diferencia e Integral II}
 \newcommand{\profesor}{Fernando Nuñez Medina}
-\newcommand{\tarea}{Tarea 4}
-\newcommand{\fecha}{20/2/2026}
+\newcommand{\tarea}{Tarea 5}
+\newcommand{\fecha}{6/3/2026}
 
 \begin{document}
     \begin{center}
@@ -28,6 +28,51 @@
         Prueba la proposición 12. \textbf{Sugerencia:} Toda partición $P=\{t_{0},\dots,t_{n}\}$ del intervalo $[a,b]$ genera una partición
         $Q=\{t_{0}-c,\dots,t_{n}-c\}$ del intervalo $[a-c,b-c]$ y viceversa.
     \end{mdframed}
+
+    \begin{proof}
+        Los subintervalos de $P$ son $[t_{i-1},t_{i}]$, mientras que los de $Q$ son
+        $[t_{i-1}-c,t_{i}-c]$. Ademas $(t_{i}-c)-(t_{i-1}-c)=t_{i}-t_{i-1}$. Por lo tanto
+        las longitudes de los subintervalos coinciden. Sea
+        \begin{equation*}
+            M_{i}=\sup\{f(x):x\in[t_{i-1},t_{i}]\},\qquad m_{i}=\inf\{f(x):x\in[t_{i-1},t_{i}]\}.
+        \end{equation*}
+        Para la función $g(x)=f(x+c)$ en el intervalo correspondiente tenemos
+        \begin{equation*}
+            \sup\{g(x):x\in[t_{i-1}-c,t_{i}-c]\}=\sup\{f(x):x\in[t_{i-1},t_{i}]\}=M_{i},
+        \end{equation*}
+        y análogamente
+        \begin{equation*}
+            \inf\{g(x):x\in[t_{i-1}-c,t_{i}-c]\}=m_{i}.
+        \end{equation*}
+        La suma superior de $f$ respecto a $P$ es
+        \begin{equation*}
+            U(f,P)=\sum_{i=1}^{n}M_{i}(t_{i}-t_{i-1}).
+        \end{equation*}
+        La suma superior de $g$ respecto a $Q$ es
+        \begin{equation*}
+            U(g,P)=\sum_{i=1}^{n}M_{i}((t_{1}-c)-(t_{i-1}-c)).
+        \end{equation*}
+        Pero
+        \begin{equation*}
+            (t_{i}-c)-(t_{i-1}-c)=t_{i}-t_{i-1}
+        \end{equation*}
+        Por lo que
+        \begin{equation*}
+            U(g,P)=U(f,P).
+        \end{equation*}
+        De manera análoga
+        \begin{equation*}
+            L(g,Q)=L(f,P).
+        \end{equation*}
+        Como las sumas superiores e inferiores coinciden, se tiene
+        \begin{equation*}
+            \inf_{P\in\mathcal{P}}U(f,P)=\inf_{Q\in\mathcal{P}}U(g,Q),\qquad \sup_{P\in\mathcal{P}}L(f,p)=\sup_{Q\in\mathcal{P}}L(g,Q).
+        \end{equation*}
+        Por lo tanto $f$ es integrable en $[a,b]$ si y solo si $g$ es integrable en $[a-c,b-c]$, y entonces
+        \begin{equation*}
+            \int_{a}^{b}f(x)dx=\int_{a-c}^{b-c}f(x+c)dx.
+        \end{equation*}
+    \end{proof}
 
     \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 2}]
         Calcula las siguientes integrales:
@@ -303,6 +348,50 @@
         Muestra que la longitud de la circunferencia con centro en el origen  y radio $r$ es $2\pi r$.
     \end{mdframed}
 
+    \begin{proof}
+        Sea
+        \begin{equation*}
+            f(x)=\sqrt{r^{2}-x^{2}}.
+        \end{equation*}
+        Entonces
+        \begin{equation*}
+            f^{\prime}(x)=\frac{1}{2}(r^{2}-x^{2})^{-\frac12}(-2x)=\frac{-x}{\sqrt{r^{2}-x^{2}}}.
+        \end{equation*}
+        Por lo tanto
+        \begin{equation*}
+            (f^{\prime}(x))^{2}=\frac{x^{2}}{r^{2}-x^{2}}.
+        \end{equation*}
+        Así, por la proposición 18, la longitud de arco es
+        \begin{equation*}
+            L=\int_{-r}^{r}\sqrt{1+\frac{x^{2}}{r^{2}-x^{2}}}dx.
+        \end{equation*}
+        Simplificando el integrando
+        \begin{equation*}
+            1+\frac{x^{2}}{r^{2}-x^{2}}=\frac{r^{2}-x^{2}+x^{2}}{r^{2}-x^{2}}=\frac{r^{2}}{r^{2}-x^{2}}.
+        \end{equation*}
+        Por lo tanto
+        \begin{equation*}
+            \sqrt{1+(f^{\prime}(x))}=\frac{r}{\sqrt{r^{2}-x^{2}}}.
+        \end{equation*}
+        Así,
+        \begin{align*}
+            L=\int_{-r}^{r}\frac{r}{\sqrt{r^{2}-x^{2}}}dx&=\big[r\arcsin(\frac{x}{r})\big]_{-r}^{r}
+        \end{align*}
+        Entonces
+        \begin{equation*}
+            \arcsin(1)=\frac{\pi}{2},\qquad \arcsin(-1)=-\frac{\pi}{2}.
+        \end{equation*}
+        Por lo tanto,
+        \begin{equation*}
+            L=r(\frac{\pi}{2}-(-\frac{\pi}{2}))=r\pi.
+        \end{equation*}
+        Así, hemos calculado la longitud de una semicircunferencia. La circunferencia completa
+        es el doble de la semicircunferencia así,
+        \begin{equation*}
+            L_{circ}=2L=2\pi r.
+        \end{equation*}
+    \end{proof}
+
     \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 7}]
         Utiliza la circunferencia trigonometrica para calcular, si es que existe, el valor de las funciones trigonometricas del angulo
         $\theta$ de cada uno de los incisos siguientes (haz un dibujo).
@@ -316,7 +405,163 @@
         \end{multicols}
     \end{mdframed}
 
+    \begin{solucion}
+        \begin{enumerate}
+            \item[(a)] $\theta=\pi$.\\
+            En la circunferencia trigonometrica el ángulo $\pi$ corresponde al punto $(-1,0)$.
+            Por lo tanto
+            \begin{equation*}
+                \sin(\pi)=0, \qquad \cos(\pi)=1.
+            \end{equation*}
+            De aquí
+            \begin{equation*}
+                \tan(\pi)=\frac{0}{-1}=0,\\
+                \sec(\pi)=-1,
+            \end{equation*}
+            mientras que $\csc(\pi)$ y $\cot(\pi)$ no existen, pues $sin(\pi)=0$.
+            \begin{center}
+                \includegraphics[width=0.35\textwidth]{a.pdf}
+            \end{center}
+            \item[(b)] $\theta=3\pi/2$.\\
+            El angulo corresponde al punto $(0,-1)$. Por lo tanto
+            \begin{equation*}
+                \sin(\frac{3\pi}{2})=-1,\qquad \cos(\frac{3\pi}{2})=0.
+            \end{equation*}
+            Entonces $\tan(\frac{3\pi}{2})$ no existe. Además
+            \begin{equation*}
+                \csc(\frac{3\pi}{2})=-1
+            \end{equation*}
+            Mientras que
+            \begin{equation*}
+                \sec(\frac{3\pi}{2})\qquad\cot(\frac{3\pi}{2})
+            \end{equation*}
+            no existen.
+            \begin{center}
+                \includegraphics[width=0.35\textwidth]{b.pdf}
+            \end{center}
+            \item[(c)] $\theta=2\pi$.\\
+            Este ángulo corresponde al punto $(1,0)$. Entonces
+            \begin{equation*}
+                \sin(2\pi)=0,\qquad \cos(2\pi)=1.
+            \end{equation*}
+            Por lo tanto
+            \begin{equation*}
+                \tan(2\pi)=0, \qquad \sec(2\pi)=1.
+            \end{equation*}
+            y $\csc(2\pi)$, $\cot(2\pi)$ no existen.
+            \begin{center}
+                \includegraphics[width=0.35\textwidth]{c.pdf}
+            \end{center}
+            \item[(d)] $\theta=-\frac{\pi}{2}$.\\
+            Este angulo representa una rotacion en sentido horario, cuyo punto es $(0,-1)$.
+            Por lo tanto
+            \begin{equation*}
+                \sin(-\frac{\pi}{2})=-1,\qquad\cos(-\frac{\pi}{2})=0.
+            \end{equation*}
+            de aqui $\tan(-\frac{\pi}{2})$ no existe, mientras que
+            \begin{equation*}
+                \sec(-\frac{\pi}{2}),\qquad\cot(-\frac{\pi}{2})
+            \end{equation*}
+            no existen.
+            \begin{center}
+                \includegraphics[width=0.35\textwidth]{d.pdf}
+            \end{center}
+        \end{enumerate}
+    \end{solucion}
+
     \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 8}]
         Prueba los incisos (c) al (f) de la proposición 23.
     \end{mdframed}
+
+    \begin{proof}
+        \begin{enumerate}
+            \item[(c)] $\tan^{\prime}(x)=\sec^{2}(x)$\\
+            Sea $\tan(x)=\dfrac{\sin(x)}{\cos(x)}$. Utilizando la regla del cociente,
+            \[
+            \tan'(x)
+            =
+            \frac{\cos(x)\cos(x)-\sin(x)(-\sin(x))}{\cos^2(x)}.
+            \]
+            Simplificando,
+            \[
+            \tan'(x)
+            =
+            \frac{\cos^2(x)+\sin^2(x)}{\cos^2(x)}.
+            \]
+            Usando la identidad pitagórica $\sin^2(x)+\cos^2(x)=1$,
+            \[
+            \tan'(x)=\frac{1}{\cos^2(x)}=\sec^2(x).
+            \]
+            \item[(d)] $\cot^{\prime}(x)=-\csc^{2}(x)$\\
+            Sea $\cot(x)=\dfrac{\cos(x)}{\sin(x)}$. Aplicando nuevamente la regla del cociente,
+            \[
+            \cot'(x)
+            =
+            \frac{(-\sin(x))\sin(x)-\cos(x)\cos(x)}{\sin^2(x)}.
+            \]
+            Simplificando,
+            \[
+            \cot'(x)
+            =
+            \frac{-\sin^2(x)-\cos^2(x)}{\sin^2(x)}.
+            \]
+            Usando $\sin^2(x)+\cos^2(x)=1$,
+            \[
+            \cot'(x)=-\frac{1}{\sin^2(x)}=-\csc^2(x).
+            \]
+            \item[(e)] $\sec^{\prime}(x)=\sec(x)\tan(x)$.\\
+            Sea $\sec(x)=\dfrac{1}{\cos(x)}$. Entonces
+            \[
+            \sec'(x)
+            =
+            \frac{d}{dx}\left(\cos(x)^{-1}\right).
+            \]
+            Aplicando la regla de la cadena,
+
+            \[
+            \sec'(x)
+            =
+            -\cos(x)^{-2}(-\sin(x)).
+            \]
+            Por lo tanto
+            \[
+            \sec'(x)=\frac{\sin(x)}{\cos^2(x)}.
+            \]
+            Reescribiendo en términos de funciones trigonométricas,
+            \[
+            \sec'(x)
+            =
+            \frac{1}{\cos(x)}\frac{\sin(x)}{\cos(x)}
+            =
+            \sec(x)\tan(x).
+            \]
+            \item[(f)] $\csc^{\prime}(x)=-\csc(x)\cot(x)$.\\
+            Sea $\csc(x)=\dfrac{1}{\sin(x)}$. Entonces
+            \[
+            \csc'(x)
+            =
+            \frac{d}{dx}\left(\sin(x)^{-1}\right).
+            \]
+            Aplicando la regla de la cadena,
+            \[
+            \csc'(x)
+            =
+            -\sin(x)^{-2}\cos(x).
+            \]
+            Por lo tanto
+            \[
+            \csc'(x)
+            =
+            -\frac{\cos(x)}{\sin^2(x)}.
+            \]
+            Reescribiendo,
+            \[
+            \csc'(x)
+            =
+            -\frac{1}{\sin(x)}\frac{\cos(x)}{\sin(x)}
+            =
+            -\csc(x)\cot(x).
+            \]
+        \end{enumerate}
+    \end{proof}
 \end{document}
