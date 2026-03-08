@@ -40,6 +40,76 @@
         es un subespacio vectorial de $V$.
     \end{mdframed}
 
+    \begin{proof}
+        Definamos
+        \begin{equation*}
+            W:=W_{1}+\cdots+W_{k}.
+        \end{equation*}
+        Como cada $W_{i}$ es un subespacio de $V$, se tiene
+        \begin{equation*}
+            0\in W_{i},\qquad\forall i\in\{1,\dots,k\}.
+        \end{equation*}
+        Entonces
+        \begin{equation*}
+            0=0+\cdots+0
+        \end{equation*}
+        donde cada 0 pertence a su correspondiente $W_{i}$. Por la definición de $W$,
+        \begin{equation*}
+            0\in W.
+        \end{equation*}
+        Ahora, sean $u,v\in W$, existen vectores
+        \begin{equation*}
+            w_{1},\dots,w_{k}\in W_{1},\dots,W_{k}
+        \end{equation*}
+        y
+        \begin{equation*}
+            w_{1}^{\prime},\dots,w_{k}^{\prime}\in W_{1},\dots,W_{k}
+        \end{equation*}
+        tales que
+        \begin{equation*}
+            u=w_{1}+\cdots+w_{k},\qquad v=w_{1}^{\prime}+\cdots+w_{k}^{\prime}
+        \end{equation*}
+        Entonces
+        \begin{equation*}
+            u+v=(w_{1}+\cdots+w_{k})+(w_{1}^{\prime}+\cdots+w_{k}^{\prime})
+        \end{equation*}
+        Por asociatividad y conmutatividad de la suma en $V$,
+        \begin{equation*}
+            u+v=(w_{1}+w_{1}^{\prime})+\cdots+(w_{k}+w_{k}^{\prime}).
+        \end{equation*}
+        Como cada $W_{i}$ es subespacio, es cerrado bajo suma, por lo que
+        \begin{equation*}
+            w_{i}+w_{i}^{\prime}\in W_{i},\qquad\forall i.
+        \end{equation*}
+        Por tanto
+        \begin{equation*}
+            u+v\in W.
+        \end{equation*}
+        Por ultimo, sea $u\in W$ y $c\in F$. Por definición de $W$, existen $w_{1},\dots,w_{k}$
+        con $w_{i}\in W_{i}$ tales que
+        \begin{equation*}
+            u=w_{1}+\cdots+w_{k}.
+        \end{equation*}
+        Entonces
+        \begin{equation*}
+            cu=c(w_{1}+\cdots+w_{k})
+        \end{equation*}
+        Por distributividad del producto escalar,
+        \begin{equation*}
+            cu=cw_{1}+\cdots+cw_{k}.
+        \end{equation*}
+        Como cada $W_{i}$ es subespacio, es cerrado bajo multiplicación por escalares, por lo que
+        \begin{equation*}
+            cw_{i}\in W_{i},\qquad \forall i.
+        \end{equation*}
+        En consecuencia,
+        \begin{equation*}
+            cu\in W.
+        \end{equation*}
+        Así el conjunto $W$ contiene al vector cero, es cerrado bajo suma y es cerrado bajo
+        producto por escalares. Por lo tanto $W$ es un subespacio vectorial de $V$.
+    \end{proof}
+
     \begin{mdframed}[style=mdbluebox,frametitle={EJercicio 2}]
         Falso o verdadero (justifica tus respuestas: si es verdadero
         demuestralo y si es falso da un contraejemplo):
@@ -61,10 +131,108 @@
         sobre $\mathbb{R}$, existe un conjunto infinito que es linealmente independiente.
     \end{mdframed}
 
+    \begin{proof}
+        Consideremos el conjunto
+        \begin{equation*}
+            S=\{1,x,x^{2},x^{3},\dots\}\subset V.
+        \end{equation*}
+        Este conjunto es infinito. Veamos que es linealmente independiente. Sea $n\in\mathbb{N}$
+        y supongamos que existen escaleres $a_{0},\dots,a_{n}\in\mathbb{R}$ tales que
+        \begin{equation*}
+            a_{0}(1)+a_{1}x+a_{2}x^{2}+\cdots+a_{n}x^{n}=0
+        \end{equation*}
+        como función de $\mathbb{R}$ en $\mathbb{R}$. Esto significa que el polinomio
+        \begin{equation*}
+            p(x)=a_{0}(1)+a_{1}x+a_{2}x^{2}+\cdots+a_{n}x^{n}
+        \end{equation*}
+        es la función cero, es decir
+        \begin{equation*}
+            p(x)=0\qquad\forall x\in\mathbb{R}.
+        \end{equation*}
+        Pero un polinomio real que se anula para todo $x\in\mathbb{R}$ debe tener todos
+        sus coeficientes iguales a cero, por lo que
+        \begin{equation*}
+            a_{0}=a_{1}=\cdots=a_{n}=0.
+        \end{equation*}
+        Por lo tanto, cualquier combinación lineal finita de elementos de $S$ que da la
+        función cero es trivial. Luego $S$ es linealmente independiente. Así, el conjunto
+        \begin{equation*}
+            \{1,x,x^{2},x^{3},\dots\}\subset V
+        \end{equation*}
+        es infinito y linealmente dependiente. Por lo tanto, en $V$ existe un conjunto
+        infinito linealmente independiente.
+    \end{proof}
+
     \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 4}]
         Encuentra un conjunto $\{v_{1},v_{2},v_{3}\}$ de vectores linealmente dependientes en
         $\mathbb{R}^{3}$ tales que dos a dos son linealmente independientes.
     \end{mdframed}
+
+    \begin{solucion}
+        Sea
+        \begin{equation*}
+            v_{1}=(1,0,0),\qquad v_{2}=(0,1,0),\qquad v_{3}=(1,1,0).
+        \end{equation*}
+        Para $\{v_{1},v_{2}\}$. Supongamos
+        \begin{equation*}
+            av_{1}+bv_{2}=0.
+        \end{equation*}
+        Entonces
+        \begin{equation*}
+            a(1,0,0)+b(0,1,0)=(0,0,0).
+        \end{equation*}
+        Es decir
+        \begin{equation*}
+            (a,b,0)=(0,0,0).
+        \end{equation*}
+        Luego
+        \begin{equation*}
+            a=0,\qquad b=0.
+        \end{equation*}
+        Por lo tanto $\{v_{1},v_{2}\}$ es linealmente independiente. Ahora para
+        $\{v_{1},v_{3}\}$ supongamos
+        \begin{equation*}
+            av_{1}+bv_{3}=0.
+        \end{equation*}
+        Entonces
+        \begin{equation*}
+            a(1,0,0)+b(1,1,0)=(0,0,0).
+        \end{equation*}
+        Esto implica
+        \begin{equation*}
+            (a+b,b,0)=(0,0,0).
+        \end{equation*}
+        Por lo tanto
+        \begin{equation*}
+            a=0,\qquad b=0.
+        \end{equation*}
+        Luego $\{v_{1},v_{3}\}$ es linealmente independiente. finalmente para $\{v_{2},v_{3}\}$
+        supongamos
+        \begin{equation*}
+            av_{2}+bv_{3}=0.
+        \end{equation*}
+        Entonces
+        \begin{equation*}
+            a(0,1,0)+b(1,1,0)=(0,0,0).
+        \end{equation*}
+        Esto da
+        \begin{equation*}
+            (b,a+b,0)=(0,0,0).
+        \end{equation*}
+        Luego
+        \begin{equation*}
+            b=0,\qquad a=0.
+        \end{equation*}
+        Por lo tanto $\{v_{2},v_{3}\}$ es linealmente independiente. Observamos que
+        \begin{equation*}
+            v_{1}+v_{2}-v_{3}=(1,0,0)+(0,1,0)-(1,1,0)=(0,0,0).
+        \end{equation*}
+        Como los coeficientes no son todos cero, el conjunto
+        \begin{equation*}
+            \{v_{1},v_{2},v_{3}\}
+        \end{equation*}
+        es linealmente dependiente.
+    \end{solucion}
 
     \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 5}]
         Sean $a,b,c\in\mathbb{R}$ distintos entre sí. Demuestra que
