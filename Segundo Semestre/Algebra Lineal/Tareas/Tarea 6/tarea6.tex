@@ -71,4 +71,90 @@
         $\{(1,1,1),(a,b,c),(a^{2},b^{2},c^{2})\}$ es linealmente independiente
         en $\mathbb{R}^{3}$.
     \end{mdframed}
+
+    \begin{solucion}
+        Sea
+        \begin{equation*}
+            v_{1}=(1,1,1),\quad v_{2}=(a,b,c), \quad v_{3}=(a^{2},b^{2},c^{2})
+        \end{equation*}
+        con $a,b,c\in\mathbb{R}$ distintos entre sí. Consideremos
+        \begin{equation*}
+            x_{1}v_{1}+x_{2}v_{2}+x_{3}v_{3}=(0,0,0).
+        \end{equation*}
+        Sustituyendo los vectores,
+        \begin{equation*}
+            x_{1}(1,1,1)+x_{2}(a,b,c)+x_{3}(a^{2},b^{2},c^{2})=(0,0,0).
+        \end{equation*}
+        Igualando componente a componente se obtiene el sistema
+        \begin{equation*}
+            \begin{cases}
+                x_{1}+ax_{2}+a^{2}x_{3}=0\\
+                x_{1}+bx_{2}+b^{2}x_{3}=0\\
+                x_{1}+cx_{2}+c^{2}x_{3}=0
+            \end{cases}
+        \end{equation*}
+        Restamos la primera ecuacion a la segunda ecuacion
+        \begin{equation*}
+            (b-a)x_{2}+(b^{2}-a^{2})x_{3}=0
+        \end{equation*}
+        factorizando,
+        \begin{equation*}
+            (b-a)x_{2}+(b-a)(b+a)x_{3}=0
+        \end{equation*}
+        \begin{equation*}
+            (b-a)(x_{2}+(a+b)x_{3})=0.
+        \end{equation*}
+        Como $a\neq b$, se concluye
+        \begin{equation*}
+            x_{2}+(a+b)x_{3}=0.
+        \end{equation*}
+        Ahora restamos la primera ecuacion a la tercera ecuación
+        \begin{equation*}
+            (c-a)x_{2}+(c^{2}-a^{2})x_{3}=0
+        \end{equation*}
+        factorizando,
+        \begin{equation*}
+            (c-a)(x_{2}+(a+c)x_{3})=0.
+        \end{equation*}
+        Como $a\neq c$,
+        \begin{equation*}
+            x_{2}+(a+c)x_{3}=0.
+        \end{equation*}
+        Tenemos
+        \begin{equation*}
+            \begin{cases}
+                x_{2}+(a+b)x_{3}=0\\
+                x_{2}+(a+c)x_{3}=0
+            \end{cases}
+        \end{equation*}
+        Restando ambas ecuaciones
+        \begin{equation*}
+            (b-c)x_{3}=0.
+        \end{equation*}
+        Como $b\neq c$,
+        \begin{equation*}
+            x_{3}=0.
+        \end{equation*}
+        Sustituyendo en cualquier a de las ecuaciones
+        \begin{equation*}
+            x_{2}=0.
+        \end{equation*}
+        Finalmente, en la primera ecuación original
+        \begin{equation*}
+            x_{1}=0.
+        \end{equation*}
+        La unica solución del sistema
+        \begin{equation*}
+            x_{1}v_{1}+x_{2}v_{2}+x_{3}v_{3}=0
+        \end{equation*}
+        es
+        \begin{equation*}
+            x_{1}=x_{2}=x_{3}=0
+        \end{equation*}
+        Por definción, el conjunto
+        \begin{equation*}
+            \{(1,1,1),(a,b,c),(a^{2},b^{2},c^{2})\}
+        \end{equation*}
+        es linealmente independiente en $\mathbb{R}^{3}$.
+    \end{solucion}
 \end{document}
