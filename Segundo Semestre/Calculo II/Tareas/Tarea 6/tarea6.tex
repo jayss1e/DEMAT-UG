@@ -1,0 +1,94 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{ugmath}
+\usepackage{float}
+\usepackage{placeins}
+\usepackage [spanish]{babel}
+\usepackage[labelfont=bf,labelsep=space]{caption}
+\newcommand{\paren}[1]{\left( #1 \right)}
+\newcommand{\alumno}{Ricardo León Martínez}
+\newcommand{\materia}{Calculo Diferencia e Integral II}
+\newcommand{\profesor}{Fernando Nuñez Medina}
+\newcommand{\tarea}{Tarea 6}
+\newcommand{\fecha}{13/3/2026}
+
+\begin{document}
+    \begin{center}
+    {\large\textbf{UNIVERSIDAD DE GUANAJUATO}}\\[0.3cm]
+    {\normalsize\textbf{DIVISIÓN DE CIENCIAS NATURALES Y EXACTAS}}\\
+    {\normalsize\textbf{CAMPUS GUANAJUATO}}\\[1cm]
+
+    {\Large\textbf{\tarea\ (\materia)}}\\[1cm]
+    \end{center}
+
+    \textbf{Nombre:} \alumno \hfill 
+    \textbf{Fecha:} \fecha \hfill 
+    \textbf{Calificación:} \rule{3cm}{0.4pt} \\[0.3cm]
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 1}]
+        Sea $f$ una función continua y no negativa en un intervalo $[a,b]$. Prueba que
+        si $\int_{a}^{b}f=0$, entonces $f=0$. \textbf{Sugerencia:} Muestra la contrapositiva.
+        Supon que $f\neq0$. Como $f$ es no negativa, entonces existe un punto $p\in[a,b]$ tal
+        que $f(p)\gt0$. Supón primero que $p\in(a,b)$. Recuerda que como $f$ es continua en $p$
+        y $f(p)\gt0$, existe un invervalo $I\subset[a,b]$ que contiene a $p$ tal que $f(x)\gt0$
+        para toda $x\in I$. Prueba que esto implica que $\int_{a}^{b}f\gt0$. Para los casos en que
+        $p=a$ o $p=b$ se tiene una sugerencia similar.
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 2}]
+        Considera las funciones $f:[1,\infty)\to\mathbb{R}$, $g:[1,\infty)\to\mathbb{R}$
+        y $h:[1,\infty)\to\mathbb{R}$ dadas por
+        \begin{equation*}
+            f(x)=\frac{1}{\sqrt{x}}, g(x)=\frac{1}{x}\text{ y } h(x)=\frac{1}{x^{2}}.
+        \end{equation*}
+        \begin{enumerate}
+            \item[(a)] Dibuja las gráfica de $f$, $g$ y $h$.
+            \item[(b)] Calcula el área bajo la grafica de cada una de las funciones $f,$ $g$ y $h$.
+        \end{enumerate}
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 3}]
+        Muestra que el área del círculo con centro en el origen y radio $r$ es $\pi r^{2}$.
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 4}]
+        Utiliza la circunferencia trigonometrica para calcular, si es que existe, el valor de las funciones trigonometricas del angulo
+        $\theta$ de cada uno de los incisos siguientes (haz un dibujo).
+        \begin{multicols}{2}
+            \begin{enumerate}
+                \item[(a)]  $\theta=\pi/4.$
+                \item[(b)]  $\theta=3\pi/4.$
+                \item[(c)]  $\theta=5\pi/4.$
+                \item[(d)]  $\theta=7\pi/4.$
+            \end{enumerate}
+        \end{multicols}
+        \textbf{Sugerencia:} Resuelve el primer inciso y usa la simetría en los demás.
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 5}]
+        Prueba el corolario 1
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 6}]
+        Prueba el inciso (c) de la proposición 35. \textbf{Sugerencia:} Prueba el inciso (c)
+        primero cuando $r$ es un número natural, luego cuando $r$ es un número entero y
+        finalmente cuando $r$ es un número racional.
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 7}]
+        \textbf{(La función $x^{p}$)} Sea $p$ un número real.
+        \begin{enumerate}
+            \item[(a)] Encuentra el dominio de la función $p$ (por supuesto, el dominio de la
+            función $x^{p}$ depende de $p$).
+            \item[(b)] Prueba que
+            \begin{equation*}
+                (x^{p})^{\prime}=px^{p-1}
+            \end{equation*}
+            (esto ultimo ya lo sabíamos si $p$ es un número racional, véase por ejemplo
+            \textbf{[?]}).
+        \end{enumerate}
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 8}]
+        Prueba que $a_{n}\to0$ ssi $\abs{a_{n}}\to0$.
+    \end{mdframed}
+\end{document}
