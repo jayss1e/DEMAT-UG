@@ -126,6 +126,94 @@
         \end{enumerate}
     \end{mdframed}
 
+    \begin{solucion}
+        \begin{enumerate}
+        \item[(a)] El vacío es un subconjunto linealmente independiente.
+
+        \textbf{Verdadero.}
+
+        \textbf{Demostración.}  
+        Por definición, un conjunto $S\subset V$ es linealmente independiente si
+        para cualesquiera $v_{1},\dots,v_{n}\in S$ y $\alpha_{1},\dots,\alpha_{n}\in F$
+        que satisfacen
+        \[
+        \alpha_{1}v_{1}+\cdots+\alpha_{n}v_{n}=0,
+        \]
+        se sigue que
+        \[
+        \alpha_{1}=\cdots=\alpha_{n}=0.
+        \]
+
+        Si $S=\varnothing$, no existen vectores $v_{1},\dots,v_{n}\in S$. Por lo
+        tanto no existe ninguna combinación lineal no trivial de elementos de
+        $S$ que produzca el vector cero. En consecuencia, la condición de
+        independencia lineal se satisface. Luego, $\varnothing$ es linealmente independiente.
+
+        \item[(b)] Sea $V$ un espacio vectorial sobre $F$, si $S\subset V$
+        es linealmente dependiente entonces cualquier subconjunto propio
+        de $S$ es linealmente independiente.
+
+        \textbf{Falso.}
+
+        \textbf{Contraejemplo.}  
+        Consideremos el conjunto
+        \[
+        S=\{(1,0),(2,0),(3,0)\}\subset\mathbb{R}^{2}.
+        \]
+        Tomemos el subconjunto propio
+        \[
+        T=\{(1,0),(2,0)\}.
+        \]
+
+        Entonces
+        \[
+        2(1,0)-(2,0)=(0,0),
+        \]
+        con coeficientes no todos cero. Por lo tanto $T$ también es linealmente
+        dependiente. Así, existe un subconjunto propio de $S$ que no es linealmente
+        independiente.
+
+        \item[(c)] Sea $V$ un espacio vectorial sobre $F$, si $S\subset V$
+        es linealmente independiente entonces cualquier subconjunto
+        de $S$ es linealmente independiente.
+
+        \textbf{Verdadero.}
+
+        \textbf{Demostración.}  
+        Sea $T\subset S$ y supongamos que
+        \[
+        \alpha_{1}v_{1}+\cdots+\alpha_{k}v_{k}=0,
+        \]
+        donde $v_{1},\dots,v_{k}\in T$ y $\alpha_{1},\dots,\alpha_{k}\in F$. Como $T\subset S$, también $v_{1},\dots,v_{k}\in S$. Dado que $S$ es
+        linealmente independiente, se sigue que
+        \[
+        \alpha_{1}=\cdots=\alpha_{k}=0.
+        \]
+        Por lo tanto $T$ es linealmente independiente.
+
+        \item[(d)] Si un conjunto de $4$ vectores en $\mathbb{R}^{4}$ es
+        linealmente independiente, entonces necesariamente genera
+        $\mathbb{R}^{4}$.
+
+        \textbf{Verdadero.}
+
+        \textbf{Demostración.}  
+        Sabemos que $\dim(\mathbb{R}^{4})=4$. Sea
+        \[
+        S=\{v_{1},v_{2},v_{3},v_{4}\}\subset\mathbb{R}^{4}
+        \]
+        un conjunto linealmente independiente. En un espacio vectorial de dimensión $n$, todo conjunto de $n$ vectores
+        linealmente independientes es una base. Por lo tanto $S$ es una base de
+        $\mathbb{R}^{4}$. En consecuencia,
+        \[
+        \langle S\rangle=\mathbb{R}^{4}.
+        \]
+
+        Luego $S$ genera $\mathbb{R}^{4}$.
+
+        \end{enumerate}
+    \end{solucion}
+
     \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 3}]
         Demuestra que en el espacio vectorial $V=\{f:\mathbb{R}\to\mathbb{R}:f\text{ es función}\}$
         sobre $\mathbb{R}$, existe un conjunto infinito que es linealmente independiente.
