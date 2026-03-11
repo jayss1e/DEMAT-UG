@@ -1,0 +1,88 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{ugmath}
+\usepackage{float}
+\usepackage{placeins}
+\usepackage{array}
+\usepackage[labelfont=bf,labelsep=space]{caption}
+\newcommand{\paren}[1]{\left( #1 \right)}
+\newcommand{\alumno}{Ricardo León Martínez}
+\newcommand{\materia}{Algebra Lineal I}
+\newcommand{\profesor}{Claudia Reynoso Alcántara}
+\newcommand{\tarea}{Tarea 7}
+\newcommand{\fecha}{23/3/2026}
+
+\begin{document}
+
+    \begin{center}
+        {\large\textbf{UNIVERSIDAD DE GUANAJUATO}}\\[0.3cm]
+        {\normalsize\textbf{DIVISIÓN DE CIENCIAS NATURALES Y EXACTAS}}\\
+        {\normalsize\textbf{CAMPUS GUANAJUATO}}\\[1cm]
+
+        {\Large\textbf{\tarea\ (\materia)}}\\[1cm]
+    \end{center}
+
+    \noindent
+    \textbf{Nombre:} \alumno 
+    \hfill 
+    \textbf{Fecha:} \fecha 
+    \hfill 
+    \textbf{Calificación:} \rule{3cm}{0.4pt}
+
+    \vspace{0.3cm}
+
+    En todos los problemas $F$ es un campo que contiene a $Q$.
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 1}]
+        Encuentra una base de $\mathbb{R}^{3}$ que contenga a los vectores $(1,1,1)$ y
+        $(1,2,3)$, si existe. Si no existe, demuéstralo.
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 2}]
+        Encuentra una base del espacio de soluciones en $F^{4}$ del sistema:
+        \begin{equation*}
+            \begin{cases}
+                x_{1}+4x_{2}+3x_{3}-x_{4}=0\\
+                3x_{1}-5x_{2}+9x_{3}-2x_{4}=0\\
+                2x_{1}-x_{2}+6x_{3}-x_{4}=0.
+            \end{cases}
+        \end{equation*}
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 3}]
+        Sean $W_{1},W_{2}$ subespacios vectoriales de dimensión 2 en $F^{3}$, demuestra que
+        \begin{equation*}
+            \dim_{F}(W_{1}\cap W_{2})\gt0.
+        \end{equation*}
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 4}]
+        Sea $V$ un espacio vecorial de dimensión $n$ sibre un campo $F$. Determina si las siguientes
+        afirmaciones son falsa $(\textbf{F})$ o verdaderas $(\textbf{V})$, justifica tus respuestas:
+        \begin{enumerate}
+            \item[(a)] Para todo $v\in V$, existe una base de $V$ que contiene a $v$.
+            \item[(b)] Si $\{v_{1},\dots,v_{n}\}$ genera a $V$, entonces es una base de $V$.
+            \item[(c)] Si $S=\{v_{1},\dots,v_{n},v_{n+1}\}$ genera a $V$, entonces existe un subconjunto de $S$ con $n$ elementos
+            que es una base de $V$.
+            \item[(d)] Si $w\in V\setminus\{0\}$ y $\mathcal{B}=\{v_{1},\dots,v_{n}\}$ es una base de $V$, entonces
+            existe $i\in\{1,\dots,n\}$ tal que al reemplazar $w$ por $v_{i}$ en $\mathcal{B}$, seguimos teniendo una base
+            de $V$. 
+        \end{enumerate}
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 5}]
+        Sea $V$ un espacio vectorial sobre $F$ y sea $\{v_{1},v_{2},v_{3},v_{4}\}$ una base de $V$. Consideramos los
+        vectores $w_{1}=v_{1}+v_{2},w_{2}=v_{2}+v_{3},w_{3}=v_{3}+v_{4}$ y $w_{4}=v_{4}+v_{1}$. Encuentra la demensión
+        y una base del subespacio de $V$ generado por $\{w_{1},w_{2},w_{3},w_{4}\}$. ¿Existe algún subconjunto de $\{w_{1},w_{2},w_{3},w_{4}\}$ que
+        sea una base de este subespacio? justifica tu respuesta
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 6}]
+        Demuestra que el espacio vectorial $\mathcal{F}=\{f:\mathbb{R}\to\mathbb{R}: f\text{ es una función continua}\}$ no es un
+        espacio de dimensión finita sobre $\mathbb{R}$
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 7}]
+        Sea $W=\{(x_{1},\dots,x_{n})\in\mathbb{R}:x_{1}+2x_{2}+\cdots+nx_{n}=0\}$. Demuestra que $W$ un subespacio
+        vectorial de $\mathbb{R}^{n}$ y encuentra una base para él. 
+    \end{mdframed}
+\end{document}
