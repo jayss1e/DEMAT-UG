@@ -1,0 +1,150 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{ugmath}
+\usepackage{float}
+\usepackage{placeins}
+\usepackage{array}
+\usepackage[labelfont=bf,labelsep=space]{caption}
+\newcommand{\paren}[1]{\left( #1 \right)}
+\newcommand{\alumno}{Ricardo León Martínez}
+\newcommand{\materia}{Elementos de Probabilidad y Estadistica}
+\newcommand{\profesor}{Claudia Reynoso Alcántara}
+\newcommand{\tarea}{Tarea 5}
+\newcommand{\fecha}{18/3/2026}
+
+\begin{document}
+
+    \begin{center}
+        {\large\textbf{UNIVERSIDAD DE GUANAJUATO}}\\[0.3cm]
+        {\normalsize\textbf{DIVISIÓN DE CIENCIAS NATURALES Y EXACTAS}}\\
+        {\normalsize\textbf{CAMPUS GUANAJUATO}}\\[1cm]
+
+        {\Large\textbf{\tarea\ (\materia)}}\\[1cm]
+    \end{center}
+
+    \noindent
+    \textbf{Nombre:} \alumno 
+    \hfill 
+    \textbf{Fecha:} \fecha 
+    \hfill 
+    \textbf{Calificación:} \rule{3cm}{0.4pt}
+
+    \vspace{0.3cm}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 1}]
+        En cierta encuesta participaron 1000 personas a las que se les preguntó sobre su ocupación,
+        estado civil y nivel educativo. De las personas encuestadas y los datos reportados se sabe que 312
+        son profesionistas, 470 están casadas, 525 poseen títulos universitarios, 42 son profesionistas y poseen
+        títulos universitarios, 147 están casadas y poseen títulos universitarios, 86 son profesionistas y están
+        casadas y 25 son profesionistas casadas que poseen títulos universitarios. Demuestre que los números
+        reportados deben ser incorrectos.
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 2}]
+        Un examen contiene 11 preguntas en total a contestar con falso o verdadero. El examen
+        resulta aprobado si se responden correctamente al menos 6 de las 11 preguntas. Si contestamos las
+        preguntas al azar, ¿cuál es la probabilidad de aprobar el examen?
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 3}]
+        Describa espacios muestrales para cada uno de los siguientes casos.
+        \begin{itemize}
+            \item[(a)] Calificaciones de una clase con 37 estudiantes en un examen.
+            \item[(b)] Medición de la temperatura a medio día en una estación meteorológica.
+            \item[(c)] Medición de las velocidades de automóviles pasando por un punto dado.
+            \item[(d)] Lanzamientos infinitos de una moneda.
+        \end{itemize}
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 4}]
+        Fulgencio y Yesrael acuerdan realizar una competencia de esgrima con duelos consecutivos
+        en la que el ganador de la competencia es el primero en salir victorioso en dos duelos consecutivos.
+        En cada duelo, la probabilidad de que Fulgencio salga victorioso es $p$ con $0<p<1$, mientras que la
+        probabilidad de victoria de Yesrael es $q = 1-p$.
+        \begin{itemize}
+            \item[(a)] Describa un espacio muestral para este proceso.
+            \item[(b)] Calcule la probabilidad de que la competencia termine al cabo de $k$ duelos con $k=2,3,\dots$.
+        \end{itemize}
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 5}]
+        Tres jugadores, a los cuales identificamos por Jugador 1, Jugador 2 y Jugador 3, toman
+        turnos consecutivos para lanzar una moneda con caras sol y águila. La moneda podría estar desbalanceada,
+        por lo que debemos asumir que la probabilidad de que salga águila es $p$ con $0<p<1$, mientras
+        que la probabilidad de sol $q = 1-p$. El primer lanzamiento lo realiza el Jugador 1, el segundo el Jugador
+        2, el tercero el Jugador 3, el cuarto el Jugador 1, el quinto el Jugador 2, y así sucesivamente. Gana el
+        primer jugador que obtenga un sol.
+        \begin{itemize}
+            \item[(a)] Describa un espacio muestral para este proceso.
+            \item[(b)] Describa el evento de que el Jugador 1 gane y calcule su probabilidad.
+            \item[(c)] Describa el evento de que el Jugador 2 gane y calcule su probabilidad.
+            \item[(d)] Describa el evento de que ni el Jugador 1 ni tampoco el Jugador 2 gana y calcule su probabilidad.
+        \end{itemize}
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 6}]
+        Sea $\Omega$ un conjunto no vacío. Recordemos que $\mathcal{F}\subset 2^{\Omega}$ es una
+        $\sigma$-álgebra (de subconjuntos) de $\Omega$ si satisface que:
+        \begin{itemize}
+            \item[(I)] $\Omega \in \mathcal{F}$,
+            \item[(II)] $A\in\mathcal{F}$ implica $A^{c}\in\mathcal{F}$,
+            \item[(III)] $\{A_k\}_{k=1}^{\infty}\subset \mathcal{F}$ implica $\displaystyle\bigcup_{k=1}^{\infty}A_k \in \mathcal{F}$.
+        \end{itemize}
+        Más aún, dada una colección $\{S_i\}_{i\in I}\subset 2^{\Omega}$ de subconjuntos de $\Omega$, la $\sigma$-álgebra
+        generada por $\{S_i\}_{i\in I}$ es la única $\sigma$-álgebra $\mathcal{F}$ que cumple que:
+        \begin{itemize}
+            \item[(a)] $\mathcal{F}$ es una $\sigma$-álgebra, es decir, satisface (I), (II) y (III);
+            \item[(b)] $S_i\in\mathcal{F}$ para todo $i\in I$;
+            \item[(c)] si $\mathcal{F}'$ es una $\sigma$-álgebra tal que $S_i\in\mathcal{F}'$ para todo $i\in I$, entonces $\mathcal{F}\subset \mathcal{F}'$.
+        \end{itemize}
+
+        Demuestre la existencia de la $\sigma$-álgebra generada por una colección arbitraria $\{S_i\}_{i\in I}\subset 2^{\Omega}$ de subconjuntos de $\Omega$. Para ello, siga los siguientes pasos:
+        \begin{itemize}
+        \item[(i)] Note que $2^{\Omega}$ es una $\sigma$-álgebra tal que $S_i\in 2^{\Omega}$ para todo $i\in I$. De este modo, el conjunto
+        \[
+            \Gamma=\{\mathcal{F}'\subset 2^{\Omega}:\mathcal{F}'\text{ es una }\sigma\text{-álgebra tal que }S_i\in\mathcal{F}'\text{ para todo }i\in I\}
+        \]
+        es no vacío.
+        \item[(ii)] La intersección de todos los elementos de $\Gamma$ pertenece a $\Gamma$, es decir,
+        \[
+            \bigcap_{\mathcal{F}'\in\Gamma}\mathcal{F}'.
+        \]
+        \item[(iii)] La $\sigma$-álgebra generada por $\{S_i\}_{i\in I}$ debe ser $\displaystyle\bigcap_{\mathcal{F}'\in\Gamma}\mathcal{F}'$.
+        \end{itemize}
+        \textbf{Observación.} De manera general, si $\{\mathcal{F}'_j\}_{j\in J}$ es una familia de $\sigma$-álgebras de $\Omega$, entonces
+        \[
+            \bigcap_{j\in J}\mathcal{F}'_j
+        \]
+        también es una $\sigma$-álgebra de $\Omega$.
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 7}]
+        Sea $(\Omega,\mathcal{F},P)$ un espacio de probabilidad. Supongamos que
+        $\{A_n\}_{n=1}^{\infty}$ y $\{B_n\}_{n=1}^{\infty}$ son dos colecciones numerables de eventos, es decir,
+        $A_n,B_n\in\mathcal{F}$ para $n=1,2,\dots$. Demuestre que
+        \[
+            \lim_{n\to\infty}P(B_n)=1 \quad \text{implica} \quad
+            \lim_{n\to\infty}\big(P(A_n)-P(A_n\cap B_n)\big)=0.
+        \]
+
+        \textbf{Observación.} Es posible que $\lim_{n\to\infty}P(A_n)$ no exista.
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 8}]
+        Sea $(\Omega,\mathcal{F},P)$ un espacio de probabilidad. Pruebe que se cumple la siguiente desigualdad de Bonferroni:
+        \[
+        P\left(\bigcup_{k=1}^{n}A_k\right)
+        \ge
+        \sum_{k=1}^{n}P(A_k)
+        -
+        \sum_{1\le k<\ell\le n}P(A_k\cap A_\ell).
+        \]
+        \textbf{Observación/Sugerencia.} Lo anterior es una versión truncada del principio de inclusión-exclusión,
+        el cual se prueba por inducción. Recordemos además que para cualesquiera eventos
+        $B_1,B_2,\dots,B_n\in\mathcal{F}$ se satisface que
+        \[
+        P(B_1\cup B_2\cup \cdots \cup B_n)
+        \le
+        P(B_1)+P(B_2)+\cdots+P(B_n).
+        \]
+    \end{mdframed}
+\end{document}
