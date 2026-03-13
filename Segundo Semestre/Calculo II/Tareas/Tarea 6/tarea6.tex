@@ -55,12 +55,116 @@
                 \includegraphics[width=0.32\textwidth]{g.pdf}
                 \includegraphics[width=0.32\textwidth]{h.pdf}
             \end{figure}
+            \item[(b)] Calcula el área bajo la grafica de cada una de las funciones $f,$ $g$ y $h$.
+            \begin{enumerate}
+                \item[1.] $f(x)=\frac{1}{\sqrt{x}}$.\\
+                El area bajo la grafica de $f$ en el intervalo $[1,\infty)$ se describe mediante la integral impropia
+                \begin{equation*}
+                    \int_{1}^{\infty}\frac{1}{\sqrt{x}}dx,
+                \end{equation*}
+                Por definición de integral impropio, se define
+                \begin{equation*}
+                    \int_{1}^{\infty}\frac{1}{\sqrt{x}}dx:=\lim_{t\to\infty^{+}}\int_{1}^{t}\frac{1}{\sqrt{x}}dx.
+                \end{equation*}
+                Calculamos primero la integral en $[1,t]$
+                \begin{align*}
+                    \int_{1}^{t}\frac{1}{\sqrt{x}}dx&=\int_{1}^{t}x^{-\frac{1}{2}}dx\\
+                    &=\big[2x^{\frac{1}{2}}\big]_{1}^{t}\\
+                    &=2t^{\frac{1}{2}}-2
+                \end{align*}
+                Tomando el limite cuando $t\to\infty^{+}$
+                \begin{equation*}
+                    \int_{1}^{t}\frac{1}{\sqrt{x}}dx=\lim_{t\to\infty^{+}}2t^{\frac{1}{2}}-2=\infty.
+                \end{equation*}
+                Así, el area bajo la grafica diverge.
+                \item[2.] $g(x)=\frac{1}{x}$.\\
+                El area bajo la grafica de $f$ en el intervalo $[1,\infty)$ se describe mediante la integral impropia
+                \begin{equation*}
+                    \int_{1}^{\infty}\frac{1}{x}dx,
+                \end{equation*}
+                Por definición de integral impropio, se define
+                \begin{equation*}
+                    \int_{1}^{\infty}\frac{1}{x}dx:=\lim_{t\to\infty^{+}}\int_{1}^{t}\frac{1}{x}dx.
+                \end{equation*}
+                Calculamos primero la integral en $[1,t]$
+                \begin{align*}
+                    \int_{1}^{t}\frac{1}{x}dx&=\int_{1}^{t}x^{-1}dx\\
+                    &=\big[\ln(x)\big]_{1}^{t}\\
+                    &=\ln(t)-\ln(1)\\
+                    &=\ln(t).
+                \end{align*}
+                Tomando el limite cuando $t\to\infty^{+}$
+                \begin{equation*}
+                    \int_{1}^{t}\frac{1}{x}dx=\lim_{t\to\infty^{+}}\ln(t)=\infty.
+                \end{equation*}
+                Así, el area bajo la grafica diverge.
+                \item[3.] $h(x)=\frac{1}{x^{2}}$.\\
+                El area bajo la grafica de $f$ en el intervalo $[1,\infty)$ se describe mediante la integral impropia
+                \begin{equation*}
+                    \int_{1}^{\infty}\frac{1}{x^{2}}dx,
+                \end{equation*}
+                Por definición de integral impropio, se define
+                \begin{equation*}
+                    \int_{1}^{\infty}\frac{1}{x^{2}}dx:=\lim_{t\to\infty^{+}}\int_{1}^{t}\frac{1}{x^{2}}dx.
+                \end{equation*}
+                Calculamos primero la integral en $[1,t]$
+                \begin{align*}
+                    \int_{1}^{t}\frac{1}{x^{2}}dx&=\int_{1}^{t}x^{-2}dx\\
+                    &=\big[-\frac{1}{x}\big]_{1}^{t}\\
+                    &=-\frac{1}{t}+1
+                \end{align*}
+                Tomando el limite cuando $t\to\infty^{+}$
+                \begin{equation*}
+                    \int_{1}^{t}\frac{1}{x}dx=\lim_{t\to\infty^{+}}-\frac{1}{t}+1=1.
+                \end{equation*}
+                Así, el area bajo la grafica es 1.
+            \end{enumerate}
         \end{enumerate}
     \end{solucion}
 
     \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 3}]
         Muestra que el área del círculo con centro en el origen y radio $r$ es $\pi r^{2}$.
     \end{mdframed}
+
+    \begin{proof}
+        Sea $C$ el circulo de radio $r\gt0$ con centro en el origen. Su ecuación es
+        $x^{2}+y^{2}=r^{2}$. La semicircunferencia superior puede describirse como la
+        grafica de la función $f:[-r,r]\to\mathbb{R}$ definida por
+        \begin{equation*}
+            f(x)=\sqrt{r^{2}-x^{2}}.
+        \end{equation*}
+        Así, el area de la semicircunferencia esta dada por
+        \begin{equation*}
+            A_{semi}=\int_{-r}^{r}\sqrt{r^{2}-x^{2}}dx.
+        \end{equation*}
+        Tomemos $x=r\sin(\theta)$ y $dx=r\cos(\theta)d\theta$. En consecuencia,
+        \begin{align*}
+            \int_{r}^{r}\sqrt{r^{2}-x^{2}}dx&=\int_{-r}^{r}\sqrt{r^{2}-r^{2}\sin^{2}(\theta)}r\cos(\theta)d\theta\\
+            &=r^{2}\int_{-r}^{r}\cos^{2}(\theta)d\theta\\
+            &=r^{2}\int_{-r}^{r}\frac{1+\cos(2\theta)}{2}d\theta\\
+            &=r^{2}\big[\int_{-r}^{r}\frac{1}{2}d\theta+\int_{-r}^{r}\frac{\cos(2\theta)}{2}\big]d\theta\\
+            &=\big[\frac{r^{2}\theta+r^{2}\sin(\theta)\cos(\theta)}{2}\big]
+        \end{align*}
+        De $x=r\sin(\theta)$ tenemos que $\theta=\arcsin(\frac{x}{r})$, $r\sin(\theta)=x$ y que $r\cos(\theta)=\sqrt{r^{2}-x^{2}}$. Así,
+        \begin{align*}
+            \big[\frac{r^{2}\theta+r^{2}\sin(\theta)\cos(\theta)}{2}\big]_{-r}^{r}=\big[\frac{r^{2}\arcsin(\frac{x}{r})+x\sqrt{r^{2}-x^{2}}}{2}\big]_{-r}^{r}
+        \end{align*}
+        Evaluando en los limites de integración
+        \begin{align*}
+            \big[\frac{r^{2}\arcsin(\frac{x}{r})+x\sqrt{r^{2}-x^{2}}}{2}\big]_{-r}^{r}&=\big[\frac{r^{2}\arcsin(\frac{r}{r})+r\sqrt{r^{2}-r^{2}}}{2}\big]-\big[\frac{r^{2}\arcsin(-\frac{r}{r})-r\sqrt{r^{2}-r^{2}}}{2}\big]\\
+            &=\big[\frac{r^{2}\frac{\pi}{2}}{2}\big]-\big[\frac{-r^{2}\frac{\pi}{2}}{2}\big]\\
+            &=\frac{r^{2}\pi}{4}+\frac{r^{2}\pi}{4}\\
+            &=\frac{r^{2}\pi}{2}.
+        \end{align*}
+        De esta forma el area de la semicircunferencia es $\frac{r^{2}\pi}{2}$ pero
+        \begin{equation*}
+            A=2A_{semi}=2\frac{r^{2}\pi}{2}.
+        \end{equation*}
+        Así, el area de la circunferencia con radio $r$ es
+        \begin{equation*}
+            A=\pi r^{2}.
+        \end{equation*}
+    \end{proof}
 
     \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 4}]
         Utiliza la circunferencia trigonometrica para calcular, si es que existe, el valor de las funciones trigonometricas del angulo

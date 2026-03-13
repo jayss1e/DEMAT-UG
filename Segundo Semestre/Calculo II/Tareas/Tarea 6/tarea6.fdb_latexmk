@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1772993562.49855 "/home/void/DEMAT-UG/Segundo Semestre/Calculo II/Tareas/Tarea 6/tarea6.tex" "tarea6.pdf" "tarea6" 1772993563.60417 0
-  "/home/void/DEMAT-UG/Segundo Semestre/Calculo II/Tareas/Tarea 6/tarea6.tex" 1772993560.95886 4552 fb1c2446d0b7f593b32bbe7d1320c3c3 ""
+["pdflatex"] 1773362497.44999 "/home/void/DEMAT-UG/Segundo Semestre/Calculo II/Tareas/Tarea 6/tarea6.tex" "tarea6.pdf" "tarea6" 1773362498.65885 0
+  "/home/void/DEMAT-UG/Segundo Semestre/Calculo II/Tareas/Tarea 6/tarea6.tex" 1773362497.27021 10222 00e1e95c0d9ee7bb9c085c7da1da7e49 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1772820570 2375 baa924870cfb487815765f9094cf3728 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc" 1772820570 3486 c7eadf5dcc57b3b2d11736679f6636ba ""
   "/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1772820570 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
@@ -41,6 +41,7 @@
   "/usr/share/texmf-dist/fonts/type1/public/lm/lmmi12.pfb" 1772820570 30696 2654571912f9cd384da9f7cb8a60c568 ""
   "/usr/share/texmf-dist/fonts/type1/public/lm/lmmi8.pfb" 1772820570 30635 833ec815d446ec453a4913fc26d24cbc ""
   "/usr/share/texmf-dist/fonts/type1/public/lm/lmr12.pfb" 1772820570 113634 f99c44d58bae0863375faf0e1d74d612 ""
+  "/usr/share/texmf-dist/fonts/type1/public/lm/lmr6.pfb" 1772820570 123394 d390152bb30feeb496aaaa93299ee9ba ""
   "/usr/share/texmf-dist/fonts/type1/public/lm/lmr8.pfb" 1772820570 122174 a7a08406857c9530a0320a2517f60370 ""
   "/usr/share/texmf-dist/fonts/type1/public/lm/lmri12.pfb" 1772820570 109265 32320cb6133d4d76bf83e27b5eb4009b ""
   "/usr/share/texmf-dist/fonts/type1/public/lm/lmsy10.pfb" 1772820570 27863 09ce3735688ffde955e72da27c95b61a ""
@@ -272,9 +273,9 @@
   "f.pdf" 1772992824.81205 12391 77aa3ceee107ea19294078a3772bf493 ""
   "g.pdf" 1772993097.97498 12332 ef4b8c2aed87586617c25228b680d2e5 ""
   "h.pdf" 1772993221.89295 12286 8277080b30172f0a9c7228632621eb24 ""
-  "tarea6.aux" 1772993563.49986 739 962e178f019db9cff61709087467b7e1 "pdflatex"
-  "tarea6.out" 1772993563.22986 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "tarea6.tex" 1772993560.95886 4552 fb1c2446d0b7f593b32bbe7d1320c3c3 ""
+  "tarea6.aux" 1773362498.55421 740 fa8ab0e7986a10e8fe77305801d1bccf "pdflatex"
+  "tarea6.out" 1773362498.22878 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "tarea6.tex" 1773362497.27021 10222 00e1e95c0d9ee7bb9c085c7da1da7e49 ""
   "ugmath.sty" 1772954794.41768 7050 7a361c18b0738c8b7419ac5f8b7ab0b2 ""
   (generated)
   "tarea6.aux"
