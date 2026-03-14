@@ -6,7 +6,7 @@
 \usepackage[labelfont=bf,labelsep=space]{caption}
 \newcommand{\paren}[1]{\left( #1 \right)}
 \newcommand{\alumno}{Ricardo León Martínez}
-\newcommand{\materia}{Calculo Diferencia e Integral II}
+\newcommand{\materia}{Calculo Diferencial e Integral II}
 \newcommand{\profesor}{Fernando Nuñez Medina}
 \newcommand{\tarea}{Tarea 6}
 \newcommand{\fecha}{13/3/2026}
@@ -180,15 +180,156 @@
         \textbf{Sugerencia:} Resuelve el primer inciso y usa la simetría en los demás.
     \end{mdframed}
 
+    \begin{solucion}
+        \begin{enumerate}
+            \item[(a)] $\theta=\pi/4$\\
+            El angulo forma un triangulo isoceles, de esta forma
+            \begin{equation*}
+                \sin^{2}(\theta)+\cos^{2}(\theta)=1.
+            \end{equation*}
+            Si $\sin(\theta)=\cos^{2}(\theta)=a$, entonces
+            \begin{equation*}
+                2a^{2}=1.
+            \end{equation*}
+            Luego,
+            \begin{equation*}
+                a=\frac{\sqrt{2}}{2}.
+            \end{equation*}
+            En consecuencia
+            \begin{equation*}
+                \sin(\frac{\pi}{4})=\frac{\sqrt{2}}{2},\qquad \cos(\frac{\pi}{4})=\frac{\sqrt{2}}{2}
+            \end{equation*}
+            Entonces,
+            \begin{equation*}
+                \tan(\frac{\pi}{4})=1,\qquad \csc(\frac{\pi}{4})=\sqrt{2},\qquad \sec(\frac{\pi}{4})=\sqrt{2},\qquad \cot(\frac{\pi}{4})=1.
+            \end{equation*}
+            \begin{center}
+                \includegraphics[width=0.35\textwidth]{a.pdf}
+            \end{center}
+            \item[(b)] $\theta=3\pi/4$.\\
+            Notemos que
+            \begin{equation*}
+                \frac{3\pi}{4}=\pi-\frac{\pi}{4}.
+            \end{equation*}
+            Entonces,
+            \begin{equation*}
+                 \sin(\frac{3\pi}{4})=\sin(\pi-\frac{\pi}{4})\text{ y }\cos(\frac{3\pi}{4})=\cos(\pi-\frac{\pi}{4}).
+            \end{equation*}
+            y por lo prosicion 31 se sigue que
+            \begin{align*}
+                \sin(\pi-\frac{\pi}{4})=\sin(\pi)\cos(-\frac{\pi}{4})+\sin(-\frac{\pi}{4})\cos(\pi).\\
+                \cos(\pi-\frac{\pi}{4})=\cos(\pi)\cos(-\frac{\pi}{4})-\sin(\pi)\sin(-\frac{\pi}{4}).
+            \end{align*}
+            Luego, por el inciso anterior y la tarea anterior
+            \begin{align*}
+                \sin(\frac{3\pi}{4})=-\frac{\sqrt{2}}{2}\\
+                \cos(\frac{3\pi}{4})=\frac{\sqrt{2}}{2}.
+            \end{align*}
+            De aquí se sigue que
+            \begin{equation*}
+                \tan(\frac{3\pi}{4})=-1,\qquad\csc(\frac{3\pi}{4})=-\sqrt{2},\qquad\sec(\frac{3\pi}{4})=\sqrt{2},\qquad\cot(\frac{3\pi}{4})=-1
+            \end{equation*}
+            \begin{center}
+                \includegraphics[width=0.35\textwidth]{b.pdf}
+            \end{center}
+            \item[(c)] $\theta=5\pi/4$.\\
+            Notemos que 
+            \begin{equation*}
+                \frac{5\pi}{4}=\pi+\frac{\pi}{4}
+            \end{equation*}
+            Este angulo esta en el tercer cuadrante y aqui el seno es negativo y el coseno tambien, por lo tanto
+            \begin{equation*}
+                \sin(\frac{5\pi}{4})=-\frac{\sqrt{2}}{2},\qquad\cos(\frac{5\pi}{4})=-\frac{\sqrt{2}}{2}
+            \end{equation*}
+            En consecuencia
+            \begin{equation*}
+                \tan(\frac{5\pi}{4})=1,\qquad \csc(\frac{5\pi}{4})=-1,\qquad\sec(\frac{5\pi}{4})=-1,\qquad\cot(\frac{5\pi}{4})=1.
+            \end{equation*}
+            \begin{center}
+                \includegraphics[width=0.35\textwidth]{c.pdf}
+            \end{center}
+            \item[(d)] $\theta=7\pi/4$.\\
+            Notemos que
+            \begin{equation*}
+                \frac{7\pi}{4}=2\pi-\frac{\pi}{4}.
+            \end{equation*}
+            En este cuadrante el seno es negativo y el coseno positivo. por lo tanto
+            \begin{equation*}
+                \sin(\frac{7\pi}{4})=-\frac{\sqrt{2}}{2},\qquad\cos(\frac{7\pi}{4})=\frac{\sqrt{2}}{2}.
+            \end{equation*}
+            En consecuencia,
+            \begin{equation*}
+                \tan(\frac{7\pi}{4})=-1,\qquad\csc(\frac{7\pi}{4})=-\sqrt{2},\qquad,\sec(\frac{7\pi}{4})=\sqrt{2},\qquad\cot(\frac{7\pi}{4})=-1.
+            \end{equation*}
+            \begin{center}
+                \includegraphics[width=0.35\textwidth]{d.pdf}
+            \end{center}
+        \end{enumerate}
+    \end{solucion}
+
     \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 5}]
         Prueba el corolario 1
     \end{mdframed}
+
+    \begin{proof}
+        Notemos que
+        \begin{equation*}
+            \tan(x+y)=\frac{\sin(x+y)}{\cos(x+y)}.
+        \end{equation*}
+        Luego, por la proposición 31 se sigue que
+        \begin{align*}
+            \tan(x+y)&=\frac{\sin(x+y)}{\cos(x+y)}\\
+            &=\frac{\sin(x+y)}{\cos(x+y)}\frac{\cos(x)\cos(y)}{\cos(x)\cos(y)}\\
+            &=\frac{\frac{\sin(x)\sin(y)+\sin(y)\sin(x)}{\cos(x)\cos(y)}}{\frac{\cos(x)\cos(y)-\sin(x)\sin(y)}{\cos(x)\cos(y)}}\\
+            &=\frac{\frac{\sin(x)}{\cos(x)}+\frac{\sin(y)}{\cos(y)}}{1-\frac{\sin(x)}{\cos(x)}\frac{\sin(y)}{\cos(y)}}\\
+            &=\frac{\tan(x)+\tan(y)}{1-\tan(x)\tan(y)}.
+        \end{align*}
+        Concluyendo que
+        \begin{equation*}
+            \tan(x+y)=\frac{\tan(x)+\tan(y)}{1-\tan(x)\tan(y)}.
+        \end{equation*}
+    \end{proof}
 
     \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 6}]
         Prueba el inciso (c) de la proposición 35. \textbf{Sugerencia:} Prueba el inciso (c)
         primero cuando $r$ es un número natural, luego cuando $r$ es un número entero y
         finalmente cuando $r$ es un número racional.
     \end{mdframed}
+
+    \begin{proof}
+        Recordemos que $\ln(x)$ es la funcion inversa de la exponencial $e^{x}$. En particular,
+        \begin{equation*}
+            \ln(e^{t})=t,\qquad e^{\ln(x)}=x
+        \end{equation*}
+        Adémas, para cualquier $a,b\in\mathbb{R}$,
+        \begin{equation*}
+            e^{a+b}=e^{a}e^{b}.
+        \end{equation*}
+        Como $x\gt0$,
+        \begin{equation*}
+            x=e^{\ln(x)}
+        \end{equation*}
+        Entonces,
+        \begin{equation*}
+            x^{r}=(e^{\ln(x)})^{r}.
+        \end{equation*}
+        Por la proposicion 38,
+        \begin{equation*}
+            x^{r}=e^{r\ln(x)}.
+        \end{equation*}
+        Tomando el logaritmo natural a ambos lados
+        \begin{equation*}
+            \ln(x^{r})=\ln(e^{r\ln(x)})
+        \end{equation*}
+        Como el $\ln$ es la inversa de $e^{x}$
+        \begin{equation*}
+            \ln(e^{r\ln(x)})=r\ln(x)
+        \end{equation*}
+        Así,
+        \begin{equation*}
+            \ln(x^{r})=r\ln(x)
+        \end{equation*}
+    \end{proof}
 
     \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 7}]
         \textbf{(La función $x^{p}$)} Sea $p$ un número real.
@@ -203,6 +344,46 @@
             \textbf{[?]}).
         \end{enumerate}
     \end{mdframed}
+
+    \begin{solucion}
+        \begin{enumerate}
+            \item[(a)] Encuentra el dominio de la función $p$ (por supuesto, el dominio de la
+            función $x^{p}$ depende de $p$).\\
+            Sea $p\in\mathbb{R}$. La función potencia para exponente real se
+            puede definir mediante logaritmos, así
+            \begin{equation*}
+                x^{p}=e^{p\ln(x)}
+            \end{equation*}
+            Pero $\ln(x)$ solo esta definida para para $x\gt0$. Por lo tanto,
+            para $p\in\mathbb{R}$ la función queda definida en $(0,\infty)$.
+            \item[(b)] Prueba que $(x^{p})^{\prime}=px^{p-1}$
+            Definamos
+            \begin{equation*}
+                x=e^{p\ln(x)},\qquad x\gt0.
+            \end{equation*}
+            Derivamos aplicando la regla de la cadena. Notemos que
+            \begin{equation*}
+                \frac{d}{dx}(e^{u})=e^{u}u^{\prime}\quad\text{ y }\quad \frac{d}{dx}\ln(x)=\frac{1}{x}.
+            \end{equation*}
+            Entonces
+            \begin{equation*}
+                \frac{d}{dx}(x^{p})=\frac{d}{dx}(e^{p\ln(x)}).
+            \end{equation*}
+            Aplicando la regla de la cadena
+            \begin{equation*}
+                \frac{d}{dx}(e^{p\ln(x)})=e^{p\ln(x)}\frac{p}{x}
+            \end{equation*}
+            Pero
+            \begin{equation*}
+                (e^{p\ln(x)})=x^{p}
+            \end{equation*}
+            Por lo que
+            \begin{align*}
+                \frac{d}{dx}(x^{p})&=x^{p}\frac{p}{x}\\ 
+                &=px^{p-1}
+            \end{align*}
+        \end{enumerate}
+    \end{solucion}
 
     \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 8}]
         Prueba que $a_{n}\to0$ ssi $\abs{a_{n}}\to0$.
