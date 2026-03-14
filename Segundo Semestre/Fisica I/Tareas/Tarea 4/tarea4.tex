@@ -31,7 +31,58 @@
         aceleración.
     \end{mdframed}
 
-    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 1}]
+    \begin{solucion}
+        Velocidad angular. Integramos la aceleración angular
+        \begin{align*}
+            \omega(t)&=\int\alpha(t)dt\\
+            &=\int(120t^{2}-48t+16)dt\\
+            &=40^{3}-24t^{2}+16t+C
+        \end{align*}
+        Usando $\omega(0)=0$
+        \begin{equation*}
+            C=0
+        \end{equation*}
+        Por lo tanto
+        \begin{equation*}
+            \omega(t)=40t^{3}-24t^{2}+16t
+        \end{equation*}
+        Ahora posición angular. Integramos la velocidad angular
+        \begin{align*}
+            \theta(t)&=\int\omega(t)dt\\
+            &=\int(40t^{3}-24t^{2}+16t)dt\\
+            &=10t^{4}-8t^{3}+8t^{2}+C
+        \end{align*}
+        Usando $\theta(0)=0$
+        \begin{equation*}
+            C=0
+        \end{equation*}
+        Entonces
+        \begin{equation*}
+            \theta(t)=10t^{4}-8t^{3}+8t^{2}
+        \end{equation*}
+        La aceleracion tangencial es
+        \begin{equation*}
+            a_{t}=r\alpha
+        \end{equation*}
+        Sustituyendo
+        \begin{equation*}
+            a_{t}=1.3(120t^{2}-48t+16).
+        \end{equation*}
+        Así,
+        \begin{equation*}
+            a_{t}=156t^{2}-62.4t+20.8
+        \end{equation*}
+        Por ultimo, la aceleracion centripeta es
+        \begin{equation*}
+            a_{c}=r\omega^{2}
+        \end{equation*}
+        Sustituyendo
+        \begin{equation*}
+            a_{c}=1.3(40t^{3}-24t^{2}+16)^{2}
+        \end{equation*}
+    \end{solucion}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 2}]
         Una pequeña masa $m$ se mueve sobre la mesa horizontal sin fricción. Está unida a
         una cuerda ligera que pasa por un pequeño agujero en la mesa. Del otro lado de la cuerda,
         inicialmente la partícula se mueve en una circunferencia de radio $r_{0}$ con velocidad
@@ -44,4 +95,59 @@
             \item[(d)] Explicar por qué la energía cinética cambia aunque el momento angular se conserve.   
         \end{enumerate}
     \end{mdframed}
+
+    \begin{solucion}
+        \begin{enumerate}
+            \item[(a)] Momengo angular inicial.\\
+            El momento angular respecto al agujero es
+            \begin{equation*}
+                L=\vec{r}\times\vec{p}
+            \end{equation*}
+            En movimiento circular uniforme, su magnitud es
+            \begin{equation*}
+                L=mrv
+            \end{equation*}
+            Por lo tanto el momento angular inicial es
+            \begin{equation*}
+                L_{0}=mr_{0}v_{0}
+            \end{equation*}
+            \item[(b)] Velocidad tangencial usando conservacion del momento angular
+            No hay torque externo respecto al agujero, por lo que
+            \begin{equation*}
+                L=\text{constante}
+            \end{equation*}
+            Entonces
+            \begin{equation*}
+                mr_{0}v_{0}=mrv(t)
+            \end{equation*}
+            cancelando $m$
+            \begin{equation*}
+                r_{0}v_{0}=rv(r)
+            \end{equation*}
+            Despejando $v(r)$
+            \begin{equation*}
+                v(r)=\frac{r_{0}}{r}v_{0}
+            \end{equation*}
+            Por lo tanto, la velocidad aumenta cuando el radio disminuye.
+            \item[(c)] Cambio en la energía cinética
+            La energia cinetica es
+            \begin{equation*}
+                K=\frac{1}{2}mv^{2}
+            \end{equation*}
+            Inicialmente
+            \begin{equation*}
+                K_{0}=\frac{1}{2}mv_{0}^{2}
+            \end{equation*}
+            Usando la velocidad obtenida
+            \begin{equation*}
+                K(r)=\frac{1}{2}m(\frac{r_{0}}{r}v_{0})^{2}\\
+                K(r)=\frac{1}{2}mv_{0}^{2}(\frac{r_{0}}{r})^{2}
+            \end{equation*}
+            Como $r\lt r_{0}$, se tiene
+            \begin{equation*}
+                K(r)\lt K_{0}
+            \end{equation*}
+            Por lo tanto la energia cinetica aumenta.
+        \end{enumerate}
+    \end{solucion}
 \end{document}
