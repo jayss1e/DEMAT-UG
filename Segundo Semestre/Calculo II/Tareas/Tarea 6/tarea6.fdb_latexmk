@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1773460699.46923 "/home/void/DEMAT-UG/Segundo Semestre/Calculo II/Tareas/Tarea 6/tarea6.tex" "tarea6.pdf" "tarea6" 1773460700.80621 0
-  "/home/void/DEMAT-UG/Segundo Semestre/Calculo II/Tareas/Tarea 6/tarea6.tex" 1773460697.96503 17588 5bb7fd8c04c9c324eb8f9e4d116a78ea ""
+["pdflatex"] 1773462060.38216 "/home/void/DEMAT-UG/Segundo Semestre/Calculo II/Tareas/Tarea 6/tarea6.tex" "tarea6.pdf" "tarea6" 1773462061.57802 0
+  "/home/void/DEMAT-UG/Segundo Semestre/Calculo II/Tareas/Tarea 6/tarea6.tex" 1773462060.20222 20395 5099300bada6c810d0319882856b2a83 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1772820570 2375 baa924870cfb487815765f9094cf3728 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc" 1772820570 3486 c7eadf5dcc57b3b2d11736679f6636ba ""
   "/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1772820570 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
@@ -284,9 +284,9 @@
   "f.pdf" 1772992824.81205 12391 77aa3ceee107ea19294078a3772bf493 ""
   "g.pdf" 1772993097.97498 12332 ef4b8c2aed87586617c25228b680d2e5 ""
   "h.pdf" 1772993221.89295 12286 8277080b30172f0a9c7228632621eb24 ""
-  "tarea6.aux" 1773460700.681 741 743457022dcbf3affc848264881c35bf "pdflatex"
-  "tarea6.out" 1773460700.32916 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "tarea6.tex" 1773460697.96503 17588 5bb7fd8c04c9c324eb8f9e4d116a78ea ""
+  "tarea6.aux" 1773462061.4692 742 b5c4010ba7e2f34c59d3a9451cbe9532 "pdflatex"
+  "tarea6.out" 1773462061.13549 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "tarea6.tex" 1773462060.20222 20395 5099300bada6c810d0319882856b2a83 ""
   "ugmath.sty" 1772954794.41768 7050 7a361c18b0738c8b7419ac5f8b7ab0b2 ""
   (generated)
   "tarea6.aux"

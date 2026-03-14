@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.3.7)  13 MAR 2026 21:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.3.7)  13 MAR 2026 22:21
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1062,100 +1062,100 @@ LaTeX Font Info:    Trying to load font information for U+stmry on input line 28
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 35.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 37.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 47.
-<f.pdf, id=31, 361.35pt x 216.81pt>
-File: f.pdf Graphic file (type pdf)
-<use f.pdf>
-Package pdftex.def Info: f.pdf  used on input line 54.
-(pdftex.def)             Requested size: 163.89162pt x 98.33441pt.
-<g.pdf, id=32, 361.35pt x 216.81pt>
-File: g.pdf Graphic file (type pdf)
-<use g.pdf>
-Package pdftex.def Info: g.pdf  used on input line 55.
-(pdftex.def)             Requested size: 163.89162pt x 98.33441pt.
-<h.pdf, id=33, 361.35pt x 216.81pt>
-File: h.pdf Graphic file (type pdf)
-<use h.pdf>
-Package pdftex.def Info: h.pdf  used on input line 56.
-(pdftex.def)             Requested size: 163.89162pt x 98.33441pt.
  [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc} <./f.pdf> <./g.pdf
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 74.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 84.
+<f.pdf, id=44, 361.35pt x 216.81pt>
+File: f.pdf Graphic file (type pdf)
+<use f.pdf>
+Package pdftex.def Info: f.pdf  used on input line 91.
+(pdftex.def)             Requested size: 163.89162pt x 98.33441pt.
+<g.pdf, id=45, 361.35pt x 216.81pt>
+File: g.pdf Graphic file (type pdf)
+<use g.pdf>
+Package pdftex.def Info: g.pdf  used on input line 92.
+(pdftex.def)             Requested size: 163.89162pt x 98.33441pt.
+<h.pdf, id=46, 361.35pt x 216.81pt>
+File: h.pdf Graphic file (type pdf)
+<use h.pdf>
+Package pdftex.def Info: h.pdf  used on input line 93.
+(pdftex.def)             Requested size: 163.89162pt x 98.33441pt.
+ [2 <./f.pdf> <./g.pdf
 
 pdfTeX warning: pdflatex (file ./g.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 > <./h.pdf
 
 pdfTeX warning: pdflatex (file ./h.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->] [2]
+>] [3]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 125.
+(mdframed)              on input line 162.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 127.
- [3]
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 169.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 181.
+(mdframed)              on input line 164.
  [4]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 206.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 218.
 <a.pdf, id=87, 182.11537pt x 182.65038pt>
 File: a.pdf Graphic file (type pdf)
 <use a.pdf>
-Package pdftex.def Info: a.pdf  used on input line 207.
+Package pdftex.def Info: a.pdf  used on input line 244.
 (pdftex.def)             Requested size: 179.2555pt x 179.78485pt.
- [5 <./a.pdf>]
-<b.pdf, id=129, 199.43108pt x 182.65038pt>
+ [5]
+<b.pdf, id=92, 199.43108pt x 182.65038pt>
 File: b.pdf Graphic file (type pdf)
 <use b.pdf>
-Package pdftex.def Info: b.pdf  used on input line 233.
+Package pdftex.def Info: b.pdf  used on input line 270.
 (pdftex.def)             Requested size: 179.2555pt x 164.17757pt.
-<c.pdf, id=130, 207.20813pt x 182.65038pt>
+ [6 <./a.pdf> <./b.pdf>]
+<c.pdf, id=165, 207.20813pt x 182.65038pt>
 File: c.pdf Graphic file (type pdf)
 <use c.pdf>
-Package pdftex.def Info: c.pdf  used on input line 249.
+Package pdftex.def Info: c.pdf  used on input line 286.
 (pdftex.def)             Requested size: 179.2555pt x 158.01268pt.
- [6 <./b.pdf>]
 <d.pdf, id=166, 187.04982pt x 182.65038pt>
 File: d.pdf Graphic file (type pdf)
 <use d.pdf>
-Package pdftex.def Info: d.pdf  used on input line 265.
+Package pdftex.def Info: d.pdf  used on input line 302.
 (pdftex.def)             Requested size: 179.2555pt x 175.04135pt.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 270.
+(mdframed)              on input line 307.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 272.
+(mdframed)              on input line 309.
  [7 <./c.pdf> <./d.pdf>]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 293.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 297.
- [8]
+(mdframed)              on input line 330.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 334.
+ [8]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 346.
+(mdframed)              on input line 371.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 383.
  [9]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 388.
+(mdframed)              on input line 425.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 390.
- [10] (./tarea6.aux
+(mdframed)              on input line 427.
+ [10] [11] (./tarea6.aux
 LaTeX Info: Redefining \. on input line 12.
 LaTeX Info: Redefining \% on input line 12.
 )
@@ -1167,18 +1167,18 @@ Package rerunfilecheck Info: File `tarea6.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 39558 strings out of 467525
- 881743 string characters out of 5425862
- 1422421 words of memory out of 5000000
+ 39559 strings out of 467525
+ 881750 string characters out of 5425862
+ 1424421 words of memory out of 5000000
  67769 multiletter control sequences out of 15000+600000
  670398 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,12n,108p,811b,1186s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on tarea6.pdf (10 pages, 299325 bytes).
+Output written on tarea6.pdf (11 pages, 304045 bytes).
 PDF statistics:
- 313 PDF objects out of 1000 (max. 8388607)
- 210 compressed objects within 3 object streams
- 12 named destinations out of 1000 (max. 500000)
+ 318 PDF objects out of 1000 (max. 8388607)
+ 214 compressed objects within 3 object streams
+ 13 named destinations out of 1000 (max. 500000)
  144 words of extra memory for PDF output out of 10000 (max. 10000000)
 

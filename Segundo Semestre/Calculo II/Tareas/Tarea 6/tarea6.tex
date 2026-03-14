@@ -34,6 +34,43 @@
         $p=a$ o $p=b$ se tiene una sugerencia similar.
     \end{mdframed}
 
+    \begin{proof}
+        Supongamos que $f\neq0$. Entonces existe $p\in[a,b]$ tal que
+        $f(p)\gt0$. Como $f$ es continua en $p$ y $f(p)\gt0$, por la definición
+        de continuidad existe $\delta\gt0$ tal que
+        \begin{equation*}
+            \abs{x-p}\lt\delta\implies f(x)\gt\frac{f(p)}{2}\gt0.
+        \end{equation*}
+        Sea $I=[c,d]\subset[a,b]$. Existe $p\in[a,b]$ tal que
+        \begin{equation*}
+            f(p)\gt0.
+        \end{equation*}
+        Por continuidad de $f$ en $p$, existe $\delta\gt0$ tal que
+        \begin{equation*}
+            \abs{x-p}\lt\delta\implies f(x)\gt\frac{f(p)}{2}.
+        \end{equation*}
+        Definamos
+        \begin{equation*}
+            c=p-\delta,\qquad d=p+\delta,
+        \end{equation*}
+        Entonces
+        \begin{equation*}
+            f(x)\gt\frac{f(p)}{2}\quad\forall x\in[c,d].
+        \end{equation*}
+        Por lo tanto
+        \begin{equation*}
+            \int_{a}^{b}f(x)dx\geq\int_{c}^{d}f(x)dx\gt\int_{c}^{d}\frac{f(p)}{2}dx=\frac{f(p)}{2}(d-c).
+        \end{equation*}
+        Como $f(p)\gt0$ y $d-c\gt0$,
+        \begin{equation*}
+            \int_{a}^{b}f(x)dx\gt0.
+        \end{equation*}
+        Por contrapositiva concluimos que
+        \begin{equation*}
+            f=0.
+        \end{equation*}
+    \end{proof}
+
     \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 2}]
         Considera las funciones $f:[1,\infty)\to\mathbb{R}$, $g:[1,\infty)\to\mathbb{R}$
         y $h:[1,\infty)\to\mathbb{R}$ dadas por
@@ -379,7 +416,7 @@
             \end{equation*}
             Por lo que
             \begin{align*}
-                \frac{d}{dx}(x^{p})&=x^{p}\frac{p}{x}\\ 
+                \frac{d}{dx}(x^{p})&=x^{p}\frac{p}{x}\\
                 &=px^{p-1}
             \end{align*}
         \end{enumerate}
@@ -388,4 +425,51 @@
     \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 8}]
         Prueba que $a_{n}\to0$ ssi $\abs{a_{n}}\to0$.
     \end{mdframed}
+
+    \begin{proof}
+        Supongamos que $a_{n}\to0$. Por definición de límite de sucesiones
+        \begin{equation*}
+            \forall\varepsilon\gt0\quad\exists N\in\mathbb{N}
+        \end{equation*}
+        tal que si $n\geq N$, entonces
+        \begin{equation*}
+            \abs{a_{n}-0}\lt\varepsilon.
+        \end{equation*}
+        Pero
+        \begin{equation*}
+            \abs{a_{n}-0}=\abs{a_{n}}.
+        \end{equation*}
+        Por lo tanto
+        \begin{equation*}
+            \abs{a_{n}}\lt\varepsilon\text{ para todo }n\geq N.
+        \end{equation*}
+        Esto es precisamente
+        \begin{equation*}
+            \abs{a_{n}}\to0.
+        \end{equation*}
+        Supongamos ahora que $\abs{a_{n}}\to0$. Por definición de límite de sucesiones
+        \begin{equation*}
+            \forall\varepsilon\gt0\quad\exists N\in\mathbb{N}
+        \end{equation*}
+        tal que si $n\geq N$,
+        \begin{equation*}
+            \abs{\abs{a_{n}}-0}\lt\varepsilon.
+        \end{equation*}
+        Pero
+        \begin{equation*}
+            \abs{\abs{a_{n}}-0}=\abs{a_{n}}.
+        \end{equation*}
+        Así,
+        \begin{equation*}
+            \abs{a_{n}}\lt\varepsilon\text{ para todo }n\geq N.
+        \end{equation*}
+        Esto equivale a
+        \begin{equation*}
+            \abs{a_{n}-0}\lt\varepsilon
+        \end{equation*}
+        que es exactamente la definición de
+        \begin{equation*}
+            \abs{a_{n}}\to0.
+        \end{equation*}
+    \end{proof}
 \end{document}
