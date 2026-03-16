@@ -25,6 +25,160 @@
     \textbf{Calificación:} \rule{3cm}{0.4pt} \\[0.3cm]
 
     \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 1}]
-        
+        Muestra que el área de la superficie de la esfera con centro en el origen y radio $r$ es
+        $4\pi r^{2}$.
+    \end{mdframed}
+
+    \begin{proof}
+        Consideremos la semicircunferencia superior de radio $r$ centrada en el origen,
+        cuya ecuación está dada por
+        \begin{equation*}
+            y=\sqrt{r^{2}-x^{2}}
+        \end{equation*}
+        Al rotar esta curva alrededor del eje $x$ se genera la superficie de una esfera de radio $r$.
+        El área de una superficie de revolución obtenida al rotar una función $y=f(x)$ alrededor del
+        eje $x$ está dada por
+        \begin{equation*}
+            S=2\pi\int_{a}^{b}f(x)\sqrt{1+(f^{\prime}(x))^{2}}dx.
+        \end{equation*}
+        Aplicando esto a $f(x)=\sqrt{r^{2}-x^{2}}$ en el intervalo $[-r,r]$ obtenemos
+        \begin{equation*}
+            S=2\pi\int_{-r}^{r}\sqrt{r^{2}-x^{2}}\sqrt{1+(f^{\prime}(x))^{2}}dx.
+        \end{equation*}
+        Derivamos $f(x)$ por tanto
+        \begin{equation*}
+            f^{\prime}(x)=\frac{-x}{\sqrt{r^{2}-x^{2}}}
+        \end{equation*}
+        y entonces
+        \begin{equation*}
+            1+(f^{\prime}(x))^{2}=1+\frac{x^{2}}{r^{2}-x^{2}}=\frac{r^{2}}{r^{2}-x^{2}}.
+        \end{equation*}
+        En consecuencia
+        \begin{equation*}
+            \sqrt{1+(f^{\prime}(x))^{2}}=\frac{r}{\sqrt{r^{2}-x^{2}}}.
+        \end{equation*}
+        Sustituyendo en la Integral
+        \begin{align*}
+            S&=2\pi\int_{-r}^{r}\sqrt{r^{2}-x^{2}}\frac{r}{\sqrt{r^{2}-x^{2}}}dx\\
+            &=2\pi r\int_{-r}^{r}dx\\
+            &=[2\pi rx]_{-r}^{r}\\
+            &=(2\pi r^{2})-(-2\pi r^{2})\\
+            &=4\pi r^{2}.
+        \end{align*}
+        Así, el area de una esfera de radio $r$ es $4\pi r^{2}$.
+    \end{proof}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 2}]
+        Utiliza la circunferencia trigonométrica para calcular el valor de las fucniones trigonométricas
+        del angulo $\theta$ de cada uno de los incisos siguientes (haz un dibujo).
+        \begin{multicols}{2}
+            \begin{enumerate}
+                \item[(a)]  $\theta=\pi/6.$
+                \item[(b)]  $\theta=\pi/3.$
+            \end{enumerate}
+        \end{multicols}
+        \textbf{Sugerencia:} Mediante un triángulo rectángulo muestra que $\sin(\pi/6)=\cos(\pi/3)$ y
+        $\cos(\pi/6)=\sin(\pi/3)$; usa lo anterior y las identidades trigonometricas
+        \begin{equation*}
+            \sin(x+y)=\sin(x)\cos(y)+\sin(y)\cos(x)
+        \end{equation*}
+        y
+        \begin{equation*}
+            \cos(x+y)=\cos(x)\cos(y)-\sin(x)\sin(y)
+        \end{equation*}
+        para mostrar que $\sin(\pi/6)=\frac{1}{2}=\cos(\pi/3)$ y $\cos(\pi/6)=\sqrt{3}/2=\sin(\pi/3)$.
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 3}]
+        Prueba el corolario 2
+    \end{mdframed}
+
+    \begin{proof}
+        \begin{enumerate}
+            \item[(a)] $\sin(2x)=2\sin(x)\cos(x)$.\\
+            Por la proposición 31 se tiene
+            \begin{equation*}
+                \sin(x+y)=\sin(x)\cos(y)+\sin(y)\cos(x).
+            \end{equation*}
+            Tomando $x=y$ en la identidad anterior obtenemos
+            \begin{align*}
+                \sin(x+x)&=\sin(x)\cos(x)+\sin(x)\cos(x)\\
+                &=2\sin(x)\cos(x).
+            \end{align*}
+            Por lo tanto, $\sin(2x)=2\sin(x)\cos(x)$.
+            \item[(b)] $\cos(2x)=\cos^{2}(x)-\sin^{2}(x)$.\\
+            Por la proposición 31 se tiene
+            \begin{equation*}
+                \cos(x+y)=\cos(x)\cos(y)-\sin(x)\sin(y).
+            \end{equation*}
+            Tomando $x=y$ en la identidad anterior obtenemos
+            \begin{align*}
+                \cos(x+x)&=\cos(x)\cos(x)-\sin(x)\sin(x)\\
+                &=\cos^{2}(x)-\sin^{2}(x)
+            \end{align*}
+            Por lo tanto, $\cos(2x)=\cos^{2}(x)-\sin^{2}(x)$.
+            \item[(c)] $\tan(2x)=\frac{2\tan(x)}{1-\tan^{2}(x)}$.\\
+            Por el corolario 1 se tiene
+            \begin{equation*}
+                \tan(x+y)=\frac{\tan(x)+\tan(y)}{1-\tan(x)\tan(y)}.
+            \end{equation*}
+            Tomando $x=y$ en la identidad anterior obtenemos
+            \begin{align*}
+                \tan(x+x)&=\frac{\tan(x)+\tan(x)}{1-\tan(x)\tan(x)}\\
+                &=\frac{2\tan(x)}{1-\tan^{2}(x)}.
+            \end{align*}
+            Por lo tanto $\tan(2x)=\frac{2\tan(x)}{1-\tan^{2}(x)}$.
+        \end{enumerate}
+    \end{proof}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 4}]
+        Prueba el inciso (c) de la proposición 37. \textbf{Sugerencia:} Prueba el
+        inciso (c) primero cuando $r$ es un número natural, luego cunado $r$ es un número
+        entero y finalmente cuando $r$ es un número racional.
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 5}]
+        \textbf{(La función $x^{p}$ (continuación))} Sea $0\lt p\lt\infty$ y consideremos
+        a la función
+        \begin{equation*}
+            f(x)=x^{p},0\lt x\lt\infty.
+        \end{equation*}
+        \begin{enumerate}
+            \item[(a)] Muestra que $f$ es creciente.
+            \item[(b)] Muestra que $f$ es cóncava hacia abajo si $0\lt p\lt1$ y cóncava
+            hacia arriba si $1\lt p\lt\infty$.
+            \item[(c)] Muestra que
+            \begin{equation*}
+                \lim_{x\to0^{+}}x^{p}=0\text{ y }\lim_{x\to\infty}x^{p}=\infty.
+            \end{equation*}
+            \item[(d)] Dibuja las gráficas de las funciones $x^{2},x^{\frac{1}{2}}$ y $x^{\sqrt{2}}$.
+            \item[(e)] Dibuja las gráficas de las funciones $x^{3},x^{\frac{1}{3}}$ y $x^{\sqrt{3}}$. 
+        \end{enumerate}
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 6}]
+        Prueba que $a_{n}\to L$ ssi $a_{n}-L\to0$.
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 7}]
+        Calcula los limites siguientes:
+        \begin{multicols}{2}
+            \begin{enumerate}
+                \item[(a)]  $\underset{n\rightarrow\infty}{\lim}\frac{5n^{4}-4n^{2}}{3n^{3}+2n}.$
+                \vspace{0.1cm}
+                \item[(b)]  $\underset{n\rightarrow\infty}{\lim}\frac{5n^{4}-4n^{2}}{3n^{4}+2n}.$
+                \vspace{0.1cm}
+                \item[(c)]  $\underset{n\rightarrow\infty}{\lim}\frac{5n^{3}-4n^{2}}{3n^{4}+2n}.$
+            \end{enumerate}
+        \end{multicols}
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 8}]
+        Prueba que la sucesión
+        \begin{equation*}
+            \sqrt{2},\sqrt{2\sqrt{2}},\sqrt{2\sqrt{2\sqrt{2}}},\dots
+        \end{equation*}
+        converge y calcula su límite. \textbf{Sugerencia:} Ten presente que si
+        $(a_{n})$ es la sucesión anterior y $a_{n}\to L$, entonces $a_{n+1}=\sqrt{2a_{n}}\to\sqrt{2L}$.
     \end{mdframed}
 \end{document}
