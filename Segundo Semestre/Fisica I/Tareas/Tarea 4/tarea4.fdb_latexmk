@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1773463679.00341 "/home/void/DEMAT-UG/Segundo Semestre/Fisica I/Tareas/Tarea 4/tarea4.tex" "tarea4.pdf" "tarea4" 1773463680.0631 0
-  "/home/void/DEMAT-UG/Segundo Semestre/Fisica I/Tareas/Tarea 4/tarea4.tex" 1773463678.80517 5680 35abb54e23d7a5c4c26c90b8229497a9 ""
+["pdflatex"] 1773801198.9418 "/home/void/DEMAT-UG/Segundo Semestre/Fisica I/Tareas/Tarea 4/tarea4.tex" "tarea4.pdf" "tarea4" 1773801199.94828 0
+  "/home/void/DEMAT-UG/Segundo Semestre/Fisica I/Tareas/Tarea 4/tarea4.tex" 1773801197.78063 5680 35abb54e23d7a5c4c26c90b8229497a9 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1772820570 2375 baa924870cfb487815765f9094cf3728 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc" 1772820570 3486 c7eadf5dcc57b3b2d11736679f6636ba ""
   "/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1772820570 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
@@ -266,9 +266,9 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1772820570 43569 fd570f2fa160877d211e859f687312ba ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1772945811 5541339 b32eb00eb34cd5c925a7827d916d9dbd ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1772945769 3765587 6da9629ed352524df4c7e28575a86967 ""
-  "tarea4.aux" 1773463679.96811 483 1786c1d4132b847902eb3ca7e7e4a9d0 "pdflatex"
-  "tarea4.out" 1773463679.81813 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "tarea4.tex" 1773463678.80517 5680 35abb54e23d7a5c4c26c90b8229497a9 ""
+  "tarea4.aux" 1773801199.85415 483 1786c1d4132b847902eb3ca7e7e4a9d0 "pdflatex"
+  "tarea4.out" 1773801199.71515 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "tarea4.tex" 1773801197.78063 5680 35abb54e23d7a5c4c26c90b8229497a9 ""
   "ugmath.sty" 1773262845.54967 7083 f50246a362d67ebaf5a691af0c04ad68 ""
   (generated)
   "tarea4.aux"
