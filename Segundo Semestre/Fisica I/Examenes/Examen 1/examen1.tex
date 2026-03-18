@@ -1,23 +1,127 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{ugmath}
+\usepackage{float}
+\usepackage{placeins}
+\usepackage[labelfont=bf,labelsep=space]{caption}
+\newcommand{\paren}[1]{\left( #1 \right)}
+\newcommand{\alumno}{Ricardo León Martínez}
+\newcommand{\materia}{Fisica I}
+\newcommand{\profesor}{Lucero Uscanga Aguilera}
+\newcommand{\tarea}{Examen 1}
+\newcommand{\fecha}{17/3/2026}
+
 \begin{document}
     \begin{center}
     {\large\textbf{UNIVERSIDAD DE GUANAJUATO}}\\[0.3cm]
     {\normalsize\textbf{DIVISIÓN DE CIENCIAS NATURALES Y EXACTAS}}\\
     {\normalsize\textbf{CAMPUS GUANAJUATO}}\\[1cm]
 
-    {\Large\textbf{EXAMEN (\materia)}}\\[0.3cm]
-    {\normalsize\textbf{\tipoexamen}}\\[1cm] % Ejemplo: Primer Parcial
+    {\Large\textbf{\tarea\ (\materia)}}\\[1cm]
     \end{center}
 
     \textbf{Nombre:} \alumno \hfill 
     \textbf{Fecha:} \fecha \hfill 
     \textbf{Calificación:} \rule{3cm}{0.4pt} \\[0.3cm]
 
-    \textbf{Matrícula:} \rule{4cm}{0.4pt} \hfill
-    \textbf{Grupo:} \rule{2cm}{0.4pt} \\[0.3cm]
+    \textbf{1.} La aceleración de un cuerpo que se mueve a lo largo de una linea recta esta
+    dada por la ecuación $a=-kv^{2}$, donde $k$ es una constante y suponiendo que $t=0$,
+    $v=v_{0}$. Encontrar la velocidad y el dezplasamiento en función del tiempo. Encontrar
+    tambien $"v"$ en función de $"x"$.
 
-    \textbf{Profesor:} \profesor
+    \begin{solucion}
+        Dado que la acelareción es la derivada de la velocidad entonces
+        \begin{equation*}
+            \frac{dv}{dt}=-kv^{2}.
+        \end{equation*}
+        Reescribiendo
+        \begin{equation*}
+            v^{-2}dv=-kdt.
+        \end{equation*}
+        Integrando a ambos lados
+        \begin{equation*}
+            \int v^{-2}dv=-k\int dt.
+        \end{equation*}
+        Así,
+        \begin{equation*}
+            -\frac{1}{v}=-kt+C.
+        \end{equation*}
+        Multiplicando por -1 ambos lados
+        \begin{equation*}
+            \frac{1}{v}=kt+C^{\prime}
+        \end{equation*}
+        Si $v$ es una función del tiempo y $v_{0}$ suecede cuando $t=0$ entonces
+        \begin{equation*}
+            \frac{1}{v_{0}}=C^{\prime}.
+        \end{equation*}
+        Por tanto
+        \begin{equation*}
+            \frac{1}{v}=kt+\frac{1}{v_{0}}.
+        \end{equation*}
+        Finalmente
+        \begin{equation*}
+            v(t)=\frac{v_{0}}{v_{0}kt+1}
+        \end{equation*}
+        Ahora, dado que la velocidad es la derivada de la posición se tiene
+        \begin{equation*}
+            \frac{dx}{dt}=\frac{v_{0}}{v_{0}kt+1}.
+        \end{equation*}
+        por lo tanto
+        \begin{equation*}
+            dx=\frac{v_{0}}{v_{0}kt+1}dt.
+        \end{equation*}
+        Integramos ambos lados
+        \begin{equation*}
+            \int dx=\int\frac{v_{0}}{v_{0}kt+1}dt
+        \end{equation*}
+        En consecuencia
+        \begin{equation*}
+            x=\frac{1}{k}\ln(v_{0}kt+1)+C
+        \end{equation*}
+        Si tomamos $x(0)=x_{0}$ entonces
+        \begin{equation*}
+            x_{0}=C
+        \end{equation*}
+        De esta forma
+        \begin{equation*}
+            x(t)=\frac{1}{k}\ln(v_{0}kt+1)+x_{0}.
+        \end{equation*}
+        Así hemos encontrado expresiones de velocidad y posición con respecto al tiempo.
+        Ahora usamos
+        \begin{equation*}
+            a=\frac{dv}{dt}=v\frac{dv}{dx}
+        \end{equation*}
+        Por lo tanto,
+        \begin{equation*}
+            v\frac{dv}{dx}=-kv^{2}.
+        \end{equation*}
+        Si $v\neq0$, dividimos por v ambos lados
+        \begin{equation*}
+            \frac{dv}{dx}=-kv.
+        \end{equation*}
+        Reescribiendo
+        \begin{equation*}
+            \frac{1}{v}dv=-kdx.
+        \end{equation*}
+        Integramos a ambos lados
+        \begin{equation*}
+            \int\frac{1}{v}dv=-k\int dx.
+        \end{equation*}
+        por lo tanto
+        \begin{equation*}
+            \ln(v)=-kx+C
+        \end{equation*}
+        Exponenciando
+        \begin{equation*}
+            v=C^{\prime}e^{-kx}
+        \end{equation*}
+        Tomando $v(0)=v_{0}$ y $x(0)=0$ se tiene
+        \begin{equation*}
+            C^{\prime}=v_{0}e^{kx_{0}}.
+        \end{equation*}
+        Así,
+        \begin{equation*}
+            v(x)=v_{0}e^{(x_{0}-x)k}
+        \end{equation*}
+    \end{solucion}
 
-    \vspace{0.5cm}
-    \hrule
-    \vspace{0.5cm}
 \end{document}
