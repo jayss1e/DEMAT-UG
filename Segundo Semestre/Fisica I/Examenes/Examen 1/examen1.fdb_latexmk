@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1773803956.76349 "/home/void/DEMAT-UG/Segundo Semestre/Fisica I/Examenes/Examen 1/examen1.tex" "examen1.pdf" "examen1" 1773803957.7621 0
-  "/home/void/DEMAT-UG/Segundo Semestre/Fisica I/Examenes/Examen 1/examen1.tex" 1773803956.57106 4036 b1946de23ac1be64a4deb8d1963ebd21 ""
+["pdflatex"] 1773890226.55668 "/home/void/DEMAT-UG/Segundo Semestre/Fisica I/Examenes/Examen 1/examen1.tex" "examen1.pdf" "examen1" 1773890227.47725 0
+  "/home/void/DEMAT-UG/Segundo Semestre/Fisica I/Examenes/Examen 1/examen1.tex" 1773890226.37705 4035 6c93bb2dc214b2c62430bafa77fd1333 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1772820570 2375 baa924870cfb487815765f9094cf3728 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc" 1772820570 3486 c7eadf5dcc57b3b2d11736679f6636ba ""
   "/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1772820570 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
@@ -266,9 +266,9 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1772820570 43569 fd570f2fa160877d211e859f687312ba ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1772945811 5541339 b32eb00eb34cd5c925a7827d916d9dbd ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1772945769 3765587 6da9629ed352524df4c7e28575a86967 ""
-  "examen1.aux" 1773803957.65374 397 cddc27f5e2a59f67c6df8f01512fb4a3 "pdflatex"
-  "examen1.out" 1773803957.56198 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "examen1.tex" 1773803956.57106 4036 b1946de23ac1be64a4deb8d1963ebd21 ""
+  "examen1.aux" 1773890227.37321 397 cddc27f5e2a59f67c6df8f01512fb4a3 "pdflatex"
+  "examen1.out" 1773890227.28621 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "examen1.tex" 1773890226.37705 4035 6c93bb2dc214b2c62430bafa77fd1333 ""
   "ugmath.sty" 1773801276.6583 7083 f50246a362d67ebaf5a691af0c04ad68 ""
   (generated)
   "examen1.aux"
