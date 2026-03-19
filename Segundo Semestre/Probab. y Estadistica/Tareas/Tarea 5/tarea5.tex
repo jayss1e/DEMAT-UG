@@ -39,11 +39,69 @@
         reportados deben ser incorrectos.
     \end{mdframed}
 
+    \begin{proof}
+        Sea $U$ el universo de las 1000 personas encuestadas, y definimos los subconjuntos
+        \begin{align*}
+            P&:=\{\text{profesionistas}\}\\
+            C&:=\{\text{personas casadas}\}\\
+            T&:=\{\text{personas con título universitario}\}.
+        \end{align*}
+        Se nos da lo siguiente
+        \begin{align*}
+            \abs{P}&=312,\quad\abs{C}=470,\quad\abs{T}=525,\\
+            \abs{P\cap T}&=42,\quad\abs{C\cap T}=147,\\
+            \abs{P\cap C}&=86,\quad\abs{P\cap C\cap T}=25.
+        \end{align*}
+        Por el principio de inclusión-exclusión se tiene que
+        \begin{equation*}
+            \abs{P\cup C\cup T}=\abs{P}+\abs{C}+\abs{T}-\abs{P\cap C}-\abs{P\cap T}-\abs{C\cap T}+\abs{P\cap C\cap T}
+        \end{equation*}
+        Sustituyendo
+        \begin{align*}
+            \abs{P\cup C\cup T}&=312+470+525-86-42-147+25.\\
+            &=1057
+        \end{align*}
+        Por definición, $P\cup C\cup T\subseteq U$, por lo que necesariamente
+        \begin{equation*}
+            \abs{P\cup C\cup T}\leq\abs{U}=1000.
+        \end{equation*}
+        Pero, hemos obtenido
+        \begin{equation*}
+            \abs{P\cup C\cup T}=1057\gt1000,
+        \end{equation*}
+        lo cual es imposible.
+    \end{proof}
+
     \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 2}]
         Un examen contiene 11 preguntas en total a contestar con falso o verdadero. El examen
         resulta aprobado si se responden correctamente al menos 6 de las 11 preguntas. Si contestamos las
         preguntas al azar, ¿cuál es la probabilidad de aprobar el examen?
     \end{mdframed}
+
+    \begin{solucion}
+        Sea $X$ la variable que cuenta el número de respuestas correctas. Aprobar el
+        examen equivale a que $X\geq6$. Por lo tanto
+        \begin{equation*}
+            \mathbb{P}(X\geq6)=\sum_{k=6}^{11}\binom{11}{k}\paren{\frac{1}{2}}^{11}
+        \end{equation*}
+        Calculamos los coeficientes binomiales
+        \begin{align*}
+            \binom{11}{6}&=462,\\
+            \binom{11}{7}&=330,\\
+            \binom{11}{8}&=165,\\
+            \binom{11}{9}&=55,\\
+            \binom{11}{10}&=11,\\
+            \binom{11}{11}&=1.
+        \end{align*}
+        Sumando
+        \begin{equation*}
+            462+330+165+55+11+1=1024.
+        \end{equation*}
+        Así,
+        \begin{equation*}
+            \mathbb{P}(X\geq6)=\frac{1024}{2^{11}}=\frac{1024}{2048}=\frac{1}{2}.
+        \end{equation*}
+    \end{solucion}
 
     \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 3}]
         Describa espacios muestrales para cada uno de los siguientes casos.
@@ -55,6 +113,32 @@
         \end{itemize}
     \end{mdframed}
 
+    \begin{solucion}
+        \begin{enumerate}
+            \item[(a)] Si las calificaciones pertenecen, por ejemplo, a un subconjunto $A\subseteq\mathbb{R}$
+            (por ejemplo $A=[0,10]$ o bien un conjunto discreto como $\{0,1,\dots,10\}$), entonces
+            cada resultado del experimento consiste en una 37-tupla de calificaciones
+            \begin{equation*}
+                \Omega=A^{37}=\{(x_{1},x_{2},\dots,x_{37}):x_{i}\in A\}.
+            \end{equation*}
+            \item[(b)] Suponiendo que la estacion mide a la misma hora, con el mismo instrumento de medición,
+            y la misma precision. Si el termometro mide en decimas de grado dentro de un rango fisico $[a,b]$,
+            entonces el espacio muestral es finito o numerable
+            \begin{equation*}
+                \Omega=\{a,a+0.1,a+0.2,\dots,b\}.
+            \end{equation*}
+            \item[(c)] Suponiendo las mismas cosas que el anterior, entonces, el espacio muestral queda
+            \begin{equation*}
+                \Omega=\{1,2,\dots,V_{\text{max}}\}.
+            \end{equation*}
+            \item[(d)] Cada lanzamiento produce cara (C) o cruz (X). Un resultado del experimento es una
+            sucesión infinita. Por lo tanto,
+            \begin{equation*}
+                \Omega=\{(x_{1},x_{2},x_{3},\dots):x_{i}\in\{C,X\}\}.
+            \end{equation*}
+        \end{enumerate}
+    \end{solucion}
+
     \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 4}]
         Fulgencio y Yesrael acuerdan realizar una competencia de esgrima con duelos consecutivos
         en la que el ganador de la competencia es el primero en salir victorioso en dos duelos consecutivos.
@@ -65,6 +149,45 @@
             \item[(b)] Calcule la probabilidad de que la competencia termine al cabo de $k$ duelos con $k=2,3,\dots$.
         \end{itemize}
     \end{mdframed}
+
+    \begin{solucion}
+        \begin{enumerate}
+            \item[(a)] El experimento consiste en observar la sucesión de resultados hasta que aparece por primera vez
+            dos victorias consecutivas de alguno de los jugadores. Por tanto el espacio muestra esta formado
+            por todas las sucesiones finitas de simbolos $\{F, Y\}$ que terminan en dos resultados iguales
+            consecutivos, pero que antes de ese punto no contienen dos iguales consecutivos.
+            \item[(b)] Para que el juego termine exactamente en el duelo $k$:
+            \begin{itemize}
+                \item Los primero $k-1$ resultados deben alternar estrictamente.
+                \item En el paso $k$, se repite el resultado anterior.
+            \end{itemize}
+            Esto implica que
+            \begin{itemize}
+                \item Existe exactamente una sucesion que termina en $F$.
+                \item Existe exactamente una sucesion que termina en $Y$.
+            \end{itemize}
+            Si $k=2m$, entonces las dos sucesiones posibles son
+            \begin{equation*}
+                Y,F,Y,F,\dots,F,F\quad\text{ y }\quad F,Y,F,Y,\dots,Y,Y.
+            \end{equation*}
+            Cada una tiene $m$ apariciones de $F$ y $m$ de $Y$. Por la independencia
+            \begin{equation*}
+                \mathbb{P}=p^{m}q^{m}.
+            \end{equation*}
+            Como hay dos sucesiones
+            \begin{equation*}
+                \mathbb{P}(K=2m)=2(pq)^{m}
+            \end{equation*}
+            Si $k=2m+1$, las sucesiones son
+            \begin{equation*}
+                F,Y,F,Y,\dots,F,F\quad\text{ y }\quad Y,F,Y,F,\dots,Y,Y.
+            \end{equation*}
+            En la primera hay $m+1$ $F$ y $m$ $Y$, en la segunda es al reves. Por lo tanto
+            \begin{equation*}
+                \mathbb{P}(K=2m+1)=p^{m+1}q^{m}+q^{m+1}p^{m}
+            \end{equation*}
+        \end{enumerate}
+    \end{solucion}
 
     \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 5}]
         Tres jugadores, a los cuales identificamos por Jugador 1, Jugador 2 y Jugador 3, toman
@@ -80,6 +203,57 @@
             \item[(d)] Describa el evento de que ni el Jugador 1 ni tampoco el Jugador 2 gana y calcule su probabilidad.
         \end{itemize}
     \end{mdframed}
+
+    \begin{solucion}
+        \begin{enumerate}
+            \item[(a)] El experimento consiste en lanzar la moneda hasta la primera aparición de $S$. Por tanto,
+            \begin{equation*}
+                \Omega=\{S,AS,AAS,AAAS,\dots\}.
+            \end{equation*}
+            Cada $\omega\in\Omega$ es una sucesión finita que termina en el primer $S$.
+            \item[(b)] El jugador 1 lanza en los tiempos $1,4,7,\dots$, es decir en los indices
+            $k\equiv1\pmod{3}$. Entonces,
+            \begin{equation*}
+                E_{1}=\{\omega\in\Omega:\abs{\omega}=3m+1,m\geq0\}.
+            \end{equation*}
+            Para $k=3m+1$, la probabilidad de la trayectoria correspondiente es
+            \begin{equation*}
+                \mathbb{P}(\Omega_{3m+1})=p^{3m}q.
+            \end{equation*}
+            Por tanto,
+            \begin{equation*}
+                \mathbb{P}(E_{1})=\sum_{m=0}^{\infty}p^{3m}q=q\sum_{m=0}^{\infty}(p^{3})^{m}.
+            \end{equation*}
+            Como $0\lt p\lt1$, la serie geometrica converge y
+            \begin{equation*}
+                \mathbb{P}(E_{1})=\frac{q}{1-p^{3}}.
+            \end{equation*}
+            \item[(c)] El jugador 2 lanza en los tiempos $2,5,8,\dots$, es decir $k\equiv2\pmod{3}$.
+            \begin{equation*}
+                E_{2}=\{\omega\in\Omega:\abs{\omega}=3m+2m,m\geq0\}
+            \end{equation*}
+            Para $k=3m+2$, la probabilidad es
+            \begin{equation*}
+                \mathbb{P}(\Omega_{3m+2})=p^{3m+1}q.
+            \end{equation*}
+            Así,
+            \begin{equation*}
+                \mathbb{P}(E_{2})=\sum_{m=0}^{\infty}p^{3m+1}q=pq\sum_{m=0}^{\infty}=\frac{pq}{1-p^{3}}.
+            \end{equation*}
+            \item[(d)] Este evento corresponde a que gana el jugador 3:
+            \begin{equation*}
+                E_{3}=\{\omega\in\Omega:\abs{\omega}=3m+3,m\geq0\}.
+            \end{equation*}
+            Para $k=3m+3$,
+            \begin{equation*}
+                \mathbb{P}(\Omega_{3m+3})=p^{3m+2}q.
+            \end{equation*}
+            Por tanto,
+            \begin{equation*}
+                \mathbb{P}(E_{3})=\sum_{m=0}^{\infty}p^{3m+2}q=p^{2}q\sum_{m=0}^{\infty}(p^{3})^{m}=\frac{p^{2}q}{1-p^{3}}.
+            \end{equation*}
+        \end{enumerate}
+    \end{solucion}
 
     \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 6}]
         Sea $\Omega$ un conjunto no vacío. Recordemos que $\mathcal{F}\subset 2^{\Omega}$ es una
@@ -125,9 +299,48 @@
             \lim_{n\to\infty}P(B_n)=1 \quad \text{implica} \quad
             \lim_{n\to\infty}\big(P(A_n)-P(A_n\cap B_n)\big)=0.
         \]
-
         \textbf{Observación.} Es posible que $\lim_{n\to\infty}P(A_n)$ no exista.
     \end{mdframed}
+
+    \begin{proof}
+        Observemos que para todo $n\in\mathbb{N}$,
+        \begin{equation*}
+            P(A_{n})-P(A_{n}\cap B_{n})=P(A_{n}\cap B_{n}^{c}),
+        \end{equation*}
+        ya que $(A_{n}\cap B_{n})\cup(A_{n}\cap B_{n}^{c})$ es union disjunta. Por lo tanto,
+        basta demostrar que
+        \begin{equation*}
+            \lim_{n\to\infty}P(A_{n}\cap B_{n}^{c})=0.
+        \end{equation*}
+        Para todo $n$, se tiene la inclusión
+        \begin{equation*}
+            A_{n}\cap B_{n}^{c}\subseteq B_{n}^{c},
+        \end{equation*}
+        y por monotonia de la probabilidad
+        \begin{equation*}
+            0\leq P(A_{n}\cap B_{n}^{c})\leq P(B_{n}^{c}).
+        \end{equation*}
+        Como por hipotesis
+        \begin{equation*}
+            \lim_{n\to\infty}P(B_{n})=1,
+        \end{equation*}
+        se sigue que
+        \begin{equation*}
+            \lim_{n\to\infty}P(B_{n}^{c})=\lim_{n\to\infty}(1-P(B_{n}))=0.
+        \end{equation*}
+        Entonces, por el teorema del sandwich
+        \begin{equation*}
+            0\leq P(A_{n}\cap B_{n}^{c})\leq P(B_{n}^{c})\to0
+        \end{equation*}
+        Lo cual implica
+        \begin{equation*}
+            \lim_{n\to\infty}P(A_{n}\cap B_{n}^{c})=0.
+        \end{equation*}
+        Así,
+        \begin{equation*}
+            \lim_{n\to\infty}(P(A_{n})-P(A_{n}\cap B_{n}))=0.
+        \end{equation*}
+    \end{proof}
 
     \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 8}]
         Sea $(\Omega,\mathcal{F},P)$ un espacio de probabilidad. Pruebe que se cumple la siguiente desigualdad de Bonferroni:
@@ -147,4 +360,50 @@
         P(B_1)+P(B_2)+\cdots+P(B_n).
         \]
     \end{mdframed}
+
+    \begin{proof}
+        Procederemos por inducción en $n$. Caso base $n=2$. Para dos eventos se tiene
+        la igualdad de inclusión-exclusión
+        \begin{equation*}
+            P(A_{1}\cup A_{2})=P(A_{1})+P(A_{2})-P(A_{1}\cap A_{2})
+        \end{equation*}
+        Por lo que la desigualdad es valida. Supongamos que para algun $n\in\mathbb{N}$
+        se cumple
+        \begin{equation*}
+            P\paren{\bigcup_{k=1}^{n}A_{k}}\geq\sum_{k=1}^{n}P(A_{k})-\sum_{1\leq k\leq\ell\leq n}P(A_{k}\cap A_{\ell}).
+        \end{equation*}
+        Definamos
+        \begin{equation*}
+            B:=\bigcup_{k=1}^{n}A_{k}.
+        \end{equation*}
+        Entonces,
+        \begin{equation*}
+            P\paren{\bigcup_{k=1}^{n+1}A_{k}}=P(B\cup A_{n+1})=P(B)+P(A_{n+1})-P(B\cap A_{n+1}).
+        \end{equation*}
+        Observemos que
+        \begin{equation*}
+            B\cap A_{n+1}=\bigcup_{k=1}^{n}(A_{k}\cap A_{n+1}).
+        \end{equation*}
+        Por aditividad
+        \begin{equation*}
+            P(B\cap A_{n+1})\leq\sum_{k=1}^{n}P(A_{k}\cap A_{n+1}).
+        \end{equation*}
+        Sustituyendo en la expresion anterior 
+        \begin{equation*}
+            P\paren{\bigcup_{k=1}^{n+1}A_{k}}\geq P(B)+P(A_{n+1})-\sum_{k=1}^{n}P(A_{k}\cap A_{n+1}).
+        \end{equation*}
+        Aplicando ahora la hipotesis de induccion a $P(B)$
+        \begin{equation*}
+            P(B)\geq\sum_{k=1}^{n}P(A_{k})-\sum_{1\leq k\lt\ell\leq n}P(A_{k}\cap A_{\ell}).
+        \end{equation*}
+        Por lo tanto
+        \begin{equation*}
+            P\paren{\bigcup_{k=1}^{n}A_{k}}\geq\sum_{k=1}^{n}P(A_{k})-\sum_{1\leq k\lt\ell\leq n}P(A_{k}\cap A_{\ell})
+            +P(A_{n+1})-\sum_{k=1}^{n}P(A_{k}\cap A_{n+1}).
+        \end{equation*}
+        Reordenando
+        \begin{equation*}
+            P\paren{\bigcup_{k=1}^{n+1}A_{k}}\geq\sum_{k=1}^{n+1}P(A_{k})-\sum_{1\leq k\lt\ell\leq1}P(A_{k}\cap A_{\ell}).
+        \end{equation*}
+    \end{proof}
 \end{document}
