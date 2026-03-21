@@ -1,0 +1,101 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{ugmath}
+\usepackage{float}
+\usepackage{placeins}
+\usepackage{array}
+\usepackage[labelfont=bf,labelsep=space]{caption}
+\newcommand{\paren}[1]{\left( #1 \right)}
+\newcommand{\alumno}{Ricardo León Martínez}
+\newcommand{\materia}{Algebra Lineal I}
+\newcommand{\profesor}{Claudia Reynoso Alcántara}
+\newcommand{\tarea}{Examen 1}
+\newcommand{\fecha}{20/3/2026}
+
+\begin{document}
+
+    \begin{center}
+        {\large\textbf{UNIVERSIDAD DE GUANAJUATO}}\\[0.3cm]
+        {\normalsize\textbf{DIVISIÓN DE CIENCIAS NATURALES Y EXACTAS}}\\
+        {\normalsize\textbf{CAMPUS GUANAJUATO}}\\[1cm]
+
+        {\Large\textbf{\tarea\ (\materia)}}\\[1cm]
+    \end{center}
+
+    \noindent
+    \textbf{Nombre:} \alumno 
+    \hfill 
+    \textbf{Fecha:} \fecha 
+    \hfill 
+    \textbf{Calificación:} \rule{3cm}{0.4pt}
+
+    \vspace{0.3cm}
+
+    La calificación maxima del examen es de 10. Escribe lo mas claro y conciso posible.
+    Usa solo la teoria vista en clase. El examen tiene una duración de 3 horas.
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 1}]
+        Considera el siguiente sistema de ecuaciones lineales de 4
+        ecuaciones lineales en 4 variables en $\mathbb{R}$.
+        \begin{equation*}
+            \begin{matrix}
+                x_{1}+2x_{2}-x_{3}+x_{4}=3\\
+                x_{1}+5x_{2}-3x_{3}=2\\
+                -x_{1}-3x_{2}+2x_{3}-x_{4}=0\\
+                2x_{1}+7x_{2}-4x_{3}+x_{4}=5
+            \end{matrix}
+        \end{equation*}
+        \begin{enumerate}
+            \item[(a)] Escribe la matriz aumentada del sistema.
+            \item[(b)] Escribe la matriz equivalente, reducida por filas y escalonada.
+            \item[(c)] Determina cuales son las variables libres y cuales son las variables no libres.
+            \item[(d)] Encuentra el conjunto solucion del sistema.  
+        \end{enumerate}
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 2}]
+        Encuentra las ternas $(b_{1},b_{2},b_{3})\in\mathbb{R}^{3}$ para las que
+        el sistema no tiene ninguna solución (justifica tu respuesta).
+        \begin{equation*}
+            \begin{pmatrix}
+                1 & 0 & 0\\
+                0 & 1 & 2\\
+                1 & 1 & 2
+            \end{pmatrix}
+            \begin{pmatrix}
+                x_{1}\\
+                x_{2}\\
+                x_{3}
+            \end{pmatrix}
+            =
+            \begin{pmatrix}
+                b_{1}\\
+                b_{2}\\
+                b_{3}
+            \end{pmatrix}
+        \end{equation*}
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 3}]
+        Determina los valores $a\in\mathbb{R}$ para los que la siguiente
+        matriz es invertible (justifica tu respuesta)
+        \begin{equation*}
+            \begin{pmatrix}
+                1 & a & 1\\
+                0 & 1 & a\\
+                1 & a+1 & 2
+            \end{pmatrix}
+        \end{equation*}
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 4}]
+        Demuestra que para todo $a\in\mathbb{R}$, $W_{a}=\{(x_{1},x_{2},x_{3},x_{4},x_{5})\in\mathbb{R}^{5}:x_{1}+x_{2}+x_{3}=ax_{5},x_{4}=0\}$
+        es un subespacio vectorial de $\mathbb{R}^{5}$. Demuestra que todo
+        vector en $W_{a}$ es combinación lineal de los vectores $(a,0,0,0,1)$,
+        $(-1,1,0,0,0)$, $(-1,0,1,0,0)$. (justifica tu respuesta).
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 5}]
+        Demuestra que $W=\{(x_{1},x_{2},x_{3},x_{4})\in\mathbb{R}^{4}:x_{1}x_{2}=0\}$
+        no es subespacio vectorial de $\mathbb{R}^{4}$
+    \end{mdframed}
+\end{document}
