@@ -1,0 +1,88 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{ugmath}
+\usepackage{float}
+\usepackage{placeins}
+\usepackage{array}
+\usepackage[labelfont=bf,labelsep=space]{caption}
+\newcommand{\paren}[1]{\left( #1 \right)}
+\newcommand{\alumno}{Ricardo León Martínez}
+\newcommand{\materia}{Elementos de Probabilidad y Estadistica}
+\newcommand{\profesor}{Claudia Reynoso Alcántara}
+\newcommand{\tarea}{Tarea 5}
+\newcommand{\fecha}{25/3/2026}
+
+\begin{document}
+
+    \begin{center}
+        {\large\textbf{UNIVERSIDAD DE GUANAJUATO}}\\[0.3cm]
+        {\normalsize\textbf{DIVISIÓN DE CIENCIAS NATURALES Y EXACTAS}}\\
+        {\normalsize\textbf{CAMPUS GUANAJUATO}}\\[1cm]
+
+        {\Large\textbf{\tarea\ (\materia)}}\\[1cm]
+    \end{center}
+
+    \noindent
+    \textbf{Nombre:} \alumno 
+    \hfill 
+    \textbf{Fecha:} \fecha 
+    \hfill 
+    \textbf{Calificación:} \rule{3cm}{0.4pt}
+
+    \vspace{0.3cm}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 1}]
+        Sea $\{A_k\}_{k=1}^\infty$ una sucesión de eventos en un espacio medible $(\Omega,\mathcal{F})$. Para cada entero $n \geq 1$, consideramos los conjuntos
+        \[
+        B_n = \inf_{k \geq n} A_k := \bigcap_{k=n}^{\infty} A_k
+        \quad \text{y} \quad
+        C_n = \sup_{k \geq n} A_k := \bigcup_{k=n}^{\infty} A_k .
+        \]
+        Notemos que $\{B_n\}_{n=1}^\infty$ es creciente mientras que $\{C_n\}_{n=1}^\infty$ es decreciente, esto es, 
+        $B_1 \subset B_2 \subset B_3 \subset \dots$ mientras que $C_1 \supset C_2 \supset C_3 \supset \dots$ . Podemos también considerar
+        \[
+        B = \lim_{n \to \infty} B_n := \bigcup_{n=1}^{\infty} B_n 
+        \quad \text{y} \quad
+        C = \lim_{n \to \infty} C_n := \bigcap_{n=1}^{\infty} C_n .
+        \]
+        Los conjuntos $B$ y $C$ se conocen como el límite inferior y el límite superior de la sucesión $\{A_k\}_{k=1}^\infty$, y se denotan por $\liminf_k A_k$ y $\limsup_k A_k$, respectivamente. Demuestre que
+        \begin{enumerate}
+            \item[(a)] $B_{n},C_{n},B,C$ son eventos, es decir, que pertenecen a la
+            $\sigma$-algebra $\mathcal{F}$.
+            \item[(b)] $B=\left\{\omega\in\Omega:\begin{matrix}
+            \omega\in A_{k}\text{ para todos los valores de $k$ salvo, posiblemente}\\
+            \text{por un número finito de los mismos}
+            \end{matrix}\right\}$
+            \item[(c)] $C=\{\omega\in\Omega:\omega\in A_{k}\text{ para un número infinito de valores de $k$}\}$
+        \end{enumerate}
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 2}]
+        Una sucesión de eventos $\{A_k\}_{k=1}^\infty$ en un espacio de probabilidad $(\Omega,\mathcal{F}, P)$ se dice convergente si se cumple que $\liminf_k A_k = \limsup_k A_k$, es decir, su límite inferior y su límite superior coinciden. Demuestre que si $\{A_k\}_{k=1}^\infty$ es convergente con $A = \liminf_k A_k = \limsup_k A_k$, entonces
+        \[
+        P(A) = \lim_{k \to \infty} P(A_k) .
+        \]
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 3}]
+        Sea $(\Omega,\mathcal{F})$ un espacio de medida y suponga que $P_1, P_2$ son dos funciones de probabilidad definidas en este espacio, es decir, $P_1, P_2 : \mathcal{F} \to \mathbb{R}$ son funciones tales que
+
+        \begin{itemize}
+            \item[(I)] $P_k(\Omega) = 1$ y $0 \leq P_k(A) \leq 1$ para todo $A \in \mathcal{F}$
+            \item[(II)] si $\{A_i\}_{i=1}^\infty \subset \mathcal{F}$ con $A_i \cap A_j = \emptyset$ si $i \neq j$, entonces
+            \[
+            \sum_{i=1}^{\infty} P(A_i) = P\left(\bigcup_{i=1}^{\infty} A_i\right)
+            \]
+        \end{itemize}
+        con $k = 1, 2$. Demuestre que $\alpha P_1 + (1 - \alpha)P_2$ es también una función de probabilidad. Generalice el resultado para $n$ funciones de probabilidad $P_1, P_2, \dots, P_n$.
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 4}]
+        Para cualesquiera $a, b \in \mathbb{R}$ con $a \leq b$, encuentre los conjuntos
+        \[
+        \bigcup_{n=1}^{\infty} \left[a + \frac{1}{n}, b - \frac{1}{n}\right]
+        \quad \text{y} \quad
+        \bigcap_{n=1}^{\infty} \left(a - \frac{1}{n}, b + \frac{1}{n}\right) .
+        \]
+        Argumente el porqué la $\sigma$-álgebra de $\Omega = [0, 1]$ generada por todos los intervalos cerrados $[a, b] \subset [0, 1]$ coincide con la $\sigma$-álgebra generada por intervalos abiertos $(a, b) \subset [0, 1]$.
+    \end{mdframed}
+\end{document}
