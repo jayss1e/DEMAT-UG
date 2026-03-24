@@ -56,12 +56,79 @@
         \end{enumerate}
     \end{mdframed}
 
+    \begin{proof}
+        \begin{enumerate}
+            \item[(a)] $B_{n},C_{n},B,C$ son eventos, es decir, que pertenecen a la
+            $\sigma$-algebra $\mathcal{F}$.\\
+            Dado que $\mathcal{F}$ es una $\sigma$-algebra, es cerrada bajo uniones e intersecciones
+            numebrales. Para cada $n$ $B_{n}=\bigcap_{k=n}^{\infty}A_{k}$ es una interseccion numerable de
+            elementos de $\mathcal{F}$, por lo tanto $B_{n}\in\mathcal{F}$. Analogamente, $C_{n}=\bigcup_{k=n}^{\infty}A_{k}$
+            es una union numerable, luego $C_{n}\in\mathcal{F}$. Finalmente, $B=\bigcup_{n=1}^{\infty}B_{n}$ y
+            $C=\bigcap_{n=1}^{\infty}C_{n}$ tambien pertenecen a $\mathcal{F}$ por la misma propiedad de cerradura.
+            \item[(b)] $B=\left\{\omega\in\Omega:\begin{matrix}
+            \omega\in A_{k}\text{ para todos los valores de $k$ salvo, posiblemente}\\
+            \text{por un número finito de los mismos}
+            \end{matrix}\right\}$\\
+            Si $\omega\in B$, entonces existe $n$ tal que $\omega\in B_{n}$. Por definición de $B_{n}$,
+            esto implica que $\omega\in A_{k}$ para todo $k\geq n$. Por lo tanto, $\omega$ puede no pertencer
+            a lo maximo a los conjuntos $A_{1},\dots,A_{n-1}$, que son finitos. De igual forma, si $\omega$
+            pertenece a todos los $A_{k}$ excepto a un numero finito, entonces existe $n$ tal que $\omega\in A_{k}$
+            para todo $k\geq n$. Esto implica $\omega\in B_{n}$, y por lo tanto $\omega\in B$.
+            \item[(c)] $C=\{\omega\in\Omega:\omega\in A_{k}\text{ para un número infinito de valores de $k$}\}$\\
+            Si $\omega\in C$, entonces $\omega\in C_{n}$ para todo $n$. Por definición de $C_{n}$,
+            esto significa que para todo $n$ existe $k\geq n$ tal que $\omega\in A_{k}$. Esto
+            implica que $\omega$ pertenece a infinitos conjuntos $A_{k}$. De igual manera, si
+            $\omega$ pertenece a infinitos $A_{k}$, entonces para todo $n$ existe algun $k\geq n$
+            tal que $\omega\in A_{k}$, lo que implica $\omega\in C_{n}$ para todo $n$, y por tanto
+            $\omega\in C$.
+        \end{enumerate}
+    \end{proof}
+
     \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 2}]
         Una sucesión de eventos $\{A_k\}_{k=1}^\infty$ en un espacio de probabilidad $(\Omega,\mathcal{F}, P)$ se dice convergente si se cumple que $\liminf_k A_k = \limsup_k A_k$, es decir, su límite inferior y su límite superior coinciden. Demuestre que si $\{A_k\}_{k=1}^\infty$ es convergente con $A = \liminf_k A_k = \limsup_k A_k$, entonces
         \[
         P(A) = \lim_{k \to \infty} P(A_k) .
         \]
     \end{mdframed}
+
+    \begin{proof}
+        Por la monotonía de la probabilidad,
+        \begin{equation*}
+            P(B_{n})\leq P(A_{k})\leq P(C_{n})
+        \end{equation*}
+        para todo $k\geq n$. Tomando limite inferior y superior cuando $k\to\infty$, se obtiene
+        \begin{equation*}
+            P(B_{n})\leq\liminf_{k\to\infty}P(A_{k})\leq\limsup_{k\to\infty} P(A_{k})\leq P(C_{n}).
+        \end{equation*}
+        Ahora, como $\{B_{n}\}$ es creciente,
+        \begin{equation*}
+            P(A)=P\paren{\bigcup_{n=1}^{\infty}B_{n}}=\lim_{n\to\infty}P(B_{n}).
+        \end{equation*}
+        Como $\{C_{n}\}$ es decreciente,
+        \begin{equation*}
+            P(A)=P\paren{\bigcap_{n=1}^{\infty}C_{n}}=\lim_{n\to\infty}P(C_{n}).
+        \end{equation*}
+        Por lo tanto
+        \begin{equation*}
+            \lim_{n\to\infty}P(B_{n})=P(A)=\lim_{n\to\infty}P(C_{n}).
+        \end{equation*}
+        Por ultimo, pasando al limite en la desigualdad
+        \begin{equation*}
+            P(B_{n})\leq\liminf_{k}P(A_{k})\leq\limsup_{k} P(A_{k})\leq P(C_{n}).
+        \end{equation*}
+        cuando $n\to\infty$, se obtiene
+        \begin{equation*}
+            P(A)\leq\liminf_{k}P(A_{k})\leq\limsup_{k} P(A_{k})\leq P(A).
+        \end{equation*}
+        Esto implica
+        \begin{equation*}
+            \liminf_{k}P(A_{k})=\limsup_{k}P(A_{k})=P(A),
+        \end{equation*}
+        y por lo tanto el limite existe y
+        \begin{equation*}
+            \lim_{n\to\infty}P(A_{k})=P(A).
+        \end{equation*}
+    \end{proof}
 
     \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 3}]
         Sea $(\Omega,\mathcal{F})$ un espacio de medida y suponga que $P_1, P_2$ son dos funciones de probabilidad definidas en este espacio, es decir, $P_1, P_2 : \mathcal{F} \to \mathbb{R}$ son funciones tales que
