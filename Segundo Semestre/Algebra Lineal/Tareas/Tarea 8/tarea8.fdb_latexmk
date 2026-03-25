@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1774378679.14591 "/home/void/DEMAT-UG/Segundo Semestre/Algebra Lineal/Tareas/Tarea 8/tarea8.tex" "tarea8.pdf" "tarea8" 1774378679.93282 0
-  "/home/void/DEMAT-UG/Segundo Semestre/Algebra Lineal/Tareas/Tarea 8/tarea8.tex" 1774378678.14175 2207 eb9b874cb89c97bf2f7d7faa940f47ab ""
+["pdflatex"] 1774414838.00499 "/home/void/DEMAT-UG/Segundo Semestre/Algebra Lineal/Tareas/Tarea 8/tarea8.tex" "tarea8.pdf" "tarea8" 1774414839.22195 0
+  "/home/void/DEMAT-UG/Segundo Semestre/Algebra Lineal/Tareas/Tarea 8/tarea8.tex" 1774414837.80436 3207 f341d38815688842f3f4e4b3077f523d ""
   "/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1772820570 2375 baa924870cfb487815765f9094cf3728 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1772820570 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
   "/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc" 1772820570 2840 216e6e45ad352e2456e1149f28885bee ""
@@ -259,12 +259,12 @@
   "/usr/share/texmf-dist/tex/latex/zref/zref-abspage.sty" 1772820570 2269 2de6c7a5fd634dfef00a960544463a38 ""
   "/usr/share/texmf-dist/tex/latex/zref/zref-base.sty" 1772820570 20785 198a9cb2e04238d92c320d0d9edbd76a ""
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1772820570 43569 fd570f2fa160877d211e859f687312ba ""
-  "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1774037086 5541339 b32eb00eb34cd5c925a7827d916d9dbd ""
-  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1774037072 3765586 4429b7cde5280b52c8cb896717b71a6a ""
-  "tarea8.aux" 1774378679.86383 612 ddd4e50288a5f5f83895ed3d89b8060a "pdflatex"
-  "tarea8.out" 1774378679.75383 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "tarea8.tex" 1774378678.14175 2207 eb9b874cb89c97bf2f7d7faa940f47ab ""
-  "ugmath.sty" 1774374538.45199 6878 b64ae6d2be3991f3995ce506c2919b83 ""
+  "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1772945811 5541339 b32eb00eb34cd5c925a7827d916d9dbd ""
+  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1772945769 3765587 6da9629ed352524df4c7e28575a86967 ""
+  "tarea8.aux" 1774414839.1114 654 cfbe3a43dd39b085d821fff82c91e8f5 "pdflatex"
+  "tarea8.out" 1774414838.8666 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "tarea8.tex" 1774414837.80436 3207 f341d38815688842f3f4e4b3077f523d ""
+  "ugmath.sty" 1774414508.17485 6938 a856cfd250fe89c9c3cd0da7a0736480 ""
   (generated)
   "tarea8.aux"
   "tarea8.log"
