@@ -4,4 +4,5 @@
 \contentsline {section}{\numberline {1.2}Partes clásicas de la física}{3}{section.1.2}%
 \contentsline {section}{\numberline {1.3}Nuestra visión del Universo}{4}{section.1.3}%
 \contentsline {section}{\numberline {1.4}Relación de la física con otras ciencias}{5}{section.1.4}%
-\contentsline {chapter}{\numberline {2}Vectores}{7}{chapter.2}%
+\contentsline {chapter}{\numberline {2}Fuerzas}{7}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Composición de fuerzas}{7}{section.2.1}%
