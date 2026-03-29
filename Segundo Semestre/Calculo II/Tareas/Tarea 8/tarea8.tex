@@ -1,0 +1,363 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{ugmath}
+\usepackage{float}
+\usepackage{placeins}
+\usepackage [spanish]{babel}
+\usepackage[labelfont=bf,labelsep=space]{caption}
+\newcommand{\paren}[1]{\left( #1 \right)}
+\newcommand{\alumno}{Ricardo León Martínez}
+\newcommand{\materia}{Calculo Diferencial e Integral II}
+\newcommand{\profesor}{Fernando Nuñez Medina}
+\newcommand{\tarea}{Tarea 8}
+\newcommand{\fecha}{28/3/2026}
+
+\begin{document}
+    \begin{center}
+    {\large\textbf{UNIVERSIDAD DE GUANAJUATO}}\\[0.3cm]
+    {\normalsize\textbf{DIVISIÓN DE CIENCIAS NATURALES Y EXACTAS}}\\
+    {\normalsize\textbf{CAMPUS GUANAJUATO}}\\[1cm]
+
+    {\Large\textbf{\tarea\ (\materia)}}\\[1cm]
+    \end{center}
+
+    \textbf{Nombre:} \alumno \hfill 
+    \textbf{Fecha:} \fecha \hfill 
+    \textbf{Calificación:} \rule{3cm}{0.4pt} \\[0.3cm]
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 1}]
+        Muestra que el volumen de la esfera con centro en el origen y radio $r$ es $\frac43\pi r^{3}$.
+    \end{mdframed}
+
+    \begin{proof}
+        La esfera de radio $r$ centrada en el origen está descrita por
+        \begin{equation*}
+            x^{2}+y^{2}=r^{2}.
+        \end{equation*}
+        Despejando $y$, obtenemos la semicircunferencia superior
+        \begin{equation*}
+            y=\sqrt{r^{2}-x^{2}}.
+        \end{equation*}
+        Al rotar esta curva alrededor del eje $x$, generamos la esfera. De esta forma por la definición 14,
+        \begin{equation*}
+            V=\pi\int_{-r}^{r}\paren{\sqrt{r^{2}-x^{2}}}^{2}dx.
+        \end{equation*}
+        Simplificando,
+        \begin{equation*}
+            V=\pi\int_{-r}^{r}(r^{2}-x^{2})dx.
+        \end{equation*}
+        Por linealidad de la integral
+        \begin{equation*}
+            \pi\paren{\int_{-r}^{r}r^{2}dx-\int_{-r}^{r}x^{2}dx}.
+        \end{equation*}
+        Calculando cada termino
+        \begin{equation}
+            \int_{-r}^{r}r^{2}dx=\big[x^{2}(2r)\big]_{-r}^{r}=2r^{3}.
+        \end{equation}
+        \begin{equation}
+            \int_{-r}^{r}x^{2}dx=2\int_{0}^{r}x^{2}dx=2\big[\frac{x^{3}}{3}\big]_{0}^{r}=\frac{2r^{3}}{3}.
+        \end{equation}
+        Sustituyendo
+        \begin{equation*}
+            V=\pi\paren{2r^{3}-\frac{2r^{3}}{3}}=\pi\paren{\frac{6r^{3}-2r^{3}}{3}}=\pi\cdot\frac{4r^{3}}{3}.
+        \end{equation*}
+        Por lo tanto
+        \begin{equation*}
+            V=\frac{4}{3}\pi r^{3}.
+        \end{equation*}
+    \end{proof}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 2}]
+        Prueba el corolario 3. \textbf{Sugerencia:} Para probar, por ejemplo, el inciso (a),
+        usa la identidad pitagorica $\sin^{2}(x)+\cos^{2}(x)=1$ y el inciso (a) de la proposicion
+        31.
+    \end{mdframed}
+
+    \begin{proof}
+        \begin{enumerate}
+            \item[(a)] $\sin^{2}(x)=\frac{1-\cos(2x)}{2}$.\\
+            Tenemos que
+            \begin{equation*}
+                \frac{1-cos(2x)}{2}.
+            \end{equation*}
+            y por el corolario 2 se sigue que
+            \begin{align*}
+                \frac{1-\cos(2x)}{2}&=\frac{1-(\cos^{2}(x)-\sin^{2}(x))}{2}\\
+                &=\frac{(1-\cos^{2}(x))+\sin^{2}(x)}{2}\\
+                &=\frac{2\sin^{2}(x)}{2}\\
+                &=\sin^{2}(x)
+            \end{align*}
+            Así,
+            \begin{equation*}
+                \sin^{2}(x)=\frac{1-\cos(2x)}{2}.
+            \end{equation*}
+            \item[(b)] $\cos^{2}(x)=\frac{1+\cos(2x)}{2}$.\\
+            De forma similar al anterior inciso tomamos la expresion de lado derecho de la igualdad
+            y por el corolario 2 tenemos que
+            \begin{align*}
+                \frac{1+\cos(2x)}{2}&=\frac{1+(\cos^{2}(x)-\sin^{2}(x))}{2}\\
+                &=\frac{(1-\sin^{2}(x))+\cos^{2}(x)}{2}\\
+                &=\frac{2\cos^{2}(x)}{2}\\
+                &=\cos^{2}(x).
+            \end{align*}
+            Así,
+            \begin{equation*}
+                \cos^{2}(x)=\frac{1+\cos(2x)}{2}.
+            \end{equation*}
+            \item[(c)] $\tan^{2}(x)=\frac{1-\cos(2x)}{1+\cos(2x)}$.\\
+            Por la definición de la tangente es claro que
+            \begin{equation*}
+                \tan^{2}(x)=\frac{\sin^{2}(x)}{\cos^{2}(x)}
+            \end{equation*}
+            De esta forma por los dos incisos anteriores se sigue que
+            \begin{align*}
+                \tan^{2}(x)&=\frac{1-\cos(2x)}{2}\frac{2}{1+\cos(2x)}\\
+                &=\frac{1-\cos(2x)}{1+\cos(2x)}.
+            \end{align*}
+            Así,
+            \begin{equation*}
+                \tan^{2}(x)=\frac{1-\cos(2x)}{1+\cos(2x)}.
+            \end{equation*}
+        \end{enumerate}
+    \end{proof}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 3}]
+        Prueba que si $(a_{n})$ es una sucesión acotada y $(b_{n})$ es una sucesión que converge
+        a 0, entonces lña sucesión $(a_{n}b_{n})$ converge a 0.
+    \end{mdframed}
+
+    \begin{proof}
+        Como $(a_{n})$ es acotada, existe $M\gt0$ tal que
+        \begin{equation*}
+            \abs{a_{n}}\leq M\quad\forall n\in\N.
+        \end{equation*}
+        Por otra parte, como $b_{n}\to$, se tiene que
+        \begin{equation*}
+            \forall\varepsilon\gt0,\exists N\in\N\text{ tal que }n\geq N\implies\abs{b_{n}}\lt\frac{\varepsilon}{M}.
+        \end{equation*}
+        Entonces, para $n\geq N$, se cumple
+        \begin{equation*}
+            \abs{a_{n}b_{n}}=\abs{a_{n}}\abs{b_{n}}\leq M\abs{b_{n}}\lt M\cdot\frac{\varepsilon}{M}=\varepsilon.
+        \end{equation*}
+        Por lo tanto,
+        \begin{equation*}
+            \forall\varepsilon\gt0,\exists N\in\N\text{ tal que }n\geq N\implies\abs{a_{n}b_{n}}\lt\varepsilon,
+        \end{equation*}
+        lo cual implica que
+        \begin{equation*}
+            a_{n}b_{n}\to0.
+        \end{equation*}
+    \end{proof}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 4}]
+        Considera una sucesión $(a_{n})$. Prueba que si $a_{2n}\to L$ y $a_{2n-1}\to L$, entonces
+        $a_{n}\to L$.
+    \end{mdframed}
+
+    \begin{proof}
+        Sea $\varepsilon\gt0$. Como $a_{2n}\to L$, existe $N_{1}\in\N$ tal que
+        \begin{equation*}
+            n\geq N_{1}\implies\abs{a_{2n}-L}\lt\varepsilon.
+        \end{equation*}
+        De igual forma, como $a_{2n-1}\to L$, existe $N_{2}\in\N$ tal que
+        \begin{equation*}
+            n\geq N_{2}\implies\abs{a_{2n-1}\lt\varepsilon}.
+        \end{equation*}
+        Sea ahora
+        \begin{equation*}
+            N:=\max\{2N_{1},2N_{2}-1\}.
+        \end{equation*}
+        Tomemos $n\geq N$. Si $n=2k$ entonces $k=\frac{n}{2}\geq N_{1}$, pues $n\geq2N_{1}$. Por lo tanto,
+        \begin{equation*}
+            \abs{a_{n}-L}=\abs{a_{2k}-L}\lt\varepsilon.
+        \end{equation*}
+        Si $n=2k-1$ entonces $k=\frac{n+1}{2}\geq N_{2}$, pues $n\geq2N_{2}-1$. Por lo tanto,
+        \begin{equation*}
+            \abs{a_{n}-L}=\abs{a_{2k-1}-L}\lt\varepsilon.
+        \end{equation*}
+        En ambos casos se cumple que
+        \begin{equation*}
+            \abs{a_{n}-L}\lt\varepsilon
+        \end{equation*}
+        para todo $n\geq N$. Así,
+        \begin{equation*}
+            a_{n}\to L.
+        \end{equation*}
+    \end{proof}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 5}]
+        Prueba que toda suecesión de Cauchy es acotada. \textbf{Sugerencia:} Supón que $(a_{n})$
+        es una sucesión de Cauchy. Existe $N\in\mathbb{N}$ tal que si $n,m\gt N$, entonces
+        $\abs{a_{n}-a_{m}}\lt1$, por lo cual
+        \begin{equation*}
+            \abs{a_{n}}\leq\abs{a_{n}-a_{N+1}}+\abs{a_{N+1}}\lt1+\abs{a_{N+1}},\quad n\gt N.
+        \end{equation*}
+        Aún no termina la prueba, concluye.
+    \end{mdframed}
+
+    \begin{proof}
+        Sea $(a_{n})$ una sucesión de Cauchy. Entonces, por definición,
+        \begin{equation*}
+            \forall\varepsilon\gt0,\exists N\in\N\text{ tal que }n,m\gt N\implies\abs{a_{n}-a_{m}}\lt\varepsilon.
+        \end{equation*}
+        Tomando $\varepsilon=1$, existe $N\in\N$ tal que
+        \begin{equation*}
+            n,m\gt N\implies\abs{a_{n}-a_{m}}\lt1.
+        \end{equation*}
+        Fijando $m=N+1$, se obtiene que para todo $n\gt N$
+        \begin{equation*}
+            \abs{a_{n}-a_{N+1}}\lt1.
+        \end{equation*}
+        Por la desigualdad del triangulo
+        \begin{equation*}
+            \abs{a_{n}}\leq\abs{a_{n}-a_{N+1}}+\abs{a_{N+1}}\leq1+\abs{a_{N+1}},\quad\forall n\gt N.
+        \end{equation*}
+        Entonces los terminos $\{a_{n}:n\gt N\}$ están acotados por
+        \begin{equation*}
+            M_{1}:=1+\abs{a_{N+1}}.
+        \end{equation*}
+        Por otro lado el conjunto $\{a_{1},a_{2},\dots,a_{n}\}$ es acotado, es decir, existe
+        \begin{equation*}
+            M_{2}=\max\{\abs{a_{1}},\dots,\abs{a_{N}}\}.
+        \end{equation*}
+        Definimos ahora
+        \begin{equation*}
+            M:=\max{M_{1},M_{2}}.
+        \end{equation*}
+        Entonces, para todo $n\in\N$, se cumple
+        \begin{equation*}
+            \abs{a_{n}}\leq M.
+        \end{equation*}
+        Por lo tanto, $(a_{n})$ es acotada.
+    \end{proof}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 6}]
+        \textbf{(Sucesiones artiméticas,geométricas y armónicas)}
+        \begin{enumerate}
+            \item[(a)] Determina la convergencia de una sucesión artimética.
+            \item[(b)] Determina la convergencia de una sucesión geométrica.
+            \item[(c)] Determina la convergencia de una sucesión armónica. 
+        \end{enumerate}
+        \textbf{Sugerencia:} Para el inciso (c), muestra que los términos de una sucesión armónica $(a_{n})$ tiene la forma
+        \begin{equation*}
+            a_{n}=\frac{a_{1}}{1+(n-1)da_{1}}
+        \end{equation*}
+        donde $d$ es la diferencia de la sucesión aritmética $(a_{n}^{-1})$.
+    \end{mdframed}
+
+    \begin{solucion}
+        \begin{enumerate}
+            \item[(a)] Sucesión aritmética\\
+            Sea $(a_{n})$ una sucesión aritmética, es decir,
+            \begin{equation*}
+                a_{n}=a_{1}+(n-1)d,,\quad d\in\R.
+            \end{equation*}
+            Si $d=0$, entonces
+            \begin{equation*}
+                a_{n}=a_{1}\quad\forall n\implies a_{n}\to a_{1}.
+            \end{equation*}
+            Si $d\neq0$, entonces
+            \begin{equation*}
+                a_{n}=a_{1}+(n-1)d \xrightarrow[n\to\infty]{}
+                \begin{cases}
+                    +\infty\quad\text{ si }d\gt0\\
+                    -\infty\quad\text{ si }d\lt0
+                \end{cases}
+            \end{equation*}
+            Por lo tanto, una sucesion artimetica converge si y solo si
+            $d=0$.
+            \item[(b)] Sucesión geométrica\\
+            Sea $(a_{n})$ una sucesión geométrica
+            \begin{equation*}
+                a_{n}=a_{1}r^{n-1},\quad r\in\R.
+            \end{equation*}
+            Si $\abs{r}\lt1$, entonces
+            \begin{equation*}
+                r^{n-1}\to0\implies a_{n}\to0.
+            \end{equation*}
+            Si $r=1$, entonces
+            \begin{equation*}
+                a_{n}=a_{1}\implies a_{n}\to a_{1}.
+            \end{equation*}
+            Si $r=-1$, entonces
+            \begin{equation*}
+                a_{n}=a_{1}(-1)^{n-1},
+            \end{equation*}
+            la cual solo converge cuando $a_{1}=0$. Si $\abs{r}\gt1$, entonces $\abs{a_{n}}\to\infty$, por lo que no converge.
+            Por lo tanto $a_{n}$ converge si y solo si $\abs{r}\lt1$ o $r=1$.
+            \item[(c)] Sucesion armonica\\
+            Sea $(a_{n})$ una sucesión armonica, es decir, $(a_{n}^{-1})$ es aritmetica. Entonces existe $d\in\R$ tal que
+            \begin{equation*}
+                \frac{1}{a_{n}}=\frac{1}{a_{1}}+(n+1)d.
+            \end{equation*}
+            De aqui,
+            \begin{equation*}
+                \frac{1}{a_{n}}=\frac{1+(n-1)da_{1}}{a_{1}}\implies a_{n}=\frac{a_{1}}{1+(n-1)da_{1}}.
+            \end{equation*}
+            Si $d=0$, entonces
+            \begin{equation*}
+                a_{n}=a_{1}\implies a_{n}\to a_{1}.
+            \end{equation*}
+            Si $d\neq0$, entonces el denominador crece linealmente
+            \begin{equation*}
+                1+(n-1)da_{1}\to\pm\infty,
+            \end{equation*}
+            por lo que
+            \begin{equation*}
+                a_{n}\to0.
+            \end{equation*}
+            Así, todo sucesion armonica converge.
+        \end{enumerate}
+    \end{solucion}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 7}]
+        Calcula el límite superior y el limite inferior de las sucesiones siguientes:
+        \begin{multicols}{2}
+            \begin{enumerate}
+                \item[(a)]  $\left(\left(-1\right)^{n}\right).$
+                \item[(b)]  $\left(1/n^{2}+5\right).$
+                \item[(c)]  $\left(\left(-1\right)^{n}\left(n+1\right)\right).$ 
+                \item[(d)]  $\left(n\sin\left(n\pi/2\right)+10\right).$
+                \item[(e)]  $\left(\sqrt[n]{2}+\left(-1\right)^{n}+3\right).$ 
+                \item[(f)]  $\left(\left(-1\right)^{n}+2\right)\cos^{2}\left(n\pi/2\right)\left(1+1/n\right).$
+            \end{enumerate}
+        \end{multicols}
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 8}]
+        Sea $A$ un conjunto no vacío y acotado de números reales. Prueba que existe una sucesión $(a_{n})$ de puntos
+        de $A$ tal que $a_{n}\to\sup(A)$. Se cumple un resultado similar para el ínfimo del conjunto $A$.
+    \end{mdframed}
+
+    \begin{proof}
+        Sea $s:=\sup(A)$. Para cada $n\in\N$, tomamos $\varepsilon=\frac{1}{n}$. Entonces existe $a_{n}\in A$ tal que
+        \begin{equation*}
+            s-\frac{1}{n}\lt a_{n}\leq s.
+        \end{equation*}
+        Esto define la sucesión $(a_{n})\subset A$. Sea $\varepsilon\gt0$. Elegimos $N\in\N$ tal que
+        \begin{equation*}
+            \frac{1}{N}\lt\varepsilon.
+        \end{equation*}
+        Entonces, para todo $n\geq N$,
+        \begin{equation*}
+            s-\frac{1}{n}\geq s-\frac{1}{N}\gt s-\varepsilon.
+        \end{equation*}
+        Por construcción,
+        \begin{equation*}
+            s-\frac{1}{n}\lt a_{n}\leq s,
+        \end{equation*}
+        por lo que
+        \begin{equation*}
+            s-\varepsilon\lt a_{n}\leq s.
+        \end{equation*}
+        De aquí,
+        \begin{equation*}
+            0\leq s-a_{n}\lt\varepsilon\implies\abs{a_{n}-s}\lt\varepsilon.
+        \end{equation*}
+        Por lo tanto,
+        \begin{equation*}
+            a_{n}\to s=\sup(A).
+        \end{equation*}
+        Así, existe $(a_{n})\subset A$ tal que $a_{n}\to\sup(A)$.
+    \end{proof}
+
+\end{document}
