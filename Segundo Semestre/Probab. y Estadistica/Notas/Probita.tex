@@ -274,7 +274,7 @@
             4\times4\times4=4^{3}=64.
         \end{equation*}
     \end{solucion}
-
+    
     Estos problemas ilustran el concepto de \textbf{variaciones con repetición}, donde cada posición en la secuencia puede ocuparse con cualquier elemento del conjunto dado, permitiendo repeticiones.\\
 
     {\large \textbf{Variaciones con Repetición}}
@@ -501,6 +501,35 @@
         \begin{equation*}
             \frac{V_{3}^{25}}{3!}=\frac{13800}{6}=2300.
         \end{equation*}
+        Sin embargo cada mano se cuenta $7!=5040$ veces (una por cada ordenamiento posible).
+        Por lo tanto, el número total de manos distintas es
+        \begin{equation*}
+            \frac{V_{7}^{28}}{7!}=\frac{5967561600}{5040}=1184040.
+        \end{equation*}
     \end{solucion}
+
+    {\large \textbf{Cálculo general de combinaciones de $m$ elementos tomados de $n$}}
+
+    Consideremos un conjunto $C=\{c_{1},c_{2},\dots,c_{m}\}$ con $m$ elementos. Llamamos
+    \textbf{combinaciones} $m$ elementos tomados de $n$ en $n$ al número de subconjuntos de $C$
+    que constan de $n$ elementos. Este número se denota por
+    \begin{equation*}
+        \binom{m}{n}\quad\text{ o tambien }\quad C_{n}^{m}.
+    \end{equation*}
+    Se supone que $0\leq n\leq m$.\\
+
+    \textbf{Relación entre combinaciones y variaciones}\\
+    Ya sabemos calcular el número de $n-$tuplas ordenadas de $V_{n}^{m}$ que se pueden formar con los
+    elementos de $C$. Cada subconjunto de $C$ con $n$ elementos genera $n!$ $n-$tuplas ordenadas
+    (una por cada ordenamiento posible de los $n$ elementos). Por lo tanto, se cumple la relación
+    \begin{equation*}
+        V_{n}^{m}=\binom{m}{n}\times n!.
+    \end{equation*}
+
+    \textbf{Fórmula para combinaciones}\\
+    Reemplazando $V_{n}^{m}$ por su valor, obtenemos la expresión para el número de combinaciones
+    \begin{equation*}
+        \binom{m}{n}=\frac{m!}{(m-n)!n!}.
+    \end{equation*}
     
 \end{document}

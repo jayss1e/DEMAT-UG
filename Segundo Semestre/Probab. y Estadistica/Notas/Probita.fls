@@ -1,7 +1,7 @@
-PWD /home/void/DEMAT-UG/Segundo Semestre/Probab. y Estadistica/Notas
+PWD /home/god/DEMAT-UG/Segundo Semestre/Probab. y Estadistica/Notas
 INPUT /usr/share/texmf-dist/web2c/texmf.cnf
 INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
-INPUT /home/void/DEMAT-UG/Segundo Semestre/Probab. y Estadistica/Notas/Probita.tex
+INPUT /home/god/DEMAT-UG/Segundo Semestre/Probab. y Estadistica/Notas/Probita.tex
 OUTPUT Probita.log
 INPUT /usr/share/texmf-dist/tex/latex/base/book.cls
 INPUT /usr/share/texmf-dist/tex/latex/base/book.cls
@@ -503,6 +503,28 @@ INPUT ./camino2.pdf
 INPUT ./camino2.pdf
 INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/ec-lmr8.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/ec-lmr6.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/rm-lmr12.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/rm-lmr10.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/rm-lmr7.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/lmmi12.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/lmmi10.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/lmmi7.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/lmsy10.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/lmsy10.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/lmsy7.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/rsfs/rsfs7.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/stmaryrd/stmary10.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/stmaryrd/stmary10.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/stmaryrd/stmary7.tfm
+INPUT /usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc
 INPUT Probita.aux
 INPUT ./Probita.out
 INPUT ./Probita.out
@@ -515,6 +537,7 @@ INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/lm/lmbx12.pfb
+INPUT /usr/share/texmf-dist/fonts/type1/public/lm/lmex10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/lm/lmmi12.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/lm/lmmi6.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/lm/lmmi8.pfb
