@@ -1,0 +1,372 @@
+\documentclass[12pt,a4paper]{book}
+\raggedbottom
+
+\usepackage{ugmath}
+\usepackage{float}
+\usepackage{placeins}
+\usepackage[labelfont=bf,labelsep=space]{caption}
+\usepackage{pdfpages}
+
+\newcommand{\llaves}[1]{\{#1\}}
+\newcommand{\parentesis}[1]{\left(#1\right)}
+\newcommand{\llavesgrande}[1]{\big\{#1\big\}}
+
+
+
+\begin{document}
+    
+    
+    \thispagestyle{empty}
+    \includepdf[pages=1]{linealdefinitivo.pdf}
+        
+    
+    \setcounter{page}{1}
+    \tableofcontents
+    
+    
+    \chapter{Ecuaciones Lineales}
+    
+    \section{Campos}
+    \begin{mdframed}[style=mdbluebox,frametitle={Definición 1: Campo}]
+        Un campo $F$ es un conjunto de dos operaciones binarias, suma y producto tal que,
+        \begin{enumerate}
+            \item Suma.
+            \begin{align*}
+                +: F \times F &\to F \\
+                (a,b) &\mapsto a+b.
+            \end{align*}
+            La suma satisface:
+            \begin{itemize}
+                \item Asociativa, es decir, 
+                $$a + (b + c) = (a + b) + c, \quad \forall a,b,c \in F.$$
+                \item Conmutativa, es decir
+                $$a + b = b + a, \quad \forall a,b \in F.$$
+                \item Existe $0 \in F$, llamado cero, tal que
+                $$0 + a = a = a + 0, \quad \forall a \in F.$$
+                \item Dado $a \in F$, existe $-a$ tal que
+                $$a + (-a) = 0, \quad \forall a \in F.$$
+            \end{itemize}
+        
+            \item Producto.
+            \begin{align*}
+                \cdot: F \times F &\to F \\
+                (a,b) &\mapsto a \cdot b.
+            \end{align*}
+            Tal que el producto es:
+            \begin{itemize}
+                \item Asociativa, es decir, 
+                $$a \cdot (b \cdot c) = (a \cdot b) \cdot c, \quad \forall a,b,c \in F.$$
+                \item Conmutativa, es decir
+                $$a \cdot b = b \cdot a, \quad \forall a,b \in F.$$
+                \item Existe $1 \in F,1 \ne 0$, llamado uno, tal que
+                $$1 \cdot a = a = a \cdot 1, \quad \forall a \in F.$$
+                \item Dado $a \in F, a \ne 0$, existe $a^{-1} \text{ o } 1/a$ tal que
+                $$a \cdot a^{-1} = 1, \quad \forall a \in F.$$
+            \end{itemize}
+        \end{enumerate}
+    \end{mdframed}
+    Para relacionar tanto la suma y el producto, contamos con la distributividad, la cual nos dice que 
+    $$a \cdot (b + c) = a \cdot b + a \cdot c, \quad \forall a,b,c \in F.\vspace{20pt}$$
+    Tanto la suma como el producto son grupos abelianos, siendo estos $(F, + , 0)$ y $(F\setminus \{0\},  \cdot, 1)$ respectivamente. Algunos ejemplos de grupos abelianos conocidos son 
+    \begin{align*}
+        &(\mathbb{Q}, + , \cdot, 0, 1),\\
+        &(\mathbb{R}, + , \cdot, 0, 1).   
+    \end{align*}
+    Ahora hablaremos del campo de los complejos, en este campo contamos con el símbolo $i$, el cual satisface que $i^2 = -1.$ Así
+    $$\mathbb{C} = \{a + ib : a,b \in \mathbb{R}, i^{2} = -1\}.$$
+    Definimos una suma en $\mathbb{C}$ como
+    $$(a + ib) + (c + id) = (a + c) + i(b + d)$$
+    y el producto en $\mathbb{C}$ de la siguiente manera
+    \begin{align*}
+        (a + ib) \cdot (c + id) & = a \cdot (c + id) + ib \cdot (c + id)\\
+        & = a \cdot c + i(ad) + i(bc) - b\cdot d\\
+        & = (a \cdot c - b \cdot d) + i(a \cdot d + b \cdot c).
+    \end{align*}
+    Con esta suma y producto, $\mathbb{C}$ tiene estructura de campo, donde su $0 = 0 + i0$ y su $1 = 1+ i0$ son los mismos de $\mathbb{R}.$ 
+    Para su inverso multiplicativo, tomemos $a + ib \in \C \setminus \{0\}$, así $a \ne 0$ o $b\ne 0$, entonces su inverso multiplicativo lo definimos como
+    $$(a + ib) \left( \frac{a}{a^2 + b^2} - i \frac{b}{a^2 + b^2} \right) = 1.$$
+    También, podemos notar que
+    $$\Q \subset \R \subset \C.$$
+    \begin{mdframed}[style=mdpinkbox,frametitle={Teorema 1: Teorema Fundamental del Álgebra}]
+        En $\C$ todos los polinomios tienen sus soluciones o raíces ($\C$ es un campo algebraicamente cerrado).
+    \end{mdframed}
+    
+    \section{Sistemas de ecuaciones lineales}
+    
+    \begin{mdframed}[style=mdbluebox,frametitle={Definicion 2: Sistema de ecuaciones}]
+        Sea $F$ un campo. Un sistema de $m$ ecuaciones lineales en $n$ variables con coeficientes en $F$, denotaremos dichos coeficientes como
+        \begin{align*}
+            \{a_{ij} \in F : 1 \leq i \leq m, 1 \leq j \leq n\},
+        \end{align*}
+        las variables de la manera $x_1, x_2, \dots , x_n$ y por ultimo los $b_i \in F$ con $i = 1, 2, 3,\dots , m$. A este sistema de ecuaciones lineales lo escribiremos de la siguiente manera
+        \begin{equation}
+            \begin{alignedat}{3}
+                (1)\quad & a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n & =  b_1,\\
+                (2)\quad & a_{21}x_1 + a_{22}x_2 + \cdots + a_{2n}x_n & =  b_2,\\
+                &\vdots   &                                  &   &      \\
+                (i)\quad & a_{i1}x_1 + a_{i2}x_2 + \cdots + a_{in}x_n & =  b_i,\\
+                &\vdots   &                                  &   &      \\
+                (m)\quad & a_{m1}x_1 + a_{m2}x_2 + \cdots + a_{mn}x_n & =  b_m.
+            \end{alignedat}
+            \tag{1.1}
+            \label{1.1}
+        \end{equation}
+    \end{mdframed}
+    %LES PUESE X, XX, ..., PARA DESPUES SEGUN LA NUMERACIÓN DE LA SECCION TAGEARLAS BIEN, Yo hago eso de corregir el tag una vez que ya hayas acabado tu de darle formato 
+    
+    Si $b_i = 0$, para todo $i \in \{ 1, \dots , m \}$, el sistema se llama homogéneo. Así $a_{ij}$ es el coeficiente de la variable $j$ en la ecuación $i$.
+    
+    Sea $n \in \N$, entonces
+    \begin{align*}
+        F^n = \{ (c_1, c_2, \dots , c_n): c_1, c_2, \dots , c_n \in F \}.
+    \end{align*}
+    
+    \begin{mdframed}[style=mdbluebox,frametitle={Definicion 3: Conjunto solucion de un sistema de ecuaciones lineales}]
+        Resolver \eqref{1.1} significa encontrar
+        \begin{align*}
+            \{ (c_1, \dots , c_n):a_{i1}c_1 + \dots + a_{in}c_n = b_i, \forall i \in \{1,\dots , m \}\} \subset F^n,
+        \end{align*}
+        este subconjunto se llama conjunto solución del sistema \eqref{1.1}.
+    \end{mdframed}
+    
+    \textbf{Ejemplo 1.} Sea $m = n = 1$, entonces tenemos la siguiente ecuación,
+    \begin{align*}
+        a_{11}x_1 = b_1.
+    \end{align*}
+    Si $a_{11} = 0$, entonces existen dos casos; si $b \neq 0$ entonces el conjunto es vacío, pero en el caso donde $b = 0$, el conjunto solución es $F$. Ahora, si $a_{11} \neq 0$, entonces existe $a^{-1} \in F$ y por lo tanto
+    \begin{align*}
+        x_1 = a_{11}^{-1} \cdot b_1,
+    \end{align*}
+    donde $\{b_i / a_{11}\}$ es el conjunto solución.
+    
+    \textbf{Ejemplo 2.} Sean $m = 3$ y $n = 3$, tenemos el siguiente sisitema de ecuaciones:
+    %Si puedes me ayudas porfa a darle formato a los sistemas de ecuaciones porfa, es que intente que quedaran alineadas las ecuaciones, o sea los x_1 en columna y asi jajajjaa
+    \begin{equation}
+        \begin{cases}
+            x_1+x_2+x_3=5,\\
+            x_1+x_2-5x_3=3,\\
+            x_1+2x_2-7x_3=-1.
+        \end{cases}
+        \tag{1.2}
+        \label{1.2}
+    \end{equation}
+    Notemos que a partir del sistema \eqref{1.2} podemos hacer como resultado de una combinación lineal al siguiente sistema
+    \begin{align*}
+        \begin{alignedat}{4}
+            (1,-1,0)\quad &      &      & 6x_3  & ={} & 2,\\
+            (0,1,-1)\quad &      & -x_2 & +2x_3 & ={} & 4,\\
+            (1,0,0)\quad  & x_1  & +x_2 & +x_3  & ={} & 5.
+        \end{alignedat}
+    \end{align*}
+    Así ambos sistemas tienen el mismo conjunto solución, siendo este
+    \begin{align*}
+        \left\{\left(8, - \frac{10}{3}, \frac{1}{3} \right) \right\}.
+    \end{align*}
+
+    \textbf{Ejemplo 3.} Sean $m = 1$ y $n = 2$, veamos el siguiente sistema.
+    \begin{equation*}
+        x_1 = 2 \quad \implies \quad x_1 + 0x_2 = 2.
+    \end{equation*}
+    Por lo tanto el conjunto solución es
+    \begin{equation*}
+        \llaves{(2,c):c\in F}.
+    \end{equation*}
+
+    \textbf{Ejemplo 4.} Definamos $m = 2$y $n = 2$. Consideremos el siguiente sistema lineal de ecuaciones,
+    \begin{equation*}
+        \begin{cases}
+            3x_1+2x_2 = 1,\\
+            3x_1+2x_2 = 1.\\
+        \end{cases}
+    \end{equation*}
+    Así, el conjunto solución es
+    \begin{align*}
+        \llavesgrande{(c_1, c_2): 3c_1 + 2c_2 = 1}\\
+        \llavesgrande{\parentesis{\tfrac{1 - 2c_2}{3}, c_2}:c_2 \in F}.
+    \end{align*}
+
+    Sea $\parentesis{d_1, \dots , d_m} \in F^m \setminus\llaves{0, \dots , 0}$, la combinación lineal asociada a $\parentesis{d_1, \dots , d_n}$ en \eqref{1.1} nos da una ecuación lineal
+    \begin{equation*}
+        \sum_{i = 1}^md_i \parentesis{a_{i1}x_1 + \dotsi + a_{in}x_n} = \sum_{i = 1}^md_ib_i
+    \end{equation*}
+    \begin{equation*}
+        = \parentesis{\sum_{i = 1}^md_ia_{i1}} x_1 + \dotsi + \parentesis{\sum_{i = 1}^md_ia_{in}}x_n = \sum_{i = 1}^md_ib_i.
+        \tag{1.3}
+        \label{1.3}
+    \end{equation*}
+    Si $\parentesis{c_1, \dots, c_n} \in F^n$ es solución del sistema original \eqref{1.1}, entonces es solución de \eqref{1.3}.
+    
+    Consideremos el siguiente sistema,
+    \begin{equation}
+        \begin{alignedat}{3}
+            (1)\quad & a'_{11}x_1 + \cdots + a'_{1n}x_n & =  b'_1,\\
+            &\vdots   &                                  &   &      \\
+            (i)\quad & a'_{i1}x_1 +  \cdots + a'_{in}x_n & =  b'_i,\\
+            &\vdots   &                                  &   &      \\
+            (m)\quad & a'_{m1}x_1 + \cdots + a'_{mn}x_n & =  b'_m.
+        \end{alignedat}
+        \tag{1.4}
+        \label{1.4}
+    \end{equation}
+    
+    \begin{mdframed}[style=mdbluebox,frametitle={Definición 4: Sistema equivalente}]
+        Los sistemas en \eqref{1.1} y \eqref{1.4} se dicen equivalentes si toda ecuación de uno puede escribirse como combinación lineal del otro y viceversa.
+    \end{mdframed}
+    
+    A partir de la definición anterior se obtiene la siguiente propiedad fundamental
+    
+    \begin{mdframed}[style=mdpinkbox,frametitle={Proposición 1}]
+        Si los sistemas \eqref{1.1} y \eqref{1.4} son equivalentes, entonces tienen el mismo conjunto solución.
+    \end{mdframed}
+    
+    \begin{proof}
+        Si una ecuación es combinación lineal de las ecuaciones lineales de un sistema dado, entonces toda solución del sistema es solución de esta ecuación, es decir, si $\parentesis{c_1, \dots , c_n} \in F^n$ es solución de \eqref{1.1}, entonces 
+        \begin{equation*}
+            \sum_{j = 1}^{n}a_{ij}c_j = b_i, \qquad \forall i \in \llaves{1, 2, \dots, m}.
+        \end{equation*}
+        La combinación lineal correspondiente a $(d_1, \dots , d_m) \in F^m \setminus \llaves{0, \dots , 0}$, es la ecuación
+        \begin{equation*}
+            d_1 \parentesis{\sum_{j = 1}^na_{1j}x_j} + \dotsi + d_i \parentesis{\sum_{j = 1}^na_{ij}x_j} + \dotsi + d_m \parentesis{\sum_{j = 1}^na_{mj}x_j} = \sum_{i = 1}^m d_ib_i.
+        \end{equation*}
+        Por lo tanto $\parentesis{c_1, \dots, c_n}$ es solución de esta ecuación.
+    \end{proof}
+    
+    \section{Matrices y operaciones elementales de fila}
+    
+    \begin{mdframed}[style=mdbluebox,frametitle={Definición 5}]
+        Una matriz de tamaño $m \times n$ con coeficientes en $F$, es una función
+        \begin{align*}
+            a : \llavesgrande{(i,j): 1 \leq i \leq m, 1 \leq j \leq n} \to F,\quad (i, j) \mapsto a_{ij}.
+        \end{align*}
+        Donde las filas serán $i$ y las columnas $j$.
+    \end{mdframed}
+    Así, la matriz asociada al sistema \eqref{1.1} es
+    \begin{equation*}
+        \begin{pmatrix}
+            a_{11} & \dotsi & a_{1j} & \dotsi & a_{1n} & | & b_1\\[3pt]
+            \vdots&&&&&| & \vdots\\[3pt]
+            a_{i1} & \dotsi & a_{ij} & \dotsi & a_{in} & | & b_i\\[3pt]
+            \vdots&&&&&| & \vdots\\[3pt]
+            a_{m1} & \dotsi & a_{mj} & \dotsi & a_{mn} & | & b_m\\[3pt]
+        \end{pmatrix},
+    \end{equation*}
+    siendo esta de tamaño $m \times (n + 1)$. Si el sistema en \eqref{1.1} fuera homogéneo, es decir $b_1 = b_2 = \dotsi = b_m = 0$, entonces la matriz asociada es
+    \begin{equation*}
+        \begin{pmatrix}
+            a_{11} & \dotsi & a_{1j} & \dotsi & a_{1n} \\[3pt]
+            \vdots&&&&\\[3pt]
+            a_{i1} & \dotsi & a_{ij} & \dotsi & a_{in}\\[3pt]
+            \vdots&&&&\\[3pt]
+            a_{m1} & \dotsi & a_{mj} & \dotsi & a_{mn} \\[3pt]
+        \end{pmatrix},
+    \end{equation*}
+    la cual resulta ser de tamaño $m \times n$.
+    
+    \textbf{Ejemplo.} Consideremos el siguiente sistema de 3 ecuaciones en 3 variables.
+    \begin{equation*}
+        \begin{cases}
+            2x_1 + 3x_2 - x_3 = 1,\\
+            x_2 - x_3 = 2,\\
+            0 = 0.
+        \end{cases}
+    \end{equation*}
+    La matriz asociada de tamaño $3 \times 4$ de este sistema es
+    \begin{equation*}
+        \begin{pmatrix}
+            2 & 3 & -1 & | & 1\\
+            0 & 1 & -1 & | & 2\\
+            0 & 0 & 0 & | & 0\\
+        \end{pmatrix}.
+    \end{equation*}
+    
+    Veamos ahora las operaciones elementales de fila en matrices $m \times n$ con coeficientes en $F$.
+    \begin{equation*}
+        M_{m \times n}(F) = \llaves{(a_{ij}): 1 \leq i \leq m, 1 \leq j \leq n, a_{ij} \in F}.
+    \end{equation*}
+    
+    Primera operación elemental de fila. Sea $r = \llaves{1, \dots, m}, c\in F \setminus \llaves{0}$, definimos
+    \begin{equation*}
+        E_1^{c \cdot r}(a_{ij}) = 
+        \begin{pmatrix}
+            a_{11} & \dotsi & a_{1j} & \dotsi & a_{1n} \\[3pt]
+            \vdots&&&&\\[3pt]
+            ca_{r1} & \dotsi & ca_{rj} & \dotsi & ca_{rn}\\[3pt]
+            \vdots&&&&\\[3pt]
+            a_{m1} & \dotsi & a_{mj} & \dotsi & a_{mn} \\[3pt]
+        \end{pmatrix}.
+    \end{equation*}
+    La matriz $E_1^{c \cdot r}$ está definida por
+    \begin{equation*}
+        \begin{cases}
+            a_{ij}, \quad \text{ si } i \neq r,\\
+            ca_{ij}, \quad \text{ si } i = r.\\
+        \end{cases}
+    \end{equation*}
+    El sistema lineal asociado a $A = (a_{ij})$ es equivalente al sistema lineal asociado a $E_1^{c \cdot r}(A)$.\\
+    Segunda operación elemental de fila. Sean $r,s \in \llaves{1, \dots , m}, r\neq s, c \in F$. Definimos
+    \[
+    E_2^{c \cdot r + s}(a_{ij}) = 
+        \begin{pmatrix}
+            a_{11} & \dotsi & a_{1j} & \dotsi & a_{1n} \\
+            \vdots&&&&\\[3pt]
+            a_{r1} & \dotsi & a_{rj} & \dotsi & a_{rn}\\
+            \vdots&&&&\\[3pt]
+            ca_{r1} + a_{s1}& \dotsi & ca_{rj} + a_{sj} & \dotsi & ca_{rn} + a_{sn}\\
+            \vdots&&&&\\[3pt]
+            a_{m1} & \dotsi & a_{mj} & \dotsi & a_{mn} \\
+        \end{pmatrix}.
+    \]
+    Así, la matriz $E_2^{c\cdot r + s}(a_{ij})$ esta definida por
+    \[
+    \begin{cases}
+        a_{ij}, \quad & \text{ si } i \neq r,\\
+        ca_{rj} + a_{sj}, \quad & \text{ si } i = r.\\
+    \end{cases}
+    \]
+    Luego, el sistema asociado a $A$ es equivalente al sistema lineal asociado a $E_{2}^{c \cdot r + s}(A)$.\\
+    Tercera operación elemental de fila. Sean $r,s \in \llaves{1, \dots , m}, r\neq s$, definamos
+    \[
+    E_3^{(r, s)}(a_{ij}) = 
+        \begin{pmatrix}
+            a_{11} & \dotsi & a_{1j} & \dotsi & a_{1n} \\
+            \vdots&&&&\\[3pt]
+            a_{s1} & \dotsi & a_{sj} & \dotsi & a_{sn}\\
+            \vdots&&&&\\[3pt]
+            a_{r1}& \dotsi & a_{rj} & \dotsi & a_{rn}\\
+            \vdots&&&&\\[3pt]
+            a_{m1} & \dotsi & a_{mj} & \dotsi & a_{mn} \\
+        \end{pmatrix}.
+    \]
+    La matriz asociada a $E_3^{(r,s)}(a_{ij})$ es
+    \[
+    \begin{cases}
+        a_{ij}, \quad & \text{ si } i \neq r,s,\\
+        a_{sj}, \quad & \text{ si } i = r,\\
+        a_{rj}, \quad & \text{ si } i = s.\\
+    \end{cases}
+    \]
+    El sistema lineal asociado a $A$ es equivalente al sistema lineal asociado a $E_3^{(r,s)}(A)$.\\
+    Si $A|B \in M_{m \times n}(F)$ es la matriz asociada al sistema lineal 
+    \[
+    \begin{alignedat}{3}
+                (1)\quad & a_{11}x_1 + \cdots + a_{1n}x_n & =  b_1,\\
+                &\vdots   &                                  &   &      \\
+                (i)\quad & a_{i1}x_1 + \cdots + a_{in}x_n & =  b_i,\\
+                &\vdots   &                                  &   &      \\
+                (m)\quad & a_{m1}x_1 + \cdots + a_{mn}x_n & =  b_m.
+    \end{alignedat}
+    \qquad A= (a_{ij}), \qquad B= \begin{pmatrix}
+        b_1\\
+        \vdots\\
+        b_m
+    \end{pmatrix},
+    \]
+    al aplicar alguna operación elemental $E_j(A|B) \in M_{m \times (n + 1)}(F)$, $j = 1,2,3$, obtenemos una matriz cuyo sistema lineal asociado es equivalente al original. Esto es porque las operaciones elementales de fila son invertibles, como lo vemos a continuación.
+    \begin{align*}
+        &\parentesis{E_1^{c \cdot r}}^{-1} = E_1^{c^{-1} \cdot r}, \quad E_1^{c^{-1} \cdot r}\parentesis{E_1^{c \cdot r}(A)} = A.\\[5pt]
+        &\parentesis{E_2^{c \cdot r + s}}^{-1} = E_2^{-c\cdot r + s}, \quad E_2^{- c \cdot r + s}\parentesis{E_2^{c \cdot r + s}(A)} = A.\\[5pt]
+        &\parentesis{E_3^{(r, s)}}^{-1} = E_2^{(r, s)}, \quad E_3^{(r, s)}\parentesis{E_3^{(r, s)}(A)} = A.
+    \end{align*}
+
+    
+\end{document}
