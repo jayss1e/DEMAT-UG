@@ -129,7 +129,8 @@
         este subconjunto se llama conjunto solución del sistema \eqref{1.1}.
     \end{mdframed}
     
-    \textbf{Ejemplo 1.} Sea $m = n = 1$, entonces tenemos la siguiente ecuación,
+    \textbf{Ejemplo 1.}\\
+    Sea $m = n = 1$, entonces tenemos la siguiente ecuación,
     \begin{align*}
         a_{11}x_1 = b_1.
     \end{align*}
@@ -137,9 +138,10 @@
     \begin{align*}
         x_1 = a_{11}^{-1} \cdot b_1,
     \end{align*}
-    donde $\{b_i / a_{11}\}$ es el conjunto solución.
+    donde $\{b_i / a_{11}\}$ es el conjunto solución.\hfill $\blacktriangleleft$
     
-    \textbf{Ejemplo 2.} Sean $m = 3$ y $n = 3$, tenemos el siguiente sisitema de ecuaciones:
+    \textbf{Ejemplo 2.}\\
+    Sean $m = 3$ y $n = 3$, tenemos el siguiente sisitema de ecuaciones:
     %Si puedes me ayudas porfa a darle formato a los sistemas de ecuaciones porfa, es que intente que quedaran alineadas las ecuaciones, o sea los x_1 en columna y asi jajajjaa
     \begin{equation}
         \begin{cases}
@@ -163,7 +165,10 @@
         \left\{\left(8, - \frac{10}{3}, \frac{1}{3} \right) \right\}.
     \end{align*}
 
-    \textbf{Ejemplo 3.} Sean $m = 1$ y $n = 2$, veamos el siguiente sistema.
+    \hfill $\blacktriangleleft$
+
+    \textbf{Ejemplo 3.}\\
+    Sean $m = 1$ y $n = 2$, veamos el siguiente sistema.
     \begin{equation*}
         x_1 = 2 \quad \implies \quad x_1 + 0x_2 = 2.
     \end{equation*}
@@ -172,7 +177,10 @@
         \llaves{(2,c):c\in F}.
     \end{equation*}
 
-    \textbf{Ejemplo 4.} Definamos $m = 2$y $n = 2$. Consideremos el siguiente sistema lineal de ecuaciones,
+    \hfill $\blacktriangleleft$
+
+    \textbf{Ejemplo 4.}\\
+    Definamos $m = 2$y $n = 2$. Consideremos el siguiente sistema lineal de ecuaciones,
     \begin{equation*}
         \begin{cases}
             3x_1+2x_2 = 1,\\
@@ -184,6 +192,8 @@
         \llavesgrande{(c_1, c_2): 3c_1 + 2c_2 = 1}\\
         \llavesgrande{\parentesis{\tfrac{1 - 2c_2}{3}, c_2}:c_2 \in F}.
     \end{align*}
+
+    \hfill $\blacktriangleleft$
 
     Sea $\parentesis{d_1, \dots , d_m} \in F^m \setminus\llaves{0, \dots , 0}$, la combinación lineal asociada a $\parentesis{d_1, \dots , d_n}$ en \eqref{1.1} nos da una ecuación lineal
     \begin{equation*}
@@ -215,7 +225,7 @@
     
     A partir de la definición anterior se obtiene la siguiente propiedad fundamental
     
-    \begin{mdframed}[style=mdpinkbox,frametitle={Proposición 1}]
+    \begin{mdframed}[style=mdgraybox,frametitle={Proposición 1}]
         Si los sistemas \eqref{1.1} y \eqref{1.4} son equivalentes, entonces tienen el mismo conjunto solución.
     \end{mdframed}
     
@@ -233,7 +243,7 @@
     
     \section{Matrices y operaciones elementales de fila}
     
-    \begin{mdframed}[style=mdbluebox,frametitle={Definición 5}]
+    \begin{mdframed}[style=mdbluebox,frametitle={Definición 5: Matriz}]
         Una matriz de tamaño $m \times n$ con coeficientes en $F$, es una función
         \begin{align*}
             a : \llavesgrande{(i,j): 1 \leq i \leq m, 1 \leq j \leq n} \to F,\quad (i, j) \mapsto a_{ij}.
@@ -262,7 +272,7 @@
     \end{equation*}
     la cual resulta ser de tamaño $m \times n$.
     
-    \textbf{Ejemplo.} Consideremos el siguiente sistema de 3 ecuaciones en 3 variables.
+    \textbf{Ejemplo 5.} Consideremos el siguiente sistema de 3 ecuaciones en 3 variables.
     \begin{equation*}
         \begin{cases}
             2x_1 + 3x_2 - x_3 = 1,\\
@@ -278,6 +288,8 @@
             0 & 0 & 0 & | & 0\\
         \end{pmatrix}.
     \end{equation*}
+
+    \hfill $\blacktriangleleft$
 
     Veamos ahora las operaciones elementales de fila en matrices $m \times n$ con coeficientes en $F$.
     \begin{enumerate}
@@ -335,7 +347,7 @@
 
     \vspace{0.4cm}
 
-    \begin{mdframed}[style=mdbluebox,frametitle={Definición 6}]
+    \begin{mdframed}[style=mdbluebox,frametitle={Definición 6: Equivalencia de matrices}]
         Sean $A_{1},A_{2}\in M_{m\times n}(F)$, diremos que $A_{1}$ es equivalente a $A_{2}$ si existe un número
         finito de operaciones elementales $E_{1k},E_{2k},\dots,E_{\ell k}$, tal que
         \begin{equation*}
@@ -343,7 +355,7 @@
         \end{equation*}
     \end{mdframed}
 
-    \textbf{Ejemplo 1.}\\
+    \textbf{Ejemplo 6.}\\
     $I_{n}\in M_{m\times n}(F)$
     \begin{equation*}
         I_{n}=
@@ -363,8 +375,8 @@
             0,\text{ si }i\neq j.
         \end{cases}
     \end{equation*}
-    se llama \textbf{delta de kronecker}.\\
-    \textbf{Ejemplo 2}
+    se llama \textbf{delta de kronecker}.\hfill $\blacktriangleleft$ \\
+    \textbf{Ejemplo 7}\\
     $I_{n}$ se llama matriz identidad de tamaño $n$.
     \begin{equation*}
         E_{2}^{5\cdot2+3}(I_{3})=E_{2}^{5\cdot2+3}
@@ -409,7 +421,7 @@
         \end{matrix}
     \end{equation*}
 
-    \begin{mdframed}[style=mdpinkbox,frametitle={Proposición 2}]
+    \begin{mdframed}[style=mdgraybox,frametitle={Proposición 2}]
         La relación en $M_{m\times n}(F)$ definida anteriormente es una relación de equivalencia.
     \end{mdframed}
 
@@ -445,12 +457,186 @@
     Tenemos una relación de equivalencia definida en $M_{m\times n}(F)$. Si $A\in M_{m\times n}(F)$ su clase
     de equivalencia es
     \begin{equation*}
-        [A]=\biggl\{A_{i}\in M_{m\times n}(F):A\text{ es equivalente a} A_{i}\biggr\}
+        [A]=\biggl\{A_{1}\in M_{m\times n}(F):A\text{ es equivalente a} A_{i}\biggr\}
     \end{equation*}
     y el conjunto de clases forman una partición de $M_{m\times n}(F)$.
 
-    \begin{mdframed}
-        Si $A$
+    \begin{mdframed}[style=mdgraybox,frametitle={Proposición 3}]
+        Si $A_{1}|B_{1},A_{2}|B_{2}\in M_{m\times(n+1)}(F)$ son matrices equivalentes, entonces los sistemas asociados
+        son equivalentes.
     \end{mdframed}
+
+    Dada $A|B\in M_{m\times(n+1)}(F)$ queremos encontrar en su clase de equivalencia un representante con el que
+    se pueda resolver mas facilmente el sistema lineal asociado.
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Definición 8: Matriz escalonada}]
+        Una matriz $A\in M_{m\times m}(F)$ se llama \textbf{escalonada} por filas si satisface
+        \begin{enumerate}
+            \item Todas las filas nulas de $A$ se encuentran debajo de las filas no nulas.
+            \item Para cada fila no nula $i$ si $j$, es el índice de la primera entrada no nula de dicha fila,
+            entonces
+            \begin{equation*}
+                j_{1}\lt j_{2}\lt\cdots\lt j_{r},
+            \end{equation*}
+            donde $r$ es el número de filas no nulas.
+            \item Si $j_{i}$ es el pivote de la fila $i$, entonces
+            \begin{equation*}
+                a_{kj_{i}}=0\quad\text{ para todo }k\gt i.
+            \end{equation*}
+        \end{enumerate}
+    \end{mdframed}
+
+    Tenemos tantos como filas no cero. Esto lo podemos conseguir en la fila $i$ distinta de cero y suponiendo que
+    el primer coeficiente no cero es $a_{ik}$, aplicando la operación
+    \begin{equation*}
+        E_{1}^{a_{ikj}^{-1}\cdot i}
+    \end{equation*}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Definición 9: Matriz reducida por filas}]
+        Una matriz $A\in M_{m\times n}(F)$ está \textbf{reducida} por filas si
+        \begin{enumerate}
+            \item Todas las filas cero están en las últimas filas (se obtiene aplicando $E_{3}$.
+            Tenemos $r$ filas cero, $m-r$ filas cero).
+            \item El primer elemento de las $m-r$ filas no cero es 1 (pivote)
+            \item En la columna donde hay un pivote todos los coeficientes son cero excepto el pivote que es 1.
+        \end{enumerate}
+    \end{mdframed}
+
+    \textbf{Ejemplo 8.}
+    \begin{equation*}
+        A=
+        \begin{pmatrix}
+            0 & 1 & * & 0 & * & * & *\\
+            1 & 0 & * & 0 & * & * & *\\
+            0 & 0 & 0 & 1 & * & * & *\\
+            0 & 0 & 0 & 0 & 0 & 0 & 0\\
+            0 & 0 & 0 & 0 & 0 & 0 & 0
+        \end{pmatrix}
+    \end{equation*}
+    Donde $A\in M_{5\times7}(F)$ tiene 3 filas no cero y dos pivotes.\hfill $\blacktriangleleft$
+
+    \begin{mdframed}[style=mdgraybox,frametitle={Proposición 4}]
+        Toda matriz $A\in M_{m\times n}(F)$ es equivalente a una matriz reducida por filas.
+    \end{mdframed}
+
+    \begin{proof}
+        Sea $A=(a_{ij})\in M_{m\times n}(F)$. Supongamos que $A$ tiene $r$ filas cero ($0\leq r\leq m$) si $r=m$,
+        entonces $A=0_{m\times n}$ es la matriz cero y es reducida por filas. Supongamos que $r\lt m$, con la
+        operación que $r\lt m$, con la operación elemental 3, pasamos las $r$ filas a la parte baja de la matriz.
+        \begin{equation*}
+            \begin{pmatrix}
+                a_{11} & \cdots & a_{1n}\\
+                \vdots & \ddots & \vdots\\
+                a_{m-r_{11}}& \cdots & a_{(m-r)n}\\
+                0 & \cdots & 0\\
+                \vdots & \ddots & \vdots\\
+                0 & \cdots & 0
+            \end{pmatrix}
+        \end{equation*}
+        Para $i\in\{1,\dots,m-r\}$, sea $k_{i}\in\{1,\dots,n\}$ el menor natural tal que $a_{ik_{j}}\neq0$. Para $i=1$
+        aplicamos la operación $E_{1}^{a_{ik_{j}\cdot1}^{-1}}$ a la matriz $A$ obtenemos
+        \begin{equation*}
+            \begin{pmatrix}
+                0 & \cdots & a_{1k_{1}}^{-1}a_{1,k_{1}+1}^{-1} & \cdots & a_{1k_{1}}a_{1n}\\
+                a_{21} & & \cdots & & a_{2n}\\
+                \vdots & & \cdots & & \vdots\\
+                0 & & \cdots & & 0\\
+                0 & & \cdots & & 0
+            \end{pmatrix}
+        \end{equation*}
+        Aplicamos $E_{2}^{-b_{2k,1}+2}$ a la matriz $A_{1}$, el coeficiente en la posición $(2,k_{1})$ es cero en la nueva
+        matriz
+        \begin{equation*}
+            A_{2}=E_{2}^{-b_{m-r,k_{1}}\cdot 1+(m-r)}\cdots E_{2}^{-b_{3}k_{1}\cdot1+3}E_{2}^{-b_{2}k_{1}\cdot1+2}A_{1}
+        \end{equation*}
+        para hcaer cero los coeficientes, distintos del pivote de la fila 1 en la columna $k$. Tenemos que volver a
+        hacer todos los coeficientes primeros de las filas no cero iguales a 1, y si tenemos una fila cero la movemos a la parte
+        baja de la matriz. Esta nueva matriz es $A_{3}$. La columna $k_{1}$ de $A_{3}$ es
+        \begin{equation*}
+            \begin{pmatrix}
+                1\\
+                0\\
+                \vdots\\
+                0
+            \end{pmatrix}
+        \end{equation*}
+        Ahora vamos a la fila 2, que tiene pivote en $k_{2}$ (por abuso de notación lo llamamos $k_{2}$ pero no es el $k_{2}$
+        de $A$).
+        \begin{equation*}
+            \begin{pmatrix}
+                0 & 0 & 1 & * & \cdots & *\\
+                0 & 1 & 0 & * & \cdots & *\\
+                 & c_{2k_{2}} & & & &\\
+                 & \vdots & & & &\\
+                 & c_{m-r,k_{2}} & & & &\\
+                 & \vdots & & & &\\
+                 & 0 & & & &
+            \end{pmatrix}
+        \end{equation*}
+        Aplicando, como en el caso anterior las operaciones
+        \begin{equation*}
+            E_{2}^{-c_{ik_{2}}\cdot2+i}\quad\forall i\neq 2
+        \end{equation*}
+        obtenemos una matriz con ceros en la columna $k_{2}$, excepto el pivote. Observar que los ceros de la columna $k$,
+        seguiran siendo cero. Repetimos el proceso, que puede ser menor o igual que $n$ veces, (que es el número máximo de
+        pivotes). Así que $A$ es equivalente a una matriz reducida por filas.
+    \end{proof}
+
+    \textbf{Ejemplo 9.}
+    \begin{align*}
+        A&=
+        \begin{pmatrix}
+            1 & 2 & 3\\
+            0 & 5 & 5\\
+            0 & 1 & 1
+        \end{pmatrix}
+        \\
+        E_{1}^{\frac{1}{5}\cdot2}(A)&=
+        \begin{pmatrix}
+            1 & 2 & 3\\
+            0 & 1 & 1\\
+            0 & 1 & 1
+        \end{pmatrix}
+        \\
+        E_{2}^{-1\cdot2+3}(A)&=
+        \begin{pmatrix}
+            1 & 2 & 3\\
+            0 & 1 & 1\\
+            0 & 0 & 0
+        \end{pmatrix}
+        =A_{1}
+        \\
+        E_{2}^{-2\cdot2+1}(A_{1})&=
+        \begin{pmatrix}
+            1 & 0 & 1\\
+            0 & 1 & 1\\
+            0 & 0 & 0
+        \end{pmatrix}
+    \end{align*}
+    \textbf{Observación.} Una matriz $A\in M_{m\times n}(F)$ es reducida por filas escalonada si las filas
+    $k_{1},\dots,k_{m-r}$ donde estan los pivotes satisfacen
+    \begin{equation*}
+        k_{1}\lt k_{2}\lt k_{3}\lt \cdots\lt k_{m-r}
+    \end{equation*}
+
+    \begin{mdframed}[style=mdgraybox,frametitle={Corolario 1}]
+        Toda matriz $A\in M_{m\times n}(F)$ es equivalente a una matriz $RFE$
+    \end{mdframed}
+
+    Sea $(a_{ij}) \in M_{m \times n}(F)$ una matriz RFE. Entonces:
+
+    \begin{equation*}
+    \left\{
+        \begin{array}{l}
+            a_{ij} = 0 \quad \forall\, i \geq m - r + 1 \\
+            \\
+            a_{i m_j} = \delta_{ij} =
+            \begin{cases}
+                1 & \text{si } j = i \\
+                0 & \text{si } j \ne i
+            \end{cases}
+        \end{array}
+    \right.
+    \end{equation*}
 
 \end{document}
