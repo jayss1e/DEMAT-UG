@@ -278,95 +278,179 @@
             0 & 0 & 0 & | & 0\\
         \end{pmatrix}.
     \end{equation*}
-    
+
     Veamos ahora las operaciones elementales de fila en matrices $m \times n$ con coeficientes en $F$.
-    \begin{equation*}
-        M_{m \times n}(F) = \llaves{(a_{ij}): 1 \leq i \leq m, 1 \leq j \leq n, a_{ij} \in F}.
-    \end{equation*}
-    
-    Primera operación elemental de fila. Sea $r = \llaves{1, \dots, m}, c\in F \setminus \llaves{0}$, definimos
-    \begin{equation*}
-        E_1^{c \cdot r}(a_{ij}) = 
-        \begin{pmatrix}
-            a_{11} & \dotsi & a_{1j} & \dotsi & a_{1n} \\[3pt]
-            \vdots&&&&\\[3pt]
-            ca_{r1} & \dotsi & ca_{rj} & \dotsi & ca_{rn}\\[3pt]
-            \vdots&&&&\\[3pt]
-            a_{m1} & \dotsi & a_{mj} & \dotsi & a_{mn} \\[3pt]
-        \end{pmatrix}.
-    \end{equation*}
-    La matriz $E_1^{c \cdot r}$ está definida por
+    \begin{enumerate}
+        \item Sea $r=\{1,2,\dots,m\}$, $c\in F\setminus\{0\}$.
+        \begin{equation*}
+            E_{1}^{c\cdot r}(a_{ij})=
+            \begin{cases}
+                a_{ij},\hfill\text{ si }i\neq r,\\
+                ca_{ij},\quad\text{ si }i=r.
+            \end{cases}
+        \end{equation*} 
+        \item Sean $r,s\in\{1,\dots,m\}$ $r\neq s$, $c\in F$.
+        \begin{equation*}
+            E_{2}^{cr+s}(a_{ij})=
+            \begin{cases}
+                a_{ij},\hfill\text{ si }i\neq s,\\
+                ca_{rj}+a_{ij},\text{ si }i=s.
+            \end{cases}
+        \end{equation*}
+        \item Sean $r,s\in\{1,\dots,m\}$, $r\neq s$.
+        \begin{equation*}
+            E_{3}^{(s,r)}(a_{ij})=
+            \begin{cases}
+                a_{ij},\quad\text{ si }i\neq r,s,\\
+                a_{rj},\quad\text{ si }i=s,\\
+                a_{sj},\quad\text{ si }t=r.
+            \end{cases}
+        \end{equation*}
+    \end{enumerate}
+    Si $A|B\in M_{m\times(n+1)}(F)$ es la matriz
     \begin{equation*}
         \begin{cases}
-            a_{ij}, \quad \text{ si } i \neq r,\\
-            ca_{ij}, \quad \text{ si } i = r.\\
+            a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n = b_1 \\
+            a_{21}x_1 + a_{22}x_2 + \cdots + a_{2n}x_n = b_2 \\
+            \vdots \\
+            a_{m1}x_1 + a_{m2}x_2 + \cdots + a_{mn}x_n = b_m
         \end{cases}
+        \quad
+        A=(a_{ij})
+        \quad
+        B=
+        \begin{pmatrix}
+            b_{1}\\
+            \vdots\\
+            b_{n}
+        \end{pmatrix}
     \end{equation*}
-    El sistema lineal asociado a $A = (a_{ij})$ es equivalente al sistema lineal asociado a $E_1^{c \cdot r}(A)$.\\
-    Segunda operación elemental de fila. Sean $r,s \in \llaves{1, \dots , m}, r\neq s, c \in F$. Definimos
-    \[
-    E_2^{c \cdot r + s}(a_{ij}) = 
-        \begin{pmatrix}
-            a_{11} & \dotsi & a_{1j} & \dotsi & a_{1n} \\
-            \vdots&&&&\\[3pt]
-            a_{r1} & \dotsi & a_{rj} & \dotsi & a_{rn}\\
-            \vdots&&&&\\[3pt]
-            ca_{r1} + a_{s1}& \dotsi & ca_{rj} + a_{sj} & \dotsi & ca_{rn} + a_{sn}\\
-            \vdots&&&&\\[3pt]
-            a_{m1} & \dotsi & a_{mj} & \dotsi & a_{mn} \\
-        \end{pmatrix}.
-    \]
-    Así, la matriz $E_2^{c\cdot r + s}(a_{ij})$ esta definida por
-    \[
-    \begin{cases}
-        a_{ij}, \quad & \text{ si } i \neq r,\\
-        ca_{rj} + a_{sj}, \quad & \text{ si } i = r.\\
-    \end{cases}
-    \]
-    Luego, el sistema asociado a $A$ es equivalente al sistema lineal asociado a $E_{2}^{c \cdot r + s}(A)$.\\
-    Tercera operación elemental de fila. Sean $r,s \in \llaves{1, \dots , m}, r\neq s$, definamos
-    \[
-    E_3^{(r, s)}(a_{ij}) = 
-        \begin{pmatrix}
-            a_{11} & \dotsi & a_{1j} & \dotsi & a_{1n} \\
-            \vdots&&&&\\[3pt]
-            a_{s1} & \dotsi & a_{sj} & \dotsi & a_{sn}\\
-            \vdots&&&&\\[3pt]
-            a_{r1}& \dotsi & a_{rj} & \dotsi & a_{rn}\\
-            \vdots&&&&\\[3pt]
-            a_{m1} & \dotsi & a_{mj} & \dotsi & a_{mn} \\
-        \end{pmatrix}.
-    \]
-    La matriz asociada a $E_3^{(r,s)}(a_{ij})$ es
-    \[
-    \begin{cases}
-        a_{ij}, \quad & \text{ si } i \neq r,s,\\
-        a_{sj}, \quad & \text{ si } i = r,\\
-        a_{rj}, \quad & \text{ si } i = s.\\
-    \end{cases}
-    \]
-    El sistema lineal asociado a $A$ es equivalente al sistema lineal asociado a $E_3^{(r,s)}(A)$.\\
-    Si $A|B \in M_{m \times n}(F)$ es la matriz asociada al sistema lineal 
-    \[
-    \begin{alignedat}{3}
-                (1)\quad & a_{11}x_1 + \cdots + a_{1n}x_n & =  b_1,\\
-                &\vdots   &                                  &   &      \\
-                (i)\quad & a_{i1}x_1 + \cdots + a_{in}x_n & =  b_i,\\
-                &\vdots   &                                  &   &      \\
-                (m)\quad & a_{m1}x_1 + \cdots + a_{mn}x_n & =  b_m.
-    \end{alignedat}
-    \qquad A= (a_{ij}), \qquad B= \begin{pmatrix}
-        b_1\\
-        \vdots\\
-        b_m
-    \end{pmatrix},
-    \]
-    al aplicar alguna operación elemental $E_j(A|B) \in M_{m \times (n + 1)}(F)$, $j = 1,2,3$, obtenemos una matriz cuyo sistema lineal asociado es equivalente al original. Esto es porque las operaciones elementales de fila son invertibles, como lo vemos a continuación.
+    al aplicar alguna operacion elemental $E_{j}(A|B)\in M_{m\times(n+1)}(F),j=1,2,3$, obtenemos una matriz
+    como sistema lineal asociado es equivalente al original. Esto porque las operaciones elementales son invertibles
     \begin{align*}
-        &\parentesis{E_1^{c \cdot r}}^{-1} = E_1^{c^{-1} \cdot r}, \quad E_1^{c^{-1} \cdot r}\parentesis{E_1^{c \cdot r}(A)} = A.\\[5pt]
-        &\parentesis{E_2^{c \cdot r + s}}^{-1} = E_2^{-c\cdot r + s}, \quad E_2^{- c \cdot r + s}\parentesis{E_2^{c \cdot r + s}(A)} = A.\\[5pt]
-        &\parentesis{E_3^{(r, s)}}^{-1} = E_2^{(r, s)}, \quad E_3^{(r, s)}\parentesis{E_3^{(r, s)}(A)} = A.
+        (E_{1}^{c\cdot r})^{-1}&=E_{1}^{c^{-1}\cdot r},\quad E_{1}^{c^{-1}\cdot r}(E_{1}^{c\cdot r}(A))=A\\
+        (E_{2}^{cr+s})^{-1}&=E_{2}^{-c\cdot r+s},\quad E_{2}^{-c\cdot r+s}(E_{2}^{c\cdot r+s}(A))=A\\
+        (E_{3}^{(r,s)})^{-1}&=E_{3}^{(s,r)},\quad E_{3}^{(s,r)}(E_{3}^{(r,s)}(A))=A
     \end{align*}
 
-    
+    \vspace{0.4cm}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Definición 6}]
+        Sean $A_{1},A_{2}\in M_{m\times n}(F)$, diremos que $A_{1}$ es equivalente a $A_{2}$ si existe un número
+        finito de operaciones elementales $E_{1k},E_{2k},\dots,E_{\ell k}$, tal que
+        \begin{equation*}
+            A_{1}=E_{1k}\cdot E_{(\ell-1)k}E_{\ell k}(A_{2}).
+        \end{equation*}
+    \end{mdframed}
+
+    \textbf{Ejemplo 1.}\\
+    $I_{n}\in M_{m\times n}(F)$
+    \begin{equation*}
+        I_{n}=
+        \begin{pmatrix}
+            1 & 0 & \cdots & 0\\
+            0 & 1 & \cdots & 0\\
+            \vdots & \vdots & \ddots 0\\
+            0 & 0 & \cdots 1
+        \end{pmatrix}
+        =(\delta_{ij})
+    \end{equation*}
+    donde
+    \begin{equation*}
+        \delta_{ij}=
+        \begin{cases}
+            1,\text{ si }i=j,\\
+            0,\text{ si }i\neq j.
+        \end{cases}
+    \end{equation*}
+    se llama \textbf{delta de kronecker}.\\
+    \textbf{Ejemplo 2}
+    $I_{n}$ se llama matriz identidad de tamaño $n$.
+    \begin{equation*}
+        E_{2}^{5\cdot2+3}(I_{3})=E_{2}^{5\cdot2+3}
+        \begin{pmatrix}
+            1 & 0 & 0\\
+            0 & 1 & 0\\
+            0 & 0 & 1
+        \end{pmatrix}
+        =
+        \begin{pmatrix}
+            1 & 0 & 0\\
+            0 & 1 & 0\\
+            0 & 5 & 1
+        \end{pmatrix}
+        =A
+    \end{equation*}
+    $A$ es equivalente a $I_{3}$. El sistema lineal asociado a $I_{n}$ es
+    \begin{equation*}
+        \begin{matrix}
+            x_{1}=0\\
+            x_{2}=0\\
+            \vdots\\
+            x_{n}=0
+        \end{matrix}
+    \end{equation*}
+    En consecuencia
+    \begin{equation*}
+        I_{3}=
+        \begin{matrix}
+            x_{1}=0\\
+            x_{2}=0\\
+            x_{3}=0
+        \end{matrix}
+        \qquad
+        \text{ y }
+        \qquad
+        E_{2}^{2\cdots5+3}(I_{3})\implies
+        \begin{matrix}
+            x_{1}=0\\
+            x_{2}=0\\
+            5x_{2}+x_{3}=0
+        \end{matrix}
+    \end{equation*}
+
+    \begin{mdframed}[style=mdpinkbox,frametitle={Proposición 2}]
+        La relación en $M_{m\times n}(F)$ definida anteriormente es una relación de equivalencia.
+    \end{mdframed}
+
+    \begin{proof}
+        (a) Es reflexiva: Sea $A\in M_{m\times n}(F)$
+        \begin{equation*}
+            E_{1}^{1\cdot1}(A)=A,\text{ entonces }A\sim A
+        \end{equation*}
+        (b) Es simetrica: Sean $A_{1},A_{2}\in M_{m\times n}(F)$ supongamos que $A_{1}\sim A_{2}$,
+        entonces
+        \begin{align*}
+            A_{1}&=E_{1k}E_{2k}\cdots E_{\ell k}(A_{2}),\\
+            A_{2}&=E_{\ell k}^{-1}E_{(\ell-1)k}^{-1}\cdot E_{1k}^{-1}(A_{1}),
+        \end{align*}
+        así que $A_{1}\sim A_{2}$.\\
+        (c) Es transitiva: Sean $A_{1},A_{2},A_{3}\in M_{m\times n}(F)$, tales que $A_{1}\sim A_{2}$ y $A_{2}\sim A_{3}$,
+        entonces
+        \begin{equation*}
+            A_{1}=(E_{t_{1,1}}\cdots E_{t_{\ell,1}})(E_{t_{1,2}}\cdots E_{t_{k,2}})(A_{3}).
+        \end{equation*}
+        así que
+        \begin{equation*}
+            A_{1}=(E_{t_{1,1}}\cdots E_{t_{\ell,1}})(E_{t_{1,2}}\cdots E_{t_{k,2}})(A_{3}).
+        \end{equation*}
+        Entonces $A_{1}\sim A_{3}$.
+    \end{proof}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Definición 7}]
+        Sean $A_{1},A_{2}\in M_{m\times n}(F)$, diremos que $A_{1}\sim A_{2}$ si existe un numero finito de
+        operaciones elementales $E_{1k},E_{2k},\dots,E_{\ell k}$.
+    \end{mdframed}
+
+    Tenemos una relación de equivalencia definida en $M_{m\times n}(F)$. Si $A\in M_{m\times n}(F)$ su clase
+    de equivalencia es
+    \begin{equation*}
+        [A]=\biggl\{A_{i}\in M_{m\times n}(F):A\text{ es equivalente a} A_{i}\biggr\}
+    \end{equation*}
+    y el conjunto de clases forman una partición de $M_{m\times n}(F)$.
+
+    \begin{mdframed}
+        Si $A$
+    \end{mdframed}
+
 \end{document}
