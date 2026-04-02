@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.3.28)  31 MAR 2026 01:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.3.7)  1 APR 2026 23:05
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"/home/god/DEMAT-UG/Segundo Semestre/Algebra Lineal/Notas/Algebra_lineal.tex"
-(/home/god/DEMAT-UG/Segundo Semestre/Algebra Lineal/Notas/Algebra_lineal.tex
+**"/home/void/DEMAT-UG/Segundo Semestre/Algebra Lineal/Notas/Algebra_lineal.tex"
+(/home/void/DEMAT-UG/Segundo Semestre/Algebra Lineal/Notas/Algebra_lineal.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
 (/usr/share/texmf-dist/tex/latex/base/book.cls
@@ -1044,12 +1044,12 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 ))
-<linealdefinitivo.pdf, id=47, 398.3382pt x 569.055pt>
+<linealdefinitivo.pdf, id=55, 398.3382pt x 569.055pt>
 File: linealdefinitivo.pdf Graphic file (type pdf)
 <use linealdefinitivo.pdf>
 Package pdftex.def Info: linealdefinitivo.pdf  used on input line 20.
 (pdftex.def)             Requested size: 398.33722pt x 569.0536pt.
-<linealdefinitivo.pdf, id=49, page=1, 398.3382pt x 569.055pt>
+<linealdefinitivo.pdf, id=57, page=1, 398.3382pt x 569.055pt>
 File: linealdefinitivo.pdf Graphic file (type pdf)
 <use linealdefinitivo.pdf, page 1>
 Package pdftex.def Info: linealdefinitivo.pdf , page1 used on input line 20.
@@ -1271,48 +1271,87 @@ Package mdframed Info: mdframed detected package amsthm
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 467.
-Package mdframed Info: mdframed works in twoside mode on input line 472.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 472.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 487.
-Package mdframed Info: Not enough space on this page on input line 487.
-LaTeX Info: Redefining \. on input line 487.
-LaTeX Info: Redefining \% on input line 487.
+LaTeX Info: Redefining \. on input line 474.
+LaTeX Info: Redefining \% on input line 474.
  [11]
-Package mdframed Info: Not enough space on this page on input line 487.
-Package mdframed Info: mdframed works in twoside mode on input line 495.
+Package mdframed Info: mdframed works in twoside mode on input line 474.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 495.
+(mdframed)              on input line 474.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 503.
-Package mdframed Info: mdframed works in twoside mode on input line 518.
+(mdframed)              on input line 489.
+Package mdframed Info: Not enough space on this page on input line 489.
+Package mdframed Info: mdframed works in twoside mode on input line 497.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 518.
+(mdframed)              on input line 497.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 505.
+Package mdframed Info: mdframed works in twoside mode on input line 520.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 520.
-LaTeX Info: Redefining \. on input line 526.
-LaTeX Info: Redefining \% on input line 526.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 522.
+LaTeX Info: Redefining \. on input line 528.
+LaTeX Info: Redefining \% on input line 528.
  [12]
-LaTeX Info: Redefining \. on input line 579.
-LaTeX Info: Redefining \% on input line 579.
+LaTeX Info: Redefining \. on input line 581.
+LaTeX Info: Redefining \% on input line 581.
  [13]
-Package mdframed Info: mdframed works in twoside mode on input line 622.
+Package mdframed Info: mdframed works in twoside mode on input line 625.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 622.
+(mdframed)              on input line 625.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 624.
-LaTeX Info: Redefining \. on input line 642.
-LaTeX Info: Redefining \% on input line 642.
- [14] (./Algebra_lineal.aux
+(mdframed)              on input line 627.
+LaTeX Info: Redefining \. on input line 670.
+LaTeX Info: Redefining \% on input line 670.
+ [14]
+LaTeX Info: Redefining \. on input line 717.
+LaTeX Info: Redefining \% on input line 717.
+ [15]
+Package mdframed Info: mdframed works in twoside mode on input line 719.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 719.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 722.
+Package mdframed Info: mdframed works in twoside mode on input line 741.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 741.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 743.
+Package mdframed Info: mdframed works in twoside mode on input line 750.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 750.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 753.
+LaTeX Info: Redefining \. on input line 771.
+LaTeX Info: Redefining \% on input line 771.
+ [16]
+LaTeX Info: Redefining \. on input line 836.
+LaTeX Info: Redefining \% on input line 836.
+ [17]
+Package mdframed Info: mdframed works in twoside mode on input line 847.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 847.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 850.
+LaTeX Info: Redefining \. on input line 852.
+LaTeX Info: Redefining \% on input line 852.
+ [18] (./Algebra_lineal.aux
 LaTeX Info: Redefining \. on input line 12.
 LaTeX Info: Redefining \% on input line 12.
 )
@@ -1321,21 +1360,21 @@ LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
 Package rerunfilecheck Info: File `Algebra_lineal.out' has not changed.
-(rerunfilecheck)             Checksum: C1B714FD02233C7EA8F5440A351FC20E;722.
+(rerunfilecheck)             Checksum: DE4280A1112FDE91FCE262E361AC61C6;1153.
  ) 
 Here is how much of TeX's memory you used:
- 40346 strings out of 467525
- 895631 string characters out of 5425861
- 1437430 words of memory out of 5000000
- 68513 multiletter control sequences out of 15000+600000
+ 40366 strings out of 467525
+ 895962 string characters out of 5425862
+ 1437431 words of memory out of 5000000
+ 68527 multiletter control sequences out of 15000+600000
  673444 words of font info for 74 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,17n,108p,815b,1229s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,17n,108p,816b,1229s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmro12.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Algebra_lineal.pdf (15 pages, 324074 bytes).
+Output written on Algebra_lineal.pdf (19 pages, 337652 bytes).
 PDF statistics:
- 304 PDF objects out of 1000 (max. 8388607)
- 217 compressed objects within 3 object streams
- 35 named destinations out of 1000 (max. 500000)
- 156 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 334 PDF objects out of 1000 (max. 8388607)
+ 243 compressed objects within 3 object streams
+ 41 named destinations out of 1000 (max. 500000)
+ 172 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -466,6 +466,8 @@
         son equivalentes.
     \end{mdframed}
 
+    \section{Matrices reducidas y matrices escalonadas}
+
     Dada $A|B\in M_{m\times(n+1)}(F)$ queremos encontrar en su clase de equivalencia un representante con el que
     se pueda resolver mas facilmente el sistema lineal asociado.
 
@@ -613,6 +615,7 @@
             0 & 0 & 0
         \end{pmatrix}
     \end{align*}
+    \hfill $\blacktriangleleft$\\
     \textbf{Observación.} Una matriz $A\in M_{m\times n}(F)$ es reducida por filas escalonada si las filas
     $k_{1},\dots,k_{m-r}$ donde estan los pivotes satisfacen
     \begin{equation*}
@@ -638,5 +641,212 @@
         \end{array}
     \right.
     \end{equation*}
+    \textbf{Ejemplo 10.}\\
+    Consideremos la siguiente matriz en forma escalonada:
+    \begin{equation*}
+        A(x)=
+        \begin{pmatrix}
+            0 & 1 & 2 & 0 & 3 & 0 & 4\\
+            0 & 0 & 0 & 1 & 2 & 0 & 2\\
+            0 & 0 & 0 & 0 & 0 & 1 & 5\\
+            0 & 0 & 0 & 0 & 0 & 0 & 0\\
+            0 & 0 & 0 & 0 & 0 & 0 & 0
+        \end{pmatrix}
+        \begin{pmatrix}
+            x_{1}\\
+            x_{2}\\
+            x_{3}\\
+            x_{4}\\
+            x_{5}
+        \end{pmatrix}
+        =
+        \begin{pmatrix}
+            b_{1}\\
+            b_{2}\\
+            b_{3}\\
+            b_{4}\\
+            b_{5}
+        \end{pmatrix}
+    \end{equation*}
+    El sistema lineal asociado es
+    \begin{equation*}
+        \begin{cases}
+            x_{2}+2x_{3}+3x_{5}+4x_{7}=b_{1}\\
+            x_{4}+2x_{5}+2x_{7}=b_{2}\\
+            x_{6}+5x_{7}=b_{3}\\
+            0=b_{4}\\
+            0=b_{5}
+        \end{cases}
+    \end{equation*}
+    El sistema es consistente si $b_{4}=b_{5}=0$, de esta forma tenemos que
+    \begin{align*}
+        x_{2}&=b_{1}-2x_{3}-3x_{5}-4x_{7}\\
+        x_{4}&=b_{2}-2x_{5}-2x_{7}\\
+        x_{6}&=b_{3}-5x_{7}
+    \end{align*}
+    De esta forma las variables dependientes o no libres son
+    \begin{equation*}
+        \{x_{k_{1}},x_{k_{2}},x_{k_{3}}\}=\{x_{2},x_{4},x_{6}\}
+    \end{equation*}
+    y las variables independientes o libres son
+    \begin{equation*}
+        \{x_{j}:j\neq k,i=1,2,3\}=\{x_{1},x_{3},x_{5},x_{7}\}
+    \end{equation*}
+    \hfill $\blacktriangleleft$\\
+    $A=(a_{ij})\in M_{m\times n}(F)$ RFE, con $r$ filas cero, entonces el sistema asociado a $AX=B$. Supongamos que los pivotes están en las columnas
+    \begin{equation*}
+        k_{1}\lt k_{2}\lt k_{3}\lt\cdots\lt k_{mr}
+    \end{equation*}
+    Las variables libres son $\{x_{1},\dots,x_{n}\}\setminus\{x_{k_{1},\dots,x_{k_{m-r}}}\}$
+    \begin{equation*}
+        \begin{matrix}
+            x_{k_{1}}+\sum_{j\notin\{k_{1},\dots,k_{m-r}\}}a_{ij}x_{j}=b_{1}\\
+            \vdots\\
+            x_{k_{\ell}}+\sum_{j\notin\{k_{1},\dots,k_{m-r}\}}a_{ij}x_{j}=b_{\ell}\\
+            \vdots\\
+            x_{k_{m-r}}+\sum_{j\notin\{k_{1},\dots,k_{m-r}\}}a_{ij}x_{j}=b_{m-r}
+        \end{matrix}
+    \end{equation*}
+    El sistema es consistente si
+    \begin{equation*}
+        b_{m-r+1}=b_{m-r+2}=\dots=b_{m}=0.
+    \end{equation*}
+    El sistema solución de $AX=0$ es
+    \begin{equation*}
+        \{(x_{1},-2x_{3}-3x_{5}-4x_{7},x_{3},-2x_{5}-2x_{7},x_{5},-5x_{7},x_{7}):x_{1},x_{3},x_{5},x_{7}\in F\}.
+    \end{equation*}
+
+    \begin{mdframed}[style=mdgraybox,frametitle={Proposición 5}]
+        Si $A_{1},A_{2}\in M_{m\times n}(F)$ son RFE y cada fila de una de ellas es
+        combinación lineal de las filas de la otra matriz entonces $A_{1}=A_{2}$.
+    \end{mdframed}
+
+    \begin{proof}
+        Si todas las filas de $A_{1}$ son cero, toda combinación lineal de ellas es una fila cero,
+        por tanto $A_{2}=0_{m\times n}$. Supongamos que $A_{1}$ no es la matriz cero, entonces la fila
+        1 no es cero y tiene su pivote en $k_{1}^{1}$. La matriz $A_{2}$ no es la matriz cero pues de este modo
+        no podriamos generar la fila no cero de $A_{1}$. Asi que tiene pivote en la fila 1 : $k_{1}^{2}$,
+        sin perdida de generalidad podemos suponer que $k_{1}^{1}\lt k_{1}^{2}$. Entonces en el sistema $A_{1}$,
+        $k_{1}$ es variable dependiente pero en la matriz $A_{2}$ es variable libre. Entonce los sistemas no tienen
+        las mismas soluciones y esto contradice la equivalencia de ellos. Por tanto $k_{1}^{1}=k_{1}^{2}$.
+        Las filas $2,\dots,m$ de la matriz $A_{2}$ son combinación lineal solo de las filas
+        $2,\dots,m$ de $A_{1}$ y viceversa.\\
+        Así que las matrices $A_{1,1}A_{1,2}\in M_{(m-1)\times n}(F)$ que
+        resultan de eliminar la fila 1 de $A_{1}$ y $A_{2}$ son RFE y sus filas combinación lineal de las filas
+        de la otra matriz $(m-1)\times n$, por inducción tenemos que $A_{1,1}=A_{2,1}$.\\
+        Así que la fuila 1 de $A_{1}$, se obtiene con la combinación lineal $(1,0,0,\dots,0)$ de las filas de $A_{2}$.
+        Así que la fila 1 de $A_{1}$ y $A_{2}$ coincide. Por lo tanto $A_{1}=A_{2}$.
+    \end{proof}
+
+    \begin{mdframed}[style=mdgraybox,frametitle={Corolario 2}]
+        Sea $A\in M_{m\times n}(F)$, entonces $A$ es equivalente a una y solo una matriz $m\times n$ RFE.
+    \end{mdframed}
+
+    \begin{proof}
+        Si $A$ es equivalente a $A_{1}$ y $A_{2}$ y ellas son RFE entonces sus filas
+        son combinaciones lineales de las filas de la otra matriz.
+    \end{proof}
+
+    \begin{mdframed}[style=mdgraybox,frametitle={Proposición 6}]
+        Dos sistemas de $m$ ecuaciones lineales en $n$ variables son equivalentes si
+        y solo si las matrices asociadas son equivalentes.
+    \end{mdframed}
+
+    \begin{proof}
+        Sistemas equivalentes, implican matrices equivalentes. Si las matrices son
+        equivalentes entonces son equivalentes a una única matriz RFE. Esta matriz
+        RFE es equivalente a ambos sistemas
+    \end{proof}
+
+    \textbf{Ejemplo 11.}\\
+    Consideremos la siguiente matriz
+    \begin{equation*}
+        \parentesis{
+            \begin{array}{ccc|c}
+                1 & -2 & 1 & b_{1}\\
+                2 & 1 & 1 & b_{2}\\
+                0 & 5 & -1 & b_{3}
+            \end{array}
+        }
+    \end{equation*}
+    entonces
+    \begin{equation*}
+        \parentesis{
+            \begin{array}{ccc|c}
+                1 & 0 & \frac{3}{5} & \frac{1}{5}(b_{1}+2b_{2})\\
+                0 & 1 & -\frac{1}{5} & \frac{1}{5}(b_{2}-2b_{1})\\
+                0 & 0 & 0 & b_{3}-b_{2}+2b_{1}
+            \end{array}
+        }
+    \end{equation*}
+    El sistema tiene conjunton solución no vacío si y solo si $b_{3}-b_{2}+2b_{1}=0$.\\
+    Sistema $m\times n$\\
+    El número de pivotes es $m-r$ donde $r$ es el número de filas cero de la matriz
+    RFE. SI $m\lt n$, $m-r\lt n$, esto implica que existe alguna variable libre, por
+    tanto el sistema tiene una infinidad de soluciones.
+
+    \section{Producto de matrices}
+
+    Sean $A=(a_{ij})\in M_{m\times n}(F),B=(b_{jk})\in M_{n\times r}(F)$. Definimos el
+    producto $AB=(c_{ik})\in M_{m\times r}(F)$ donde
+    \begin{equation*}
+        c_{ik}=\sum_{j=1}^{k}a_{ij}\cdot b_{jk}
+    \end{equation*}
+    Es decir, cada entrada de la matriz producto se obtiene como el producto de la fila i-esima
+    de $A$ con la columna $k$-esima de $B$. A continuacion un caso particular. Sean
+    \begin{equation*}
+        A=
+        \begin{pmatrix}
+            a_{11} & a_{12} & a_{13}\\
+            a_{21} & a_{22} & a_{23}\\
+            a_{31} & a_{32} & a_{33}
+        \end{pmatrix},
+        B=
+        \begin{pmatrix}
+            b_{11} & b_{12}\\
+            b_{21} & b_{22}\\
+            b_{31} & b_{32}
+        \end{pmatrix}.
+    \end{equation*}
+    Entonces $AB$ esta dado por
+    \begin{equation*}
+        AB=
+        \begin{pmatrix}
+            a_{11}b_{11}+a_{12}b_{21}+a_{13}b_{31} & a_{11}b_{12}+a_{12}b_{22}+a_{13}b_{32}\\
+            a_{21}b_{11}+a_{22}b_{21}+a_{23}b_{31} & a_{21}b_{12}+a_{22}b_{22}+a_{23}b_{32}\\
+            a_{31}b_{11}+a_{32}b_{21}+a_{33}b_{31} & a_{31}b_{12}+a_{32}b_{22}+a_{33}b_{32}
+        \end{pmatrix}.
+    \end{equation*}
+    Ahora introducimos un caso particular: la matriz identidad. Sea $I_{n}=(\delta_{ij})\in M_{n\times n}(F)$, donde
+    \begin{equation*}
+        \delta_{ij}=
+        \begin{cases}
+            1\quad\text{ si }i=j,\\
+            0\quad\text{ si }i\neq j.
+        \end{cases}
+    \end{equation*}
+    Veamos que $I_{n}$ actua como elemento neutro por la derecha. Sea $A=(a_{ij})\in M_{m\times n}(F)$.
+    Entonces
+    \begin{equation*}
+        AI_{n}=(c_{ik})\in M_{m\times n}(F),\quad\text{ donde }\quad c_{ik}=\sum_{j=1}^{n}a_{ij}\delta_{jk}.
+    \end{equation*}
+    Por la definición del delta de kronecker, se tiene que
+    \begin{equation*}
+        c_{ik}=a_{ik}.
+    \end{equation*}
+    Por lo tanto, cada entrada del producto coincide con la entrada correspondiente de $A$, y en consecuencia
+    \begin{equation*}
+        AI_{n}=A.
+    \end{equation*}
+    De manera completamente análoga, se verifica que la identidad también actúa como
+    elemento neutro por la izquierda, es decir,
+    \begin{equation*}
+        I_{m}A=A.
+    \end{equation*}
+
+    \begin{mdframed}[style=mdgraybox,frametitle={Proposición 7}]
+        Para toda matriz $A\in M_{m\times n}(F)$ se tiene que $A\cdot I_{n}=A$ y
+        $I_{m}\cdot A=A$.
+    \end{mdframed}
 
 \end{document}
