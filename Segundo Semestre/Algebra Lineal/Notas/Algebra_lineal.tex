@@ -87,7 +87,7 @@
     $$(a + ib) \left( \frac{a}{a^2 + b^2} - i \frac{b}{a^2 + b^2} \right) = 1.$$
     También, podemos notar que
     $$\Q \subset \R \subset \C.$$
-    \begin{mdframed}[style=mdpinkbox,frametitle={Teorema 1: Teorema Fundamental del Álgebra}]
+    \begin{mdframed}[style=mdgraybox,frametitle={Teorema 1: Teorema Fundamental del Álgebra}]
         En $\C$ todos los polinomios tienen sus soluciones o raíces ($\C$ es un campo algebraicamente cerrado).
     \end{mdframed}
     
@@ -849,4 +849,100 @@
         $I_{m}\cdot A=A$.
     \end{mdframed}
 
+    \textbf{Ejemplo 12.}\\
+    Consideremos el siguiente producto
+    \begin{equation*}
+        \begin{pmatrix}
+            0 & 1\\
+            1 & 0
+        \end{pmatrix}
+        \begin{pmatrix}
+            0 & 1\\
+            1 & 0
+        \end{pmatrix}
+        =
+        \begin{pmatrix}
+            1 & 0\\
+            0 & 1
+        \end{pmatrix}
+        =I_{2}
+    \end{equation*}
+    \hfill $\blacktriangleleft$\\
+
+    En general, el producto de matrices no conmuta.\\
+    $E_{j}(A)=\bar{E_{j}}\cdot A$ donde $E_{j}$ es una operación elemental y $\bar{E_{j}}$
+    una matriz de tamaño $m\times m$.
+    \begin{equation*}
+        E_{1}^{c\cdot1}
+        \begin{pmatrix}
+            1 & 0\\
+            0 & 1
+        \end{pmatrix}
+        =
+        \begin{pmatrix}
+            c & 0\\
+            0 & 1
+        \end{pmatrix}
+        ,\quad c\neq0
+    \end{equation*}
+    \begin{equation*}
+        E^{c\cdot1}
+        \begin{pmatrix}
+            a_{11} & a_{12} & a_{13}\\
+            a_{21} & a_{22} & a_{23}
+        \end{pmatrix}
+        =
+        \begin{pmatrix}
+            ca_{11} & ca_{12} & ca_{13}\\
+            a_{21} & a_{22} & a_{23}
+        \end{pmatrix}
+    \end{equation*}
+    \begin{equation*}
+        \begin{pmatrix}
+            c & 0\\
+            0 & 1
+        \end{pmatrix}
+        \begin{pmatrix}
+            a_{11} & a_{12} & a_{13}\\
+            a_{21} & a_{22} & a_{23}
+        \end{pmatrix}
+    \end{equation*}
+
+    \begin{mdframed}[style=mdgraybox,frametitle={Teorema 2}]
+        Sea $A\in M_{m\times m}(F)$, entonces $E_{\ell}(A)=E_{\ell}(I_{m})\cdot A$ donde
+        $E_{\ell}$ es una operación elemental de fila.
+    \end{mdframed}
+
+    \begin{proof}
+        Sea $I_{m}=(\delta_{ij})\in M_{m\times m}(F)$ y $A=(a_{ij})\in M_{m\times n}(F)$.\\
+        \textbf{Operación 1.} Sea $r\in\{1,\dots,m\}$ y $c\in F\setminus\{0\}$. Consideremos
+        la matriz
+        \begin{equation*}
+            E_{1}^{c,r}(I_{m})=(e_{ij})\in M_{m\times m}(F),
+        \end{equation*}
+        cuyas entradas están dadas por
+        \begin{equation*}
+            e_{ij}=
+            \begin{cases}
+                \delta_{ij},\hfill\text{ si }i\neq r,\\
+                c\delta_{ij},\quad\text{ si }i=r.
+            \end{cases}
+        \end{equation*}
+        Sea ahora $A=(a_{ij})\in M_{m\times n}(F)$. Definimos
+        \begin{equation*}
+            E_{1}\cdot A=(c_{ik})\in M_{m\times n}(F),
+        \end{equation*}
+        donde, para cada $i\in\{1,\dots,m\}$ y $k\in\{1,\dots,n\}$,
+        \begin{equation*}
+            c_{ik}=\sum_{j=1}^{m}e_{ij}a_{jk}.
+        \end{equation*}
+        De la definción de $e_{ij}$, se sigue que
+        \begin{equation*}
+            c_{ik}=
+            \begin{cases}
+                a_{ik},\hfill\text{ si }i\neq r,\\
+                ca_{ik},\quad\text{ si }i=r.
+            \end{cases}
+        \end{equation*}
+    \end{proof}
 \end{document}
