@@ -944,5 +944,43 @@
                 ca_{ik},\quad\text{ si }i=r.
             \end{cases}
         \end{equation*}
+        \textbf{Operación 2.} Sean $r,s\in\{1,\dots,m\}$ con $r\neq s$ y $c\in \F$. Consideremos la matriz
+        \begin{equation*}
+            E_{2}^{c,s,r}(I_{m})=(e_{ij})\in M_{m\times m}(\F),
+        \end{equation*}
+        cuyas entradas están dadas por
+        \begin{equation*}
+            e_{ij}=
+            \begin{cases}
+                \delta_{ij},\hfill\text{ si }i\neq r,\\
+                \delta_{rj}+c\delta_{sj},\quad\text{ si }i=r.
+            \end{cases}
+        \end{equation*}
+        Sea $A=(a_{ij})\in M_{m\times n}(\F)$. Definimos
+        \begin{equation*}
+            E_{2}\cdot A=(c_{ik})\in M_{m\times n}(\F),
+        \end{equation*}
+        donde, para cada $i\in\{1,\dots,m\}$ y $k\in\{1,\dots,n\}$,
+        \begin{equation*}
+            c_{ik}=\sum_{j=1}^{m}e_{ij}a_{jk}.
+        \end{equation*}
+        De la definición de $e_{ij}$, se sigue que
+        \begin{equation*}
+            c_{ik}=
+            \begin{cases}
+                a_{ik},\hfill\text{ si }i\neq r,\\
+                a_{rk}+ca_{sk},\quad\text{ si }i=r.
+            \end{cases}
+        \end{equation*}
+        En consecuencia, la multiplicación por $E_{2}^{c,s,r}(I_{m})$ corresponde a reemplazar la fila $r$-esima de $A$ por la suma de ella misma con $c$ veces la fila $s$-ésima, dejando
+        invariantes las demás filas.
     \end{proof}
+
+    \begin{mdframed}[style=mdgraybox,frametitle={Proposición 8}]
+        Sea $A\in M_{m\times n}(F)$ y $E_{j}:M_{m\times n}(F)\to M_{m\times n}(F)$ es
+        una operación elemental de fila, entonces
+        \begin{equation*}
+            E_{j}(A)=E_{j}(I_{m})\cdot A.
+        \end{equation*}
+    \end{mdframed}
 \end{document}
