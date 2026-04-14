@@ -983,4 +983,83 @@
             E_{j}(A)=E_{j}(I_{m})\cdot A.
         \end{equation*}
     \end{mdframed}
+
+    \begin{proof}
+        Recordar que para $E_{j}$ existe una operación elemental de fila,
+        \begin{equation*}
+            E^{-1}_{j}:M_{m\times n}(F)\to M_{m\times n}(F)
+        \end{equation*}
+        tal que
+        \begin{equation*}
+            E_{j}^{-1}\cdot E_{j}(A)=A,\quad\forall A\in M_{m\times n}(F).
+        \end{equation*}
+        \begin{equation*}
+            E_{j}\cdot E_{j}^{-1}(A)=A,\quad\forall A\in M_{m\times n}(F).
+        \end{equation*}
+        Si $A,B\in M_{m\times n}(F)$ son matrices equivalentes, entonces existe un número finito
+        de operaciones elementales
+        \begin{equation*}
+            (E_{\ell_{s}}\cdots E_{\ell_{2}}\cdot E_{\ell_{1}})(B)=A
+        \end{equation*}
+        por lo tanto
+        \begin{equation*}
+            \implies\underbrace{E_{\ell_{s}}(I_{m})\cdots E_{\ell_{2}}(I_{m})\cdot E_{\ell_{1}}}_{P\in M_{m\times n}(F)}\cdot B=A.
+        \end{equation*}
+        se tiene que
+        \begin{equation*}
+            E_{\ell}^{-1}(I_{m})E_{\ell}(I_{m})=I_{m}
+        \end{equation*}
+        se sigue que
+        \begin{equation*}
+            (E_{\ell}^{-1}\cdot E_{\ell})(I_{m})=I_{m}
+        \end{equation*}
+        como vimos anteriormente se tiene que
+        \begin{equation*}
+            PB=A
+        \end{equation*}
+        y asi
+        \begin{equation*}
+            (E_{\ell_{s}}\cdots E_{\ell_{1}})^{-1}(E_{\ell_{s}}\cdots E_{\ell_{1}})(B)=B.
+        \end{equation*}
+        \begin{equation*}
+            =(E_{\ell_{1}^{-1}}\cdots E_{\ell_{s-1}}^{-1}\cdot E_{\ell_{s}}^{-1})\underbrace{(E_{\ell_{s}}\cdots E_{\ell_{1}})(B)}_{A}=B
+        \end{equation*}
+        \begin{align*}
+            =\underbrace{(E_{\ell_{1}}^{-1}\cdots E_{\ell_{s-1}}^{-1}\cdot E_{\ell_{s}}^{-1})}_{Q\in M_{m\times n}(F)}\cdot A=B&\implies QA=B\\
+            &\implies (QP)B=B.
+        \end{align*}
+        En particular si $B=I_{m}$, entonces
+        \begin{equation*}
+            PQ\cdot I_{m}=PQ=I_{m}.
+        \end{equation*}
+    \end{proof}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Definición 10: Inversa Derecha e Inversa Izquierda}]
+        Una matriz $P\in M_{m\times m}(F)$ tiene inversa derecha si existe $Q\in M_{m\times m}(F)$ tal que
+        \begin{equation*}
+            P\cdot Q=I_{m}
+        \end{equation*}
+        Una matriz $Q\in M_{m\times m}(F)$ tiene inversa izquierda si existe $P\in M_{m\times m}(F)$
+        tal que
+        \begin{equation*}
+            P\cdot Q=I_{m}.
+        \end{equation*}
+    \end{mdframed}
+
+    Una matriz $P\in M_{m\times m}(F)$ se dice invertible si tiene inversa izquierda $Q_{1}$ e
+    inversa derecha $Q_{2}$
+    \begin{equation*}
+        Q_{1}P=I_{m},\qquad PQ_{2}=I_{m}.
+    \end{equation*}
+
+    \begin{mdframed}[style=mdgraybox,frametitle={Proposición 9}]
+        Si $P\in M_{m\times m}(F)$ tiene inversa izquierda $Q_{1}$ e inversa derecha $Q_{2}$ entonces
+        $Q_{1}=Q_{2}$.
+    \end{mdframed}
+
+    \begin{proof}
+        $Q_{1}\cdot P=I_{m}\implies(Q_{1}\cdot P)Q_{2}=I_{m}\cdot Q_{2}\implies Q_{1}(P\cdot Q_{2})=Q_{1}\cdot I_{m}=Q_{1}=Q_{2}=Q$.
+    \end{proof}
+    En este caso diremos que $P$ es invertible y $Q$ es la inversa de $P$.
+
 \end{document}
