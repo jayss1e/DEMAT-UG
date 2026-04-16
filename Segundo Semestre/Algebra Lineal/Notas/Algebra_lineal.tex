@@ -27,44 +27,42 @@
     \chapter{Ecuaciones Lineales}
     
     \section{Campos}
-    \begin{mdframed}[style=mdbluebox,frametitle={Definición 1: Campo}]
-        Un campo $F$ es un conjunto de dos operaciones binarias, suma y producto tal que,
-        \begin{enumerate}
-            \item Suma.
-            \begin{align*}
-                +: F \times F &\to F \\
-                (a,b) &\mapsto a+b.
-            \end{align*}
-            La suma satisface:
-            \begin{itemize}
-                \item Asociativa, es decir, 
-                $$a + (b + c) = (a + b) + c, \quad \forall a,b,c \in F.$$
-                \item Conmutativa, es decir
-                $$a + b = b + a, \quad \forall a,b \in F.$$
-                \item Existe $0 \in F$, llamado cero, tal que
-                $$0 + a = a = a + 0, \quad \forall a \in F.$$
-                \item Dado $a \in F$, existe $-a$ tal que
-                $$a + (-a) = 0, \quad \forall a \in F.$$
-            \end{itemize}
+    Un campo $F$ es un conjunto de dos operaciones binarias, suma y producto tal que,
+    \begin{enumerate}
+        \item Suma.
+        \begin{align*}
+            +: F \times F &\to F \\
+            (a,b) &\mapsto a+b.
+        \end{align*}
+        La suma satisface:
+        \begin{itemize}
+            \item Asociativa, es decir, 
+            $$a + (b + c) = (a + b) + c, \quad \forall a,b,c \in F.$$
+            \item Conmutativa, es decir
+            $$a + b = b + a, \quad \forall a,b \in F.$$
+            \item Existe $0 \in F$, llamado cero, tal que
+            $$0 + a = a = a + 0, \quad \forall a \in F.$$
+            \item Dado $a \in F$, existe $-a$ tal que
+            $$a + (-a) = 0, \quad \forall a \in F.$$
+        \end{itemize}
         
-            \item Producto.
-            \begin{align*}
-                \cdot: F \times F &\to F \\
-                (a,b) &\mapsto a \cdot b.
-            \end{align*}
-            Tal que el producto es:
-            \begin{itemize}
-                \item Asociativa, es decir, 
-                $$a \cdot (b \cdot c) = (a \cdot b) \cdot c, \quad \forall a,b,c \in F.$$
-                \item Conmutativa, es decir
-                $$a \cdot b = b \cdot a, \quad \forall a,b \in F.$$
-                \item Existe $1 \in F,1 \ne 0$, llamado uno, tal que
-                $$1 \cdot a = a = a \cdot 1, \quad \forall a \in F.$$
-                \item Dado $a \in F, a \ne 0$, existe $a^{-1} \text{ o } 1/a$ tal que
-                $$a \cdot a^{-1} = 1, \quad \forall a \in F.$$
-            \end{itemize}
-        \end{enumerate}
-    \end{mdframed}
+        \item Producto.
+        \begin{align*}
+            \cdot: F \times F &\to F \\
+            (a,b) &\mapsto a \cdot b.
+        \end{align*}
+        Tal que el producto es:
+        \begin{itemize}
+            \item Asociativa, es decir, 
+            $$a \cdot (b \cdot c) = (a \cdot b) \cdot c, \quad \forall a,b,c \in F.$$
+            \item Conmutativa, es decir
+            $$a \cdot b = b \cdot a, \quad \forall a,b \in F.$$
+            \item Existe $1 \in F,1 \ne 0$, llamado uno, tal que
+            $$1 \cdot a = a = a \cdot 1, \quad \forall a \in F.$$
+            \item Dado $a \in F, a \ne 0$, existe $a^{-1} \text{ o } 1/a$ tal que
+            $$a \cdot a^{-1} = 1, \quad \forall a \in F.$$
+        \end{itemize}
+    \end{enumerate}
     Para relacionar tanto la suma y el producto, contamos con la distributividad, la cual nos dice que 
     $$a \cdot (b + c) = a \cdot b + a \cdot c, \quad \forall a,b,c \in F.\vspace{20pt}$$
     Tanto la suma como el producto son grupos abelianos, siendo estos $(F, + , 0)$ y $(F\setminus \{0\},  \cdot, 1)$ respectivamente. Algunos ejemplos de grupos abelianos conocidos son 
@@ -93,7 +91,7 @@
     
     \section{Sistemas de ecuaciones lineales}
     
-    \begin{mdframed}[style=mdbluebox,frametitle={Definicion 2: Sistema de ecuaciones}]
+    \begin{mdframed}[style=mdbluebox,frametitle={Definicion 1: Sistema de ecuaciones}]
         Sea $F$ un campo. Un sistema de $m$ ecuaciones lineales en $n$ variables con coeficientes en $F$, denotaremos dichos coeficientes como
         \begin{align*}
             \{a_{ij} \in F : 1 \leq i \leq m, 1 \leq j \leq n\},
@@ -121,7 +119,7 @@
         F^n = \{ (c_1, c_2, \dots , c_n): c_1, c_2, \dots , c_n \in F \}.
     \end{align*}
     
-    \begin{mdframed}[style=mdbluebox,frametitle={Definicion 3: Conjunto solucion de un sistema de ecuaciones lineales}]
+    \begin{mdframed}[style=mdbluebox,frametitle={Definicion 2: Conjunto solucion de un sistema de ecuaciones lineales}]
         Resolver \eqref{1.1} significa encontrar
         \begin{align*}
             \{ (c_1, \dots , c_n):a_{i1}c_1 + \dots + a_{in}c_n = b_i, \forall i \in \{1,\dots , m \}\} \subset F^n,
@@ -219,7 +217,7 @@
         \label{1.4}
     \end{equation}
     
-    \begin{mdframed}[style=mdbluebox,frametitle={Definición 4: Sistema equivalente}]
+    \begin{mdframed}[style=mdbluebox,frametitle={Definición 3: Sistema equivalente}]
         Los sistemas en \eqref{1.1} y \eqref{1.4} se dicen equivalentes si toda ecuación de uno puede escribirse como combinación lineal del otro y viceversa.
     \end{mdframed}
     
@@ -243,7 +241,7 @@
     
     \section{Matrices y operaciones elementales de fila}
     
-    \begin{mdframed}[style=mdbluebox,frametitle={Definición 5: Matriz}]
+    \begin{mdframed}[style=mdbluebox,frametitle={Definición 4: Matriz}]
         Una matriz de tamaño $m \times n$ con coeficientes en $F$, es una función
         \begin{align*}
             a : \llavesgrande{(i,j): 1 \leq i \leq m, 1 \leq j \leq n} \to F,\quad (i, j) \mapsto a_{ij}.
@@ -347,7 +345,7 @@
 
     \vspace{0.4cm}
 
-    \begin{mdframed}[style=mdbluebox,frametitle={Definición 6: Equivalencia de matrices}]
+    \begin{mdframed}[style=mdbluebox,frametitle={Definición 5: Equivalencia de matrices}]
         Sean $A_{1},A_{2}\in M_{m\times n}(F)$, diremos que $A_{1}$ es equivalente a $A_{2}$ si existe un número
         finito de operaciones elementales $E_{1k},E_{2k},\dots,E_{\ell k}$, tal que
         \begin{equation*}
@@ -449,7 +447,7 @@
         Entonces $A_{1}\sim A_{3}$.
     \end{proof}
 
-    \begin{mdframed}[style=mdbluebox,frametitle={Definición 7}]
+    \begin{mdframed}[style=mdbluebox,frametitle={Definición 6}]
         Sean $A_{1},A_{2}\in M_{m\times n}(F)$, diremos que $A_{1}\sim A_{2}$ si existe un numero finito de
         operaciones elementales $E_{1k},E_{2k},\dots,E_{\ell k}$.
     \end{mdframed}
@@ -471,7 +469,7 @@
     Dada $A|B\in M_{m\times(n+1)}(F)$ queremos encontrar en su clase de equivalencia un representante con el que
     se pueda resolver mas facilmente el sistema lineal asociado.
 
-    \begin{mdframed}[style=mdbluebox,frametitle={Definición 8: Matriz escalonada}]
+    \begin{mdframed}[style=mdbluebox,frametitle={Definición 7: Matriz escalonada}]
         Una matriz $A\in M_{m\times m}(F)$ se llama \textbf{escalonada} por filas si satisface
         \begin{enumerate}
             \item Todas las filas nulas de $A$ se encuentran debajo de las filas no nulas.
@@ -494,7 +492,7 @@
         E_{1}^{a_{ikj}^{-1}\cdot i}
     \end{equation*}
 
-    \begin{mdframed}[style=mdbluebox,frametitle={Definición 9: Matriz reducida por filas}]
+    \begin{mdframed}[style=mdbluebox,frametitle={Definición 8: Matriz reducida por filas}]
         Una matriz $A\in M_{m\times n}(F)$ está \textbf{reducida} por filas si
         \begin{enumerate}
             \item Todas las filas cero están en las últimas filas (se obtiene aplicando $E_{3}$.
@@ -516,6 +514,8 @@
         \end{pmatrix}
     \end{equation*}
     Donde $A\in M_{5\times7}(F)$ tiene 3 filas no cero y dos pivotes.\hfill $\blacktriangleleft$
+
+    \vspace{1cm}
 
     \begin{mdframed}[style=mdgraybox,frametitle={Proposición 4}]
         Toda matriz $A\in M_{m\times n}(F)$ es equivalente a una matriz reducida por filas.
@@ -1034,7 +1034,9 @@
         \end{equation*}
     \end{proof}
 
-    \begin{mdframed}[style=mdbluebox,frametitle={Definición 10: Inversa Derecha e Inversa Izquierda}]
+    \section{Matrices Invertibles}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Definición 9: Inversa Derecha e Inversa Izquierda}]
         Una matriz $P\in M_{m\times m}(F)$ tiene inversa derecha si existe $Q\in M_{m\times m}(F)$ tal que
         \begin{equation*}
             P\cdot Q=I_{m}
@@ -1061,5 +1063,364 @@
         $Q_{1}\cdot P=I_{m}\implies(Q_{1}\cdot P)Q_{2}=I_{m}\cdot Q_{2}\implies Q_{1}(P\cdot Q_{2})=Q_{1}\cdot I_{m}=Q_{1}=Q_{2}=Q$.
     \end{proof}
     En este caso diremos que $P$ es invertible y $Q$ es la inversa de $P$.
+
+    \begin{mdframed}[style=mdgraybox,frametitle={Proposición 10}]
+        Sea $P\in M_{m\times m}(F)$ y sean $A,B\in M_{m\times m}(F)$, tales que
+        \begin{equation*}
+            AP=PA=I_{m}\quad\text{ y }\quad BP=PB=I_{m},
+        \end{equation*}
+        entonces $A=B$.
+    \end{mdframed}
+
+    \begin{proof}
+        $A=AI_{m}=A(P\cdot B)=(AP)\cdot B= I_{m}\cdot B=B$.
+    \end{proof}
+
+    Notación. La matriz $Q$ tal que $P\cdot Q=QP=I_{m}$ se denota por $P^{-1}$, si existe.
+    \begin{equation*}
+        M_{m\times m}(F)\not\supseteq GL_{m}:=\{P\in M_{m\times m}(F):P\text{ es invertible}\}
+    \end{equation*}
+    \begin{equation*}
+        0_{m\times m}A=0_{m\times m}\qquad\forall A\in M_{m\times m}(F)
+    \end{equation*}
+    \begin{equation*}
+        \implies0_{m\times m}\notin GL_{m}(F).
+    \end{equation*}
+    \textbf{Ejemplo 13.}\\
+    \begin{equation*}
+        \begin{pmatrix}
+            a_{11} & a_{12}\\
+            0 & 0
+        \end{pmatrix}
+        \cdot
+        \begin{pmatrix}
+            b_{11} & b_{12}\\
+            b_{21} & b_{22}
+        \end{pmatrix}
+        =
+        \begin{pmatrix}
+            a_{11}b_{11}+a_{12}b_{12} & a_{11}b_{12}+a_{12}b_{22}\\
+            0 & 0
+        \end{pmatrix}
+        \neq I_{2}
+    \end{equation*}
+    Así que
+    \begin{equation*}
+        \begin{pmatrix}
+            a_{11} & a_{12}\\
+            0 & 0
+        \end{pmatrix}
+        \notin GL_{2}(F)\qquad\forall a_{11},a_{12}\in F.
+    \end{equation*}
+    \hfill $\blacktriangleleft$\\
+
+    Si $A\in M_{m\times m}(F)$ tiene una fila cero, entonces $A$ no es invertible.
+    \begin{equation*}
+        \begin{pmatrix}
+            1 & 1\\
+            1 & 1
+        \end{pmatrix}
+        \begin{pmatrix}
+            b_{11} & b_{12}\\
+            b_{21} & b_{22}
+        \end{pmatrix}
+        =
+        \begin{pmatrix}
+            b_{11}+b_{21} & b_{12}+b_{22}\\
+            b_{11}+b_{21} & b_{12}+b_{22}
+        \end{pmatrix}
+        =I_{2},
+    \end{equation*}
+    no puede ser posible que $b_{11}+b_{21}$ sea 0 y 1, así que
+    \begin{equation*}
+        \begin{pmatrix}
+            1 & 1\\
+            1 & 1
+        \end{pmatrix}
+        \notin GL_{2}(F).
+    \end{equation*}
+    $A,B\in M_{m\times m}(F)$ equivalentes y existe $A^{-1}$,¿Existe $B^{-1}?$
+    Como son equivalentes existe $P\in M_{m\times m}(F)$ invertible tal que
+    \begin{align*}
+        P\cdot B=A&\implies (P\cdot B)A^{-1}=A\cdot A^{-1}=I_{m}\\
+        &\implies P(B\cdot A^{-1})=I_{m}\\
+        &\implies B\cdot A^{-1}=P^{-1}\cdot I_{m}=P^{-1}\\
+        &\implies B(A^{-1}\cdot P)=I_{m}\\
+        &\implies (A^{-1}\cdot P)\cdot B=A^{-1}A=I_{m}\\
+        &\implies B^{-1}=A^{-1}P.
+    \end{align*}
+
+    \begin{mdframed}[style=mdgraybox,frametitle={Lema 1}]
+        Si $A,B\in M_{m\times m}(F)$ son invertibles, entonces $A\cdot B\in M_{m\times m}(F)$
+        es invertible y $(A\cdot B)^{-1}=B^{-1}\cdot A^{-1}$.
+    \end{mdframed}
+
+    \begin{proof}
+        \begin{align*}
+            (A\cdot B)(B^{-1}\cdot A^{-1})&=I_{m}\\
+            (B^{-1}\cdot A^{-1})(A\cdot B)&=I_{m}.
+        \end{align*}
+    \end{proof}
+
+    En general, si $A_{1},\dots,A_{s}\in M_{m\times m}(F)$, entonces $A_{1}\cdot A_{2}\cdots A_{s}$
+    es invertible y
+    \begin{equation*}
+        (A_{1}\cdot A_{2}\cdots A_{s})^{-1}=A_{s}^{-1}\cdot A_{s-1}^{-1}\cdots A_{1}^{-1}.
+    \end{equation*}
+
+    \begin{mdframed}[style=mdgraybox,frametitle={Proposición 11}]
+        Sea $A=(a_{ij})\in M_{m\times m}(F)$, entonces $A$ es invertible si y solo si es
+        equivalente a $I_{m}$.
+    \end{mdframed}
+
+    \begin{proof}
+        Si $A$ es equivalente a $I_{m}$ entonces existe $P\in M_{m\times m}(F)$ invertibel tal que
+        \begin{equation*}
+            PA=I_{m}
+        \end{equation*}
+    \end{proof}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Definición 10: Matriz elemental}]
+        Una matriz $E\in M_{m\times m}(F)$ se llama elemental si resulta de aplicar una
+        operación elemental de fila a $I_{m}\in M_{m\times m}(F)$.
+    \end{mdframed}
+
+    \textbf{Observación.} Si $E$ es una matriz elemental, entonces es invertible
+    \begin{equation*}
+        E_{j}^{-1}(E_{j}(I_{m}))=I_{m}\Longleftrightarrow E_{j}^{-1}(I_{m})\cdot E_{j}(I_{m})=I_{m}
+    \end{equation*}
+    y su inversa es también una matriz elemental.
+
+    \begin{mdframed}[style=mdgraybox,frametitle={Teorema 3}]
+        Sea $A\in M_{m\times m}(F)$, las siguientes afirmaciones son equivalentes.
+        \begin{enumerate}
+            \item[$(i)$] $A$ es invertible
+            \item[$(ii)$] $A$ es equivalente por filas a $I_{m}$
+            \item[$(iii)$] $A$ es producto finito de matrices elementales.  
+        \end{enumerate}
+    \end{mdframed}
+
+    \begin{proof}
+        $(i)\implies (ii)\implies (iii)\implies (i)$\\
+        Supongamos que $A$ es invertible, es decir, existe $A^{-1}$. Sea $R$ la matriz RFE
+        a $A$, entonces
+        \begin{equation*}
+            R=E_{k}\cdots E_{2}\cdot E_{1}\cdot A.
+        \end{equation*}
+        Donde $E_{j}$ es una matriz elemental para $j=1,2,\cdots,k$.
+        \begin{align*}
+            R^{-1}&=(E_{k}\cdot E_{k-1}\cdots E_{1}\cdot A)^{-1}\\
+            &=A^{-1}\cdot E_{1}^{-1}\cdots E_{k}^{-1}.
+        \end{align*}
+        Por tanto $R$ es RFE e invertible. Así que $R$ no tiene filas cero, por tanto tiene
+        $m$ pivotes, así
+        \begin{equation*}
+            R=I_{m}
+        \end{equation*}
+        Hemos probado que $(i)\implies (ii)$. Supongamos que $A$ es equivalente a $I_{m}$, entonces
+        \begin{equation*}
+            A=E_{k}\cdots E_{2}\cdot E_{1}\cdot I_{m},
+        \end{equation*}
+        donde $E_{1},\dots,E_{k}$ son matrices elementales, por tanto
+        \begin{equation*}
+            A=E_{k}\cdots E_{1}.
+        \end{equation*}
+        Así, $(ii)\implies (iii)$. Supongamos que $A=E_{k}\cdots E_{1}$ donde $E_{1},\dots,E_{k}$
+        son elementales, entonces como estas matrices son invertibles existe
+        \begin{equation*}
+            A^{-1}=E_{1}^{-1}\cdot E_{2}^{-1}\cdots E_{k}^{-1}.
+        \end{equation*}
+        Así $(iii)\implies (i)$.
+    \end{proof}
+
+    \begin{mdframed}[style=mdgraybox,frametitle={Corolario 3}]
+        Sean $A,B\in M_{m\times m}(F)$, entonces $A$ y $B$ son equivalentes si y solo si
+        existe una matriz invertible $P\in M_{m\times m}(F)$ tal que
+        \begin{equation*}
+            A=P\cdot B.
+        \end{equation*}
+    \end{mdframed}
+
+    \begin{proof}
+        $P\in M_{m\times m}(F)$ es invertible si y solo si $P$ es producto de matrices elementales,
+        \begin{equation*}
+            B=P^{-1}A.
+        \end{equation*}
+    \end{proof}
+
+    \begin{mdframed}[style=mdgraybox,frametitle={Teorema 4}]
+        Sea $A\in M_{m\times m}(F)$, las siguientes afirmaciones son equivalentes
+        \begin{enumerate}
+            \item[$(i)$] $A$ es invertible
+            \item[$(ii)$] El sistema homogéneo
+            \begin{equation*}
+                A
+                \begin{pmatrix}
+                    x_{1}\\
+                    \vdots\\
+                    x_{m}
+                \end{pmatrix}
+                =
+                \begin{pmatrix}
+                    0\\
+                    \vdots\\
+                    0
+                \end{pmatrix}
+                \implies (0,\dots,0)\in F^{m}.
+            \end{equation*}
+            \item[$(iii)$] El sistema aumentado
+            \begin{equation*}
+                A
+                \begin{pmatrix}
+                    x_{1}\\
+                    \vdots\\
+                    x_{m}
+                \end{pmatrix}
+                =
+                \begin{pmatrix}
+                    b_{1}\\
+                    \vdots\\
+                    b_{m}
+                \end{pmatrix},
+            \end{equation*}
+            tiene solución para cada
+            \begin{equation*}
+                \begin{pmatrix}
+                    b_{1}\\
+                    \vdots\\
+                    b_{m}
+                \end{pmatrix}
+                \in M_{m\times 1}(F).
+            \end{equation*}
+        \end{enumerate}
+    \end{mdframed}
+
+    \begin{proof}
+        $(iii)\implies (ii)$.\\
+        El sistema homogéneo $AX=0$ siempre tiene la solución trivial. Como $(iii)$ nos
+        dice que es única, entonces tiene que ser esta. Como $A$ es invertible si y solo si
+        es equivalente a $I_{m}$, entonces tenemos que
+        \begin{equation*}
+            (i)\Longleftrightarrow(ii).
+        \end{equation*}
+        Probemos que $(i)$ implica $(iii)$. Existe $A^{-1}$ por hipotesis
+        \begin{equation*}
+            A
+            \begin{pmatrix}
+                x_{1}\\
+                \vdots\\
+                x_{m}
+            \end{pmatrix}
+            =
+            \begin{pmatrix}
+                b_{1}\\
+                \vdots\\
+                b_{m}
+            \end{pmatrix}
+            \implies A^{-1}A
+            \begin{pmatrix}
+                x_{1}\\
+                \vdots\\
+                x_{m}
+            \end{pmatrix}
+            =A^{-1}
+            \begin{pmatrix}
+                b_{1}\\
+                \vdots\\
+                b_{m}
+            \end{pmatrix}
+        \end{equation*}
+        La solución es $(c_{1},\dots,c_{m})$ donde
+        \begin{equation*}
+            c_{i}=\sum_{j=1}^{m}e_{ij}b_{j},\qquad A^{-1}=(e_{ij}).
+        \end{equation*}
+    \end{proof}
+
+    \chapter{Espacios Vectoriales}
+
+    \section{Espacios Vectoriales}
+
+    Un conjunto $V$ es un espacio vectorial sobre $F$ si existen 2 operaciones.
+
+    \textbf{Suma}
+    \begin{align*}
+        +:V\times V&\to V\\
+        (v_{1},v_{2})&\mapsto v_{1}+v_{2}
+    \end{align*}
+
+    \textbf{Prodcuto Escalar}
+    \begin{align*}
+        \cdot: F\times V&\to V\\
+        (a,v)&\mapsto a\cdot v
+    \end{align*}
+
+    que satisfacen
+    \begin{itemize}
+        \item La suma es asociativa: $(v_{1}+v_{2})+v_{3}=v_{1}+(v_{2}+v_{3})$
+        \item La suma es conmutativa: $v_{1}+v_{2}=v_{2}+v_{1}$
+        \item $\exists0\in V$ tal que $v_{1}+0=v_{1}$
+        \item $\forall v\in V$, $\exists! -v\in V$ tal que $v+(-v)=0$.
+        \item $1\cdot v=v\qquad$ (producto escalar con $1\in F$)
+        \item $(a_{1}\cdot a_{2})\cdot v=a_{1}\cdot(a_{2}\cdot v)\qquad$ (asociatividad del producto escalar)
+        \item $a\cdot(v_{1}+v_{2})=a\cdot v_{1}+a\cdot v_{2}\qquad$ (distributividad de la suma de $V$)
+        \item $(a_{1}+a_{2})\cdot v=a_{1}\cdot v+a_{2}\cdot v\qquad$ (distributividad en la suma de $F$)  
+    \end{itemize}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Definición 11: Vectores y escalares}]
+        Los elementos en $V$ se llaman vectores.
+        Los elementos de $F$ se llaman escalares.
+    \end{mdframed}
+
+    \textbf{Ejemplo 14.}\\
+    Sea $F$ un campo
+    \begin{equation*}
+        F^{n}=\{(a_{1},\dots,a_{n}):a_{1},\dots,a_{n}\in F\}.
+    \end{equation*}
+    Definimos las operaciones
+    \begin{align*}
+        +:F^{n}\times F^{n}&\to F^{n}\\
+        ((a_{1},\dots,a_{n}),(b_{1},\dots,b_{n}))&\mapsto (a_{1}+b_{1},\dots,a_{n}+b_{n}).
+    \end{align*}
+    \begin{align*}
+        \cdot:F\times F^{n}&\to F^{n}\\
+        (a,(a_{1},\dots,a_{n}))&\mapsto (a\cdot a_{1},a\cdot a_{2},\cdots,a\cdot a_{n})
+    \end{align*}
+    \hfill $\blacktriangleleft$
+
+    \begin{mdframed}[style=mdgraybox,frametitle={Proposición 12}]
+        Con estas operaciones $F^{n}$ tiene estructura de espacio vectorial sobre $F$.
+    \end{mdframed}
+
+    \begin{proof}
+        (1) La suma es asociativa porque la suma en $F$ lo es
+        \begin{equation*}
+            (a_{1},\dots,a_{n})+((b_{1},\dots,b_{n}),(c_{1},\dots,c_{n}))=((a_{1},\dots,a_{n})+(b_{1},\dots,b_{n})+(c_{1},\dots,c_{n}))
+        \end{equation*}
+        (2) La suma es conmutativa porque la suma en $F$ lo es
+        \begin{equation*}
+            (a_{1},\dots,a_{n})+(b_{1},\dots,b_{n})=(b_{1},\dots,b_{n})+(a_{1},\dots,a_{n}).
+        \end{equation*}
+        (3) $0=(0,\dots,0)\in F^{n}$ satiface $0+(a_{1},\dots,a_{n})=(a_{1},\dots,a_{n})$.\\
+        (4) Dado $(a_{1},\dots,a_{n})\in F^{n}$, $(-a_{1},\dots,-a_{n})\in F^{n}$ satisfacen
+        $(a_{1},\dots,a_{n})+(-a_{1},\dots,-a_{n})=0$
+    \end{proof}
+
+    \begin{mdframed}[style=mdgraybox,frametitle={Proposición 13}]
+        Sea $V$ un espacio vectorial sobre un campo $F$, entonces
+        \begin{enumerate}
+            \item[(1)] $V$ es no vacío, pues contiene a 0
+            \item[(2)] El cero $0\in V$ tal que $v+0=v,\quad\forall v\in V$ es único
+            supongamos que $0^{\prime}\in V$ que satisfacen esta propiedad, entonces
+            \begin{equation*}
+                0=0+0^{\prime}=0^{\prime}+0=0^{\prime}
+            \end{equation*}
+            \item[(3)] Dado $v\in V$, el vector $-v\in V$ tal que $v+(-v)=0$ es único.
+            Supongamos que $w\in V$ satisface $v+w=0$ entonces $((-v)+v)+w=0+w=w=-w+(v+w)=-v+0=-v$.
+            \item[(4)] $0\cdot v=0\in V$
+            \item[(5)] $a\cdot 0=0$ 
+        \end{enumerate}
+    \end{mdframed}
+
+    \section{Subespacios vectoriales}
 
 \end{document}

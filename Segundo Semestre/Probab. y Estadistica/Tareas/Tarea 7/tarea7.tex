@@ -1,0 +1,119 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{ugmath}
+\usepackage{float}
+\usepackage{placeins}
+\usepackage{array}
+\usepackage[labelfont=bf,labelsep=space]{caption}
+\newcommand{\paren}[1]{\left( #1 \right)}
+\newcommand{\alumno}{Ricardo León Martínez}
+\newcommand{\materia}{Elementos de Probabilidad y Estadistica}
+\newcommand{\profesor}{Claudia Reynoso Alcántara}
+\newcommand{\tarea}{Tarea 5}
+\newcommand{\fecha}{25/3/2026}
+
+\begin{document}
+
+    \begin{center}
+        {\large\textbf{UNIVERSIDAD DE GUANAJUATO}}\\[0.3cm]
+        {\normalsize\textbf{DIVISIÓN DE CIENCIAS NATURALES Y EXACTAS}}\\
+        {\normalsize\textbf{CAMPUS GUANAJUATO}}\\[1cm]
+
+        {\Large\textbf{\tarea\ (\materia)}}\\[1cm]
+    \end{center}
+
+    \noindent
+    \textbf{Nombre:} \alumno 
+    \hfill 
+    \textbf{Fecha:} \fecha 
+    \hfill 
+    \textbf{Calificación:} \rule{3cm}{0.4pt}
+
+    \vspace{0.3cm}
+
+    \begin{mdframed}[style=mdpinkbox,frametitle={Ejercicio 1}]
+        Pedro tiene una casa a la cual considera ponerle una alarma antirrobos. Sea $A$ el evento de
+        que Pedro instale una alarma antes de finalizar el año y sea $B$ el evento de que roben la casa
+        de Pedro antes de que finalice el año. Conteste lo siguiente.
+
+        (a) Intuitivamente, ¿cuál probablidad entre $P(A \mid B)$ o $P(A \mid B^c)$ es más grande? Explique su respuesta.
+
+        (b) Intuitivamente, ¿cuál probablidad entre $P(B \mid A)$ o $P(B \mid A^c)$ es más grande? Explique su respuesta.
+
+        (c) Demuestre que para cualesquiera eventos $A, B$ con probabilidades $0 < P(A), P(B) < 1$, se cumple que
+        \[
+        P(A \mid B) > P(A \mid B^c) \iff P(B \mid A) > P(B \mid A^c).
+        \]
+
+        (d) En 1982, Tversky y Kahneman publicaron una encuesta en la que se le preguntó los incisos (a) y (b)
+        a 162 personas, de las cuales 131 respondieron que $P(A \mid B) > P(A \mid B^c)$ pero $P(B \mid A) < P(B \mid A^c)$.
+        Dé una posible explicación del porqué esta respuesta fue tan popular a pesar de que estas dos
+        desigualdades no pueden satisfacerse simultáneamente.
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdpinkbox,frametitle={Ejercicio 2}]
+        Decimos que $B$ aporta información negativa sobre $A$ si se cumple que $P(A \mid B) \leq P(A)$.
+        Demuestre que si $B$ con $0 < P(B) < 1$ aporta información negativa sobre $A$, entonces su complemento
+        $B^c$ aporta información positiva, es decir, $P(A \mid B^c) \geq P(A)$.
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdpinkbox,frametitle={Ejercicio 3}]
+        Decimos que $A$ implica a $B$ probabilísticamente si se cumple que $P(B \mid A) = 1$. Demuestre
+        que si dos eventos $A_1, A_2$ con la misma probabilidad inicial $P(A_1) = P(A_2)$ implican cada uno a $B$
+        probabilísticamente, es decir, $P(B \mid A_i) = 1$ para $i = 1, 2$, entonces $A_1, A_2$ también tienen
+        la misma probabilidad posterior $P(A_1 \mid B) = P(A_2 \mid B)$. Dé un ejemplo concreto en el que
+        $P(B \mid A_1) = P(B \mid A_2) = 1$ pero $P(A_1 \mid B) \neq P(A_2 \mid B)$.
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdpinkbox,frametitle={Ejercicio 4}]
+        En lógica determinista, la afirmación “$A$ implica $B$” es equivalente a su contrapositiva “no $B$
+        implica no $A$”. En este problema consideramos el equivalente probabilístico. Sean $A, B$ eventos
+        con probabilidades distintas de $0$ y $1$.
+
+        (a) Demuestre que $P(B \mid A) = 1$ es equivalente a $P(A^c \mid B^c) = 1$.
+
+        (b) Dé un ejemplo donde lo anterior no se cumple si la igualdad es reemplazada por aproximadamente.
+        Sugerencia: encuentre eventos independientes tales que $P(B \mid A)$ es muy cercano a $1$ pero
+        $P(A^c \mid B^c)$ es muy cercano a $0$.
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdpinkbox,frametitle={Ejercicio 5}]
+        Demuestre que si $B$ es un evento tal que $P(B)(1 - P(B)) = 0$, entonces $B$ es independiente
+        de cualquier otro evento $A$. En particular, si $P(B) = 1$, entonces para la probabilidad inicial
+        y posterior de cualquier otro evento $A$ coinciden, esto es, $P(A \mid B) = P(A)$.
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdpinkbox,frametitle={Ejercicio 6}]
+        Demuestre que si $A_1, A_2, \dots, A_n$ son independientes, también lo son
+        $A_1^c, A_2^c, \dots, A_n^c$. En particular, se cumple que
+        \[
+        P(A_1 \cup A_2 \cup \cdots \cup A_n) = 1 - \prod_{k=1}^{n} (1 - P(A_k)).
+        \]
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdpinkbox,frametitle={Ejercicio 7}]
+        Alicia y Roberto comparten casa en una comunidad en la que habitan otras 100 personas.
+        Si elegimos una persona al azar, la probabilidad de que tenga una amistad con Alicia es $\frac{1}{2}$,
+        y lo mismo sucede con Roberto. Sea $C$ el conjunto de las otras 100 personas, $A$ el conjunto de amigos
+        de Alicia y $B$ el conjunto de amigos de Roberto. Encuentre lo siguiente bajo la hipótesis de que
+        todas las amistades son independientes.
+
+        (a) $P(A = D)$ para algún $D \subset C$ dado.
+
+        (b) $P(A \subset B)$.
+
+        (c) $P(A \cup B = C)$.
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdpinkbox,frametitle={Ejercicio 8}]
+        En el problema de Monty Hall, el presentador da a elegir a un concursante una de tres puertas,
+        detrás de las cuales hay dos cabras y un automóvil. Después de elegir, el presentador abre una
+        puerta con cabra, quedando dos cerradas. Se puede conservar la elección o cambiar.
+
+        Antes de cada concurso, Monty lanza una moneda con probabilidad $p \in (0,1)$ de obtener sol.
+        El concursante conoce $p$ pero no el resultado. Si cae sol, Monty abre una puerta con cabra;
+        si cae águila, abre una puerta al azar (posiblemente con automóvil).
+
+        Si Monty ha abierto una puerta con una cabra, determine si es más conveniente conservar la elección
+        inicial o cambiar de puerta.
+    \end{mdframed}
+\end{document}
