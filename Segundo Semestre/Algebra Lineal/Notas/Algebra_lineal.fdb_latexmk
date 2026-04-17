@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1776309956.97594 "/home/void/DEMAT-UG/Segundo Semestre/Algebra Lineal/Notas/Algebra_lineal.tex" "Algebra_lineal.pdf" "Algebra_lineal" 1776309959.19587 0
-  "/home/void/DEMAT-UG/Segundo Semestre/Algebra Lineal/Notas/Algebra_lineal.tex" 1776309954.5061 55700 625cfd4686b09fc32f2c1568d145ceed ""
+["pdflatex"] 1776435378.64793 "/home/void/DEMAT-UG/Segundo Semestre/Algebra Lineal/Notas/Algebra_lineal.tex" "Algebra_lineal.pdf" "Algebra_lineal" 1776435380.26141 0
+  "/home/void/DEMAT-UG/Segundo Semestre/Algebra Lineal/Notas/Algebra_lineal.tex" 1776435376.90401 55718 f12272b0aee92f347c44323778b7e3a1 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1775415801 2375 baa924870cfb487815765f9094cf3728 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc" 1775415801 3486 c7eadf5dcc57b3b2d11736679f6636ba ""
   "/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1775415801 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
@@ -285,14 +285,14 @@
   "/usr/share/texmf-dist/tex/latex/zref/zref-abspage.sty" 1775415801 2269 2de6c7a5fd634dfef00a960544463a38 ""
   "/usr/share/texmf-dist/tex/latex/zref/zref-base.sty" 1775415801 20785 198a9cb2e04238d92c320d0d9edbd76a ""
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1775415801 43569 fd570f2fa160877d211e859f687312ba ""
-  "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1776015126 5541339 b32eb00eb34cd5c925a7827d916d9dbd ""
-  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1776015044 3765585 7f25421ad6f945b815355cab84f3ee26 ""
-  "Algebra_lineal.aux" 1776309959.04866 6748 443be05adfd60e7b8cc9a269e7f98fca "pdflatex"
-  "Algebra_lineal.out" 1776309959.05166 1786 4217a97e83e05a8f263c554e8d4c314d "pdflatex"
-  "Algebra_lineal.tex" 1776309954.5061 55700 625cfd4686b09fc32f2c1568d145ceed ""
-  "Algebra_lineal.toc" 1776309959.05166 870 a69694dffc6f0affe0333e73e1e8372b "pdflatex"
-  "linealdefinitivo.pdf" 1775100359.3051 87668 63956c5f85016f48c4cc76fe5bbd18b1 ""
-  "ugmath.sty" 1776297345.3252 6888 5fe29a109c098f74e15c4d673ee0f1f8 ""
+  "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1776329205 5541339 b32eb00eb34cd5c925a7827d916d9dbd ""
+  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1776329161 3765586 f908b126a1b9387c6314a46965df5ea5 ""
+  "Algebra_lineal.aux" 1776435380.17236 6618 22685d316cc2927df205d516adb08e0d "pdflatex"
+  "Algebra_lineal.out" 1776435380.17436 1786 4217a97e83e05a8f263c554e8d4c314d "pdflatex"
+  "Algebra_lineal.tex" 1776435376.90401 55718 f12272b0aee92f347c44323778b7e3a1 ""
+  "Algebra_lineal.toc" 1776435380.17436 870 a69694dffc6f0affe0333e73e1e8372b "pdflatex"
+  "linealdefinitivo.pdf" 1774981347.08165 87668 63956c5f85016f48c4cc76fe5bbd18b1 ""
+  "ugmath.sty" 1776435083.63409 6888 5fe29a109c098f74e15c4d673ee0f1f8 ""
   (generated)
   "Algebra_lineal.aux"
   "Algebra_lineal.log"
