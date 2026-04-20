@@ -1,0 +1,271 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{ugmath}
+\usepackage{float}
+\usepackage{placeins}
+\usepackage{array}
+\usepackage[labelfont=bf,labelsep=space]{caption}
+\newcommand{\paren}[1]{\left( #1 \right)}
+\newcommand{\alumno}{Ricardo León Martínez}
+\newcommand{\materia}{Algebra Lineal I}
+\newcommand{\profesor}{Claudia Reynoso Alcántara}
+\newcommand{\tarea}{Tarea 9}
+\newcommand{\fecha}{20/4/2026}
+
+
+\begin{document}
+
+    \begin{center}
+        {\large\textbf{UNIVERSIDAD DE GUANAJUATO}}\\[0.3cm]
+        {\normalsize\textbf{DIVISIÓN DE CIENCIAS NATURALES Y EXACTAS}}\\
+        {\normalsize\textbf{CAMPUS GUANAJUATO}}\\[1cm]
+
+        {\Large\textbf{\tarea\ (\materia)}}\\[1cm]
+    \end{center}
+
+    \noindent
+    \textbf{Nombre:} \alumno 
+    \hfill 
+    \textbf{Fecha:} \fecha 
+    \hfill 
+    \textbf{Calificación:} \rule{3cm}{0.4pt}
+
+    \vspace{0.3cm}
+
+    \begin{mdframed}[style=mdpinkbox,frametitle={Ejercicio 1}]
+        (2 puntos) Determina cuales de las siguientes funciones $T$ de $\R^{2}$ a $\R^{2}$ son
+        transformaciones lineales:
+        \begin{enumerate}
+            \item[(a)] $T(x_{1},x_{2})=(1+x_{1},x_{2})$;
+            \item[(b)] $T(x_{1},x_{2})=(x_{2},x_{1})$;
+            \item[(c)] $T(x_{1},x_{2})=(x_{1}+2x_{2},x_{1}-4x_{2})$;
+            \item[(d)] $T(x_{1},x_{2})=(\sin(x_{1}),\sin(x_{2}))$   
+        \end{enumerate}
+        justifica tu respuesta.
+    \end{mdframed}
+
+    \begin{solucion}
+        \begin{enumerate}
+            \item[(a)] $T(x_{1},x_{2})=(1+x_{1},x_{2})$.\\
+            Evaluamos en el vector nulo
+            \begin{equation*}
+                T(0,0)=(1,0)\neq(0,0).
+            \end{equation*}
+            Por lo tanto, $T$ no es lineal.
+            \item[(b)] $T(x_{1},x_{2})=(x_{2},x_{1})$.\\
+            Sean $u=(a,b)$, $v=(c,d)$, $\a\in\R$.
+            \begin{align*}
+                T(u+v)=T(a+c,b+d)=(b+d,a+c).\\
+                T(u)+T(v)=(b,a)+(d,c)=(b+d,a+c).
+            \end{align*}
+            Luego $T(u+v)=T(u)+T(v)$. Ademas,
+            \begin{equation*}
+                T(\a u)=T(\a a,\a b)=(\a b,\a a)=\a(b,a)=\a T(u).
+            \end{equation*}
+            Por lo tanto, $T$ es lineal.
+            \item[(c)] $T(x_{1},x_{2})=(x_{1}+2x_{2},x_{1}-4x_{2})$.\\
+            Sean $u=(a,b)$, $v=(c,d)$, $\a\in\R$.
+            \begin{align*}
+                T(u+v)=(a+c+2(b+d),a+c-4(b+d))=(a+2b+c+2d,a-4b+c-4d).\\
+                T(u)+T(v)=(a+2b,a-4b)+(c+2d,c-4d)=(a+2b+c+2d,a-4b+c-4d).
+            \end{align*}
+            Se cumple $T(u+v)=T(u)+T(v)$.
+            \begin{equation*}
+                T(\a u)=(\a a+2\a b,\a a-4\a b)=\a(a+2b,a-4b)=\a T(u).
+            \end{equation*}
+            Luego $T$ es lineal.
+            \item[(d)] $T(x_{1},x_{2})=(\sin(x_{1}),\sin(x_{2}))$.\\
+            Tomemos $u=(\pi/2,0)$ y $(\pi/2,0)$. Entonces
+            \begin{align*}
+                T(u+v)&=T(\pi,0)=(\sin(\pi),\sin(0))=(0,0).\\
+                T(u)+T(v)&=(\sin(\pi/2),\sin(0))+(\sin(\pi/2),\sin(0))=(1,0)+(1,0)=(2,0).
+            \end{align*}
+            Como $(0,0)\neq(2,0)$, la condición falla. Por lo tanto $T$ no es lineal.
+        \end{enumerate}
+    \end{solucion}
+
+    \begin{mdframed}[style=mdpinkbox,frametitle={Ejercicio 2}]
+        (1 punto) ¿Existe alguna transformación lineal de $\R^{3}$ en $\R^{2}$ tal que
+        $T(2,2,2)=(2,0)$ y $T(1,1,1)=(0,1)$ (justifica tu respuesta).
+    \end{mdframed}
+
+    \begin{solucion}
+        Sean $u=(2,2,2)$ y $v=(1,1,1)$. Observemos que $u=2v$, pues
+        \begin{equation*}
+            (2,2,2)=2(1,1,1).
+        \end{equation*}
+        Si $T$ es lineal, entonces debe cumplirse
+        \begin{equation*}
+            T(u)=T(2v)=2T(v).
+        \end{equation*}
+        Sustituyendo los valores
+        \begin{equation*}
+            T(2,2,2)=(2,0),\qquad T(1,1,1)=(0,1).
+        \end{equation*}
+        La condición de linealidad es
+        \begin{equation*}
+            (2,0)=2(0,1)=(0,2).
+        \end{equation*}
+        Pero $(2,0)\neq(0,2)$. Por lo tanto, no existe una trasnsformacion lineal
+        $T:\R^{3}\to\R^{2}$ que cumpla ambas condiciones.
+    \end{solucion}
+
+    \begin{mdframed}[style=mdpinkbox,frametitle={Ejercicio 3}]
+        Sea $T:\R^{3}\to\R^{3}$ tal que $T(1,0,0)=(0,0,1)$, $T(1,1,0)=(1,1,1)$ y $T(1,1,1)=(1,1,0)$.
+        \begin{enumerate}
+            \item[(a)] (1 punto) Encuentra $T(x_{1},x_{2},x_{3})$.
+            \item[(b)] (1 punto) Encuentra el espacio nulo, imagen, nulidad y rango de $T$. 
+        \end{enumerate}
+    \end{mdframed}
+
+    \begin{solucion}
+        \begin{enumerate}
+            \item[(a)] (1 punto) Encuentra $T(x_{1},x_{2},x_{3})$.\\
+            Buscamos $a,b,c\in\R$ tales que
+            \begin{equation*}
+                (x_{1},x_{2},x_{3})=a(1,0,0)+b(1,1,0)+c(1,1,1).
+            \end{equation*}
+            Desarrollando
+            \begin{equation*}
+                (x_{1},x_{2},x_{3})=(a+b+c,b+c,c).
+            \end{equation*}
+            Igualamos componentes
+            \begin{equation*}
+                \begin{cases}
+                    x_{1}=a+b+c,\\
+                    x_{2}=b+c,\\
+                    x_{3}=c.
+                \end{cases}
+            \end{equation*}
+            Resolviendo
+            \begin{equation*}
+                c=x_{3},\quad b=x_{2}-x_{3},\quad a=x_{1}-b-c=x_{1}-(x_{2}-x_{3})-x_{3}=x_{1}-x_{2}.
+            \end{equation*}
+            Por lo tanto,
+            \begin{equation*}
+                (x_{1},x_{2},x_{3})=(x_{1}-x_{2})v_{1}+(x_{2}-x_{3})v_{2}+x_{3}v_{3}.
+            \end{equation*}
+            Dado que $T$ es lineal,
+            \begin{equation*}
+                T(x_{1},x_{2},x_{3})=(x_{1}-x_{2})T(v_{1})+(x_{2}-x_{3})T(v_{2})+x_{3}T(v_{3}).
+            \end{equation*}
+            Sustituimos los valores conocidos
+            \begin{equation*}
+                T(v_{1})=(0,0,1),\quad T(v_{2})=(1,1,1),\quad T(v_{3})=(1,1,0).
+            \end{equation*}
+            Entonces
+            \begin{align*}
+                T(x_{1},x_{2},x_{3})&=(x_{1}-x_{2})(0,0,1)+(x_{2}-x_{3})(1,1,1)+x_{3}(1,1,0)\\
+                &=(0,0,x_{1}-x_{2})+(x_{2}-x_{3},x_{2}-x_{3},x_{2}-x_{3})+(x_{3},x_{3},0).
+            \end{align*}
+            Por lo tanto
+            \begin{equation*}
+                T(x_{1},x_{2},x_{3})=(x_{2},x_{2},x_{1}-x_{3}).
+            \end{equation*}
+            \item[(b)] (1 punto) Encuentra el espacio nulo, imagen, nulidad y rango de $T$.
+            \begin{equation*}
+                \ker(T)=\{(x_{1},x_{2},x_{3})\in\R^{3}:T(x_{1},x_{2},x_{3})=(0,0,0)\}
+            \end{equation*}
+            Igualamos
+            \begin{equation*}
+                (x_{2},x_{2},x_{1}-x_{3})=(0,0,0).
+            \end{equation*}
+            Esto implica
+            \begin{equation*}
+                x_{2}=0,\quad x_{1}-x_{3}=0\implies x_{1}=x_{3}.
+            \end{equation*}
+            Ademas $x_{2}=0$. Por lo tanto
+            \begin{equation*}
+                \ker(T)=\{(t,0,t):t\in\R\}=\gen{(1,0,1)}.
+            \end{equation*}
+            Así, $\nul(T)=1$.
+            \begin{equation*}
+                \Im(T)=\{T(x_{1},x_{2},x_{3}):(x_{1},x_{2},x_{3})\in\R^{3}\}=\{(x_{2},x_{2},x_{1}-x_{3})\}.
+            \end{equation*}
+            La primera y segunda coordenadas son iguales. Así,
+            \begin{equation*}
+                (x_{2},x_{2},x_{1}-x_{3})=x_{1}(1,1,0)+(x_{1}-x_{3})(0,0,1).
+            \end{equation*}
+            Sean $u=x_{2}\in\R$, $v=x_{1}-x_{3}\in\R$. Entonces cualquier vector de la imagen es de la forma
+            \begin{equation*}
+                u(1,1,0)+v(0,0,1),\quad u,v\in\R.
+            \end{equation*}
+            Los vectores $(1,1,0)$ y $(0,0,1)$ son linealmente independientes. Por tanto
+            \begin{equation*}
+                \Im(T)=\gen{(1,1,0),(0,0,1)}
+            \end{equation*}
+            Así, $\rg(2)$.
+        \end{enumerate}
+    \end{solucion} 
+
+    \begin{mdframed}[style=mdpinkbox,frametitle={Ejercicio 4}]
+        (1 punto) Sean $V_{1},V_{2},V_{3}$ espacios vectoriales sobre $F$. Sean $T_{1}:V_{1}\to V_{2}$
+        y $T_{2}:V_{2}\to V_{3}$, transformaciones lineales. Demuestra que $T_{2}\circ T_{1}:V_{1}\to V_{3}$
+        es una transformación lineal.
+    \end{mdframed}
+
+    \begin{proof}
+        Debemos probar que $T_{2}\circ T_{1}$ es linal, es decir, que para todo $x,y\in V_{1}$ y para todo
+        $\a\in F$ se cumple\\
+        1. $(T_{2}\circ T_{1})(x+y)=(T_{2}\circ T_{1})(x)+(T_{2}\circ T_{1})(y)$\\
+        2. $(T_{2}\circ T_{1})(\a x)=\a(T_{2}\circ T_{1})(x)$.\\
+        Veamos que se cumple la primera condición.
+        \begin{align*}
+            (T_{2}\circ T_{1})(x+y)&=T_{2}(T_{1}(x+y))\text{ (por definición de composición)}\\
+            &=T_{2}(T_{1}(x)+T_{1}(y))\text{ (Por linealidad de $T_{1}$)}\\
+            &=T_{2}(T_{1}(x))+T_{2}(T_{1}(y))\text{ (Por linealidad de $T_{2}$)}\\
+            &=(T_{2}\circ T_{1})(x)+(T_{2}\circ T_{1})(y).
+        \end{align*}
+        Así, se cumple que $(T_{2}\circ T_{1})(x+y)=(T_{2}\circ T_{1})(x)+(T_{2}\circ T_{1})(y)$.
+        Veamos ahora que se cumple la segunda condición.
+        \begin{align*}
+            (T_{2}\circ T_{1})(\a x)&=T_{2}(T_{1}(\a x))\text{ (por definición de composición)}\\
+            &=T_{2}(\a T_{1}(x))\text{ (por linealidad de $T_{1}$)}\\
+            &=\a T_{2}(T_{1}(x))\text{ (por linealidad de $T_{2}$)}\\
+            &=\a(T_{2}\circ T_{1})(x).
+        \end{align*}
+        Como se cumplen ambas condiciones, $T_{2}\circ T_{1}$ es una transformación lineal de $V_{1}$ en $V_{3}$.
+    \end{proof}
+
+    \begin{mdframed}[style=mdpinkbox,frametitle={Ejercicio 5}]
+        (2 puntos) Sea $V$ un espacio vectorial de dimensión finita $n$ sobre $F$ y sea $T:V\to V$
+        una transformación lineal tal que $\Im(T)=\ker(T)$. Demuestra que $n$ es par y construye un ejemplo
+        de una transformación lineal con esta propiedad.
+    \end{mdframed}
+    
+    \begin{proof}
+        Por el teorema de rango-nulidad, tenemos
+        \begin{equation*}
+            \rg(T)+\nul(T)=\dim(V)=n.
+        \end{equation*}
+        Dado que $\Im(T)=\ker(T)$, se sigue que
+        \begin{equation*}
+            \rg(T)=\nul(T).
+        \end{equation*}
+        Sustituyendo en la ecuación anterior
+        \begin{equation*}
+            \rg(T)+\rg(T)=n,
+        \end{equation*}
+        es decir,
+        \begin{equation*}
+            2\rg(T)=n.
+        \end{equation*}
+        Por lo tanto, $n=2\rg(T)$ es un número par.
+    \end{proof}
+    Tomemos $V=\R^{2}$. Buscamos una transformación lineal $T:\R^{2}\to\R^{2}$ tal que
+    $\Im(T)=\ker(T)$. Un ejemplo es
+    \begin{equation*}
+        T(x_{1},x_{2})=(x_{2},0).
+    \end{equation*}
+    \textbf{Kernel:} $T(x_{1},x_{2})=(0,0)\implies(x_{2},0)=(0,0)\implies x_{2}=0$. Por lo tanto,
+    $\ker(T)=\{(x_{1},0):x_{1}\in\R\}=\gen{(0,1)}$. Luego $\nul(T)=1$.\\
+    \textbf{Imagen:} Los vectores de la forma $T(x_{1},x_{2})=(x_{2},0)$ tienen segunda coordenada nula,
+    luego $\Im(T)=\{(t,0):t\in\R\}=\gen{(1,0)}$. Así, $\rg(T)=1$.\\
+    Así, $\Im(T)=\ker(T)$.
+
+    \begin{mdframed}[style=mdpinkbox,frametitle={Ejercicio 6}]
+        (2 puntos) Sea $V$ un espacio vectorial de dimensión $n$ sobre el campo $F$ y sea $\BB=\{v_{1},\dots,v_{n}\}$
+        una base ordenada de $V$. Definimos la transformación lineal $T:V\to V$ mediante $T(v_{j})=v_{j+1}$
+        para $j=1,\dots,n-1$ y $T(v_{n})=0$. Demuestra que $T^{n}=0$ y $T^{n-1}\neq0$.
+    \end{mdframed}
+
+\end{document}
