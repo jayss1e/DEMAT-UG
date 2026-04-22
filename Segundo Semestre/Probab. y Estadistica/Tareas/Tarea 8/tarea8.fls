@@ -1,9 +1,9 @@
-PWD c:/Users/Radoj/OneDrive/Documentos/DEMAT-UG/Segundo Semestre/Algebra Lineal/Tareas/Tarea 9
+PWD c:/Users/Radoj/OneDrive/Documentos/DEMAT-UG/Segundo Semestre/Probab. y Estadistica/Tareas/Tarea 8
 INPUT c:/texlive/2026/texmf.cnf
 INPUT c:/texlive/2026/texmf-dist/web2c/texmf.cnf
 INPUT c:/texlive/2026/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT c:/Users/Radoj/OneDrive/Documentos/DEMAT-UG/Segundo Semestre/Algebra Lineal/Tareas/Tarea 9/tarea9.tex
-OUTPUT tarea9.log
+INPUT c:/Users/Radoj/OneDrive/Documentos/DEMAT-UG/Segundo Semestre/Probab. y Estadistica/Tareas/Tarea 8/tarea8.tex
+OUTPUT tarea8.log
 INPUT c:/texlive/2026/texmf-dist/tex/latex/base/article.cls
 INPUT c:/texlive/2026/texmf-dist/tex/latex/base/article.cls
 INPUT c:/texlive/2026/texmf-dist/tex/latex/base/size12.clo
@@ -208,7 +208,7 @@ INPUT c:/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/ti
 INPUT c:/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryfadings.code.tex
 INPUT c:/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryfadings.code.tex
 INPUT c:/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryfadings.code.tex
-OUTPUT tarea9.pdf
+OUTPUT tarea8.pdf
 INPUT c:/texlive/2026/texmf-dist/tex/latex/pgf-blur/tikzlibraryshadows.blur.code.tex
 INPUT c:/texlive/2026/texmf-dist/tex/latex/pgf-blur/tikzlibraryshadows.blur.code.tex
 INPUT c:/texlive/2026/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryarrows.code.tex
@@ -387,10 +387,10 @@ INPUT c:/texlive/2026/texmf-dist/tex/latex/lm/t1lmr.fd
 INPUT c:/texlive/2026/texmf-dist/tex/latex/lm/t1lmr.fd
 INPUT c:/texlive/2026/texmf-dist/tex/latex/lm/t1lmr.fd
 INPUT c:/texlive/2026/texmf-dist/fonts/tfm/public/lm/ec-lmr12.tfm
-INPUT ./tarea9.aux
-INPUT ./tarea9.aux
-INPUT tarea9.aux
-OUTPUT tarea9.aux
+INPUT ./tarea8.aux
+INPUT ./tarea8.aux
+INPUT tarea8.aux
+OUTPUT tarea8.aux
 INPUT c:/texlive/2026/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT c:/texlive/2026/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT c:/texlive/2026/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -399,13 +399,13 @@ INPUT c:/texlive/2026/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 INPUT c:/texlive/2026/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 INPUT c:/texlive/2026/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 INPUT c:/texlive/2026/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-INPUT ./tarea9.out
-INPUT ./tarea9.out
-INPUT tarea9.out
-INPUT tarea9.out
-INPUT ./tarea9.out
-INPUT ./tarea9.out
-OUTPUT tarea9.out
+INPUT ./tarea8.out
+INPUT ./tarea8.out
+INPUT tarea8.out
+INPUT tarea8.out
+INPUT ./tarea8.out
+INPUT ./tarea8.out
+OUTPUT tarea8.out
 INPUT c:/texlive/2026/texmf-dist/fonts/tfm/public/lm/ec-lmr12.tfm
 INPUT c:/texlive/2026/texmf-dist/fonts/tfm/public/lm/ec-lmbx12.tfm
 INPUT c:/texlive/2026/texmf-dist/fonts/tfm/public/lm/ec-lmbx12.tfm
@@ -460,22 +460,15 @@ INPUT c:/texlive/2026/texmf-dist/fonts/tfm/public/stmaryrd/stmary6.tfm
 INPUT c:/texlive/2026/texmf-dist/fonts/tfm/public/lm/ec-lmri12.tfm
 INPUT c:/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT c:/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc
-INPUT c:/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc
 INPUT c:/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc
+INPUT c:/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc
 INPUT c:/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc
-INPUT c:/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc
 INPUT c:/texlive/2026/texmf-dist/fonts/tfm/public/lm/ec-lmr8.tfm
 INPUT c:/texlive/2026/texmf-dist/fonts/tfm/public/lm/ec-lmr6.tfm
-INPUT c:/texlive/2026/texmf-dist/fonts/tfm/public/lm/rm-lmr5.tfm
-INPUT c:/texlive/2026/texmf-dist/fonts/tfm/public/lm/lmmi5.tfm
-INPUT c:/texlive/2026/texmf-dist/fonts/tfm/public/lm/lmsy5.tfm
-INPUT c:/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm
-INPUT c:/texlive/2026/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
-INPUT c:/texlive/2026/texmf-dist/fonts/tfm/public/rsfs/rsfs5.tfm
-INPUT c:/texlive/2026/texmf-dist/fonts/tfm/public/stmaryrd/stmary5.tfm
-INPUT tarea9.aux
-INPUT ./tarea9.out
-INPUT ./tarea9.out
+INPUT c:/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc
+INPUT tarea8.aux
+INPUT ./tarea8.out
+INPUT ./tarea8.out
 INPUT c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmbx12.pfb
 INPUT c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmex10.pfb
 INPUT c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmmi12.pfb
@@ -484,6 +477,4 @@ INPUT c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmr12.pfb
 INPUT c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmr8.pfb
 INPUT c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmri12.pfb
 INPUT c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmsy10.pfb
-INPUT c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmsy8.pfb
 INPUT c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb
-INPUT c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb

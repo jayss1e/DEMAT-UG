@@ -1,0 +1,290 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{ugmath}
+\usepackage{float}
+\usepackage{placeins}
+\usepackage{array}
+\usepackage[labelfont=bf,labelsep=space]{caption}
+\newcommand{\paren}[1]{\left( #1 \right)}
+\newcommand{\alumno}{Ricardo León Martínez}
+\newcommand{\materia}{Elementos de Probabilidad y Estadistica}
+\newcommand{\profesor}{Claudia Reynoso Alcántara}
+\newcommand{\tarea}{Tarea 5}
+\newcommand{\fecha}{25/3/2026}
+
+\begin{document}
+
+    \begin{center}
+        {\large\textbf{UNIVERSIDAD DE GUANAJUATO}}\\[0.3cm]
+        {\normalsize\textbf{DIVISIÓN DE CIENCIAS NATURALES Y EXACTAS}}\\
+        {\normalsize\textbf{CAMPUS GUANAJUATO}}\\[1cm]
+
+        {\Large\textbf{\tarea\ (\materia)}}\\[1cm]
+    \end{center}
+
+    \noindent
+    \textbf{Nombre:} \alumno 
+    \hfill 
+    \textbf{Fecha:} \fecha 
+    \hfill 
+    \textbf{Calificación:} \rule{3cm}{0.4pt}
+
+    \vspace{0.3cm}
+
+    \begin{mdframed}[style=mdpinkbox,frametitle={Ejercicio 1}]
+        De acuerdo al Centro de Control de Enfermedades, las personas que fuman tienen 23 veces mayor probabilidad de desarrollar cáncer que aquellas personas que no fuman. Si se conoce que las personas que fuman representan el $21.6\%$, ¿cuál es la probabilidad de que una persona sea fumadora dado que ha desarrollado cáncer?
+    \end{mdframed}
+
+    \begin{solucion}
+        Llamaemos a los eventos $S$ y $C$ como
+        \begin{itemize}
+            \item $S$: La persona es fumadora.
+            \item $C$: La persona desarrolla cancer.
+        \end{itemize}
+        Sabemos que
+        \begin{equation*}
+            P(S)=0.216,\qquad P(S^{c})=0.784,
+        \end{equation*}
+        y que los fumadores tienen 23 veces mayor probabilidad de desarrollar cancer que los no fumadores, es decir,
+        \begin{equation*}
+            P(C\mid S)=23P.
+        \end{equation*}
+        Por la ley de probabilidad total
+        \begin{equation*}
+            P(C)=P(C\mid S)P(S)+P(C\mid S^{c})P(S^{s})=23p(0.216)+p(0.784).
+        \end{equation*}
+        Factorizando
+        \begin{equation*}
+            P(C)=p(23\cdot0.216+0.784)=p(4.968+0.784)=5.752p.
+        \end{equation*}
+        Ahora, por la ley de bayes
+        \begin{equation*}
+            P(S\mid C)=\frac{P(C\mid S)P(S)}{P(C)}.
+        \end{equation*}
+        Sustituyendo
+        \begin{equation*}
+            P(S\mid C)=\frac{23p\cdot0.216}{5.752p}
+        \end{equation*}
+        se sigue que
+        \begin{equation*}
+            P(S\mid C)=\frac{23\cdot0.216}{5.752}=\frac{4.968}{5.752}.
+        \end{equation*}
+        Así,
+        \begin{equation*}
+            P(S\mid C)\approx0.864.
+        \end{equation*}
+        Concluimos que dado que una persona desarrollo cancer, la probabilidad de que sea fumadora
+        es aproximadamente $86.4\%$.
+    \end{solucion}
+
+    \begin{mdframed}[style=mdpinkbox,frametitle={Ejercicio 2}]
+        Las pantallas de celular de cierta marca son fabricadas por tres compañías distintas, digamos $A$, $B$ y $C$. Un estudio de calidad reveló que la probabilidad de que una pantalla fabricada por la compañía $A$ esté defectuosa es del $10\%$, mientras que para la compañía $B$ es del $20\%$ y para la compañía $C$ es del $30\%$. Así, la compañía $A$ provee el $50\%$ del total de las pantallas, la compañía $B$ provee otro $30\%$ y la compañía $C$ el restante $20\%$. Si al escoger un celular al azar se descubre que tiene una pantalla defectuosa, ¿cuál es la probabilidad de que la pantalla haya sido fabricada por la compañía $A$?
+    \end{mdframed}
+
+    \begin{solucion}
+        Sean $A,B,C$ el evento "la pantalla fue fabricada por la compañia $A,C,D$" respectivamente y
+        $D$ el evento "la pantalla es defectuosa". Se tiene
+        \begin{align*}
+            P(A)=0.5,\qquad P(B)=0.3,\qquad P(C)=0.2,\\
+            P(D\mid A)=0.1,\quad P(D\mid B)=0.2,\quad P(D\mid C)=0.3. 
+        \end{align*}
+        Por la ley de la probabilidad total
+        \begin{equation*}
+            P(D)=P(D\mid A)P(A)+P(D\mid B)P(B)+P(D\mid C)P(C).
+        \end{equation*}
+        $P(D)=0.1\cdot0.5+0.2\cdot0.3+0.3\cdot0.2$. Calculando
+        \begin{equation*}
+            P(D)=0.05+0.06+0.06=0.17.
+        \end{equation*}
+        Por la ley de bayes
+        \begin{equation*}
+            P(A\mid D)=\frac{P(D\mid A)P(A)}{P(D)}.
+        \end{equation*}
+        Por tanto
+        \begin{equation*}
+            P(A\mid D)=\frac{0.05}{0.17}\approx0.2941.
+        \end{equation*}
+        Así, aun cuando la compañia $A$ produce la mitad de las pantallas, dado que una pantalla
+        es defectuosa, la probabilidad de que provenga de $A$ es aproximadamente $29.41\%$.
+    \end{solucion}
+
+    \begin{mdframed}[style=mdpinkbox,frametitle={Ejercicio 3}]
+        ¿Existen eventos $A_1, A_2, B, C$ tales que 
+        \[
+        P(A_1 \mid B) > P(A_1 \mid C) \quad \text{y} \quad P(A_2 \mid B) > P(A_2 \mid C)
+        \]
+        pero
+        \[
+        P(A_1 \cup A_2 \mid B) < P(A_1 \cup A_2 \mid C)?
+        \]
+        De ser así, dé un ejemplo concreto con valores específicos del mismo así como una interpretación del porqué puede suceder esto. En caso contrario, demuestre que no existen tales eventos.
+    \end{mdframed}
+
+    \begin{solucion}
+        Sea un espacio de probabilidad donde
+        \begin{equation*}
+            P(B)=P(C)=\frac{1}{2}.
+        \end{equation*}
+        Definimos probabilidades condicionales bajo $B$
+        \begin{equation*}
+            P(A_{1}\mid B)=0.6,\quad P(A_{2}\mid B)=0.6,\quad P(A_{1}\cap A_{2}\mid B)=0.5.
+        \end{equation*}
+        Entonces
+        \begin{equation*}
+            P(A_{1}\cup A_{2}\mid B)=0.6+0.6-0.5=0.7.
+        \end{equation*}
+        y ahora bajo $C$
+        \begin{equation*}
+            P(A_{1}\mid C)=0.5\quad P(A_{2}\mid C)=0.5\quad P(A_{1}\cap A_{2}\mid C)=0.1.
+        \end{equation*}
+        Entonces
+        \begin{equation*}
+            P(A_{1}\cup A_{2}\mid C)=0.5+0.5-0.1=0.9.
+        \end{equation*}
+        Se cumple
+        \begin{align*}
+            P(A_{1}\mid B)=0.6\gt0.5=P(A_{1}\mid C),\\
+            P(A_{2}\mid B)=0.6\gt0.5=P(A_{2}\mid C),
+        \end{align*}
+        pero
+        \begin{equation*}
+            P(A_{1}\cup A_{2}\mid B)=0.7\lt0.9=P(A_{1}\cup A_{2}\mid C).
+        \end{equation*}
+    \end{solucion}
+
+    \begin{mdframed}[style=mdpinkbox,frametitle={Ejercicio 4}]
+        Sea $R = \{1,2,3\}$ y $S = \{4,5,6\}$. Lanzamos dos dados de seis caras y consideramos los siguientes eventos:
+
+        \[
+        A = \text{el primer dado da un número en } R, \quad
+        B = \text{el segundo dado da un número en } R,
+        \]
+        \[
+        C = \text{un dado cae en } R \text{ y el otro en } S,
+        \]
+        \[
+        D = \text{la suma de los dos resultados es cuatro},
+        \]
+        \[
+        E = \text{la suma de los dos resultados es cinco},
+        \]
+        \[
+        F = \text{la suma de los dos resultados es siete}.
+        \]
+
+        ¿Cuáles de las siguientes proposiciones son ciertas?
+
+        \begin{enumerate}
+            \item $A$ y $D$ son independientes.
+            \item $A$ y $E$ son independientes.
+            \item $A$ y $F$ son independientes.
+            \item $A$ y $C$ son independientes.
+            \item $C$ y $D$ son independientes.
+            \item $A, C$ y $E$ son independientes.
+            \item $P(A \cap B) = P(A)P(B)$.
+            \item $P(A \cap C) = P(A)P(C)$.
+            \item $P(A \cap C \cap E) = P(A)P(C)P(E)$.
+        \end{enumerate}
+    \end{mdframed}
+
+    \begin{solucion}
+        Definimos
+        \begin{equation*}
+            R=\{1,2,3\},\quad S=\{4,5,6\}.
+        \end{equation*}
+        \begin{equation*}
+            A=\{(i,j):i\in R\},\quad B=\{(i,j):j\in R\},
+        \end{equation*}
+        \begin{equation*}
+            C=\{(i,j):(i\in R,j\in S)\text{ o }(i\in S,j\in R)\},
+        \end{equation*}
+        \begin{equation*}
+            D=\{(i,j):i+j=4\},\quad E=\{(i,j):i+j=5\},\quad F=\{(i,j):i+j=7\}.
+        \end{equation*}
+        Calculamos
+        \begin{equation*}
+            P(A)=\frac{18}{35}=\frac{1}{2},\quad P(B)=\frac{1}{2}.
+        \end{equation*}
+        \begin{equation*}
+            P(C)=\frac{18}{36}=\frac{1}{2}.
+        \end{equation*}
+        \begin{equation*}
+            P(D)=\frac{3}{36}=\frac{1}{12},\quad P(E)=\frac{4}{36}=\frac{1}{9},\quad P(F)=\frac{6}{36}=\frac{1}{6}.
+        \end{equation*}
+        \begin{enumerate}
+            \item $A$ y $D$
+            \begin{equation*}
+                A\cap D=\{(1,3),(2,2),(3,1)\}\implies P(A\cap D)=\frac{3}{36}=\frac{1}{12}.
+            \end{equation*}
+            \begin{equation*}
+                P(A)P(D)=\frac{1}{2}\cdot\frac{1}{12}=\frac{1}{24}.
+            \end{equation*}
+            Por lo tanto son no dependientes.
+            \item $A$ y $E$
+            \begin{equation*}
+                A\cap E=\{(1,4),(2,3),(3,2)\}\implies P=\frac{3}{36}=\frac{1}{12}.
+            \end{equation*}
+            \begin{equation*}
+                P(A)P(E)=\frac{1}{2}\cdot\frac{1}{9}=\frac{1}{18}.
+            \end{equation*}
+            Por lo tanto son dependientes
+        \end{enumerate}
+    \end{solucion}
+
+    \begin{mdframed}[style=mdpinkbox,frametitle={Ejercicio 5}]
+        Sean $A, B, C$ tres eventos tales que
+        \[
+        P(A \cap B \cap C) = P(A)P(B)P(C),
+        \]
+        \[
+        P(A^c \cap B \cap C) = P(A^c)P(B)P(C),
+        \]
+        \[
+        P(A \cap B^c \cap C) = P(A)P(B^c)P(C),
+        \]
+        \[
+        P(A \cap B \cap C^c) = P(A)P(B)P(C^c).
+        \]
+
+        Demuestre que $A, B$ y $C$ son independientes.
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdpinkbox,frametitle={Ejercicio 6}]
+        Dé un ejemplo de tres eventos $A, B, C$ tales que
+        \[
+        P(A \cap B \cap C) = P(A)P(B)P(C)
+        \]
+        pero que
+        \[
+        P(A^c \cap B^c \cap C^c) \neq P(A^c)P(B^c)P(C^c).
+        \]
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdpinkbox,frametitle={Ejercicio 7}]
+        Sean $p, q \in [0,1]$ con $0 < p,q < 1$. Supongamos que $A_1, A_2, \dots$ es una sucesión de eventos independientes tales que $P(A_j) = p$ para cada $j = 1,2,\dots$. Demuestre que existe un entero $n$ tal que
+        \[
+        P\left(\bigcup_{k=1}^{n} A_k\right) \geq q.
+        \]
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdpinkbox,frametitle={Ejercicio 8}]
+        Sofía está trabajando en un proyecto el cual ha dividido en tres etapas consecutivas para monitorear su progreso. Consideremos $E_j$ como el evento de que Sofía termina a tiempo la $j$-ésima etapa de su proyecto con $j=1,2,3$. La conclusión a tiempo de una etapa influye en la siguiente, concretamente, tenemos que
+        \[
+        P(E_{j+1} \mid E_j) = 0.8, \quad P(E_{j+1} \mid E_j^c) = 0.3, \quad j=1,2.
+        \]
+
+        Supongamos que la primera y tercera etapa son independientes dado el resultado de la segunda, es decir,
+        \[
+        P(E_1 \cap E_3 \mid E_2) = P(E_1 \mid E_2)P(E_3 \mid E_2),
+        \]
+        \[
+        P(E_1 \cap E_3 \mid E_2^c) = P(E_1 \mid E_2^c)P(E_3 \mid E_2^c).
+        \]
+
+        \begin{enumerate}
+            \item[(a)] Encuentre la probabilidad de que Sofía termine el proyecto a tiempo, es decir, la tercera etapa, dado que completó la primera etapa a tiempo.
+            \item[(b)] Encuentre la probabilidad de que Sofía termine el proyecto a tiempo dado que no completó la primera etapa a tiempo.
+            \item[(c)] Si además $P(E_1)=0.75$, ¿cuál es la probabilidad de que Sofía termine el proyecto a tiempo?
+        \end{enumerate}
+    \end{mdframed}
+
+\end{document}
