@@ -1,0 +1,84 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{ugmath}
+\usepackage{float}
+\usepackage{placeins}
+\usepackage{array}
+\usepackage[labelfont=bf,labelsep=space]{caption}
+\newcommand{\paren}[1]{\left( #1 \right)}
+\newcommand{\alumno}{Ricardo León Martínez}
+\newcommand{\materia}{Algebra Lineal I}
+\newcommand{\profesor}{Claudia Reynoso Alcántara}
+\newcommand{\tarea}{Tarea 9}
+\newcommand{\fecha}{20/4/2026}
+
+
+\begin{document}
+
+    \begin{center}
+        {\large\textbf{UNIVERSIDAD DE GUANAJUATO}}\\[0.3cm]
+        {\normalsize\textbf{DIVISIÓN DE CIENCIAS NATURALES Y EXACTAS}}\\
+        {\normalsize\textbf{CAMPUS GUANAJUATO}}\\[1cm]
+
+        {\Large\textbf{\tarea\ (\materia)}}\\[1cm]
+    \end{center}
+
+    \noindent
+    \textbf{Nombre:} \alumno 
+    \hfill 
+    \textbf{Fecha:} \fecha 
+    \hfill 
+    \textbf{Calificación:} \rule{3cm}{0.4pt}
+
+    \vspace{0.3cm}
+
+    \begin{mdframed}[style=mdpinkbox,frametitle={Ejercicio 1}]
+        (2 puntos) Sea $\PP_{3}$ el espacio vectorial sobre $\R$ de polinomios de grado menor
+        o igual que 3 con coeficientes en $\R$. Considera la función:
+        \begin{align*}
+            T:\PP_{3}&\to\R^{4}\\
+            f(x)&\mapsto(f(1),f(2),f(3),f(4)).
+        \end{align*}
+        \begin{enumerate}
+            \item[(a)] Demuestra que $T$ es lineal.
+            \item[(b)] Usa el teorema de rango y nulidad para demostrar que para todos
+            $a_{1},a_{2},a_{3},a_{4}\in\R$, existe $f(x)\in\PP_{3}$ tal que $f(j)=a_{j}$
+            para todo $j=1,2,3,4$. 
+        \end{enumerate}
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdpinkbox,frametitle={Ejercicio 2}]
+        (2 puntos) Sea $A$ un matriz $m\times n$ con coeficientes en $F$. Demuestra que
+        \begin{enumerate}
+            \item[(a)] El rango de las filas de $A$ (que por definición es la \textbf{la dimensión
+            del subespacio vectorial que general las filas de $A$} vistas como vectores en $F^{n}$)
+            mas la dimensión del espacio de soluciones del sistema homogéneo asociado a $A$ es $n$.
+            \item[(b)] Si el rango de filas $A$ es $n$ entonces $AX=0$ tiene solo la solución trivial.
+            \item[(c)] Si el rango de filas de $A$  es menor que $n$ entonces $AX=0$ tiene una infinidad
+            de soluciones.
+        \end{enumerate}
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdpinkbox,frametitle={Ejercicio 3}]
+        (1 punto) Sean $V$ y $W$ espacios vectoriales de dimensión finita sobre $F$ y sea $T:V\to W$ una
+        transformación lineal. Demuestra que $T$ es isomorfismo lineal si y solo si, para toda
+        $\BB_{V}=\{v_{1},\dots,v_{n}\}$ de $V$ se tiene que $\BB_{W}=\{T(v_{1}),\dots,T(v_{n})\}$
+        es base de $W$.
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdpinkbox,frametitle={Ejercicio 4}]
+        (1 punto) Sea $T:\R^{3}\to\R^{3}$ definido por $(x_{1},x_{2},x_{3},x_{4})\mapsto(3x_{1},x_{1}-x_{2},2x_{1}+x_{2}+x_{3})$.
+        ¿Es $T$ isomorfismo lineal? (Justifica tu respuesta). Si es así, encuentra $T^{-1}$.
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdpinkbox,frametitle={Ejercicio 5}]
+        (2 puntos) Sean $V$ y $W$ espacios vectoriales sobre $F$, de dimensiones $n$ y $m$, respectivamente.
+        Demuestra que $V$ y $W$ son isomorfos si y solo si $m=n$.
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdpinkbox,frametitle={Ejercicio 6}]
+        (2 puntos) Sea $V$ un espacio vectorial de dimensión finita sobre $F$ y sea $T:V\to V$
+        lineal. Demuestra que $T$ es isomorfismo si y solo si para alguna base ordenada $\BB$
+        de $V$ se tiene que $[T_{\BB}]$ es una matriz invertible.
+    \end{mdframed}
+
+\end{document}
