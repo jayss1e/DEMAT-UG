@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.4.21)  26 APR 2026 20:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.4.21)  27 APR 2026 17:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1061,40 +1061,43 @@ LaTeX Font Info:    Trying to load font information for U+stmry on input line 35
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 47.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 49.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 59.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 61.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 66.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 68.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 71.
  [1
 
 {c:/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{c:/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{c:/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{c:/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 73.
+(mdframed)              on input line 116.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 76.
+(mdframed)              on input line 126.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 78.
+(mdframed)              on input line 128.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 82.
- [2] (./tarea10.aux
+(mdframed)              on input line 133.
+ [2]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 175.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 178.
+ [3{c:/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 217.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 220.
+ [4]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 256.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 260.
+ [5] [6] (./tarea10.aux
 LaTeX Info: Redefining \. on input line 12.
 LaTeX Info: Redefining \% on input line 12.
 )
@@ -1106,18 +1109,18 @@ Package rerunfilecheck Info: File `tarea10.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 39516 strings out of 467349
- 883290 string characters out of 5419862
- 1429136 words of memory out of 5000000
- 67917 multiletter control sequences out of 15000+600000
- 660156 words of font info for 70 fonts, out of 8000000 for 9000
+ 39533 strings out of 467349
+ 883558 string characters out of 5419862
+ 1423137 words of memory out of 5000000
+ 67926 multiletter control sequences out of 15000+600000
+ 670398 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,10n,108p,841b,1190s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmmi12.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmmi8.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmsy8.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on tarea10.pdf (2 pages, 116934 bytes).
+<c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmex10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmmi12.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmmi8.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmr6.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmri12.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmsy8.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on tarea10.pdf (6 pages, 174568 bytes).
 PDF statistics:
- 91 PDF objects out of 1000 (max. 8388607)
- 53 compressed objects within 1 object stream
- 3 named destinations out of 1000 (max. 500000)
+ 130 PDF objects out of 1000 (max. 8388607)
+ 80 compressed objects within 1 object stream
+ 7 named destinations out of 1000 (max. 500000)
  109 words of extra memory for PDF output out of 10000 (max. 10000000)
 

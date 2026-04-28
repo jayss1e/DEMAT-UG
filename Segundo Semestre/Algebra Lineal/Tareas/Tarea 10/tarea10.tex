@@ -8,8 +8,8 @@
 \newcommand{\alumno}{Ricardo León Martínez}
 \newcommand{\materia}{Algebra Lineal I}
 \newcommand{\profesor}{Claudia Reynoso Alcántara}
-\newcommand{\tarea}{Tarea 9}
-\newcommand{\fecha}{20/4/2026}
+\newcommand{\tarea}{Tarea 10}
+\newcommand{\fecha}{27/4/2026}
 
 
 \begin{document}
@@ -46,6 +46,73 @@
         \end{enumerate}
     \end{mdframed}
 
+        \begin{proof}
+        Para probar que $T$ es lineal, verifiquemos para cualesquiera $f,g\in\PP_{3}$ y $\lambda\in\R$
+        se cumple
+        \begin{enumerate}
+            \item[(a)]
+            \begin{enumerate}
+                \item[1.] $T(f+g)=T(f)+T(g)$.\\
+                En efecto,
+                \begin{equation*}
+                    T(f+g)=((f+g)(1),(f+g)(2),(f+g)(3),(f+g)(4)).
+                \end{equation*}
+                Por definición de suma de funciones
+                \begin{equation*}
+                    (f+g)(x)=f(x)+g(x),
+                \end{equation*}
+                luego
+                \begin{equation*}
+                    T(f+g)=(f(1)+g(1),f(2)+g(2),f(3)+g(3),f(4)+g(4))=T(f)+T(g).
+                \end{equation*}
+                \item[2.] $T(\lambda f)=\lambda T(f)$.\\
+                En efecto,
+                \begin{equation*}
+                    T(\lambda f)=((\lambda f)(1),(\lambda f)(2),(\lambda f)(3), (\lambda f)(4))
+                \end{equation*}
+                Como $(\lambda f)(x)=\lambda f(x)$, se tiene
+                \begin{equation*}
+                    T(\lambda f)=(\lambda f(1), \lambda f(2), \lambda f(3), \lambda f(4))=\lambda T(f)
+                \end{equation*}
+                Así, $T$ es lineal.
+            \end{enumerate}
+            \item[(b)] Sea $f\in\ker(T)$. Entonces
+            \begin{equation*}
+                T(f)=(0,0,0,0)
+            \end{equation*}
+            lo cual implica
+            \begin{equation*}
+                f(1)=f(2)=f(3)=f(4)=0.
+            \end{equation*}
+            Es decir, $f$ tiene como raices 1,2,3,4. Pero $f\in\PP_{3}$, por lo que $\deg(f)\leq3$.
+            un polinomio de grado $\leq3$ no puede tener 4 raices distintas. Por lo tanto
+            \begin{equation*}
+                f=0.
+            \end{equation*}
+            Luego,
+            \begin{equation*}
+                \ker(T)=\{0\},\qquad\nul(T)=0.
+            \end{equation*}
+            Así, por el teorema de rango-nulidad,
+            \begin{equation*}
+                4=0+\rg(T)\implies\rg(T)=4.
+            \end{equation*}
+            Pero $\Im(T)\subseteq\R^{4}$ y $\dim(\R^{4})=4$. Por lo tanto
+            \begin{equation*}
+                \Im(T)=\R^{4}.
+            \end{equation*}
+            La sobreyectividad de $T$ implica que para todo $(a_{1},a_{2},a_{3},a_{4})\in\R^{4}$.
+            Existe $f\in\PP_{3}$ tal que
+            \begin{equation*}
+                T(f)=(a_{1},a_{2},a_{3},a_{4}),
+            \end{equation*}
+            es decir,
+            \begin{equation*}
+                f(j)=a_{j}\qquad\text{ para todo }j=1,2,3,4.
+            \end{equation*}
+        \end{enumerate}
+    \end{proof}
+
     \begin{mdframed}[style=mdpinkbox,frametitle={Ejercicio 2}]
         (2 puntos) Sea $A$ un matriz $m\times n$ con coeficientes en $F$. Demuestra que
         \begin{enumerate}
@@ -65,20 +132,163 @@
         es base de $W$.
     \end{mdframed}
 
+    \begin{proof}
+        Sea $w\in W$. Como $T$ es sobreyectiva, existe $v\in V$ tal que $T(v)=w$. Dado $\BB_{v}$
+        es base, existen escalares $a_{1},\dots,a_{n}\in F$ tales que
+        \begin{equation*}
+            v=\sum_{i=1}^{n}a_{i}v_{i}.
+        \end{equation*}
+        Aplicando $T$ y usando linealidad
+        \begin{equation*}
+            w=T(w)=\sum_{i=1}^{n}a_{i}T(v_{i}).
+        \end{equation*}
+        Luego $\{T(v_{i})\}$ genera $W$. Supongamos
+        \begin{equation*}
+            \sum_{i=1}^{n}a_{i}T(v_{i})=0.
+        \end{equation*}
+        Entonces
+        \begin{equation*}
+            T\paren{\sum_{i=1}^{n}a_{i}v_{i}}=0.
+        \end{equation*}
+        Como $T$ es inyectiva, $\ker(T)=\{0\}$, por lo que
+        \begin{equation*}
+            \sum_{i=1}^{n}a_{i}v_{i}=0.
+        \end{equation*}
+        Dado que $\BB_{v}$ es una base, se sigue que $a_{i}=0$ para todo $i$. Así, $\{T(v_{1}),\dots,T(v_{n})\}$
+        es una base de $W$. Supongamos que para toda base $\BB_{V}=\{v_{1},\dots,v_{n}\}$ de $V$, el conjunto
+        \begin{equation*}
+            \{T(v_{1}),\dots,T(v_{n})\}
+        \end{equation*}
+        es base de $W$. En particular, fijando una base cualquiera de $V$; Como $\{T(v_{1})\}$ es base
+        de $W$, genera $W\implies T$ es sobreyectiva. Ademas, es linealmente independiente, así que si
+        \begin{equation*}
+            T(v)=0,\qquad v=\sum a_{i}v_{i},
+        \end{equation*}
+        entonces
+        \begin{equation*}
+            0=T(v)=\sum a_{i}T(v_{i})\implies a_{i}=0\implies v=0,
+        \end{equation*}
+        lo cual implica que $\ker(T)=\{0\}$, es decir, $T$ es inyectiva. Por lo tanto,
+        $T$ es biyectiva, y en consecuencia un isomorfismo lineal.
+    \end{proof}
+
     \begin{mdframed}[style=mdpinkbox,frametitle={Ejercicio 4}]
         (1 punto) Sea $T:\R^{3}\to\R^{3}$ definido por $(x_{1},x_{2},x_{3},x_{4})\mapsto(3x_{1},x_{1}-x_{2},2x_{1}+x_{2}+x_{3})$.
         ¿Es $T$ isomorfismo lineal? (Justifica tu respuesta). Si es así, encuentra $T^{-1}$.
     \end{mdframed}
+
+    \begin{proof}
+        Calculamos $\ker(T)$
+        \begin{equation*}
+            T(x_{1},x_{2},x_{3})=(0,0,0)
+        \end{equation*}
+        si y solo si
+        \begin{equation*}
+            \begin{cases}
+                3x_{1}=0,\\
+                x_{1}-x_{2}=0,\\
+                2x_{1}+x_{2}+x_{3}=0.
+            \end{cases}
+        \end{equation*}
+        Resolvemos: De $3x_{1}=0\implies x_{1}=0$. Entonces $x_{1}-x_{2}=0\implies-x_{2}=0\implies x_{2}=0$.
+        Sustituyendo en la tercera se tiene $x_{3}=0$. Por tanto
+        \begin{equation*}
+            \ker(T)=\{(0,0,0)\}.
+        \end{equation*}
+        Así, $T$ es inyectiva y asi $T$ es un isomorfismo lineal. Sea $(y_{1},y_{2},y_{3})=T(x_{1},x_{2},x_{3})$,
+        es decir
+        \begin{equation*}
+            \begin{cases}
+                y_{1}=3x_{1},\\
+                y_{2}=x_{1}-x_{2},\\
+                y_{3}=2x_{1}+x_{2}+x_{3}.
+            \end{cases}
+        \end{equation*}
+        Resolvemos: $x_{1}=\frac{y_{1}}{3}$, $x_{2}=\frac{y_{1}}{3}-y_{2}$. Sustituyendo en la tercera
+        \begin{equation*}
+            y_{3}=y_{1}-y_{2}+x_{3}\implies x_{3}=y_{3}-y_{1}+y_{2}.
+        \end{equation*}
+        Así,
+        \begin{equation*}
+            T^{-1}(y_{1},y_{2},y_{3})=(\frac{y_{1}}{3},\frac{y_{1}}{3}-y_{2},y_{3}-y_{1}+y_{2}).
+        \end{equation*}
+    \end{proof}
 
     \begin{mdframed}[style=mdpinkbox,frametitle={Ejercicio 5}]
         (2 puntos) Sean $V$ y $W$ espacios vectoriales sobre $F$, de dimensiones $n$ y $m$, respectivamente.
         Demuestra que $V$ y $W$ son isomorfos si y solo si $m=n$.
     \end{mdframed}
 
+    \begin{proof}
+        Si $V$ es de dimensión $n$ sobre $F$ entonces al elegir una base ordenada $\BB=\{v_{1},\dots,v_{n}\}$
+        la transformación lineal
+        \begin{align*}
+            \phi_{\BB}:V&\to F^{n}\\
+            v&\mapsto[v]_{\BB}
+        \end{align*}
+        es una biyeccion y por lo tanto es isomorfismo
+        \begin{equation*}
+            V\cong W.
+        \end{equation*}
+        Si $\dim_{F}V=\dim_{F}W=n$, entonces
+        \begin{equation*}
+            V\cong F^{n}\cong W.
+        \end{equation*}
+        Supongamos que existe un isomorfismo lineal
+        \begin{equation*}
+            T:V\to W
+        \end{equation*}
+        Por el teorema de rango-nulidad
+        \begin{equation*}
+            \nul(T)+\rg(T)=\dim(V).
+        \end{equation*}
+        Por ser biyección
+        \begin{align*}
+            \rg(T)&=\dim(W)\\
+            \nul(T)&=0
+        \end{align*}
+        Así,
+        \begin{equation*}
+            \dim_{f}W=\dim_{F}V.
+        \end{equation*}
+    \end{proof}
+
     \begin{mdframed}[style=mdpinkbox,frametitle={Ejercicio 6}]
         (2 puntos) Sea $V$ un espacio vectorial de dimensión finita sobre $F$ y sea $T:V\to V$
         lineal. Demuestra que $T$ es isomorfismo si y solo si para alguna base ordenada $\BB$
         de $V$ se tiene que $[T_{\BB}]$ es una matriz invertible.
     \end{mdframed}
+
+    \begin{proof}
+        Supongamos que $T:V\to V$ es un isomorfismo lineal. Entonces existe una transformación
+        lineal $S:V\to V$ tal que, para todo $v\in V$,
+        \begin{equation*}
+            S(T(v))=v,\quad\text{ y }\quad T(S(v))=v.
+        \end{equation*}
+        Sea $\BB$ una base ordenada de $V$. Entonces, al pasar a matrices
+        \begin{equation*}
+            [S]_{\BB}[T]_{\BB}=I_{n},\qquad [T]_{\BB}[S]_{\BB}=I_{n}.
+        \end{equation*}
+        Esto implica que $[T]_{\BB}$ es invertible. Supongamos que existe una base ordenada $\BB$ tal que
+        \begin{equation*}
+            [T]_{\BB}=A
+        \end{equation*}
+        es invertible. Sea $A^{-1}$ su inversa. Definimos una aplicación $S:V\to V$ de la siguiente manera.
+        Para cada $v\in V$, si $[v]_{\BB}$ es su vector de coordenadas, definimois $S(v)$ como el unico vector
+        cuyo vector de coordenadas satisface
+        \begin{equation*}
+            [S(v)]_{\BB}=A^{-1}[v]_{\BB}.
+        \end{equation*}
+        Entonces $S$ es lineal y, para todo $v\in V$,
+        \begin{align*}
+            [S(T(v))]_{\BB}=A^{-1}A[v]_{\BB}=[v]_{\BB},\\
+            [T(S(v))]_{\BB}=AA^{-1}[v]_{\BB}=[v]_{\BB}.
+        \end{align*}
+        Como los vectores tiene las mismas coordenadas en la base $\BB$, se concluye que
+        \begin{equation*}
+            S(T(v))=v\quad\text{ y }\quad T(S(v))=v\quad \forall v\in V.
+        \end{equation*}
+        Por lo tanto, $T$ es un isomorfismo lineal.
+    \end{proof}
 
 \end{document}
