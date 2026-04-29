@@ -1425,4 +1425,148 @@
 
     \section{Subespacios vectoriales}
 
+    \begin{mdframed}[style=mdbluebox,frametitle={Definición 12: Subespacio vectorial}]
+        Un subconjunto $W\subset V$ es \textbf{subespacio vectorial} de $(V,+,\cdot)$ si
+        cuando restringimos a $W$ las "mismas" de $V$ obtenemos un espacio vectorial sobre $F$,
+        es decir
+        \begin{align*}
+            +:W\times W&\to W\\
+            (w_{1},w_{2})&\mapsto w_{1}+w_{2}
+        \end{align*}
+        y el producto escalar restringido
+        \begin{align*}
+            \cdot:F\times W&\to W\\
+            (a,w)&\mapsto a\cdot w
+        \end{align*}
+    \end{mdframed}
+
+    El prodcuto escalar restringido y la suma tambien satisfacen para todo $w\in W$ y $a_{1},a_{2}\in F$
+    \begin{enumerate}
+        \item[(a)] $1\cdot w=w$
+        \item[(b)] $(a_{1}\cdot a_{2})\cdot w=a_{1}\cdot(a_{2}\cdot w)$
+        \item[(c)] $(a_{1}+a_{2})\cdot w=a_{1}\cdot w+a_{2}\cdot w$
+        \item[(d)] $a(w_{1}+w_{2})=a\cdot w_{1}+a\cdot w_{2}$  
+    \end{enumerate}
+
+    \textbf{Ejemplo 15.} $(\R,+,\cdot)$ es un espacio vectorial sobre $\R$.
+
+    \begin{mdframed}[style=mdgraybox,frametitle={Proposición 14}]
+        Sea $(V,+,\cdot)$ un espacio vectorial sobre $F$. Un subconjunto \textbf{no vacío}
+        $W\subset V$ es un subespcio vectorial de $V$ si y solo si para todo $w_{1},w_{2}\in W$,
+        $a\in F$ se tiene que $a\cdot w_{1}+w_{2}\in W$.
+    \end{mdframed}
+
+    \vspace{1.5cm}
+
+    \begin{mdframed}[style=mdgraybox,frametitle={Proposición 15}]
+        Sea $V$ un espacio vectorial sobre $F$ y sea $\{W_{\lambda}\}_{\lambda\in\Delta}$
+        una colección de subespcios vectoriales de $V$, entonces
+        \begin{equation*}
+            \bigcap_{\lambda\in\Delta}W_{\lambda},
+        \end{equation*}
+        es un subespacio vectorial de $V$.
+    \end{mdframed}
+
+    \begin{proof}
+        Recordar que $W\subset V$ es un subespacio vectorial de $V$ si y solo si
+        \begin{enumerate}
+            \item[(a)] $W\neq\varnothing$
+            \item[(b)] $aw_{1}+w_{2}\in W\quad\forall a\in F$, $\forall w_{1},w_{2}\in W$.  
+        \end{enumerate}
+        Como $W_{\lambda}$ es subespacio vectorial de $V, \forall\lambda\in\Delta$, entonces
+        $0\in W_{\lambda}, \forall\lambda\in\Delta$. Así, que $0\in\bigcap_{\lambda\in\Delta}W$.
+        Sea $a\in F$, $w_{1},w_{2}\in\bigcap_{\lambda\in\Delta}W_{\lambda}$, entonces $w_{1},w_{2}\in W_{\lambda}$,
+        $\forall\lambda\in\Delta$, así que $aw_{1}+w_{2}\in W_{\lambda}$, $\forall\lambda\in\Delta$.
+        Por lo tanto $aw_{1}+w_{2}\in\bigcap_{\lambda\in\Delta}W_{\lambda}$.
+    \end{proof}
+
+    \textbf{Ejemplo 16.} $\langle(1,1,1)\rangle=\bigcap_{(1,1,1)\in W}W$ es un subespacio vectorial
+    de $F^{3}$.
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Definición 13: Subespacio vectorial generado}]
+        Sea $V$ un espacio vectorial sobre $F$. Sea $S\subset V$, definimos el subespacio vectorial de
+        $V$ generado por $S$ como
+        \begin{equation*}
+            \langle S \rangle=\bigcap_{S\subset W}W
+        \end{equation*}
+    \end{mdframed}
+
+    De esta definición, notemos que si $S=\varnothing$ entonces $\langle\varnothing\rangle=\{0\}$.
+    Por construcción, $\langle S\rangle$ es el minimo subespacio vecotorial de $V$ que contiene
+    a $S$, porque cualquier subespacio vectorial que contiene a $S$ contiene a $\gen{S}\subset W$.
+    \begin{align*}
+        \FF&=\{f:\R\to\R:f\text{ función}\}\\
+        S&=\{x^{i}:i\in\N\cup\{0\}\}\\
+        \gen{S}&=\biggl\{\sum_{i=0}^{n}a_{i}x^{i}:n\in\N\cup\{0\}\biggr\}.
+    \end{align*}
+
+    \begin{mdframed}[style=mdgraybox,frametitle={Proposición 16}]
+        Sea $V$ un espacio vectorial sobre $F$, sea $S\subset V$, entonces
+        \begin{equation*}
+            \gen{S}=\biggl\{\sum_{i=1}^{n}a_{i}v_{i}:n\in\N,a_{i}\in F,v_{i}\in S,\forall i\in\{1,\dots,n\}\biggr\}.
+        \end{equation*}
+    \end{mdframed}
+
+    \begin{proof}
+        Sea $\gen{S}=\biggl\{\sum_{i=1}^{n}a_{i}v_{i}:n\in\N,a_{i}\in F,v_{i}\in S,\forall i\in\{1,\dots,n\}\biggr\}\subset V$.
+        Sea $v\in S$, entonces $1\cdot v=v\in L$, así que
+        \begin{equation*}
+            S\subset L\implies\gen{S}\subset L.
+        \end{equation*}
+        Sea $v\in L$, entonces existe $n\in\N$. Existen $a_{1},\dots,a_{n}\in F$, $v_{1},\dots,v_{n}\in S$
+        tales que
+        \begin{equation*}
+            v=\sum_{i=1}^{n}a_{i}v_{i}.
+        \end{equation*}
+        Como $v_{1},\dots,v_{n}\in S\subset\gen{S}\implies v\in\gen{S}$.
+    \end{proof}
+
+    \begin{mdframed}[style=mdgraybox,frametitle={Lema 2}]
+        Si $W$ es subespacio vectorial de $V$ y $w_{1},\dots,w_{n}\in W$ entonces para todos
+        $a_{1},\dots,a_{n}\in F$ se tiene que
+        \begin{equation*}
+            \sum_{i=1}^{n}a_{i}w_{i}\in W.
+        \end{equation*}
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Definición 17: Independencia Lineal}]
+        Sea $V$ un espacio vectorial sobre $F$. Sea $S\subset V$, diremos que $S$ es linealmente
+        idependiente sobre $F$ si
+        \begin{enumerate}
+            \item $S=\varnothing$
+            \item Existe $n\in\N$, existen vectores $v_{1},\dots,v_{n}\in S$ y $(a_{1},\dots,a_{n})\in F^{n}\setminus(0,\dots,0)$
+            tal que
+            \begin{equation*}
+                \sum_{i=1}^{n}a_{i}v_{i}=0.
+            \end{equation*}
+        \end{enumerate}
+    \end{mdframed}
+
+    \textbf{Observación.} Si $0\in S$ entonces $1\cdot 0=0$, así que $S$ es linealmente dependiente.\\
+    Diremos que $S\subset V$ es linealmente independiente sobre $F$ si no es linealmente
+    dependiente sobre $F$, es decir, $S=\varnothing$  o si para $v_{1},\dots,v_{n}\in S$ se tiene que
+    \begin{equation*}
+        \sum_{i=1}^{n}a_{i}v_{i}=0\quad\text{ entonces }\quad a_{i}=0,\quad\forall i\in\{1,\dots,n\}.
+    \end{equation*}
+    Si $S$ es linealmente dependiente entonces existen
+    \begin{equation*}
+        v_{1},\dots,v_{n}\in S,\qquad (a_{1},\dots,a_{n})\neq(0,\dots,0).
+    \end{equation*}
+    Tales que
+    \begin{equation*}
+        \sum_{i=1}^{n}a_{i}v_{i}=0.
+    \end{equation*}
+    Supongamos que $a_{i}\neq0$, entonces
+    \begin{equation*}
+        v_{i_{0}}=\sum_{i=v_{0}}-\frac{a_{i}}{a_{i_{0}}}v_{i}\in\gen{S\setminus\{v_{i_{0}}\}}.
+    \end{equation*}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Definición 18: Espacio vectorial de dimensión finita}]
+        Un espacio vectorial $V$ sobre $F$ es de dimensión finita si existe un conjunto finito
+        $S\subset V$ tal que
+        \begin{equation*}
+            \gen{S}=V.
+        \end{equation*}
+    \end{mdframed}
+
 \end{document}
