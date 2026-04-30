@@ -1448,7 +1448,7 @@
         \item[(d)] $a(w_{1}+w_{2})=a\cdot w_{1}+a\cdot w_{2}$  
     \end{enumerate}
 
-    \textbf{Ejemplo 15.} $(\R,+,\cdot)$ es un espacio vectorial sobre $\R$.
+    \textbf{Ejemplo 15.} $(\R,+,\cdot)$ es un espacio vectorial sobre $\R$.\hfill $\blacktriangleleft$
 
     \begin{mdframed}[style=mdgraybox,frametitle={Proposición 14}]
         Sea $(V,+,\cdot)$ un espacio vectorial sobre $F$. Un subconjunto \textbf{no vacío}
@@ -1481,7 +1481,7 @@
     \end{proof}
 
     \textbf{Ejemplo 16.} $\langle(1,1,1)\rangle=\bigcap_{(1,1,1)\in W}W$ es un subespacio vectorial
-    de $F^{3}$.
+    de $F^{3}$.\hfill $\blacktriangleleft$
 
     \begin{mdframed}[style=mdbluebox,frametitle={Definición 13: Subespacio vectorial generado}]
         Sea $V$ un espacio vectorial sobre $F$. Sea $S\subset V$, definimos el subespacio vectorial de
@@ -1568,5 +1568,184 @@
             \gen{S}=V.
         \end{equation*}
     \end{mdframed}
+
+    \textbf{Ejemplo 17.} $\R$ como espacio vectorial sobre $\R$ es de dimensión finita por que $\gen{1}_{\R}=\R$.\\
+    $\R$ como espacio vectorial sobre $\Q$ no es de dimensión finita. Supongamos que existe
+    $S=\gen{a_{1},\dots,a_{n}}\subset\R$ tal que $\gen{S}_{\Q}=\R\to\Q^{n}$ esto contradice
+    que $\R$ no es numerable.\\
+    Si $V$ no es de dimensión finita sobre $F$ diremos que $V$ es de dimensión infinita sobre
+    $F$.\hfill $\blacktriangleleft$
+
+    \begin{mdframed}[style=mdgraybox,frametitle={Teorema 5}]
+        Sea $V$ un espacio vectorial sobre $F$ y sea $S=\{v_{1},\dots,v_{n}\}\subset V$ tal que
+        $\gen{S}=V$. Entonces todo conjunto linealmente independiente en $V$ tiene cardinalidad
+        $\leq n$.
+    \end{mdframed}
+
+    \begin{proof}
+        Vamos a probar que todo conjunto de cardinalidad mayor que $n$ es linealmente dependiente.
+        Sea $T=\{w_{1},\dots,w_{m}\}\subset V, m\gt n$. Como $\gen{S}=V$ entonces para $w\in T$
+        $a_{ij}\in F$ $j=1,\dots,n$ tales que
+        \begin{equation*}
+            W_{i}=\sum_{j=1}^{n}a_{ij}v_{j},\quad i=1,\dots,m.
+        \end{equation*}
+        Sean $x_{1},\dots,x_{n}\in F$ tales que
+        \begin{align}
+            \sum_{i=1}^{n}x_{i}w_{i}&=\sum_{i=1}^{m}x_{i}\parentesis{\sum_{j=1}^{n}a_{ij}v_{j}}\\
+            &=\sum_{i=1}^{n}\parentesis{\sum_{i=1}^{m}a_{ij}x_{i}}v_{j}\\
+            &=0,
+        \end{align}
+        con $A=(a_{ij})\in M_{m\times n}(F)$, $m\gt n$, $1\leq i\leq m$ y $1\leq j\leq n$.
+        (2.2) el sistema lineal homogeneo asociado a $A$. $Ax=0$ tiene infinitas soluciones,
+        entonces tiene alguna solución $(c_{1},\dots,c_{m})$ no trivial,
+        \begin{equation*}
+            c_{1}w_{1}+\cdots+c_{m}w_{m}=0.
+        \end{equation*}
+        Por tanto $T=\{w_{1},\dots,w_{m}\}$ es linealmente dependiente. Así que todo conjunto
+        linealmente independiente en $V$ toeme cardinalidad menor o igual a $n$.
+    \end{proof}
+
+    \begin{mdframed}[style=mdgraybox,frametitle={Corolario 4}]
+        Si $S_{1}$ y $S_{2}$ son subconjuntos linealmente independientes y finitos en el espacio
+        vectorial $V$ sobre $F$ tales que
+        \begin{equation*}
+            \gen{S_{1}}=V=\gen{S_{2}},
+        \end{equation*}
+        entonces tienen la misma cardinalidad.
+    \end{mdframed}
+
+    \begin{proof}
+        Supongamos que $S_{1}=\{v_{1},\dots,v_{n}\}$. Como $S_{2}$ es linealmente independiente
+        sobre $F$ entonces $\abs{S_{2}}\leq n$ y por el mismo argumento $n\leq\abs{S_{2}}$.
+    \end{proof}
+
+    \section{Bases y Dimension}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Definición 19: Base y dimensión}]
+        Una \textbf{base} del espacio vectorial $v$ sobre $F$ es un conjunto $B$ linealmente independiente
+        tal que
+        \begin{equation*}
+            \gen{B}=V.
+        \end{equation*}
+        Si $B$ es finito, definimos la \textbf{dimensión} de $V$ como la cardinalidad de
+        $B$.
+    \end{mdframed}
+
+    \textbf{Ejemplo 18.} $B=\{e_{1},\dots,e_{n}\}$ es una base de $F^{n}$. Así que $\dim(F^{n})=n$.\hfill $\blacktriangleleft$
+
+    \begin{mdframed}[style=mdgraybox,frametitle={Lema 3}]
+        Si $S$ es linealmente independiente en $V$ y $w\in V\setminus\gen{S}$ entonces
+        $S\cup\{w\}$ es linealmente independiente.
+    \end{mdframed}
+
+    \begin{proof}
+        Si $S=\varnothing$, entonces $\gen{S}=\{0\}$ y si $V\neq\varnothing$, $\exists v\in V\setminus\{0\}$
+        y $\{v\}$ es linealmente independiente. Si $S\neq\varnothing$ y $w\in V\setminus\gen{S}$.
+        Tomamos $v_{1},\dots,v_{n}\in S_{1}$, $c_{1},\dots,c_{n},b\in F$ tales que
+        \begin{equation*}
+            c_{1}v_{1}+\cdots+c_{n}v_{n}+bw=0.
+        \end{equation*}
+        Si $b=0$, entonces
+        \begin{equation*}
+            c_{1}v_{1}+\cdots+c_{n}v_{n}=0,
+        \end{equation*}
+        como $S$ es linealmente independiente entonces $c_{1}=c_{2}=\cdots=c_{n}=0$. Si $b=\neq0$,
+        entonces
+        \begin{equation*}
+            w=-\frac{c_{1}}{b}v_{1}-\frac{c_{2}}{b}v_{2}-\cdots-\frac{c_{n}}{b}v_{n}.
+        \end{equation*}
+        Si existe $i\in\{1,\dots,n\}$ tal que $c_{i}\neq0$, entonces $w\in\gen{S}$, esto es
+        una contradicción por tanto $c_{1}=\dots=c_{n}=0$, asi que $b=0$. Concluimos que
+        $S\cup\{w\}$ es un conjunto linealmente independiente.
+    \end{proof}
+
+    \begin{mdframed}[style=mdgraybox,frametitle={Lema 4}]
+        Si $W_{1}$ y $W_{2}$ son subespacios vectoriales de dimensión finita de un espacio
+        vectorial $V$ entonces $W_{1}+W_{2}$ es de dimensión finita y
+        \begin{equation*}
+            \dim(W_{1})+\dim(W_{2})=\dim(W_{1}\cap W_{2})+\dim(W_{1}+W_{2}).
+        \end{equation*}
+    \end{mdframed}
+
+    \begin{proof}
+        Sea $\{u_{1},\dots,u_{k}\}$ una base de $W_{1}\cap W_{2}$. Podemos completar esta
+        base para formar bases de $w_{1}$ Y $w_{2}$. Sabiendo esto, sean $v_{1}\in v_{n}\in W_{1}$
+        y $w_{1},\dots,w_{m}\in W_{2}$ tales que
+        \begin{equation*}
+            \BB=\{u_{1},\dots,u_{k},v_{1},\dots,v_{n}\}\quad\text{ y }\quad\BB^{\prime}=\{u_{1},\dots,u_{k},w_{1},\dots,w_{m}\}.
+        \end{equation*}
+        son bases de $W_{1}$ y $W_{2}$ respectivamente. Notemos que
+        \begin{equation*}
+            W_{1}+W_{2}\subset\gen{u_{1},\dots,w_{k},v_{1},\dots,v_{n},w_{1},\dots,w_{m}}
+        \end{equation*}
+        ademas estos vectores son linealmente independientes. Supongamos que exieten escalares
+        $a_{1},\dots,a_{k}$, $b_{1},\dots,b_{n}$, $c_{1},\dots,c_{m}\in F$ tales que
+        \begin{equation*}
+            \sum_{i=1}^{k}a_{i}u_{i}+\sum_{i=1}^{n}b_{i}v_{i}+\sum_{i=1}^{m}c_{i}w_{i}=0.
+        \end{equation*}
+        De aquí
+        \begin{equation*}
+            \sum_{i=1}^{m}c_{i}w_{i}\in W_{1}\cap W_{2}.
+        \end{equation*}
+        Luego existen escalares $\a_{1},\dots,\a_{n}\in F$ tales que
+        \begin{equation*}
+            \sum_{i=1}^{m}c_{i}w_{i}=\sum_{i=1}^{k}\a_{i}v_{i}
+        \end{equation*}
+        Sin embargo, $\BB=\{u_{1},\dots,u_{k},w_{1},\dots,w_{m}\}$ es linealmente independiente
+        así que $c_{i}=0$ para todo $i=1,\dots,m$. Luego
+        \begin{equation*}
+            \sum_{i=1}^{k}a_{i}u_{i}+\sum_{i=1}^{n}b_{i}v_{i}=0.
+        \end{equation*}
+        Como $\BB=\{u_{1},\dots,u_{k},v_{1},\dots,v_{n}\}$ es linealmente independiente entonces
+        $a_{i}=0,b_{j}=0$ para $i=1,\dots,k$ y $j=1,\dots,n$. Más aun
+        \begin{equation*}
+            W_{1}+W_{2}=\gen{u_{1},\dots,u_{k},v_{1},\dots,v_{n},w_{1},\dots,w_{m}}.
+        \end{equation*}
+        pues
+        \begin{equation*}
+            W_{1}+W_{2}\subset\gen{u_{1},\dots,u_{k},v_{1},\dots,v_{n},w_{1},\dots,w_{m}}
+        \end{equation*}
+        y la otra contención ya ha sido mostrada. Finalmente
+        \begin{align*}
+            \dim(W_{1})+\dim(W_{2})&=(k+n)+(k+m)\\
+            &=k+(n+k+m)\\
+            &=\dim(W_{1}\cap W_{2})+\dim(W_{1}+W_{2}).
+        \end{align*}
+    \end{proof}
+
+    \begin{mdframed}[style=mdgraybox,frametitle={Proposición 17}]
+        Si $S$ tiene cardinalidad $n$, es linealmente independiente y genera a $V$, entonces todo
+        conjunto linealmente independiente que genera a $V$ tiene cardinalidad $n$.
+    \end{mdframed}
+
+    Encontrar bases del subespacio vectorial de $F^{n}$ que contiene las soluciones del sistema
+    lineal homogéneo asociado a $A=(a_{ij})\in M_{m\times n}(F)$
+    \begin{equation*}
+        \begin{pmatrix}
+            0 & 1 & 0 & 2\\
+            0 & 0 & 1 & 3\\
+            0 & 0 & 0 & 0
+        \end{pmatrix}
+        \begin{pmatrix}
+            x_{1}\\
+            x_{2}\\
+            x_{3}\\
+            x_{4}
+        \end{pmatrix}
+        =
+        \begin{pmatrix}
+            0\\
+            0\\
+            0
+        \end{pmatrix}
+    \end{equation*}
+
+    Las variables libres son $x_{1},x_{4}$
+    \begin{align*}
+        &\{(x_{1},-2x_{4},-3x_{4},x_{4}):x_{1},x_{4}\in F\}\\
+        &\{x_{1}(1,0,0,0)+x_{4}(0,-2,-3,1):x_{1},x_{4}\in F\}\\
+        &\gen{(1,0,0,0),(0,-2,-3,1)}
+    \end{align*}
+    Este ultimo es base del espacio de soluciones.
 
 \end{document}
