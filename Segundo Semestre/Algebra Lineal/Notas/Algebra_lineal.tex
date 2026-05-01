@@ -6,11 +6,12 @@
 \usepackage{placeins}
 \usepackage[labelfont=bf,labelsep=space]{caption}
 \usepackage{pdfpages}
-
+\usepackage{tikz-cd}
+\DeclareMathOperator{\rg}{rg}
 \newcommand{\llaves}[1]{\{#1\}}
 \newcommand{\parentesis}[1]{\left(#1\right)}
 \newcommand{\llavesgrande}[1]{\big\{#1\big\}}
-
+\newcommand{\llavesgrandes}[1]{\left\{#1\right\}}
 
 
 \begin{document}
@@ -1747,5 +1748,543 @@
         &\gen{(1,0,0,0),(0,-2,-3,1)}
     \end{align*}
     Este ultimo es base del espacio de soluciones.
+
+    \begin{mdframed}[style=mdgraybox,frametitle={Proposición 18}]
+        Si $W$ es un subespacio vectorial de $V$ y $V$ tiene dimensión finita $n$, entonces
+        $\dim(W)\leq n$.
+    \end{mdframed}
+
+    \begin{proof}
+        Si $\dim(W)\gt n$, entonces existiria en $V$ un conjunto linealmente independiente con mas
+        de $n$ elementos, esto es una contradicción. De hecho $\dim(W)=n\Leftrightarrow W=V$.
+    \end{proof}
+
+    \begin{mdframed}[style=mdgraybox,frametitle={Lema 5}]
+        Si $\dim_{F}(V)=n$ entonces todo conjunto linealmente independiente de cardinalidad $n$
+        genera a $V$, es decir, es una base de $V$.
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdgraybox,frametitle={Proposición 19}]
+        Si $V$ es un espacio vectorial en dimensión finita $n$ sobre $F$, entonces todo conjunto
+        $S$ linealmente independiente es parte de una base.
+    \end{mdframed}
+
+    \begin{proof}
+        Sea $S$ un conjunto linealmente independiente en $V$. Si $\gen{S}=V$, entonces por definición
+        $S$ es una base de $V$. Si $\gen{S}\not\subseteq V$ entonces existe $w\in V\setminus\gen{S}$,
+        sabemos que $S\cup\{w\}$ es linealmente independiente. Si $\gen{S\cup\{w\}=V}$, entonces
+        $S\cup\{w\}$ es base. 
+    \end{proof}
+
+    \begin{mdframed}[style=mdgraybox,frametitle={Proposición 20}]
+        Si $V$ es un espacio vectorial de dimensión $n$ sobre $F$ y $\BB=\{v_{1},\dots,v_{n}\}$
+        una base de $V$. Para todo $v\in V$ los escalares $a_{1},a_{2},\dots,a_{n}\in F$ tales que
+        \begin{equation*}
+            v=\sum_{i=1}^{n}a_{i}v_{i}
+        \end{equation*}
+        son únicos, es decir el vector $(a_{1},\dots,a_{n})\in F^{n}$ que satisface que es unico.
+    \end{mdframed}
+
+    \begin{proof}
+        Como $\BB$ genera a $V$, para $v\in V$, existen $a_{1},\dots,a_{n}\in F$ tales que
+        \begin{equation*}
+            v=\sum_{i=1}^{n}a_{i}v_{i}
+        \end{equation*}
+        Supongamos que existen $a_{1}^{\prime},\dots,a_{n}^{\prime}\in F$, tales que
+        \begin{equation*}
+            v=\sum_{i=1}^{n}a_{i}^{\prime}v_{i}.
+        \end{equation*}
+        Así que
+        \begin{equation*}
+            \sum_{i}^{n}a_{i}^{\prime}v_{i}=\sum_{i=1}^{n}a_{i}v_{i},
+        \end{equation*}
+        entonces
+        \begin{equation*}
+            \sum_{i=1}^{n}(a_{i}^{\prime}-a_{i})v_{i}=0
+        \end{equation*}
+        Como $\{v_{1},\dots,v_{n}\}$ son linealmente independiente entonces $a_{i}^{\prime}=a_{i}$
+        para toda $i$.
+    \end{proof}
+
+    \begin{mdframed}[style=mdgraybox,frametitle={Proposición 21}]
+        Sea $A=(a_{ij})\in M_{n\times n}(F)$ tal que los vectores fila $v_{i}=(a_{i1},a_{i2},\dots,a_{in})\in F^{n}$
+        para $i=1,2,\dots,n$; forman un conjunto linealmente independiente en $F^{n}$, entonces la
+        matriz $A$ es invertible
+    \end{mdframed}
+
+    \begin{proof}
+        Queremos probar que existe $B\in M_{n\times n}(F)$ tal que
+        \begin{equation*}
+            B\cdot A=I_{n}=
+            \begin{pmatrix}
+                e_{1}\\
+                e_{2}\\
+                \vdots\\
+                e_{n}
+            \end{pmatrix}
+        \end{equation*}
+        Por hipotesis $\{v_{1},\dots,v_{n}\}$ donde $v_{i}=\{a_{1i},\dots,a_{in}\}$ forman una base de
+        $F^{n}$. Así que existen $b_{ij}\in F$, $\forall i,j\in\{1,\dots,n\}$ tales que
+        \begin{align*}
+            e_{i}&=\sum_{j=1}^{n}b_{ij}v_{j}\\
+            &=\sum_{j=1}^{n}b_{ij}(a_{j1},\dots,a_{jn})\\
+            &=\sum_{j=1}^{n}(b_{ij}a_{j1},\dots,b_{ij}a_{jn})\\
+            &=\sum_{j=1}^{n}b_{ij}a_{j1},\dots,\sum_{j=1}^{n}b_{ij}a_{jn}.
+        \end{align*}
+        Sea $B=(b_{ij})\in M_{n\times n}(F)$,
+        \begin{equation*}
+            B\cdot A=(b_{ij})(a_{jk})=\parentesis{\sum_{j=1}^{n}b_{ij}a_{jk}}=
+            \begin{pmatrix}
+                e_{1}\\
+                \vdots\\
+                e_{n}
+            \end{pmatrix}
+            =I_{n}.
+        \end{equation*}
+        Si $A$ es invertible, entonces sus vectores filas son linealmente independientes.
+    \end{proof}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Definición 20: Base ordenada}]
+        Sea $V$ un espacio vectorial de dimensión $n$ sobre $F$. Una \textbf{base ordenada}
+        de $V$ es una base
+        \begin{equation*}
+            \BB=\{v_{1},\dots,v_{n}\}
+        \end{equation*}
+        de $V$ donde se considera el orden de los vectores. Es decir $\BB$ es diferente
+        de la base ordenada $\{v_{2},v_{1},v_{3},\dots,v_{n}\}$.
+    \end{mdframed}
+
+    \vspace{3.4cm}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Definición 21: Vector de coordenadas}]
+        Sea $V$ un espacio vectorial sobre $F$, sea $\BB=\{v_{1},\dots,v_{n}\}$ una base ordenada
+        de $V$. Dado $v\in V$ el \textbf{vector de coordenadas} de $V$ respecto a $\BB$ es
+        $[v]_{\BB}=(a_{1},\dots,a_{n})\in F^{n}$ si
+        \begin{equation*}
+            v=\sum_{i=1}^{n}a_{i}v_{i}
+        \end{equation*}
+        define una función
+        \begin{align*}
+            \varphi_{\BB}:V&\to F^{n}\\
+            v&\mapsto[v]_{\BB}
+        \end{align*}
+    \end{mdframed}
+
+    \textbf{Ejemplo 19.} Si $P_{n}=\biggl\{\sum_{i=0}^{n}c_{i}x^{i}:c_{i}\in\R\biggr\}$,
+    una base ordenada es $\BB=\{1,x,\dots,x^{n}\}$ se define la función
+    \begin{align*}
+        \varphi_{\BB}:P_{n}&\to F^{n+1}\\
+        \sum^{n}_{i=0}c_{i}x^{i}&\mapsto(c_{0},c_{1},\dots,c_{n})
+    \end{align*}
+    \hfill $\blacktriangleleft$
+
+    \begin{mdframed}[style=mdgraybox,frametitle={Proposición 22}]
+        $\varphi_{\BB}:V\to F^{n}$ es una función biyectiva.
+    \end{mdframed}
+
+    \begin{proof}
+        $\varphi_{\BB}$ es inyectiva porque los escalares $a_{1},\dots,a_{n}\in F$ tales que
+        \begin{equation*}
+            v=\sum_{i=1}^{n}a_{i}v_{i}
+        \end{equation*}
+        son unicos. Dados $(a_{1},\dots,a_{n})\in F^{n}$
+        \begin{equation*}
+            \varphi_{\BB}\parentesis{\sum_{i=1}^{n}a_{i}v_{i}}=(a_{1},\dots,a_{n})\in F^{n}
+        \end{equation*}
+        así, es sobreyectiva, luego $\varphi_{\BB}$ es biyectiva.
+    \end{proof}
+
+    \vspace{2.8cm}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Definición 22: Matriz de cambio de base}]
+        Sea $V$ un espacio vectorial de dimensión $n$ sobre $F$, y sean
+        \begin{equation*}
+            \BB=\{v_{1},\dots,v_{n}\}\quad\text{ y }\quad\BB^{\prime}=\{v_{1}^{\prime},\dots,v_{m}^{\prime}\}
+        \end{equation*}
+        dos bases. Entonces la \textbf{matriz de cambio de base} $P$ de $\BB$ a $\BB^{\prime}$ es la
+        unica matriz $P\in M_{n\times n}(F)$ tal que
+        \begin{equation*}
+            [v]_{\BB^{\prime}}=P[v]_{\BB},\quad\forall v\in V
+        \end{equation*}
+    \end{mdframed}
+
+    Esto se puede representar con el siguiente diagrama conmutativo
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{diagramas_conmutativos.pdf}
+        \label{fig:conexiones}
+    \end{figure}
+
+    La columna $j$ de $P$ esta dada por las coordenadas $[v]_{\BB^{\prime}}$.\\
+    Sea $\R^{2}$ y $\BB=\{(1,0),(0,1)\}$ y $\BB^{\prime}=\{(1,1),(0,2)\}$ bases, veamos el siguiente
+    diagrama
+    
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.7\textwidth]{diagramas_conmutativos2.pdf}
+        \label{fig:conexiones2}
+    \end{figure}
+    Las coordenadas de $\BB$ respecto a $\BB^{\prime}$ son
+    \begin{equation*}
+        \begin{matrix}
+            [(1,0)]_{\BB^{\prime}}=(1,-\frac{1}{2})\\
+            [(0,1)]_{\BB^{\prime}}=(0,\frac{1}{2})
+        \end{matrix}
+        \implies P=
+        \begin{pmatrix}
+            1 & 0\\
+            -\frac{1}{2} & \frac{1}{2}
+        \end{pmatrix}
+    \end{equation*}
+
+    \begin{mdframed}[style=mdgraybox,frametitle={Proposición 23}]
+        $P\in M_{n\times n}(F)$ es invertible.
+    \end{mdframed}
+    
+    \begin{proof}
+        \begin{equation*}
+            P
+            \begin{pmatrix}
+                x_{1}\\
+                \vdots\\
+                x_{n}
+            \end{pmatrix}
+            =
+            \begin{pmatrix}
+                0\\
+                \vdots\\
+                0
+            \end{pmatrix}
+        \end{equation*}
+        \begin{equation*}
+            P[v]_{\BB}=[v]_{\BB^{\prime}}=(0,\dots,0).
+        \end{equation*}
+        \begin{equation*}
+            \implies v=0\implies [v]_{\BB}=(0,\dots,0).
+        \end{equation*}
+        Por tanto, el sistema homogeneo tiene solo la solución trivial y por lo tanto
+        la matriz es invertible.
+    \end{proof}
+
+    Como $P$ es invertible entonces sus vectores columna son linealmente independientes y forman
+    una base de $F^{n}$.
+    
+    \begin{mdframed}[style=mdgraybox,frametitle={Proposición 24}]
+        Si $\varphi_{\BB}:V\to F^{n}$ es una biyección ademas satisface lo siguiente si $v,w\in V$,
+        $a\in F$ entonces
+        \begin{align*}
+            \varphi_{\BB}(av+w)&=a\varphi_{\BB}(v)+\varphi_{\BB}(w)\\
+            [av+w]_{\BB}&=a[v]_{\BB}+[w]_{\BB}
+        \end{align*}
+    \end{mdframed}
+
+    \begin{proof}
+        Supongamos que
+        \begin{equation*}
+            v=\sum_{i=1}^{n}b_{i}v_{i},\qquad w=\sum_{i=1}^{n}c_{i}v_{i}\in V.
+        \end{equation*}
+        Sea $a\in F$,
+        \begin{align*}
+            av+w&=a\parentesis{\sum_{i=1}^{n}b_{i}v_{i}}+\parentesis{\sum_{i=1}^{n}c_{i}v_{i}}\\
+            &=\sum_{i=1}^{n}(ab_{i}v_{i}+c_{i}v_{i})\\
+            &=\sum_{i=1}^{n}(ab_{i}+c_{i})v_{i},
+        \end{align*}
+        entonces
+        \begin{align*}
+            [av+w]_{\BB}&=a[v]_{\BB}+[w]_{\BB}\\
+            &=a(b_{1},\dots,b_{n})+(c_{1},\dots,c_{n})\\
+            &=(ab_{1}+c_{1},ab_{2}+c_{2},\dots,ab_{n}+c_{n}).
+        \end{align*}
+    \end{proof}
+
+    \chapter{Transformaciones Lineales}
+
+    \section{Transformaciones lineales}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Definición 23: Transformación Lineal}]
+        Sean $V,W$ espacios vectoriales sobre un campo $F$, una funcíón $T:V\to W$ es una
+        transformación lineal si
+        \begin{equation*}
+            T(av_{1}+v_{2})=aT(v_{1})+T(v_{2})
+        \end{equation*}
+        para todo $a\in F$ y $v_{1},v_{2}\in V$.
+    \end{mdframed}
+
+    \textbf{Observación.}
+    \begin{equation*}
+        T\parentesis{\sum_{i = 1}^na_iv_i} = \sum_{i = 1}^na_iT(v_i)
+        \tag{XXX}
+        \label{XXX}
+    \end{equation*}
+    \begin{equation*}
+        T\parentesis{\sum_{i = 1}^na_iv_i} = T\parentesis{a_1v_1 + \sum_{i = 2}^na_iv_i} = a_1T(v_1) + T\parentesis{\sum_{i = 2}^na_iv_i}.
+    \end{equation*}
+    Usando inducción se obtiene \eqref{XXX}.
+
+    \textbf{Ejemplo 20.}\\
+    Sea $A = (a_{ij}) \in M_{m \times n}(F)$ el producto
+    \begin{align*}
+        A:F^n & \to F^m\\
+        \begin{pmatrix}
+            b_1\\
+            \vdots\\
+            b_n
+        \end{pmatrix}
+        & \mapsto A\begin{pmatrix}
+            b_1\\
+            \vdots\\
+            b_n
+        \end{pmatrix} = 
+        \begin{pmatrix}
+            \sum_{i = 1}^na_{1i}b_i\\
+            \vdots\\
+            \sum_{i = 1}^na_{mi}b_i\\
+        \end{pmatrix}.
+    \end{align*}
+    Es una transformación lineal. \hfill $\blacktriangleleft$
+
+    \textbf{Ejemplo 21.}\\
+    Consideremos los siguientes conjuntos.
+    \begin{equation*}
+        \mathcal{C} = \llaves{f:\mathbb{R} \to \mathbb{R}: f \text{ función}}
+    \end{equation*}
+    \begin{equation*}
+        \mathcal{V} = \llaves{f: \mathbb{R} \to \mathbb{R}:f \text{ diferenciable}}
+    \end{equation*}
+    Sea la función
+    \begin{align*}
+        \mathcal{O}:\mathcal{V} & \to \mathcal{C}\\
+        f(x) & \mapsto f'(x).
+    \end{align*}
+    Es una transformación lineal. \hfill $\blacktriangleleft$
+
+    \textbf{Ejemplo 22.}\\
+    Sea
+    \begin{equation*}
+        \mathcal{W} = \llaves{f:\mathbb{R} \to \mathbb{R}:f \text{ es integrable}}.
+    \end{equation*}
+    Así,
+    \begin{align*}
+        \mathcal{I}: \mathcal{W} & \to \mathcal{W}\\
+        f(x) & \mapsto \int_{0}^xf(t)dt
+    \end{align*}
+    es transformación lineal. \hfill $\blacktriangleleft$
+
+    \begin{mdframed}[style=mdgraybox,frametitle={Proposición 25}]
+        Si $T:V \to W$ es una transformación lineal, entonces basta conocer la imagen en una base
+        de $V$ para conocer la imagen de todo vector en $V$.
+    \end{mdframed}
+
+    \begin{proof}
+        Sea la transformación lineal $T:V \to W$ y $\mathcal{B}$ una base de $V$. Supongamos que $T(v_i) = w_i$ para todo $v_i \in \mathcal{B}$. Sea $v \in V$, $v = \sum_{i = 1}^na_iv_i$, donde $a_1, \dots, a_n \in F$ y $v_1, \dots, v_n \in \mathcal{B}$. Así que
+        \begin{align*}
+            T(v) & = T\parentesis{\sum_{i = 1}^na_iv_i}\\
+            & = \sum_{i = 1}^na_iT(v_i)\\
+            & = \sum_{i = 1}^na_iw_i.
+        \end{align*}
+    \end{proof}
+
+    \textbf{Ejemplo 23.}\\
+    Sean
+    \begin{equation*}
+        T: \mathbb{R} \to \mathbb{R},
+    \end{equation*}
+    $T(1,0) = (a_1, b_1)$ y $T(0, 1) = (a_2, b_2)$. Luego
+    \begin{align*}
+        T(x, y) & = x(a_1, b_1) + y(a_2, b_2)\\
+        & = (a_1x + a_2y, b_1x + b_2y).
+    \end{align*}
+    \hfill $\blacktriangleleft$
+
+    Sea $T:V\to W$ transformacion lineal entonces
+    \begin{equation*}
+        T(0)=0\quad\text{ y }\quad T(-v)=-T(v)
+    \end{equation*}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Definición 24: Kernel e Imagen}]
+        El \textbf{espacio nulo} o \textbf{kernel}, (denotado por $\ker(T)$), es
+        \begin{equation*}
+            0\in\ker(T)=\{v\in V:T(v)=0_{W}\}\subset V.
+        \end{equation*}
+        La \textbf{imagen} de $T$ es
+        \begin{equation*}
+            \Im(T)=\{T(v)\in W:v\in V\}\subset W.
+        \end{equation*}
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdgraybox,frametitle={Proposición 26}]
+        $\ker(T)$ es un subespacio vectorial de $V$ y $\Im(T)$ es un subespacio vectorial de $W$.
+    \end{mdframed}
+
+    \begin{proof}
+        Basta probar que, sea $S \subset V$ es un subespacio vectorial si y solo si $S$ es no vacío y para todo $a \in F$, $v_1, v_2 \in S$ se tiene que $av_1 + v_2 \in S$.
+        \begin{itemize}
+            \item[(1)] Notemos que $0 \in \ker{T}$ así que es no vacío. Sean $a \in F$, $v_1, v_2 \in \ker{T}$. Luego,
+            \begin{align*}
+                T(av_1 + v_2) & = aT(v_1) + T(v_2)\\
+                & = a \cdot 0 + 0\\
+                & = 0.
+            \end{align*}
+            \item[(2)] Veamos que $T(0) = 0$, así que es no vacío. Sean $a \in F$, $T(v_1), T(v_2) \in \Im{T}$. Dado que $aT(v_1) + T(v_2) \in \Im{T}$, al ser una transformación lineal, se sigue que $T(av_1 + v_2) \in \Im{T}$.
+        \end{itemize}
+    \end{proof}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Definición 25: Nulidad}]
+        La dimensión de $\ker(T)$ se le llamada \textbf{nulidad} de $T$. Denotada por
+        \begin{equation*}
+            \dim(\ker(T))=\nul(T).
+        \end{equation*}
+    \end{mdframed}
+
+    \textbf{Ejemplo 24.} Sea
+    \begin{equation*}
+        \mathcal{P} = \llavesgrandes{\sum_{i = 0}^na_ix^{i}:a_i \in \mathbb{R}}.
+    \end{equation*}
+    Tomemos la siguiente función
+    \begin{align*}
+        \mathcal{D}: \mathcal{P} & \to \mathcal{P}\\
+        \sum_{i = 0}^na_ix^{i} & \mapsto \sum_{i = i}^nia_ix^{i-1}.
+    \end{align*}
+    Luego, 
+    \begin{align*}
+        \ker(\mathcal{D}) = \llaves{a_0:a_0 \in \mathbb{R}},\\
+        \nul{\mathcal{D}} = 1.
+    \end{align*}
+    \hfill $\blacktriangleleft$
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Definición 26: Rango}]
+        La dimensión de $\Im(T)$ de $W$ se llama \textbf{rango} de $T$. Denotada por
+        \begin{equation*}
+            \dim(\Im(T))=\rg(T)
+        \end{equation*}
+    \end{mdframed}
+
+    \textbf{Ejemplo 25.} El rango de la transformación lineal vista en el ejemplo (XXX) es 
+    \begin{equation*}
+        \Im(\mathcal{D})= \llavesgrandes{\sum_{i = 0}^{n-1}a_ix^{i}: a_i \in \mathbb{R}} \qquad \implies \qquad \rg(\mathcal{D}) = n.
+    \end{equation*}
+    \hfill $\blacktriangleleft$
+
+    \begin{mdframed}[style=mdgraybox,frametitle={Teorema 6: Rango-Nulidad}]
+        Sean $V, W$ espacios vectoriales sobre $F$ tal que $V$ es de dimensión finita $n$. Si $T:V \to W$ es una transformación lineal, entonces
+        \begin{equation*}
+            \nul{T} + \rg{T} = n.
+        \end{equation*}
+    \end{mdframed}
+
+    \begin{proof}
+        Recordemos que $\ker(T) = \llaves{v \in V: T(v) = 0}$ es un subespacio vectorial de $V$. Así $\nul{T} = k \leq n$. Sea $\mathcal{B}_1 = \llaves{v_1, \dots , v_k}$ una base de $\ker(T)$. Completamos $\mathcal{B}_1$ a una base $\mathcal{B} = \llaves{v_1, \dots,v_k, v_{k + 1}, \dots , v_n}$ de $V$. Queremos probar que $\rg{T} = n - k$. Vamos a probar que $\llaves{T(v_{k + 1}),T(v_{k + 2}), \dots, T(v_n)} \subset \Im(T)$ es una base de $\Im(T)$. Sea $T(v) \in \Im(T)$, con $v \in V$. Entonces existen escalares $a_1, \dots , a_n \in F$ tales que $v = \sum_{i = 1}^na_iv_i$, entonces
+        \begin{equation*}
+            T(v) = \sum_{i = 1}^n a_i T(v_i) = \sum_{i = 1}^k a_i T(v_i) + \sum_{i = k + 1}^n a_i T(v_i).
+        \end{equation*}
+        Como $v_1, \dots, v_k \in \ker(T)$, entonces $T(v) = \sum_{i = k + 1}^n a_i T(v_i)$. Por tanto $\llaves{T(v_{k+1}), \dots, T(v_n)}$ genera a $\Im(T)$. Supongamos que $\sum_{i = k+1}^n a_i T(v_i) = 0 = T\left(\sum_{i = k+1}^n a_i v_i\right)$. Por tanto
+        \begin{equation*}
+            \sum_{i = k+1}^n a_i v_i \in \ker(T).
+        \end{equation*}
+        Existen $c_1, \dots, c_n \in F$ tales que
+        \begin{equation*}
+            \sum_{i = k+1}^n a_i v_i - \sum_{i = 1}^n c_i v_i = 0.
+        \end{equation*}
+        Como $\llaves{v_1, \dots, v_n}$ es base, se tiene que $a_{k + 1} = \dotsi = a_n = 0$. Así que $\llaves{T(v_{k + 1}), \dots , T(v_n)}$ es base de $\Im(T)$, por tanto $\rg{T} = n - k = n - \nul{T}$. Concluyendo así que
+        \begin{equation*}
+            \nul{T} + \rg{T} = n.
+        \end{equation*}
+    \end{proof}
+
+    \textbf{Ejemplo 26.} Tomemos la siguiente transformación lineal,
+    \begin{align*}
+        T : \mathbb{R}^2 & \to \mathbb{R}^2,\\
+        (x,y) & \mapsto (2x + y, 0).
+    \end{align*}
+    Así,
+    \begin{align*}
+        \ker(T) & = \llaves{(x,y):(2x + y, 0) = (0, 0)}\\
+        & = \llaves{(x, -2x):x \in \mathbb{R}}\\
+        & = \llaves{x(1,-2):x \in \mathbb{R}}\\
+        & \implies \nul{T} = 1.
+    \end{align*}
+    Por otra parte, 
+    \begin{align*}
+        \Im(T) & = \llaves{(2x + y, 0): x, y \in \mathbb{R}}\\
+        & = \llaves{(a, 0): a \in \mathbb{R}}\\
+        & = \llaves{a(1,0): a \in \mathbb{R}}\\
+        & \implies \rg{T} = 1
+    \end{align*}
+    Luego,
+    \begin{equation*}
+        \nul{T} + \rg{T} = \dim \mathbb{R}^2.
+    \end{equation*}
+    \hfill $\blacktriangleleft$
+
+    \textbf{Ejemplo 27.} Sean $A = (a_{ij}) \in M_{n \times n}$ y el sistema homogéneo siguiente
+    \begin{equation*}
+    A
+    \begin{pmatrix}
+    x_1 \\
+    \vdots \\
+    x_n \\
+    \end{pmatrix}
+    = 
+    \begin{pmatrix}
+    0\\
+    \vdots\\
+    0\\
+    \end{pmatrix}.
+    \end{equation*}
+    Tomemos la siguiente transformación lineal
+    \begin{align*}
+        A:F^n & \to F^n\\
+        \begin{pmatrix}
+            b_1\\
+            \vdots\\
+            b_n
+        \end{pmatrix}
+        & \mapsto A
+        \begin{pmatrix}
+            b_1\\
+            \vdots\\
+            b_n
+        \end{pmatrix}.
+    \end{align*}
+    Así, $\ker(A)$ es el espacio solución del sistema lineal asociado a $A$. Si reducimos y escalonamos la matriz $A$, obtenemos que
+    \begin{itemize}
+        \item $\rg{A}$ es el número de filas no cero de la matriz reducida por filas escalonada equivalente a $A$.
+        \item $\nul{A}$ es la cardinalidad de variables libres.
+    \end{itemize}
+    \hfill $\blacktriangleleft$
+
+    \begin{mdframed}[style=mdgraybox,frametitle={Proposición 27}]
+        Sea $T:V \to W$ una transformación lineal, si entonces $T$ es inyectiva si y solo si $\nul{T} = 0$.
+    \end{mdframed}
+
+    \begin{proof}
+        Si $T(v_1) = T(v_2)$ entonces $T(v_1 - v_2) = 0$, así que $v_1 - v_2 \in \ker(T)$. Como $\nul{T} = 0$ entonces $\ker(T) = \llaves{0}$. Por lo tanto $v_1 = v_2$ y por ende $T$ es inyectiva. Si $T$ es inyectiva, entonces
+        \begin{equation*}
+            T(v) = 0 \implies v = 0.
+        \end{equation*}
+        Así que $\ker(T) = \llaves{0}$ y por lo tanto $\nul{T} = 0$.
+    \end{proof}
+
+    \begin{mdframed}[style=mdgraybox,frametitle={Corolario 5}]
+        Sean $V$ un espacio vectorial de dimensión finita $n$ sobre $F$ y $T: V \to V$ una transformación lineal. Lo siguiente es equivalente.
+        \begin{itemize}
+            \item[(1)] $T$ es inyectiva.
+            \item[(2)] $T$ es sobre.
+            \item[(3)] $T$ es biyectiva.
+        \end{itemize}
+    \end{mdframed}
+
+    \begin{proof}
+        Es claro que
+        \begin{equation*}
+            (3) \implies (1) \qquad \text{y} \qquad (3) \implies (2).
+        \end{equation*}
+        Supongamos que $T$ es inyectiva, entonces esto es equivalente a que $\nul(T) = 0$. Por tanto $\rg(T) + \nul(T) = \rg(T) = \dim_F(V)$, por lo cual
+        \begin{equation*}
+            \dim(\Im(T)) = \dim_F V \implies \Im(T) = V.
+        \end{equation*}
+        Así, $T$ es sobre. Supongamos ahora que $T$ es sobre, entonces $\rg(T) = \dim_F V$, así que $\nul(T) = \dim_F(V) - \rg(T) = 0$. Por lo tanto $T$ es inyectiva.
+    \end{proof}
 
 \end{document}
