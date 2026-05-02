@@ -1,0 +1,163 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{ugmath}
+\usepackage{float}
+\usepackage{placeins}
+\usepackage [spanish]{babel}
+\usepackage[labelfont=bf,labelsep=space]{caption}
+\newcommand{\paren}[1]{\left( #1 \right)}
+\newcommand{\alumno}{Ricardo León Martínez}
+\newcommand{\materia}{Calculo Diferencial e Integral II}
+\newcommand{\profesor}{Fernando Nuñez Medina}
+\newcommand{\tarea}{Tarea 9}
+\newcommand{\fecha}{25/4/2026}
+
+\begin{document}
+    \begin{center}
+    {\large\textbf{UNIVERSIDAD DE GUANAJUATO}}\\[0.3cm]
+    {\normalsize\textbf{DIVISIÓN DE CIENCIAS NATURALES Y EXACTAS}}\\
+    {\normalsize\textbf{CAMPUS GUANAJUATO}}\\[1cm]
+
+    {\Large\textbf{\tarea\ (\materia)}}\\[1cm]
+    \end{center}
+
+    \textbf{Nombre:} \alumno \hfill 
+    \textbf{Fecha:} \fecha \hfill 
+    \textbf{Calificación:} \rule{3cm}{0.4pt} \\[0.3cm]
+
+    \begin{mdframed}[style=mdpinkbox,frametitle={Ejercicio 1}]
+        Prueba el corolario 5.
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdpinkbox,frametitle={Ejercicio 2}]
+        \textbf{(Limites y desigualdades)} Considera dos sucesiones convergentes $(a_{n})$  y $(b_{n})$.
+        \begin{enumerate}
+            \item[(a)] Prueba que si existe $N\in\N$ tal que
+            \begin{equation*}
+                a_{n}\leq b_{n}\text{ para todo } n\gt N
+            \end{equation*}
+            entonces
+            \begin{equation*}
+                \lim_{n\to\infty}a_{n}\leq\lim_{n\to\infty}b_{n}.
+            \end{equation*}
+            \item[(b)] ¿Se cumplira que si $a_{n}\lt b_{n}$ para todo $n\gt N$, entonces $\lim_{n\to\infty}a_{n}\lt\lim_{n\to\infty}b_{n}$? Argumenta tu respuesta. 
+        \end{enumerate}
+    \end{mdframed}
+
+    \begin{proof}
+        \begin{enumerate}
+            \item[(a)]
+            Procedemos por contradicción. Supongamos que $a\gt b$. Definimos
+            \begin{equation*}
+                \varepsilon:=\frac{a-b}{2}\gt0.
+            \end{equation*}
+            Por la convergencia de las sucesiónes existen $N_{1},N_{2}\in\N$ tales que
+            \begin{equation*}
+                \text{si }n\gt N_{1},\text{ entonces }\abs{a_{n}-a}\lt\varepsilon,\qquad \text{si }n\gt N_{2},\text{ entonces }\abs{b_{n}-b}\lt\varepsilon.
+            \end{equation*}
+            Sea $N:=\max\{N_{0},N_{1},N_{2}\}$. Entonces, para todo $n\gt N$, se cumple
+            \begin{equation*}
+                a_{n}\gt a-\varepsilon=\frac{a+b}{2},\qquad b_{n}\lt b+\varepsilon=\frac{a+b}{2}.
+            \end{equation*}
+            Por lo tanto,
+            \begin{equation*}
+                a_{n}\gt b_{n},
+            \end{equation*}
+            lo cual contradice la hipotesis $a_{n}\leq b_{n}$ para todo $n\gt N_{0}$.
+            \item[(b)]
+            Esto es falso en general. Consideremos
+            \begin{equation*}
+                a_{n}=0,\qquad b_{n}=\frac{1}{n}.
+            \end{equation*}
+            Entonces $a_{n}\lt b_{n}$ para todo $n$, pero
+            \begin{equation*}
+                \lim_{n\to\infty}a_{n}=0,\qquad \lim_{n\to\infty}b_{n}=0.
+            \end{equation*}
+            Por lo tanto,
+            \begin{equation*}
+                \lim_{n\to\infty}a_{n}=\lim_{n\to\infty}b_{n}.
+            \end{equation*}
+        \end{enumerate}
+    \end{proof}
+
+    \begin{mdframed}[style=mdpinkbox,frametitle={Ejercicio 3}]
+        Prueba que si una sucesion es de Cauchy posee una subsucesion convergente entonces converge.
+    \end{mdframed}
+
+    \begin{proof}
+        Veamos que la sucesión es de cauchy, por la proposición 54 esta converge.
+    \end{proof}
+
+    \begin{mdframed}[style=mdpinkbox,frametitle={Ejercicio 4}]
+        Prueba que toda sucesion de numeros reales tiene un limite subsecuencial en $\R^{*}$.
+    \end{mdframed}
+
+    \begin{proof}
+        Sea $(a_{n})$ una sucesión de números reales. Consideremos tres casos. Primero $(a_{n})$ es acotada.
+        Entonces por el teorema de Bolzano-Weierstrass, existe una subsucesión $(a_{n_{k}})$ convergente en $\R$,
+        es decir,
+        \begin{equation*}
+            a_{n_{k}}\to\ell\in\R.
+        \end{equation*}
+        Como $\R\subset\R^{*}$, esta subsucesión tmb converge en $\R^{*}$. Segundo $(a_{n})$ no esta acotada superiormente.
+        Entonces, para todo $M\in\R$, existe $n$ tal que $a_{n}\gt M$. Construimos una subsecesión por inducción. Elegimos
+        $n_{1}$ tal que $a_{n_{1}}\gt1$. Elegimos $n_{2}\gt n_{1}$ tal que $a_{n_{2}}\gt2$. En general, elegimos $n_{k}\gt n_{n_{k-1}}$
+        tal que $a_{n_{k}}\gt k$. Esto es posible porque la sucesión no está acotada superiormente. Entonces
+        \begin{equation*}
+            a_{n_{k}}\gt k,\quad \forall k\in\N.
+        \end{equation*}
+        Por lo tanto,
+        \begin{equation*}
+            a_{n_{k}}\to+\infty,
+        \end{equation*}
+        es decir, converge en $+\infty$. Tercero $(a_{n})$ no esta acotada inferiormente. Analogamente, para todo $M\in\R$,
+        existe $n$ tal que $a_{n}\lt M$. Volvemos a construir una subsucesión por inducción. Elegimos $n_{1}$ tal que $a_{n_{1}}\lt-1$,
+        $n_{2}\gt n_{1}$ tal que $a_{n_{2}}\lt-2$, en general $n_{k}\gt n_{k-1}$ tal que $a_{n_{k}}\lt -k$. Entonces
+        \begin{equation*}
+            a_{n_{k}}\lt-k,\quad\forall k,
+        \end{equation*}
+        y por lo tanto
+        \begin{equation*}
+            a_{n_{k}}\to-\infty.
+        \end{equation*}
+        En todos los casos, existe una subsucesión que converge en $\R^{*}$.
+    \end{proof}
+
+    \begin{mdframed}[style=mdpinkbox,frametitle={Ejercicio 5}]
+        Prueba que si $(a_{n})$ es una sucesión de números reales, $N$ es un número natural y $(b_{n})$ es la suecesión
+        $(a_{N},a_{N+1},a_{N+2},\dots)$, entonces $\overline{lim}b_{n}=\overline{lim}a_{n}$. Se cumple un resultado similar
+        para el limite inferior.
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdpinkbox,frametitle={Ejercicio 6}]
+        Prueba que si $(a_{k})$ es una subsucesión de una sucesión $(a_{n})$ de números reales, entonces
+        \begin{equation*}
+            \liminf_{n\to\infty}a_{n}\leq\liminf_{j\to\infty}a_{n_{k}}\leq\limsup_{k\to\infty}a_{n_{k}}\leq\limsup_{n\to\infty}a_{n}.
+        \end{equation*}
+    \end{mdframed}
+
+    \begin{proof}
+        Sea $(a_{n})$ una sucesión en $\R$, y $(a_{n_{k}})$ una subsucesión, con $n_{k}$ estrictamente creciente. Definimos
+        \begin{equation*}
+            s_{n}:=\sup\{a_{m}:m\geq n\},\qquad i_{n}=\{a_{m}:m\geq n\}.
+        \end{equation*}
+    \end{proof}
+
+    \begin{mdframed}[style=mdpinkbox,frametitle={Ejercicio 7}]
+        Sea $m$ un número natural. Prueba que $\sum_{n=1}^{\infty}a_{n}$ converge ssi $\sum_{n=m}^{\infty}a_{n}$ converge;
+        y que si $m\gt 1$,
+        \begin{equation*}
+            \sum_{n=1}^{\infty}a_{n}=(a_{1}+a_{2}+\cdots+a_{m-1})+\sum_{n=m}^{\infty}a_{n}.
+        \end{equation*}
+        Lamaremos al número $C_{m}:=\sum_{n=m}^{\infty}a_{n}$ la $m$-ésima cola de la serie $\sum_{n=1}^{\infty}a_{n}$.
+        Así, una series converge ssi todas sus colas convergen.
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdpinkbox,frametitle={Ejercicio 8}]
+        Prueba que si  una serie $\sum_{n=1}^{\infty}a_{n}$ converge, entonces
+        \begin{equation*}
+            \lim_{m\to\infty}\sum_{n=m}^{\infty}a_{n}=0.
+        \end{equation*}
+        Así, una serie converge, entonces la sucesión formada por sus colas converge a cero.
+    \end{mdframed}
+
+\end{document}
