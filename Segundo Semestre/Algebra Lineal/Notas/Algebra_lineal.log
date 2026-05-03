@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.4.7)  2 MAY 2026 01:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.4.7)  2 MAY 2026 23:21
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1054,12 +1054,12 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 ))
-<linealdefinitivo.pdf, id=83, 398.3382pt x 569.055pt>
+<linealdefinitivo.pdf, id=87, 398.3382pt x 569.055pt>
 File: linealdefinitivo.pdf Graphic file (type pdf)
 <use linealdefinitivo.pdf>
 Package pdftex.def Info: linealdefinitivo.pdf  used on input line 21.
 (pdftex.def)             Requested size: 398.33722pt x 569.0536pt.
-<linealdefinitivo.pdf, id=85, page=1, 398.3382pt x 569.055pt>
+<linealdefinitivo.pdf, id=89, page=1, 398.3382pt x 569.055pt>
 File: linealdefinitivo.pdf Graphic file (type pdf)
 <use linealdefinitivo.pdf, page 1>
 Package pdftex.def Info: linealdefinitivo.pdf , page1 used on input line 21.
@@ -1703,12 +1703,12 @@ Package mdframed Info: mdframed detected package amsthm
 LaTeX Info: Redefining \. on input line 1909.
 LaTeX Info: Redefining \% on input line 1909.
  [38]
-<diagramas_conmutativos.pdf, id=368, 215.44188pt x 97.35472pt>
+<diagramas_conmutativos.pdf, id=373, 215.44188pt x 97.35472pt>
 File: diagramas_conmutativos.pdf Graphic file (type pdf)
 <use diagramas_conmutativos.pdf>
 Package pdftex.def Info: diagramas_conmutativos.pdf  used on input line 1915.
 (pdftex.def)             Requested size: 358.50317pt x 162.00392pt.
-<diagramas_conmutativos2.pdf, id=369, 216.04112pt x 97.17606pt>
+<diagramas_conmutativos2.pdf, id=374, 216.04112pt x 97.17606pt>
 File: diagramas_conmutativos2.pdf Graphic file (type pdf)
 <use diagramas_conmutativos2.pdf>
 Package pdftex.def Info: diagramas_conmutativos2.pdf  used on input line 1925.
@@ -1824,19 +1824,60 @@ Package mdframed Info: mdframed detected package amsthm
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 2326.
-LaTeX Info: Redefining \. on input line 2356.
-LaTeX Info: Redefining \% on input line 2356.
+Package mdframed Info: mdframed works in twoside mode on input line 2346.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 2346.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 2349.
+Package mdframed Info: mdframed works in twoside mode on input line 2351.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 2351.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 2353.
+Package mdframed Info: Not enough space on this page on input line 2353.
+LaTeX Info: Redefining \. on input line 2353.
+LaTeX Info: Redefining \% on input line 2353.
  [47]
-LaTeX Info: Redefining \. on input line 2408.
-LaTeX Info: Redefining \% on input line 2408.
+Package mdframed Info: Not enough space on this page on input line 2353.
+Package mdframed Info: mdframed works in twoside mode on input line 2371.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 2371.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 2373.
+Package mdframed Info: mdframed works in twoside mode on input line 2384.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 2384.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 2390.
+Package mdframed Info: mdframed works in twoside mode on input line 2392.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 2392.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 2397.
+LaTeX Info: Redefining \. on input line 2397.
+LaTeX Info: Redefining \% on input line 2397.
  [48]
-Underfull \hbox (badness 10000) in paragraph at lines 2443--2444
+Package mdframed Info: Not enough space on this page on input line 2397.
+LaTeX Info: Redefining \. on input line 2444.
+LaTeX Info: Redefining \% on input line 2444.
+ [49]
+Underfull \hbox (badness 10000) in paragraph at lines 2458--2459
 
  []
 
-LaTeX Info: Redefining \. on input line 2456.
-LaTeX Info: Redefining \% on input line 2456.
-[49] (./Algebra_lineal.aux
+LaTeX Info: Redefining \. on input line 2471.
+LaTeX Info: Redefining \% on input line 2471.
+[50] (./Algebra_lineal.aux
 LaTeX Info: Redefining \. on input line 12.
 LaTeX Info: Redefining \% on input line 12.
 )
@@ -1845,21 +1886,21 @@ LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
 Package rerunfilecheck Info: File `Algebra_lineal.out' has not changed.
-(rerunfilecheck)             Checksum: 5FDBD03AAD6340CF10B7DDE1F2F01D85;2287.
+(rerunfilecheck)             Checksum: 2FCB836D0FFA5CC1A8B21A55AC4B616D;2397.
  ) 
 Here is how much of TeX's memory you used:
- 41434 strings out of 467525
- 926855 string characters out of 5425862
- 1465183 words of memory out of 5000000
- 69533 multiletter control sequences out of 15000+600000
+ 41452 strings out of 467525
+ 927201 string characters out of 5425862
+ 1465530 words of memory out of 5000000
+ 69549 multiletter control sequences out of 15000+600000
  677715 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,17n,108p,815b,1229s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmro12.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Algebra_lineal.pdf (50 pages, 478012 bytes).
+Output written on Algebra_lineal.pdf (51 pages, 480034 bytes).
 PDF statistics:
- 579 PDF objects out of 1000 (max. 8388607)
- 438 compressed objects within 5 object streams
- 87 named destinations out of 1000 (max. 500000)
- 238 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 588 PDF objects out of 1000 (max. 8388607)
+ 446 compressed objects within 5 object streams
+ 89 named destinations out of 1000 (max. 500000)
+ 246 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -2291,31 +2291,31 @@
     Sea $A \in M_{m \times n}$, $A$ es inyectiva si y solo si $\rg(A) = n$, la matriz reducida por filas equivalente a $A$ es $I_n$, y esto es equivalente a que $A$ es invertible.
 
     \textbf{Ejemplo 28.} Tomemos el siguiente sistema
-    \[
-    \begin{pmatrix}
-        2 & 3 & 4\\
-        1 & 0 & 0\\
-        0 & 0 & 1\\
-    \end{pmatrix}
-    \begin{pmatrix}
-        x_1\\
-        x_2\\
-        x_3\\
-    \end{pmatrix}
-    =
-    \begin{pmatrix}
-        2x_1 + 3x_2 + 4x_3\\
-        x_1\\
-        x_3\\
-    \end{pmatrix}
-    =
-    \begin{pmatrix}
-        0\\
-        0\\
-        0\\
-    \end{pmatrix}.
-    \]
-    Por lo que $\ker(A) = \llaves{(0, 0, 0)}$, $\rg(A) = 3$, $\nul{A} = 0$.
+    \begin{equation*}
+        \begin{pmatrix}
+            2 & 3 & 4\\
+            1 & 0 & 0\\
+            0 & 0 & 1\\
+        \end{pmatrix}
+        \begin{pmatrix}
+            x_1\\
+            x_2\\
+            x_3\\
+        \end{pmatrix}
+        =
+        \begin{pmatrix}
+            2x_1 + 3x_2 + 4x_3\\
+            x_1\\
+            x_3\\
+        \end{pmatrix}
+        =
+        \begin{pmatrix}
+            0\\
+            0\\
+            0\\
+        \end{pmatrix}.
+    \end{equation*}
+    Por lo que $\ker(A) = \llaves{(0, 0, 0)}$, $\rg(A) = 3$, $\nul{A} = 0$. \hfill $\blacktriangleleft$
 
     \begin{mdframed}[style=mdgraybox,frametitle={Proposición 28}]
         Si $T:V \to W$ es una transformación lineal biyectiva, entonces
@@ -2341,9 +2341,17 @@
         \end{equation*}
     \end{proof}
 
-    Definición 27. Una transformación lineal $T:V \to W$ biyectiva se llama \textbf{isomorfismo lineal}. En este caso diremos que $V$ es isomorfo a $W$ y lo denotaremos como $V \simeq W$.
+    \section{Isomorfismo}
 
-    Proposición 29. El isomorfismo lineal, define una relación de equivalencia en los espacios vectoriales sobre un campo $F$.
+    \begin{mdframed}[style=mdbluebox,frametitle={Definición 27: Isomorfismo Lineal}]
+        Una transformación lineal $T:V \to W$ biyectiva se llama \textbf{isomorfismo lineal}. En este caso diremos que $V$ es isomorfo a
+        $W$ y lo denotaremos como $V \simeq W$.
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdgraybox,frametitle={Proposición 29}]
+        El isomorfismo lineal, define una relación de equivalencia en los espacios vectoriales sobre un campo $F$.
+    \end{mdframed}
+
     \begin{proof}
         Veamos si es reflexiva, es decir, $V \simeq V$. Notemos que la identidad cumple que
         \begin{align*}
@@ -2356,11 +2364,14 @@
     \end{proof}
 
     Supongamos $\dim V = n$ y $V \simeq W$. Así, existe $T: V \to W$ lineal y biyectiva, lo cual implica que $\nul(T) = 0$ y $\dim V = \rg (T)$. Por ser sobreyectiva, se cumple que $\rg (T) = \dim W$. Así que
-    \[
-    V \simeq W \implies \dim V = \dim W.
-    \]
+    \begin{equation*}
+        V \simeq W \implies \dim V = \dim W.
+    \end{equation*}
 
-    Teorema. Un espacio vectorial $V$ de dimensión $n$ sobre $F$ es isomorfo a $F^n$.
+    \begin{mdframed}[style=mdgraybox,frametitle={Teorema 7}]
+        Un espacio vectorial $V$ de dimensión $n$ sobre $F$ es isomorfo a $F^n$.
+    \end{mdframed}
+
     \begin{proof}
         Sea $\BB = \llaves{v_1, \dots , v_n}$ una base ordenada de $v$, la función que asigna las coordenadas 
         \begin{align*}
@@ -2370,65 +2381,69 @@
         donde $\Sigma_{i = 1}^n a_iv_i$ es lineal. En consecuencia $\ker (\varphi_\BB) = \llaves{0}$ y $\rg (\varphi_\BB) = n$. Así que $\Im (\varphi_\BB) = F^n$, es sobre. Por tanto es un isomorfismo lineal.
     \end{proof}
 
+    \begin{mdframed}[style=mdgraybox,frametitle={Proposición 30}]
+        Si $V, W$ son espacios vectoriales de dimensión finita sobre un campo $F$, entonces la transformación lineal
+        \begin{equation*}
+            T: V \to W
+        \end{equation*}
+        es isomorfismo lineal si y solo si $T$ es biyectiva.
+    \end{mdframed}
 
-    Proposición. Si $V, W$ son espacios vectoriales de dimensión finita sobre un campo $F$, entonces la transformación lineal
-    \[
-    T: V \to W
-    \]
-    es isomorfismo lineal si y solo si $T$ es biyectiva.
+    \begin{mdframed}[style=mdgraybox,frametitle={Proposición 31}]
+        Si $V, W$ son espacios de dimensión finita sobre $F$, entonces son isomorfos si y solo si
+        \begin{equation*}
+            \dim_FV = \dim_FW.
+        \end{equation*}
+    \end{mdframed}
 
-    Proposición. Si $V, W$ son espacios de dimensión finita sobre $F$, entonces son isomorfos si y solo si
-    \[
-    \dim_FV = \dim_FW.
-    \]
     \begin{proof}
         Supongamos que $V$ y $W$ son isomorfos, por lo que existe una transformación lineal
-    \[
-    T:V \to W
-    \]
-    que es biyectiva. Como $T$ es lineal, podemos aplicar el teorema rango-nulidad. Dado que $T$ es inyectiva, se tiene que
-    \[
-    \ker{T} = \{0\} \implies \nul{T} = 0.
-    \]
-    Por lo tanto,
-    \[
-    \rg{T} = n.
-    \]
-    Pero $\rg{T} = \dim(\Im(T))$, y como $T$ es sobreyectiva,
-    \[
-    \Im(T) = W.
-    \]
-    Así,
-    \[
-    \dim(W) = \dim(\Im(T)) = \rg{T} = n.
-    \]
-    Por lo tanto,
-    \[
-    m = \dim(W) = n.
-    \]
-    Supongamos ahora que $\dim(V) = n$ y $\dim(W) = m$, con $m = n$.
-    Sean $\{v_1,\dots,v_n\}$ una base de $V$ y la tranformación lineal
-    \begin{align*}
-        \varphi_{\mathcal{B}}:V & \to F\\
-        v & \mapsto [v]_{\mathcal{B}},
-    \end{align*}
-    La cual es biyectiva y en consecuencia $V \simeq F^n$. De manera análoga, sea $\mathcal{B}' = \{w_1,\dots,w_n\}$ una base de $W$ y consideremos
-    \begin{align*}
-        \varphi_{\mathcal{B}'}:W & \to F^n\\
-        w & \mapsto [w]_{\mathcal{B}'},
-    \end{align*}
-    la cual también es biyectiva. Por lo tanto, $W \simeq F^n$. Así, tenemos que
-    \[
-    V \simeq F^n \quad \text{y} \quad W \simeq F^n.
-    \]
-    Por la transitividad de los isomorfismos, se sigue que
-    \[
-    V \simeq W.
-    \]
-    Por tanto, $V$ y $W$ son isomorfos.
+        \begin{equation*}
+            T:V \to W
+        \end{equation*}
+        que es biyectiva. Como $T$ es lineal, podemos aplicar el teorema rango-nulidad. Dado que $T$ es inyectiva, se tiene que
+        \begin{equation*}
+            \ker{T} = \{0\} \implies \nul{T} = 0.
+        \end{equation*}
+        Por lo tanto,
+        \begin{equation*}
+            \rg{T} = n.
+        \end{equation*}
+        Pero $\rg{T} = \dim(\Im(T))$, y como $T$ es sobreyectiva,
+        \begin{equation*}
+            \Im(T) = W.
+        \end{equation*}
+        Así,
+        \begin{equation*}
+            \dim(W) = \dim(\Im(T)) = \rg{T} = n.
+        \end{equation*}
+        Por lo tanto,
+        \begin{equation*}
+            m = \dim(W) = n.
+        \end{equation*}
+        Supongamos ahora que $\dim(V) = n$ y $\dim(W) = m$, con $m = n$.
+        Sean $\{v_1,\dots,v_n\}$ una base de $V$ y la tranformación lineal
+        \begin{align*}
+            \varphi_{\mathcal{B}}:V & \to F\\
+            v & \mapsto [v]_{\mathcal{B}},
+        \end{align*}
+        La cual es biyectiva y en consecuencia $V \simeq F^n$. De manera análoga, sea $\mathcal{B}' = \{w_1,\dots,w_n\}$ una base de $W$ y consideremos
+        \begin{align*}
+            \varphi_{\mathcal{B}'}:W & \to F^n\\
+            w & \mapsto [w]_{\mathcal{B}'},
+        \end{align*}
+        la cual también es biyectiva. Por lo tanto, $W \simeq F^n$. Así, tenemos que
+        \begin{equation*}
+            V \simeq F^n \quad \text{y} \quad W \simeq F^n.
+        \end{equation*}
+        Por la transitividad de los isomorfismos, se sigue que
+        \begin{equation*}
+            V \simeq W.
+        \end{equation*}
+        Por tanto, $V$ y $W$ son isomorfos.
     \end{proof}
     
-    \textbf{Ejemplo.} Sea
+    \textbf{Ejemplo  29.} Sea
     \[
     \mathcal{P}_n = \big\{\sum_{i = 0}^n a_ix^{i}:a_i \in \mathbb{R}, i = 0, \dots, n \big\}.
     \]
@@ -2437,7 +2452,7 @@
         \varphi_\BB: \mathcal{P}_{n} & \to \mathbb{R}^{n + 1}\\
         \sum_{i = 0}^na_ix^{i} & \mapsto (a_0, a_1, \dots, a_n)
     \end{align*}
-    es un isomorfismo lineal.
+    es un isomorfismo lineal.\hfill $\blacktriangleleft$
 
 
     \textbf{\textit{AQUI TENGO QUE PASAR UNA FOTO QUE TENGO EN EL CEL DEL 21 DE ABRIL, PERO TIENE DE LOS DIAGRAMAS DE FUNCIONES, CALAVERITA CALAVERITA CALAVERITA}}\\

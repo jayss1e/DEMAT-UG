@@ -12,3 +12,4 @@
 \contentsline {section}{\numberline {2.3}Bases y Dimension}{33}{section.2.3}%
 \contentsline {chapter}{\numberline {3}Transformaciones Lineales}{41}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Transformaciones lineales}{41}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Isomorfismo}{47}{section.3.2}%
