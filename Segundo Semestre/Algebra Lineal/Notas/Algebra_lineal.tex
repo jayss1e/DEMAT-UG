@@ -2317,25 +2317,28 @@
     \]
     Por lo que $\ker(A) = \llaves{(0, 0, 0)}$, $\rg(A) = 3$, $\nul{A} = 0$.
 
-    Proposición 28. Si $T:V \to W$ es una transformación lineal biyectiva, entonces
-    \[
-    T^{-1}:W \to V,
-    \]
-    es transformación lineal.
+    \begin{mdframed}[style=mdgraybox,frametitle={Proposición 28}]
+        Si $T:V \to W$ es una transformación lineal biyectiva, entonces
+        \begin{equation*}
+            T^{-1}:W\to V,
+        \end{equation*}
+        es transformación lineal.
+    \end{mdframed}
+
     \begin{proof}
-    Tenemos que probar que para todo $a \in F$, $w_1, w_2 \in W$, se cumple que
-    \[
-    T^{-1}(aw_! + w_2) = a T^{-1}(w_1) + T^{-1}(w_2).
-    \]
-    Al ser $T$ lineal y biyectiva, existen únicos $v_1, v_2 \in V$ tales que
-    \begin{align*}
-        T(av_1 + v_2) & = aT(v_1) + T(v_2)\\
-        & = aw_1 + w_2.
-    \end{align*}
-    Así,
-    \[
-    T^{-1}(aw_1 + w_2) = av_1 + v_2 = aT^{-1}(w_1)  + T^{-1}(w_2).
-    \]
+        Tenemos que probar que para todo $a \in F$, $w_1, w_2 \in W$, se cumple que
+        \begin{equation*}
+            T^{-1}(aw_! + w_2) = a T^{-1}(w_1) + T^{-1}(w_2).
+        \end{equation*}
+        Al ser $T$ lineal y biyectiva, existen únicos $v_1, v_2 \in V$ tales que
+        \begin{align*}
+            T(av_1 + v_2) & = aT(v_1) + T(v_2)\\
+            & = aw_1 + w_2.
+        \end{align*}
+        Así,
+        \begin{equation*}
+            T^{-1}(aw_1 + w_2) = av_1 + v_2 = aT^{-1}(w_1)  + T^{-1}(w_2).
+        \end{equation*}
     \end{proof}
 
     Definición 27. Una transformación lineal $T:V \to W$ biyectiva se llama \textbf{isomorfismo lineal}. En este caso diremos que $V$ es isomorfo a $W$ y lo denotaremos como $V \simeq W$.

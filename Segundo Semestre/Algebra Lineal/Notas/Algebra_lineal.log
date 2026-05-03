@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.4.7)  2 MAY 2026 00:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.4.7)  2 MAY 2026 01:28
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1817,18 +1817,25 @@ Package mdframed Info: mdframed detected package amsthm
 LaTeX Info: Redefining \. on input line 2288.
 LaTeX Info: Redefining \% on input line 2288.
  [46]
-LaTeX Info: Redefining \. on input line 2353.
-LaTeX Info: Redefining \% on input line 2353.
+Package mdframed Info: mdframed works in twoside mode on input line 2320.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 2320.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 2326.
+LaTeX Info: Redefining \. on input line 2356.
+LaTeX Info: Redefining \% on input line 2356.
  [47]
 LaTeX Info: Redefining \. on input line 2408.
 LaTeX Info: Redefining \% on input line 2408.
  [48]
-Underfull \hbox (badness 10000) in paragraph at lines 2440--2441
+Underfull \hbox (badness 10000) in paragraph at lines 2443--2444
 
  []
 
-LaTeX Info: Redefining \. on input line 2453.
-LaTeX Info: Redefining \% on input line 2453.
+LaTeX Info: Redefining \. on input line 2456.
+LaTeX Info: Redefining \% on input line 2456.
 [49] (./Algebra_lineal.aux
 LaTeX Info: Redefining \. on input line 12.
 LaTeX Info: Redefining \% on input line 12.
@@ -1841,15 +1848,15 @@ Package rerunfilecheck Info: File `Algebra_lineal.out' has not changed.
 (rerunfilecheck)             Checksum: 5FDBD03AAD6340CF10B7DDE1F2F01D85;2287.
  ) 
 Here is how much of TeX's memory you used:
- 41431 strings out of 467525
- 926792 string characters out of 5425862
- 1465112 words of memory out of 5000000
- 69530 multiletter control sequences out of 15000+600000
+ 41434 strings out of 467525
+ 926855 string characters out of 5425862
+ 1465183 words of memory out of 5000000
+ 69533 multiletter control sequences out of 15000+600000
  677715 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,17n,108p,815b,1229s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmro12.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Algebra_lineal.pdf (50 pages, 477599 bytes).
+Output written on Algebra_lineal.pdf (50 pages, 478012 bytes).
 PDF statistics:
  579 PDF objects out of 1000 (max. 8388607)
  438 compressed objects within 5 object streams

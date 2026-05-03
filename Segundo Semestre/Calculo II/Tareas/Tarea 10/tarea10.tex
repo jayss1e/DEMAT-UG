@@ -184,4 +184,73 @@
         \end{enumerate}
     \end{mdframed}
 
+    \begin{proof}
+        \begin{enumerate}
+            \item[(a)]
+            Sea $(a_{n})$ una sucesión con $0\leq a_{n}\leq 9$. Consideremos la serie
+            \begin{equation*}
+                \sum_{n=1}^{\infty}\frac{a_{n}}{10^{n}}.
+            \end{equation*}
+            Para todo $n$,
+            \begin{equation*}
+                0\leq\frac{a_{n}}{10^{n}}\leq\frac{9}{10^{n}}.
+            \end{equation*}
+            La serie geométrica
+            \begin{equation*}
+                \sum_{n=1}^{\infty}\frac{9}{10^{n}}
+            \end{equation*}
+            converge, pues la razón $r=\frac{1}{10}\lt1$, y la suma es
+            \begin{equation*}
+                \sum_{n=1}^{\infty}\frac{9}{10^{n}}=9\cdot\frac{\frac{1}{10}}{1-\frac{1}{10}}=1.
+            \end{equation*}
+            Por el criterio de comparación, la serie dada converge. Ademas,
+            \begin{equation*}
+                0\leq\sum_{n=1}^{\infty}\frac{a_{n}}{10^{n}}\leq\sum_{n=1}^{\infty}\frac{9}{10^{n}}=1.
+            \end{equation*}
+            Por lo tanto, la suma pertenece a $[0,1]$.
+            \item[(b)]
+            Sea $x\in[0,1]$. Definimos una sucesión $(a_{n})$ y residuos $(r_{n})$ como sigue: Sea $r_{0}=x$. Para $n\geq1$,
+            \begin{equation*}
+                a_{n}:=10r_{n-1},\quad r_{n}:=10r_{n-1}-a_{n}.
+            \end{equation*}
+            Entonces $0\leq a_{n}\leq9$, pues $0\leq r_{n-1}\leq1$. $0\leq r_{n}\leq1$. Iterando
+            \begin{equation*}
+                x=\frac{a_{1}}{10}+\frac{r_{1}}{10}=\frac{a_{1}}{10}+\frac{a_{2}}{10^{2}}+\frac{r_{2}}{10^{2}}=\cdots
+            \end{equation*}
+            y en general,
+            \begin{equation*}
+                x=\sum_{k=1}^{n}\frac{a_{k}}{10^{k}}+\frac{r_{n}}{10^{n}}.
+            \end{equation*}
+            Como $0\leq r_{n}\lt1$, se tiene
+            \begin{equation*}
+                0\leq\frac{r_{n}}{10^{n}}\leq\frac{1}{10^{n}}\to0.
+            \end{equation*}
+            Por lo tanto,
+            \begin{equation*}
+                x=\sum_{n=1}^{\infty}\frac{a_{n}}{10^{n}}.
+            \end{equation*}
+            \item[(c)]
+            Sea $x\geq0$. Existe un entero $m\geq0$ tal que
+            \begin{equation*}
+                10^{m}\leq x\leq10^{m+1}.
+            \end{equation*}
+            Definimos
+            \begin{equation*}
+                y:=\frac{x}{10^{m+1}}\in[0,1).
+            \end{equation*}
+            Por (b), existe $(a_{n})_{n=1}^{\infty}$ con $0\leq a_{n}\leq9$ tal que
+            \begin{equation*}
+                y=\sum_{n=1}^{\infty}\frac{a_{n}}{10^{n}}.
+            \end{equation*}
+            Entonces,
+            \begin{equation*}
+                x=\sum_{n=1}^{\infty}\frac{a_{n}}{10^{n-(m+1)}}.
+            \end{equation*}
+            Definiendo $N:=-m$ y reindexando,
+            \begin{equation*}
+                x=\sum_{n=N}^{\infty}\frac{a_{n}}{10^{n}},
+            \end{equation*}
+            donde $0\leq a_{n}\leq9$.
+        \end{enumerate}
+    \end{proof}
 \end{document}
