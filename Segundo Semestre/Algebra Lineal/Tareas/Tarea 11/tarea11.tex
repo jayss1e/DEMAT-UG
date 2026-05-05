@@ -1,0 +1,419 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{ugmath}
+\usepackage{float}
+\usepackage{placeins}
+\usepackage{array}
+\usepackage[labelfont=bf,labelsep=space]{caption}
+\newcommand{\paren}[1]{\left( #1 \right)}
+\newcommand{\alumno}{Ricardo León Martínez}
+\newcommand{\materia}{Algebra Lineal I}
+\newcommand{\profesor}{Claudia Reynoso Alcántara}
+\newcommand{\tarea}{Tarea 10}
+\newcommand{\fecha}{27/4/2026}
+
+
+\begin{document}
+
+    \begin{center}
+        {\large\textbf{UNIVERSIDAD DE GUANAJUATO}}\\[0.3cm]
+        {\normalsize\textbf{DIVISIÓN DE CIENCIAS NATURALES Y EXACTAS}}\\
+        {\normalsize\textbf{CAMPUS GUANAJUATO}}\\[1cm]
+
+        {\Large\textbf{\tarea\ (\materia)}}\\[1cm]
+    \end{center}
+
+    \noindent
+    \textbf{Nombre:} \alumno 
+    \hfill 
+    \textbf{Fecha:} \fecha 
+    \hfill 
+    \textbf{Calificación:} \rule{3cm}{0.4pt}
+
+    \vspace{0.3cm}
+
+    \begin{mdframed}[style=mdpinkbox,frametitle={Ejercicio 1}]
+        (1 punto) Encuentra una base de $\Im(T)$ y de $\ker(T)$, donde $T:\R^{3}\to\R^{3}$ está
+        dada por
+        \begin{equation*}
+            \begin{pmatrix}
+                -1 & 2 & 1\\
+                0 & 1 & 1\\
+                1 & 3 & 4
+            \end{pmatrix}
+        \end{equation*}
+    \end{mdframed}
+
+    \begin{solucion}
+        La imagen de $T$ es el subespacio generado por las columnas de $A$:
+        \begin{equation*}
+            \Im(T)=\text{span}\left\{
+                \begin{pmatrix}
+                    -1\\
+                    0\\
+                    1
+                \end{pmatrix},
+                \begin{pmatrix}
+                    2\\
+                    1\\
+                    3
+                \end{pmatrix},
+                \begin{pmatrix}
+                    1\\
+                    1\\
+                    4
+                \end{pmatrix}
+            \right\}
+        \end{equation*}
+        Veamos su independencia lineal reduciendo la matriz
+        \begin{equation*}
+            \begin{pmatrix}
+                -1 & 2 & 1\\
+                0 & 1 & 1\\
+                1 & 3 & 4
+            \end{pmatrix}
+            \sim
+            \begin{pmatrix}
+                -1 & 2 & 1\\
+                0 & 1 & 1\\
+                0 & 5 & 5
+            \end{pmatrix}
+            \sim
+            \begin{pmatrix}
+                -1 & 2 & 1\\
+                0 & 1 & 1\\
+                0 & 0 & 0 
+            \end{pmatrix}
+        \end{equation*}
+        ya que el rango de una matriz esta dado por el numero de pivotes se sigue que $\rg(T)=2$.
+        Por tanto, dos columnas son linealmente independientes. Tomando las dos primeras columnas
+        \begin{equation*}
+            \BB_{\Im(T)}=\left\{
+                \begin{pmatrix}
+                    -1\\
+                    0\\
+                    1
+                \end{pmatrix},
+                \begin{pmatrix}
+                    2\\
+                    1\\
+                    3
+                \end{pmatrix}
+            \right\}
+        \end{equation*}
+        Ahora, buscamos los vectores $x=\{x_{1},x_{2},x_{3}\}$ tales que $Ax=0$. El sistema es
+        \begin{equation*}
+            \begin{cases}
+                -x_{1}+2x_{2}+x_{3}=0\\
+                x_{2}+x_{3}=0\\
+                x_{1}+3x_{2}+4x_{3}=0
+            \end{cases}
+        \end{equation*}
+        De la segunda ecuación
+        \begin{equation*}
+            x_{2}=-x_{3}.
+        \end{equation*}
+        Sustituyendo en la primera
+        \begin{equation*}
+            -x_{1}+2(-x_{3})+x_{3}=x_{1}-2x_{3}=0\implies x_{1}=-x_{3}.
+        \end{equation*}
+        Por lo tanto
+        \begin{equation*}
+            x=x_{3}(-1,-1,1).
+        \end{equation*}
+        Luego
+        \begin{equation*}
+            \ker(T)=\text{span}\{(-1,-1,1)\}.
+        \end{equation*}
+        Así, una base es
+        \begin{equation*}
+            \BB_{\ker(T)}=\left\{
+                \begin{pmatrix}
+                    -1\\
+                    -1\\
+                    1
+                \end{pmatrix}
+            \right\}
+        \end{equation*}
+    \end{solucion}
+
+    \begin{mdframed}[style=mdpinkbox,frametitle={Ejercicio 2}]
+        (1 punto) Sea $V_{2}$ el espacio vectorial sobre $F$, de polinomios de grado $\leq2$ y
+        considera la transformación lineal:
+        \begin{align*}
+            T:V_{2}&\to F^{3}\\
+            a_{0}+a_{1}x+a_{2}x^{2}&\mapsto(a_{0},a_{1},a_{2}).
+        \end{align*}
+        Sean $\BB_{1}=\{1,x,x^{2}\}$ y $\BB_{2}=\{e_{1},e_{2},e_{3}\}$ bases ordenadas de $V_{2}$
+        y $\R^{3}$. Encuentra $[T]_{\BB_{1},\BB_{2}}$
+    \end{mdframed}
+
+    \begin{solucion}
+        Por definición,
+        \begin{equation*}
+            [T]_{\BB_{1},\BB_{2}}=([T(1)]_{\BB_{2}}\quad[T(x)]_{\BB_{2}}\quad[T(x^{2})]_{\BB_{2}}).
+        \end{equation*}
+        Calculamos
+        \begin{equation*}
+            T(1)=(1,0,0),\quad T(x)=(0,1,0),\quad T(x^{2})=(0,0,1).
+        \end{equation*}
+        Dado que $\BB_{2}$ es la base canónica, estas ya son sus coordendas. Así
+        \begin{equation*}
+            [T]_{\BB_{1},\BB_{2}}=
+            \begin{pmatrix}
+                1 & 0 & 0\\
+                0 & 1 & 0\\
+                0 & 0 & 1
+            \end{pmatrix}.
+        \end{equation*}
+    \end{solucion}
+
+    \begin{mdframed}[style=mdpinkbox,frametitle={Ejercicio 3}]
+        (2 puntos) Sea $V=\{f:\R\to\R:f(x)=\sum_{i=0}^{3}a_{i}x^{i},a_{i}\in\R\}$. Considera la
+        transformación lineal:
+        \begin{align*}
+            \TT:V&\to V,\\
+            f(x):&\mapsto xf^{\prime}(x).
+        \end{align*}
+        Encuentra $[\TT]_{\BB_{1}}$, $[\TT]_{\BB_{2}}$, $[\TT]_{\BB_{1},\BB_{2}}$ y
+        $[\TT^{2}]_{\BB_{1},\BB_{2}}$, donde $\BB_{1}=\{1,x,x^{2},x^{3}\}$ y $\BB_{2}=\{1,x+1,(x+1)^{2},(x+1)^{3}\}$.
+    \end{mdframed}
+
+    \begin{solucion}
+        1. Matriz $[\TT]_{\BB_{1}}$ con $\BB_{1}=\{1,x,x^{2},x^{3}\}$\\
+        Calculamos la acción sobre la base
+        \begin{equation*}
+            \TT(1)=0,\quad\TT(x)=x,\quad\TT(x^{2})=2x^{2},\quad\TT(x^{3})=3x^{3}.
+        \end{equation*}
+        Coordenadas en $\BB_{1}$
+        \begin{equation*}
+            [\TT]_{\BB_{1}}=
+            \begin{pmatrix}
+                0 & 0 & 0 & 0\\
+                0 & 1 & 0 & 0\\
+                0 & 0 & 2 & 0\\
+                0 & 0 & 0 & 3
+            \end{pmatrix}.
+        \end{equation*}
+        2. Matriz $[\TT]_{\BB_{2}}$, con $\BB_{2}=\{1,x+1,(x+1)^{2},(x+1)^{3}\}$\\
+        Sea $y=x+1$, entonces $x=y-1$. Calculamos
+        \begin{align*}
+            \TT(1)&=0,\\
+            \TT(x+1)&=x=(y-1)=(x+1)-1,\\
+            \TT((x+1)^{2})&=x\cdot2(x+1)=2x(x+1)=2(y-1)y=2y^{2}-2y,\\
+            \TT((x+1)^{3})&=x\cdot3(x+1)^{2}=3(y-1)y^{2}=3y^{3}-3y^{2}.
+        \end{align*}
+        Expresando en $\BB_{2}=\{1,y,y^{2},y^{3}\}$
+        \begin{equation*}
+            [\TT]_{\BB_{2}}=
+            \begin{pmatrix}
+                0 & -1 & 0 & 0\\
+                0 & 1 & -2 & 0\\
+                0 & 0 & 2 & -3\\
+                0 & 0 & 0 & 3
+            \end{pmatrix}
+        \end{equation*}
+        3. Matriz $[\TT]_{\BB_{1},\BB_{2}}$\\
+        Matriz de cambio de base de $\BB_{1}$ a $\BB_{2}$
+        \begin{equation*}
+            1=1,\quad x+1=x+1\quad (x+1)^{2}=x^{2}+2x+1,\quad (x+1)^{3}=x^{3}+3x^{2}+3x+1.
+        \end{equation*}
+        Por tanto
+        \begin{equation*}
+            P=[I]_{\BB_{2}\to\BB_{1}}=
+            \begin{pmatrix}
+                1 & 1 & 1 & 1\\
+                0 & 1 & 2 & 3\\
+                0 & 0 & 1 & 3\\
+                0 & 0 & 0 & 1
+            \end{pmatrix}.
+        \end{equation*}
+        Por definición
+        \begin{equation*}
+            [\TT]_{\BB_{1},\BB_{2}}=P^{-1}[\TT]_{\BB_{1}}P.
+        \end{equation*}
+        Así,
+        \begin{equation*}
+            [\TT]_{\BB_{1},\BB_{2}}=
+            \begin{pmatrix}
+                1 & -1 & 1 & -1\\
+                0 & 1 & -2 & 3\\
+                0 & 0 & 1 & -3\\
+                0 & 0 & 0 & 1
+            \end{pmatrix}
+            \begin{pmatrix}
+                0 & 0 & 0 & 0\\
+                0 & 1 & 0 & 0\\
+                0 & 0 & 2 & 0\\
+                0 & 0 & 0 & 3
+            \end{pmatrix}
+            \begin{pmatrix}
+                1 & 1 & 1 & 1\\
+                0 & 1 & 2 & 3\\
+                0 & 0 & 1 & 3\\
+                0 & 0 & 0 & 1
+            \end{pmatrix}
+        \end{equation*}
+        Concluyendo que
+        \begin{equation*}
+            [\TT]_{\BB_{1},\BB_{2}}=
+            \begin{pmatrix}
+                0 & -1 & 0 & 0\\
+                0 & 1 & -2 & 0\\
+                0 & 0 & 2 & -3\\
+                0 & 0 & 0 & 3
+            \end{pmatrix}
+        \end{equation*}
+        4. $[\TT^{2}]_{\BB_{1},\BB_{2}}$\\
+        Notemos que
+        \begin{equation*}
+            \TT(x^{n})=nx^{x}\implies\TT^{2}(x^{n})=n^{2}x^{n}.
+        \end{equation*}
+        Luego
+        \begin{equation*}
+            [\TT^{2}]_{\BB_{1}}=
+            \begin{pmatrix}
+                0 & 0 & 0 & 0\\
+                0 & 1 & 0 & 0\\
+                0 & 0 & 4 & 0\\
+                0 & 0 & 0 & 9
+            \end{pmatrix}.
+        \end{equation*}
+        y por cambio de base
+        \begin{equation*}
+            [\TT^{2}]_{\BB_{1},\BB_{2}}=P^{-1}[\TT^{2}]_{\BB_{1}}P.
+        \end{equation*}
+        Así,
+        \begin{equation*}
+            [\TT^{2}]_{\BB_{1},\BB_{2}}=
+            \begin{pmatrix}
+                1 & 0 & 3 & 1\\
+                0 & 1 & -6 & 6\\
+                0 & 0 & 4 & -15\\
+                0 & 0 & 0 & 9
+            \end{pmatrix}
+        \end{equation*}
+    \end{solucion}
+
+    \begin{mdframed}[style=mdpinkbox,frametitle={Ejercicio 4}]
+        (2 puntos) Determina si, sobre $\R$, las siguientes matrices son semejantes:
+        \begin{equation*}
+            A=
+            \begin{pmatrix}
+                4 & 1 & 0\\
+                0 & 4 & 0\\
+                0 & 0 & 2
+            \end{pmatrix},
+            \quad
+            B=
+            \begin{pmatrix}
+                4 & 0 & 0\\
+                0 & 4 & 1\\
+                0 & 0 & 2
+            \end{pmatrix}.
+        \end{equation*}
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdpinkbox,frametitle={Ejercicio 5}]
+        (2 puntos) Sean $V$ y $W$, espacios vectoriales sobre un campo $F$, definimos el conjunto:
+        \begin{equation*}
+            \LL(V,W)=\{T:V\to W: T\text{ es lineal}\},
+        \end{equation*}
+        demuestra que, con las siguientes operaciones $\LL(V,W)$ tiene estructura de espacio
+        vectorial sobre $F$:
+        \begin{align*}
+            +:\LL(V,W)\times\LL(V,W)&\to\LL(V,W)\\
+            (T_{1},T_{2})&\mapsto T_{1}+T_{2}
+        \end{align*}
+        \begin{align*}
+            \cdot:F\times\LL(V,W)&\to\LL(V,W)\\
+            (a,T)&\mapsto aT
+        \end{align*}
+    \end{mdframed}
+
+    \begin{proof}
+        Sean $T_{1},T_{2}\in\LL(V,W)$. Entonces para $u,v\in V$ y $\lambda\in F$
+        \begin{align*}
+            (T_{1}+T_{2})(u+v)=T_{1}(u+v)+T_{2}(u+v)=T_{1}(u)+T_{1}(v)+T_{2}(u)+T_{2}(v)\\
+            =(T_{1}(u)+T_{2}(u))+(T_{1}(v)+T_{2}(v))=(T_{1}+T_{2})(u)+(T_{1}+T_{2})(v),\\
+            (T_{1}+T_{2})(\lambda u)=T_{1}(\lambda u)+T_{2}(\lambda u)=\lambda T_{1}(u)+\lambda T_{2}(u)=\lambda(T_{1}+T_{2})(u).
+        \end{align*}
+        Luego $T_{1}+T_{2}\in\LL(V,W)$.\\
+        Sea $a\in F$, $T\in\LL(V,W)$
+        \begin{align*}
+            (aT)(u+v)=aT(u+v)=a(T(u)+T(v))=aT(u)+aT(v),\\
+            (aT)(\lambda u)=aT(\lambda u)=a(\lambda T(u))=\lambda(aT(u)).
+        \end{align*}
+        Luego $aT\in\LL(V,W)$.\\
+        Sean $T_{1},T_{2},T_{3}\in\LL(V,W)$, $a,b\in F$, $v\in V$.\\
+        (i) Asociatividad de la suma
+        \begin{equation*}
+            ((T_{1}+T_{2})+T_{3})(v)=(T_{1}+T_{2})(v)+T_{3}(v)=T_{1}(v)+T_{2}(v)+T_{3}(v)=(T_{1}+(T_{2}+T_{3}))(v).
+        \end{equation*}
+        (ii) Conmutatividad
+        \begin{equation*}
+            (T_{1}+T_{2})(v)=T_{1}(v)+T_{2}(v)=T_{2}(v)+T_{1}(v)=(T_{2}+T_{1})(v).
+        \end{equation*}
+        (iii) Elemento neutro\\
+        Definimos $0:V\to W$, $0(v)+0_{W}$. Entonces
+        \begin{equation*}
+            (T+0)(v)=T(v)+0_{W}=T(v).
+        \end{equation*}
+        (iv) Inverso aditivo\\
+        Para $T$, definimos $(-T)(v):=-T(v)$. Entonces
+        \begin{equation*}
+            (T+(-T))(v)=T(v)-T(v)=0_{W}.
+        \end{equation*}
+        (v) Asociativida con escalares
+        \begin{equation*}
+            ((ab)T)(v)=(ab)T(v)=a(bT(v))=(a(bT))(v).
+        \end{equation*}
+        (vi) Distributividad
+        \begin{align*}
+            ((a+b)T)(v)=(a+b)T(v)=aT(v)+bT(v)=(aT+bT)(v),\\
+            (a(T_{1}+T_{2}))(v)=a(T_{1}(v)+T_{2}(v))=aT_{1}(v)+aT_{2}(v).
+        \end{align*}
+        (vii) Neutro multiplicativo
+        \begin{equation*}
+            (1T)(v)=1\cdot T(v)=T(v).
+        \end{equation*}
+        Así, $\LL(V,W)$ es un espacio vectorial sobre $F$.
+    \end{proof}
+    
+    \begin{mdframed}[style=mdpinkbox,frametitle={Ejercicio 6}]
+        (1 punto) Demuestra que todo elemento en $(F^{n})^{*}$ es de la forma
+        \begin{align*}
+            F^{n}&\to F,\\
+            (x_{1},\dots,x_{n})&\mapsto\sum_{i=1}^{n}a_{i}x_{i}
+        \end{align*}
+        donde $a_{1},\dots,a_{n}\in F$.
+    \end{mdframed}
+
+    \begin{proof}
+        Sea $\{e_{1},\dots,e_{n}\}$ la base canónica de $F^{n}$, donde
+        \begin{equation*}
+            e_{i}=(0,\dots,0,1,0,\dots,0).
+        \end{equation*}
+        Todo vector $x\in F^{n}$ se escribe de manera unica como
+        \begin{equation*}
+            x=\sum_{i=1}^{n}x_{i}e_{i}.
+        \end{equation*}
+        Por linealidad de $T$
+        \begin{equation*}
+            T(x)=T\left(\sum_{i=1}^{n}x_{i}e_{i}\right)=\sum_{i=1}^{n}x_{i}T(e_{i}).
+        \end{equation*}
+        Definimos
+        \begin{equation*}
+            a_{i}:=T(e_{i})\in F.
+        \end{equation*}
+        Entonces
+        \begin{equation*}
+            T(x_{1},\dots,x_{n})=\sum_{i=1}^{n}a_{i}x_{i}.
+        \end{equation*}
+    \end{proof}
+
+    \begin{mdframed}[style=mdpinkbox,frametitle={Ejercicio 7}]
+        (1 punto) Considera la base ordenada $\BB=\{(1,0,-1),(1,1,1),(2,2,0)\}$ de $\R^{3}$.
+        Encuentra la base dual.
+    \end{mdframed}
+
+\end{document}
