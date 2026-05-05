@@ -2341,6 +2341,8 @@
         \end{equation*}
     \end{proof}
 
+    \vspace{5.2cm}
+
     \section{Isomorfismo}
 
     \begin{mdframed}[style=mdbluebox,frametitle={Definición 27: Isomorfismo Lineal}]
@@ -2392,7 +2394,7 @@
     \begin{mdframed}[style=mdgraybox,frametitle={Proposición 31}]
         Si $V, W$ son espacios de dimensión finita sobre $F$, entonces son isomorfos si y solo si
         \begin{equation*}
-            \dim_FV = \dim_FW.
+            \dim_F(V) = \dim_F(W).
         \end{equation*}
     \end{mdframed}
 
@@ -2403,11 +2405,11 @@
         \end{equation*}
         que es biyectiva. Como $T$ es lineal, podemos aplicar el teorema rango-nulidad. Dado que $T$ es inyectiva, se tiene que
         \begin{equation*}
-            \ker{T} = \{0\} \implies \nul{T} = 0.
+            \ker(T) = \{0\} \implies \nul(T) = 0.
         \end{equation*}
         Por lo tanto,
         \begin{equation*}
-            \rg{T} = n.
+            \rg(T) = n.
         \end{equation*}
         Pero $\rg{T} = \dim(\Im(T))$, y como $T$ es sobreyectiva,
         \begin{equation*}
@@ -2444,18 +2446,248 @@
     \end{proof}
     
     \textbf{Ejemplo  29.} Sea
-    \[
-    \mathcal{P}_n = \big\{\sum_{i = 0}^n a_ix^{i}:a_i \in \mathbb{R}, i = 0, \dots, n \big\}.
-    \]
-    Con $\dim_{\mathbb{R}}\mathcal{P}_n = n + 1$ y la base $\BB = \llaves{1, x, x^2, \dots, x^n}$. Entonces
+    \begin{equation*}
+        \mathcal{P}_n = \big\{\sum_{i = 0}^n a_ix^{i}:a_i \in \mathbb{R}, i = 0, \dots, n \big\}.
+    \end{equation*}
+    Con $\dim_{\mathbb{R}}(\mathcal{P}_n )= n + 1$ y la base $\BB = \llaves{1, x, x^2, \dots, x^n}$. Entonces
     \begin{align*}
         \varphi_\BB: \mathcal{P}_{n} & \to \mathbb{R}^{n + 1}\\
         \sum_{i = 0}^na_ix^{i} & \mapsto (a_0, a_1, \dots, a_n)
     \end{align*}
-    es un isomorfismo lineal.\hfill $\blacktriangleleft$
+    es un isomorfismo lineal.\hfill $\blacktriangleleft$        
 
+    
+    \textbf{Ejemplo 30.} Sean $T: V \to W$ una transformación lineal, $\dim V = n$, $\dim W = m$, $\BB_V = \llaves{v_1, \dots, v_n}$ y $\BB_W = \llaves{w_1, \dots, w_m}$. Notemos que 
 
-    \textbf{\textit{AQUI TENGO QUE PASAR UNA FOTO QUE TENGO EN EL CEL DEL 21 DE ABRIL, PERO TIENE DE LOS DIAGRAMAS DE FUNCIONES, CALAVERITA CALAVERITA CALAVERITA}}\\
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\textwidth]{diagramas_conmutativos3.pdf}
+    \end{figure}
+
+    En consecuencia, tenemos que 
+    \begin{equation*}
+        \varphi_{\BB_W} \circ T = A \circ \varphi_{\BB_V}
+    \end{equation*}
+    Con $A \in M_{m \times n}(F)$.
+    \hfill $\blacktriangleleft$    
+
+    Tomemos la siguiente transformación lineal,
+    \begin{align*}
+        T : F^n & \to F^m\\
+        e_1 & \mapsto (a_{1i}, a_{2i}, \dots , a_{mi})
+    \end{align*}
+    Luego,
+    \begin{align*}
+        (x_1, \dots, x_n) & = \sum_{i = 1}^{n}x_ie_i\\
+        T(x_1, \dots, x_n) & = \sum_{i = 1}^{n}x_iT(e_i)\\
+        & = \sum_{i = 1}^{n}x_i(a_{1i}, a_{2i}, \dots, a_{mi})\\
+        & = \big( \sum_{i = 1}^n a_{1i}x_i, \sum_{i = 1}^n a_{2i}x_i, \dots, \sum_{i = 1}^n a_{mi}x_i \big)\\
+        & = (a_{ij})
+        \begin{pmatrix}
+            x_1\\
+            \vdots\\
+            x_n
+        \end{pmatrix}.
+    \end{align*}
+    Así, para toda transformación lineal $T:F^n \to F^m$ existe una matriz $A \in M_{m \times n}(F)$ tal que
+    \begin{equation*}
+        T(x_1, \dots, x_n) = A
+        \begin{pmatrix}
+            x_1\\
+            \vdots\\
+            x_n
+        \end{pmatrix}.
+    \end{equation*}
+    Vamos a construir la matriz $A$ que satisface lo siguiente
+    \begin{equation*}
+        T: V \to W.
+    \end{equation*}
+    Sean $\BB_V = \llaves{v_1, \dots, v_n}$, $\BB_W = \llaves{w_1, \dots, w_m}$ bases ordenadas y $A \in M_{m \times n}(F)$. Notemos que
+    \begin{equation*}
+        A[v]_{\BB_V} = [T(v)]_{}\BB_W, \qquad \forall v \in V.
+    \end{equation*}
+    Luego,
+    \begin{align*}
+        T(v_j) = \sum_{i = 1}^na_{ij}w_i, \qquad \forall j \in \llaves{1, 2, \dots, n},\; a_{ij} \in F.\\
+        \implies [T(v_j)]_{\BB_W} = (a_{1j}, a_{2j}, \dots, a_{mj}).
+    \end{align*}
+    Sea $v = \sum_{i = 1}^n x_j v_j \in V$, entonces
+    \begin{equation*}
+        T(v) = \sum_{j = 1}^{n}x_j T(v_j) = \sum_{j = 1}^n x_j \big( \sum_{i = 1}^ma_{ij}w_i \big) = \sum_{i = 1}^m \big( \sum_{j = 1}^n a_{ij}x_j \big)w_i.
+    \end{equation*}
+    En consecuencia
+    \begin{equation*}
+        [T(v)]_{\BB_W} = \big( \sum_{j = 1}^n a_{1j}x_j, \dots, \sum_{j = 1}^na_{mj}x_j \big) = A
+        \begin{pmatrix}
+            x_1\\
+            \vdots\\
+            x_n
+        \end{pmatrix} = A[v]_{\BB_V},
+    \end{equation*}
+    donde $A = (a_{ij}) \in M_{m \times n}(F)$.
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\textwidth]{diagramas_conmutativos3.pdf}
+    \end{figure}
+
+    \section{Representacion transformaciones por matrices}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Definición 28: Representación matricial}]
+        La matriz $A = (a_{ij}) \in M_{m \times n}(F)$ construida anteriormente, se llama \textbf{representación matricial} de $T$ respecto a las bases $\BB_V, \BB_W$. Usaremos la siguiente notación
+        \begin{gather*}
+            A = [T]_{\BB_V, \BB_W}\\
+            [T]_{\BB_V, \BB_W}[v]_{\BB_V} = [T(v)]_{\BB_W}.
+        \end{gather*}
+    \end{mdframed}
+
+    \textbf{Ejemplo 31.} Sean
+    \begin{align*}
+        T: V^n & \to W^m\\
+        v & \mapsto 0
+    \end{align*}
+    una transformación lineal y $\BB_V = \llaves{v_1, \dots, v_n}$ una base ordenada de $V$. Veamos que
+    \begin{gather*}
+        T(v_i) = 0 \implies [T(v)]_{\BB_V} = (0, \dots, 0) \in F^m\\
+        \implies [T]_{\BB_V, \BB_W} = 0_{m \times n}.
+    \end{gather*}
+    \hfill $\blacktriangleleft$ 
+
+    \textbf{Ejemplo 32.} Sea la transformación lineal
+    \begin{align*}
+        T : V & \to V\\
+        v & \mapsto v
+    \end{align*}
+    Así,
+    \begin{gather*}
+        T(v_i) = v_i\\
+        \implies [T(v_i)]_{\BB_V} = [v_i]_{\BB_V} = e_i\\
+        \implies [T]_{\BB_V} = I_n.
+    \end{gather*}
+    \hfill $\blacktriangleleft$ 
+
+    \textbf{Ejemplo 32.} Sea el espacio vectorial
+    \begin{equation*}
+        \mathcal{P}_3 = \llaves{\sum_{i = 0}^{n} a_ix^{i} : a_i \in \R, \; i = 0, \dots, 3}.
+    \end{equation*}
+    Con su base ordenada $\BB = \llaves{1, x, x^2, x^3}$. Tomemos la transformación lineal
+    \begin{align*}
+        \mathcal{D} : \mathcal{P}_3 & \to \mathcal{P}_3\\
+        \sum_{i = 0}^{3}a_ix^{i} & \mapsto \sum_{i = 0}^3ia_ix^{i - 1}
+    \end{align*}
+    Así,
+    \begin{equation*}
+        \mathcal{D}(1) = 0, \quad \mathcal{D}(x) = 1, \quad \mathcal{D}(x^2) = 2x, \quad \mathcal{D}(x^3) = 3x^2.
+    \end{equation*}
+    Tomemos
+    \begin{align*}
+        [\mathcal{D}]_{\BB}: \R^4 & \to \R^4\\
+        (1, 0, 0, 0) & \mapsto (0, 0, 0, 0)\\
+        (0, 1, 0, 0) & \mapsto (1, 0, 0, 0)\\
+        (0, 0, 1, 0) & \mapsto (0, 2, 0, 0)\\
+        (0, 0, 0, 1) & \mapsto (0, 0, 3, 0)\\
+    \end{align*}
+    Por tanto,
+    \begin{equation*}
+        [\mathcal{D}]_{\BB} = 
+        \begin{pmatrix}
+            0 & 1 & 0 & 0\\
+            0 & 0 & 2 & 0\\
+            0 & 0 & 0 & 3\\
+            0 & 0 & 0 & 0
+        \end{pmatrix}.
+    \end{equation*}
+    Tomemos ahora la base $\BB' = \llaves{1, x + 1, x^2 + 2, x^3 + 3}$, por lo que
+    \begin{equation*}
+        \mathcal{D}(1) = 0, \quad \mathcal{D}(x + 1) = 1, \quad \mathcal{D}(x^2 + 2) = 2x, \quad \mathcal{D}(x^3 + 3) = 3x^2.
+    \end{equation*}
+    Luego,
+    \begin{align*}
+        [\mathcal{D}]_{\BB'}: \R^4 & \to \R^4\\
+        (1, 0, 0, 0) & \mapsto (0, 0, 0, 0)\\
+        (0, 1, 0, 0) & \mapsto (1, 0, 0, 0)\\
+        (0, 0, 1, 0) & \mapsto (-2, 2, 0, 0)\\
+        (0, 0, 0, 1) & \mapsto (-6, 0, 3, 0)\\
+    \end{align*}
+    Por tanto,
+    \begin{equation*}
+        [\mathcal{D}]_{\BB'} = 
+        \begin{pmatrix}
+            0 & 1 & -2 & -6\\
+            0 & 0 & 2 & 0\\
+            0 & 0 & 0 & 3\\
+            0 & 0 & 0 & 0
+        \end{pmatrix}.
+    \end{equation*}
+    \hfill $\blacktriangleleft$ 
+
+    \textbf{Ejemplo 33.} Tomemos las bases $\BB_{\mathcal{P}_3} = \llaves{1, x, x^2, x^3}$ y $\BB_{\mathcal{P}_4} = \llaves{1, x, x^2, x^3, x^4}$ y la siguiente transformación lineal,
+    \begin{align*}
+        \int : \mathcal{P}_3 & \to \mathcal{P}_4\\
+        1 & \mapsto x\\
+        x & \mapsto \frac{1}{2}x^2\\
+        x^2 & \mapsto \frac{1}{3}x^3\\
+        x^3 & \mapsto \frac{1}{4}x^4
+    \end{align*}
+    Lo cual implica que
+    \begin{equation*}
+        \big[ \int \big]_{\BB_{\mathcal{P}_3}, \BB_{\mathcal{P}_4}} =
+        \begin{pmatrix}
+            0 & 0 & 0 & 0\\
+            1 & 0 & 0 & 0\\
+            0 & \frac{1}{2} & 0 & 0\\
+            0 & 0 & \frac{1}{3} & 0\\
+            0 & 0 & 0 & \frac{1}{4}\\
+        \end{pmatrix}
+    \end{equation*}
+    \hfill $\blacktriangleleft$
+
+    Recapitulando, sean $V, W$ espacios vectoriales, con bases ordenadas
+    \begin{equation*}
+        \BB_V = \llaves{v_1, \dots , v_n}, \qquad \BB_W = \llaves{w_1, \dots w_m}
+    \end{equation*}
+    y la transformación lineal 
+    \begin{equation*}
+        T : V \to W.
+    \end{equation*}
+    Existe una matriz $[T]_{\BB_V, \BB_W} \in M_{m \times n}(F)$ tal que 
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\textwidth]{diagramas_conmutativos4.pdf}
+    \end{figure}
+
+    En la columna $j \in [T]_{\BB_V, \BB_W}$ están las coordenadas de $T(v_j)$ respecto a $\BB_W$.
+    \[
+    [T(v)]_{\BB_W} = [T]_{\BB_V, \BB_W}[v]_{\BB_V}
+    \]
+
+    \begin{mdframed}[style=mdgraybox,frametitle={Proposición 32}]
+        Sean $V_1, V_2, V_3$ espacios vectoriales con bases ordenadas $\BB_1, \BB_2, \BB_3$ respectivamente, $T_1: V_1 \to V_2$ y $T:V_2 \to V_3$ transformaciones lineales y $\dim V_i = n_i$. Se cumple que
+        \begin{equation*}
+            [T_2 \cdot T_1]_{\BB_1, \BB_3} = [T_2]_{\BB_2, \BB_3}[T_1]_{\BB_!, \BB_2}
+        \end{equation*}
+    \end{mdframed}    
+
+    \begin{proof}
+        Podemos componer $T_2 \circ T_1: V_1 \to V_3$ obteniendo una transformación lineal. Podemos construir
+        \begin{equation*}
+            A = [T_1]_{\BB_1, \BB_2} \in M_{n_2 \times n_1}(F), \quad B = [T_2]_{\BB_2, \BB_3} \in M_{n_3 \times n_2}(F), \quad C = [T_2 \circ T_1]_{\BB_1, \BB_3} \in M_{n_3 \times n_1}(F)
+        \end{equation*}
+        Luego,
+        \begin{align*}
+            A[v_1]_{\BB_1} & = [T_1(v_1)]_{\BB_2}\\
+            A[v_2]_{\BB_2} & = [T_2(v_2)]_{\BB_3}\\
+            A[v_1]_{\BB_1} & = [T_2(T_1(v_1))]_{\BB_3}\\
+            & = B[T_1(v_1)]_{\BB_2}\\
+            & = B(A[v_1]_{\BB_1})\\
+            & = BA[v_1]_{\BB_1}, \qquad \forall [v_1]_{\BB_1} = (x_1, \dots, x_n) \in F^n.
+        \end{align*}
+    \end{proof}
+    
+
+    
+    
 
     
 %
@@ -2465,7 +2697,7 @@
 % \rg y luego dos parentesis y poner adentro pues lo demas
 % luego yo uso kernel en vez de espacio nulo entonces siguiendo la misma idea que con el rango
 % pones \ker y los parentesis, para la imagen igual pones \Im y los parentesis y listo calixto.
-
+% ku.e.de :)
 
 
 \end{document}
