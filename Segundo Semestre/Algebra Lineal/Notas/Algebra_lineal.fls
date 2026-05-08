@@ -525,7 +525,6 @@ INPUT ./diagramas_conmutativos4.pdf
 INPUT ./diagramas_conmutativos4.pdf
 INPUT ./diagramas_conmutativos4.pdf
 INPUT ./diagramas_conmutativos4.pdf
-INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/ec-lmbxi10.tfm
 INPUT ./diagramas_conmutativos5.pdf
 INPUT ./diagramas_conmutativos5.pdf
 INPUT ./diagramas_conmutativos5.pdf
@@ -555,7 +554,6 @@ INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/lm/lmbx12.pfb
-INPUT /usr/share/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/lm/lmex10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/lm/lmmi12.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/lm/lmmi6.pfb
