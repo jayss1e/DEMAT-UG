@@ -8,6 +8,7 @@
 \usepackage{pdfpages}
 \usepackage{tikz-cd}
 \DeclareMathOperator{\rg}{rg}
+\renewcommand{\Tr}{\operatorname{Tr}}
 \newcommand{\llaves}[1]{\{#1\}}
 \newcommand{\parentesis}[1]{\left(#1\right)}
 \newcommand{\llavesgrande}[1]{\big\{#1\big\}}
@@ -1912,7 +1913,7 @@
 
     \begin{figure}[H]
         \centering
-        \includegraphics[width=0.7\textwidth]{diagramas_conmutativos.pdf}
+        \includegraphics[width=0.4\textwidth]{diagramas_conmutativos.pdf}
         \label{fig:conexiones}
     \end{figure}
 
@@ -1922,7 +1923,7 @@
     
     \begin{figure}[H]
         \centering
-        \includegraphics[width=0.7\textwidth]{diagramas_conmutativos2.pdf}
+        \includegraphics[width=0.4\textwidth]{diagramas_conmutativos2.pdf}
         \label{fig:conexiones2}
     \end{figure}
     Las coordenadas de $\BB$ respecto a $\BB^{\prime}$ son
@@ -2424,7 +2425,7 @@
             m = \dim(W) = n.
         \end{equation*}
         Supongamos ahora que $\dim(V) = n$ y $\dim(W) = m$, con $m = n$.
-        Sean $\{v_1,\dots,v_n\}$ una base de $V$ y la tranformación lineal
+        Sean $\{v_1,\dots,v_n\}$ una base de $V$ y la transformación lineal
         \begin{align*}
             \varphi_{\mathcal{B}}:V & \to F\\
             v & \mapsto [v]_{\mathcal{B}},
@@ -2461,7 +2462,7 @@
 
     \begin{figure}[H]
         \centering
-        \includegraphics[width=0.5\textwidth]{diagramas_conmutativos3.pdf}
+        \includegraphics[width=0.4\textwidth]{diagramas_conmutativos3.pdf}
     \end{figure}
 
     En consecuencia, tenemos que 
@@ -2528,7 +2529,7 @@
 
     \begin{figure}[H]
         \centering
-        \includegraphics[width=0.5\textwidth]{diagramas_conmutativos3.pdf}
+        \includegraphics[width=0.4\textwidth]{diagramas_conmutativos3.pdf}
     \end{figure}
 
     \section{Representacion transformaciones por matrices}
@@ -2654,7 +2655,7 @@
 
     \begin{figure}[H]
         \centering
-        \includegraphics[width=0.5\textwidth]{diagramas_conmutativos4.pdf}
+        \includegraphics[width=0.4\textwidth]{diagramas_conmutativos4.pdf}
     \end{figure}
 
     En la columna $j \in [T]_{\BB_V, \BB_W}$ están las coordenadas de $T(v_j)$ respecto a $\BB_W$.
@@ -2663,9 +2664,9 @@
     \]
 
     \begin{mdframed}[style=mdgraybox,frametitle={Proposición 32}]
-        Sean $V_1, V_2, V_3$ espacios vectoriales con bases ordenadas $\BB_1, \BB_2, \BB_3$ respectivamente, $T_1: V_1 \to V_2$ y $T:V_2 \to V_3$ transformaciones lineales y $\dim V_i = n_i$. Se cumple que
+        Sean $V_1, V_2, V_3$ espacios vectoriales con bases ordenadas $\BB_1, \BB_2, \BB_3$ respectivamente, $T_1: V_1 \to V_2$ y $T_2:V_2 \to V_3$ transformaciones lineales y $\dim V_i = n_i$. Se cumple que
         \begin{equation*}
-            [T_2 \cdot T_1]_{\BB_1, \BB_3} = [T_2]_{\BB_2, \BB_3}[T_1]_{\BB_!, \BB_2}
+            [T_2 \circ T_1]_{\BB_1, \BB_3} = [T_2]_{\BB_2, \BB_3}[T_1]_{\BB_!, \BB_2}
         \end{equation*}
     \end{mdframed}    
 
@@ -2677,27 +2678,224 @@
         Luego,
         \begin{align*}
             A[v_1]_{\BB_1} & = [T_1(v_1)]_{\BB_2}\\
-            A[v_2]_{\BB_2} & = [T_2(v_2)]_{\BB_3}\\
-            A[v_1]_{\BB_1} & = [T_2(T_1(v_1))]_{\BB_3}\\
+            B[v_2]_{\BB_2} & = [T_2(v_2)]_{\BB_3}\\
+            C[v_1]_{\BB_1} & = [T_2(T_1(v_1))]_{\BB_3}\\
             & = B[T_1(v_1)]_{\BB_2}\\
             & = B(A[v_1]_{\BB_1})\\
             & = BA[v_1]_{\BB_1}, \qquad \forall [v_1]_{\BB_1} = (x_1, \dots, x_n) \in F^n.
         \end{align*}
     \end{proof}
-    
 
-    
-    
+    \textbf{\textit{Teorema.}} Sean $V$ un espacio vectorial de dimensión $n$ sobre $F$ y $T: V \to V$ una transformación lineal. Si $\BB = \llaves{v_1, \dots, v_n}$ y $\BB' = \llaves{v_1', \dots, v_n'}$ son bases ordenadas de $V$, entonces
+    \[
+    P^{-1}[T]_{\BB'}P = [T]_{\BB},
+    \]
+    donde $P$ es la matriz de cambio de base de $\BB$ a $\BB'$.
+    \begin{proof}
+        Sabemos que existe una matriz invertible $P \in M_{n \times n}(F)$ tal que
+        \[
+        P[v]_\BB = [v]_{\BB'}, \qquad \forall v \in V.
+        \]
+        Dado que $T:V \to V$ es lineal y $[T]_{\BB'} \in M_{n \times n}(F)$, entonces tenemos que
+        \begin{align*}
+            [T]_{\BB}[v]_{\BB} = [T(v)]_{\BB}\\
+            [T]_{\BB'}[v]_{\BB'} = [T(v)]_{\BB'}\\
+        \end{align*}
+        Luego,
+        \begin{align*}
+            [T]_{\BB'}P[v]_\BB & = P[T(v)]_{\BB}\\
+            & = P[T]_{\BB}[v]_{\BB}, \qquad \forall[v]_{\BB} \in F^n
+        \end{align*}
+        \[
+        \implies [T]_{\BB'}P = P[T]_{\BB} \iff P^{-1}[T]_{\BB'}P = [T]_{\BB}.
+        \]
+        De manera similar podemos probar que si $Q$ es una matriz invertible de tamaño $n \times n$, entonces
+        \[
+        Q[T]_{\BB}Q^{-1} = [T]_{\BB'}.
+        \]
+    \end{proof}
 
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.4\textwidth]{diagramas_conmutativos5.pdf}
+    \end{figure}
+
+    \textbf{\textit{Definición.}} Sean $A, B \in M_{n \times n}(F)$ diremos que $A$ es conjugada con B si existe $P \in M_{n \times n }(F)$ invertible tal que
+    \[
+    A = PBP^{-1}.
+    \]
+
+    \textbf{\textit{Proposición.}}
+    La definición anterior, define una relación de equivalencia en $M_{n \times n}(F)$.
+    \begin{proof}
+        Es reflexiva, ya que $A = I_n A I_n^{-1}$. También es simétrica, a causa de que si $A = PBP^{-1}$, entonces $B = P^{-1}AP$. Por último, supongamos que $A = PBP^{-1}$ y $B = {QCQ^{-1}}$, entonces
+        \[
+        A = P(QCQ^{-1})P^{-1} = (PQ)C(PQ)^{-1}.
+        \]
+    \end{proof}
+
+    \textbf{\textit{Ejemplo.}} Sea $T:\R^2 \to \R^2$ una transformación lineal dada por $T(x,y) = (-y, x + y)$. Tomemos las bases ordenadas $\BB = \llaves{(1,0), (0, 1)}$ y $\BB' = \llaves{(1, 0), (1, 1)}$.
+    Construyamos la matriz $P$ de cambio de base de $\BB$ a $\BB'$, teniendo
+    \begin{gather*}
+        (1, 0) = 1(1,0) + 0(1, 1)\\
+        (0, 1) = -1(1, 0) + 1(1, 1)\\
+    \end{gather*}
+    \[
+    \implies P =
+    \begin{pmatrix}
+        1 & -1\\
+        0 & 1\\
+    \end{pmatrix}.
+    \]
+    Luego,
+    \begin{gather*}
+    T(1,0) = (0,1)\\
+    T(0,1) = (-1,1)\\
+    \implies [T]_\BB =
+    \begin{pmatrix}
+        0 & -1 \\
+        1 & 1
+    \end{pmatrix}
+    \end{gather*}
+    y
+    \begin{gather*}
+    T(1,0) = (0,1) = -1(1,0) + (1,1)\\
+    T(1,1) = (-1, 2) = -3(1, 0) + 2(1, 1)\\
+    \implies [T]_{\BB'} =
+    \begin{pmatrix}
+        -1 & -3 \\
+        1 & 2 \\
+    \end{pmatrix}
+    \end{gather*}
+    Por tanto, se cumple que
+    \[
+    [T]_{\BB'}P = P[T]_{\BB} \implies [T]_{\BB'} = P[T]_{\BB}P^{-1}.
+    \]
+
+    \hfill $\blacktriangle$ %ESTE ES EL BUENO (Carita enojada)
+
+
+    Sean $V, W$ espacios vectoriales sobre $F$. Definimos
+    \[
+    \mathcal{L}(V, W) = \llaves{T:V \to W |\;\;T \text{\; es lineal }}
+    \]
+    Con las operaciones
+    \[
+    \begin{aligned}
+        +:\mathcal{L}(V,W)\times\mathcal{L}(V,W)
+        &\longrightarrow \mathcal{L}(V,W) \\
+        (T_{1},T_{2})
+        &\longmapsto T_{1}+T_{2}:V\longrightarrow W \\
+        &\hspace{2.6cm} v\longmapsto T_{1}(v)+T_{2}(v).
+    \end{aligned}
+    \]
+    y
+    \[
+    \begin{aligned}
+        \cdot: F \times\mathcal{L}(V,W)
+        &\longrightarrow \mathcal{L}(V,W) \\
+        (c,T)
+        &\longmapsto cT:V\longrightarrow W \\
+        &\hspace{1.6cm} v\longmapsto cT(v).
+    \end{aligned}
+    \]
+    le damos estructura de campo sobre $F$ a $\mathcal{L}(V,W)$.
+
+
+    \textbf{\textit{Teorema.}} Sean $V, W$ espacios vectoriales sobre $F$ de dimensión $\dim_FV = n$ y $\dim_FW = m$; y las bases ordenadas $\BB_V = \llaves{v_1, \dots, v_n}$ y $\BB_W = \llaves{w_1, \dots, w_m}$. La función
+    \begin{align*}
+        \Phi_{\BB_V, \BB_W}: \mathcal{L}(V, W) & \to M_{n \times n}(F)\\
+        T & \mapsto [T]_{\BB_V, \BB_W} 
+    \end{align*}
+    Es un isomorfismo lineal.
+    \begin{proof}
+        Veamos si es transformación lineal. Notemos que
+        \begin{align*}
+            \Phi_{\BB_v, \BB_w}(cT_1 + T_2) & = c[T_1]_{\BB_V,\BB_W} + [T_2]_{\BB_V,\BB_W}
+        \end{align*}
+        pues $[(cT_1 + T_2)(v_j)]_{\BB_W} = c[T_1(v_j)]_{\BB_W} + [T_2(v_j)]_{\BB_W}$. Por lo tanto es una transformación lineal. Para ver que es biyectiva, tenemos que
+        \[
+        \ker(\Phi_{\BB_V, \BB_W}) = \llaves{T \in \mathcal{L}(V, W) : [T]_{\BB_V, \BB_W} = 0_{m \times n}} = \llaves{0},
+        \]
+        lo cual implica que es inyectiva.
+    \end{proof}
     
-%
-% Ya termine todo lo de antes de las vacaciones de semana santa
-% Ahora hice algunos cambios jaajajajajajajaj
-% para escribir el rango de una cosa debes de poner
-% \rg y luego dos parentesis y poner adentro pues lo demas
-% luego yo uso kernel en vez de espacio nulo entonces siguiendo la misma idea que con el rango
-% pones \ker y los parentesis, para la imagen igual pones \Im y los parentesis y listo calixto.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.4\textwidth]{diagramas_conmutativos6.pdf}
+    \end{figure}
+
+    Notemos que
+    \begin{gather*}
+        \dim_F \mathcal{L}(V, W) = (\dim_FV) \cdot (\dim_FW),\\
+        \dim_FM_{m \times n}(F) = \dim_FF^{m \cdot n} = m \cdot n.
+    \end{gather*}
+
+    \textbf{\textit{Definición.}} Sea $V$ un espacio vectorial sobre $F$, el \textbf{espacio vectorial dual de $V$} es por definición
+    \[
+    V^{*} \coloneqq \mathcal{L}(V, F) = \llaves{f:V \to F | \;\; f \text{ es lineal }}.
+    \]
+    Los elementos en $V^{*}$ se llaman \textbf{funciones lineales de $V$}.
+
+    \textbf{\textit{Ejemplo.}} Sea la función
+    \begin{align*}
+        f: \R^2 & \to \R\\
+        (x, y) & \mapsto x + y
+    \end{align*}
+    Veamos que
+    \begin{align*}
+        f(c(x_1, y_1) + (x_2, y_2)) & = f(cx_1 + x_2, cy_1 + y_2)\\
+        & = cx_1 + x_2 + cy_1 + y_2\\
+        & = c(x_1 + y_1) + (x_2 + y_2)\\
+        & = cf(x_1, y_1) + f(x_2, y_2).
+    \end{align*}
+    Por tanto $f$ es una transformación lineal y en consecuencia $f \in (\R^2)^{*}$
+
+    \textbf{\textit{Ejemplo.}} Sea el conjunto $\mathcal{I}= \llaves{g:\R \to \R |\; g \text{ es integrable }}$. Tomemos la función
+    \begin{align*}
+        \int: \mathcal{I} & \to \R \\
+        g & \mapsto \int_a^bg.
+    \end{align*}
+    Notemos que 
+    \[
+    \int(cg_1 + g_2) = c \int_a^bg_1 + \int_a^bg_2.
+    \]
+    Lo cual implica que $\int \in \mathcal{I}^*$.
+
+    \textbf{\textit{Ejemplo.}} Tomemos el conjunto $D = \llaves{h: \R \to \R | \; h \text{ es diferenciable en }0 \;}$, entonces, dada la función
+    \begin{align*}
+        f: D & \to \R\\
+        g(x) & \mapsto g'(0),
+    \end{align*}
+    podemos afirmar que $f \in D^{*}$.
+
+
+    \textbf{\textit{Observación.}} Si $\dim_FV = n$, entonces
+    \[
+    \dim_FV^{*} = \dim_F\mathcal{L}(V, F) = \dim_FV \cdot \dim_FF = n \cdot 1 = n.
+    \]
+
+    \textbf{\textit{Definición.}} Definimos la traza de una matriz cuadrada como
+    \begin{align*}
+        \Tr: M_{n \times n(F)} & \to F\\
+        (a_{ij}) & \mapsto \sum_{i = 1}^na_{ii}.
+    \end{align*}
+
+    \textbf{\textit{Proposición.}} La función $\Tr$ es lineal.
+    \begin{proof}
+        Fijémonos en las siguientes igualdades,
+        \begin{align*}
+            \Tr (c(a_{ij}) + (b_{ij})) & = \Tr((ca_{ij} + b_{ij}))\\
+            & = \sum_{i = 1}^{n}(ca_{ii} + b_{ii})\\
+            & = c\sum_{i = 1}^n a_{ii} + \sum_{i = 1}^{n}b_{ii}\\
+            & = c \Tr(a_{ij}) + \Tr(b_{ij})
+        \end{align*}
+        Por tanto es lineal.
+    \end{proof}
+
+
 % ku.e.de :)
-
-
+%Ya le voy a dejar hasta ahi por hoy jajajjaja, solo me falto acabar la demostración que esta antes del diagrama 6, pero es q tengo duda en esa, ya luego la acabo.    Ya voy en la clase del 30 de abril :)
+% algo mas que bien, ya estas de que bien cerquita como a dos clases o asi no? justo, ya veo la luzz al final del tunel 
+% jajajajajajajajajaja, ya casi ya casi, ya despues sera que ellos lo lean y encuentren errores por nosotros ajajajajajaj, JAJJAJAJAJA ya a dormir, bueno yo JAJAJJAJA jajjajajajajajaja, yo me quedo a darle formato chayitoooooooooooooooooooooooooooooo
 \end{document}
