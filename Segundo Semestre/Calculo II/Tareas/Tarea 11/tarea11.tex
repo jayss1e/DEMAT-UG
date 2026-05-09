@@ -1,0 +1,80 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{ugmath}
+\usepackage{float}
+\usepackage{placeins}
+\usepackage [spanish]{babel}
+\usepackage[labelfont=bf,labelsep=space]{caption}
+\newcommand{\paren}[1]{\left( #1 \right)}
+\newcommand{\alumno}{Ricardo León Martínez}
+\newcommand{\materia}{Calculo Diferencial e Integral II}
+\newcommand{\profesor}{Fernando Nuñez Medina}
+\newcommand{\tarea}{Tarea 11}
+\newcommand{\fecha}{9/5/2026}
+
+\begin{document}
+    \begin{center}
+    {\large\textbf{UNIVERSIDAD DE GUANAJUATO}}\\[0.3cm]
+    {\normalsize\textbf{DIVISIÓN DE CIENCIAS NATURALES Y EXACTAS}}\\
+    {\normalsize\textbf{CAMPUS GUANAJUATO}}\\[1cm]
+
+    {\Large\textbf{\tarea\ (\materia)}}\\[1cm]
+    \end{center}
+
+    \textbf{Nombre:} \alumno \hfill 
+    \textbf{Fecha:} \fecha \hfill 
+    \textbf{Calificación:} \rule{3cm}{0.4pt} \\[0.3cm]
+
+    \begin{mdframed}[style=mdpinkbox,frametitle={Ejercicio 1}]
+        Prueba el criterio de los límites superiores e inferiores (proposición 57).
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdpinkbox,frametitle={Ejercicio 2}]
+        Muestra un ejemplo de un agrupamiento convergente de una serie divergente.
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdpinkbox,frametitle={Ejercicio 3}]
+        Muestra dos series convergentes $\sum_{n=1}^{\infty}a_{n}$ y $\sum_{n=1}^{\infty}b_{n}$ tales que
+        \begin{equation*}
+            \sum_{n=1}^{\infty}a_{n}b_{n}\neq\paren{\sum_{n=1}^{\infty}a_{n}}\paren{\sum_{n=1}^{b_{n}}}.
+        \end{equation*}
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdpinkbox,frametitle={Ejercicio 4}]
+        Determina la convergencia de las series siguientes:
+        \begin{multicols}{2}
+            \begin{enumerate}
+                \item[(a)] $\sum_{n=0}^{\infty}\frac{c^{n}}{n!}$ ($c$ es constante).
+                \item[(b)] $\sum_{n=1}^{\infty}\frac{n}{n^{2}+1}$.
+                \item[(c)] $\sum_{n=2}^{\infty}\frac{5}{n\ln(n)}$.
+                \item[(d)] $\sum_{n=1}^{\infty}\frac{1}{\sqrt{n^{2}+1}}$.   
+            \end{enumerate}
+        \end{multicols}
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdpinkbox,frametitle={Ejercicio 5}]
+        Realiza lo siguiente:
+        \begin{enumerate}
+            \item[(a)] Muestra que si $0.a_{1}\dots a_{n}$ es una expanción decimal finita con $a_{n}\neq0$,
+            entonces
+            \begin{equation*}
+                0.a_{1}\dots a_{n}=0.a_{1}\dots a_{n-1}(a_{n}-1)\overline{9}.
+            \end{equation*}
+            \item[(b)] Muestra que si $0.a_{1}\dots a_{n}\overline{9}$ es una expansión decimal con
+            $a_{n}\neq9$, entonces
+            \begin{equation*}
+                0.a_{1}\dots a_{n}\overline{9}=0.a_{1}\dots a_{n-1}(a_{n}+1).
+            \end{equation*}
+        \end{enumerate}
+    \end{mdframed}
+    
+    \begin{mdframed}[style=mdpinkbox,frametitle={Ejercicio 6}]
+        Muestra que para todo $x\in(0,1]$ tiene una expansión decimal infinita.
+    \end{mdframed}
+    
+    \begin{mdframed}[style=mdpinkbox,frametitle={Ejercicio 7}]
+        Prueba que si $(f_{n})$ es una subsucesión de funciones que converge uniformemente en $A$
+        y $B$, entonces $(f_{n})$ converge uniformemente en $A\cup B$.
+    \end{mdframed}
+
+\end{document}
+
