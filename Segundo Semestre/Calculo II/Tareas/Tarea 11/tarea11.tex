@@ -28,6 +28,65 @@
         Prueba el criterio de los límites superiores e inferiores (proposición 57).
     \end{mdframed}
 
+    \begin{proof}
+        Definamos
+        \begin{equation*}
+            s_{n}:=\sup_{k\geq n}a_{k},\quad i_{n}:=\inf_{k\geq n}a_{k}.
+        \end{equation*}
+        Entonces $(s_{n})$ es decreciente, $(i_{n})$ es creciente y para todo $n$,
+        \begin{equation*}
+            i_{n}\leq a_{n}\leq s_{n}.
+        \end{equation*}
+        Supongamos que $a_{n}\to L$. Sea $\varepsilon\gt0$. Como $a_{n}\to L$, existe $N\in\N$ tal que
+        \begin{equation*}
+            n\geq N\implies\abs{a_{n}-L}\lt\varepsilon.
+        \end{equation*}
+        Equivalentemente,
+        \begin{equation*}
+            L-\varepsilon\lt a_{n}\lt L+\varepsilon.
+        \end{equation*}
+        Fijemos $n\geq N$. Entonces para todo $k\geq n$,
+        \begin{equation*}
+            L-\varepsilon\lt a_{k}\lt L+\varepsilon.
+        \end{equation*}
+        Por propiedades de supremo e infimo,
+        \begin{equation*}
+            \inf_{k\geq n}a_{k}\geq L-\varepsilon,\quad\text{ y }\quad\sup_{k\geq n}a_{k}\leq L+\varepsilon.
+        \end{equation*}
+        Ademas, como todos los $a_{k}$ pertenecen al intervalo abierto anterior,
+        \begin{equation*}
+            \inf_{k\geq n}a_{k}\leq L+\varepsilon,\quad sup_{k\geq n}a_{k}\geq L-\varepsilon.
+        \end{equation*}
+        Por lo tanto,
+        \begin{equation*}
+            L-\varepsilon\leq\liminf a_{n}\leq\limsup a_{n}\leq L+\varepsilon.
+        \end{equation*}
+        como esto vale para todo $\varepsilon\gt0$, concluimos que
+        \begin{equation*}
+            \liminf a_{n}=L,\qquad\limsup a_{n}=L.
+        \end{equation*}
+        Supongamos ahora que
+        \begin{equation*}
+            \limsup a_{n}=\liminf a_{n}=L.
+        \end{equation*}
+        Es decir,
+        \begin{equation*}
+            s_{n}\to L,\quad i_{n}\to L.
+        \end{equation*}
+        Como 
+        \begin{equation*}
+            i_{n}\leq a_{n}\leq s_{n},
+        \end{equation*}
+        y ademas $i_{n}\to L$, $s_{n}\to L$, por el lema del sandwich se sigue inmediatamente que
+        \begin{equation*}
+            a_{n}\to L.
+        \end{equation*}
+        Concluimos que
+        \begin{equation*}
+            \lim_[n\to\infty]a_{n}=L\text{ ssi }\limsup_{n\to\infty}a_{n}=\liminf_{n\to\infty}a_{n}=L.
+        \end{equation*}
+    \end{proof}
+
     \begin{mdframed}[style=mdpinkbox,frametitle={Ejercicio 2}]
         Muestra un ejemplo de un agrupamiento convergente de una serie divergente.
     \end{mdframed}
@@ -38,6 +97,33 @@
             \sum_{n=1}^{\infty}a_{n}b_{n}\neq\paren{\sum_{n=1}^{\infty}a_{n}}\paren{\sum_{n=1}^{b_{n}}}.
         \end{equation*}
     \end{mdframed}
+
+    \begin{solucion}
+        Tomemos
+        \begin{equation*}
+            a_{n}=b_{n}=\frac{1}{2^{n}}.
+        \end{equation*}
+        Entonces
+        \begin{equation*}
+            \sum_{n=1}^{\infty}a_{n}=\sum_{n=1}^{\infty}b_{n}=\sum_{n=1}^{\infty}\frac{1}{2^{n}}=1.
+        \end{equation*}
+        Por tanto,
+        \begin{equation*}
+            \paren{\sum_{n=1}^{\infty}a_{n}}\paren{\sum_{n=1}^{\infty}b_{n}}=1.
+        \end{equation*}
+        Ahora,
+        \begin{equation*}
+            a_{n}b_{n}=\frac{1}{4^{n}},
+        \end{equation*}
+        asi que
+        \begin{equation*}
+            \sum_{n=1}^{\infty}a_{n}b_{n}=\sum_{n=1}^{\infty}\frac{1}{4^{n}}=\frac{\frac{1}{4}}{1-\frac{1}{4}}=\frac{1}{3}.
+        \end{equation*}
+        Luego,
+        \begin{equation*}
+            \sum_{n=1}^{\infty}a_{n}b_{n}=\frac{1}{3}\neq1=\paren{\sum_{n=1}^{\infty}a_{n}}\paren{\sum_{n=1}^{\infty}b_{n}}.
+        \end{equation*}
+    \end{solucion}
 
     \begin{mdframed}[style=mdpinkbox,frametitle={Ejercicio 4}]
         Determina la convergencia de las series siguientes:
