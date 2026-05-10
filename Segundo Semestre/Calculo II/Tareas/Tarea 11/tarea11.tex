@@ -137,6 +137,73 @@
         \end{multicols}
     \end{mdframed}
 
+    \begin{solucion}
+        \begin{enumerate}
+            \item[(a)] Aplicamos el criterio del cociente. Sea
+            \begin{equation*}
+                a_{n}=\frac{c^{n}}{n!}.
+            \end{equation*}
+            Entonces
+            \begin{equation*}
+                \abs{\frac{a_{n+1}}{a_{n}}}=\abs{\frac{c^{n+1}}{(n+1)!}\frac{n!}{c^{n}}}=\frac{\abs{c}}{n+1}.
+            \end{equation*}
+            Por lo tanto,
+            \begin{equation*}
+                \lim_{n\to\infty}\abs{\frac{a_{n+1}}{a_{n}}}=\lim_{n\to\infty}\frac{\abs{c}}{n+1}=0\lt1.
+            \end{equation*}
+            Luego, por el criterio del cociente, la serie converge absolutamente para todo $c\in\R$. Además,
+            \begin{equation*}
+                \sum_{n=0}^{\infty}\frac{c^{n}}{n!}=e^{c}.
+            \end{equation*}
+            \item[(b)] Comparamos con la serie armonica. Notemos que
+            \begin{equation*}
+                \frac{n}{n^{2}+1}=\frac{1}{n+\frac{1}{n}}.
+            \end{equation*}
+            Calculamos el limite
+            \begin{equation*}
+                \lim_{n\to\infty}\frac{\frac{n}{n^{2}+1}}{\frac{1}{n}}=\lim_{n\to\infty}\frac{1}{n+\frac{1}{n}}.
+            \end{equation*}
+            Como
+            \begin{equation*}
+                \sum_{n=1}^{\infty}\frac{1}{n}
+            \end{equation*}
+            diverge, por el criterio de comparación por límite también diverge
+            \begin{equation*}
+                sum_{n=1}^{\infty}\frac{n}{n^{2}+1}.
+            \end{equation*}
+            \item[(c)] Usamos el criterio integral. Consideremos
+            \begin{equation*}
+                f(x)=\frac{5}{x\ln(x)},\qquad x\geq2.
+            \end{equation*}
+            La función es positiva, continua y decreciente para $x\geq2$. Entonces
+            \begin{equation*}
+                \int_{2}^{\infty}\frac{5}{x\ln(x)}dx.
+            \end{equation*}
+            Haciendo el cambio de variable
+            \begin{equation*}
+                u=\ln(x),\qquad du=\frac{dx}{x},
+            \end{equation*}
+            obtenemos
+            \begin{equation*}
+                \int_{2}^{\infty}\frac{5}{x\ln(x)}dx=\int_{\ln(2)}^{\infty}\frac{1}{u}du.
+            \end{equation*}
+            Pero
+            \begin{equation*}
+                \int_{\ln(2)}^{\infty}\frac{1}{u}du=\lim_{k\to\infty}\ln(u)\Big|_{\ln 2}^{b}=\infty.
+            \end{equation*}
+            Así, la serie diverge.
+            \item[(d)] Comparamos con la serie armonica
+            \begin{equation*}
+                \lim_{n\to\infty}\frac{\frac{1}{\sqrt{n^{2}+1}}}{\frac{1}{n}}=\lim_{n\to\infty}\frac{n}{\sqrt{n^{2}+1}}=\lim_{n\to\infty}\frac{1}{\sqrt{1+\frac{1}{n^{2}}}}=1.
+            \end{equation*}
+            Como
+            \begin{equation*}
+                \sum_{n=1}^{\infty}\frac{1}{n}
+            \end{equation*}
+            diverge, el criterio de comparación implica que la serie tambien diverge.
+        \end{enumerate}
+    \end{solucion}
+
     \begin{mdframed}[style=mdpinkbox,frametitle={Ejercicio 5}]
         Realiza lo siguiente:
         \begin{enumerate}
@@ -152,6 +219,44 @@
             \end{equation*}
         \end{enumerate}
     \end{mdframed}
+
+    \begin{proof}
+        \begin{enumerate}
+            \item[(a)] Sea $x=0.a_{1}a_{2}\dots a_{n}$, $a_{n}\neq0$. Por definición de expansión defimal infinita,
+            \begin{equation*}
+                x=\sum_{k=1}^{n}\frac{a_{k}}{10^{k}}.
+            \end{equation*}
+            Consideremos el numero
+            \begin{equation*}
+                y=0.a_{1}\dots a_{n-1}(a_{n}-1)\overline{9}.
+            \end{equation*}
+            Entonces
+            \begin{equation*}
+                y=\sum_{k=1}^{n-1}\frac{a_{k}}{10^{k}}+\frac{a_{n}-1}{10^{n}}+\sum_{k=n+1}^{\infty}\frac{9}{10^{k}}.
+            \end{equation*}
+            La ultima suma geometrica
+            \begin{equation*}
+                \sum_{k=n+1}^{\infty}\frac{9}{10^{k}}=\frac{9}{10^{n+1}}\sum_{j=0}^{\infty}\frac{1}{10^{j}}.
+            \end{equation*}
+            Como
+            \begin{equation*}
+                \sum_{j=0}^{\infty}\frac{1}{10^{j}}=\frac{1}{1-\frac{1}{10}}=\frac{10}{9}
+            \end{equation*}
+            obtenemos
+            \begin{equation*}
+                \sum_{k=n+1}^{\infty}\frac{9}{10^{k}}=\frac{9}{10^{n+1}}\cdot\frac{10}{9}=\frac{1}{10^{n}}.
+            \end{equation*}
+            sustituyendo
+            \begin{equation*}
+                y=\sum_{k=1}^{n-1}\frac{a_{k}}{10^{k}}+\frac{a_{n}-1}{10^{n}}+\frac{1}{10^{n}}.
+            \end{equation*}
+            Por lo tanto,
+            \begin{equation*}
+                y=\sum_{k=1}^{n-1}\frac{a_{k}}{10^{k}}+\frac{a_{n}}{10^{n}}=\sum_{k=1}^{n}\frac{a_{k}}{10^{k}}=x.
+            \end{equation*}
+            \item[(b)] Es inmediato del inciso (a).
+        \end{enumerate}
+    \end{proof}
     
     \begin{mdframed}[style=mdpinkbox,frametitle={Ejercicio 6}]
         Muestra que para todo $x\in(0,1]$ tiene una expansión decimal infinita.
@@ -161,6 +266,55 @@
         Prueba que si $(f_{n})$ es una subsucesión de funciones que converge uniformemente en $A$
         y $B$, entonces $(f_{n})$ converge uniformemente en $A\cup B$.
     \end{mdframed}
+
+    \begin{proof}
+        Observemos que en $x\in A\cap B$ se tiene
+        \begin{equation*}
+            f_{n}(x)\to f(x)
+        \end{equation*}
+        y tambien
+        \begin{equation*}
+            f(x)_{n}=g(x).
+        \end{equation*}
+        Por unicidad del limite,
+        \begin{equation*}
+            f(x)=g(x).
+        \end{equation*}
+        Por tanto podemos definir una función
+        \begin{equation*}
+            h:A\cup B\to\R
+        \end{equation*}
+        como
+        \begin{equation*}
+            h(x)=
+            \begin{cases}
+                f(x),\quad x\in A,\\
+                g(x),\quad x\in B.
+            \end{cases}
+        \end{equation*}
+        Sea ahora $\e\gt0$. Como $f_{n}\to f$ uniformemente en $A$, existe $N_{1}\in\N$ tal que
+        \begin{equation*}
+            n\geq N_{1}\implies\abs{f_{n}(x)-f(x)}\lt\e\qquad\forall x\in A.
+        \end{equation*}
+        Así, como $f_{n}\to g$ uniformemente en $B$, existe $N_{2}\in\N$ tal que
+        \begin{equation*}
+            n\geq N_{2}\implies \abs{f_{n}(x)-g(x)}\lt\e\qquad x\in B.
+        \end{equation*}
+        Tomemos $\max\{N_{1},N_{2}\}$. Entonces, para todo $n\gt N$ y todo $x\in A\cup B$, ocurren dos posibilidades. Si
+        $x\in A$, entonces
+        \begin{equation*}
+            \abs{f_{n}(x)-h(x)}=\abs{f_{n}-f(x)}\lt\e.
+        \end{equation*}
+        Si $x\in B$, entonces
+        \begin{equation*}
+            \abs{f_{n}(x)-h(x)}=\abs{f_{n}-g(x)}\lt\e.
+        \end{equation*}
+        Por ende
+        \begin{equation*}
+            \abs{f_{n}(x)-h(x)}\lt\qquad\forall x\in A\cup B,
+        \end{equation*}
+        Para todo $n\geq N$. Por lo tanto, $(f_{n})$ converge uniformemente en $A\cup B$.
+    \end{proof}
 
 \end{document}
 

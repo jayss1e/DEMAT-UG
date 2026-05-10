@@ -8,7 +8,7 @@
 \usepackage{pdfpages}
 \usepackage{tikz-cd}
 \DeclareMathOperator{\rg}{rg}
-\renewcommand{\Tr}{\operatorname{tr}}
+\renewcommand{\Tr}{\operatorname{Tr}}
 \newcommand{\llaves}[1]{\{#1\}}
 \newcommand{\parentesis}[1]{\left(#1\right)}
 \newcommand{\llavesgrande}[1]{\big\{#1\big\}}
@@ -20,7 +20,57 @@
     
     \thispagestyle{empty}
     \includepdf[pages=1]{linealdefinitivo.pdf}
-        
+
+    \begin{flushright}
+  
+        \textit{Dedicado a todos aquellos que no creyeron\\
+        que estas notas fueran a salir. (Uicab)}\\[1cm]
+
+        \textbf{Ricardo}\\[0.3cm]
+        \textit{A los tacos el paisa 2\\
+        porque son unos rifados.\\
+        A román porque sufrió redactando\\
+        estas notas.\\
+        A Uicab por su libreta\\
+        de lineal.\\
+        Al grupo de todos infimos porque\\
+        hacen mas llevadera la univerisidad.\\
+        Y a mi mejor amiga Sam,\\
+        porque aunque no entienda del todo estas notas,\\
+        siempre estuvo ahí.}\\[1.2cm]
+
+        \textbf{Román}\\[0.3cm]
+
+        \textit{A spotify que me acompañó\\
+        en cada momento durante la redacción.\\
+        A Uicab que me ayudó a verificar las notas.\\
+        Al comedor de Cimat por la buena comida que dan.\\
+        Pero sobre todo, al grupo de todos ínfimos \\
+        que han mejorado mi paso por la universidad}
+
+    \end{flushright}
+
+    % ---------------- NOTA DE ERRORES ----------------
+
+    \cleardoublepage
+    \thispagestyle{empty}
+
+    \begin{mdframed}[style=mdgreenbox]
+        \begin{center}
+        \small
+        Estas notas fueron elaboradas con fines académicos.\\
+        A pesar del cuidado puesto en su redacción,\\
+        es posible que existan errores u omisiones.\\[0.3cm]
+
+        Cualquier corrección, sugerencia o comentario será bienvenida
+        en los correos: \\[0.3cm]
+
+        carlos.roman@cimat.mx\\
+        ricardo.leon@cimat.mx
+        \end{center}
+    \end{mdframed}
+
+    % -------------------------------------------------
     
     \setcounter{page}{1}
     \tableofcontents
@@ -94,7 +144,7 @@
     \section{Sistemas de ecuaciones lineales}
     
     \begin{mdframed}[style=mdbluebox,frametitle={Definicion 1: Sistema de ecuaciones}]
-        Sea $F$ un campo. Un sistema de $m$ ecuaciones lineales en $n$ variables con coeficientes en $F$, denotaremos dichos coeficientes como
+        Sea $F$ un campo. Un \textbf{sistema de $m$ ecuaciones en $n$ variables} con coeficientes en $F$, denotaremos dichos coeficientes como
         \begin{align*}
             \{a_{ij} \in F : 1 \leq i \leq m, 1 \leq j \leq n\},
         \end{align*}
@@ -126,7 +176,7 @@
         \begin{align*}
             \{ (c_1, \dots , c_n):a_{i1}c_1 + \dots + a_{in}c_n = b_i, \forall i \in \{1,\dots , m \}\} \subset F^n,
         \end{align*}
-        este subconjunto se llama conjunto solución del sistema \eqref{1.1}.
+        este subconjunto se llama \textbf{conjunto solución del sistema} \eqref{1.1}.
     \end{mdframed}
     
     \textbf{Ejemplo 1.}\\
@@ -220,7 +270,7 @@
     \end{equation}
     
     \begin{mdframed}[style=mdbluebox,frametitle={Definición 3: Sistema equivalente}]
-        Los sistemas en \eqref{1.1} y \eqref{1.4} se dicen equivalentes si toda ecuación de uno puede escribirse como combinación lineal del otro y viceversa.
+        Los sistemas en \eqref{1.1} y \eqref{1.4} se dicen \textbf{equivalentes} si toda ecuación de uno puede escribirse como combinación lineal del otro y viceversa.
     \end{mdframed}
     
     A partir de la definición anterior se obtiene la siguiente propiedad fundamental
@@ -244,7 +294,7 @@
     \section{Matrices y operaciones elementales de fila}
     
     \begin{mdframed}[style=mdbluebox,frametitle={Definición 4: Matriz}]
-        Una matriz de tamaño $m \times n$ con coeficientes en $F$, es una función
+        Una \textbf{matriz} de tamaño $m \times n$ con coeficientes en $F$, es una función
         \begin{align*}
             a : \llavesgrande{(i,j): 1 \leq i \leq m, 1 \leq j \leq n} \to F,\quad (i, j) \mapsto a_{ij}.
         \end{align*}
@@ -348,7 +398,7 @@
     \vspace{0.4cm}
 
     \begin{mdframed}[style=mdbluebox,frametitle={Definición 5: Equivalencia de matrices}]
-        Sean $A_{1},A_{2}\in M_{m\times n}(F)$, diremos que $A_{1}$ es equivalente a $A_{2}$ si existe un número
+        Sean $A_{1},A_{2}\in M_{m\times n}(F)$, diremos que \textbf{$A_{1}$ es equivalente a $A_{2}$} si existe un número
         finito de operaciones elementales $E_{1k},E_{2k},\dots,E_{\ell k}$, tal que
         \begin{equation*}
             A_{1}=E_{1k}\cdot E_{(\ell-1)k}E_{\ell k}(A_{2}).
@@ -449,7 +499,7 @@
         Entonces $A_{1}\sim A_{3}$.
     \end{proof}
 
-    \begin{mdframed}[style=mdbluebox,frametitle={Definición 6}]
+    \begin{mdframed}[style=mdbluebox,frametitle={Definición 6: Relación de equivalencia de matrices}]
         Sean $A_{1},A_{2}\in M_{m\times n}(F)$, diremos que $A_{1}\sim A_{2}$ si existe un numero finito de
         operaciones elementales $E_{1k},E_{2k},\dots,E_{\ell k}$.
     \end{mdframed}
@@ -1041,14 +1091,14 @@
     \section{Matrices Invertibles}
 
     \begin{mdframed}[style=mdbluebox,frametitle={Definición 9: Inversa Derecha e Inversa Izquierda}]
-        Una matriz $P\in M_{m\times m}(F)$ tiene inversa derecha si existe $Q\in M_{m\times m}(F)$ tal que
+        Una matriz $P\in M_{m\times m}(F)$ tiene \textbf{inversa derecha} si existe $Q\in M_{m\times m}(F)$ tal que
         \begin{equation*}
             P\cdot Q=I_{m}
         \end{equation*}
-        Una matriz $Q\in M_{m\times m}(F)$ tiene inversa izquierda si existe $P\in M_{m\times m}(F)$
+        Una matriz $Q\in M_{m\times m}(F)$ tiene \textbf{inversa izquierda} si existe $P\in M_{m\times m}(F)$
         tal que
         \begin{equation*}
-            P\cdot Q=I_{m}.
+            Q\cdot P=I_{m}.
         \end{equation*}
     \end{mdframed}
 
@@ -1185,7 +1235,7 @@
     \end{proof}
 
     \begin{mdframed}[style=mdbluebox,frametitle={Definición 10: Matriz elemental}]
-        Una matriz $E\in M_{m\times m}(F)$ se llama elemental si resulta de aplicar una
+        Una matriz $E\in M_{m\times m}(F)$ se llama \textbf{elemental} si resulta de aplicar una
         operación elemental de fila a $I_{m}\in M_{m\times m}(F)$.
     \end{mdframed}
 
@@ -1371,8 +1421,8 @@
     \end{itemize}
 
     \begin{mdframed}[style=mdbluebox,frametitle={Definición 11: Vectores y escalares}]
-        Los elementos en $V$ se llaman vectores.
-        Los elementos de $F$ se llaman escalares.
+        Los elementos en $V$ se llaman \textbf{vectores}.
+        Los elementos de $F$ se llaman \textbf{escalares}.
     \end{mdframed}
 
     \textbf{Ejemplo 14.}\\
@@ -1486,8 +1536,8 @@
     de $F^{3}$.\hfill $\blacktriangleleft$
 
     \begin{mdframed}[style=mdbluebox,frametitle={Definición 13: Subespacio vectorial generado}]
-        Sea $V$ un espacio vectorial sobre $F$. Sea $S\subset V$, definimos el subespacio vectorial de
-        $V$ generado por $S$ como
+        Sea $V$ un espacio vectorial sobre $F$. Sea $S\subset V$, definimos el \textbf{subespacio vectorial de
+        $V$ generado por $S$} como
         \begin{equation*}
             \langle S \rangle=\bigcap_{S\subset W}W
         \end{equation*}
@@ -1532,8 +1582,8 @@
     \end{mdframed}
 
     \begin{mdframed}[style=mdbluebox,frametitle={Definición 17: Independencia Lineal}]
-        Sea $V$ un espacio vectorial sobre $F$. Sea $S\subset V$, diremos que $S$ es linealmente
-        idependiente sobre $F$ si
+        Sea $V$ un espacio vectorial sobre $F$. Sea $S\subset V$, diremos que $S$ es \textbf{linealmente
+        idependiente} sobre $F$ si
         \begin{enumerate}
             \item $S=\varnothing$
             \item Existe $n\in\N$, existen vectores $v_{1},\dots,v_{n}\in S$ y $(a_{1},\dots,a_{n})\in F^{n}\setminus(0,\dots,0)$
@@ -1564,7 +1614,7 @@
     \end{equation*}
 
     \begin{mdframed}[style=mdbluebox,frametitle={Definición 18: Espacio vectorial de dimensión finita}]
-        Un espacio vectorial $V$ sobre $F$ es de dimensión finita si existe un conjunto finito
+        Un \textbf{espacio vectorial $V$ sobre $F$ es de dimensión finita} si existe un conjunto finito
         $S\subset V$ tal que
         \begin{equation*}
             \gen{S}=V.
@@ -2005,7 +2055,7 @@
 
     \begin{mdframed}[style=mdbluebox,frametitle={Definición 23: Transformación Lineal}]
         Sean $V,W$ espacios vectoriales sobre un campo $F$, una funcíón $T:V\to W$ es una
-        transformación lineal si
+        \textbf{transformación lineal} si
         \begin{equation*}
             T(av_{1}+v_{2})=aT(v_{1})+T(v_{2})
         \end{equation*}
@@ -2790,10 +2840,8 @@
     Con las operaciones
     \begin{equation*}
         \begin{aligned}
-            +:\mathcal{L}(V,W)\times\mathcal{L}(V,W)
-            &\longrightarrow \mathcal{L}(V,W) \\
-            (T_{1},T_{2})
-            &\longmapsto T_{1}+T_{2}:V\longrightarrow W \\
+            +:\mathcal{L}(V,W)\times\mathcal{L}(V,W) & \longrightarrow \mathcal{L}(V,W) \\
+            (T_{1},T_{2}) & \longmapsto T_{1}+T_{2}:V\longrightarrow W \\
             &\hspace{2.6cm} v\longmapsto T_{1}(v)+T_{2}(v).
         \end{aligned}
     \end{equation*}
@@ -2956,8 +3004,674 @@
             0 \quad \text{si } \; i \neq j.
         \end{cases}
     \end{align*}
-    Sea $v = s$
+    Sea $v = \sum_{j = 1}^n a_jv_j$ un vector cualquiera de $V$, entonces
+    \begin{align*}
+        f_i(v) & = f_i\parentesis{\sum_{j = 1}^na_jv_j}\\
+        & = f_i\parentesis{\sum_{j = 1}^na_jf_i(v_j)}\\
+        & = \sum_{j = 1}^na_j\delta_{ij}\\
+        & = a_i.
+    \end{align*}
+    Así, $f_i$ manda el vector $v$ a la cordenada $i$-ésima respecto a $\BB$.
 
+    \begin{mdframed}[style=mdgraybox,frametitle={Proposición 36}]
+        Las funciones $\llaves{f_1, \dots, f_n}$ forman una base de $V^{*}$.
+    \end{mdframed}
+    
+    \begin{proof}
+        Sabemos que $\dim_FV = \dim_{F}V^{*}$, basta probar que $\llaves{f_1, \dots, f_n}$ son linealmente independientes. Sean $c_i, \dots, c_n \in F$, tales que 
+        \begin{gather*}
+            c_1f_1 + \dots + c_nf_n = 0\\
+            \implies0= \sum_{i = 1}^nc_if_i(v_j) = \sum_{i = 1}^{n}c_if_i(v_j) = \sum_{i = 1}^{n}c_i \delta_{ij} = c_j\\
+            \implies c_j = 0.
+        \end{gather*}
+        Así, $\llaves{f_1, \dots, f_n}$ es una base de $V^{*}$.
+    \end{proof}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Definición 32: Base dual}]
+        Si $\BB = \llaves{v_1, \dots, v_n}$ es una base ordenada de $V$, entonces
+        \[
+        \llaves{f_1, \dots, f_n} \subset V^{*}
+        \]
+        definidas mediante
+        \begin{align*}
+            f_i: V & \longrightarrow F\\
+            v_j & \longmapsto \delta_{ij}
+        \end{align*}
+        forman una base ordenada de $V^*$, la cual llamaremos \textbf{base dual de $\BB$}, se denota por 
+        \[
+        \BB^* = \llaves{f_1, \dots, f_n}.
+        \]
+    \end{mdframed}
+    
+    \textbf{Ejemplo.} Sean el espacio vectorial $V = \llaves{\sum_{i = 0}^na_ix^{i}:\; a_i \in \R}$ y la base ordenada $\BB = \llaves{1, x, x^2, \dots, x^n}$. Construyamos la base dual $\BB$ de $V^*$. Notemos que
+    \begin{align*}
+        f_i: V & \longrightarrow F\\
+        x^j & \longmapsto \delta_{ij}.
+    \end{align*}
+    Luego,
+    \[
+    f\parentesis{\sum_{k = 0}^na_kx^k} = \sum_{k = 0}^{n}a_k\delta_{ik} = a_i
+    \]
+    Por lo cual, $\BB^* = \llaves{f_0, f_1, \dots, f_n}$. \hfill $\blacktriangleleft$
+
+    Sea $V$ un espacio vectorial, tomemos $v \in V$, podemos definir
+    \begin{align*}
+        \varphi_v: V^* & \longrightarrow F\\
+        f & \longmapsto f(v)
+    \end{align*}
+    Siendo esta una transformación lienal, ya que
+    \begin{align*}
+        \varphi_v(af_1 + f_2) & = (af_1 + f_2)(v)\\
+        & = af_1(v) + f_2(v)\\
+        & = a \varphi_v(f_1) + \varphi_v(f_2).
+    \end{align*}
+    Así que $\varphi_v \in V^{*^*}$.
+
+    \begin{mdframed}[style=mdgraybox,frametitle={Teorema 10}]
+        Sea $V$ un espacio vectorial de dimensión finita $n$, entonces la función
+        \begin{align*}
+            \varphi: V & \longrightarrow V^{*^*}\\
+            v & \longmapsto \varphi_v\\[12pt]
+            &\varphi_v \coloneqq \varphi(v).
+        \end{align*}
+        Es un isomorfismo lineal.
+    \end{mdframed}
+    
+    \begin{proof}
+        Por lo visto anteriormente, sabemos que está bien definida, ya que $\varphi_v \in V^{*^*}$. Veamos que $\varphi$ es lineal. Sea $f \in V^{*^*}$, entonces 
+        \begin{align*}
+            \varphi_{av_1 + v_2}(f) & = f(av_i + v_2)\\
+            & = af(v_1) + f({v_2})\\
+            & = a \varphi_{v_1}(f) + \varphi_{v_2}(f)\\
+            & = (a\varphi_{v_1} + \varphi_2)(f).
+        \end{align*}
+        Así que $\varphi_{av_1 + v_2} = a\varphi_1 + \varphi_2$. Por último probemos la biyectividad de $\varphi$. Notemos que
+        \[
+        \dim_FV = \dim_FV^* = \dim_FV^{*^*}.
+        \]
+        Como tienen la misma dimensión el dominio y el contradominio, se sigue que $\varphi$ es sobreyectiva. Basta ver que $\nul \varphi = 0$, para probar que es isomorfismo lineal. Veamos que 
+        \[
+        \ker (\varphi) = \llaves{v \in V : \varphi_v = 0}.
+        \]
+        Sea $\BB = \llaves{v_1, \dots, v_n}$ una base de $V$, entonces para $f_i(v) = 0$ es la $i$-ésima coordenada de $v$ en $\BB$. Así que $v = 0$. Concluyendo que
+        \begin{align*}
+        \varphi: V & \longrightarrow V^{*^*}\\
+        v & \longmapsto \varphi_v\\
+        \end{align*}
+        es un isomorfismo, en especial uno canónico, es decir, no depende de las bases.
+    \end{proof}
+
+    \section{Transpuesta de una transformación lineal}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Definición 33: Matriz transpuesta}]
+        Sea $A = (a_{ij}) \in M_{m \times n}(F)$. La \textbf{matriz transpuesta} de $A$, se define como
+        \[
+        A^t = (a_{ji}) \in M_{n \times m}(F).
+        \]
+    \end{mdframed}
+
+
+    \textbf{Ejemplo.} Veamos los siguientes ejemplos.
+    \[
+    \begin{pmatrix}
+        a_{11} & a_{12}\\
+        a_{21} & a_{22}\\
+    \end{pmatrix}^t = 
+    \begin{pmatrix}
+        a_{11} & a_{21}\\
+        a_{12} & a_{22}\\
+    \end{pmatrix}.
+    \]
+    \[
+    \begin{pmatrix}
+        a_{11}\\a_{21}
+    \end{pmatrix}^t = 
+    \begin{pmatrix}
+        a_{11} & a_{21}
+    \end{pmatrix}.
+    \]
+    \[
+    I_n^t = I_n.
+    \]
+    \[
+    \begin{pmatrix}
+        1 & 2\\
+        3 & 5\\
+        0 & 1\\
+    \end{pmatrix}^t =
+    \begin{pmatrix}
+        1 & 3 & 0\\
+        2 & 5 & 1
+    \end{pmatrix}.
+    \]
+    \hfill $\blacktriangleleft$
+
+    Si $V, W$ son espacios vectoriales de dimensión $m$ y $n$ respectivamente y sus bases ordenadas $\BB_V = \llaves{v_1, \dots, v_n}$ y $\BB_W = \llaves{w_1, \dots, w_m}$. Tomemos la transformación lineal $T: V \to W$ y la representación matricial $[T]_{\BB_V, \BB_W} = A \in M_{m \times n}(F)$. Podemos definir
+    \begin{equation*}
+        \begin{aligned}
+            T^*: W^* & \longrightarrow V^* \\
+            g & \longmapsto g \circ T:V\longrightarrow F \\
+            &\hspace{2.1cm} v\longmapsto g(T(v)).
+        \end{aligned}
+    \end{equation*}
+    La cual resulta ser lineal, ya que $T^*$ es composición de lineales. También, tenemos que
+    \[
+    \ker(T^*) = \llaves{g \in W^* : g \circ T = 0}.
+    \]
+    Por otro lado,
+    \[
+    \Im (T^*) = \llaves{g \circ T : g \in W^*}.
+    \]
+    Por el teorema de rango-nulidad, tenemos que
+    \[
+    \ker (T^*) + \rg (T^*) = \dim W.
+    \]
+
+    \vspace{1.8cm}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Definición 34: Transformación dual}]
+        A la función
+        \[
+        T^*: W^*  \longrightarrow V^*
+        \]
+        se le llama \textbf{transformación dual de $T$}.
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdgraybox,frametitle={Teorema 11}]
+        Sean $V, W$ de espacios vectoriales de dimensiones $n$ y $m$ respectivamente, y sus bases $\BB_V = \llaves{v_1, \dots, v_n}$ y $\BB_W = \llaves{w_1, \dots, w_m}$ y la transformación lineal $T: V \to W$ junto con su transformación dual
+        \[
+        T^* : W^* \longrightarrow V^*.
+        \]
+        Sea $A = (a_{ij}) = [T]_{\BB_V, \BB_W} \in M_{m \times n}(F)$, entonces se cumple que
+        \[
+        [T^*]_{\BB_W^*, \BB_{V}^*} = A^t = [T]^t_{\BB_V, \BB_W} = (a_{ji}) \in M_{n \times m}(F).
+        \]
+        Con las bases $\BB_{V}^* = \llaves{f_1, \dots, f_n}$ y $\BB_{W}^* = \llaves{g_1, \dots, g_m}$, donde $f_i(v_j) = \delta_{ij}$ y $g_i(w_i) = \delta_{ij}$.
+    \end{mdframed}
+    
+    \begin{proof}
+        Sea $[T]_{\BB_V, \BB_W} = (a_{ij})$, entonces
+        \[
+        T(v_j) = \sum_{i = 1}^ma_{ij}w_i.
+        \]
+        Tomemos $[T^*]_{\BB^*_W, \BB^*_V} = (b_{ij}) \in M_{n \times m}(F)$, entonces
+        \[
+        T^*(g_j) = \sum_{i = 1}^nb_{ij}f_i.
+        \]
+        Por otro lado,
+        \begin{align*}
+            T^*(g_j)(v_i) & = (g_j \circ T)(v_i)\\
+            & = g_j(T(v_i))\\
+            & = g_j\parentesis{\sum_{k = 1}^ma_{ki}w_k}\\
+            & = \sum_{k = 1}^ma_{ki}g_j(w_k)\\
+            & = \sum_{k = 1}^ma_{ki}\delta_{jk}\\
+            & = (a_{ji}).
+        \end{align*}
+        Dado $f \in V^*$, tenemos que $f = \sum_{i = 1}^n \alpha_if_i$. Luego,
+        \begin{align*}
+            f(v_j) & = \sum_{i = 1}^n \alpha_if_i(v_j)\\
+            & = \sum_{i = 1}^n \alpha_i \delta_{ij}\\
+            & = \alpha_j.
+        \end{align*}
+        Así,
+        \[
+        f = \sum_{i = 1}^nf(v_i)f_i.
+        \]
+        De lo anterior, obtuvimos que
+        \[
+        T^*(g_j)(v_i) = a_{ij} \quad \text{ y } \quad f = \sum_{i = 1}^nf(v_i)f_i, \quad \forall f \in V^*.
+        \]
+        En consecuencia,
+        \[
+        T^*(g_j) = \sum_{i = 1}^n(T^*(g_j))(v_i)f_i = \sum_{i = 1}^na_{ji}f_i.
+        \]
+        Concluyendo que
+        \begin{gather*}
+            (b_{ij}) = (a_{ji}),\\
+            \implies [T^*]_{\BB^*_V, \BB^*_W} = [T]^t_{\BB_V, \BB_W}.
+        \end{gather*}
+    \end{proof}
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.9\textwidth]{diagramas_conmutativos7.pdf}
+    \end{figure}
+
+    \textbf{Ejemplo.} Tomemos
+    \begin{align*}
+        T: \R^2 & \longrightarrow \R^3\\
+        (x, y) & \longmapsto (x + y, y, 2x)
+    \end{align*}
+    y su transformación dual
+    \begin{align*}
+        T^* : (\R^3)^* & \longrightarrow (\R^2)^*\\
+        g & \longmapsto g \circ T: \R^2 \longrightarrow \R.
+    \end{align*}
+    Sean $\BB_{2} = \llaves{e_1, e_2}$ base canónica de $\R^2$ y $\BB_3 = \llaves{\varepsilon_1, \varepsilon_2, \varepsilon_3}$ base canónica de $\R^3$. Definamos las bases duales
+    $\BB_2^* = \llaves{f_1, f_2}$ dadas por
+    \begin{align*}
+        f_1: \R^2 & \longrightarrow \R\\
+        (x, y) & \longmapsto x\\[12pt]
+        f_2: \R^2 & \longrightarrow \R\\
+        (x, y) &  \longmapsto y,
+    \end{align*}
+    y $\BB_3^* = \llaves{g_1, g_2, g_3}$, donde
+    \begin{align*}
+        g_1: \R^3 & \longrightarrow \R\\
+        (x, y, z) & \longmapsto x\\[12pt]
+        g_2: \R^3 & \longrightarrow \R\\
+        (x, y, z) & \longmapsto y\\[12pt]
+        g_3: \R^3 & \longrightarrow \R\\
+        (x, y, z) & \longmapsto z\\[12pt]
+    \end{align*}
+    Por otra parte, como $T(e_1) = (1, 0, 2)$ y $T(e_2) = (1, 1, 0)$, se sigue que
+    \[
+    [T]_{\BB_2, \BB_3} = 
+    \begin{pmatrix}
+        1 & 1\\
+        0 & 2\\
+        2 & 0\\
+    \end{pmatrix}.
+    \]
+    Por el teorema anterior, se colige que
+    \[
+    [T^*]_{\BB^*_3, \BB_2^*} = 
+    \begin{pmatrix}
+        1 & 0 & 2\\
+        1 & 1 & 0\\
+    \end{pmatrix}.
+    \]
+    Notemos ahora que
+    \begin{equation*}
+        \begin{aligned}
+            T^*: (\R^3)^* & \longrightarrow (\R^2)^* \\
+            g_1 & \longmapsto g_1 \circ T: \R^2 \longrightarrow \R\\
+            &\hspace{1.9cm}   (x, y)\longmapsto (x + y, y, 2x) \longmapsto x + y
+        \end{aligned}
+    \end{equation*}
+    Por lo cual $T^*(g_1) = f_1 + f_2$. De manera análoga, haciendo sus respectivos cambios, conseguimos que $T^*(g_2) = f_2$ y $T^*(g_3) = 2f_1$. \hfill $\blacktriangleleft$
+
+
+    Sean $T_1: V \to V$ y $T_2: V \to V$ transformaciones lineales, entonces se cumple que
+    \begin{align*}
+        (T_1 \circ T_2)^*: V^* & \longrightarrow V^*\\
+        f & \longmapsto f \circ(T_1 \circ T_2)\\
+        & \hspace{0.6cm} = (f \circ T_1) \circ T_2\\
+        & \hspace{0.6cm} = (T_1^*(f)) \circ T_2\\
+        & \hspace{0.6cm} = T^*_2(T_1^*(f))
+    \end{align*}
+    Luego,
+    \begin{align*}
+        [T_2^* \circ T_1^*]_{\BB_V^*} & = [T_2^*]_{\BB_V^*}[T_1^*]_{\BB_V^*}\\
+        & = [T_2]^t_{\BB_V}[T_1]^t_{\BB_V}\\
+        & = ([T_1]_{\BB_V}[T_2]_{\BB_V})^t.
+    \end{align*}
+
+    \chapter{Determinante}
+
+    \section{Funciones Determinantes}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Definición 35: Función $n$-lineal}]
+        Sea $F$ un campo. Una función
+        \[
+        D:M_{n \times n}(f) \longrightarrow F
+        \]
+        se llama \textbf{$n$-lineal} si para todo $i = \llaves{1, \dots, n}$ se cumple que
+        \[
+        D
+        \begin{pmatrix}
+            \alpha_1\\
+            \vdots\\
+            c \alpha_i + \beta_i\\
+            \vdots\\
+            \alpha_n
+        \end{pmatrix} = 
+        cD
+        \begin{pmatrix}
+            \alpha_1\\
+            \vdots\\
+            \alpha_i\\
+            \vdots\\
+            \alpha_n
+        \end{pmatrix} + D
+        \begin{pmatrix}
+            \alpha_1\\
+            \vdots\\
+            \beta_i\\
+            \vdots\\
+            \alpha_n
+        \end{pmatrix}.
+        \]
+        Con $\alpha_i = \llaves{a_{i1}, a_{i2}, \dots , a_{in}}$ y $\beta_i = \llaves{b_{i1}, b_{i2}, \dots , b_{in}}$.
+    \end{mdframed}
+
+    \textbf{Ejemplo.} Tomemos la función
+    \begin{align*}
+        D: M_{n \times n}(F) & \longrightarrow F\\
+        (a_{}ij) & \longmapsto \prod_{i = 1}^na_{ii}
+    \end{align*}
+    Notemos que 
+    \begin{align*}
+        D\begin{pmatrix}
+            \alpha_1\\
+            \vdots\\
+            c \alpha_i + \beta_i\\
+            \vdots\\
+            \alpha_n
+        \end{pmatrix} & =
+        a_{11}a_{22} \dotsi a_{i-1,i-1}(ca_{ii} + b_{ii})a_{i + 1, i + 1}\dotsi a_{nn}\\
+        & = c \prod_{i = 1}^na_{ii} + a_{11}a_{22} \dotsi a_{i-1,i-1}b_{ii}a_{i + 1, i + 1}\dotsi a_{nn}\\
+        & = cD
+        \begin{pmatrix}
+            \alpha_1\\
+            \vdots\\
+            \alpha_i\\
+            \vdots\\
+            \alpha_n
+        \end{pmatrix} + D
+        \begin{pmatrix}
+            \alpha_1\\
+            \vdots\\
+            \beta_i\\
+            \vdots\\
+            \alpha_n
+        \end{pmatrix}.
+    \end{align*}
+    \hfill $\blacktriangleleft$
+
+    \begin{mdframed}[style=mdgraybox,frametitle={Proposición 37}]
+        La función
+        \begin{align*}
+            D: M_{2 \times 2}(F) & \longrightarrow F\\
+            \begin{pmatrix}
+                a_{11} & a_{12}\\
+                a_{21} & a_{22}\\
+            \end{pmatrix} & \longmapsto a_{11}a_{22} - a_{12}a_{21}
+        \end{align*}
+        es $n$-lineal.
+    \end{mdframed}
+    
+    \begin{proof}
+        Sigamos la siguiente cadena de igualdades,
+        \begin{align*}
+            D
+            \begin{pmatrix}
+                & c\alpha_1 + \beta_1&\\            
+                a_{21}& & a_{22}
+            \end{pmatrix} & = 
+            D
+            \begin{pmatrix}
+                ca_{11} + b_{11} & ca_{12} + b_{12}\\
+                a_{21} & a_{22}
+            \end{pmatrix}\\
+            & = (ca_{11} + b_{11})a_{22} - a_{21}(ca_{12} + b_{12})\\
+            & = c(a_{11}a_{22} - a_{12}a_{21}) + b_{11}a_{22} - a_{21}b_{12}\\[6pt]
+            & = c D\begin{pmatrix}
+                a_{11} & a_{12}\\
+                a_{21} & a_{22}\\
+            \end{pmatrix} + D
+            \begin{pmatrix}
+                b_{11} & b_{12}\\
+                a_{21} & a_{22}\\
+            \end{pmatrix}
+        \end{align*}
+    \end{proof}
+
+    \vspace{1.4cm}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Definición 36: Función alternante}]
+        Sea $F$ un campo. Una función $n$-lineal
+        \[
+        D: M_{n \times n}(F) \longrightarrow F
+        \]
+        se llama \textbf{alternante} si
+        \[
+        D
+        \begin{pmatrix}
+            \alpha_1\\
+            \vdots\\
+            \alpha_i\\
+            \alpha_j\\
+            \vdots\\
+            \alpha_n
+        \end{pmatrix} = 0, \qquad \alpha_i = \alpha_j,\quad i \neq j
+        \]
+        es decir, es cero si la matriz tiene dos filas iguales.
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Definición 37: Función Determinante}]
+        Una función
+        \[
+        \det:M_{n \times n}(F) \longrightarrow F
+        \]
+        se llama \textbf{determinante} si
+        \begin{enumerate}
+            \item Es alternante.
+            \item $\det(I_n) = 1$.
+        \end{enumerate}
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdgraybox,frametitle={lema 6}]
+        Si $D$ es alternante, entonces
+        \[
+        D\begin{pmatrix}
+            \alpha_1\\
+            \vdots\\
+            \alpha_i\\
+            \alpha_j\\
+            \vdots\\
+            \alpha_n
+        \end{pmatrix} = -D
+        \begin{pmatrix}
+            \alpha_1\\
+            \vdots\\
+            \alpha_j\\
+            \alpha_i\\
+            \vdots\\
+            \alpha_n
+        \end{pmatrix}.
+        \]
+    \end{mdframed}
+    
+    \begin{proof}
+        Supongamos $D$ alternante. Luego,
+        \begin{align*}
+            0 & = D
+            \begin{pmatrix}
+                \alpha_1\\
+                \vdots\\
+                \alpha_{i} + \alpha_j\\
+                \alpha_{i} + \alpha_j\\
+                \vdots\\
+                \alpha_n
+            \end{pmatrix}\\
+            & = D
+            \begin{pmatrix}
+                \alpha_1\\
+                \vdots\\
+                \alpha_{i}\\
+                \alpha_{i} + \alpha_j\\
+                \vdots\\
+                \alpha_n
+            \end{pmatrix} + 
+            D\begin{pmatrix}
+                \alpha_1\\
+                \vdots\\
+                \alpha_j\\
+                \alpha_{i} + \alpha_j\\
+                \vdots\\
+                \alpha_n
+            \end{pmatrix}\\
+            & = D
+            \begin{pmatrix}
+                \alpha_1\\
+                \vdots\\
+                \alpha_i\\
+                \alpha_{i}\\
+                \vdots\\
+                \alpha_n
+            \end{pmatrix} + D
+            \begin{pmatrix}
+                \alpha_1\\
+                \vdots\\
+                \alpha_i\\
+                \alpha_{j}\\
+                \vdots\\
+                \alpha_n
+            \end{pmatrix} + D
+            \begin{pmatrix}
+                \alpha_1\\
+                \vdots\\
+                \alpha_i\\
+                \alpha_{j}\\
+                \vdots\\
+                \alpha_n
+            \end{pmatrix} + D
+            \begin{pmatrix}
+                \alpha_1\\
+                \vdots\\
+                \alpha_j\\
+                \alpha_{j}\\
+                \vdots\\
+                \alpha_n
+            \end{pmatrix}
+        \end{align*}
+        En consecuencia,
+        \[
+        D\begin{pmatrix}
+        \alpha_1\\
+        \vdots\\
+        \alpha_i\\
+        \alpha_j\\
+        \vdots\\
+        \alpha_n
+    \end{pmatrix} = -D
+    \begin{pmatrix}
+        \alpha_1\\
+        \vdots\\
+        \alpha_j\\
+        \alpha_i\\
+        \vdots\\
+        \alpha_n
+    \end{pmatrix}.
+        \]
+    \end{proof}
+
+    \begin{mdframed}[style=mdgraybox,frametitle={Lema 7}]
+        Si $D:M_{n \times n}(F) \to F$ es una función $n$-lineal, entonces $D(A) = 0$ si $A$ tiene una fila cero.
+    \end{mdframed}
+    
+    \begin{proof}
+        Notemos que
+        \[
+        D
+        \begin{pmatrix}
+        \alpha_1\\
+        \vdots\\
+        0\\
+        \vdots\\
+        \alpha_n
+    \end{pmatrix} = D
+    \begin{pmatrix}
+        \alpha_1\\
+        \vdots\\
+        \alpha_i - \alpha_i\\
+        \vdots\\
+        \alpha_n
+    \end{pmatrix} = D
+    \begin{pmatrix}
+        \alpha_1\\
+        \vdots\\
+        \alpha_i\\
+        \vdots\\
+        \alpha_n
+    \end{pmatrix} - D
+    \begin{pmatrix}
+        \alpha_1\\
+        \vdots\\
+        \alpha_i\\
+        \vdots\\
+        \alpha_n
+    \end{pmatrix} = 0.
+        \]
+    \end{proof}
+
+    \begin{mdframed}[style=mdgraybox,frametitle={Lema 8}]
+        Sea $D:M_{n \times n}(F) \to F$ una función $n$-lineal, lo siguiente es equivalente.
+        \begin{itemize}
+            \item[(1)] $D$ es alternante\\
+            \item[(2)]  
+            \[
+            D\begin{pmatrix}
+                \alpha_1\\
+                \vdots\\
+                \alpha_i\\
+                \alpha_j\\
+                \vdots\\
+                \alpha_n
+            \end{pmatrix} = -D
+            \begin{pmatrix}
+                \alpha_1\\
+                \vdots\\
+                \alpha_j\\
+                \alpha_i\\
+                \vdots\\
+                \alpha_n
+            \end{pmatrix}.
+            \]
+        \end{itemize}
+    \end{mdframed}
+    
+    \begin{proof}
+        Ya demostramos que
+        \[
+        (1) \implies (2).
+        \]
+        Supongamos $(2)$. Así,
+        \[
+        D
+        \begin{pmatrix}
+        \alpha_1\\
+        \vdots\\
+        \alpha_i\\
+        \alpha_i\\
+        \vdots\\
+        \alpha_n
+    \end{pmatrix} = - D
+    \begin{pmatrix}
+        \alpha_1\\
+        \vdots\\
+        \alpha_i\\
+        \alpha_i\\
+        \vdots\\
+        \alpha_n
+    \end{pmatrix} \quad \implies \quad D
+    \begin{pmatrix}
+        \alpha_1\\
+        \vdots\\
+        \alpha_j\\
+        \alpha_i\\
+        \vdots\\
+        \alpha_n
+    \end{pmatrix} = 0.
+        \]
+        Por lo tanto, $D$ es alternante.
+    \end{proof}
+
+    Es claro que $\det: M_{n \times n}(F) \to F$ es la única función determinante para $n = 1$.
+
+    \begin{mdframed}[style=mdgraybox,frametitle={Proposición 38}]
+        La única función determinante para $n = 2$ es
+        \begin{align*}
+                D: M_{2 \times 2}(F) & \longrightarrow F\\
+                \begin{pmatrix}
+                    a_{11} & a_{12}\\
+                    a_{21} & a_{22}\\
+            \end{pmatrix} & \longmapsto a_{11}a_{22} - a_{12}a_{21}
+        \end{align*}
+    \end{mdframed}
 % ku.e.de :)
-
+% aaaah no JAJAJJAJA
+% jajajajajajaj
+% ya quedaron ahora siiiiiii
 \end{document}
