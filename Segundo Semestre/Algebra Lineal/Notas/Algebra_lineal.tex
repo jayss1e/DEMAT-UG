@@ -3601,15 +3601,52 @@
         \begin{itemize}
             \item[(1)] $D$ es alternante\\
             \item[(2)]  
-            \[
-            D\begin{pmatrix}
+            \begin{equation*}
+                D
+                \begin{pmatrix}
+                    \alpha_1\\
+                    \vdots\\
+                    \alpha_i\\
+                    \alpha_j\\
+                    \vdots\\
+                    \alpha_n
+                \end{pmatrix} = -D
+                \begin{pmatrix}
+                    \alpha_1\\
+                    \vdots\\
+                    \alpha_j\\
+                    \alpha_i\\
+                    \vdots\\
+                    \alpha_n
+                \end{pmatrix}.
+            \end{equation*}
+        \end{itemize}
+    \end{mdframed}
+    
+    \begin{proof}
+        Ya demostramos que
+        \begin{equation*}
+            (1) \implies (2).
+        \end{equation*}
+        Supongamos $(2)$. Así,
+        \begin{equation*}
+                D
+                \begin{pmatrix}
                 \alpha_1\\
                 \vdots\\
                 \alpha_i\\
-                \alpha_j\\
+                \alpha_i\\
                 \vdots\\
                 \alpha_n
-            \end{pmatrix} = -D
+            \end{pmatrix} = - D
+            \begin{pmatrix}
+                \alpha_1\\
+                \vdots\\
+                \alpha_i\\
+                \alpha_i\\
+                \vdots\\
+                \alpha_n
+            \end{pmatrix} \quad \implies \quad D
             \begin{pmatrix}
                 \alpha_1\\
                 \vdots\\
@@ -3617,44 +3654,8 @@
                 \alpha_i\\
                 \vdots\\
                 \alpha_n
-            \end{pmatrix}.
-            \]
-        \end{itemize}
-    \end{mdframed}
-    
-    \begin{proof}
-        Ya demostramos que
-        \[
-        (1) \implies (2).
-        \]
-        Supongamos $(2)$. Así,
-        \[
-        D
-        \begin{pmatrix}
-        \alpha_1\\
-        \vdots\\
-        \alpha_i\\
-        \alpha_i\\
-        \vdots\\
-        \alpha_n
-    \end{pmatrix} = - D
-    \begin{pmatrix}
-        \alpha_1\\
-        \vdots\\
-        \alpha_i\\
-        \alpha_i\\
-        \vdots\\
-        \alpha_n
-    \end{pmatrix} \quad \implies \quad D
-    \begin{pmatrix}
-        \alpha_1\\
-        \vdots\\
-        \alpha_j\\
-        \alpha_i\\
-        \vdots\\
-        \alpha_n
-    \end{pmatrix} = 0.
-        \]
+            \end{pmatrix} = 0.
+        \end{equation*}
         Por lo tanto, $D$ es alternante.
     \end{proof}
 
