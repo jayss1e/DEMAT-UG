@@ -1,0 +1,705 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{ugmath}
+\usepackage{float}
+\usepackage{placeins}
+\usepackage{array}
+\usepackage[labelfont=bf,labelsep=space]{caption}
+\newcommand{\paren}[1]{\left( #1 \right)}
+\newcommand{\alumno}{Ricardo León Martínez}
+\newcommand{\materia}{Elementos de Probabilidad y Estadistica}
+\newcommand{\profesor}{Claudia Reynoso Alcántara}
+\newcommand{\tarea}{Tarea 5}
+\newcommand{\fecha}{25/3/2026}
+
+\begin{document}
+
+    \begin{center}
+        {\large\textbf{UNIVERSIDAD DE GUANAJUATO}}\\[0.3cm]
+        {\normalsize\textbf{DIVISIÓN DE CIENCIAS NATURALES Y EXACTAS}}\\
+        {\normalsize\textbf{CAMPUS GUANAJUATO}}\\[1cm]
+
+        {\Large\textbf{\tarea\ (\materia)}}\\[1cm]
+    \end{center}
+
+    \noindent
+    \textbf{Nombre:} \alumno 
+    \hfill 
+    \textbf{Fecha:} \fecha 
+    \hfill 
+    \textbf{Calificación:} \rule{3cm}{0.4pt}
+
+    \vspace{0.3cm}
+
+    \begin{mdframed}[style=mdpinkbox,frametitle={Ejercicio 1}]
+    Sean $X_{1},X_{2},\ldots,X_{n}$ variables aleatorias sobre un espacio medible $(\Omega,\mathcal{F})$ para $n\geq 2$.
+        \begin{enumerate}
+            \item[(a)] Demuestre a partir de la definición de variable aleatoria que
+            \[
+            \max\{X_{1},X_{2}\}
+            \quad \text{y} \quad
+            \min\{X_{1},X_{2}\}
+            \]
+            son variables aleatorias.
+
+            \item[(b)] Demuestre que
+            \[
+            Y=\max\{X_{1},\ldots,X_{n}\}
+            \quad \text{y} \quad
+            Z=\min\{X_{1},\ldots,X_{n}\}
+            \]
+            son variables aleatorias.
+
+            \textbf{Sugerencia.} Encuentre relaciones entre
+            \[
+            \max\{a,b,c\}
+            \quad \text{y} \quad
+            \max\{\max\{a,b\},c\},
+            \]
+            y también entre
+            \[
+            \min\{a,b,c\}
+            \quad \text{y} \quad
+            \min\{\min\{a,b\},c\}.
+            \]
+        \end{enumerate}
+    \end{mdframed}
+
+    \begin{proof}
+        \begin{enumerate}
+            \item[(a)] Definamos
+            \begin{equation*}
+                Y(\omega)=\max\{X_{1}(\omega),X_{2}(\omega)\}.
+            \end{equation*}
+            Observemos que
+            \begin{equation*}
+                Y(\omega)\leq t
+            \end{equation*}
+            si y solo si
+            \begin{equation*}
+                X_{1}(\omega)\leq t\quad\text{ y }\quad X_{2}(\omega)\leq t.
+            \end{equation*}
+            Por tanto,
+            \begin{equation*}
+                \{\omega: Y(\omega)\leq t\}=\{\omega:X_{1}(\omega)\leq t\}\cap\{\omega:X_{2}(\omega)\leq t\}
+            \end{equation*}
+            Como $X_{1}$ y $X_{2}$ son variables aleatorias,
+            \begin{equation*}
+                \{\omega:X_{1}(\omega)\leq t\}\in\FF,\qquad \{\omega:X_{2}(\omega)\leq t\}\in\FF.
+            \end{equation*}
+            Dado que $\FF$ es una $\sigma$-algebra y es cerrada bajo intersecciones finitas, se concluye que
+            \begin{equation*}
+                \{\omega: Y(\omega)\leq t\}\in\FF
+            \end{equation*}
+            Luego, $\max\{X_{1},X_{2}\}$ es una variable aleatoria. Ahora definamos
+            \begin{equation*}
+                Z(\omega)=\min\{X_{1}(\omega),X_{2}(\omega)\}.
+            \end{equation*}
+            Observemos que
+            \begin{equation*}
+                Z(\omega)\leq t
+            \end{equation*}
+            si y solo si
+            \begin{equation*}
+                X_{1}(\omega)\leq t\quad\text{ y }\quad X_{2}(\omega)\leq t.
+            \end{equation*}
+            Por tanto,
+            \begin{equation*}
+                \{\omega: Z(\omega)\leq t\}=\{\omega:X_{1}(\omega)\leq t\}\cap\{\omega:X_{2}(\omega)\leq t\}
+            \end{equation*}
+            Como $X_{1}$ y $X_{2}$ son variables aleatorias,
+            \begin{equation*}
+                \{\omega:X_{1}(\omega)\leq t\}\in\FF,\qquad \{\omega:X_{2}(\omega)\leq t\}\in\FF.
+            \end{equation*}
+            Dado que $\FF$ es una $\sigma$-algebra y es cerrada bajo intersecciones finitas, se concluye que
+            \begin{equation*}
+                \{\omega: Z(\omega)\leq t\}\in\FF
+            \end{equation*}
+            Luego, $\min\{X_{1},X_{2}\}$ es una variable aleatoria.
+            \item[(b)] Procederemos por inducción sobre $n$. Para $n=2$, el resultado ya fue demostrado en el inciso anterior.
+            Supongamos que
+            \begin{equation*}
+                \max\{X_{1},\dots,X_{n}\}\quad\text{ y }\quad\min\{X_{1},\dots,X_{n}\}
+            \end{equation*}
+            son variables aleatorias. Definamos
+            \begin{equation*}
+                M_{n}=\max\{X_{1},\dots,X_{n}\}\quad\text{ y }\quad m_{n}=\min\{X_{1},\dots,X_{n}\}.
+            \end{equation*}
+            Entonces ,
+            \begin{equation*}
+                \max\{X_{1},\dots,X_{n},X_{n+1}\}=\max\{M_{n},X_{n+1}\}\quad\text{ y }\quad\min\{X_{1},\dots,X_{n},X_{n+1}\}=\min\{m_{n},X_{n+1}\}
+            \end{equation*}
+            Por hipotesis inductiva, $M_{n}$ y $m_{n}$ son variables aleatorias. Ademas $X_{n+1}$ tambien es una variable
+            aleatoria. Aplicando (a), concluimos que
+            \begin{equation*}
+                \max\{M_{n},X_{n+1}\}\quad\text{ y }\quad\min\{m_{n},X_{n+1}\}
+            \end{equation*}
+            son variables aleatorias. Así $\max\{X_{1},\dots,X_{n+1}\}$ y $\min\{X_{1},\dots,X_{n+1}\}$ son variables
+            aleatorias. Por inducción el resultado es valido par atodo $n\geq2$.
+        \end{enumerate}
+    \end{proof}
+
+    \begin{mdframed}[style=mdpinkbox,frametitle={Ejercicio 2}]
+        Sean $X,Y$ variables aleatorias sobre $(\Omega,\mathcal{F})$. Demuestre que la función
+        \[
+        Z:\Omega\to\mathbb{R}^{2}
+        \]
+        dada por
+        \[
+        Z(\omega)=(X(\omega),Y(\omega))
+        \]
+        para todo $\omega\in\Omega$ es una variable aleatoria.
+
+        ¿Se cumple lo análogo para la función
+        \[
+        \omega\longmapsto (X_{1}(\omega),X_{2}(\omega),\ldots,X_{n}(\omega))
+        \]
+        con $X_{1},X_{2},\ldots,X_{n}$ variables aleatorias?
+    \end{mdframed}
+
+    \begin{proof}
+        Definamos
+        \begin{equation*}
+            Z(\o)=(X(\o),Y(\o))
+        \end{equation*}
+        Para ver si $Z$ es una variable aleatoria en $\R^{2}$, basta verificar si para todo $a,b\in\R$,
+        \begin{equation*}
+            \{\o\in \Omega:X(\o)\leq a, Y(\o)\leq b\}\in\FF.
+        \end{equation*}
+        Pero
+        \begin{equation*}
+            \{\o\in \Omega:X(\o)\leq a, Y(\o)\leq b\}=\{\o\in \Omega:X(\o)\leq a\}\cap\{\o\in\Omega:Y(\o)\leq b\}
+        \end{equation*}
+        Como $X$ y $Y$ son variables aleatorias,
+        \begin{equation*}
+            \{\omega:X(\omega)\leq a\}\in\FF,\qquad\{\omega:Y(\omega)\leq b\}\in\FF.
+        \end{equation*}
+        Ademas, $\FF$ es una $\sigma$-algebra, luego es cerrada bajo intersecciones finitas. Por tanto
+        \begin{equation*}
+            \{\o\in \Omega:X(\o)\leq a, Y(\o)\leq b\}\in\FF.
+        \end{equation*}
+        Concluimos que
+        \begin{equation*}
+            Z(\omega)=(X(\omega),Y(\omega))
+        \end{equation*}
+        es una variable aleatoria.\\
+        Si se cumple el resultado para $n$ variables aleatorias. Si
+        \begin{equation*}
+            X_{1},X_{2},\dots,X_{n}
+        \end{equation*}
+        son variables aleatorias, definimos
+        \begin{equation*}
+            Z(\omega)=(X_{1}(\omega),X_{2}(\omega),\dots,X_{n}(\omega)).
+        \end{equation*}
+        Entonces, para culquiera $a_{1},a_{2},\dots,a_{n}\in\R$,
+        \begin{align*}
+            \{\omega\in\Omega:X_{1}(\omega)\leq a_{1},\dots,X_{n}(\omega)\leq a_{n}\}\\
+            =\bigcap_{i=1}^{n}\{\omega:X_{i}(\omega)\leq a_{i}\}.
+        \end{align*}
+        Cada conjunto $\{\omega:X_{i}\leq a_{i}\}$ pertenece a $\FF$ porque $X_{i}$ es una variable aleatoria.
+        Como $\FF$ es cerrada bajo intersecciones finitas,
+        \begin{equation*}
+            \bigcap_{i=1}^{n}\{\omega:X_{i}(\omega)\leq a_{i}\}\in\FF.
+        \end{equation*}
+        Por lo tanto,
+        \begin{equation*}
+            \omega\longmapsto(X_{1}(\omega),X_{2}(\omega),\dots,X_{n}(\omega))
+        \end{equation*}
+        es una variable aleatoria.
+    \end{proof}
+
+    \begin{mdframed}[style=mdpinkbox,frametitle={Ejercicio 3}]
+        Sea $(\Omega,\mathcal{F})$ un espacio medible y fijemos un evento $A\in\mathcal{F}$. Sean $X,Y$ variables aleatorias sobre $(\Omega,\mathcal{F})$.
+
+        Demuestre que la función dada por
+        \[
+        Z:\Omega\to\mathbb{R}
+        \]
+        \[
+        Z(\omega)=
+        \begin{cases}
+            X(\omega), & \text{si } \omega\in A,\\
+            Y(\omega), & \text{si } \omega\notin A,
+        \end{cases}
+        \]
+        para todo $\omega\in\Omega$, es una variable aleatoria.
+    \end{mdframed}
+
+    \begin{proof}
+        Sea $t\in\R$. Por definición de $Z$,
+        \begin{equation*}
+            Z(\o)\leq t
+        \end{equation*}
+        si y solo si ocurre una de las siguientes posibilidades
+        \begin{equation*}
+            \omega\in A\text{ y }X(\omega)\leq t,\qquad\omega\notin A\text{ y }Y(\omega)\leq t.
+        \end{equation*}
+        Por tanto,
+        \begin{equation*}
+            \{\o:Z(\o)\leq t\}=\paren{A\cap\{\omega:X(\omega)\leq t\}}\cup\paren{A^{c}\cap\{\o:Y(\o)\leq t\}}.
+        \end{equation*}
+        Como $X$ es variable aleatoria,
+        \begin{equation*}
+            \{\o:X(\o)\leq t\}\in\FF.
+        \end{equation*}
+        De igual forma, como $Y$ es variable aleatoria,
+        \begin{equation*}
+            \{\o:Y(\o)\leq t\}\in\FF.
+        \end{equation*}
+        Además, $A\in\FF$ y como $\FF$ es una $\sigma$-álgebra, $A^{c}\in\FF$. Dado que $\FF$ es cerrada bajo
+        intersecciones finitas y uniones finitas
+        \begin{equation*}
+            A\cap\{\omega:X(\omega)\leq t\}\in\FF,\quad\text{ y }\quad A^{c}\cap\{\o:Y(\o)\leq t\}.
+        \end{equation*}
+        Así,
+        \begin{equation*}
+            \{\o:Z(\o)\leq t\}\in\FF.
+        \end{equation*}
+        Como esto ocurre para todo $t\in\R$, concluimos que $Z$ es una variable aleatoria.
+    \end{proof}
+
+    \begin{mdframed}[style=mdpinkbox,frametitle={Ejercicio 4}]
+        Sea $(\Omega,\mathcal{F})$ el espacio medible donde
+        \[
+        \Omega=\{1,2,3,4,5,6\}
+        \]
+        y
+        \[
+        \mathcal{F}=\{\varnothing,\{2,4,6\},\{1,3,5\},\Omega\}.
+        \]
+
+        Consideremos $U,V,W:\Omega\to\mathbb{R}$ funciones definidas por
+        \[
+        U(\omega)=5\omega+32,
+        \]
+        \[
+        V(\omega)=
+        \begin{cases}
+            1, & \text{si } \omega \text{ es par},\\
+            0, & \text{si } \omega \text{ es impar},
+        \end{cases}
+        \]
+        y
+        \[
+        W(\omega)=\omega^{2}.
+        \]
+
+        ¿Cuáles de estas funciones son variables aleatorias con respecto a $(\Omega,\mathcal{F})$?
+
+        ¿Existe alguna $\sigma$-álgebra $\mathcal{G}$ tal que $U,V,W$ son variables aleatorias respecto a $(\Omega,\mathcal{G})$?
+    \end{mdframed}
+
+    \begin{solucion}
+        Analisis de $U$.\\
+        Calculemos los valores de $U$
+        \begin{align*}
+            U(1)=37,\\
+            U(2)=42,\\
+            U(3)=47,\\
+            U(4)=52,\\
+            U(5)=57,\\
+            U(6)=62.
+        \end{align*}
+        Tomemos $t=40$. Entonces
+        \begin{equation*}
+            \{\o:U(\o)\leq40\}=\{1\}.
+        \end{equation*}
+        Pero $\{1\}\notin\FF$. Por lo tanto, $U$ no es variable aleatoria respecto a $(\Omega,\FF)$.\\
+        Analisis de $V$.\\
+        Tomemos cualquier $t\in\R$. Si $t\lt0$,
+        \begin{equation*}
+            \{\o:V(\o)\leq t\}=\varnothing.
+        \end{equation*}
+        Si $0\leq t\lt1$,
+        \begin{equation*}
+            \{\o:V(\o)\leq t\}=\{1,3,5\}.
+        \end{equation*}
+        Si $t\geq1$,
+        \begin{equation*}
+            \{\o:V(\o)\leq t\}=\Omega.
+        \end{equation*}
+        Todos estos conjuntos pertenecen a $\FF$. Luego $V$ es una variable aleatoria respecto a $(\Omega,\FF)$.\\
+        Analisis de $W$.\\
+        Calculemos
+        \begin{align*}
+            W(1)=1,\\
+            W(2)=4,\\
+            W(3)=9,\\
+            W(4)=16,\\
+            W(5)=25,\\
+            w(6)=36.
+        \end{align*}
+        Tomemos $t=10$. Entonces
+        \begin{equation*}
+            \{\o:W(\o)\leq10\}=\{1,2,3\}.
+        \end{equation*}
+        Pero $\{1,2,3\}\notin\FF$. Así, $W$ no es variable aleatoria respecto a $(\Omega,\FF)$.\\
+        Sí existe una $\sigma$-algebra $\mathcal{G}$ tal que $U,V,W$ sean variables aleatorias. Por ejemplo
+        se puede tomar
+        \begin{equation*}
+            \mathcal{G}=\mathcal{P}(\Omega),
+        \end{equation*}
+        la $\sigma$-algebra potencia de $\Omega$, es decir, el conjunto de todos los subconjuntos de $\Omega$.
+        Así, para cuialquier función $X:\Omega\to\R$ y cualqueir $t\in\R$,
+        \begin{equation*}
+            \{\o:X(\o)\leq t\}\subseteq\Omega.
+        \end{equation*}
+        Como todos los subconjuntos de $\Omega$ pertenecen a $\mathcal{P}(\Omega)$, se concluye que toda función
+        $X:\Omega\to\R$ es variable aleatoria respecto a $(\Omega,\mathcal{P}(\Omega))$. Por tanto $U,V,W$ son
+        variables aleatorias respecto a $(\Omega,\mathcal{P}(\Omega))$.
+    \end{solucion}
+
+    \begin{mdframed}[style=mdpinkbox,frametitle={Ejercicio 5}]
+    Sea $X$ una variable aleatoria con función de probabilidad, es decir,
+    \[
+    P(X=r_{i})=p_{i},
+    \]
+    dada por la siguiente tabla:
+
+    \[
+    \begin{array}{c|cccccccc}
+        r_{i} & -2 & -1 & 0 & 1 & 2 & 3 & 4 & 5\\
+        \hline
+        p_{i} & 0.1 & 0.2 & 0.15 & 0.2 & 0.1 & 0.15 & 0.05 & 0.05
+    \end{array}
+    \]
+
+    Calcule la probabilidad de cada uno de los siguientes eventos.
+
+        \begin{enumerate}
+            \item[(a)] $X$ es negativa.
+            \item[(b)] $X$ es par.
+            \item[(c)] $X$ toma valores en el intervalo $[1,5]$.
+            \item[(d)] $P(X=-2\mid X\leq 0)$.
+            \item[(e)] $P(X\geq 2\mid X>0)$.
+        \end{enumerate}
+    \end{mdframed}
+
+    \begin{solucion}
+        \begin{enumerate}
+            \item[(a)] $X$ es negativa.\\
+            El evento es
+            \begin{equation*}
+                \{X\lt0\}=\{-2,-1\}.
+            \end{equation*}
+            Por tanto,
+            \begin{equation*}
+                P(X\lt0)=P(X=-2)+P(X=-1).
+            \end{equation*}
+            Entonces,
+            \begin{equation*}
+                P(X\lt0)=0.1+0.2=0.3.
+            \end{equation*}
+            \begin{equation*}
+                P(X\lt0)=0.3
+            \end{equation*}
+            \item[(b)] $X$ es par\\
+            Los valores pares son -2,0,2,4. Así
+            \begin{align*}
+                P(X\text{ es par})&=P(X=-2)+P(X=0)+P(X=2)+P(X=4)\\
+                &=0.1+0.15+0.1+0.005\\
+                &=0.4.
+            \end{align*}
+            \begin{equation*}
+                P(X\text{ es par})=0.4.
+            \end{equation*}
+            \item[(c)] $X$ toma los valores en el intervalo $[1,5]$\\
+            El evento es $\{1,2,3,4,5\}$. Entonces
+            \begin{align*}
+                P(1\leq X\leq 5)&=0.2+0.1+0.15+0.05+0.05\\
+                &=0.55.
+            \end{align*}
+            \begin{equation*}
+                P(1\leq X\leq 5)=0.55
+            \end{equation*}
+            \item[(d)] $P(X=-2\mid X\leq0)$\\
+            Tomemos $A=\{X=-2\}$, $B=\{X\leq0\}$. Como $A\subseteq B$, se tiene $A\cap B=A$. Por tanto,
+            \begin{equation*}
+                P(X=-2\mid X\leq0)=\frac{P(X=-2)}{P(X\leq0)}.
+            \end{equation*}
+            Ahora,
+            \begin{equation*}
+                P(X\leq0)=0.1+0.2+0.15=0.45.
+            \end{equation*}
+            Entonces,
+            \begin{equation*}
+                P(X=-2\mid X\leq0)=\frac{0.1}{0.45}=\frac{2}{9}.
+            \end{equation*}
+            \begin{equation*}
+                P(X=-2\mid X\leq0)=\frac{2}{9}
+            \end{equation*}
+            \item[(e)] Tomemos $A=\{X\geq2\}=\{2,3,4,5\}$, y $B=\{X\gt0\}=\{1,2,3,4,5\}$. Entonces $A\subseteq B$,
+            y por lo tanto
+            \begin{equation*}
+                P(X\geq2\mid X\gt0)=\frac{P(X\geq2)}{X\gt0}.
+            \end{equation*}
+            Calculemos
+            \begin{equation*}
+                P(X\geq2)=0.1+0.15+0.05+0.05=0.35,
+            \end{equation*}
+            y
+            \begin{equation*}
+                P(X\gt0)=0.2+0.1+0.15+0.05+0.05=0.55.
+            \end{equation*}
+            Así,
+            \begin{equation*}
+                P(X\geq2\mid X\gt0)=\frac{0.35}{0.35}=\frac{7}{11}.
+            \end{equation*}
+            \begin{equation*}
+                P(X\geq2\mid X\gt0)=\frac{7}{11}
+            \end{equation*}
+        \end{enumerate}
+    \end{solucion}
+
+    \begin{mdframed}[style=mdpinkbox,frametitle={Ejercicio 6}]
+        Sea $X$ una variable distribuida uniformemente en el conjunto
+        \[
+        \{1,2,\ldots,50\},
+        \]
+        esto es,
+        \[
+        P(X=k)=\frac{1}{50}
+        \]
+        para $k=1,2,\ldots,50$.
+
+        Encuentre las siguientes probabilidades.
+
+        \begin{enumerate}
+            \item[(a)] $P(X\geq 15)$.
+            \item[(b)] $P(2.5<X\leq 43.2)$.
+            \item[(c)] $P(X>20\mid X>10)$.
+            \item[(d)] $P\left(X\leq \frac{435}{6}\,\middle|\,X>15\right)$.
+        \end{enumerate}
+    \end{mdframed}
+
+    \begin{solucion}
+        Como todos los valores equiprobables, la probabilidad de un evento es
+        \begin{equation*}
+            P(A)=\frac{\#A}{50},
+        \end{equation*}
+        donde $\#A$ es el número de elementos del conjunto $A$.
+        \begin{enumerate}
+            \item[(a)] Los valores posibles son $15,16,\dots,50$. La cantidad de enteros es
+            \begin{equation*}
+                50-15+1=36.
+            \end{equation*}
+            Por tanto,
+            \begin{equation*}
+                P(X\geq15)=\frac{36}{50}=\frac{18}{25}.
+            \end{equation*}
+            \begin{equation*}
+                P(X\geq15)=\frac{18}{25}
+            \end{equation*}
+            \item[(b)] Como $X$ toma los valores enteros, la condición equivale a
+            \begin{equation*}
+                3\leq X\leq43.
+            \end{equation*}
+            Los valores posibles son $3,4,\dots,43$. La cantidad de enteros es
+            \begin{equation*}
+                43-3+1=41.
+            \end{equation*}
+            Entonces,
+            \begin{equation*}
+                P(2.5\lt X\leq43.2)=\frac{41}{50}.
+            \end{equation*}
+            \item[(c)] Tomemos $A=\{X\gt20\}$, $B=\{X\gt10\}$. Como $A\subseteq B$, se tiene $A\cap B=A$.
+            Entonces,
+            \begin{equation*}
+                P(X\gt20\mid X\gt10)=\frac{P(X\gt20)}{X\gt10}.
+            \end{equation*}
+            Ahora $X\gt20$ corresponde a $21,22,\dots,50$, que son
+            \begin{equation*}
+                50-21+1=30
+            \end{equation*}
+            valores. Asimismo, $X\gt0$ corresponde a $11,12,\dots,50$, que son
+            \begin{equation*}
+                50-11+1=40
+            \end{equation*}
+            valores. Por tanto
+            \begin{equation*}
+                P(X\gt20\mid X\gt10)=\frac{\frac{30}{50}}{\frac{40}{50}}=\frac{30}{40}=\frac{3}{4}.
+            \end{equation*}
+            \begin{equation*}
+                P(X\gt20\mid X\gt10)=\frac{3}{4}
+            \end{equation*}
+            \item[(d)]
+            \begin{equation*}
+                P\paren{X\leq\frac{435}{6}\mid X\gt15}
+            \end{equation*}
+            Primero observemos que
+            \begin{equation*}
+                \frac{435}{6}=72.5.
+            \end{equation*}
+            Como $X\in\{1,\dots,50\}$, siempre se cumple
+            \begin{equation*}
+                X\leq72.5.
+            \end{equation*}
+            Por tanto
+            \begin{equation*}
+                \left\{X\leq\frac{435}{6}\right\}=\Omega.
+            \end{equation*}
+            Así,
+            \begin{equation*}
+                P\paren{X\leq\frac{435}{6}\mid X\gt15}=P(\Omega\mid X\gt15).
+            \end{equation*}
+            Y sabemos que
+            \begin{equation*}
+                P(\Omega\mid B)=1
+            \end{equation*}
+            para cualquier evento $B$ con probabilidad positivia. Luego,
+            \begin{equation*}
+                P(X\leq\frac{435}{6}\mid X\gt15)=1.
+            \end{equation*}
+        \end{enumerate}
+    \end{solucion}
+
+    \begin{mdframed}[style=mdpinkbox,frametitle={Ejercicio 7}]
+        Sea $X$ una variable aleatoria con función de probabilidad, es decir,
+        \[
+        P(X=r_{i})=p_{i},
+        \]
+        dada por la siguiente tabla:
+        \[
+        \begin{array}{c|cccccc}
+            r_{i} & -2 & -1 & 0 & 1 & 2 & 3\\
+            \hline
+            p_{i} & 0.1 & 0.2 & 0.15 & 0.25 & 0.15 & 0.15
+        \end{array}
+        \]
+        Sea $Y$ la variable aleatoria definida por
+        \[
+        Y=X^{2}.
+        \]
+        Halle la función de probabilidad de $Y$.
+        Calcule el valor de la función de distribución de $X$ y de $Y$ en los puntos
+        \[
+        1,\quad \frac{3}{4},\quad \pi-3.
+        \]
+    \end{mdframed}
+
+    \begin{proof}
+        Los valores posibles de $Y$ son 0,1,4,9. Ahora agrupamos probabilidades. Para $Y=0$
+        \begin{equation*}
+            Y=0\ssi X=0.
+        \end{equation*}
+        Entonces,
+        \begin{equation*}
+            P(Y=0)=P(X=0)=0.15.
+        \end{equation*}
+        Para $Y=1$
+        \begin{equation*}
+            Y=1\ssi X=\pm1.
+        \end{equation*}
+        Así,
+        \begin{align*}
+            P(Y=1)&=P(X=-1)+P(X=1)\\
+            &=0.2+0.25\\
+            &=0.45.
+        \end{align*}
+        Para $Y=4$
+        \begin{equation*}
+            Y=4\ssi X=\pm2.
+        \end{equation*}
+        Entonces,
+        \begin{align*}
+            P(Y=4)&=P(X=-2)+P(X=2)\\
+            &=0.1+0.15\\
+            &=0.25.
+        \end{align*}
+        Para $Y=9$
+        \begin{equation*}
+            Y=9\ssi X=3.
+        \end{equation*}
+        Por lo tanto,
+        \begin{equation*}
+            P(Y=9)=0.15.
+        \end{equation*}
+        La función de probabilidad es
+            \begin{equation*}
+                \begin{array}{c|cccc}
+                y & 0 & 1 & 4 & 9\\
+                \hline
+                P(Y=y) & 0.15 & 0.45 & 0.25 & 0.15
+            \end{array}
+        \end{equation*}
+        Ahora recordemos que
+        \begin{equation*}
+            F_{X}(t)=P(X\leq t).
+        \end{equation*}
+        Valor en 1
+        \begin{equation*}
+            F_{X}(1)=P(X\leq1).
+        \end{equation*}
+        Entonces,
+        \begin{align*}
+            F_{X}(1)&=0.1+0.2+0.15+0.25\\
+            &=0.7.
+        \end{align*}
+        \begin{equation*}
+            F_{X}(1)=0.7
+        \end{equation*}
+        Valor en $\frac{3}{4}$. Como $\frac{3}{4}=0.75$. Por tanto,
+        \begin{align*}
+            F_{X}\paren{\frac{3}{4}}&=0.1+0.2+0.15\\
+            &=0.45
+        \end{align*}
+        \begin{equation*}
+            F_{X}\paren{\frac{3}{4}}=0.45
+        \end{equation*}
+        Valor en $\pi-3$. Observemos que
+        \begin{equation*}
+            \pi-3\approx0.14159.
+        \end{equation*}
+        Los valores de $X$ menores o iguales a $\pi-3$ son -2,-1,0. Entonces,
+        \begin{align*}
+            F_{X}(\pi-3)&=0.1+0.2+0.15\\
+            &=0.45.
+        \end{align*}
+        \begin{equation*}
+            F_{X}(\pi-3)=0.45
+        \end{equation*}
+        Ahora recordemos nuevamente que
+        \begin{equation*}
+            F_{Y}(t)=P(Y\leq t).
+        \end{equation*}
+        Los valores posibles de $Y$ son 0,1,4,9. Valor en 1
+        \begin{equation*}
+            F_{Y}(1)=P(Y\leq1).
+        \end{equation*}
+        Esto incluye $Y=0.1$. Entonces,
+        \begin{align*}
+            F_{Y}(1)&=0.15+0.45\\
+            &=0.6.
+        \end{align*}
+        \begin{equation*}
+            F_{Y}(1)=0.6
+        \end{equation*}
+        Valor en $\frac{3}{4}$. Como $\frac{3}{4}\lt1$, el único valor de $Y$ menor o igual que $\frac{3}{4}$
+        es 0. Por tanto,
+        \begin{equation*}
+            F_{Y}\paren{\frac{3}{4}}=0.15.
+        \end{equation*}
+        Valor en $\pi-3$. Como
+        \begin{equation*}
+            \pi-3\approx0.14159\lt1,
+        \end{equation*}
+        nuevamente el único valor posible $Y$ menor o igual que $\pi-3$ es 0. Así,
+        \begin{equation*}
+            F_{Y}(\pi-3)=0.15.
+        \end{equation*}
+    \end{proof}
+
+    \begin{mdframed}[style=mdpinkbox,frametitle={Ejercicio 8}]
+        Sea $X$ una variable aleatoria con función de distribución $F_{X}$ dada por
+        \[
+        F_{X}(r)=
+        \begin{cases}
+            0, & \text{para } r<0,\\[0.3cm]
+            \dfrac{1}{2}, & \text{para } 0\leq r<\dfrac{1}{4},\\[0.4cm]
+            \dfrac{3}{4}, & \text{para } \dfrac{1}{4}\leq r<\dfrac{3}{4},\\[0.4cm]
+            1, & \text{para } \dfrac{3}{4}\leq r.
+        \end{cases}
+        \]
+        Determine la función de probabilidad de $X$.
+    \end{mdframed}
+
+\end{document}

@@ -36,12 +36,12 @@
 \setstretch{1.2}
 
 \RequirePackage{amsmath,amssymb,amsthm,mathtools}
+\RequirePackage{physics}
 \RequirePackage{graphicx}
 \RequirePackage{tikz}
 \usetikzlibrary{calc,decorations.pathreplacing,angles,quotes,shadows,shadows.blur,arrows}
 \RequirePackage{pgfplots}
-\pgfplotsset{compat=newest}
-\pgfplotsset{compat=1.18}
+\pgfplotsset{compat=1.15}
 \RequirePackage{caption}
 \RequirePackage{thmtools}
 \RequirePackage{mathrsfs}
@@ -89,7 +89,7 @@
     innerrightmargin=15pt,
     skipabove=20pt,
     skipbelow=15pt,
-    nobreak=false,
+    nobreak=true,
     splitbottomskip=10pt,
     splittopskip=10pt
 }
@@ -108,7 +108,7 @@
     innerrightmargin=15pt,
     skipabove=20pt,
     skipbelow=15pt,
-    nobreak=false,
+    nobreak=true,
     splitbottomskip=10pt,
     splittopskip=10pt
 }
@@ -127,7 +127,7 @@
     innerrightmargin=15pt,
     skipabove=20pt,
     skipbelow=15pt,
-    nobreak=false,
+    nobreak=true,
     splitbottomskip=10pt,
     splittopskip=10pt
 }
@@ -165,7 +165,7 @@
     innerrightmargin=15pt,
     skipabove=20pt,
     skipbelow=15pt,
-    nobreak=false,
+    nobreak=true,
     splitbottomskip=10pt,
     splittopskip=10pt
 }
@@ -184,7 +184,7 @@
     innerrightmargin=15pt,
     skipabove=20pt,
     skipbelow=15pt,
-    nobreak=false,
+    nobreak=true,
     splitbottomskip=10pt,
     splittopskip=10pt
 }
@@ -206,17 +206,20 @@
 \newcommand{\Q}{\mathbb{Q}}
 \newcommand{\R}{\mathbb{R}}
 \newcommand{\C}{\mathbb{C}}
+\newcommand{\FF}{\mathcal{F}}
 \newcommand{\pfrac}[2]{\left( \frac{#1}{#2} \right)} %
 \newcommand{\bfrac}[2]{\left[ \frac{#1}{#2} \right]} %corchetes
 \newcommand{\vecpar}[1]{\left( #1 \right)}
 \newcommand{\point}[2]{\left( #1, #2 \right)}
 \newcommand{\pointfrac}[4]{\left( \frac{#1}{#2}, \frac{#3}{#4} \right)}
 \newcommand{\pointmix}[4]{\left( #1, \frac{#3}{#4} \right)}
+\renewcommand{\qedsymbol}{$\blacksquare$}
 \newcommand{\gt}{\ensuremath{>}}
+\newcommand{\ssi}{\Longleftrightarrow}
 \newcommand{\lt}{\ensuremath{<}}
 \DeclareMathOperator{\nul}{nul}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
-  
+\let\o\omega
 % ========== CONFIGURACIÓN DE PÁRRAFOS ==========
 \setlength{\parindent}{0pt}      % Sin sangría
 \setlength{\parskip}{6pt}        % Espacio entre párrafos
@@ -226,12 +229,10 @@
   {\par\noindent\textit{Solución. }\ignorespaces}
   {\hfill$\blacktriangle$\par}
 
-\newcounter{ejemplo}[chapter]
+\newcounter{ejemplo}[section]
 \renewcommand{\theejemplo}{\thechapter.\arabic{ejemplo}}
 
 \newenvironment{ejemplo}
   {\par\refstepcounter{ejemplo}%
    \noindent\textbf{Ejemplo \theejemplo. }\ignorespaces}
   {\par\vspace{\baselineskip}\noindent\hfill$\blacktriangle$\par}
-
-  \renewcommand{\qedsymbol}{$\blacksquare$}
