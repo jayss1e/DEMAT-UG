@@ -189,6 +189,96 @@
     splittopskip=10pt
 }
 
+% =========================================================
+% ENTORNOS MATEMÁTICOS CON MDFRAMED
+% =========================================================
+
+% ─── Contadores ────────────────────────────────────────────────────
+\newcounter{defn}[chapter]
+\newcounter{teor}[chapter]
+\newcounter{prop}[chapter]
+\newcounter{lema}[chapter]
+\newcounter{coro}[chapter]
+
+% Formato: 1.1, 1.2, 2.1 … (capítulo.número)
+\renewcommand{\thedefn}{\thechapter.\arabic{defn}}
+\renewcommand{\theteor}{\thechapter.\arabic{teor}}
+\renewcommand{\theprop}{\thechapter.\arabic{prop}}
+\renewcommand{\thelema}{\thechapter.\arabic{lema}}
+\renewcommand{\thecoro}{\thechapter.\arabic{coro}}
+
+% ─── Entornos ──────────────────────────────────────────────────────
+
+% DEFINICIÓN — caja azul
+\newenvironment{definicion}[1][]{%
+  \refstepcounter{defn}%
+  \ifx&#1&%                      % si no hay título opcional
+    \begin{mdframed}[style=mdbluebox,
+      frametitle={Definición \thedefn}]%
+  \else%                         % si hay título opcional
+    \begin{mdframed}[style=mdbluebox,
+      frametitle={Definición \thedefn: #1}]%
+  \fi
+}{%
+  \end{mdframed}
+}
+
+% TEOREMA — caja gris
+\newenvironment{teorema}[1][]{%
+  \refstepcounter{teor}%
+  \ifx&#1&%
+    \begin{mdframed}[style=mdgraybox,
+      frametitle={Teorema \theteor}]%
+  \else%
+    \begin{mdframed}[style=mdgraybox,
+      frametitle={Teorema \theteor: #1}]%
+  \fi
+}{%
+  \end{mdframed}
+}
+
+% PROPOSICIÓN — caja gris
+\newenvironment{proposicion}[1][]{%
+  \refstepcounter{prop}%
+  \ifx&#1&%
+    \begin{mdframed}[style=mdgraybox,
+      frametitle={Proposición \theprop}]%
+  \else%
+    \begin{mdframed}[style=mdgraybox,
+      frametitle={Proposición \theprop: #1}]%
+  \fi
+}{%
+  \end{mdframed}
+}
+
+% LEMA — caja gris
+\newenvironment{lema}[1][]{%
+  \refstepcounter{lema}%
+  \ifx&#1&%
+    \begin{mdframed}[style=mdgraybox,
+      frametitle={Lema \thelema}]%
+  \else%
+    \begin{mdframed}[style=mdgraybox,
+      frametitle={Lema \thelema: #1}]%
+  \fi
+}{%
+  \end{mdframed}
+}
+
+% COROLARIO — caja gris
+\newenvironment{corolario}[1][]{%
+  \refstepcounter{coro}%
+  \ifx&#1&%
+    \begin{mdframed}[style=mdgraybox,
+      frametitle={Corolario \thecoro}]%
+  \else%
+    \begin{mdframed}[style=mdgraybox,
+      frametitle={Corolario \thecoro: #1}]%
+  \fi
+}{%
+  \end{mdframed}
+}
+
 % ========== HIPERVÍNCULOS ==========
 \usepackage{hyperref}
 \hypersetup{
