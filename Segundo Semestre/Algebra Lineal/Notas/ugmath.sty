@@ -279,6 +279,20 @@
   \end{mdframed}
 }
 
+% ─── Contador de ejemplos ──────────────────────────────────────────
+\newcounter{ejemplo}[chapter]
+\renewcommand{\theejemplo}{\thechapter.\arabic{ejemplo}}
+
+% ─── Entorno ejemplo ───────────────────────────────────────────────
+\newenvironment{ejemplo}{%
+  \refstepcounter{ejemplo}%
+  \par\medskip
+  \noindent\textbf{Ejemplo \theejemplo}%
+  \par\smallskip
+}{%
+  \hfill$\blacktriangle$\par\medskip
+}
+
 % ========== HIPERVÍNCULOS ==========
 \usepackage{hyperref}
 \hypersetup{
@@ -321,13 +335,3 @@
 \newenvironment{solucion}
   {\par\noindent\textit{Solución. }\ignorespaces}
   {\hfill$\blacktriangle$\par}
-
-\newcounter{ejemplo}[chapter]
-\renewcommand{\theejemplo}{\thechapter.\arabic{ejemplo}}
-
-\newenvironment{ejemplo}
-  {\par\refstepcounter{ejemplo}%
-   \noindent\textbf{Ejemplo \theejemplo. }\ignorespaces}
-  {\par\vspace{\baselineskip}\noindent\hfill$\blacktriangle$\par}
-
-  \renewcommand{\qedsymbol}{$\blacksquare$}
