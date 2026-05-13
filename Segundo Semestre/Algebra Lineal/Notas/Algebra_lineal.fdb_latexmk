@@ -1,10 +1,10 @@
 # Fdb version 4
-["pdflatex"] 1778660030.34165 "c:/Users/Radoj/OneDrive/Documentos/DEMAT-UG/Segundo Semestre/Algebra Lineal/Notas/Algebra_lineal.tex" "Algebra_lineal.pdf" "Algebra_lineal" 1778660035.88251 0
-  "Algebra_lineal.aux" 1778660035 17449 5fdcf444ac90da762e22824ed48619d7 "pdflatex"
-  "Algebra_lineal.out" 1778660035 3376 02c81260944ed7255db60892757531ca "pdflatex"
-  "Algebra_lineal.tex" 1778660023 139076 3e4d7e175972fe4fb34cb0df7c46dd2a ""
-  "Algebra_lineal.toc" 1778660035 1627 e14cd3038f3973c44aa1a8dc23ab76dd "pdflatex"
-  "c:/Users/Radoj/OneDrive/Documentos/DEMAT-UG/Segundo Semestre/Algebra Lineal/Notas/Algebra_lineal.tex" 1778660023 139076 3e4d7e175972fe4fb34cb0df7c46dd2a ""
+["pdflatex"] 1778660479.07709 "c:/Users/Radoj/OneDrive/Documentos/DEMAT-UG/Segundo Semestre/Algebra Lineal/Notas/Algebra_lineal.tex" "Algebra_lineal.pdf" "Algebra_lineal" 1778660484.51436 0
+  "Algebra_lineal.aux" 1778660483 16398 d2456a74be1e9f228ac6a26d495238ab "pdflatex"
+  "Algebra_lineal.out" 1778660483 3376 02c81260944ed7255db60892757531ca "pdflatex"
+  "Algebra_lineal.tex" 1778660478 139044 f526e148dd62c4a70946c731c4741125 ""
+  "Algebra_lineal.toc" 1778660483 1627 79e4d7c0b16f893eeb3c7806cb42c781 "pdflatex"
+  "c:/Users/Radoj/OneDrive/Documentos/DEMAT-UG/Segundo Semestre/Algebra Lineal/Notas/Algebra_lineal.tex" 1778660478 139044 f526e148dd62c4a70946c731c4741125 ""
   "c:/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1776821804 2375 baa924870cfb487815765f9094cf3728 ""
   "c:/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc" 1776821804 3486 c7eadf5dcc57b3b2d11736679f6636ba ""
   "c:/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1776821804 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
@@ -313,7 +313,7 @@
   "diagramas_conmutativos6.pdf" 1778444156 57309 f9d1c536c5acbaea21cc8ee049dbf74a ""
   "diagramas_conmutativos7.pdf" 1778444156 64186 e27566d8177c1effff8b1a0edb08fbff ""
   "linealdefinitivo.pdf" 1778444156 86497 f5dc89a5bbfe773e70316ba3ff7fb95c ""
-  "ugmath.sty" 1778659334 10177 008c0bee7d43c40c7364521ebe8eda45 ""
+  "ugmath.sty" 1778660266 10175 b36e470c12cc8ef871c52d496cfde9c3 ""
   (generated)
   "Algebra_lineal.aux"
   "Algebra_lineal.log"

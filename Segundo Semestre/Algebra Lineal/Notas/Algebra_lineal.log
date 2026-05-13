@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.4.21)  13 MAY 2026 02:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.4.21)  13 MAY 2026 02:21
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1169,7 +1169,6 @@ Package mdframed Info: mdframed detected package amsthm
 LaTeX Info: Redefining \. on input line 144.
 LaTeX Info: Redefining \% on input line 144.
  [4{c:/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}]
-Package mdframed Info: Not enough space on this page on input line 144.
 Package mdframed Info: mdframed works in twoside mode on input line 148.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
@@ -1308,8 +1307,8 @@ Package mdframed Info: mdframed detected package amsthm
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 565.
-LaTeX Info: Redefining \. on input line 577.
-LaTeX Info: Redefining \% on input line 577.
+LaTeX Info: Redefining \. on input line 568.
+LaTeX Info: Redefining \% on input line 568.
  [12]
 Package mdframed Info: mdframed works in twoside mode on input line 584.
 Package mdframed Info: mdframed detected package amsthm 
@@ -1351,7 +1350,6 @@ Package mdframed Info: mdframed detected package amsthm
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 806.
-Package mdframed Info: Not enough space on this page on input line 806.
 Package mdframed Info: mdframed works in twoside mode on input line 814.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
@@ -1416,1043 +1414,1028 @@ Package mdframed Info: mdframed detected package amsthm
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 1139.
-LaTeX Info: Redefining \. on input line 1219.
-LaTeX Info: Redefining \% on input line 1219.
- [22]
-Package mdframed Info: mdframed works in twoside mode on input line 1222.
+
+Overfull \hbox (2.19763pt too wide) in paragraph at lines 1208--1211
+$\OML/lmm/m/it/12 A; B \OMS/lmsy/m/n/12 2 \OML/lmm/m/it/12 M[]\OT1/lmr/m/n/12 (\OML/lmm/m/it/12 F\OT1/lmr/m/n/12 )$ \T1/lmr/m/n/12 equi-va-len-tes y exis-te $\OML/lmm/m/it/12 A[]$\T1/lmr/m/n/12 ,�Existe $\OML/lmm/m/it/12 B[]\OT1/lmr/m/n/12 ?$ \T1/lmr/m/n/12 Co-mo son equi-va-len-tes exis-te $\OML/lmm/m/it/12 P \OMS/lmsy/m/n/12 2 \OML/lmm/m/it/12 M[]\OT1/lmr/m/n/12 (\OML/lmm/m/it/12 F\OT1/lmr/m/n/12 )$
+ []
+
+LaTeX Info: Redefining \. on input line 1218.
+LaTeX Info: Redefining \% on input line 1218.
+[22]
+Package mdframed Info: mdframed works in twoside mode on input line 1221.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1222.
+(mdframed)              on input line 1221.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1224.
-Package mdframed Info: mdframed works in twoside mode on input line 1240.
+(mdframed)              on input line 1223.
+Package mdframed Info: mdframed works in twoside mode on input line 1239.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1240.
+(mdframed)              on input line 1239.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1242.
-Package mdframed Info: mdframed works in twoside mode on input line 1251.
+(mdframed)              on input line 1241.
+Package mdframed Info: mdframed works in twoside mode on input line 1250.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1251.
+(mdframed)              on input line 1250.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1254.
-LaTeX Info: Redefining \. on input line 1259.
-LaTeX Info: Redefining \% on input line 1259.
+(mdframed)              on input line 1253.
+LaTeX Info: Redefining \. on input line 1258.
+LaTeX Info: Redefining \% on input line 1258.
  [23]
-Package mdframed Info: mdframed works in twoside mode on input line 1263.
+Package mdframed Info: mdframed works in twoside mode on input line 1262.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1263.
+(mdframed)              on input line 1262.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1269.
-Package mdframed Info: mdframed works in twoside mode on input line 1305.
+(mdframed)              on input line 1268.
+Package mdframed Info: mdframed works in twoside mode on input line 1304.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1305.
+(mdframed)              on input line 1304.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1310.
-LaTeX Info: Redefining \. on input line 1310.
-LaTeX Info: Redefining \% on input line 1310.
+(mdframed)              on input line 1309.
+LaTeX Info: Redefining \. on input line 1309.
+LaTeX Info: Redefining \% on input line 1309.
  [24]
-Package mdframed Info: Not enough space on this page on input line 1310.
-Package mdframed Info: mdframed works in twoside mode on input line 1320.
+Package mdframed Info: mdframed works in twoside mode on input line 1319.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1320.
+(mdframed)              on input line 1319.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1364.
-LaTeX Info: Redefining \. on input line 1404.
-LaTeX Info: Redefining \% on input line 1404.
+(mdframed)              on input line 1363.
+LaTeX Info: Redefining \. on input line 1403.
+LaTeX Info: Redefining \% on input line 1403.
  [25]
-LaTeX Info: Redefining \. on input line 1407.
-LaTeX Info: Redefining \% on input line 1407.
+LaTeX Info: Redefining \. on input line 1406.
+LaTeX Info: Redefining \% on input line 1406.
  [26]
 Cap\'{\i }tulo 2.
 
 pdfTeX warning (ext4): destination with the same identifier (name{defn.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1437 ...\begin{definicion}[Vectores y escalares]
+l.1436 ...\begin{definicion}[Vectores y escalares]
                                                   
-Package mdframed Info: mdframed works in twoside mode on input line 1437.
+Package mdframed Info: mdframed works in twoside mode on input line 1436.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1437.
+(mdframed)              on input line 1436.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1440.
-Package mdframed Info: Not enough space on this page on input line 1440.
+(mdframed)              on input line 1439.
  [27
 
 ]
-Package mdframed Info: Not enough space on this page on input line 1440.
-
 pdfTeX warning (ext4): destination with the same identifier (name{ejemplo.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1442     \begin{ejemplo}
+l.1441     \begin{ejemplo}
                           
 pdfTeX warning (ext4): destination with the same identifier (name{prop.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1459         C
+l.1458         C
                 on estas operaciones $F^{n}$ tiene estructura de espacio vec...
-Package mdframed Info: mdframed works in twoside mode on input line 1459.
+Package mdframed Info: mdframed works in twoside mode on input line 1458.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1458.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 1459.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 1460.
 
 pdfTeX warning (ext4): destination with the same identifier (name{prop.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1477         S
+l.1476         S
                 ea $V$ un espacio vectorial sobre un campo $F$, entonces
-Package mdframed Info: mdframed works in twoside mode on input line 1477.
+Package mdframed Info: mdframed works in twoside mode on input line 1476.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1477.
+(mdframed)              on input line 1476.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1490.
-LaTeX Info: Redefining \. on input line 1490.
-LaTeX Info: Redefining \% on input line 1490.
+(mdframed)              on input line 1489.
+LaTeX Info: Redefining \. on input line 1489.
+LaTeX Info: Redefining \% on input line 1489.
  [28]
 pdfTeX warning (ext4): destination with the same identifier (name{defn.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1494 ...\begin{definicion}[Subespacio vectorial]
+l.1493 ...\begin{definicion}[Subespacio vectorial]
                                                   
-Package mdframed Info: mdframed works in twoside mode on input line 1494.
+Package mdframed Info: mdframed works in twoside mode on input line 1493.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1494.
+(mdframed)              on input line 1493.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1507.
+(mdframed)              on input line 1506.
 
 pdfTeX warning (ext4): destination with the same identifier (name{ejemplo.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1517     \begin{ejemplo}
+l.1516     \begin{ejemplo}
                           
 pdfTeX warning (ext4): destination with the same identifier (name{prop.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1522         S
+l.1521         S
                 ea $(V,+,\cdot)$ un espacio vectorial sobre $F$. Un subconju...
-Package mdframed Info: mdframed works in twoside mode on input line 1522.
+Package mdframed Info: mdframed works in twoside mode on input line 1521.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1522.
+(mdframed)              on input line 1521.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1525.
-
+(mdframed)              on input line 1524.
+LaTeX Info: Redefining \. on input line 1524.
+LaTeX Info: Redefining \% on input line 1524.
+ [29]
 pdfTeX warning (ext4): destination with the same identifier (name{prop.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1530         S
+l.1529         S
                 ea $V$ un espacio vectorial sobre $F$ y sea $\{W_{\lambda}\}...
-Package mdframed Info: mdframed works in twoside mode on input line 1530.
+Package mdframed Info: mdframed works in twoside mode on input line 1529.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1530.
+(mdframed)              on input line 1529.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1536.
-Package mdframed Info: Not enough space on this page on input line 1536.
-LaTeX Info: Redefining \. on input line 1536.
-LaTeX Info: Redefining \% on input line 1536.
- [29]
-Package mdframed Info: Not enough space on this page on input line 1536.
+(mdframed)              on input line 1535.
 
 pdfTeX warning (ext4): destination with the same identifier (name{ejemplo.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1551     \begin{ejemplo}
+l.1550     \begin{ejemplo}
                           
 pdfTeX warning (ext4): destination with the same identifier (name{defn.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1556 ...finicion}[Subespacio vectorial generado]
+l.1555 ...finicion}[Subespacio vectorial generado]
                                                   
-Package mdframed Info: mdframed works in twoside mode on input line 1556.
+Package mdframed Info: mdframed works in twoside mode on input line 1555.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1556.
+(mdframed)              on input line 1555.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1562.
-
+(mdframed)              on input line 1561.
+LaTeX Info: Redefining \. on input line 1570.
+LaTeX Info: Redefining \% on input line 1570.
+ [30]
 pdfTeX warning (ext4): destination with the same identifier (name{prop.5}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1576         S
+l.1573         S
                 ea $V$ un espacio vectorial sobre $F$, sea $S\subset V$, ent...
-Package mdframed Info: mdframed works in twoside mode on input line 1576.
+Package mdframed Info: mdframed works in twoside mode on input line 1573.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1576.
+(mdframed)              on input line 1573.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1580.
-LaTeX Info: Redefining \. on input line 1580.
-LaTeX Info: Redefining \% on input line 1580.
- [30]
+(mdframed)              on input line 1577.
+
 pdfTeX warning (ext4): destination with the same identifier (name{lema.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1597         S
+l.1594         S
                 i $W$ es subespacio vectorial de $V$ y $w_{1},\dots,w_{n}\in...
-Package mdframed Info: mdframed works in twoside mode on input line 1597.
+Package mdframed Info: mdframed works in twoside mode on input line 1594.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1597.
+(mdframed)              on input line 1594.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1602.
+(mdframed)              on input line 1599.
 
 pdfTeX warning (ext4): destination with the same identifier (name{defn.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1604 ...\begin{definicion}[Independencia Lineal]
+l.1601 ...\begin{definicion}[Independencia Lineal]
                                                   
-Package mdframed Info: mdframed works in twoside mode on input line 1604.
+Package mdframed Info: mdframed works in twoside mode on input line 1601.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1604.
+(mdframed)              on input line 1601.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1615.
-LaTeX Info: Redefining \. on input line 1626.
-LaTeX Info: Redefining \% on input line 1626.
+(mdframed)              on input line 1612.
+LaTeX Info: Redefining \. on input line 1617.
+LaTeX Info: Redefining \% on input line 1617.
  [31]
 pdfTeX warning (ext4): destination with the same identifier (name{defn.5}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1636 ...[Espacio vectorial de dimensión finita]
+l.1633 ...[Espacio vectorial de dimensión finita]
                                                   
-Package mdframed Info: mdframed works in twoside mode on input line 1636.
+Package mdframed Info: mdframed works in twoside mode on input line 1633.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1636.
+(mdframed)              on input line 1633.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1642.
+(mdframed)              on input line 1639.
 
 pdfTeX warning (ext4): destination with the same identifier (name{ejemplo.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1644     \begin{ejemplo}
+l.1641     \begin{ejemplo}
                           
 pdfTeX warning (ext4): destination with the same identifier (name{teor.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1654         S
+l.1651         S
                 ea $V$ un espacio vectorial sobre $F$ y sea $S=\{v_{1},\dots...
-Package mdframed Info: mdframed works in twoside mode on input line 1654.
+Package mdframed Info: mdframed works in twoside mode on input line 1651.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1651.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 1654.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 1657.
-LaTeX Info: Redefining \. on input line 1675.
-LaTeX Info: Redefining \% on input line 1675.
+LaTeX Info: Redefining \. on input line 1668.
+LaTeX Info: Redefining \% on input line 1668.
  [32]
 pdfTeX warning (ext4): destination with the same identifier (name{coro.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1683         S
+l.1680         S
                 i $S_{1}$ y $S_{2}$ son subconjuntos linealmente independien...
-Package mdframed Info: mdframed works in twoside mode on input line 1683.
+Package mdframed Info: mdframed works in twoside mode on input line 1680.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1683.
+(mdframed)              on input line 1680.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1689.
+(mdframed)              on input line 1686.
 
 pdfTeX warning (ext4): destination with the same identifier (name{defn.6}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1698     \begin{definicion}[Base y dimensión]
+l.1695     \begin{definicion}[Base y dimensión]
                                                 
-Package mdframed Info: mdframed works in twoside mode on input line 1698.
+Package mdframed Info: mdframed works in twoside mode on input line 1695.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1698.
+(mdframed)              on input line 1695.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1706.
+(mdframed)              on input line 1703.
 
 pdfTeX warning (ext4): destination with the same identifier (name{ejemplo.5}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1708     \begin{ejemplo}
+l.1705     \begin{ejemplo}
                           
-Package mdframed Info: mdframed works in twoside mode on input line 1713.
+Package mdframed Info: mdframed works in twoside mode on input line 1710.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1713.
+(mdframed)              on input line 1710.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1715.
-LaTeX Info: Redefining \. on input line 1727.
-LaTeX Info: Redefining \% on input line 1727.
+(mdframed)              on input line 1712.
+LaTeX Info: Redefining \. on input line 1712.
+LaTeX Info: Redefining \% on input line 1712.
  [33]
-Package mdframed Info: mdframed works in twoside mode on input line 1739.
+Package mdframed Info: mdframed works in twoside mode on input line 1736.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1739.
+(mdframed)              on input line 1736.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1744.
-LaTeX Info: Redefining \. on input line 1779.
-LaTeX Info: Redefining \% on input line 1779.
+(mdframed)              on input line 1741.
+LaTeX Info: Redefining \. on input line 1766.
+LaTeX Info: Redefining \% on input line 1766.
  [34]
 pdfTeX warning (ext4): destination with the same identifier (name{prop.6}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1793         S
+l.1790         S
                 i $S$ tiene cardinalidad $n$, es linealmente independiente y...
-Package mdframed Info: mdframed works in twoside mode on input line 1793.
+Package mdframed Info: mdframed works in twoside mode on input line 1790.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1793.
+(mdframed)              on input line 1790.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1795.
+(mdframed)              on input line 1792.
 
 pdfTeX warning (ext4): destination with the same identifier (name{prop.7}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1828         S
+l.1825         S
                 i $W$ es un subespacio vectorial de $V$ y $V$ tiene dimensi�...
-Package mdframed Info: mdframed works in twoside mode on input line 1828.
+Package mdframed Info: mdframed works in twoside mode on input line 1825.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1828.
+(mdframed)              on input line 1825.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1830.
-Package mdframed Info: mdframed works in twoside mode on input line 1838.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 1838.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 1840.
-LaTeX Info: Redefining \. on input line 1840.
-LaTeX Info: Redefining \% on input line 1840.
+(mdframed)              on input line 1827.
+LaTeX Info: Redefining \. on input line 1827.
+LaTeX Info: Redefining \% on input line 1827.
  [35]
-Package mdframed Info: Not enough space on this page on input line 1840.
+Package mdframed Info: mdframed works in twoside mode on input line 1835.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1835.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1837.
 
 pdfTeX warning (ext4): destination with the same identifier (name{prop.8}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1843         S
+l.1840         S
                 i $V$ es un espacio vectorial en dimensión finita $n$ sobre...
-Package mdframed Info: mdframed works in twoside mode on input line 1843.
+Package mdframed Info: mdframed works in twoside mode on input line 1840.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1843.
+(mdframed)              on input line 1840.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1845.
+(mdframed)              on input line 1842.
 
 pdfTeX warning (ext4): destination with the same identifier (name{prop.9}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1855         S
+l.1852         S
                 i $V$ es un espacio vectorial de dimensión $n$ sobre $F$ y ...
-Package mdframed Info: mdframed works in twoside mode on input line 1855.
+Package mdframed Info: mdframed works in twoside mode on input line 1852.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1855.
+(mdframed)              on input line 1852.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1861.
-
+(mdframed)              on input line 1858.
+LaTeX Info: Redefining \. on input line 1876.
+LaTeX Info: Redefining \% on input line 1876.
+ [36]
 pdfTeX warning (ext4): destination with the same identifier (name{prop.10}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1885         S
+l.1882         S
                 ea $A=(a_{ij})\in M_{n\times n}(F)$ tal que los vectores fil...
-Package mdframed Info: mdframed works in twoside mode on input line 1885.
+Package mdframed Info: mdframed works in twoside mode on input line 1882.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1882.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 1885.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 1888.
-Package mdframed Info: Not enough space on this page on input line 1888.
-LaTeX Info: Redefining \. on input line 1888.
-LaTeX Info: Redefining \% on input line 1888.
- [36]
-Package mdframed Info: Not enough space on this page on input line 1888.
 
 pdfTeX warning (ext4): destination with the same identifier (name{defn.7}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1922     \begin{definicion}[Base ordenada]
+l.1919     \begin{definicion}[Base ordenada]
                                             
-Package mdframed Info: mdframed works in twoside mode on input line 1922.
+Package mdframed Info: mdframed works in twoside mode on input line 1919.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1922.
+(mdframed)              on input line 1919.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1930.
-
+(mdframed)              on input line 1927.
+LaTeX Info: Redefining \. on input line 1927.
+LaTeX Info: Redefining \% on input line 1927.
+ [37]
 pdfTeX warning (ext4): destination with the same identifier (name{defn.8}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1932 ...begin{definicion}[Vector de coordenadas]
+l.1929 ...begin{definicion}[Vector de coordenadas]
                                                   
-Package mdframed Info: mdframed works in twoside mode on input line 1932.
+Package mdframed Info: mdframed works in twoside mode on input line 1929.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1932.
+(mdframed)              on input line 1929.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1944.
-LaTeX Info: Redefining \. on input line 1944.
-LaTeX Info: Redefining \% on input line 1944.
- [37]
-Package mdframed Info: Not enough space on this page on input line 1944.
+(mdframed)              on input line 1941.
 
 pdfTeX warning (ext4): destination with the same identifier (name{ejemplo.6}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1946     \begin{ejemplo}
+l.1943     \begin{ejemplo}
                           
 pdfTeX warning (ext4): destination with the same identifier (name{prop.11}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1956         $
+l.1953         $
                 \varphi_{\BB}:V\to F^{n}$ es una función biyectiva.
-Package mdframed Info: mdframed works in twoside mode on input line 1956.
+Package mdframed Info: mdframed works in twoside mode on input line 1953.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1956.
+(mdframed)              on input line 1953.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1957.
-
+(mdframed)              on input line 1954.
+LaTeX Info: Redefining \. on input line 1966.
+LaTeX Info: Redefining \% on input line 1966.
+ [38]
 pdfTeX warning (ext4): destination with the same identifier (name{defn.9}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.1971 ...in{definicion}[Matriz de cambio de base]
+l.1968 ...in{definicion}[Matriz de cambio de base]
                                                   
-Package mdframed Info: mdframed works in twoside mode on input line 1971.
+Package mdframed Info: mdframed works in twoside mode on input line 1968.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1971.
+(mdframed)              on input line 1968.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 1981.
-LaTeX Info: Redefining \. on input line 1981.
-LaTeX Info: Redefining \% on input line 1981.
- [38]
+(mdframed)              on input line 1978.
 <diagramas_conmutativos.pdf, id=448, 215.44188pt x 97.35472pt>
 File: diagramas_conmutativos.pdf Graphic file (type pdf)
 <use diagramas_conmutativos.pdf>
-Package pdftex.def Info: diagramas_conmutativos.pdf  used on input line 1987.
+Package pdftex.def Info: diagramas_conmutativos.pdf  used on input line 1984.
 (pdftex.def)             Requested size: 204.85672pt x 92.5726pt.
 <diagramas_conmutativos2.pdf, id=449, 216.04112pt x 97.17606pt>
 File: diagramas_conmutativos2.pdf Graphic file (type pdf)
 <use diagramas_conmutativos2.pdf>
-Package pdftex.def Info: diagramas_conmutativos2.pdf  used on input line 1997.
+Package pdftex.def Info: diagramas_conmutativos2.pdf  used on input line 1994.
 (pdftex.def)             Requested size: 204.85672pt x 92.14915pt.
-Package mdframed Info: mdframed works in twoside mode on input line 2014.
+Package mdframed Info: mdframed works in twoside mode on input line 2011.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 2014.
+(mdframed)              on input line 2011.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 2015.
-Package mdframed Info: mdframed works in twoside mode on input line 2046.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 2046.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 2052.
-LaTeX Info: Redefining \. on input line 2052.
-LaTeX Info: Redefining \% on input line 2052.
+(mdframed)              on input line 2012.
+LaTeX Info: Redefining \. on input line 2031.
+LaTeX Info: Redefining \% on input line 2031.
  [39 <./diagramas_conmutativos.pdf> <./diagramas_conmutativos2.pdf>]
-Package mdframed Info: Not enough space on this page on input line 2052.
-LaTeX Info: Redefining \. on input line 2073.
-LaTeX Info: Redefining \% on input line 2073.
+Package mdframed Info: mdframed works in twoside mode on input line 2043.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 2043.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 2049.
+LaTeX Info: Redefining \. on input line 2070.
+LaTeX Info: Redefining \% on input line 2070.
  [40]
 Cap\'{\i }tulo 3.
 
 pdfTeX warning (ext4): destination with the same identifier (name{defn.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2077 ...egin{definicion}[Transformación Lineal]
+l.2074 ...egin{definicion}[Transformación Lineal]
                                                   
-Package mdframed Info: mdframed works in twoside mode on input line 2077.
+Package mdframed Info: mdframed works in twoside mode on input line 2074.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 2077.
+(mdframed)              on input line 2074.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 2084.
+(mdframed)              on input line 2081.
 
 pdfTeX warning (ext4): destination with the same identifier (name{ejemplo.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2097     \begin{ejemplo}
+l.2094     \begin{ejemplo}
                           
 pdfTeX warning (ext4): destination with the same identifier (name{ejemplo.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2120     \begin{ejemplo}
+l.2117     \begin{ejemplo}
                            [41
 
 ]
 pdfTeX warning (ext4): destination with the same identifier (name{ejemplo.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2136     \begin{ejemplo}
+l.2133     \begin{ejemplo}
                           
 pdfTeX warning (ext4): destination with the same identifier (name{prop.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2150         S
+l.2147         S
                 i $T:V \to W$ es una transformación lineal, entonces basta ...
-Package mdframed Info: mdframed works in twoside mode on input line 2150.
+Package mdframed Info: mdframed works in twoside mode on input line 2147.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 2150.
+(mdframed)              on input line 2147.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 2152.
+(mdframed)              on input line 2149.
 
 pdfTeX warning (ext4): destination with the same identifier (name{ejemplo.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2163     \begin{ejemplo}
+l.2160     \begin{ejemplo}
                           
-LaTeX Info: Redefining \. on input line 2172.
-LaTeX Info: Redefining \% on input line 2172.
+LaTeX Info: Redefining \. on input line 2169.
+LaTeX Info: Redefining \% on input line 2169.
  [42]
 pdfTeX warning (ext4): destination with the same identifier (name{defn.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2180     \begin{definicion}[Kernel e Imagen]
+l.2177     \begin{definicion}[Kernel e Imagen]
                                               
-Package mdframed Info: mdframed works in twoside mode on input line 2180.
+Package mdframed Info: mdframed works in twoside mode on input line 2177.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 2180.
+(mdframed)              on input line 2177.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 2189.
+(mdframed)              on input line 2186.
 
 pdfTeX warning (ext4): destination with the same identifier (name{prop.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2192         $
+l.2189         $
                 \ker(T)$ es un subespacio vectorial de $V$ y $\Im(T)$ es un ...
-Package mdframed Info: mdframed works in twoside mode on input line 2192.
+Package mdframed Info: mdframed works in twoside mode on input line 2189.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 2192.
+(mdframed)              on input line 2189.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 2193.
+(mdframed)              on input line 2190.
 
 pdfTeX warning (ext4): destination with the same identifier (name{defn.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2208     \begin{definicion}[Nulidad]
+l.2205     \begin{definicion}[Nulidad]
                                       
-Package mdframed Info: mdframed works in twoside mode on input line 2208.
+Package mdframed Info: mdframed works in twoside mode on input line 2205.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 2208.
+(mdframed)              on input line 2205.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 2213.
-LaTeX Info: Redefining \. on input line 2213.
-LaTeX Info: Redefining \% on input line 2213.
+(mdframed)              on input line 2210.
+LaTeX Info: Redefining \. on input line 2210.
+LaTeX Info: Redefining \% on input line 2210.
  [43]
 pdfTeX warning (ext4): destination with the same identifier (name{ejemplo.5}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2215     \begin{ejemplo}
+l.2212     \begin{ejemplo}
                           
 pdfTeX warning (ext4): destination with the same identifier (name{defn.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2232     \begin{definicion}[Rango]
+l.2229     \begin{definicion}[Rango]
                                     
-Package mdframed Info: mdframed works in twoside mode on input line 2232.
+Package mdframed Info: mdframed works in twoside mode on input line 2229.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 2232.
+(mdframed)              on input line 2229.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 2237.
+(mdframed)              on input line 2234.
 
 pdfTeX warning (ext4): destination with the same identifier (name{ejemplo.6}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2239     \begin{ejemplo}
+l.2236     \begin{ejemplo}
                           
 pdfTeX warning (ext4): destination with the same identifier (name{teor.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2246     \begin{teorema}[Rango-Nulidad]
+l.2243     \begin{teorema}[Rango-Nulidad]
                                          
-Package mdframed Info: mdframed works in twoside mode on input line 2246.
+Package mdframed Info: mdframed works in twoside mode on input line 2243.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 2246.
+(mdframed)              on input line 2243.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 2251.
-LaTeX Info: Redefining \. on input line 2255.
-LaTeX Info: Redefining \% on input line 2255.
+(mdframed)              on input line 2248.
+LaTeX Info: Redefining \. on input line 2252.
+LaTeX Info: Redefining \% on input line 2252.
  [44]
 pdfTeX warning (ext4): destination with the same identifier (name{ejemplo.7}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2272     \begin{ejemplo}
+l.2269     \begin{ejemplo}
                           
-LaTeX Info: Redefining \. on input line 2295.
-LaTeX Info: Redefining \% on input line 2295.
+LaTeX Info: Redefining \. on input line 2292.
+LaTeX Info: Redefining \% on input line 2292.
  [45]
 pdfTeX warning (ext4): destination with the same identifier (name{ejemplo.8}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2298     \begin{ejemplo}
+l.2295     \begin{ejemplo}
                           
 pdfTeX warning (ext4): destination with the same identifier (name{prop.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2337         S
+l.2334         S
                 ea $T:V \to W$ una transformación lineal, si entonces $T$ e...
-Package mdframed Info: mdframed works in twoside mode on input line 2337.
+Package mdframed Info: mdframed works in twoside mode on input line 2334.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 2337.
+(mdframed)              on input line 2334.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 2338.
+(mdframed)              on input line 2335.
 
 pdfTeX warning (ext4): destination with the same identifier (name{coro.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2349         S
+l.2346         S
                 ean $V$ un espacio vectorial de dimensión finita $n$ sobre ...
-Package mdframed Info: mdframed works in twoside mode on input line 2349.
+Package mdframed Info: mdframed works in twoside mode on input line 2346.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 2349.
+(mdframed)              on input line 2346.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 2355.
-LaTeX Info: Redefining \. on input line 2355.
-LaTeX Info: Redefining \% on input line 2355.
+(mdframed)              on input line 2352.
+LaTeX Info: Redefining \. on input line 2352.
+LaTeX Info: Redefining \% on input line 2352.
  [46]
 pdfTeX warning (ext4): destination with the same identifier (name{ejemplo.9}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2372     \begin{ejemplo}
+l.2369     \begin{ejemplo}
                           
 pdfTeX warning (ext4): destination with the same identifier (name{prop.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2402         S
+l.2399         S
                 i $T:V \to W$ es una transformación lineal biyectiva, entonces
-Package mdframed Info: mdframed works in twoside mode on input line 2402.
+Package mdframed Info: mdframed works in twoside mode on input line 2399.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 2402.
+(mdframed)              on input line 2399.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 2407.
-LaTeX Info: Redefining \. on input line 2422.
-LaTeX Info: Redefining \% on input line 2422.
+(mdframed)              on input line 2404.
+LaTeX Info: Redefining \. on input line 2415.
+LaTeX Info: Redefining \% on input line 2415.
  [47]
 pdfTeX warning (ext4): destination with the same identifier (name{defn.5}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2427     \begin{definicion}[Isomorfismo Lineal]
+l.2424     \begin{definicion}[Isomorfismo Lineal]
                                                  
-Package mdframed Info: mdframed works in twoside mode on input line 2427.
+Package mdframed Info: mdframed works in twoside mode on input line 2424.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 2424.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 2427.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 2430.
 
 pdfTeX warning (ext4): destination with the same identifier (name{prop.5}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2433         E
+l.2430         E
                 l isomorfismo lineal, define una relación de equivalencia e...
-Package mdframed Info: mdframed works in twoside mode on input line 2433.
+Package mdframed Info: mdframed works in twoside mode on input line 2430.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 2433.
+(mdframed)              on input line 2430.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 2434.
+(mdframed)              on input line 2431.
 
 pdfTeX warning (ext4): destination with the same identifier (name{teor.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2453         U
+l.2450         U
                 n espacio vectorial $V$ de dimensión $n$ sobre $F$ es isomo...
-Package mdframed Info: mdframed works in twoside mode on input line 2453.
+Package mdframed Info: mdframed works in twoside mode on input line 2450.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 2453.
+(mdframed)              on input line 2450.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 2454.
-LaTeX Info: Redefining \. on input line 2463.
-LaTeX Info: Redefining \% on input line 2463.
+(mdframed)              on input line 2451.
+LaTeX Info: Redefining \. on input line 2458.
+LaTeX Info: Redefining \% on input line 2458.
  [48]
 pdfTeX warning (ext4): destination with the same identifier (name{prop.6}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2466         S
+l.2463         S
                 i $V, W$ son espacios vectoriales de dimensión finita sobre...
-Package mdframed Info: mdframed works in twoside mode on input line 2466.
+Package mdframed Info: mdframed works in twoside mode on input line 2463.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 2466.
+(mdframed)              on input line 2463.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 2471.
+(mdframed)              on input line 2468.
 
 pdfTeX warning (ext4): destination with the same identifier (name{prop.7}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2474         S
+l.2471         S
                 i $V, W$ son espacios de dimensión finita sobre $F$, entonc...
-Package mdframed Info: mdframed works in twoside mode on input line 2474.
+Package mdframed Info: mdframed works in twoside mode on input line 2471.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 2474.
+(mdframed)              on input line 2471.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 2478.
-LaTeX Info: Redefining \. on input line 2515.
-LaTeX Info: Redefining \% on input line 2515.
+(mdframed)              on input line 2475.
+LaTeX Info: Redefining \. on input line 2507.
+LaTeX Info: Redefining \% on input line 2507.
  [49]
 pdfTeX warning (ext4): destination with the same identifier (name{ejemplo.10}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2527     \begin{ejemplo}
+l.2524     \begin{ejemplo}
                           
 pdfTeX warning (ext4): destination with the same identifier (name{ejemplo.11}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2541     \begin{ejemplo}
+l.2538     \begin{ejemplo}
                           
 <diagramas_conmutativos3.pdf, id=552, 140.11948pt x 111.97234pt>
 File: diagramas_conmutativos3.pdf Graphic file (type pdf)
 <use diagramas_conmutativos3.pdf>
-Package pdftex.def Info: diagramas_conmutativos3.pdf  used on input line 2546.
+Package pdftex.def Info: diagramas_conmutativos3.pdf  used on input line 2543.
 (pdftex.def)             Requested size: 204.85672pt x 163.71571pt.
-LaTeX Info: Redefining \. on input line 2560.
-LaTeX Info: Redefining \% on input line 2560.
- [50 <./diagramas_conmutativos3.pdf>]
-LaTeX Info: Redefining \. on input line 2608.
-LaTeX Info: Redefining \% on input line 2608.
- [51]
+LaTeX Info: Redefining \. on input line 2545.
+LaTeX Info: Redefining \% on input line 2545.
+ [50]
+LaTeX Info: Redefining \. on input line 2587.
+LaTeX Info: Redefining \% on input line 2587.
+ [51 <./diagramas_conmutativos3.pdf>]
 File: diagramas_conmutativos3.pdf Graphic file (type pdf)
 <use diagramas_conmutativos3.pdf>
-Package pdftex.def Info: diagramas_conmutativos3.pdf  used on input line 2613.
+Package pdftex.def Info: diagramas_conmutativos3.pdf  used on input line 2610.
 (pdftex.def)             Requested size: 204.85672pt x 163.71571pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{defn.6}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2618 ...n{definicion}[Representación matricial]
+l.2615 ...n{definicion}[Representación matricial]
                                                   
-Package mdframed Info: mdframed works in twoside mode on input line 2618.
+Package mdframed Info: mdframed works in twoside mode on input line 2615.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 2618.
+(mdframed)              on input line 2615.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 2624.
+(mdframed)              on input line 2621.
 
 pdfTeX warning (ext4): destination with the same identifier (name{ejemplo.12}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2626     \begin{ejemplo}
+l.2623     \begin{ejemplo}
                           
+LaTeX Info: Redefining \. on input line 2628.
+LaTeX Info: Redefining \% on input line 2628.
+ [52]
 pdfTeX warning (ext4): destination with the same identifier (name{ejemplo.13}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2639     \begin{ejemplo}
+l.2636     \begin{ejemplo}
                           
-LaTeX Info: Redefining \. on input line 2644.
-LaTeX Info: Redefining \% on input line 2644.
- [52]
-LaTeX Info: Redefining \. on input line 2696.
-LaTeX Info: Redefining \% on input line 2696.
+LaTeX Info: Redefining \. on input line 2671.
+LaTeX Info: Redefining \% on input line 2671.
  [53]
-LaTeX Info: Redefining \. on input line 2736.
-LaTeX Info: Redefining \% on input line 2736.
+LaTeX Info: Redefining \. on input line 2709.
+LaTeX Info: Redefining \% on input line 2709.
  [54]
-<diagramas_conmutativos4.pdf, id=598, 140.11948pt x 114.92235pt>
+<diagramas_conmutativos4.pdf, id=597, 140.11948pt x 114.92235pt>
 File: diagramas_conmutativos4.pdf Graphic file (type pdf)
 <use diagramas_conmutativos4.pdf>
-Package pdftex.def Info: diagramas_conmutativos4.pdf  used on input line 2745.
+Package pdftex.def Info: diagramas_conmutativos4.pdf  used on input line 2742.
 (pdftex.def)             Requested size: 204.85672pt x 168.02896pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{prop.8}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2754         S
+l.2751         S
                 ean $V_1, V_2, V_3$ espacios vectoriales con bases ordenadas...
-Package mdframed Info: mdframed works in twoside mode on input line 2754.
+Package mdframed Info: mdframed works in twoside mode on input line 2751.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 2754.
+(mdframed)              on input line 2751.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 2758.
-LaTeX Info: Redefining \. on input line 2773.
-LaTeX Info: Redefining \% on input line 2773.
+(mdframed)              on input line 2755.
+LaTeX Info: Redefining \. on input line 2755.
+LaTeX Info: Redefining \% on input line 2755.
  [55 <./diagramas_conmutativos4.pdf>]
 pdfTeX warning (ext4): destination with the same identifier (name{teor.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2777         S
+l.2774         S
                 ean $V$ un espacio vectorial de dimensión $n$ sobre $F$ y $...
-Package mdframed Info: mdframed works in twoside mode on input line 2777.
+Package mdframed Info: mdframed works in twoside mode on input line 2774.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 2777.
+(mdframed)              on input line 2774.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 2782.
-<diagramas_conmutativos5.pdf, id=629, 146.14198pt x 122.7566pt>
+(mdframed)              on input line 2779.
+LaTeX Info: Redefining \. on input line 2795.
+LaTeX Info: Redefining \% on input line 2795.
+ [56]
+<diagramas_conmutativos5.pdf, id=633, 146.14198pt x 122.7566pt>
 File: diagramas_conmutativos5.pdf Graphic file (type pdf)
 <use diagramas_conmutativos5.pdf>
-Package pdftex.def Info: diagramas_conmutativos5.pdf  used on input line 2810.
+Package pdftex.def Info: diagramas_conmutativos5.pdf  used on input line 2807.
 (pdftex.def)             Requested size: 204.85672pt x 172.07533pt.
-LaTeX Info: Redefining \. on input line 2812.
-LaTeX Info: Redefining \% on input line 2812.
- [56]
+
 pdfTeX warning (ext4): destination with the same identifier (name{defn.7}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2813     \begin{definicion}[Matrices conjugadas]
+l.2810     \begin{definicion}[Matrices conjugadas]
                                                   
-Package mdframed Info: mdframed works in twoside mode on input line 2813.
+Package mdframed Info: mdframed works in twoside mode on input line 2810.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 2813.
+(mdframed)              on input line 2810.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 2818.
+(mdframed)              on input line 2815.
 
 pdfTeX warning (ext4): destination with the same identifier (name{prop.9}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2821         L
+l.2818         L
                 a definición anterior, define una relación de equivalencia...
-Package mdframed Info: mdframed works in twoside mode on input line 2821.
+Package mdframed Info: mdframed works in twoside mode on input line 2818.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 2821.
+(mdframed)              on input line 2818.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 2822.
-LaTeX Info: Redefining \. on input line 2856.
-LaTeX Info: Redefining \% on input line 2856.
+(mdframed)              on input line 2819.
+LaTeX Info: Redefining \. on input line 2831.
+LaTeX Info: Redefining \% on input line 2831.
  [57 <./diagramas_conmutativos5.pdf>]
+LaTeX Info: Redefining \. on input line 2893.
+LaTeX Info: Redefining \% on input line 2893.
+ [58]
 pdfTeX warning (ext4): destination with the same identifier (name{teor.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2900         S
+l.2897         S
                 ean $V, W$ espacios vectoriales sobre $F$ de dimensión $\di...
-Package mdframed Info: mdframed works in twoside mode on input line 2900.
+Package mdframed Info: mdframed works in twoside mode on input line 2897.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 2900.
+(mdframed)              on input line 2897.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 2906.
-LaTeX Info: Redefining \. on input line 2906.
-LaTeX Info: Redefining \% on input line 2906.
- [58]
+(mdframed)              on input line 2903.
 <diagramas_conmutativos6.pdf, id=657, 112.80745pt x 143.67778pt>
 File: diagramas_conmutativos6.pdf Graphic file (type pdf)
 <use diagramas_conmutativos6.pdf>
-Package pdftex.def Info: diagramas_conmutativos6.pdf  used on input line 2930.
+Package pdftex.def Info: diagramas_conmutativos6.pdf  used on input line 2927.
 (pdftex.def)             Requested size: 102.42836pt x 130.45976pt.
-
+LaTeX Info: Redefining \. on input line 2934.
+LaTeX Info: Redefining \% on input line 2934.
+ [59 <./diagramas_conmutativos6.pdf>]
 pdfTeX warning (ext4): destination with the same identifier (name{defn.8}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2940 ...egin{definicion}[Espacio vectorial dual]
+l.2937 ...egin{definicion}[Espacio vectorial dual]
                                                   
-Package mdframed Info: mdframed works in twoside mode on input line 2940.
+Package mdframed Info: mdframed works in twoside mode on input line 2937.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 2940.
+(mdframed)              on input line 2937.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 2946.
-LaTeX Info: Redefining \. on input line 2946.
-LaTeX Info: Redefining \% on input line 2946.
- [59 <./diagramas_conmutativos6.pdf>]
-LaTeX Info: Redefining \. on input line 2992.
-LaTeX Info: Redefining \% on input line 2992.
+(mdframed)              on input line 2943.
+LaTeX Info: Redefining \. on input line 2977.
+LaTeX Info: Redefining \% on input line 2977.
  [60]
 pdfTeX warning (ext4): destination with the same identifier (name{defn.9}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.2994     \begin{definicion}[Traza]
+l.2991     \begin{definicion}[Traza]
                                     
-Package mdframed Info: mdframed works in twoside mode on input line 2994.
+Package mdframed Info: mdframed works in twoside mode on input line 2991.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 2994.
+(mdframed)              on input line 2991.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 3000.
+(mdframed)              on input line 2997.
 
 pdfTeX warning (ext4): destination with the same identifier (name{prop.10}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.3003         L
+l.3000         L
                 a función $\Tr$ pertenece a $(M_{n \times n}(F))^*$.
-Package mdframed Info: mdframed works in twoside mode on input line 3003.
+Package mdframed Info: mdframed works in twoside mode on input line 3000.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 3003.
+(mdframed)              on input line 3000.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 3004.
-
+(mdframed)              on input line 3001.
+LaTeX Info: Redefining \. on input line 3025.
+LaTeX Info: Redefining \% on input line 3025.
+ [61]
 pdfTeX warning (ext4): destination with the same identifier (name{prop.11}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.3033         T
+l.3030         T
                 odo funcional lineal en $(F^n)^{\ast}$ es de la forma:
-Package mdframed Info: mdframed works in twoside mode on input line 3033.
+Package mdframed Info: mdframed works in twoside mode on input line 3030.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 3033.
+(mdframed)              on input line 3030.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 3039.
-LaTeX Info: Redefining \. on input line 3039.
-LaTeX Info: Redefining \% on input line 3039.
- [61]
-Package mdframed Info: Not enough space on this page on input line 3039.
+(mdframed)              on input line 3036.
 
 pdfTeX warning (ext4): destination with the same identifier (name{prop.12}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.3065         L
+l.3062         L
                 as funciones $\llaves{f_1, \dots, f_n}$ forman una base de $...
-Package mdframed Info: mdframed works in twoside mode on input line 3065.
+Package mdframed Info: mdframed works in twoside mode on input line 3062.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 3065.
+(mdframed)              on input line 3062.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 3066.
-
+(mdframed)              on input line 3063.
+LaTeX Info: Redefining \. on input line 3071.
+LaTeX Info: Redefining \% on input line 3071.
+ [62]
 pdfTeX warning (ext4): destination with the same identifier (name{defn.10}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.3078     \begin{definicion}[Base dual]
+l.3075     \begin{definicion}[Base dual]
                                         
-LaTeX Info: Redefining \. on input line 3078.
-LaTeX Info: Redefining \% on input line 3078.
- [62]
-Package mdframed Info: mdframed works in twoside mode on input line 3078.
+Package mdframed Info: mdframed works in twoside mode on input line 3075.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 3078.
+(mdframed)              on input line 3075.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 3092.
-Package mdframed Info: Not enough space on this page on input line 3092.
-Package mdframed Info: mdframed works in twoside mode on input line 3121.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 3121.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 3128.
-LaTeX Info: Redefining \. on input line 3128.
-LaTeX Info: Redefining \% on input line 3128.
+(mdframed)              on input line 3089.
+LaTeX Info: Redefining \. on input line 3114.
+LaTeX Info: Redefining \% on input line 3114.
  [63]
-Package mdframed Info: mdframed works in twoside mode on input line 3156.
+Package mdframed Info: mdframed works in twoside mode on input line 3118.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 3156.
+(mdframed)              on input line 3118.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 3161.
-LaTeX Info: Redefining \. on input line 3174.
-LaTeX Info: Redefining \% on input line 3174.
+(mdframed)              on input line 3125.
+LaTeX Info: Redefining \. on input line 3153.
+LaTeX Info: Redefining \% on input line 3153.
  [64]
-Package mdframed Info: mdframed works in twoside mode on input line 3222.
+Package mdframed Info: mdframed works in twoside mode on input line 3153.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 3222.
+(mdframed)              on input line 3153.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 3158.
+Package mdframed Info: mdframed works in twoside mode on input line 3219.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 3219.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 3225.
+LaTeX Info: Redefining \. on input line 3225.
+LaTeX Info: Redefining \% on input line 3225.
+ [65]
+Package mdframed Info: mdframed works in twoside mode on input line 3228.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 3228.
-Package mdframed Info: mdframed works in twoside mode on input line 3231.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 3231.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 3240.
-LaTeX Info: Redefining \. on input line 3240.
-LaTeX Info: Redefining \% on input line 3240.
- [65]
-Package mdframed Info: Not enough space on this page on input line 3240.
-LaTeX Info: Redefining \. on input line 3273.
-LaTeX Info: Redefining \% on input line 3273.
+(mdframed)              on input line 3237.
+LaTeX Info: Redefining \. on input line 3262.
+LaTeX Info: Redefining \% on input line 3262.
  [66]
 <diagramas_conmutativos7.pdf, id=732, 371.18977pt x 94.60445pt>
 File: diagramas_conmutativos7.pdf Graphic file (type pdf)
 <use diagramas_conmutativos7.pdf>
-Package pdftex.def Info: diagramas_conmutativos7.pdf  used on input line 3287.
+Package pdftex.def Info: diagramas_conmutativos7.pdf  used on input line 3284.
 (pdftex.def)             Requested size: 460.93153pt x 117.47572pt.
-LaTeX Info: Redefining \. on input line 3317.
-LaTeX Info: Redefining \% on input line 3317.
+LaTeX Info: Redefining \. on input line 3300.
+LaTeX Info: Redefining \% on input line 3300.
  [67 <./diagramas_conmutativos7.pdf>]
-LaTeX Info: Redefining \. on input line 3360.
-LaTeX Info: Redefining \% on input line 3360.
+LaTeX Info: Redefining \. on input line 3351.
+LaTeX Info: Redefining \% on input line 3351.
  [68]
-LaTeX Info: Redefining \. on input line 3362.
-LaTeX Info: Redefining \% on input line 3362.
+LaTeX Info: Redefining \. on input line 3359.
+LaTeX Info: Redefining \% on input line 3359.
  [69]
-LaTeX Info: Redefining \. on input line 3362.
-LaTeX Info: Redefining \% on input line 3362.
+LaTeX Info: Redefining \. on input line 3359.
+LaTeX Info: Redefining \% on input line 3359.
  [70
 
 ]
@@ -2461,119 +2444,124 @@ Cap\'{\i }tulo 4.
 pdfTeX warning (ext4): destination with the same identifier (name{defn.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.3366     \begin{definicion}[Función $n$-lineal]
+l.3363     \begin{definicion}[Función $n$-lineal]
                                                   
-Package mdframed Info: mdframed works in twoside mode on input line 3366.
+Package mdframed Info: mdframed works in twoside mode on input line 3363.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 3366.
+(mdframed)              on input line 3363.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 3398.
+(mdframed)              on input line 3395.
 
 pdfTeX warning (ext4): destination with the same identifier (name{ejemplo.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.3400     \begin{ejemplo}
+l.3397     \begin{ejemplo}
                            [71]
 pdfTeX warning (ext4): destination with the same identifier (name{prop.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.3436         L
+l.3433         L
                 a función
-Package mdframed Info: mdframed works in twoside mode on input line 3436.
+Package mdframed Info: mdframed works in twoside mode on input line 3433.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 3436.
+(mdframed)              on input line 3433.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 3445.
+(mdframed)              on input line 3442.
 
 pdfTeX warning (ext4): destination with the same identifier (name{defn.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.3475     \begin{definicion}[Función alternante]
+l.3472     \begin{definicion}[Función alternante]
                                                   
-Package mdframed Info: mdframed works in twoside mode on input line 3475.
+Package mdframed Info: mdframed works in twoside mode on input line 3472.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 3475.
+(mdframed)              on input line 3472.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 3493.
-LaTeX Info: Redefining \. on input line 3493.
-LaTeX Info: Redefining \% on input line 3493.
+(mdframed)              on input line 3490.
+LaTeX Info: Redefining \. on input line 3490.
+LaTeX Info: Redefining \% on input line 3490.
  [72]
 pdfTeX warning (ext4): destination with the same identifier (name{defn.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.3495 ...begin{definicion}[Función Determinante]
+l.3492 ...begin{definicion}[Función Determinante]
                                                   
-Package mdframed Info: mdframed works in twoside mode on input line 3495.
+Package mdframed Info: mdframed works in twoside mode on input line 3492.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 3495.
+(mdframed)              on input line 3492.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 3505.
+(mdframed)              on input line 3502.
 
 pdfTeX warning (ext4): destination with the same identifier (name{lema.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.3508         S
+l.3505         S
                 i $D$ es alternante, entonces
-Package mdframed Info: mdframed works in twoside mode on input line 3508.
+Package mdframed Info: mdframed works in twoside mode on input line 3505.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 3508.
+(mdframed)              on input line 3505.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 3527.
-LaTeX Info: Redefining \. on input line 3591.
-LaTeX Info: Redefining \% on input line 3591.
+(mdframed)              on input line 3524.
+LaTeX Info: Redefining \. on input line 3588.
+LaTeX Info: Redefining \% on input line 3588.
  [73]
 pdfTeX warning (ext4): destination with the same identifier (name{lema.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.3614         S
+l.3611         S
                 i $D:M_{n \times n}(F) \to F$ es una función $n$-lineal, en...
-Package mdframed Info: mdframed works in twoside mode on input line 3614.
+Package mdframed Info: mdframed works in twoside mode on input line 3611.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 3614.
+(mdframed)              on input line 3611.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 3615.
-LaTeX Info: Redefining \. on input line 3650.
-LaTeX Info: Redefining \% on input line 3650.
+(mdframed)              on input line 3612.
+LaTeX Info: Redefining \. on input line 3647.
+LaTeX Info: Redefining \% on input line 3647.
  [74]
 pdfTeX warning (ext4): destination with the same identifier (name{lema.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.3653         S
+l.3650         S
                 ea $D:M_{n \times n}(F) \to F$ una función $n$-lineal, lo s...
-Package mdframed Info: mdframed works in twoside mode on input line 3653.
+Package mdframed Info: mdframed works in twoside mode on input line 3650.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 3653.
+(mdframed)              on input line 3650.
+
+Underfull \hbox (badness 10000) in paragraph at lines 3652--3653
+
+ []
+
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 3676.
+(mdframed)              on input line 3673.
 
 pdfTeX warning (ext4): destination with the same identifier (name{prop.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.3717         L
+l.3714         L
                 a única función determinante para $n = 2$ es
-Package mdframed Info: mdframed works in twoside mode on input line 3717.
+Package mdframed Info: mdframed works in twoside mode on input line 3714.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 3717.
+(mdframed)              on input line 3714.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 3725.
-LaTeX Info: Redefining \. on input line 3731.
-LaTeX Info: Redefining \% on input line 3731.
+(mdframed)              on input line 3722.
+LaTeX Info: Redefining \. on input line 3728.
+LaTeX Info: Redefining \% on input line 3728.
  [75] (./Algebra_lineal.aux
 LaTeX Info: Redefining \. on input line 12.
 LaTeX Info: Redefining \% on input line 12.
@@ -2586,15 +2574,15 @@ Package rerunfilecheck Info: File `Algebra_lineal.out' has not changed.
 (rerunfilecheck)             Checksum: 02C81260944ED7255DB60892757531CA;3376.
  ) 
 Here is how much of TeX's memory you used:
- 41778 strings out of 467349
- 935575 string characters out of 5419862
- 1482496 words of memory out of 5000000
- 69952 multiletter control sequences out of 15000+600000
+ 41729 strings out of 467349
+ 934477 string characters out of 5419862
+ 1481952 words of memory out of 5000000
+ 69903 multiletter control sequences out of 15000+600000
  676434 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,17n,108p,840b,1255s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,17n,108p,840b,1223s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmex10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmmi12.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmmi6.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmmi8.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmr6.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmri12.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmro12.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmsy6.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmsy8.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on Algebra_lineal.pdf (77 pages, 634773 bytes).
+Output written on Algebra_lineal.pdf (77 pages, 633486 bytes).
 PDF statistics:
  937 PDF objects out of 1000 (max. 8388607)
  731 compressed objects within 8 object streams
