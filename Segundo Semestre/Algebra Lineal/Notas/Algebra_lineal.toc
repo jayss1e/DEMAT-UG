@@ -6,15 +6,19 @@
 \contentsline {section}{\numberline {1.4}Matrices reducidas y matrices escalonadas}{12}{section.1.4}%
 \contentsline {section}{\numberline {1.5}Producto de matrices}{17}{section.1.5}%
 \contentsline {section}{\numberline {1.6}Matrices Invertibles}{21}{section.1.6}%
-\contentsline {chapter}{\numberline {2}Espacios Vectoriales}{27}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Espacios Vectoriales}{27}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Subespacios vectoriales}{29}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Bases y Dimension}{33}{section.2.3}%
-\contentsline {chapter}{\numberline {3}Transformaciones Lineales}{41}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Transformaciones lineales}{41}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Isomorfismo}{48}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Representacion transformaciones por matrices}{52}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Funciones Lineales}{58}{section.3.4}%
-\contentsline {section}{\numberline {3.5}Transpuesta de una transformación lineal}{65}{section.3.5}%
-\contentsline {chapter}{\numberline {4}Determinante}{71}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Funciones Determinantes}{71}{section.4.1}%
+\contentsline {section}{\numberline {1.7}Ejercicios}{26}{section.1.7}%
+\contentsline {chapter}{\numberline {2}Espacios Vectoriales}{31}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Espacios Vectoriales}{31}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Subespacios vectoriales}{33}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Bases y Dimension}{37}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Ejrecicios}{44}{section.2.4}%
+\contentsline {chapter}{\numberline {3}Transformaciones Lineales}{49}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Transformaciones lineales}{49}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Isomorfismo}{56}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Representacion transformaciones por matrices}{60}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Funciones Lineales}{66}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Transpuesta de una transformación lineal}{73}{section.3.5}%
+\contentsline {section}{\numberline {3.6}Ejercicios}{77}{section.3.6}%
+\contentsline {chapter}{\numberline {4}Determinante}{81}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Funciones Determinantes}{81}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Ejercicios}{86}{section.4.2}%

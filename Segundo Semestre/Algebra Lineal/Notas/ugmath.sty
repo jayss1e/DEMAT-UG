@@ -293,6 +293,19 @@
   \hfill$\blacktriangle$\par\medskip
 }
 
+% ─── Contador de ejercicios ────────────────────────────────────────
+\newcounter{ejercicio}[chapter]
+\renewcommand{\theejercicio}{\thechapter.\arabic{ejercicio}}
+
+% ─── Entorno ejercicio ─────────────────────────────────────────────
+\newenvironment{ejercicio}{%
+  \refstepcounter{ejercicio}%
+  \par\medskip
+  \noindent\textbf{Ejercicio \theejercicio}\space\ignorespaces
+}{%
+  \par\medskip
+}
+
 % ========== HIPERVÍNCULOS ==========
 \usepackage{hyperref}
 \hypersetup{

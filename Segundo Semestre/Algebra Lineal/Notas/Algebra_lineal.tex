@@ -12,6 +12,7 @@
 \renewcommand{\Tr}{\operatorname{Tr}}
 \newcommand{\llaves}[1]{\{#1\}}
 \newcommand{\parentesis}[1]{\left(#1\right)}
+\newcommand{\corchetes}[1]{\left[#1\right]}
 \newcommand{\llavesgrande}[1]{\big\{#1\big\}}
 \newcommand{\llavesgrandes}[1]{\left\{#1\right\}}
 
@@ -42,10 +43,10 @@
 
         \textbf{Román}\\[0.3cm]
 
-        \textit{A spotify que me acompañó\\
+        \textit{Al comedor de Cimat por la buena comida que dan.\\
+        A spotify que me acompañó\\
         en cada momento durante la redacción.\\
         A Uicab que me ayudó a verificar las notas.\\
-        Al comedor de Cimat por la buena comida que dan.\\
         Pero sobre todo, al grupo de todos ínfimos \\
         que han mejorado mi paso por la universidad}
 
@@ -517,7 +518,7 @@
     Tenemos una relación de equivalencia definida en $M_{m\times n}(F)$. Si $A\in M_{m\times n}(F)$ su clase
     de equivalencia es
     \begin{equation*}
-        [A]=\biggl\{A_{1}\in M_{m\times n}(F):A\text{ es equivalente a} A_{i}\biggr\}
+        [A]=\biggl\{A_{i}\in M_{m\times n}(F):A\text{ es equivalente a} A_{i}\biggr\}
     \end{equation*}
     y el conjunto de clases forman una partición de $M_{m\times n}(F)$.
 
@@ -1126,7 +1127,10 @@
     \end{proposicion}
 
     \begin{proof}
-        $Q_{1}\cdot P=I_{m}\implies(Q_{1}\cdot P)Q_{2}=I_{m}\cdot Q_{2}\implies Q_{1}(P\cdot Q_{2})=Q_{1}\cdot I_{m}=Q_{1}=Q_{2}=Q$.
+        Notemos que
+        \[
+        Q_{1}\cdot P=I_{m}\implies(Q_{1}\cdot P)Q_{2}=I_{m}\cdot Q_{2}\implies Q_{1}(P\cdot Q_{2})=Q_{1}\cdot I_{m}=Q_{1}=Q_{2}=Q.
+        \]
     \end{proof}
     En este caso diremos que $P$ es invertible y $Q$ es la inversa de $P$.
 
@@ -1139,7 +1143,10 @@
     \end{proposicion}
 
     \begin{proof}
-        $A=AI_{m}=A(P\cdot B)=(AP)\cdot B= I_{m}\cdot B=B$.
+        Veamos que
+        \[
+        A=AI_{m}=A(P\cdot B)=(AP)\cdot B= I_{m}\cdot B=B.
+        \]
     \end{proof}
 
     Notación. La matriz $Q$ tal que $P\cdot Q=QP=I_{m}$ se denota por $P^{-1}$, si existe.
@@ -1223,10 +1230,12 @@
     \end{lema}
     
     \begin{proof}
+        Tenemos que
         \begin{align*}
             (A\cdot B)(B^{-1}\cdot A^{-1})&=I_{m}\\
             (B^{-1}\cdot A^{-1})(A\cdot B)&=I_{m}.
         \end{align*}
+        Obteniendo así lo deseado.
     \end{proof}
 
     En general, si $A_{1},\dots,A_{s}\in M_{m\times m}(F)$, entonces $A_{1}\cdot A_{2}\cdots A_{s}$
@@ -1241,7 +1250,7 @@
     \end{proposicion}
 
     \begin{proof}
-        Si $A$ es equivalente a $I_{m}$ entonces existe $P\in M_{m\times m}(F)$ invertibel tal que
+        Si $A$ es equivalente a $I_{m}$ entonces existe $P\in M_{m\times m}(F)$ invertible tal que
         \begin{equation*}
             PA=I_{m}
         \end{equation*}
@@ -1268,7 +1277,8 @@
     \end{teorema}
 
     \begin{proof}
-        $(i)\implies (ii)\implies (iii)\implies (i)$\\
+        Basta demostrar que
+        $$(i)\implies (ii)\implies (iii)\implies (i).$$
         Supongamos que $A$ es invertible, es decir, existe $A^{-1}$. Sea $R$ la matriz RFE
         a $A$, entonces
         \begin{equation*}
@@ -1309,7 +1319,7 @@
     \end{corolario}
 
     \begin{proof}
-        $P\in M_{m\times m}(F)$ es invertible si y solo si $P$ es producto de matrices elementales,
+        Tenemos que $P\in M_{m\times m}(F)$ es invertible si y solo si $P$ es producto de matrices elementales,
         \begin{equation*}
             B=P^{-1}A.
         \end{equation*}
@@ -1403,6 +1413,253 @@
         \end{equation*}
     \end{proof}
 
+    \section{Ejercicios}
+
+    En todos los problemas, $F$ es el campo $\Q, \R$ o $\C$.
+
+    \begin{ejercicio}
+        Demuestra que el cero de $F$ es único y que para todo $a \in F \setminus \{ 0 \}$, su inverso multiplicativo, $a^{-1}$ es único.
+    \end{ejercicio}
+
+    \begin{ejercicio}
+        Considera el sistema de $3$ ecuaciones lineales en $2$ variables con coeficientes en $F$:
+        \begin{align}
+            x_1 + 6x_2 & = 2 \tag{2.1}\\
+            x_1 - x_2 & = 2 \tag{2.2}\\
+            x_1 + x_2 & = 1 \tag{2.3},
+        \end{align}
+        Encuentra el conjunto solución. ¿Existe alguna solución del sistema homogéneo? Justifica tus respuestas.
+    \end{ejercicio}
+
+    \begin{ejercicio}
+        Sean $m,n \in \N$. Demuestra que la relación definida en el conjunto de sistemas de $m$ ecuaciones lineales en $n$ variables con coeficientes en $F$ de \textbf{ser equivalentes}, es una relación transitiva.
+    \end{ejercicio}
+
+    \begin{ejercicio}
+        Sean $a_{ij}, b_i \in F, 1 \leq i \leq 2, 1 \leq j \leq 2$, con $a_{11} \neq 0$. Da condiciones necesarias y suficientes para el siguiente sistema lineal de 2 ecuaciones y 2 variables tenga conjunto solución no vacío:
+        \begin{align}
+            a_{11}x_{1} + a_{12}x_{2} & = b_{1} \\
+            a_{21}x_{1} + a_{22}x_{2} & = b_{2}.
+        \end{align}
+    \end{ejercicio}
+
+    \vspace{2cm}
+
+    \begin{ejercicio}
+        Determina si los siguientes sistemas de ecuaciones son equivalentes, y si lo son, expresa cada ecuación de uno como combinación lineal de las ecuaciones del otro:\\
+        (a) 3 ecuaciones y 3 variables:
+        \vspace{-1.5\baselineskip}
+        \begin{multicols}{2}
+            \begin{minipage}[t]{\linewidth}
+                \begin{align}
+                    -x_1 + x_2 + 4x_3 &= 0, \\
+                    x_1 + 3x_2 + 8x_3 &= 0, \\
+                    \frac12 x_1 + x_2 + \frac 52 x_3 &= 0.
+                \end{align}
+            \end{minipage}
+            
+            \columnbreak
+            
+            \begin{minipage}[t]{\linewidth}
+                \begin{align*}
+                    x_1 - x_3 &= 0, \\
+                    x_2 + 3x_3 &= 0. 
+                \end{align*}
+            \end{minipage}
+        \end{multicols}
+        (b) 3 ecuaciones y 3 variables:
+        \vspace{-1.5\baselineskip}
+        \begin{multicols}{2}
+            \begin{minipage}[t]{\linewidth}
+                \begin{align*}
+                    -x_1 + x_2 + 4x_3 &= 0, \\
+                    x_1 + 3x_2 + 8x_3 &= 0,  \\
+                    \frac12 x_1 + x_2 + \frac52 x_3 &= 0. 
+                \end{align*}
+            \end{minipage}
+            
+            \columnbreak
+            
+            \begin{minipage}[t]{\linewidth}
+                \begin{align*}
+                    x_1 - x_3 & = 0, \\
+                    x_2 + x_3 & = 0. 
+                \end{align*}
+                
+            \end{minipage}
+        \end{multicols}
+    \end{ejercicio}
+
+    \begin{ejercicio}
+        ¿Para qué valores de $a \in \Q$ el siguiente sistema tiene una infinidad de soluciones?
+        \begin{align}
+            ax_{1} + 2x_{2} & = 0, \tag{6.1} \label{6.1}\\
+            2x_{1} + ax_{2} & = 0. \tag{6.2} \label{6.2}
+        \end{align}
+    \end{ejercicio}
+
+    \begin{ejercicio}
+        Demuestra que el intercambio de dos filas en una matriz $m \times n$ con coeficientes en $F$, puede hacerse mediante un número finito de operaciones elementales de fila de los otros dos tipos.
+    \end{ejercicio}
+
+    \begin{ejercicio}
+        Sea $(A|B) \in M_{m \times (n+1)}(F)$ una matriz aumentada correspondiente a un sistema de $m$ ecuaciones lineales en $n$ variables. Demuestra que si $(A_1|B_1)$ es una matriz equivalente por filas a $(A|B)$ entonces toda solución del sistema correspondiente a $(A|B)$ es solución al sistema correspondiente a $(A_1|B_1)$.
+    \end{ejercicio}
+
+    \begin{ejercicio}
+        Encuentra todas las soluciones que el sistema:
+        \begin{align*}
+            2x_1 - 3x_2 - 7x_3 + x_4 + 2x_5 = - 2\\
+            x_1 - 2x_2 - 4x_3 + 3x_4 + x_5 = - 1\\
+            2x_1 - 4x_3 + 2x_4 + x_5 = 3\\
+            x_3 + 6x_4 + 2x_5 = 0,
+        \end{align*}
+        Tiene en $\Q^5$.
+    \end{ejercicio}
+
+    \begin{ejercicio}
+        Sean $m,n \in \N$ y sea $r$ el número de pivotes de una matriz reducida por filas de tamaño $m \times n$ con coeficientes en $F$. Demuestra que si $r < n$, entonces el sistema lineal homogéneo asociado tiene una infinidad de soluciones.
+    \end{ejercicio}
+
+    \begin{ejercicio}
+        Determina si las siguientes matrices definidas sobre el campo de los números reales:
+        \[
+        \begin{pmatrix}
+            2 & -1 & 0 \\
+            1 & -2 & 1 \\
+            1 & 3 & -1
+        \end{pmatrix}
+        \quad
+        \begin{pmatrix}
+            1 & 1 & 0 \\
+            0 & 1 & 0 \\
+            0 & 0 & 1 \\
+        \end{pmatrix},
+        \]
+        son equivalentes por filas a la matriz
+        \[
+        \begin{pmatrix}
+        1 & 0 & 0 \\
+        0 & 1 & 0 \\
+        0 & 0 & 1 \\
+        \end{pmatrix}.
+        \]
+        Si es así, describe las operaciones elementales de fila que aplicaste en cada caso.
+    \end{ejercicio}
+
+    \begin{ejercicio}
+        Enumera todas las posibles matrices reducidas por filas y escalonadas de tamaño $3 \times 4$. Escribe los 0 y 1 donde corresponda; y usa $\ast$ para lugares donde puede ir cualquier elemento de $F$.
+    \end{ejercicio}
+
+    \begin{ejercicio}
+        Responde si es falso (F) o verdadero (V) y justifica tu respuesta:
+        \begin{itemize}
+            \item[(a)] Si un sistema de ecuaciones lineales $Ax = B$ tiene más variables que ecuaciones, entonces el sistema tiene infinitas soluciones.
+            \item[(b)] Un sistema consistente tiene una solución única si y solo si no existen variables libres.
+            \item[(c)] Si el sistema homogéneo $Ax = 0$ tiene al menos una variable libre, entonces el sistema $Ax = B$ tiene infinitas soluciones para cualquier matriz $B$.
+            \item[(d)] Si el sistema de ecuaciones lineales $Ax = B$ tiene al menos una variable libre, entonces el sistema es consistente.
+        \end{itemize}
+    \end{ejercicio}
+
+    \begin{ejercicio}
+        En este problema se trabajará sobre $\R$. Encuentra la matriz reducida por filas y escalonada equivalente a:
+        \[
+        \begin{pmatrix}
+            1\\
+            2\\
+            7\\
+            0\\
+        \end{pmatrix},
+        \quad
+        \begin{pmatrix}
+            1 & -2 \\
+            0 & 2 \\
+            11 & 1 + \sqrt{2}\\
+        \end{pmatrix},
+        \quad
+        \begin{pmatrix}
+            1 & -1 & 2\\
+            2 & 0 & 3\\
+        \end{pmatrix},
+        \quad
+        \begin{pmatrix}
+            1 & -1 & 2\\
+            2 & 0 & 3\\
+            0 & -3 & -1\\
+            1 & 0 & 0\\
+        \end{pmatrix},
+        \]
+        encuentra las soluciones del sistema homogéneo correspondiente. Finalmente, determina cuáles son las variables independientes y dependientes en cada caso.
+    \end{ejercicio}
+
+    \begin{ejercicio}
+        En este problema se trabajará sobre $\R$. Considera el sistema
+        \begin{align*}
+            3x_1 - x_2 + 2x_3 = b_1\\
+            2x_1 + x_2 + x_3 = b_2\\
+            x_1 - 3x_2 = b_3,
+        \end{align*}
+        Encuentra todas las ternas $(b_1, b_2, b_3)$ para las que el sistema tiene alguna solución (justifica tu respuesta).
+    \end{ejercicio}
+
+    \begin{ejercicio}
+        Sea $A \in Mat_{n \times n}(F)$. Demuestra que $A$ es equivalente por filas a la matriz identidad si y solo si, el sistema homogéneo asociado a $A$ tiene solo la solución trivial $(0, \dots , 0) \in F^n$.
+    \end{ejercicio}
+
+    \begin{ejercicio}
+        Demuestra por inducción en el número de filas que el producto de matrices con coeficientes en un campo $F$ es asociativo.
+    \end{ejercicio}
+
+    \begin{ejercicio}
+        Sean $A,B$ matrices con coeficientes en un campo $F$, de tamaño $2 \times 1, 1 \times 2$, respectivamente. Demuestra que $AB$ no es invertible.
+    \end{ejercicio}
+
+    \begin{ejercicio}
+        Determina si la matriz
+        \[
+        A =
+        \begin{pmatrix}
+            1 & 2 & 3 & 4\\
+            0 & 1 & 3 & 4\\
+            0 & 0 & 1 & 4\\
+            0 & 0 & 0 & 1\\
+        \end{pmatrix},
+        \]
+        es invertible.
+    \end{ejercicio}
+
+    \begin{ejercicio}
+        Sea $A$ una matriz cuadrada $n \times n$ con coeficientes en $F$. Demuestra que si $A$ no es invertible, entonces el sistema lineal homogéneo, $AX = 0$ tiene una infinidad de soluciones.
+    \end{ejercicio}
+
+    \begin{ejercicio}
+        Sea $A \in M_{n \times n}(F)$. Demuestra que si $A$ tiene inversa derecha o inversa izquierda, entonces $A$ es invertible.
+    \end{ejercicio}
+
+    \begin{ejercicio}
+        Sea $A$ una matriz $n \times n$. Demuestra que si $A$ es invertible y $AB = 0_{n \times n}$ para alguna matriz $B$ de tamaño $n \times n$, entonces $B = 0_{n \times n}$.
+    \end{ejercicio}
+
+    \begin{ejercicio}
+        Sean
+        \[
+        A_1 =
+        \begin{pmatrix}
+            2 & 0 & 0\\
+            1 & -3 & 3\\
+            0 & 1 & 3\\
+        \end{pmatrix}
+        , \quad A_2 =
+        \begin{pmatrix}
+            1 & 2 & 1 & 0\\
+            1 & 0 & 3 & 5\\
+            1 & 0 & 1 & 1\\
+        \end{pmatrix}
+        ,
+        \]
+        matrices con coeficientes en $\R$. Encuentra las matrices reducidas por filas y escalonadas $R_1, R_2$ equivalentes a $A_1$ y $A_2$, respectivamente. Encuentra las matrices invertibles $P_1, P_2$ tales que $R_1 = P_1A_1, R_2 = P_2 A_2$.
+    \end{ejercicio}
+
     \chapter{Espacios Vectoriales}
 
     \section{Espacios Vectoriales}
@@ -1476,13 +1733,8 @@
         Sea $V$ un espacio vectorial sobre un campo $F$, entonces
         \begin{enumerate}
             \item[(1)] $V$ es no vacío, pues contiene a 0
-            \item[(2)] El cero $0\in V$ tal que $v+0=v,\quad\forall v\in V$ es único
-            supongamos que $0^{\prime}\in V$ que satisfacen esta propiedad, entonces
-            \begin{equation*}
-                0=0+0^{\prime}=0^{\prime}+0=0^{\prime}
-            \end{equation*}
+            \item[(2)] El cero $0\in V$ tal que $v+0=v,\quad\forall v\in V$ es único.
             \item[(3)] Dado $v\in V$, el vector $-v\in V$ tal que $v+(-v)=0$ es único.
-            Supongamos que $w\in V$ satisface $v+w=0$ entonces $((-v)+v)+w=0+w=w=-w+(v+w)=-v+0=-v$.
             \item[(4)] $0\cdot v=0\in V$
             \item[(5)] $a\cdot 0=0$ 
         \end{enumerate}
@@ -1587,7 +1839,7 @@
         \begin{equation*}
             v=\sum_{i=1}^{n}a_{i}v_{i}.
         \end{equation*}
-        Como $v_{1},\dots,v_{n}\in S\subset\gen{S}\implies v\in\gen{S}$.
+        Como $v_{1},\dots,v_{n}\in S\subset\gen{S}$ se sigue que $v\in\gen{S}$.
     \end{proof}
 
     \begin{lema}
@@ -1712,7 +1964,7 @@
     \end{lema}
 
     \begin{proof}
-        Si $S=\varnothing$, entonces $\gen{S}=\{0\}$ y si $V\neq\varnothing$, $\exists v\in V\setminus\{0\}$
+        Si $S=\varnothing$, entonces $\gen{S}=\{0\}$ y si $V\neq\varnothing$, existe $v\in V\setminus\{0\}$
         y $\{v\}$ es linealmente independiente. Si $S\neq\varnothing$ y $w\in V\setminus\gen{S}$.
         Tomamos $v_{1},\dots,v_{n}\in S_{1}$, $c_{1},\dots,c_{n},b\in F$ tales que
         \begin{equation*}
@@ -1722,7 +1974,7 @@
         \begin{equation*}
             c_{1}v_{1}+\cdots+c_{n}v_{n}=0,
         \end{equation*}
-        como $S$ es linealmente independiente entonces $c_{1}=c_{2}=\cdots=c_{n}=0$. Si $b=\neq0$,
+        como $S$ es linealmente independiente entonces $c_{1}=c_{2}=\cdots=c_{n}=0$. Si $b\neq0$,
         entonces
         \begin{equation*}
             w=-\frac{c_{1}}{b}v_{1}-\frac{c_{2}}{b}v_{2}-\cdots-\frac{c_{n}}{b}v_{n}.
@@ -1828,7 +2080,7 @@
 
     \begin{proof}
         Si $\dim(W)\gt n$, entonces existiria en $V$ un conjunto linealmente independiente con mas
-        de $n$ elementos, esto es una contradicción. De hecho $\dim(W)=n\Leftrightarrow W=V$.
+        de $n$ elementos, esto es una contradicción. De hecho $\dim(W)=n$ si solo si $W=V$.
     \end{proof}
 
     \begin{lema}
@@ -1939,6 +2191,8 @@
             v&\mapsto[v]_{\BB}
         \end{align*}
     \end{definicion}
+
+    Den
 
     \begin{ejemplo}
         Si $P_{n}=\biggl\{\sum_{i=0}^{n}c_{i}x^{i}:c_{i}\in\R\biggr\}$,
@@ -2067,6 +2321,156 @@
         \end{align*}
     \end{proof}
 
+    \section{Ejrecicios}
+
+    En todos los problemas, $F$ es el campo $\Q, \R$ o $\C$.
+
+    \begin{ejercicio}
+        Sea $V$ un espacio vectorial sobre $F$. Demuestra que
+        \begin{itemize}
+            \item[(a)] El vector cero $0 \in V$ es único.
+            \item[(b)] Para todos $v_1, v_2 \in V$, existe un único $v_3 \in V$ tal que $v_1 + v_3 = v_2$
+            \item[(c)] Para todo $v \in V$, se tiene que $(-1)v = -v$ y $0v = 0$.
+        \end{itemize}
+    \end{ejercicio}
+
+    \begin{ejercicio}
+        Considera $V = \llaves{(x_1,x_2) : x_1,x_2 \in \C}$ y define las operaciones:
+        \begin{align*}
+            + : V \times V & \to V\\
+            \parentesis{(x_1,x_2), (y_1, y_2)} & \mapsto (x_1 + y_1 + 1, x_2 + y_2 + 1),
+        \end{align*}
+        \begin{align*}
+            \cdot : \C \times V & \to V\\
+            (c,(x_1, x:2)) & \mapsto (cx_1 + c - 1, cx_2 + c - 1).
+        \end{align*}
+        ¿Es $V$ un espacio vectorial sobre $\C$ con estas operaciones?.
+    \end{ejercicio}
+
+    \begin{ejercicio}
+        Considera el espacio vectorial usual $\R^n$ sobre $\R$, determina cuáles de los siguientes subconjuntos son subespacios vectoriales de $\R^n$:
+        \begin{itemize}
+            \item[(a)] $W = \llavesgrande{(a_1, \dots , a_n) \in \R^n: a_1 \geq 0}$.
+            \item[(b)] $W = \llavesgrande{(a_1, \dots , a_n) \in \R^n:a_1 + 3a_2 = a_3}$.
+            \item[(c)] $W = \llavesgrande{(a_1, \dots , a_n) \in \R^n:a_1 = a_2}$
+            \item[(d)] $W = \llavesgrande{(a_1, \dots , a_n) \in \R^n: a_j \in \Q, \text{ para todo }1 \leq j \leq n}$.
+        \end{itemize}
+    \end{ejercicio}
+
+    \begin{ejercicio}
+        Sean $W_1, W_2$ subespacios vectoriales de un espacio vectorial $V$ sobre el campo $F$. Demuestra que si $W_1 \cup W_2$ es un espacio vectorial de $V$, entonces uno de los espacios $W_j$ está contenido en el otro.
+    \end{ejercicio}
+
+    \begin{ejercicio}
+        Considera el $\R$-espacio vectorial , $V = \llaves{f:\R \to \R : f \text{ es una función continua}}$. Demuestra que la función $f(x) = \sin (x)$ no es combinación lineal de las funciones $x, x^2, x^3$.
+    \end{ejercicio}
+
+    \begin{ejercicio}
+        Sea $V$ un espacio vectorial sobre un campo $F$ y sean $W_1, \dots , W_k$ subespacios vectoriales de $V$. Demuestra que
+        \[
+        W_1 + \dotsi + W_k := \llavesgrande{ w_1 + \dotsi + w_k: w_i \in W_i, \forall i \in \{1, \dots, k \}},
+        \]
+        es un subespacio vectorial de $V$.
+    \end{ejercicio}
+
+    \begin{ejercicio}
+        Falso o verdadero (justifica tus respuestas: si es verdadero demuéstralo y si es falso da un contraejemplo):
+        \begin{itemize}
+            \item[(a)] El vacío es un subconjunto linealmente independiente.
+            \item[(b)] Sea $V$ un espacio vectorial sobre $F$, si $S \subset V$ es linealmente dependiente entonces cualquier subconjunto propio de $S$ es linealmente independiente.
+            \item[(c)] Sea $V$ un espacio vectorial sobre $F$, si $S \subset V$ es linealmente independiente entonces cualquier subconjunto de $S$ es linealmente independiente.
+            \item[(d)] Si un conjunto de cuatro vectores en $\R^4$ es linealmente independiente, entonces necesariamente genera a $\R^4$.
+        \end{itemize}
+    \end{ejercicio}
+
+    \begin{ejercicio}
+        Demuestra que el espacio vectorial $V = \llaves{f: \R \to \R: f \text{ es función}}$ sobre $\R$, existe un conjunto infinito que es linealmente independiente.
+    \end{ejercicio}
+
+    \begin{ejercicio}
+        Encuentra el conjunto $\llaves{v_1, v_2, v_3}$ de vectores linealmente dependientes en $\R^3$ tales que dos a dos son linealmente independientes.
+    \end{ejercicio}
+
+    \begin{ejercicio}
+        Sean $a,b,c \in \R$ distintos entre sí. Demuestra que $\llaves{(1, 1, 1), (a, b, c), (a^2, b^2, c^2)}$ es linealmente independiente en $\R^3$.
+    \end{ejercicio}
+
+    \begin{ejercicio}
+        Encuentra una base de $\R^3$ que contenga a los vectores $(1, 1, 1)$ y $(1, 2, 3)$, si existe. Si no existe, demuéstralo.
+    \end{ejercicio}
+
+    \begin{ejercicio}
+        Encuentra una base del espacio de soluciones en $F^4$ del sistema:
+        \begin{align*}
+            x_1 + 4x_2 + 3x_3 - x_4 = & 0\\
+            3x_1 - 5x_2 + 9x_3 - 2x_4 = & 0\\
+            2x_1 - x_2 + 6x_3 - x_4 = & 0.\\
+        \end{align*}
+    \end{ejercicio}
+
+    \begin{ejercicio}
+        Sean $W_1$, $W_2$ subespacios vectoriales de dimensión 2 en $F^3$, demuestra que:
+        \[
+        \dim_F(W_1 \cap W_2) > 0.
+        \]
+    \end{ejercicio}
+
+    \begin{ejercicio}
+        Sea $V$ un espacio vectorial de dimensión $n$ sobre un campo $F$. Determina si las siguientes afirmaciones son falsas o verdaderas, justifica tus respuestas:
+        \begin{itemize}
+            \item[(a)] Para todo $v \in V$, existe una base $V$ que contiene a $v$.
+            \item[(b)] Si $\llaves{v_1, \dots, v_n}$ genera a $V$, entonces es una base de $V$.
+            \item[(c)] Si $S = \llaves{v_1, \dots, v_n, v_{n+1}}$ genera a $V$, entonces existe un subconjunto de $S$ con $n$ elementos que es una base de $V$.
+            \item[(d)] Si $w \in V \setminus \llaves{0}$ y $\mathcal{B} = \llaves{v_1, \dots, v_n}$ es una base de $V$, entonces existe $i \in \llaves{1, \dots, n}$ tal que al reemplazar $w$ por $v_i$ en $\mathcal{B}$, seguimos teniendo una base de $V$.
+        \end{itemize}
+    \end{ejercicio}
+
+    \begin{ejercicio}
+        Sea $V$ un espacio vectorial sobre $F$ y sea $\llaves{v_1, v_2, v_3, v_4}$ una base de $V$. Consideramos los vectores $w_1 = v_1 + v_2$, $w_2 = v_2 + v_3$, $w_3 = v_3 + v_4$ y $w_4 = v_4 + v_1$. Encuentra la dimensión y una base del subespacio de $V$ generado por $\llaves{w_1, w_2, w_3, w_4}$. ¿Exista algún subconjunto de $\llaves{w_1, w_2, w_3, w_4}$ que sea una base de este subespacio? justifica tu respuesta.
+    \end{ejercicio}
+
+    \begin{ejercicio}
+        Demuestra que el espacio vectorial $\mathcal{F} = \llaves{f: \R \to \R : f \text{ es una función continua}}$ no es un espacio de dimensión finita sobre $\R$.
+    \end{ejercicio}
+
+    \begin{ejercicio}
+        Sea $W = \llaves{(x_1, \dots, x_n) \in \R^n : x_1 + 2x_2 + \dotsi + nx_n = 0}$. Demuestra que $W$ es un subespacio vectorial de $\R^n$ y encuentra una base para él.
+    \end{ejercicio}
+
+    \begin{ejercicio}
+        Dado un espacio vectorial $V$ de dimensión finita $n$ sobre $F$ y dada una base ordenada $\mathcal{B}$ de $V$. Demuestra que para todo $v, w \in V$y $a \in F$, se tiene que:
+        \[
+        \corchetes{av + w}_\BB = a[v]_\BB + [w]_\BB.
+        \]
+    \end{ejercicio}
+
+    \begin{ejercicio}
+        Demuestra que $\BB = \llaves{\parentesis{1, 2, 0, 1}, \parentesis{0, 1, 1, 3}, \parentesis{2, 0, 1, 1},(1, 1, 1, 1)}$ es una base de $\R^4$. Encuentra las coordenadas de $(a, b, c, d) \in \R^4$ en la base ordenada $\BB$.
+    \end{ejercicio}
+
+    \begin{ejercicio}
+        Considera $V_2$ el espacio vectorial sobre $\R$ de polinomios de grado menor o igual que 2 con coeficientes en $\R$. Sea $c \in \R \setminus \llaves{0}$, entonces $\BB_2 = \llaves{1, x + c, x^2 + c}$ es base ordenada para $W_2$. Encuentra la matriz $P$ de cambio de base de $\BB_2$ a la base ordenada $\BB_1 = \llaves{1, x, x^2}$.
+    \end{ejercicio}
+
+    \begin{ejercicio}
+        Demuestra $\BB_2 = \llaves{(2i, 1, 0), (2, -1, 1), (0, 1 + i, 1 - i)}$ es una base de ordenada de $\C^3$ y encuentra la matriz de cambio de base de $\BB_2$ a la base canónica $\BB_1$.
+    \end{ejercicio}
+
+    \begin{ejercicio}
+        Sea $V$ un espacio vectorial de dimensión finita $n$ sobre un campo $F$ y sean $\BB_1, \BB_2, \BB_3$ bases ordenadas de $V$. Si $P$ es la matriz de cambio de base de $\BB_2$ a $\BB_1$ y $Q$ es la matriz de cambio de base de $\BB_3$ a $\BB_2$. Encuentra la matriz de cambio de base de $\BB_3$ a $\BB_1$ en términos de $P$ y $Q$.
+    \end{ejercicio}
+
+    \begin{ejercicio}
+        Sea $V = \R^3$ y considera las bases:
+        \[
+        \BB = \llaves{(1, 1, 0), (0, 1, 1), (1, 0, 1)}, \quad \mathcal{C} = \llaves{(2, 1, 1), (1, 1, 0), (0, 1, 1)}.
+        \]
+        \begin{itemize}
+            \item[(a)] Calcula la matriz de cambio de base de $\mathcal{C}$ a $\BB$.
+            \item[(b)] Encuentra todos los vectores $v \in \R^3$ tales que $[v]_\BB = [v]_\mathcal{C}$.
+        \end{itemize}
+    \end{ejercicio}
+    
     \chapter{Transformaciones Lineales}
 
     \section{Transformaciones lineales}
@@ -3088,18 +3492,16 @@
         \]
     \end{definicion}
     
-    \begin{ejemplo}
-            Sean el espacio vectorial $V = \llaves{\sum_{i = 0}^na_ix^{i}:\; a_i \in \R}$ y la base ordenada $\BB = \llaves{1, x, x^2, \dots, x^n}$. Construyamos la base dual $\BB$ de $V^*$. Notemos que
-        \begin{align*}
-            f_i: V & \longrightarrow F\\
-            x^j & \longmapsto \delta_{ij}.
-        \end{align*}
-        Luego,
-        \[
-        f\parentesis{\sum_{k = 0}^na_kx^k} = \sum_{k = 0}^{n}a_k\delta_{ik} = a_i
-        \]
-        Por lo cual, $\BB^* = \llaves{f_0, f_1, \dots, f_n}$.
-    \end{ejemplo}
+    \textbf{Ejemplo.} Sean el espacio vectorial $V = \llaves{\sum_{i = 0}^na_ix^{i}:\; a_i \in \R}$ y la base ordenada $\BB = \llaves{1, x, x^2, \dots, x^n}$. Construyamos la base dual $\BB$ de $V^*$. Notemos que
+    \begin{align*}
+        f_i: V & \longrightarrow F\\
+        x^j & \longmapsto \delta_{ij}.
+    \end{align*}
+    Luego,
+    \[
+    f\parentesis{\sum_{k = 0}^na_kx^k} = \sum_{k = 0}^{n}a_k\delta_{ik} = a_i
+    \]
+    Por lo cual, $\BB^* = \llaves{f_0, f_1, \dots, f_n}$. \hfill $\blacktriangleleft$
 
     Sea $V$ un espacio vectorial, tomemos $v \in V$, podemos definir
     \begin{align*}
@@ -3355,6 +3757,162 @@
         & = [T_2]^t_{\BB_V}[T_1]^t_{\BB_V}\\
         & = ([T_1]_{\BB_V}[T_2]_{\BB_V})^t.
     \end{align*}
+
+    \section{Ejercicios}
+
+    En todos los problemas, $F$ es el campo $\Q, \R$ o $\C$.
+
+    \begin{ejercicio}
+        Determina cuales de las siguientes funciones $T$ de $\R^2$ a $\R^2$ son transformaciones lineales:
+        \begin{itemize}
+            \item[(a)] $T(x_1, x_2) = \parentesis{1 + x_1, x_2}$.
+            \item[(b)] $T(x_1, x_2) = \parentesis{x_2, x_1}$.
+            \item[(c)] $T(x_1, x_2) = \parentesis{x_1 + 2x_2, x_1 - 4x_2}$.
+            \item[(d)] $T(x_1, x_2) = \parentesis{\sin(x_1), \sin (x_2)}$.
+        \end{itemize}
+        Justifica tus respuestas.
+    \end{ejercicio}
+
+    \begin{ejercicio}
+        ¿Existe alguna transformación lineal de $\R^3$ en $\R^2$ tal que $T(2, 2, 2) = (2, 0)$ y $T(1, 1, 1) = (0, 1)$?
+    \end{ejercicio}
+
+    \begin{ejercicio}
+        Sea $T: \R^3 \to \R^3$ tal que $T(1, 0, 0) = (0, 0, 1)$, $T(1, 1, 0) = (1, 1, 1)$ y $T(1, 1, 1) = (1, 1, 0)$.
+        \begin{itemize}
+            \item[(a)] Encuentra $T(x_1, x_2, x_3)$.
+            \item[(b)] Encuentra el espacio nulo, imagen, nulidad y rango de $T$.
+        \end{itemize}
+    \end{ejercicio}
+
+    \begin{ejercicio}
+        Sean $V_1, V_2, V_3$ espacios vectoriales sobre $F$. Sean $T_1:V_1 \to V_2$ y $T_2: V_2 \to V_3$, transformaciones lineales. Demuestra que $T_2 \circ T_1 : V_1 \to V_3$ es una transformación lineal.
+    \end{ejercicio}
+
+    \begin{ejercicio}
+        Sea $V$ un espacio vectorial de dimensión finita $n$ sobre $F$ y sea $T: V \to V$ una transformación lineal tal que $\Im {T} = \ker {T}$. Demuestra que $n$ es par y construye un ejemplo de una transformación lineal con esta propiedad.
+    \end{ejercicio}
+
+    \begin{ejercicio}
+        Sea $V$ un espacio vectorial de dimensión $n$ sobre el campo $F$ y sea $\mathcal{B} = \llaves{v_1, \dots, v_n}$ una base ordenada de $V$. Definimos la transformación lineal $T:V \to V$ mediante $T(v_j) = v_{j + 1}$ para $j = 1, \dots, n-1$ y $T(v_n) = 0$. Demuestra que $T^n = 0$ y $T^{n-1} \neq 0$.
+    \end{ejercicio}
+    
+    \begin{ejercicio}
+        Sea $\mathcal{P}_3$ el espacio vectorial sobre $\R$ de polinomios de grado menor o igual a 3 con coeficientes en $\R$. Considera la función:
+        \begin{align*}
+            T: \mathcal{P}_3 & \to \R^4\\
+            f(x) & \mapsto \parentesis{f(1), f(2), f(3), f(4)}.
+        \end{align*}
+        \begin{itemize}
+            \item[(a)] Demuestra que $T$ es lineal.
+            \item[(b)] Usa el teorema de rango nulidad para demostrar que para todos $a_1, a_2, a_3, a_4 \in \R$, existe $f(x) \in \mathcal{P}_3$ tal que $f(j) = a_j$ para todo $j = 1, 2, 3, 4$.
+        \end{itemize}
+    \end{ejercicio}
+
+    \begin{ejercicio}
+        Sea $A$ una matriz $m \times n$ con coeficientes en $F$. Demuestra que
+        \begin{itemize}
+            \item[(a)] El rango de filas de $A$ (que por definición es \textbf{la dimensión del subespacio vectorial que generan las filas de} $A$ vistas como vectores en $F^n$) más la dimensión del espacio de soluciones del sistema homogéneo asociado a $A$ es $n$.
+            \item[(b)] Si el rango de filas de $A$ es $n$, entonces $AX = 0$ tiene solo la solución trivial.
+            \item[(c)] Si el rango de filas de $A$ es menor que $n$, entonces $AX = 0$ tiene una infinidad de soluciones.
+        \end{itemize}
+    \end{ejercicio}
+    
+    \begin{ejercicio}
+        Sean $V$ y $W$ espacios vectoriales de dimensión finita sobre $F$ y sea $T: V \to W$ una transformación lineal. Demuestra que $T$ es isomorfismo lineal si y solo si, para toda base $\mathcal{B}_V = \llaves{v_1, \dots, v_n}$ de $V$ se tiene que $\mathcal{B}_W = \llaves{T(v_1), \dots, T(v_n)}$ es base de $W$.
+    \end{ejercicio}
+
+    \begin{ejercicio}
+        Sea $T: \R^3 \to \R^3$ definido por $(x_1, x_2, x_3) \mapsto (3x_1, x_1 - x_2, 2x_1 + x_2 + x_3)$. ¿Es $T$ isomorfismo lineal?. Si es así, encuentra $T^{-1}$.
+    \end{ejercicio}
+
+    \begin{ejercicio}
+        Sean $V$ y $W$ espacios vectoriales sobre $F$, de dimensiones $n$ y $m$, respectivamente. Demuestra que $V$ y $W$ son isomorfismos si y solo si $m = n$.
+    \end{ejercicio}
+
+    \begin{ejercicio}
+        Sea $V$ un espacio vectorial de dimensión finita sobre $F$ y sea $T: V \to V$. Demuestra que $T$ es isomorfismo si y solo si para alguna base ordenada $\mathcal{B}$ de $V$ se tiene que $[T]_\mathcal{B}$ es una matriz invertible.
+    \end{ejercicio}
+
+    \begin{ejercicio}
+        Encuentra una base de $\Im (T)$ y de $\ker (T)$ donde $T: \R^3 \to \R^3$ está dada por:
+        \[
+        \begin{pmatrix}
+            -1 & 2 & 1\\
+            0 & 1 & 1\\
+            1 & 3 & 4\\
+        \end{pmatrix}.
+        \]
+    \end{ejercicio}
+
+    \begin{ejercicio}
+        Sea $V_2$ el espacio vectorial sobre $F$, de polinomios de grado $\leq 2$ y considera la transformación lineal
+        \begin{align*}
+            T : V_2 & \to F^3,\\
+            a_0 + a_1x + a_2x^2 & \mapsto (a_0, a_1, a_2).
+        \end{align*}
+        Sean $\BB_1 = \llaves{1, x, x^2}$ y $\BB_2 = \llaves{e_1, e_2, e_3}$ bases ordenadas de $V_2$ y $F^3$. Encuentra $[T]_{\BB_1, \BB_2}$.
+    \end{ejercicio}
+
+    \begin{ejercicio}
+        Sea $V = \llaves{f: \R \to \R | f(x) = \sum_{i = 0}^{3}a_ix^{i},\; a_i \in \R}$. Considera la transformación lineal:
+        \begin{align*}
+            \mathcal{T}: V & \to V,\\
+            f(x) & \mapsto xf'(x).
+        \end{align*}
+        Encuentra $[\mathcal{T}]_{\BB_1}, \; [\mathcal{T}]_{\BB_2}, \; [\mathcal{T}]_{\BB_1, \BB_2}$ y $[\mathcal{T}^2]_{\BB_1, \BB_2}$, donde
+        \[
+        \BB_1 = \llaves{1, x, x^2, x^3} \; \text{ y } \; \BB_2 = \llaves{1, x + 1, (x + 1)^2, (x + 1)^3}.
+        \]
+    \end{ejercicio}
+
+    \begin{ejercicio}
+        Determina si, sobre $\R$, las siguientes matrices son semejantes:
+        \[
+        A = 
+        \begin{pmatrix}
+            4 & 1 & 0\\
+            0 & 4 & 0\\
+            0 & 0 & 2\\
+        \end{pmatrix},
+        \qquad
+        B =
+        \begin{pmatrix}
+            4 & 0 & 0\\
+            0 & 4 & 1\\
+            0 & 0 & 2\\
+        \end{pmatrix}.
+        \]
+    \end{ejercicio}
+
+    \begin{ejercicio}
+        Sean $V$ y $W$ espacios vectoriales sobre un campo $F$, definimos el conjunto:
+        \[
+        \mathcal{L}(V, W) = \llaves{T: V \to W | T \text{ es lineal }},
+        \]
+        demuestra que, con las siguientes operaciones, $\mathcal{L}(V, W)$ tiene estructura de  espacio vectorial sobre $F$:
+        \begin{align*}
+            + : \mathcal{L}(V, W) \times \mathcal{L}(V, W) & \to \mathcal{L}(V, W),\\
+            (T_1, T_2) & \mapsto T_1 + T_2.
+        \end{align*}
+        \begin{align*}
+            \cdot: \mathcal{L}(V, W) \times \mathcal{L}(V, W) & \to \mathcal{L}(V, W),\\
+            (a, T) & \mapsto aT.
+        \end{align*}
+    \end{ejercicio} 
+
+    \begin{ejercicio}
+        Demuestra que todo elemento en $(F^n)^{\ast}$ es de la forma:
+        \begin{align*}
+            F^n & \to F,\\
+            (x_1, \dots, x_n) & \mapsto \sum_{i = 1}^{n}a_ix_i,
+        \end{align*}
+        donde $a_1, \dots, a_n \in F$.
+    \end{ejercicio}
+
+    \begin{ejercicio}
+        Considera la base ordenada $\BB = \llaves{(1, 0 ,-1), (1, 1, 1), (2, 2, 0)}$ de $\R^3$. Encuentra la base dual.
+    \end{ejercicio}
 
     \chapter{Determinante}
 
@@ -3720,7 +4278,57 @@
             \end{pmatrix} & \longmapsto a_{11}a_{22} - a_{12}a_{21}
         \end{align*}
     \end{proposicion}
-    
+
+    \section{Ejercicios}
+
+    En todos los problemas, $F$ es el campo $\Q, \R$ o $\C$.
+
+    \begin{ejercicio}
+        Sean $A, B \in M_{n \times n}(F)$. Demuestre que
+        \begin{itemize}
+            \item[(a)] $\parentesis{A^t}^t = A$.
+            \item[(b)] $\parentesis{A + B}^t = A^t + B^t$.
+            \item[(c)] $\parentesis{AB}^t = B^t A^t$.
+        \end{itemize}
+    \end{ejercicio}
+
+    \begin{ejercicio}
+        Sea $D : M_{2 \times 2}(F) \to F$ una función alternante y $2$-lineal. Demuestre que para toda matriz $A$:
+        \[
+        D(A) =  \det(A) D(I_2).
+        \]
+    \end{ejercicio}
+
+    \begin{ejercicio}
+        Sea $A \in M_{n \times n}(F)$, demuestra que $\det(A) = \det(A^t)$.
+    \end{ejercicio}
+
+    \begin{ejercicio}
+        Considera la matriz de Vandermonde
+        \[
+        A = 
+        \begin{pmatrix}
+            1 & a & a^2\\
+            1 & b & b^2\\
+            1 & c & c^2\\
+        \end{pmatrix},
+        \]
+        sobre $F$. Demuestra que es invertible si y solo si $a = b$ 0 $a = c$ o $b = c$.
+    \end{ejercicio}
+
+    \begin{ejercicio}
+        Sean $n \in \N$, $\sigma \in S_n$, demuestra que:
+        \[
+        \text{signo}(\sigma) \coloneqq \det
+        \begin{pmatrix}
+            \quad \varepsilon_{\sigma (1)} \quad \\
+            \vdots\\
+            \varepsilon_{\sigma (n)}\\
+        \end{pmatrix}
+        = \prod_{1 \leq i \leq j \leq n} \frac{\sigma (i) - \sigma(j)}{i - j},
+        \]
+        donde $\varepsilon_i$ es la fila con todas las entradas cero, excepto el lugar $i$ que tiene un $1$.
+    \end{ejercicio}
 % ku.e.de :)
 % aaaah no JAJAJJAJA
 % jajajajajajaj
