@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1778916785.31666 "c:/Users/Radoj/OneDrive/Documentos/DEMAT-UG/Segundo Semestre/Calculo II/Tareas/Tarea 12/tarea12.tex" "tarea12.pdf" "tarea12" 1778916787.47826 0
-  "c:/Users/Radoj/OneDrive/Documentos/DEMAT-UG/Segundo Semestre/Calculo II/Tareas/Tarea 12/tarea12.tex" 1778916782 3701 c23414534360791d12051aaaa487393b ""
+["pdflatex"] 1778917231.64539 "c:/Users/Radoj/OneDrive/Documentos/DEMAT-UG/Segundo Semestre/Calculo II/Tareas/Tarea 12/tarea12.tex" "tarea12.pdf" "tarea12" 1778917233.73914 0
+  "c:/Users/Radoj/OneDrive/Documentos/DEMAT-UG/Segundo Semestre/Calculo II/Tareas/Tarea 12/tarea12.tex" 1778917230 4842 3d5de2f7080f4d1b104d2bbaddbe8ac4 ""
   "c:/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1776821804 2375 baa924870cfb487815765f9094cf3728 ""
   "c:/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc" 1776821804 3486 c7eadf5dcc57b3b2d11736679f6636ba ""
   "c:/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1776821804 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
@@ -16,6 +16,9 @@
   "c:/texlive/2026/texmf-dist/fonts/tfm/public/lm/ec-lmbx12.tfm" 1776821804 12088 d750ac78274fa7c9f73ba09914c04f8a ""
   "c:/texlive/2026/texmf-dist/fonts/tfm/public/lm/ec-lmr12.tfm" 1776821804 12092 7b1546e2d096cfd5dcbd4049b0b1ec2e ""
   "c:/texlive/2026/texmf-dist/fonts/tfm/public/lm/ec-lmr17.tfm" 1776821804 12156 ca1ae6a3c8564e89597f1f993fba1608 ""
+  "c:/texlive/2026/texmf-dist/fonts/tfm/public/lm/ec-lmr6.tfm" 1776821804 12048 c1068d0f4772be9b0ec447692e1d6d82 ""
+  "c:/texlive/2026/texmf-dist/fonts/tfm/public/lm/ec-lmr8.tfm" 1776821804 12064 9b9ade9f64cb32ce1d9a88d21fbd5c2d ""
+  "c:/texlive/2026/texmf-dist/fonts/tfm/public/lm/ec-lmri12.tfm" 1776821804 17144 271aaf9ebb339934b04110dc5211fba4 ""
   "c:/texlive/2026/texmf-dist/fonts/tfm/public/lm/lmex10.tfm" 1776821804 992 ce925c9346c7613270a79afbee98c070 ""
   "c:/texlive/2026/texmf-dist/fonts/tfm/public/lm/lmmi12.tfm" 1776821804 1524 753b192b18f2991794f9d41a8228510b ""
   "c:/texlive/2026/texmf-dist/fonts/tfm/public/lm/lmmi6.tfm" 1776821804 1512 94a3fd88c6f27dbd9ecb46987e297a4e ""
@@ -41,6 +44,7 @@
   "c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmr12.pfb" 1776821804 113634 9384aebdf26f9881e046a4b5574566db ""
   "c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmr6.pfb" 1776821804 123394 992f5e87d698d9e94717394c62580ea6 ""
   "c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmr8.pfb" 1776821804 122174 a2d5e73f396ddbeb3bdf5c79aea0993d ""
+  "c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmri12.pfb" 1776821804 109265 e6c7d377db6dfccd4a123fb26da8cffb ""
   "c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmsy10.pfb" 1776821804 27863 09ce3735688ffde955e72da27c95b61a ""
   "c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmsy8.pfb" 1776821804 27802 5c876bb2c4040caaf035d60bd74a86bd ""
   "c:/texlive/2026/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1776822452 71627 94eb9990bed73c364d7f53f960cc8c5b ""
@@ -268,9 +272,9 @@
   "c:/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1776826159 5619402 045890036aad9b52b154ef5568e59d3a ""
   "c:/texlive/2026/texmf-var/web2c/pdftex/pdflatex.fmt" 1776826293 3648452 70897b7eb243265c4d2b16cffbe98ed7 ""
   "c:/texlive/2026/texmf.cnf" 1776826132 713 e69b156964470283e0530f5060668171 ""
-  "tarea12.aux" 1778916787 697 702a3b77084d479ae141a139c9ae5dc4 "pdflatex"
-  "tarea12.out" 1778916786 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "tarea12.tex" 1778916782 3701 c23414534360791d12051aaaa487393b ""
+  "tarea12.aux" 1778917233 697 591d872e9c27e980f8f32c77d103e7fe "pdflatex"
+  "tarea12.out" 1778917233 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "tarea12.tex" 1778917230 4842 3d5de2f7080f4d1b104d2bbaddbe8ac4 ""
   "ugmath.sty" 1778444156 7079 52cc59ea39ac609c5e3ebd49fc49690b ""
   (generated)
   "tarea12.aux"

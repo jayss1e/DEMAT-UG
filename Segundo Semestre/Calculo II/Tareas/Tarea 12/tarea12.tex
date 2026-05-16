@@ -30,6 +30,38 @@
         pregunta para el limite inferior.
     \end{mdframed}
 
+    \begin{proof}
+        Las desigualdades estrictas no son ciertas en general. Consideremos el ejemplo
+        \begin{equation*}
+            a_{n}=0,\qquad b_{n}=\frac{1}{n}.
+        \end{equation*}
+        Entonces
+        \begin{equation*}
+            a_{n}\lt b_{n}\text{ para todo }n,
+        \end{equation*}
+        pero
+        \begin{equation*}
+            \limsup a_{n}=0,\qquad\limsup b_{n}=0.
+        \end{equation*}
+        Por tanto,
+        \begin{equation*}
+            \limsup a_{n}=\limsup b_{n},
+        \end{equation*}
+        y no se obtiene la desigualdad estricta. Además,
+        \begin{equation*}
+            \liminf a_{n}=0,\qquad \liminf b_{n}=0,
+        \end{equation*}
+        de modo que tampoco se cumple
+        \begin{equation*}
+            \liminf a_{n}\lt\liminf b_{n}.
+        \end{equation*}
+        En conclusión $a_{n}\lt b_{n}$ eventualmente implica únicamente
+        \begin{equation*}
+            \limsup a_{n}\leq\limsup b_{n},\qquad\liminf a_{n}\leq \liminf b_{n},
+        \end{equation*}
+        pero las desigualdades estrictas pueden fallar.
+    \end{proof}
+
     \begin{mdframed}[style=mdpinkbox,frametitle={Ejercicio 2}]
         Determina la convergencia de las series siguientes:
         \begin{multicols}{2}
