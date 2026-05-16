@@ -8,8 +8,8 @@
 \newcommand{\alumno}{Ricardo León Martínez}
 \newcommand{\materia}{Calculo Diferencial e Integral II}
 \newcommand{\profesor}{Fernando Nuñez Medina}
-\newcommand{\tarea}{Tarea 11}
-\newcommand{\fecha}{9/5/2026}
+\newcommand{\tarea}{Tarea 12}
+\newcommand{\fecha}{16/5/2026}
 
 \begin{document}
     \begin{center}
@@ -69,10 +69,111 @@
                 \item[(a)] $\sum_{n=1}^{\infty}\frac{\sqrt{n}}{n^{3}+9}$.
                 \item[(b)] $\sum_{n=2}^{\infty}\frac{n}{\ln(n^{n})}$.
                 \item[(c)] $\sum_{n=1}^{\infty}\frac{7}{n^{2}+3}$.
-                \item[(d)] $\sum_{n=1}^{\infty}=\frac{6}{1+4n}$.
+                \item[(d)] $\sum_{n=1}^{\infty}\frac{6}{1+4n}$.
             \end{enumerate}
         \end{multicols}
     \end{mdframed}
+
+    \begin{solucion}
+        \begin{enumerate}
+            \item[(a)] $\sum_{n=1}^{\infty}\frac{\sqrt{n}}{n^{3}+9}$.\\
+            Observemos que para $n$ grande, $n^{3}+9\sim n^{3}$. Por tanto,
+            \begin{equation*}
+                \frac{\sqrt{n}}{n^{3}+9}\sim\frac{\sqrt{n}}{n^{3}}=\frac{1}{n^{5/2}}.
+            \end{equation*}
+            Como
+            \begin{equation*}
+                \sum_{n=1}^{\infty}\frac{1}{n^{5/2}}
+            \end{equation*}
+            es una $p$-serie con
+            \begin{equation*}
+                p=\frac{5}{2}\gt1,
+            \end{equation*}
+            ésta converge. Aplicando el criterio de compración,
+            \begin{equation*}
+                \lim_{n\to\infty}\frac{\frac{\sqrt{n}}{n^{3}+9}}{\frac{1}{n^{5/2}}}=\lim_{n\to\infty}\frac{n^{3}}{n^{3}+9}=1.
+            \end{equation*}
+            Luego ambas series tiene el mismo carácter. Por tanto,
+            \begin{equation*}
+                \sum_{n=1}^{\infty}\frac{\sqrt{n}}{n^{3}+9}
+            \end{equation*}
+            converge.
+            \item[(b)] $\sum_{n=2}^{\infty}\frac{n}{\ln(n^{n})}$.\\
+            Usamos que
+            \begin{equation*}
+                \ln(n^{n})=n\ln(n).
+            \end{equation*}
+            Entonces
+            \begin{equation*}
+                \frac{n}{\ln(n^{n})}=\frac{n}{n\ln(n)}=\frac{1}{\ln(n)}.
+            \end{equation*}
+            La serie queda
+            \begin{equation*}
+                \sum_{n=2}^{\infty}\frac{1}{\ln(n)}.
+            \end{equation*}
+            Ahora,
+            \begin{equation*}
+                \lim_{n\to\infty}\frac{\frac{1}{\ln(n)}}{\frac{1}{n}}=\lim_{n\to\infty}\frac{n}{\ln(n)}=\infty,
+            \end{equation*}
+            de modo
+            \begin{equation*}
+                \frac{1}{\ln(n)}
+            \end{equation*}
+            es eventualmente mayor que una constante múltiplo de $1/n$. Como
+            \begin{equation*}
+                \sum\frac{1}{n}
+            \end{equation*}
+            diverge, por comparación se concluye que
+            \begin{equation*}
+                \sum_{n=2}^{\infty}\frac{1}{\ln(n)}
+            \end{equation*}
+            tambiém diverge. Por tanto,
+            \begin{equation*}
+                \sum_{n=2}^{\infty}\frac{n}{\ln(n^{n})}
+            \end{equation*}
+            también diverge.
+            \item[(c)] $\sum_{n=1}^{\infty}\frac{7}{n^{2}+3}$.\\
+            Para $n$ grande, $n^{2}+3\sim n^{2}$, y
+            \begin{equation*}
+                \frac{7}{n^{2}+3}\sim\frac{7}{n^{2}}.
+            \end{equation*}
+            Como
+            \begin{equation*}
+                \sum_{n=1}^{\infty}\frac{1}{n^{2}}
+            \end{equation*}
+            converge, usamos el criterio de compración,
+            \begin{equation*}
+                \lim_{n\to\infty}\frac{\frac{7}{n^{2}}}{\frac{7}{n^{2}}}=\lim_{n\to\infty}\frac{n^{2}}{n^{2}+3}=1.
+            \end{equation*}
+            Luego las dos tienen el mismo carácter. Por tanto
+            \begin{equation*}
+                \sum_{n=1}^{\infty}\frac{7}{n^{2}+3}
+            \end{equation*}
+            converge.
+            \item[(d)] $\sum_{n=1}^{\infty}\frac{6}{1+4n}$.\\
+            Veamos que para $n$ grande,
+            \begin{equation*}
+                \frac{6}{1+4n}\sim\frac{6}{4n}=\frac{3}{2n}.
+            \end{equation*}
+            Entonces comparamos con la serie armónica
+            \begin{equation*}
+                \sum\frac{1}{n}.
+            \end{equation*}
+            Usando el criterio de compración,
+            \begin{equation*}
+                \lim_{n\to\infty}\frac{\frac{6}{1+4n}}{\frac{1}{n}}=\lim_{n\to\infty}\frac{6n}{1+4n}=\frac{6}{4}=\frac{3}{2}.
+            \end{equation*}
+            El límite el positivo y finito, así que ambas series tienen el mismo carácter. Como
+            \begin{equation*}
+                \sum\frac{1}{n}
+            \end{equation*}
+            diverge, concluimos que
+            \begin{equation*}
+                \sum_{n=1}^{\infty}\frac{6}{1+4n}
+            \end{equation*}
+            diverge.
+        \end{enumerate}
+    \end{solucion}
 
     \begin{mdframed}[style=mdpinkbox,frametitle={Ejercicio 3}]
         Es claro que la expansión decimal de 0 es única y la de 1 no, pues $1=0.999\dots.$
@@ -80,6 +181,75 @@
         una expansión decimal finita y no tiene una expansión decimal de la forma $0.a_{1},\dots a_{n}\overline{9}$
         para algún numero natural $n$.
     \end{mdframed}
+
+    \begin{proof}
+        Probaremos la contraposición. Supongamos que $x$ tiene una expansión decimal finita.
+        Entonces existe $n$ tal que
+        \begin{equation*}
+            x=0.a_{1}a_{2}\dots a_{n}.
+        \end{equation*}
+        Como
+        \begin{equation*}
+            0.999\dots=1,
+        \end{equation*}
+        se tiene
+        \begin{equation*}
+            0.a_{1}a_{2}\dots a_{n}=0.a_{1}a_{2}\dots(a_{n}-1)\overline{9},
+        \end{equation*}
+        si $a_{n}\neq0$. Por ejemplo,
+        \begin{equation*}
+            0.25000\dots=0.24999\dots.
+        \end{equation*}
+        Luego la expansión decimal no es única. Ahora supongamos que $x$ tiene una expansión
+        de la forma
+        \begin{equation*}
+            x=0.a_{1},\dots a_{n}\overline{9}.
+        \end{equation*}
+        Entonces
+        \begin{equation*}
+            x=0.a_{1}a_{2}\dots(a_{n}+1),
+        \end{equation*}
+        si $a_{n}\neq9$. Por ejemplo,
+        \begin{equation*}
+            0.1399\dots=0.14.
+        \end{equation*}
+        Por tanto, nuevamente la expansión decimal no es única. Concluimos que si la expansión
+        decimal de $x$ es única, entonces $x$ no puede tener expansión decirmal finita ni expansión
+        terminada en nueves periodicos. Supongamos ahora que $x$ no tiene expansión decimal finita
+        y tampoco tiene expansión decimal de la forma
+        \begin{equation*}
+            0.a_{1},\dots a_{n}\overline{9}.
+        \end{equation*}
+        Procederemos por contradicción. Supongamos que $x$ tiene dos expansiones decimales distintas
+        \begin{equation*}
+            x=0.a_{1}a_{2}a_{3}\dots
+        \end{equation*}
+        y 
+        \begin{equation*}
+            x=0.b_{1}b_{2}b_{3}\dots
+        \end{equation*}
+        Sea $m$ el menor número natural tal que $a_{m}\neq b_{m}$. Sin pérdida de generalidad,
+        supongamos $a_{m}\lt b_{m}$. Entonces necesariamente
+        \begin{equation*}
+            a_{m}+1\leq b_{m}.
+        \end{equation*}
+        Usando la sugerencia, obtenemos la cadena de desigualdades
+        \begin{gather*}
+            x=0.a_{1}a_{2}a_{3}\dots a_{m-1}a_{m}a_{m+1}\dots\\
+            \leq 0.a_{1}a_{2}a_{3}\dots a_{m-1}a_{m}\overline{9}\\
+            =0.a_{1}a_{2}a_{3}\dots a_{m-1}(a_{m}+1)\\
+            \leq0.a_{1}a_{2}a_{3}\dots a_{m-1}b_{m}\\
+            =0.b_{1}b_{2}b_{3}\dots b_{m-1}b_{m}\\
+            \leq0.b_{1}b_{2}b_{3}\dots b_{m-1}b_{m}b_{m+1}\dots=x.
+        \end{gather*}
+        Por hipótesis, $x$ no tiene expansión decimal terminada en nueves periodicos ni una expansión
+        finita. Por ello, la primera y última desigualdad son estrictas. Así obtenemos
+        \begin{equation*}
+            x\lt x,
+        \end{equation*}
+        lo cual es un absurdo. La contradicción proviene de haber puesto que existían dos expansiones
+        distintas. Así, la expansión decimal de $x$ es única.
+    \end{proof}
 
     \begin{mdframed}[style=mdpinkbox,frametitle={Ejercicio 4}]
         Sea $x\in[0,1]$.
@@ -91,16 +261,172 @@
         \end{enumerate}
     \end{mdframed}
 
+    \begin{proof}
+        \begin{enumerate}
+            \item[(a)] Prueba que $x$ es racional ssi $x$ tiene una expansión decimal finita
+            infinita pero periódica.\\
+            Supongamos que $x$ es racional. Entonces existen enteros $p,q$ con
+            \begin{equation*}
+                q\neq0,\qquad x=\frac{p}{q}.
+            \end{equation*}
+            Al efectuar la división decimal de $p$ entre $q$, en cada paso el residuo posible
+            pertenece al conjunto
+            \begin{equation*}
+                \{0,1,2,\dots,q-1\}.
+            \end{equation*}
+            Hay solamente un número finito de residuos posibles. Entonces  al realizar infinitamente
+            muchos pasos ocurre una de las siguientes posibilidades: En algun momento aparece 0.
+            En este caso la expansión decimal termina, es decir, es finita. Algun residuo se repite.
+            Como el algoritmo de la división queda completamente determinado por el residuo, a partir
+            de ese momento los dígitos comienzan a repetirse periódicamente. Por tanto, toda expansión
+            decimal de un racional es finita o eventualmente periodica. Ahora supongamos que $x$ tiene
+            expansión decimal finita o infinita periodica.\\
+            Primero caso: expansión decimal finita\\
+            Supongamos
+            \begin{equation*}
+                x=0.a_{1}a_{2}\dots a_{n}.
+            \end{equation*}
+            Entonces
+            \begin{equation*}
+                x=\frac{a_{1}a_{2}\dots a_{n}}{10^{n}},
+            \end{equation*}
+            que es racional.\\
+            Segundo caso: expansión decimal periódica\\
+            Supongamos
+            \begin{equation*}
+                x=0.a_{1}a_{2}\dots a_{k}\overline{b_{1}b_{2}\dots b_{m}}.
+            \end{equation*}
+            Escribamos $A+B$, donde
+            \begin{equation*}
+                A=0.a_{1}a_{2},\dots a_{k}\quad\text{ y }\quad B=0.00\dots0\overline{b_{1}b_{2}\dots b_{m}},
+            \end{equation*}
+            con $k$ ceros iniciales. Claramente $A$ es racional. Basta probar que $B$ es racional.
+            Sea
+            \begin{equation*}
+                y=0.\overline{b_{1}b_{2}\dots b_{m}}
+            \end{equation*}
+            Entonces
+            \begin{equation*}
+                10^{m}y=b_{1}b_{2}\dots b_{m}\overline{b_{1}b_{2}\dots b_{m}}.
+            \end{equation*}
+            Restando,
+            \begin{equation*}
+                10^{m}y-y=b_{1}b_{2}\dots b_{m}.
+            \end{equation*}
+            Por tanto,
+            \begin{equation*}
+                (10^{m}-1)y=b_{1}b_{2}\dots b_{m}.
+            \end{equation*}
+            y así
+            \begin{equation*}
+                y=\frac{b_{1}b_{2}\dots b_{m}}{10^{m}-1}\in\Q.
+            \end{equation*}
+            Luego $B=\frac{y}{10^{k}}$ también es racional, y por lo tanto $x=A+B\in\Q$. Concluimos que
+            $x$ es racional.
+            \item[(b)] Prueba que $x$ es irracional ssi $x$ tiene una expansión decial infinita
+            y no periodica.\\
+            Supongamos que $x$ es irracional. Si su expansión decimal fuese finita o periódica, por
+            el inciso (a) tendríamos que $x$ sería racional, contradicción. Por tanto, la expansión
+            decimal de un irracional debe ser infinita no periódica. Supongamos ahora que $x$
+            tiene expansión decimal infinita no periódica. Si $x$ fuese racional, entonces por el
+            inciso (a) su expansión decimal tendría que ser finita o periódica, contradicción. Luego
+            $x$ no es racional, es decir,
+            \begin{equation*}
+                x\in\R\setminus\Q.
+            \end{equation*}
+        \end{enumerate}
+    \end{proof}
+
     \begin{mdframed}[style=mdpinkbox,frametitle={Ejercicio 5}]
         Prueba que si $f_{n}\rightrightarrows f$ en $D$ y $g_{n}\rightrightarrows f$ en $D$
         entonces $f_{n}+g_{n}\rightrightarrows f+g$ en $D$.
     \end{mdframed}
+
+    \begin{proof}
+        Por definición de convergencia uniforme, para todo $\e\gt0$ existe $N_{1}\in\N$ tal que
+        \begin{equation*}
+            n\geq N_{1}\implies \abs{f_{n}(x)-f(x)}\lt\frac{\e}{2}.
+        \end{equation*}
+        para toda $x\in D$. Asimismo, existe $N_{2}\in\N$ tal que
+        \begin{equation*}
+            n\geq N_{2}\implies\abs{g_{n}(x)-g(x)}\lt\frac{\e}{2}
+        \end{equation*}
+        para toda $x\in D$. Sea $N=\max\{N_{1},N_{2}\}$. Entonces, para todo $n\geq N$ y toda
+        $x\in D$,
+        \begin{equation*}
+            \abs{f_{n}(x)-f(x)}\lt\frac{\e}{2},\qquad\abs{g_{n}(x)-g(x)}\lt\frac{\e}{2}.
+        \end{equation*}
+        Ahora,
+        \begin{align*}
+            \abs{(f_{n}+g_{n})(x)-(f+g)(x)}&=\abs{f_{n}(x)+g_{n}(x)-f(x)-g(x)}\\
+            &=\abs{(f_{n}(x)-f(x))+(g_{n}(x)-g(x))}\\
+            &\leq\abs{f_{n}(x)-f(x)}+\abs{g_{n}(x)-g(x)}\\
+            &\lt\frac{\e}{2}+\frac{\e}{2}\\
+            &=\e.
+        \end{align*}
+    \end{proof}
 
     \begin{mdframed}[style=mdpinkbox,frametitle={Ejercicio 6}]
         Prueba que si $f_{n}\rightrightarrows f$ en $D$, $g_{n}\rightrightarrows f$ en $D$
         y tanto $f_{n}$ como $g_{n}$ son acotadas en $D$ para todo $n\in\N$, entonces
         $f_{n}g_{n}\rightrightarrows fg$ en $D$.
     \end{mdframed}
+
+    \begin{proof}
+        Como $f_{n}\rightrightarrows f$, existe $N_{1}\in\N$ tal que
+        \begin{equation*}
+            n\geq N_{1}\implies \abs{f_{n}(x)-f(x)}\lt1
+        \end{equation*}
+        para toda $x\in D$. Entonces, para $n\geq N_{1}$,
+        \begin{equation*}
+            \abs{f(x)}\leq\abs{f(x)-f_{n}(x)}+\abs{f_{n}(x)}\lt1+\abs{f_{n}(x)}.
+        \end{equation*}
+        Como $f_{n}$ es acotada en $D$, existe $M_{n}\gt0$ tal que
+        \begin{equation*}
+            \abs{f_{n}(x)}\leq M_{n}\qquad\forall x\in D.
+        \end{equation*}
+        Por tanto,
+        \begin{equation*}
+            \abs{f(x)}\leq M_{n}+1,
+        \end{equation*}
+        de modo que $f$ también es acotada en $D$. Análogamente, $g$ es acotada. Tomemos
+        constante $M,K\gt0$ tales que
+        \begin{equation*}
+            \abs{f(x)}\leq M,\qquad \abs{g_{n}(x)}\leq K
+        \end{equation*}
+        para toda $x\in D$ y todo $n$ suficientemente grande. Ahora escribimos
+        \begin{equation*}
+            f_{n}g_{n}-fg=f_{n}g_{n}-fg_{n}+fg_{n}-fg.
+        \end{equation*}
+        Entonces
+        \begin{equation*}
+            f_{n}g_{n}-fg=g_{n}(f_{n}-f)+f(g_{n}-g)-
+        \end{equation*}
+        Por la desigualdad del triangulo,
+        \begin{equation*}
+            \abs{f_{n}g_{n}-fg}\leq\abs{g_{n}}\abs{f_{n}-f}+\abs{f}\abs{g_{n}-g}
+        \end{equation*}
+        Por las acotaciones,
+        \begin{equation*}
+            \abs{f_{n}g_{n}-fg}\leq K\abs{f_{n}-f}+M\abs{g_{n}-g}.
+        \end{equation*}
+        Sea $\e\gt0$. Como $f_{n}\rightrightarrows f$, existe $N_{2}$ tal que
+        \begin{equation*}
+            n\geq N_{2}\implies\abs{f_{n}(x)-f(x)}\lt\frac{\e}{2K}
+        \end{equation*}
+        para toda $x\in D$. Asimismo, como $g_{n}\rightrightarrows g$, existe $N_{3}$
+        tal que
+        \begin{equation*}
+            n\geq N_{3}\implies \abs{g_{n}(x)-g(x)}\lt\frac{\e}{2M}
+        \end{equation*}
+        para toda $x\in D$. Sea $N=\max{N_{1},N_{2},N_{3}}$. Entonces para toda $n\geq N$
+        y para toda $x\in D$,
+        \begin{align*}
+            \abs{f_{n}(x)g_{n}(x)-f(x)g(x)}&\leq K\abs{f_{n}(x)-f(x)}+M\abs{g_{n}(x)-g(x)}\\
+            &\lt K\frac{\e}{2K}+M\frac{\e}{2M}\\
+            &=\e.
+        \end{align*}
+    \end{proof}
 
     \begin{mdframed}[style=mdpinkbox,frametitle={Ejercicio 7}]
         Calcula el radio de convergencia de las series de potencias siguientes:
@@ -113,5 +439,57 @@
             \end{enumerate}
         \end{multicols}
     \end{mdframed}
+
+    \begin{solucion}
+        \begin{enumerate}
+            \item[(a)] $\sum_{n=0}^{\infty}x^{n}$\\
+            Aquí $a_{n}=1$. Entonces por el teorema de Cauchy-Hadamard
+            \begin{equation*}
+                \sqrt[n]{\abs{a_{n}}}=\sqrt[n]{1}=1.
+            \end{equation*}
+            Por tanto, 
+            \begin{equation*}
+                \frac{1}{R}=1,
+            \end{equation*}
+            y así,
+            \begin{equation*}
+                R=1.
+            \end{equation*}
+            \item[(b)] $\sum_{n=0}^{\infty}nx^{n}$\\
+            Aquí, $a_{n}=n$. Por el teorema de Cauchy-Hadamard
+            \begin{equation*}
+                \frac{1}{R}=\limsup_{n\to\infty}\sqrt[n]{n}.
+            \end{equation*}
+            Pero
+            \begin{equation*}
+                \lim_{n\to\infty}\sqrt[n]{n}=1.
+            \end{equation*}
+            Luego
+            \begin{equation*}
+                \frac{1}{R}=1, 
+            \end{equation*}
+            y por tanto $R=1$.
+            \item[(c)] $\sum_{n=0}^{\infty}2^{n}x^{n}$\\
+            Aquí, $a_{n}=2^{n}$. Entonces por el teorema de Cauchy-Hadamard
+            \begin{equation*}
+                \sqrt[n]{\abs{a_{n}}}=\sqrt[n]{2^{n}}=2.
+            \end{equation*}
+            Por tanto,
+            \begin{equation*}
+                \frac{1}{R}=2,
+            \end{equation*}
+            y así, $R=\frac{1}{2}$.
+            \item[(d)] $\sum_{n=0}^{\infty}n!x^{n}$\\
+            Aquí, $a_{n}=n!$. Por el criterio del cociente
+            \begin{equation*}
+                \abs{\frac{a_{n}}{a_{n+1}}}=\frac{n!}{(n+1)!}=\frac{1}{n+1}.
+            \end{equation*}
+            Tomando el limite
+            \begin{equation*}
+                \lim_{n\to\infty}\frac{1}{n+1}=0.
+            \end{equation*}
+            Por tanto, $R=0$. Así, la serie converge solamente en $x=0$.
+        \end{enumerate}
+    \end{solucion}
     
 \end{document}
