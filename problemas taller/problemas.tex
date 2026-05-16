@@ -1,0 +1,221 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{ugmath}
+\usepackage{float}
+\usepackage{placeins}
+\usepackage{array}
+\usepackage[labelfont=bf,labelsep=space]{caption}
+\newcommand{\paren}[1]{\left( #1 \right)}
+
+\title{Solucion de Problemas\\
+Taller de calculo}
+
+\author{Ricardo Leon Martinez}
+
+\begin{document}
+    \maketitle
+
+    \section*{Problema 1}
+
+    Sea $f:(0,\infty)\to\R$ como
+    \begin{equation*}
+        f(x)=2^{-x}+2^{-\frac{1}{x}}.
+    \end{equation*}
+
+    \begin{enumerate}
+        \item[(a)] Calcula $\lim_{x\to0^{+}}f(x)$ y $\lim_{x\to\infty}f(x)$.
+        \item[(b)] Calcula (y demuestra que tu cálculo es correcto) el máximo de $f$ en
+        todo su dominio.
+        \item[(c)] ¿Qué puedes decir de su mínimo (también global)? 
+    \end{enumerate}
+
+    \begin{solucion}
+        \subsection*{(a)}
+        Calcularemos primero $\lim_{x\to0^{+}}f(x)$. Observemos primero que
+        \begin{equation*}
+            2^{-x}=e^{-x\ln(2)}.
+        \end{equation*}
+        Como $x\to0^{+}$, se sigue que
+        \begin{equation*}
+            -x\ln(2)\to0,
+        \end{equation*}
+        y por continuidad de la exponencial,
+        \begin{equation*}
+            2^{-x}\to e^{0}=1.
+        \end{equation*}
+        Por otro lado,
+        \begin{equation*}
+            2^{-\frac{1}{x}}=e^{-\frac{\ln(2)}{x}}.
+        \end{equation*}
+        Dado que $\frac{1}{x}\to+\infty\quad(x\to0^{+})$, tenemos
+        \begin{equation*}
+            -\frac{\ln(2)}{x}\to\infty,
+        \end{equation*}
+        de donde $2^{-\frac{1}{x}}\to0$. Por consiguiente
+        \begin{equation*}
+            \lim_{x\to0^{+}}f(x)=1.
+        \end{equation*}
+        Ahora calculamos
+        \begin{equation*}
+            \lim_{x\to\infty}f(x).
+        \end{equation*}
+        Cuando $x\to\infty$, $-x\ln(2)\to-\infty$, por lo que $2^{-x}\to0$. Además,
+        \begin{equation*}
+            \frac{1}{x}\to0,
+        \end{equation*}
+        de modo que
+        \begin{equation*}
+            -\frac{\ln(2)}{x}\to0.
+        \end{equation*}
+        y entonces
+        \begin{equation*}
+            2^{-\frac{1}{x}}=1.
+        \end{equation*}
+        Por tanto,
+        \begin{equation*}
+            \lim_{x\to\infty}f(x)=1.
+        \end{equation*}
+
+        \subsection*{(b)}
+
+        Derivamos
+        \begin{equation*}
+            f^{\prime}(x)-(\ln(2))2^{-x}+\frac{\ln(2)}{x^{2}}2^{-\frac{1}{x}}.
+        \end{equation*}
+        Factorizando $\ln(2)\gt0$,
+        \begin{equation*}
+            f^{\prime}(x)=\ln(2)\paren{\frac{2^{-1/x}}{x^{2}}-2^{-x}}.
+        \end{equation*}
+        Por lo tanto,
+        \begin{equation*}
+            f^{\prime}(x)=0\Longleftrightarrow\frac{2^{-1/x}}{x^{2}}=2^{-x}.
+        \end{equation*}
+        Equivalentemente,
+        \begin{equation*}
+            2^{x-1/x}=x^{2}.
+        \end{equation*}
+        Tomando logaritmo en base 2,
+        \begin{equation*}
+            x-\frac{1}{x}=2\log_{2}(x).
+        \end{equation*}
+        Es inmediato ver que $x=1$ es la solución. Veamos ahora que es única.
+
+        Definamos
+        \begin{equation*}
+            g(x)=x-\frac{1}{x}-2\log_{2}(x).
+        \end{equation*}
+        Entonces
+        \begin{equation*}
+            g^{\prime}(x)=1+\frac{1}{x^{2}}-\frac{2}{x\ln(2)}.
+        \end{equation*}
+        Además,
+        \begin{equation*}
+            g^{\prime\prime}(x)=-\frac{2}{x^{3}}+\frac{2}{x^{2}\ln(2)}=\frac{2}{x^{3}}\paren{\frac{x}{\ln(2)}-1}.
+        \end{equation*}
+        En particular, $g^{\prime\prime}$ cambia de signo una sola vez, de modo que $g^{\prime}$
+        tiene un único mínimo. Como
+        \begin{equation*}
+            g^{\prime}(1)=2-\frac{2}{\ln(2)}\lt0,
+        \end{equation*}
+        y
+        \begin{equation*}
+            g^{\prime}(x)\to\infty\quad\text{ cuando }\quad x\to0^{+}\text{ o }x\to\infty,
+        \end{equation*}
+        se concluye que $g^{\prime}$ tiene exactamente dos ceros y, por tanto, $g$ tiene
+        un único mínimo global. Ahora,
+        \begin{equation*}
+            g(1)=0.
+        \end{equation*}
+        Como el mínimo global de $g$ se alcanza precisamente en $x=1$, se sigue que $g(x)\geq0$
+        para todo $x\gt0$, con igualdad únicamente en $x=1$. Por consiguiente,
+        \begin{equation*}
+            f^{\prime}(x)=
+            \begin{cases}
+                f(x)\gt0,\quad0\lt x\lt1,\\
+                f(x)=0,\quad x=1,\\
+                f(x)\lt0,\quad x\gt1.
+            \end{cases}
+        \end{equation*}
+        Así, $f$ es creciente en $(0,1)$ y decreciente $(1,\infty)$. Luego $x=1$ corresponde a un
+        máximo global. Finalmente,
+        \begin{equation*}
+            f(1)=2^{-1}+2^{-1}=1.
+        \end{equation*}
+        Concluimos que el máximo global de $f$ es 1, y se alcanza únicamente en $x=1$.
+
+        \subsection*{(c)}
+
+        Para todo $x\gt0$,
+        \begin{equation*}
+            2^{-x}\gt0,\quad 2^{-1/x}\gt0,
+        \end{equation*}
+        y por tanto $f(x)\gt0$. Además,
+        \begin{equation*}
+            \lim_{x\to0^{+}}f(x)=1,\qquad\lim_{x\to\infty}f(x)=1.
+        \end{equation*}
+        Como la función es positiva y alcanza su valor máximo en $x=1$, se tiene
+        \begin{equation*}
+            0\lt f(x)\leq1.
+        \end{equation*}
+        Sin embargo, la función nunca toma el valor 0. En consecuencia, $f$ no tiene mínimo global.
+    \end{solucion}
+
+    \section*{Problema 2}
+
+    \textit{(a)} Considera la párabola $y=ax^{2}$. Toma sobre su gráfica dos puntos
+    cualesquiera $A=(x_{1},y_{1})$ y $B=(x_{2},y_{2})$. Considera la cuarda $\overline{AB}$.
+    Prueba que existe un único punto $C$ sobre la gráfica de la parábola, tal que la recta
+    tangente a la párabola en $C$ es paralela a la cuerda $\overline{AB}$. Calcula
+    las coordenadas de $C$.
+
+    \textit{(b)} Vas a probar el siguiente teorema de Arquímedes: el área de la region
+    dentro de la parábola y limitada por la cuerda $\overline{AB}$ es $4/3$ del área del
+    triangulo $\Delta ABC$. (no copie lo demas porque se me hizo demasiado).
+
+    \textit{(c)} Explica por qué el teorema es cierto para cualquier parábola y no únicamente
+    para $y=ax^{2}$.
+
+    \begin{solucion}
+        \subsection*{(a)}
+        Sean
+        \begin{equation*}
+            A=(x_{1},ax_{1}^{2}),\qquad B=(x_{2},ax_{2}^{2}).
+        \end{equation*}
+        La pendiente de la cuerda $AB$ es
+        \begin{equation*}
+            m_{AB}=\frac{ax_{2}^{2}-ax_{1}^{2}}{x_{2}-x_{1}}=a(x_{1}+x_{2}).
+        \end{equation*}
+        Por otra parte, si $f(x)=ax^{2}$, entonces
+        \begin{equation*}
+            f^{\prime}(x)=2ax.
+        \end{equation*}
+        Así, la recta tangente en un punto
+        \begin{equation*}
+            C=(x_{c},ax_{c}^{2})
+        \end{equation*}
+        tiene pendiente $2ax_{c}$. Queremos que dicha tangente sea paralela a la cuerda $AB$,
+        por lo que debe cumplirse
+        \begin{equation*}
+            2ax_{c}=a(x_{1}+x_{2}).
+        \end{equation*}
+        Suponiendo $a\neq0$, obtenemos
+        \begin{equation*}
+            x_{c}=\frac{x_{1}+x_{2}}{2}.
+        \end{equation*}
+        En consecuencia,
+        \begin{equation*}
+            C=\paren{\frac{x_{1}+x_{2}}{2},a\paren{\frac{x_{1}+x_{2}}{2}}^{2}}.
+        \end{equation*}
+        Además, esta elección es única, pues la pendiente de la tangente depende únicamente
+        de la coordenada $x$.
+
+        \subsection*{(b)(i)}
+        Consideremos ahora las cuerdas $AC$ y $CB$. Sean $D$ y $E$ los puntos de la parábola
+        tales que las tangentes en dichos puntos son paralelas, respectivamente, a $AC$ y
+        $BC$
+
+        \subsection*{(b)(ii)}
+        El paso anterior puede repetirse indefinidamente. Cada uno de los triángulos obtenidos
+        produce nuevas cuerdas y, por tanto, nuevos triángulos inscritos 
+    \end{solucion}
+
+\end{document}
