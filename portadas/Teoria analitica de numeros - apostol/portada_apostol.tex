@@ -1,0 +1,113 @@
+\documentclass[12pt]{book}
+\usepackage[paperwidth=13.5cm, paperheight=19cm, margin=0pt]{geometry}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{fontenc}
+\usepackage[utf8]{inputenc}
+
+% Color naranja de la portada
+\definecolor{apostolnaranja}{RGB}{220, 130, 30}
+\definecolor{apostollinea}{RGB}{245, 200, 130}
+\definecolor{apostolnodo}{RGB}{245, 220, 170}
+
+\pagestyle{empty}
+
+\begin{document}
+
+\begin{tikzpicture}[remember picture, overlay]
+
+  % Fondo naranja completo
+  \fill[apostolnaranja] (current page.south west) rectangle (current page.north east);
+
+  % Textura de lineas diagonales
+  \begin{scope}
+    \clip (current page.south west) rectangle (current page.north east);
+    \foreach \i in {-30,-28,...,40}{
+      \draw[apostollinea, line width=0.25pt, opacity=0.4]
+        ([xshift=\i cm]current page.south west) -- ++(30,30);
+    }
+    \foreach \i in {-30,-28,...,40}{
+      \draw[apostollinea, line width=0.25pt, opacity=0.4]
+        ([xshift=\i cm]current page.north west) -- ++(30,-30);
+    }
+  \end{scope}
+
+  % Diagrama de nodos escalado
+  \begin{scope}[shift={(current page.south)}, yshift=1.8cm,
+                every node/.style={circle, fill=apostolnodo,
+                                   draw=apostollinea, line width=1.2pt,
+                                   inner sep=0pt, minimum size=10pt},
+                every path/.style={draw=apostollinea, line width=1.5pt}]
+
+    % Fila 0 (base): 5 nodos
+    \node (n00) at (-4.4, 0)   {};
+    \node (n01) at (-2.2, 0)   {};
+    \node (n02) at ( 0,   0)   {};
+    \node (n03) at ( 2.2, 0)   {};
+    \node (n04) at ( 4.4, 0)   {};
+
+    % Fila 1: 4 nodos
+    \node (n10) at (-3.3, 1.9) {};
+    \node (n11) at (-1.1, 1.9) {};
+    \node (n12) at ( 1.1, 1.9) {};
+    \node (n13) at ( 3.3, 1.9) {};
+
+    % Fila 2: 3 nodos
+    \node (n20) at (-2.2, 3.8) {};
+    \node (n21) at ( 0,   3.8) {};
+    \node (n22) at ( 2.2, 3.8) {};
+
+    % Fila 3: 2 nodos
+    \node (n30) at (-1.1, 5.7) {};
+    \node (n31) at ( 1.1, 5.7) {};
+
+    % Fila 4 (cima): 1 nodo
+    \node (n40) at ( 0,   7.6) {};
+
+    % Aristas horizontales
+    \draw (n00)--(n01)--(n02)--(n03)--(n04);
+    \draw (n10)--(n11)--(n12)--(n13);
+    \draw (n20)--(n21)--(n22);
+    \draw (n30)--(n31);
+
+    % Aristas diagonales izquierda
+    \draw (n00)--(n10); \draw (n01)--(n11); \draw (n02)--(n12); \draw (n03)--(n13);
+    \draw (n10)--(n20); \draw (n11)--(n21); \draw (n12)--(n22);
+    \draw (n20)--(n30); \draw (n21)--(n31);
+    \draw (n30)--(n40);
+
+    % Aristas diagonales derecha
+    \draw (n01)--(n10); \draw (n02)--(n11); \draw (n03)--(n12); \draw (n04)--(n13);
+    \draw (n11)--(n20); \draw (n12)--(n21); \draw (n13)--(n22);
+    \draw (n21)--(n30); \draw (n22)--(n31);
+    \draw (n31)--(n40);
+
+  \end{scope}
+
+  % Titulo
+  \node[anchor=north west, text=black, align=left, inner sep=0pt]
+    at ([xshift=1cm, yshift=-1cm]current page.north west)
+    {%
+      \fontsize{22}{26}\selectfont
+      \textbf{INTRODUCCI\'ON}\\[2pt]
+      \textbf{A LA TEOR\'IA}\\[2pt]
+      \textbf{ANAL\'ITICA DE N\'UMEROS}
+    };
+
+  % Autor
+  \node[anchor=north east, text=black, align=right, inner sep=0pt]
+    at ([xshift=-1cm, yshift=-4.8cm]current page.north east)
+    {%
+      \fontsize{13}{16}\selectfont\textbf{T. M. APOSTOL}
+    };
+
+  % Editorial
+  \node[anchor=south east, text=black!80, inner sep=0pt]
+    at ([xshift=-0.8cm, yshift=0.5cm]current page.south east)
+    {%
+      \fontsize{8}{10}\selectfont\textit{editorial revert\'e, s.a.}
+    };
+
+\end{tikzpicture}
+
+\end{document}
