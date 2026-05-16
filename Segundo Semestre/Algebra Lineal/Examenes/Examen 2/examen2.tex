@@ -1,0 +1,83 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{ugmath}
+\usepackage{float}
+\usepackage{placeins}
+\usepackage{array}
+\usepackage[labelfont=bf,labelsep=space]{caption}
+\newcommand{\paren}[1]{\left( #1 \right)}
+\newcommand{\alumno}{Ricardo León Martínez}
+\newcommand{\materia}{Algebra Lineal I}
+\newcommand{\profesor}{Claudia Reynoso Alcántara}
+\newcommand{\tarea}{Examen 2}
+\newcommand{\fecha}{15/5/2026}
+
+\begin{document}
+
+    \begin{center}
+        {\large\textbf{UNIVERSIDAD DE GUANAJUATO}}\\[0.3cm]
+        {\normalsize\textbf{DIVISIÓN DE CIENCIAS NATURALES Y EXACTAS}}\\
+        {\normalsize\textbf{CAMPUS GUANAJUATO}}\\[1cm]
+
+        {\Large\textbf{\tarea\ (\materia)}}\\[1cm]
+    \end{center}
+
+    
+    \begin{center}
+        \textbf{Fecha:} \fecha 
+    \end{center}
+    
+
+    \vspace{0.3cm}
+
+    1. (2 puntos) Encuentra una base del siguiente subespacio vectorial de $\R^{4}$
+    (justifica tu respuesta).
+    \begin{equation*}
+        W=\{(x_{1},x_{2},x_{3},x_{4})\in\R^{4}:x_{1}+x_{2}+x_{3}+x_{4}=0\}.
+    \end{equation*}
+
+    2. (1 punto) Si existe, describe explicitamente una transformación lineal de $\R^{3}$
+    en $\R^{3}$ que tenga como imagen el subespacio vectorial generado por (1,0,1) y
+    (1,1,0). Si no existe, demuestralo.
+
+    \vspace{0.5cm}
+
+    3. (2 puntos) Sea $n\in\N$ y $\PP_{n}$ el espacio vectorial de polinomios
+    de grado menor o igual a $n$ con coeficiente en $\R$. Considera la transformación
+    lineal
+    \begin{align*}
+        T:\PP_{3}&\to\PP\\
+        f(x)&\mapsto xf^{\prime}(x)
+    \end{align*}
+    Considera la base ordenada $\BB=\{1,x+1,x^{2},x^{3}\}$ de $\PP_{3}$. Encuentra la matriz
+    que representa a $T$ en esta base ordenada.
+
+    \vspace{0.5cm}
+
+    4. Sea $T:\R^{4}\to\R^{3}$ la transformación lineal dada por el producto de la matriz
+    \begin{equation*}
+        \begin{pmatrix}
+            2 & 1 & 0 & 1\\
+            0 & 1 & 0 & 1\\
+            2 & 2 & 0 & 2
+        \end{pmatrix}
+    \end{equation*}
+    encuentra (y justifica)\\
+    \textit{a)} (1 punto) la nulidad de $T$ y\\
+    \textit{b)} (1 punto) el rango de $T$.
+
+    \vspace{0.5cm}
+
+    5. Sea $V$ un espacio vectorial de dimensión finita $n$, sobre $F$. Sea $T:V\to V$
+    una transformación lineal tal que $T\neq0$ y $T^{2}=0$. Demuestre que:\\
+    \textit{a)} $\Im(T)\subset\Nul(T)$\\
+    \textit{b)} $\text{rango}(T)\leq\frac{n}{2}$.
+
+    \vspace{2.3cm}
+
+    6. Sean $V,W$ y $U$ espacios vectoriales de dimensión finita, sobre un campo $F$. Sean $T:V\to W$ y $S:W\to U$ transformaciones lineales.
+    Demuestre que
+    \begin{equation*}
+        \nul(S\circ T)=\nul(T)+\dim(\Im(T)\cap\ker(T)).
+    \end{equation*}
+
+\end{document}
