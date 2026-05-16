@@ -1,0 +1,200 @@
+\documentclass[12pt]{book}
+\usepackage[paperwidth=17cm, paperheight=24cm, margin=0pt]{geometry}
+\usepackage{xcolor}
+\usepackage{tikz}
+\usepackage{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usetikzlibrary{calc, patterns, decorations.pathmorphing}
+
+% ── Paleta de colores ─────────────────────────────────────────────
+\definecolor{ugazul}    {RGB}{0,  51, 102}   % azul profundo UG
+\definecolor{ugclaro}   {RGB}{0,  90, 160}   % azul medio
+\definecolor{ugacento}  {RGB}{200,160,  0}   % dorado/ocre
+\definecolor{ugfondo}   {RGB}{245,245,240}   % crema muy suave
+\definecolor{uglinea}   {RGB}{180,195,215}   % azul grisáceo para grid
+\definecolor{ugtexto}   {RGB}{20,  30,  50}  % casi negro azulado
+
+\pagestyle{empty}
+
+\begin{document}
+\begin{tikzpicture}[remember picture, overlay]
+
+  %% ══════════════════════════════════════════════════════════════
+  %% 1. FONDO BASE – crema
+  %% ══════════════════════════════════════════════════════════════
+  \fill[ugfondo] (current page.south west) rectangle (current page.north east);
+
+  %% ══════════════════════════════════════════════════════════════
+  %% 2. PANEL LATERAL IZQUIERDO – franja azul oscura
+  %% ══════════════════════════════════════════════════════════════
+  \fill[ugazul]
+    (current page.south west)
+    rectangle
+    ([xshift=3.8cm]current page.north west);
+
+  %% ══════════════════════════════════════════════════════════════
+  %% 3. BANDA DORADA – línea de acento entre franja y contenido
+  %% ══════════════════════════════════════════════════════════════
+  \fill[ugacento]
+    ([xshift=3.8cm]current page.south west)
+    rectangle
+    ([xshift=4.15cm]current page.north west);
+
+  %% ══════════════════════════════════════════════════════════════
+  %% 4. GRID MATEMÁTICO – papel cuadriculado sutil en zona crema
+  %% ══════════════════════════════════════════════════════════════
+  \begin{scope}
+    \clip ([xshift=4.15cm]current page.south west)
+          rectangle (current page.north east);
+    % líneas verticales
+    \foreach \x in {4.5,5.0,...,17}{
+      \draw[uglinea, line width=0.3pt, opacity=0.5]
+        ([xshift=\x cm]current page.south west) --
+        ([xshift=\x cm]current page.north west);
+    }
+    % líneas horizontales
+    \foreach \y in {0,0.5,...,24}{
+      \draw[uglinea, line width=0.3pt, opacity=0.5]
+        ([yshift=\y cm]current page.south west) --
+        ([yshift=\y cm]current page.south east);
+    }
+  \end{scope}
+
+  %% ══════════════════════════════════════════════════════════════
+  %% 5. BLOQUE SUPERIOR AZUL – cabecera con título
+  %% ══════════════════════════════════════════════════════════════
+  \fill[ugazul]
+    ([xshift=4.15cm, yshift=-7.5cm]current page.north west)
+    rectangle
+    (current page.north east);
+
+  %% ══════════════════════════════════════════════════════════════
+  %% 6. BANDA DORADA INFERIOR del bloque azul superior
+  %% ══════════════════════════════════════════════════════════════
+  \fill[ugacento]
+    ([xshift=4.15cm, yshift=-7.5cm]current page.north west)
+    rectangle
+    ([yshift=-7.85cm]current page.north east);
+
+  %% ══════════════════════════════════════════════════════════════
+  %% 9. TEXTO DEL TÍTULO (en bloque azul superior)
+  %% ══════════════════════════════════════════════════════════════
+  \node[anchor=north west, text=white, align=left, inner sep=0pt,
+        text width=11cm]
+    at ([xshift=5.0cm, yshift=-1.0cm]current page.north west)
+    {%
+      \fontsize{9}{11}\selectfont\textit{\textcolor{ugacento}{\'Algebra Lineal}}\\[6pt]
+      \fontsize{26}{30}\selectfont\bfseries
+      \'Algebra\\[2pt] Lineal\\[8pt]
+      \fontsize{10}{13}\selectfont\normalfont\textcolor{uglinea}
+      {Notas del curso}%
+    };
+
+  %% ══════════════════════════════════════════════════════════════
+  %% 10. FÓRMULA DECORATIVA en bloque azul
+  %% ══════════════════════════════════════════════════════════════
+  \node[anchor=south east, text=white, opacity=0.18,
+        font=\fontsize{42}{42}\selectfont, inner sep=0pt]
+    at ([xshift=-0.6cm, yshift=-0.3cm]current page.north east)
+    {$A\mathbf{x}=\lambda\mathbf{x}$};
+
+  %% ══════════════════════════════════════════════════════════════
+  %% 11. TEXTO EN FRANJA LATERAL – rotado 90°
+  %% ══════════════════════════════════════════════════════════════
+  \node[rotate=90, anchor=south, text=white, opacity=0.55,
+        font=\fontsize{7}{9}\selectfont\scshape, inner sep=0pt]
+    at ([xshift=1.9cm, yshift=3.45cm]current page.south west)
+    {Universidad de Guanajuato \quad$\cdot$\quad Departamento de Matem\'aticas};
+
+  %% ══════════════════════════════════════════════════════════════
+  %% 12. ZONA CENTRAL – contenido principal
+  %% ══════════════════════════════════════════════════════════════
+
+  % Rectángulo decorativo de énfasis para autores
+  \fill[ugazul, opacity=0.07]
+    ([xshift=4.7cm, yshift=-15.5cm]current page.north west)
+    rectangle
+    ([xshift=-1cm, yshift=-20.5cm]current page.north east);
+
+  \draw[ugazul, opacity=0.25, line width=0.6pt]
+    ([xshift=4.7cm, yshift=-15.5cm]current page.north west)
+    rectangle
+    ([xshift=-1cm, yshift=-20.5cm]current page.north east);
+
+  % Línea de acento dorada izquierda del bloque autores
+  \fill[ugacento]
+    ([xshift=4.7cm, yshift=-15.5cm]current page.north west)
+    rectangle
+    ([xshift=5.05cm, yshift=-20.5cm]current page.north west);
+
+  % Etiqueta "Autores"
+  \node[anchor=north west, text=ugacento,
+        font=\fontsize{7.5}{9}\selectfont\scshape, inner sep=0pt]
+    at ([xshift=5.5cm, yshift=-15.9cm]current page.north west)
+    {Autores};
+
+  % Nombres autores
+  \node[anchor=north west, text=ugtexto, align=left, inner sep=0pt]
+    at ([xshift=5.5cm, yshift=-16.7cm]current page.north west)
+    {%
+      \fontsize{13}{17}\selectfont\bfseries
+      Carlos Alberto Rom\'an Rodr\'iguez\\[3pt]
+      Ricardo Le\'on Mart\'inez%
+    };
+
+  % Etiqueta "Profesora"
+  \node[anchor=north west, text=ugacento,
+        font=\fontsize{7.5}{9}\selectfont\scshape, inner sep=0pt]
+    at ([xshift=5.5cm, yshift=-18.8cm]current page.north west)
+    {Profesora del curso};
+
+  % Nombre profesora
+  \node[anchor=north west, text=ugtexto, align=left, inner sep=0pt]
+    at ([xshift=5.5cm, yshift=-19.5cm]current page.north west)
+    {%
+      \fontsize{12}{16}\selectfont
+      Claudia Reynoso Alc\'antara%
+    };
+
+  %% ══════════════════════════════════════════════════════════════
+  %% 13. BLOQUE INFERIOR – universidad e institución
+  %% ══════════════════════════════════════════════════════════════
+  \fill[ugazul]
+    (current page.south west)
+    rectangle
+    ([yshift=3.2cm]current page.south east);
+
+  \fill[ugacento]
+    ([yshift=3.2cm]current page.south west)
+    rectangle
+    ([yshift=3.55cm]current page.south east);
+
+  % Universidad
+  \node[anchor=west, text=white, inner sep=0pt,
+        font=\fontsize{11}{13}\selectfont\bfseries]
+    at ([xshift=4.5cm, yshift=2.3cm]current page.south west)
+    {Universidad de Guanajuato};
+
+  % Departamento
+  \node[anchor=west, text=uglinea, inner sep=0pt,
+        font=\fontsize{8.5}{11}\selectfont]
+    at ([xshift=4.5cm, yshift=1.4cm]current page.south west)
+    {Departamento de Matem\'aticas};
+
+  % Año
+  \node[anchor=east, text=ugacento, inner sep=0pt,
+        font=\fontsize{10}{12}\selectfont\bfseries]
+    at ([xshift=-1.2cm, yshift=1.85cm]current page.south east)
+    {2026};
+
+  %% ══════════════════════════════════════════════════════════════
+  %% 14. MATRIZ DECORATIVA – fondo zona media derecha
+  %% ══════════════════════════════════════════════════════════════
+  \node[anchor=south east, text=ugazul, opacity=0.09,
+        font=\fontsize{52}{52}\selectfont, inner sep=0pt]
+    at ([xshift=-1cm, yshift=3.8cm]current page.south east)
+    {$\begin{pmatrix} a & b \\ c & d \end{pmatrix}$};
+
+\end{tikzpicture}
+\end{document}
