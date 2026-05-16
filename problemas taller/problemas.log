@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.4.21)  15 MAY 2026 01:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.4.21)  16 MAY 2026 01:03
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"c:/Users/Radoj/OneDrive/Escritorio/problemas taller/problemas.tex"
-(c:/Users/Radoj/OneDrive/Escritorio/problemas taller/problemas.tex
+**"c:/Users/Radoj/OneDrive/Documentos/DEMAT-UG/problemas taller/problemas.tex"
+(c:/Users/Radoj/OneDrive/Documentos/DEMAT-UG/problemas taller/problemas.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-03-20>
 (c:/texlive/2026/texmf-dist/tex/latex/base/article.cls
@@ -1063,7 +1063,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <6> on input line 19.
  [1
 
-{c:/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{c:/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{c:/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{c:/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}] [2{c:/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}] [3] [4] (./problemas.aux
+{c:/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{c:/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{c:/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{c:/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}] [2{c:/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}] [3] [4] [5] [6] (./problemas.aux
 LaTeX Info: Redefining \. on input line 12.
 LaTeX Info: Redefining \% on input line 12.
 )
@@ -1075,18 +1075,18 @@ Package rerunfilecheck Info: File `problemas.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 39380 strings out of 467349
- 878781 string characters out of 5419862
- 1418094 words of memory out of 5000000
- 67760 multiletter control sequences out of 15000+600000
+ 39385 strings out of 467349
+ 878835 string characters out of 5419862
+ 1418109 words of memory out of 5000000
+ 67762 multiletter control sequences out of 15000+600000
  683572 words of font info for 94 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,6n,108p,803b,567s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,6n,108p,812b,573s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmex10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmmi12.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmmi6.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmmi8.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmr17.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmr6.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmr8.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmri12.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmsy8.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on problemas.pdf (4 pages, 191608 bytes).
+Output written on problemas.pdf (6 pages, 198119 bytes).
 PDF statistics:
- 141 PDF objects out of 1000 (max. 8388607)
- 89 compressed objects within 1 object stream
- 13 named destinations out of 1000 (max. 500000)
+ 150 PDF objects out of 1000 (max. 8388607)
+ 96 compressed objects within 1 object stream
+ 16 named destinations out of 1000 (max. 500000)
  109 words of extra memory for PDF output out of 10000 (max. 10000000)
 

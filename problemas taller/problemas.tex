@@ -211,11 +211,116 @@ Taller de calculo}
         \subsection*{(b)(i)}
         Consideremos ahora las cuerdas $AC$ y $CB$. Sean $D$ y $E$ los puntos de la parábola
         tales que las tangentes en dichos puntos son paralelas, respectivamente, a $AC$ y
-        $BC$
+        $BC$. Sea ademas $M$ el punto donde la recta vertical que pasa por $C$ intersecta
+        a la cuerda $AB$. Observemos que dicha recta bisecta la cuerda $AB$. En efecto,
+        en el inciso anterior se obtuvo que
+        \begin{equation*}
+            x_{C}=\frac{x_{1}+x_{2}}{2},
+        \end{equation*}
+        de modo que la vertical por $C$ pasa por el punto medio de los extremos de la cuerda.
+        El objetivo es demostrar que
+        \begin{equation*}
+            \ar(\Delta ADC)=\frac{1}{4}\ar(\Delta AMC),
+        \end{equation*}
+        y
+        \begin{equation*}
+            \ar(\Delta CEB)=\frac{1}{4}\ar(\Delta MCB).
+        \end{equation*}
+        ambas demostraciones son análogas, así que probaremos únicamente
+        la segunda. Sea $G$ el punto donde la vertical por $E$ intersecta
+        a $CB$, y sea $H$ el punto donde dicha vertical intersecta al segmento
+        $MB$. Mostraremos primero que la vertical por $E$ bisecta tanto a $CB$ como a $MB$.
+        En efecto, si
+        \begin{equation*}
+            C=(x_{c},ax_{x}^{2}),\qquad B=(x_{2},ax_{2}^{2}),
+        \end{equation*}
+        entonces, por el inciso (a), el punto $E$ satisface
+        \begin{equation*}
+            x_{E}=\frac{x_{c}+x_{2}}{2},
+        \end{equation*}
+        pues la tangente en $E$ es paralela a la cuerda $CB$. Por tanto, la vertical
+        por $E$ pasa por el punto medio horizontal de $CB$, y en consecuencia bisecta
+        dicho segmento. Análogamente, como $M$ y $B$ tiene coordenadas horizontales
+        $x_{c}$ y $x_{2}$, respectivamente, la misma vertical también bisecta el
+        segmento $MB$. Ahora veamos que los triangulos $\Delta EGH$ y $\Delta MCB$
+        son semejantes. En efecto, ambos son triangulos son rectangulos, comparten la inclinación
+        determinada por la cuerda $CB$ y sus lados verticales y horizontales son parelelos
+        entre sí. Además, como $G$ es el punto medio de $CB$ y $H$ es el punto medio de $MB$,
+        las longitudes horizontales satisfacen
+        \begin{equation*}
+            GH=\frac{1}{2}MC.
+        \end{equation*}
+        Por otra parte, usando que $E$ pertenece a la parábola, una cuenta directa muestra que
+        \begin{equation*}
+            EG=\frac{1}{2}GH
+        \end{equation*}
+        Por tanto,
+        \begin{equation*}
+            \frac{EG}{MC}=\frac{1}{4}.
+        \end{equation*}
+        Ahora bien, los triángulos $\Delta CEB$ y $\Delta MCB$ tiene bases situadas sobre la misma
+        recta $CB$, y sus alturas respectivas son $EG$ y $MC$. Luego,
+        \begin{equation*}
+            \frac{\ar(\Delta CEB)}{\ar(\Delta MCB)}=\frac{EG}{MC}=\frac{1}{4}.
+        \end{equation*}
+        Así,
+        \begin{equation*}
+            \ar(\Delta CEB)=\frac{1}{4}\ar(\Delta MCB).
+        \end{equation*}
+        De manera completamente análoga se obtiene
+        \begin{equation*}
+            \ar(\Delta ADC)==\frac{1}{4}\ar(\Delta AMC).
+        \end{equation*}
+        Finalmente,
+        \begin{equation*}
+            \ar(\Delta ADC)+\ar(\Delta CEB)=\frac{1}{4}(\ar(\Delta AMC)+\ar(\Delta MCB)).
+        \end{equation*}
+        Como
+        \begin{equation*}
+            \ar(\Delta AMC)+\ar(\Delta MCB)=\ar(\Delta ACB),
+        \end{equation*}
+        concluimos que
+        \begin{equation*}
+            \ar(\Delta ADC)+\ar(\Delta CEB)=\frac{1}{4}\ar(\Delta ACB).
+        \end{equation*}
 
         \subsection*{(b)(ii)}
+
         El paso anterior puede repetirse indefinidamente. Cada uno de los triángulos obtenidos
-        produce nuevas cuerdas y, por tanto, nuevos triángulos inscritos 
+        produce nuevas cuerdas y, por tanto, nuevos triángulos inscritos. Ademas, la suma de las
+        áreas de los nuevos triangulos es igual a una cuarta parte de la suma de las áreas de
+        la generación anterior. Si denotamos por
+        \begin{equation*}
+            T=\ar(\Delta ABC),
+        \end{equation*}
+        la suma total de areas obtenidas es
+        \begin{equation*}
+            T+\frac{T}{4}+\frac{T}{16}+\cdots
+        \end{equation*}
+        Es una serie geometrica de razón $1/4$, cuya suma es
+        \begin{equation*}
+            \frac{T}{1-\frac{1}{4}}=\frac{4}{3}T.
+        \end{equation*}
+        Por consiguiente, el área del segmento parabólico es
+        \begin{equation*}
+            \frac{4}{3}\ar(\Delta ABC).
+        \end{equation*}
+
+        \subsection*{(C)}
+
+        Toda parabola puede obtenerse a partir de la otra mediante traslaciones, rotaciones
+        y cambios de escala. Esta transformaciones preservan las relaciones de paralelismo
+        y escalan todas las áreas por el mismo factor. En consecuencia, la proporción
+        \begin{equation*}
+            \frac{4}{3}
+        \end{equation*}
+        permanece invariante. Por tanto, el teorema es válido para cualquier parábola y no
+        unicamente para aquellas de la forma
+        \begin{equation*}
+            y=ax^{2}.
+        \end{equation*}
+
     \end{solucion}
+    
 
 \end{document}
