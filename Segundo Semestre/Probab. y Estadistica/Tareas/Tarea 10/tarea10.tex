@@ -46,6 +46,35 @@
         como series. Puede suponer que cada uno de los valores esperados anteriores existen.
     \end{mdframed}
 
+    \begin{solucion}
+        Por definición del valor esperado de una variable aleatoria discreta, si $Y$ es una
+        variable aleatoria con soporte numerable $\{y_{i}\}_{i=1}^{\infty}$, entonces
+        \begin{equation*}
+            \E[Y]=\sum_{n=1}^{\infty}y_{i}P(Y=y_{i}),
+        \end{equation*}
+        siempre que la serie converja asbolutamente. En este caso, $X$ tiene soporte contenido
+        en $\{a_{i}\}_{i}^{\infty}$, con los $a_{i}$ todos distintos entre sí, y
+        \begin{equation*}
+            \sum_{i=1}^{\infty}P(X=a_{i})=1.
+        \end{equation*}
+        Por tanto:\\
+        Valor esperado de $X^{k}$\\
+        La variable aleatoria $X^{k}$ toma el valor $a_{i}^{k}$ cuando $X=a_{i}$. Luego,
+        \begin{equation*}
+            \E[X^{k}]=\sum_{i=1}^{\infty}a_{i}^{k}P(X=a_{i}).
+        \end{equation*}
+        Valor esperado de $(X+1)^{k}$\\
+        La variable $(X+1)^{k}$ toma el valor $(a_{i}+1)^{k}$ cuando $X=a_{i}$. Así,
+        \begin{equation*}
+            \E[(X+1)^{k}]=\sum_{i=1}^{\infty}(a_{i}+1)^{k}P(X=a_{i}).
+        \end{equation*}
+        Valor esperado de $(X-1)^{k}$\\
+        De manera análoga, $(X-1)^{k}$ toma el valor $(a_{i}-1)^{k}$ cuando $X=a_{i}$. Entonces,
+        \begin{equation*}
+            \E[(X-1)^{k}]=\sum_{i=1}^{\infty}(a_{i}-1)^{k}P(X=a_{i}).
+        \end{equation*}
+    \end{solucion}
+
     \begin{mdframed}[style=mdpinkbox, frametitle={Ejercicio 2}]
         Sea $X$ una variable aleatoria discreta con soporte contenido en los naturales, es decir, se cumple que
         \begin{equation*}
