@@ -129,6 +129,89 @@
 
     \section{MÁXIMO COMÚN DIVISOR}
 
-    Si un $d$ divide a dos enteros $a$ y $b$, entonces $d$ se llama
+    Si un $d$ divide a dos enteros $a$ y $b$, entonces $d$ se llama \textit{divisor comun}
+    de $a$ y $b$. Así, pues, 1 es un divisor común de todo par de enteros $a$ y $b$. Ahora
+    demostraremos que todo par de enteros $a$ y $b$ poseen un divisor común que se puede expresar
+    como combinación lineal de $a$ y $b$.
+
+    \begin{teorema}
+        Dados dos enteros $a$ y $b$, existe un divisor común de $a$ y $b$ de la forma
+        \begin{equation*}
+            d=ax+by,
+        \end{equation*}
+        en donde $x$ e $y$ son enteros. Además, todo divisor común de $a$ y $b$ divide a este
+        $d$. 
+    \end{teorema}
+
+    \begin{proof}
+        Ante todo suponemos que $a\geq0$ y $b\geq0$. Utilizamos inducción sobre $n$, en donde
+        $n=a+b$. Si $n=0$ entonces $a=b=0$ y podemos tomar $d=0$ con $x=y=0$. Podemos pues suponer
+        que el teorema se ha demostrado para $0,1,2,\dots,n-1$. Por simetria podemos suponer que
+        $a\geq b$. Si $b=0$ tomamos $d=a$, $x=1$, $y=0$. Si $b\geq1$ aplicamos el teorema a
+        $a-b$ y $b$. Puesto que un divisor común $d$ de $a-b$ y $b$ de la forma $d=(a-b)x+by$.
+        Este $d$ divide también a $(a-b)+b=a$, luego $d$ es un divisor común de $a$ y $b$ y se
+        tiene $d=ax+(y-x)b$, como combinación lineal de $a$ y $b$. Para completar la demostración
+        necesitamos demostrar que cada divisor común divide a $d$. Pero un divisor común divide
+        a $a$ y a $b$ y por lo tanto, por linealidad, divide a $d$. Si $a\lt0$ o $b\lt0$ (o ambos),
+        podemos aplicar el resultado recién demostrado a $\abs{a}$ y $\abs{b}$. Entonces existe
+        un divisor común  $d$ de $\abs{a}$ y $\abs{b}$ de la forma
+        \begin{equation*}
+            d=\abs{a}x+\abs{b}y.
+        \end{equation*}
+        Si $a\lt0$, $\abs{a}x=-ax=-a(-x)$. Análogamente, si $b\lt0$, $\abs{b}y=b(-y)$. Por
+        lo tanto $d$ es también ahora combinación lineal de $a$ y $b$.
+    \end{proof}
+
+    \begin{teorema}
+        Dados dos enteros $a$ y $b$, existe un número $d$ y sólo uno, con las siguiente
+        propiedades:
+        \begin{enumerate}
+            \item[(a)] $d\geq0$\hfill\textit{($d$ es no negativo)}
+            \item[(b)] $d\mid a$ y $d\mid b$\hfill\textit{($d$ es un divisor común de $a$ y de $b$)}
+            \item[(c)] $e\mid a$ y $e\mid d$\hfill\textit{(cada divisor común divide a $d$)}  
+        \end{enumerate}
+    \end{teorema}
+
+    \begin{proof}
+        Por el teorema 1.2 por lo menos existe un $d$ que satisface las condiciones (b) y (c).
+        Luego, $-d$ también las satisface. Pero si $d^{\prime}$ satisface (b) y (c), entonces
+        $d\mid d^{\prime}$ y $d^{\prime}\mid d$, por lo tanto $\abs{d}=\abs{d^{\prime}}$. Luego
+        existe exactamente un $d\geq0$ que satisface (b) y (c).
+    \end{proof}
+    
+    Nota. En el teorema 1.3, $d=0$ si, y solo si, $a=b=0$ en cualquier otro caso $d\geq1.$
+
+    \begin{definicion}[Máximo común divisor]
+        El número $d$ del teorema 1.3 se llama \textbf{máximo cómun divisor (mcd)} de $a$ y
+        $b$ se designa por $(a,b)$ o $aDb$. Si $(a,b)=1$ entonces se dice que $a$ y $b$ son
+        primos entre si (o relativos).
+    \end{definicion}
+
+    La notación $aDb$ surge al interpretar el mcd como una operación entre $a$ y $b$. Sin
+    embargo, la notación mas comunmente usada es $(a,b)$ y es la que adoptaremos, si bien
+    en el proximo teorema utilizaremos también la notación $aDb$ con objeto de hacer resaltar
+    las propiedades algebraicas de la operación $D$.
+    
+    \begin{teorema}
+        El mcd posee las siguientes propiedades:
+        \begin{enumerate}
+            \item[(a)] $(a,b)=(b,a)$\hfill\textit{(ley conmutativa)}
+            \item[(b)] $(a,(b,c))=((a,b),c)$\hfill\textit{(ley asociativa)}
+            \item[(c)] $(ac,bc)=\abs{c}(a,b)$\hfill\textit{(ley distributiva)}
+            \item[(d)] $(a,1)=(1,a)=1,\quad (a,0)=(0,a)=\abs{a}$.   
+        \end{enumerate}
+    \end{teorema}
+
+    \begin{proof}
+        Solamente demostraremos (c). Las otras demostraciones se dejan como ejercicio para el
+        lector. Sea $d=(a,b)$ y sea $e=(ac,bc)$. Queremos demostrar que $e=\abs{c}d$. Escribimos
+        $d=ax+by$. Entonces tenemos
+        \begin{equation}
+            cd=acx+bcy.
+        \end{equation}
+        Por lo tanto $cd\mid e$ puesto que $cd$ divide a $ac$ y $bc$. Además, la ecuación (1.1)
+        prueba que $e\mid cd$ puesto que $e\mid ac$ y $e\mid bc$. Por lo tanto $\abs{e}=\abs{cd}$,
+        o $e=\abs{c}d$.
+    \end{proof}
 
 \end{document}

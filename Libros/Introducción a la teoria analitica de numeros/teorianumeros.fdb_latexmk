@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1778900202.58382 "c:/Users/Radoj/OneDrive/Documentos/DEMAT-UG/Libros/Introducción a la teoria analitica de numeros/teorianumeros.tex" "teorianumeros.pdf" "teorianumeros" 1778900204.9114 0
-  "c:/Users/Radoj/OneDrive/Documentos/DEMAT-UG/Libros/Introducción a la teoria analitica de numeros/teorianumeros.tex" 1778900199 5550 c9898d876d71364009168fe17d6a739e ""
+["pdflatex"] 1778982298.89688 "c:/Users/Radoj/OneDrive/Documentos/DEMAT-UG/Libros/Introducción a la teoria analitica de numeros/teorianumeros.tex" "teorianumeros.pdf" "teorianumeros" 1778982301.57197 0
+  "c:/Users/Radoj/OneDrive/Documentos/DEMAT-UG/Libros/Introducción a la teoria analitica de numeros/teorianumeros.tex" 1778982297 10085 4980a6ba19ba02ac2cfbbb12dcf8855d ""
   "c:/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1776821804 2375 baa924870cfb487815765f9094cf3728 ""
   "c:/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1776821804 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
   "c:/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc" 1776821804 2840 216e6e45ad352e2456e1149f28885bee ""
@@ -49,6 +49,7 @@
   "c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmri12.pfb" 1776821804 109265 e6c7d377db6dfccd4a123fb26da8cffb ""
   "c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmro12.pfb" 1776821804 125209 a5bd29c5b5feb791d0332220e4a79275 ""
   "c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmsy10.pfb" 1776821804 27863 09ce3735688ffde955e72da27c95b61a ""
+  "c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmsy8.pfb" 1776821804 27802 5c876bb2c4040caaf035d60bd74a86bd ""
   "c:/texlive/2026/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1776822452 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "c:/texlive/2026/texmf-dist/tex/generic/babel-spanish/spanish.ldf" 1776818670 26965 3b6d1655ad716f98e788b1fb9f2e87b8 ""
   "c:/texlive/2026/texmf-dist/tex/generic/babel/babel.sty" 1776818593 147019 9d03eb9cccaf90a7f833d5d46175f0c3 ""
@@ -286,10 +287,10 @@
   "c:/texlive/2026/texmf-var/web2c/pdftex/pdflatex.fmt" 1776826293 3648452 70897b7eb243265c4d2b16cffbe98ed7 ""
   "c:/texlive/2026/texmf.cnf" 1776826132 713 e69b156964470283e0530f5060668171 ""
   "portada_apostol.pdf" 1778893577 25392 ad942952861be50d23b1a2a5589f9b42 ""
-  "teorianumeros.aux" 1778900204 1213 ca698f7dbdf6763c77f93e9a08cf53cc "pdflatex"
-  "teorianumeros.out" 1778900204 658 6bfb6b0ea664a1e4e94c45f752650468 "pdflatex"
-  "teorianumeros.tex" 1778900199 5550 c9898d876d71364009168fe17d6a739e ""
-  "teorianumeros.toc" 1778900204 354 445822b602f279639d7914958a42be22 "pdflatex"
+  "teorianumeros.aux" 1778982301 1716 7be7c047e4bd2c4b56742b18d40c01d8 "pdflatex"
+  "teorianumeros.out" 1778982301 658 6bfb6b0ea664a1e4e94c45f752650468 "pdflatex"
+  "teorianumeros.tex" 1778982297 10085 4980a6ba19ba02ac2cfbbb12dcf8855d ""
+  "teorianumeros.toc" 1778982301 354 683831696f2796e8e7647c3253425412 "pdflatex"
   "ugmath.sty" 1778896096 10763 c4ec7b811ba1fd2aa6c7c40ebcdd475f ""
   (generated)
   "teorianumeros.aux"
