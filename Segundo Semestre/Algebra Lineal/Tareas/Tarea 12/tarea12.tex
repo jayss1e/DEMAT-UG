@@ -30,5 +30,208 @@
     \textbf{Calificación:} \rule{3cm}{0.4pt}
 
     \vspace{0.3cm}
-    
+
+    \begin{mdframed}[style=mdpinkbox,frametitle={Ejercicio 1}]
+        Sean $A,B\in M_{n\times n}(F)$. Demuestra que
+        \begin{enumerate}
+            \item[(a)] $(A^{t})^{t}=A$,
+            \item[(b)] $(A+B)^{t}=A^{t}+B^{t}$,
+            \item[(c)] $(AB)^{t}=B^{t}A^{t}$.  
+        \end{enumerate}
+    \end{mdframed}
+
+    \begin{proof}
+        \begin{enumerate}
+            \item[(a)] $(A^{t})^{t}=A$\\
+            Para cualesquiera $i,j=\{1,\dots,n\}$,
+            \begin{equation*}
+                ((A^{t})^{t})_{ij}=(A^{t})_{ji}=a_{ij}.
+            \end{equation*}
+            Por lo tanto,
+            \begin{equation*}
+                ((A^{t})^{t})_{ij}=a_{ij}=A_{ij}
+            \end{equation*}
+            para todo $i,j$. Luego,
+            \begin{equation*}
+                (A^{t})^{t}=A.
+            \end{equation*}
+            \item[(b)] $(A+B)^{t}=A^{t}+B^{t}$\\
+            Sea $i,j\in\{1,\dots,n\}$. Entonces,
+            \begin{equation*}
+                ((A+B)^{t})_{ij}=(A+B)_{ji}.
+            \end{equation*}
+            Como la suma de matrices se define entrada a entrada,
+            \begin{equation*}
+                (A+B)_{ji}=a_{ji}+b_{ji}.
+            \end{equation*}
+            Así,
+            \begin{equation*}
+                ((A+B)^{t})_{ij}=(A^{t})_{ij}+(B^{t})_{ij}=(A^{t}+B^{t})_{ij}.
+            \end{equation*}
+            Conluimos que
+            \begin{equation*}
+                (A+B)^{t}=A^{t}+B^{t}.
+            \end{equation*}
+            \item[(c)] $(AB)^{t}=B^{t}A^{t}$\\
+            Tomemos $i,j\in\{1,\dots,n\}$. Entonces
+            \begin{equation*}
+                ((AB)^{t})_{ij}=(AB)_{ij}.
+            \end{equation*}
+            Por definición del producto matricial,
+            \begin{equation*}
+                (AB)_{ji}=\sum_{k=1}^{n}a_{jk}b_{ki}.
+            \end{equation*}
+            Ahora observamos que
+            \begin{equation*}
+                a_{jk}=(A^{t})_{jk},\qquad b_{ki}=(B^{t})_{ik}.
+            \end{equation*}
+            Sustituyendo,
+            \begin{equation*}
+                (AB)_{ji}=\sum_{k=1}^{n}(B^{t})_{ik}(A^{t})_{kj}.
+            \end{equation*}
+            Pero, por definición de producto matricial.
+            \begin{equation*}
+                \sum_{k=1}^{n}(B^{t})_{ik}(A^{t})_{kj}=(B^{t}A^{t})_{ij}.
+            \end{equation*}
+            Por consiguiente,
+            \begin{equation*}
+                ((AB)^{t})_{ij}=(B^{t}A^{t})_{ij}.
+            \end{equation*}
+            Por lo tanto,
+            \begin{equation*}
+                (AB)^{t}=B^{t}A^{t}.
+            \end{equation*}
+        \end{enumerate}
+    \end{proof}
+
+    \begin{mdframed}[style=mdpinkbox,frametitle={Ejercicio 2}]
+        Sea $D:M_{2\times2}(F)\to F$ una función alternante y 2-lineal. Demuestra que para toda
+        matriz $A$:
+        \begin{equation*}
+            D(A)=\det(A)D(I_{2}).
+        \end{equation*}
+    \end{mdframed}
+
+    \begin{proof}
+        Sea
+        \begin{equation*}
+            A=
+            \begin{pmatrix}
+                a & b\\
+                c & d
+            \end{pmatrix}
+            \in M_{2\times 2}(F).
+        \end{equation*}
+        Denotemos por
+        \begin{equation*}
+            v_{1}=
+            \begin{pmatrix}
+                a\\
+                c
+            \end{pmatrix},
+            v_{2}=
+            \begin{pmatrix}
+                b\\
+                d
+            \end{pmatrix}
+        \end{equation*}
+        las columnas de $A$. Entonces
+        \begin{equation*}
+            A(v_{1},v_{2}).
+        \end{equation*}
+        Como $D$ es 2-lineal, es lineal en cada columna. Además,
+        \begin{equation*}
+            v_{1}=ae_{1}+ce_{2},\qquad v_{2}=be_{1}+de_{2},
+        \end{equation*}
+        donde
+        \begin{equation*}
+            e_{1}=
+            \begin{pmatrix}
+                1\\
+                0
+            \end{pmatrix},
+            \qquad
+            e_{2}=
+            \begin{pmatrix}
+                0\\
+                1
+            \end{pmatrix}.
+        \end{equation*}
+        Por binilinealidad,
+        \begin{align*}
+            D(A)&=D(ae_{1}+ce_{2},be_{1}+de_{2})\\
+            &=abD(e_{1},e_{1})+adD(e_{1},e_{2})+cbD(e_{2},e_{1})+cdD(e_{2},e_{2}).
+        \end{align*}
+        Ahora usamos que $D$ es alternante. Por definición,
+        \begin{equation*}
+            D(e_{1},e_{1})=0,\qquad D(e_{2},e_{2})=0.
+        \end{equation*}
+        Ademas, una función alternante satisface
+        \begin{equation*}
+            D(u,v)=-D(v,u)
+        \end{equation*}
+        para todos $u,v$. Por tanto,
+        \begin{equation*}
+            D(e_{2},e_{1})=-D(e_{1},e_{2}).
+        \end{equation*}
+        Sustituyendo,
+        \begin{align*}
+            D(A)&=adD(e_{1},e_{2})+cb(-D(e_{1},e_{2}))\\
+            &=(ad-bc)D(e_{1},e_{2}).
+        \end{align*}
+        Observemos ahora que
+        \begin{equation*}
+            (e_{1},e_{2})=
+            \begin{pmatrix}
+                1 & 0\\
+                0 & 1
+            \end{pmatrix}
+            =I_{2}.
+        \end{equation*}
+        Luego,
+        \begin{equation*}
+            D(e_{1},e_{2})=D(I_{2}).
+        \end{equation*}
+        Como
+        \begin{equation*}
+            \det(A)=ad-bc,
+        \end{equation*}
+        concluimos que
+        \begin{equation*}
+            D(A)=\det(A)D(I_{n}).
+        \end{equation*}
+    \end{proof}
+
+    \begin{mdframed}[style=mdpinkbox,frametitle={Ejercicio 3}]
+        Sea $A\in M_{n\times n}(F)$, demuestra que $\det(A)=\det(A^{t})$
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdpinkbox,frametitle={Ejercicio 4}]
+        Considera la matriz de Vandermonde
+        \begin{equation*}
+            A=
+            \begin{pmatrix}
+                1 & a & a^{2}\\
+                1 & b & b^{2}\\
+                1 & c & c^{2}
+            \end{pmatrix},
+        \end{equation*}
+        sobre $F$. Demuestra que es invertible si y solo si $a=b$ o $a=c$ o $b=c$.
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdpinkbox,frametitle={Ejercicio 5}]
+        Sea $n\in\N$, $\sigma\in S_{n}$, demuestra que:
+        \begin{equation*}
+            \sgn(\sigma)=\det
+            \begin{pmatrix}
+                \epsilon_{\sigma(1)}\\
+                \vdots\\
+                \epsilon_{\sigma(n)}
+            \end{pmatrix}
+            =\prod_{1\leq i\lt j\leq n}\frac{\sigma(i)-\sigma(j)}{i-j},
+        \end{equation*}
+        donde $\epsilon_{i}$ es la fila con todas las entradas cero, excepto el lugar $i$
+        que tiene un 1. 
+    \end{mdframed}
+
 \end{document}
