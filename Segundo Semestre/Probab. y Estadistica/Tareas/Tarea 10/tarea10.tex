@@ -1,0 +1,188 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{ugmath}
+\usepackage{float}
+\usepackage{placeins}
+\usepackage{array}
+\usepackage[labelfont=bf,labelsep=space]{caption}
+\newcommand{\paren}[1]{\left( #1 \right)}
+\newcommand{\alumno}{Ricardo León Martínez}
+\newcommand{\materia}{Elementos de Probabilidad y Estadistica}
+\newcommand{\profesor}{Claudia Reynoso Alcántara}
+\newcommand{\tarea}{Tarea 10}
+\newcommand{\fecha}{22/5/2026}
+
+\begin{document}
+
+    \begin{center}
+        {\large\textbf{UNIVERSIDAD DE GUANAJUATO}}\\[0.3cm]
+        {\normalsize\textbf{DIVISIÓN DE CIENCIAS NATURALES Y EXACTAS}}\\
+        {\normalsize\textbf{CAMPUS GUANAJUATO}}\\[1cm]
+
+        {\Large\textbf{\tarea\ (\materia)}}\\[1cm]
+    \end{center}
+
+    \noindent
+    \textbf{Nombre:} \alumno 
+    \hfill 
+    \textbf{Fecha:} \fecha 
+    \hfill 
+    \textbf{Calificación:} \rule{3cm}{0.4pt}
+
+    \vspace{0.3cm}
+
+    \section*{Parte I. Valor esperado}
+
+    \begin{mdframed}[style=mdpinkbox, frametitle={Ejercicio 1}]
+        Sea $X$ una variable aleatoria discreta con soporte contenido en una sucesión $\{a_i\}_{i=1}^{\infty}$
+        con $a_i = a_j$ si y sólo si $i = j$, es decir, se cumple que
+        \begin{equation*}
+            1 = \sum_{i=1}^{\infty} P(X = a_i).
+        \end{equation*}
+        Fijemos un entero $k \geq 1$ y consideremos las variables aleatorias $X^k$, $(X+1)^k$ y $(X-1)^k$.
+        Escriba expresiones para
+        \begin{equation*}
+            \mathbb{E}[X^k], \quad \mathbb{E}[(X+1)^k] \quad \text{y} \quad \mathbb{E}[(X-1)^k]
+        \end{equation*}
+        como series. Puede suponer que cada uno de los valores esperados anteriores existen.
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdpinkbox, frametitle={Ejercicio 2}]
+        Sea $X$ una variable aleatoria discreta con soporte contenido en los naturales, es decir, se cumple que
+        \begin{equation*}
+            1 = \sum_{n=1}^{\infty} P(X = n).
+        \end{equation*}
+        Demuestre que
+        \begin{equation*}
+            \mathbb{E}[X] = \sum_{k=1}^{\infty} P(X \geq k).
+        \end{equation*}
+    \end{mdframed}
+
+    \section*{Parte II. Distribución binomial}
+
+    Recordemos que una variable aleatoria $X$ tiene distribución binomial de parámetros
+    $(n, p) \in \mathbb{N} \times (0,1)$ si se cumple que
+    \begin{equation*}
+        P(X = i) = \binom{n}{i} p^i (1-p)^{n-i} \quad \text{para } i = 0, 1, \ldots, n.
+    \end{equation*}
+
+    \begin{mdframed}[style=mdpinkbox, frametitle={Ejercicio 3}]
+        Sean $X$ e $Y$ variables aleatorias binomiales de parámetros $(n, p)$ y $(n-1, p)$,
+        respectivamente. Demuestre que para todo entero $k \geq 1$ se cumple que
+        \begin{equation*}
+            \mathbb{E}[X^k] = np \cdot \mathbb{E}[(Y+1)^{k-1}].
+        \end{equation*}
+        Encuentre $E[X]$ y $E[X^2]$ y concluya que $\mathrm{Var}(X) = np(1-p)$.
+
+        \medskip
+        \noindent\textit{Sugerencia.} Escriba $\mathbb{E}[X^k]$ como una serie y considere que
+        $i\binom{n}{i} = n\binom{n-1}{i-1}$.
+    \end{mdframed}
+
+    \section*{Parte III. Distribución geométrica}
+
+    Una variable aleatoria $X$ tiene distribución geométrica de parámetro $p \in (0,1)$ si se cumple que
+    \begin{equation*}
+        P(X = i) = p(1-p)^{i-1} \quad \text{para } i = 0, 1, 2, \ldots
+    \end{equation*}
+
+    \begin{mdframed}[style=mdpinkbox, frametitle={Ejercicio 4}]
+        Sea $X$ una variable aleatoria geométrica de parámetro $p \in (0,1)$. Tomemos $q = 1 - p$.
+        Demuestre que
+        \begin{align*}
+            \mathbb{E}[X]   &= q\,\mathbb{E}[X] + 1, \\
+            \mathbb{E}[X^2] &= q\,\mathbb{E}[X^2] + 2q\,\mathbb{E}[X] + 1.
+        \end{align*}
+        Encuentre $E[X]$ y $E[X^2]$ y concluya que $\mathrm{Var}(X) = \dfrac{1-p}{p^2}$.
+
+        \medskip
+        \noindent\textit{Sugerencias.} Escriba $\mathbb{E}[X]$ como una serie y considere que
+        $i q^{i-1} p = (i-1)q^{i-1}p + q^{i-1}p$. De manera similar, escriba $\mathbb{E}[X^2]$
+        como una serie y considere que
+        \begin{equation*}
+            i^2 q^{i-1} p = (i-1)^2 q^{i-1}p + 2(i-1)q^{i-1}p + q^{i-1}p.
+        \end{equation*}
+    \end{mdframed}
+
+    \section*{Parte IV. Distribución binomial negativa}
+
+    Una variable aleatoria $X$ tiene distribución binomial negativa de parámetros $(r, p)$ si se cumple que
+    \begin{equation*}
+        P(X = i) = \binom{i-1}{r-1} p^r (1-p)^{i-r} \quad \text{para } i = r, r+1, r+2, \ldots
+    \end{equation*}
+
+    \begin{mdframed}[style=mdpinkbox, frametitle={Ejercicio 5}]
+        Sean $X$ e $Y$ variables aleatorias binomiales negativas de parámetros $(r, p)$ y $(r+1, p)$,
+        respectivamente. Demuestre que para todo entero $k \geq 1$ se cumple que
+        \begin{equation*}
+            \mathbb{E}[X^k] = \frac{r}{p} \cdot \mathbb{E}[(Y-1)^{k-1}].
+        \end{equation*}
+        Encuentre $E[X]$ y $E[X^2]$ y concluya que $\mathrm{Var}(X) = r \cdot \dfrac{1-p}{p^2}$.
+
+        \medskip
+        \noindent\textit{Sugerencia.} Escriba $\mathbb{E}[X^k]$ como una serie y considere que
+        \begin{equation*}
+            i^k \binom{i-1}{r-1} p^r = \frac{r}{p}\, i^{k-1} \binom{i}{r} p^{r+1}.
+        \end{equation*}
+    \end{mdframed}
+
+    \section*{Parte V. Distribución hipergeométrica}
+
+    Recordemos que una variable aleatoria $X$ tiene distribución hipergeométrica de parámetros $(b, n, m)$
+    con $m \leq b + n$ si se cumple que
+    \begin{equation*}
+        P(X = i) = \frac{\dbinom{b}{i}\dbinom{n}{m-i}}{\dbinom{b+n}{m}} \quad \text{para } i = 0, 1, \ldots, m,
+    \end{equation*}
+    donde tomamos $\binom{b}{i} = 0$ si $i > b$ y $\binom{n}{m-i} = 0$ si $m - i > n$.
+
+    \begin{mdframed}[style=mdpinkbox, frametitle={Ejercicio 6}]
+        Sean $X$ e $Y$ variables aleatorias hipergeométricas de parámetros $(b, n, m)$ y
+        $(b-1, n, m-1)$, respectivamente. Demuestre que para todo entero $k \geq 1$ se cumple que
+        \begin{equation*}
+            \mathbb{E}[X^k] = m\,\frac{b}{b+n} \cdot \mathbb{E}[(Y+1)^{k-1}].
+        \end{equation*}
+        Encuentre $E[X]$ y $E[X^2]$. Tome $p = \dfrac{b}{b+n}$ y concluya que
+        \begin{equation*}
+            \mathrm{Var}(X) = mp(p-1)\!\left(1 - \frac{m-1}{b+n-1}\right).
+        \end{equation*}
+
+        \medskip
+        \noindent\textit{Sugerencia.} Escriba $\mathbb{E}[X^k]$ como una serie y considere que
+        $i^k \binom{b}{i} = i^{k-1} b \binom{b-1}{i-1}$ y que $m\binom{b+n}{m} = (b+n)\binom{b+n-1}{m-1}$.
+    \end{mdframed}
+
+    \section*{Parte VI. Distribución Poisson}
+
+    Una variable aleatoria $X$ tiene distribución Poisson de parámetro $\lambda > 0$ si se cumple que
+    \begin{equation*}
+        P(X = i) = \frac{\lambda^i}{i!} e^{-\lambda} \quad \text{para } i = 0, 1, 2, \ldots
+    \end{equation*}
+    El objetivo del siguiente ejercicio es ver que una variable aleatoria Poisson puede considerarse como
+    límite de variables aleatorias binomiales.
+
+    \begin{mdframed}[style=mdpinkbox, frametitle={Ejercicio 7}]
+        Sea $X$ una variable aleatoria Poisson de parámetro $\lambda > 0$. Supongamos que $X_n$ es una
+        variable aleatoria binomial de parámetros $(n, p_n)$ con $p_n = \lambda/n$ para $n = 1, 2, \ldots$
+        Demuestre que para todo entero $i \geq 0$ se cumple que
+        \begin{equation*}
+            P(X = i) = \lim_{n \to \infty} P(X_n = i).
+        \end{equation*}
+
+        \medskip
+        \noindent\textit{Sugerencia.} Puede dar por hecho tanto que
+        $e^t = \sum_{i=0}^{\infty} t^i / i!$ como que $e^t = \lim_{n\to\infty}(1 + t/n)^n$
+        para todo $t \in \mathbb{R}$.
+    \end{mdframed}
+
+    \begin{mdframed}[style=mdpinkbox, frametitle={Ejercicio 8}]
+        Sea $X$ una variable aleatoria Poisson de parámetro $\lambda > 0$. Encuentre $E[X]$ y $E[X^2]$
+        y concluya que $\mathrm{Var}(X) = \lambda$.
+
+        \medskip
+        \noindent\textit{Sugerencia.} Note que
+        \begin{equation*}
+            i\,\frac{\lambda^i}{i!} = \lambda\,\frac{\lambda^{i-1}}{(i-1)!}
+            \qquad \text{y} \qquad
+            i^2\,\frac{\lambda^i}{i!} = \lambda^2\,\frac{\lambda^{i-2}}{(i-2)!} + \lambda\,\frac{\lambda^{i-1}}{(i-1)!}.
+        \end{equation*}
+    \end{mdframed}
+\end{document}
