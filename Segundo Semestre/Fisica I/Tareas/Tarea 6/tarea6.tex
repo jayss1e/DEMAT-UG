@@ -27,11 +27,126 @@
         Una masa de 10kg se mueve bajo la acción de la fuerza $\vec{F}=\hat{u}_{x}(5t)+\hat{u}_{y}(3t^{2}-1)$N.
         Cuando $t=0$ el cuerpo está en reposo en el origen.
         \begin{enumerate}
-            \item[(a)] Hallar el momento y la energía cinética del cuerpo cuando $t=0$s.
+            \item[(a)] Hallar el momento y la energía cinética del cuerpo cuando $t=10$s.
             \item[(b)] Calcular el impulso y el trabajo efectuado por la fuerza de $t=0$ a $t=10$s.
             Comparar con las repuestas en (a). 
         \end{enumerate}
     \end{problema}
+
+    \begin{solucion}
+        La fuerza aplicada es
+        \begin{equation*}
+            \vec{F}=\hat{u}_{x}(5t)+\hat{u}_{y}(3t^{2}-1).
+        \end{equation*}
+        La masa es
+        \begin{equation*}
+            m=10\text{ kg}.
+        \end{equation*}
+        Por la segunda ley de Newton,
+        \begin{equation*}
+            \vec{F}=m\vec{a}.
+        \end{equation*}
+        Luego
+        \begin{equation*}
+            \vec{a}(t)=\frac{\vec{F}(t)}{10}=\hat{u}_{x}\paren{\frac{t}{2}}+\hat{u}_{y}\paren{\frac{3t^{2}-1}{10}}.
+        \end{equation*}
+        Integrando la aceleración obtenemos la velocidad. Componente $x$
+        \begin{equation*}
+            v_{x}(t)=\int\frac{t}{2}dt=\frac{t^{2}}{4}+C_{1}.
+        \end{equation*}
+        Como el cuerpo parte del reposo,
+        \begin{equation*}
+            v_{x}(0)=0\implies C_{1}=0.
+        \end{equation*}
+        Así,
+        \begin{equation*}
+            v_{x}(t)=\frac{t^{2}}{4}.
+        \end{equation*}
+        Componente $y$
+        \begin{equation*}
+            v_{y}(t)=\int\frac{3t^{2}-1}{10}dt=\frac{t^{3}}{10}-\frac{t}{10}+C_{2}.
+        \end{equation*}
+        Usando $v_{y}(0)=0$,
+        \begin{equation*}
+            C_{2}=0.
+        \end{equation*}
+        Entonces
+        \begin{equation*}
+            v_{y}(t)=\frac{t^{3}-t}{10}.
+        \end{equation*}
+        Por tanto,
+        \begin{equation*}
+            \vec{v}(t)=\hat{u}_{x}\frac{t^{2}}{4}+\hat{u}_{y}\frac{t^{3}-t}{10}
+        \end{equation*}
+        \begin{enumerate}
+            \item[(a)] Hallar el momento y la energía cinética del cuerpo cuando $t=0$s.\\
+            Recordemos que
+            \begin{equation*}
+                \vec{p}=m\vec{v}.
+            \end{equation*}
+            En $t=10$
+            \begin{gather*}
+                v_{x}(10)=\frac{10^{2}}{4}=25,\\
+                v_{y}(10)=\frac{10^{3}-10}{10}=\frac{990}{10}=99.
+            \end{gather*}
+            Así, 
+            \begin{equation*}
+                \vec{v}(10)=25\hat{u}_{x}+99\hat{u}_{y}.
+            \end{equation*}
+            Luego
+            \begin{equation*}
+                \vec{p}(10)=10(25\hat{u}_{x}+99\hat{u}_{y})=250\hat{u}_{x}+990\hat{u}_{y}\text{ kgm/s}.
+            \end{equation*}
+            Ahora la energia cinetica es
+            \begin{equation*}
+                K=\frac{1}{2}mv^{2}.
+            \end{equation*}
+            Primero calculamos
+            \begin{equation*}
+                v^{2}=25^{2}+99^{2}=625+9801=10426.
+            \end{equation*}
+            Entonces
+            \begin{equation*}
+                K=\frac{1}{2}(10)(10426)=52130\text{ J}.
+            \end{equation*}
+            Por tanto
+            \begin{equation*}
+                K(10)=52130\text{ J}
+            \end{equation*}
+            \item[(b)] Calcular el impulso y el trabajo efectuado por la fuerza de $t=0$ a $t=10$s.\\
+            El impulso es
+            \begin{gather*}
+                \vec{\text{J}}_{x}=\int_{0}^{10}5tdt=\frac{5}{2}t^{2}\bigg|_{0}^{10}=250.\\
+                \vec{\text{J}}_{y}=\int_{0}^{10}(3t^{2}-1)dt=(t^{3}-t)_{0}^{10}=1000-10=990.
+            \end{gather*}
+            Así,
+            \begin{equation*}
+                \vec{\text{J}}=250\hat{u}_{x}+990\hat{u}_{y}\text{ Ns}.
+            \end{equation*}
+            Como $1\text{ Ns}=1\text{ kgm/s}$,
+            \begin{equation*}
+                \vec{\text{J}}=\Delta\vec{p}
+            \end{equation*}
+            y esto coincide exactamente con el momento lineal obtenido en (a), pues el cuerpo
+            inició en reposo. El trabajo total satisface el teorema trabajo-energía
+            \begin{equation*}
+                W=\Delta K.
+            \end{equation*}
+            Como incialmente el cuerpo estaba en reposo,
+            \begin{equation*}
+                K(0)=0.
+            \end{equation*}
+            Entonces
+            \begin{equation*}
+                W=K(10)-K(0)=52130.
+            \end{equation*}
+            Por tanto,
+            \begin{equation*}
+                W=52130\text{ J}
+            \end{equation*}
+            lo cual coincide exactamente con la energía cinética calculada en (a).
+        \end{enumerate}
+    \end{solucion}
 
     \begin{problema}
         Se lanza verticalmente hacia arriba un cuerpo de 20kg de masa con una velocidad de
@@ -43,5 +158,130 @@
             \item[(d)] La altura del cuerpo cuando $E_{k}$ es reducida un 80\% de su valor inicial.   
         \end{enumerate}
     \end{problema}
+
+    \begin{solucion}
+        Supondremos que el nivel de lanzamiento corresponde a energía potencial nula
+        \begin{equation*}
+            E_{p}(0)=0.
+        \end{equation*}
+        La energía mecánica es
+        \begin{equation*}
+            E=E_{k}+E_{p}.
+        \end{equation*}
+        Además,
+        \begin{equation*}
+            E_{k}=\frac{1}{2}mv^{2},\qquad E_{p}=mgh.
+        \end{equation*}
+        \begin{enumerate}
+            \item[(a)] Los valores iniciales de $E_{k},E_{p}$ y $E$
+            Inicialmente
+            \begin{equation*}
+                h_{0}=0,\qquad v_{0}=50\text{ m/s}.
+            \end{equation*}
+            Entonces
+            \begin{equation*}
+                E_{k}(0)=\frac{1}{2}(20)(50)^{2}.
+            \end{equation*}
+            Calculando
+            \begin{equation*}
+                E_{k}(0)=10(2500)=25000\text{ J}.
+            \end{equation*}
+            La energia potencial inicial es
+            \begin{equation*}
+                E_{k}(0)=20(9.8)(0)=0.
+            \end{equation*}
+            Por tanto, la energía total incial es
+            \begin{equation*}
+                E=25000\text{ J}.
+            \end{equation*}
+            Así,
+            \begin{gather*}
+                E_{k}(0)=25000\text{ J},\\
+                E_{p}(0)=0,\\
+                E=25000\text{ J}.
+            \end{gather*}
+            \item[(b)] $E_{k}$ y $E_{p}$ despues de 3s\\
+            La velocidad en función del tiempo es
+            \begin{equation*}
+                v(t)=v_{0}-gt.
+            \end{equation*}
+            Entonces
+            \begin{equation*}
+                v(3)=50-9.8(3)=20.6\text{ m/s}.
+            \end{equation*}
+            La energía cinetica es
+            \begin{gather*}
+                E_{k}=\frac{1}{2}(20)(20.6)^{2}.\\
+                E_{k}=10(424.36)=4243.6\text{ J}.
+            \end{gather*}
+            La altura tras 3 s es
+            \begin{equation*}
+                h(t)=v_{0}t-\frac{1}{2}gt^{2}.
+            \end{equation*}
+            Luego
+            \begin{gather*}
+                h(3)=50(3)-\frac{1}{2}(9.8)(9).\\
+                h(3)=150-44.1=105.9\text{ m}.
+            \end{gather*}
+            Entonces
+            \begin{gather*}
+                E_{p}=20(9.8)(105.9).\\
+                E_{p}=20756.4\text{ J}.
+            \end{gather*}
+            y efectivamente
+            \begin{equation*}
+                E_{k}+E_{p}=25000\text{ J}.
+            \end{equation*}
+            \item[(c)] $E_{k}$ y $E_{p}$ a 100m de altura\\
+            La energía potencial a esa altura es
+            \begin{equation*}
+                E_{p}=20(9.8)(100).
+            \end{equation*}
+            Así,
+            \begin{equation*}
+                E_{p}=19600\text{ J}.
+            \end{equation*}
+            Como la energía mecánica se conserva,
+            \begin{equation*}
+                E_{k}=25000-19600.
+            \end{equation*}
+            Entonces
+            \begin{equation*}
+                E_{k}=5400\text{ J}.
+            \end{equation*}
+            Por tanto
+            \begin{gather*}
+                E_{p}=19600\text{ J}.\\
+                E_{k}=5400\text{ J}.
+            \end{gather*}
+            \item[(d)] La altura del cuerpo cuando $E_{k}$ es reducida un 80\% de su valor inicial.\\
+            La energía cinética inicial es
+            \begin{equation*}
+                E_{k0}=25000\text{ J}.
+            \end{equation*}
+            Reducirse un 80\% significa que queda el 20\%
+            \begin{equation*}
+                E_{k}=0.2(25000)=5000\text{ J}.
+            \end{equation*}
+            Por conservación de la energía,
+            \begin{equation*}
+                E_{p}=25000-5000=20000\text{ J}.
+            \end{equation*}
+            Entonces
+            \begin{equation*}
+                mgh=20000.
+            \end{equation*}
+            Sustituyendo
+            \begin{gather*}
+                20(9.8)h=20000.\\
+                196h=20000.\\
+                h=\frac{20000}{196}\approx102.04.
+            \end{gather*}
+            Así,
+            \begin{equation*}
+                h\approx102.04\text{ m}.
+            \end{equation*}
+        \end{enumerate}
+    \end{solucion}
 
 \end{document}
