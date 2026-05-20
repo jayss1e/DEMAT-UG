@@ -1,0 +1,461 @@
+\documentclass[aspectratio=169]{beamer}
+
+% ── Theme & colors ──────────────────────────────────────────────
+\usetheme{Madrid}
+\usecolortheme{default}
+\definecolor{azuloscuro}{RGB}{10,40,80}
+\definecolor{azulmedio}{RGB}{25,90,160}
+\definecolor{acento}{RGB}{255,165,0}
+\definecolor{fondoclaro}{RGB}{240,248,255}
+
+\setbeamercolor{palette primary}{bg=azuloscuro,fg=white}
+\setbeamercolor{palette secondary}{bg=azulmedio,fg=white}
+\setbeamercolor{palette tertiary}{bg=azuloscuro,fg=white}
+\setbeamercolor{palette quaternary}{bg=azuloscuro,fg=white}
+\setbeamercolor{structure}{fg=azulmedio}
+\setbeamercolor{frametitle}{bg=azuloscuro,fg=white}
+\setbeamercolor{title}{fg=white}
+\setbeamercolor{block title}{bg=azulmedio,fg=white}
+\setbeamercolor{block body}{bg=fondoclaro,fg=black}
+\setbeamercolor{alerted text}{fg=acento}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{itemize items}[circle]
+
+% ── Packages ────────────────────────────────────────────────────
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath,amssymb,bm}
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+\usetikzlibrary{arrows.meta,calc,decorations.markings,angles,quotes,3d,shapes.geometric}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{multicol}
+
+% ── Macros ──────────────────────────────────────────────────────
+\newcommand{\vL}{\bm{L}}
+\newcommand{\vr}{\bm{r}}
+\newcommand{\vp}{\bm{p}}
+\newcommand{\vtau}{\bm{\tau}}
+\newcommand{\vomega}{\bm{\omega}}
+\newcommand{\valpha}{\bm{\alpha}}
+\newcommand{\vF}{\bm{F}}
+
+% ── Title info ───────────────────────────────────────────────────
+\title[Dinámica del Cuerpo Rígido]{\textbf{Dinámica de un Cuerpo Rígido}}
+\subtitle{Rotación, Inercia y Movimiento Angular}
+\author{Ricardo Leon Martinez}
+\institute{DEMAT}
+\date{19 de mayo de 2026}
+
+% ════════════════════════════════════════════════════════════════
+\begin{document}
+% ════════════════════════════════════════════════════════════════
+
+% ── PORTADA ─────────────────────────────────────────────────────
+{
+\setbeamertemplate{background}{
+  \begin{tikzpicture}[remember picture,overlay]
+    \fill[azuloscuro] (current page.south west) rectangle (current page.north east);
+    % decorative arcs suggesting rotation
+    \foreach \r/\op in {3/0.08,4.5/0.06,6/0.04,7.5/0.03}{
+      \draw[white,opacity=\op,line width=1.2pt]
+        (current page.center) ++(-2,0) circle(\r);
+    }
+    \draw[acento,line width=2pt,opacity=0.5]
+      (current page.center) ++(-2,0) circle(2.2);
+    % axis arrow
+    \draw[-{Stealth[length=8pt]},acento,line width=2pt,opacity=0.7]
+      ($(current page.center)+(-2,-3)$) -- ($(current page.center)+(-2,3.2)$);
+    \node[white,opacity=0.15,font=\fontsize{120}{120}\selectfont] at
+      ($(current page.center)+(4,-0.5)$) {$\omega$};
+  \end{tikzpicture}
+}
+\begin{frame}[plain]
+  \vspace{1.5cm}
+  \begin{center}
+    {\color{acento}\rule{0.55\textwidth}{1.5pt}}\\[0.4cm]
+    {\color{white}\fontsize{22}{26}\selectfont\textbf{Dinámica de un Cuerpo Rígido}}\\[0.2cm]
+    {\color{white!70}\large Rotación, Inercia y Movimiento Angular}\\[0.2cm]
+    {\color{acento}\rule{0.55\textwidth}{1.5pt}}\\[0.8cm]
+    {\color{white}\large Ricardo Leon Martinez}\\[0.1cm]
+    {\color{white!60}\normalsize 19 de mayo de 2026}
+  \end{center}
+\end{frame}
+}
+
+% ── ÍNDICE ──────────────────────────────────────────────────────
+\begin{frame}{Contenido}
+  \begin{columns}[c]
+    \column{0.5\textwidth}
+    \tableofcontents
+    \column{0.45\textwidth}
+    \begin{tikzpicture}[scale=0.85]
+      % Spinning disk diagram
+      \fill[azulmedio!20] (0,0) ellipse(1.8 and 0.45);
+      \fill[azulmedio!40] (0,0.15) ellipse(1.8 and 0.45);
+      \draw[azuloscuro,line width=1.2pt] (0,0.15) ellipse(1.8 and 0.45);
+      \draw[azuloscuro,line width=1.2pt] (-1.8,0.15) -- (-1.8,-0.15);
+      \draw[azuloscuro,line width=1.2pt] (1.8,0.15) -- (1.8,-0.15);
+      \draw[azuloscuro!50,line width=0.6pt] (0,0.15) ellipse(0.9 and 0.22);
+      % axis
+      \draw[acento,line width=1.5pt,dashed] (0,-1) -- (0,2.2);
+      \draw[-{Stealth},acento,line width=1.5pt] (0,1.5) -- (0,2.2);
+      % omega arc
+      \draw[-{Stealth},azulmedio,line width=1.2pt]
+        (0.4,0.55) arc[start angle=40,end angle=140,radius=0.6]
+        node[midway,above,font=\small,azulmedio]{$\omega$};
+      % labels
+      \node[font=\small,azuloscuro] at (0,-0.6) {Disco rígido};
+    \end{tikzpicture}
+  \end{columns}
+\end{frame}
+
+% ── 1. CUERPO RÍGIDO ────────────────────────────────────────────
+\section{Cuerpo Rígido}
+\begin{frame}{¿Qué es un Cuerpo Rígido?}
+  \begin{columns}[c]
+    \column{0.48\textwidth}
+    \begin{block}{Definición}
+      Sistema de partículas donde la \alert{distancia entre cualquier par} de
+      puntos permanece \textbf{constante} durante el movimiento.
+    \end{block}
+    \vspace{0.4cm}
+    \begin{itemize}
+      \item Traslación del CM
+      \item \alert{Rotación} alrededor del CM
+    \end{itemize}
+    \vspace{0.3cm}
+    \[
+      \boxed{E_{\text{total}} = E_{\text{trans}} + E_{\text{rot}}}
+    \]
+
+    \column{0.48\textwidth}
+    \begin{tikzpicture}[scale=0.9]
+      % rigid body outline
+      \fill[azulmedio!15,rounded corners=8pt]
+        (-1.5,-1) -- (1.5,-0.8) -- (1.8,1) -- (-1.2,1.2) -- cycle;
+      \draw[azuloscuro,line width=1.2pt,rounded corners=8pt]
+        (-1.5,-1) -- (1.5,-0.8) -- (1.8,1) -- (-1.2,1.2) -- cycle;
+      % particles
+      \foreach \x/\y in {-0.8/-0.3, 0.2/0.4, 0.9/-0.2, -0.3/0.7, 0.5/0.8}{
+        \fill[azulmedio] (\x,\y) circle(2.5pt);
+      }
+      % rigid bonds
+      \draw[azulmedio!50,dashed,line width=0.7pt]
+        (-0.8,-0.3)--(0.2,0.4)--(0.9,-0.2)--(-0.8,-0.3);
+      \draw[azulmedio!50,dashed,line width=0.7pt]
+        (0.2,0.4)--(-0.3,0.7)--(0.5,0.8)--(0.2,0.4);
+      % CM
+      \fill[acento] (0.1,0.2) circle(3.5pt);
+      \node[font=\footnotesize,acento,right=3pt] at (0.1,0.2) {CM};
+      % arrows
+      \draw[-{Stealth},acento,line width=1.2pt] (0.1,0.2)--++(0.9,-0.3)
+        node[right,font=\footnotesize]{$\bm{v}_{\text{cm}}$};
+      \draw[-{Stealth},azulmedio,line width=1.2pt]
+        (0.1,0.2)++(0.5,0.5) arc[start angle=20,end angle=100,radius=0.5]
+        node[above,font=\footnotesize]{$\omega$};
+    \end{tikzpicture}
+  \end{columns}
+\end{frame}
+
+% ── 2. MOMENTO DE INERCIA ────────────────────────────────────────
+\section{Momento de Inercia}
+\begin{frame}{Momento de Inercia}
+  \begin{columns}[c]
+    \column{0.45\textwidth}
+    \[
+      \boxed{I = \sum_i m_i r_i^2 = \int r^2\, dm}
+    \]
+    \vspace{0.2cm}
+    \begin{block}{Teorema de Steiner}
+      \[
+        I = I_{\text{cm}} + M d^2
+      \]
+    \end{block}
+    \vspace{0.2cm}
+    \small
+    \begin{tabular}{lc}
+      \toprule
+      \textbf{Cuerpo} & $I$ \\
+      \midrule
+      Disco sólido   & $\dfrac{1}{2}MR^2$ \\[6pt]
+      Esfera sólida  & $\dfrac{2}{5}MR^2$ \\[6pt]
+      Varilla (CM)   & $\dfrac{1}{12}ML^2$ \\
+      \bottomrule
+    \end{tabular}
+
+    \column{0.50\textwidth}
+    \begin{tikzpicture}[scale=1.0]
+      % Disk with particles at radius r
+      \fill[azulmedio!15] (0,0) circle(1.8);
+      \draw[azuloscuro,line width=1pt] (0,0) circle(1.8);
+      % axis
+      \fill[azuloscuro!60] (-0.08,-1.9) rectangle (0.08,1.9);
+      \fill[acento] (0,0) circle(3.5pt) node[above right,font=\small]{$O$};
+      % example particle
+      \fill[azulmedio] (1.2,1.1) circle(4pt) node[right,font=\small]{$m_i$};
+      \draw[acento,line width=1pt,dashed] (0,0)--(1.2,1.1)
+        node[midway,above,sloped,font=\small]{$r_i$};
+      % rotation arrow
+      \draw[-{Stealth},azulmedio!80,line width=1.2pt]
+        (1.9,0.3) arc[start angle=9,end angle=70,radius=1.9]
+        node[above right,font=\small]{$\omega$};
+      \node[font=\small,azuloscuro] at (0,-2.2){Disco $I=\tfrac{1}{2}MR^2$};
+    \end{tikzpicture}
+  \end{columns}
+\end{frame}
+
+% ── 3. TORQUE ───────────────────────────────────────────────────
+\section{Torque}
+\begin{frame}{Torque (Momento de Fuerza)}
+  \begin{columns}[c]
+    \column{0.48\textwidth}
+    \[
+      \boxed{\vtau = \vr \times \vF}
+    \]
+    \[
+      |\vtau| = r\,F\sin\theta
+    \]
+    \vspace{0.2cm}
+    \begin{itemize}
+      \item Análogo rotacional de la \alert{fuerza}
+      \item Dirección: regla de la mano derecha
+      \item Unidades: $\text{N·m}$
+    \end{itemize}
+
+    \column{0.48\textwidth}
+    \begin{tikzpicture}[scale=1.0]
+      % pivot
+      \fill[azuloscuro] (0,0) circle(4pt) node[below left,font=\small]{$O$};
+      % arm r
+      \draw[azulmedio,line width=1.8pt,-{Stealth}]
+        (0,0) -- (2.5,0.8) node[above,font=\small]{$\vr$};
+      % force F
+      \draw[acento,line width=1.8pt,-{Stealth}]
+        (2.5,0.8) -- (3.2,2.4) node[right,font=\small]{$\vF$};
+      % angle arc
+      \draw[gray,line width=0.8pt]
+        (2.5,0.8)++(0.55,0.18) arc[start angle=17.7,end angle=75,radius=0.58]
+        node[midway,right,font=\footnotesize]{$\theta$};
+      % tau arc (torque)
+      \draw[-{Stealth},azulmedio!60,line width=1.3pt]
+        (0.7,-0.2) arc[start angle=-16,end angle=90,radius=0.73]
+        node[above left,font=\small,azulmedio]{$\vtau$};
+      % perpendicular line
+      \draw[gray,dashed,line width=0.7pt]
+        (2.5,0.8) -- (2.5,-0.5) node[below,font=\footnotesize]{$r\sin\theta$};
+      \draw[gray,line width=0.7pt]
+        (2.5,0) -- (2.65,0) -- (2.65,-0.15);
+    \end{tikzpicture}
+  \end{columns}
+\end{frame}
+
+% ── 4. MOMENTO ANGULAR ──────────────────────────────────────────
+\section{Momento Angular}
+\begin{frame}{Momento Angular}
+  \begin{columns}[c]
+    \column{0.48\textwidth}
+    \textbf{Partícula:}
+    \[
+      \vL = \vr \times \vp = \vr \times m\bm{v}
+    \]
+    \textbf{Cuerpo rígido:}
+    \[
+      \boxed{\vL = I\,\vomega}
+    \]
+    \vspace{0.2cm}
+    \begin{alertblock}{Conservación}
+      Si $\vtau_{\text{neto}} = 0$:
+      \[
+        \vL = \text{cte}
+      \]
+    \end{alertblock}
+
+    \column{0.48\textwidth}
+    \begin{tikzpicture}[scale=0.88]
+      % rotating body
+      \fill[azulmedio!20,rounded corners=6pt]
+        (-1.2,-0.5) rectangle (1.2,0.5);
+      \draw[azuloscuro,line width=1pt,rounded corners=6pt]
+        (-1.2,-0.5) rectangle (1.2,0.5);
+      % axis through center
+      \draw[gray,dashed,line width=0.8pt] (0,-1.6) -- (0,2.5);
+      % omega
+      \draw[-{Stealth},azulmedio,line width=1.5pt]
+        (0.5,0.7) arc[start angle=30,end angle=150,radius=0.58]
+        node[midway,above,font=\small]{$\omega$};
+      % L vector
+      \draw[-{Stealth},acento,line width=2pt]
+        (0,0.5) -- (0,2.2) node[right,font=\small]{$\vL = I\vomega$};
+      % r and p for a particle
+      \fill[azulmedio] (1.0,0) circle(3pt);
+      \draw[-{Stealth[length=5pt]},azulmedio!60,line width=0.9pt]
+        (0,0)--(1.0,0) node[midway,below,font=\tiny]{$r$};
+      \draw[-{Stealth[length=5pt]},acento!70,line width=0.9pt]
+        (1.0,0)--(1.0,0.8) node[right,font=\tiny]{$\bm{p}$};
+    \end{tikzpicture}
+  \end{columns}
+\end{frame}
+
+% ── 5. ECUACIÓN DEL MOVIMIENTO ──────────────────────────────────
+\section{Ecuación del Movimiento Rotacional}
+\begin{frame}{Ecuación del Movimiento Rotacional}
+  \begin{center}
+    \begin{tikzpicture}
+      \node[draw=azulmedio,rounded corners=8pt,fill=fondoclaro,
+            inner sep=12pt,line width=1.5pt] {
+        \Large$\displaystyle\vtau_{\text{neto}} = I\,\valpha$
+      };
+    \end{tikzpicture}
+  \end{center}
+  \vspace{0.1cm}
+  \begin{columns}[c]
+    \column{0.45\textwidth}
+    \textbf{Analogías Traslación $\leftrightarrow$ Rotación}\\[0.3cm]
+    \begin{tabular}{cc}
+      \toprule
+      \textbf{Traslación} & \textbf{Rotación} \\
+      \midrule
+      $m$           & $I$ \\
+      $\bm{v}$      & $\vomega$ \\
+      $\bm{a}$      & $\valpha$ \\
+      $\bm{F}$      & $\vtau$ \\
+      $\bm{F}=m\bm{a}$ & $\vtau=I\valpha$ \\
+      \bottomrule
+    \end{tabular}
+
+    \column{0.50\textwidth}
+    \begin{tikzpicture}[scale=0.9]
+      % pulley
+      \fill[azulmedio!20] (0,0) circle(1.2);
+      \draw[azuloscuro,line width=1.2pt] (0,0) circle(1.2);
+      \fill[acento] (0,0) circle(4pt);
+      % rope
+      \draw[azuloscuro,line width=1.5pt] (1.2,0) -- (1.2,-1.4);
+      % hanging mass
+      \fill[azulmedio!50] (0.75,-1.4) rectangle (1.65,-2.0);
+      \draw[azuloscuro,line width=1pt] (0.75,-1.4) rectangle (1.65,-2.0);
+      \node[font=\small] at (1.2,-1.7) {$M$};
+      % torque arc
+      \draw[-{Stealth},acento,line width=1.2pt]
+        (0.3,1.1) arc[start angle=75,end angle=5,radius=1.15]
+        node[right,font=\small]{$\tau$};
+      % alpha label
+      \node[azulmedio,font=\small] at (-0.6,0.3){$\alpha$};
+      \draw[-{Stealth},azulmedio,line width=1pt]
+        (-0.3,0.8) arc[start angle=100,end angle=170,radius=0.85];
+      % weight
+      \draw[-{Stealth},acento!80,line width=1pt]
+        (1.2,-2.0) -- (1.2,-2.7) node[right,font=\small]{$Mg$};
+    \end{tikzpicture}
+  \end{columns}
+\end{frame}
+
+% ── 6. ENERGÍA ROTACIONAL ───────────────────────────────────────
+\section{Energía Rotacional}
+\begin{frame}{Energía Rotacional}
+  \begin{columns}[c]
+    \column{0.48\textwidth}
+    \[
+      \boxed{E_{\text{rot}} = \frac{1}{2}\,I\,\omega^2}
+    \]
+    \vspace{0.2cm}
+    \textbf{Rodadura sin deslizamiento:}
+    \[
+      E_{\text{total}} = \underbrace{\frac{1}{2}mv_{\text{cm}}^2}_{\text{traslación}}
+                       + \underbrace{\frac{1}{2}I_{\text{cm}}\omega^2}_{\text{rotación}}
+    \]
+    \vspace{0.2cm}
+    \begin{block}{Trabajo rotacional}
+      \[W = \int \tau\, d\theta\]
+    \end{block}
+
+    \column{0.48\textwidth}
+    \begin{tikzpicture}[scale=1.0]
+      % inclined plane
+      \fill[gray!20] (0,0) -- (3.5,0) -- (3.5,-0.15) -- (0,-0.15) -- cycle;
+      \draw[gray,line width=0.8pt] (0,0) -- (3.5,0);
+      \fill[gray!30] (0,0) -- (3.5,0) -- (0,2.0) -- cycle;
+      \draw[azuloscuro,line width=1pt] (0,0) -- (3.5,0) -- (0,2.0) -- cycle;
+      % angle
+      \draw[gray] (0.6,0) arc[start angle=0,end angle=29.7,radius=0.6]
+        node[midway,right,font=\tiny]{$\theta$};
+      % rolling disk
+      \fill[azulmedio!30] (2.1,0.82) circle(0.42);
+      \draw[azulmedio,line width=1.2pt] (2.1,0.82) circle(0.42);
+      \draw[azuloscuro,line width=0.8pt] (2.1,0.82)--++(0.3,0.29);
+      \draw[azuloscuro,line width=0.8pt] (2.1,0.82)--++(-0.3,-0.29);
+      % v arrow
+      \draw[-{Stealth},acento,line width=1.2pt]
+        (2.1,0.82) -- (2.6,1.07) node[above,font=\small]{$v$};
+      % omega arc
+      \draw[-{Stealth},azulmedio!80,line width=1pt]
+        (2.53,0.62) arc[start angle=-30,end angle=60,radius=0.42]
+        node[right,font=\tiny]{$\omega$};
+      % height h
+      \draw[<->,acento!70,line width=0.7pt]
+        (-0.2,0) -- (-0.2,2.0) node[midway,left,font=\small]{$h$};
+    \end{tikzpicture}
+  \end{columns}
+\end{frame}
+
+% ── 7. RESUMEN ──────────────────────────────────────────────────
+\begin{frame}{Resumen}
+  \begin{center}
+  \begin{tikzpicture}[
+    node distance=0.6cm and 1.0cm,
+    box/.style={draw=azulmedio,fill=fondoclaro,rounded corners=6pt,
+                minimum width=3.0cm,minimum height=0.9cm,
+                font=\small,align=center,line width=1pt},
+    formula/.style={font=\small\color{azuloscuro},align=center}
+  ]
+    \node[box] (I) {Momento de\\Inercia};
+    \node[formula,right=0.4cm of I] (fI) {$I=\int r^2 dm$};
+
+    \node[box,below=0.5cm of I] (tau) {Torque};
+    \node[formula,right=0.4cm of tau] (ftau) {$\tau=rF\sin\theta$};
+
+    \node[box,below=0.5cm of tau] (eqmov) {Ec.\ Movimiento};
+    \node[formula,right=0.4cm of eqmov] (feq) {$\vtau=I\valpha$};
+
+    \node[box,below=0.5cm of eqmov] (L) {Momento Angular};
+    \node[formula,right=0.4cm of L] (fL) {$\vL=I\vomega$};
+
+    \node[box,below=0.5cm of L] (E) {Energía Rot.};
+    \node[formula,right=0.4cm of E] (fE) {$E_{\text{rot}}=\tfrac{1}{2}I\omega^2$};
+
+    % arrows
+    \draw[-{Stealth},acento,line width=1pt] (I.south)--(tau.north);
+    \draw[-{Stealth},acento,line width=1pt] (tau.south)--(eqmov.north);
+    \draw[-{Stealth},acento,line width=1pt] (eqmov.south)--(L.north);
+    \draw[-{Stealth},acento,line width=1pt] (L.south)--(E.north);
+  \end{tikzpicture}
+  \end{center}
+\end{frame}
+
+% ── CIERRE ──────────────────────────────────────────────────────
+{
+\setbeamertemplate{background}{
+  \begin{tikzpicture}[remember picture,overlay]
+    \fill[azuloscuro] (current page.south west) rectangle (current page.north east);
+    \foreach \r/\op in {3/0.07,5/0.05,7/0.03}{
+      \draw[white,opacity=\op,line width=1pt]
+        (current page.center) circle(\r);
+    }
+    \draw[acento,opacity=0.4,line width=1.5pt]
+      (current page.center) circle(2.5);
+  \end{tikzpicture}
+}
+\begin{frame}[plain]
+  \begin{center}
+    \vspace{1.8cm}
+    {\color{acento}\Huge $\vL = I\,\vomega$}\\[0.8cm]
+    {\color{white}\large ¡Gracias!}\\[0.3cm]
+    {\color{white!60}\small Ricardo · 19 de mayo de 2026}
+  \end{center}
+\end{frame}
+}
+
+\end{document}

@@ -1,0 +1,7 @@
+\babel@toc {spanish}{}\relax 
+\beamer@sectionintoc {1}{Cuerpo Rígido}{3}{0}{1}
+\beamer@sectionintoc {2}{Momento de Inercia}{4}{0}{2}
+\beamer@sectionintoc {3}{Torque}{5}{0}{3}
+\beamer@sectionintoc {4}{Momento Angular}{6}{0}{4}
+\beamer@sectionintoc {5}{Ecuación del Movimiento Rotacional}{7}{0}{5}
+\beamer@sectionintoc {6}{Energía Rotacional}{8}{0}{6}
