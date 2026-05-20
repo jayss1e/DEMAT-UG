@@ -258,6 +258,145 @@
         \end{equation*}
     \end{mdframed}
 
+    \begin{proof}
+        Por definición,
+        \begin{equation*}
+            \E[X]=\sum_{i=1}^{\infty}ipq^{i-1}.
+        \end{equation*}
+        Usamos la sugerencia
+        \begin{equation*}
+            ipq^{i-1}=(i-1)pq^{i-1}+pq^{i-1}
+        \end{equation*}
+        Entonces,
+        \begin{equation*}
+            \E[X]=\sum_{i=1}^{\infty}(i-1)pq^{i-1}+\sum_{i=1}^{\infty}pq^{i-1}.
+        \end{equation*}
+        La segunda suma vale 1, porque es la suam de todas las probabilidades
+        \begin{equation*}
+            \sum_{i=1}^{\infty}pq^{i-1}=1.
+        \end{equation*}
+        Por tanto,
+        \begin{equation*}
+            \E[X]=\sum_{i=1}^{\infty}(i-1)pq^{i-1}+1.
+        \end{equation*}
+        Ahora hacemos el cambio de variable
+        \begin{equation*}
+            j=i-1.
+        \end{equation*}
+        Entonces,
+        \begin{equation*}
+            \sum_{i=1}^{\infty}(i-1)pq^{i-1}=\sum_{i=0}^{\infty}jpq^{j}.
+        \end{equation*}
+        Como el termino $j=0$ es cero,
+        \begin{equation*}
+            =\sum_{j=1}^{\infty}jpq^{j}=q\sum_{j=1}^{\infty}jpq^{j-1}.
+        \end{equation*}
+        Pero la suma final es precisamente $\E[X]$. Así,
+        \begin{equation*}
+            \sum_{i=1}^{\infty}(i-1)pq^{i-1}=q\E[X].
+        \end{equation*}
+        Concluimos que
+        \begin{equation*}
+            \E[X]=q\E[X]+1.
+        \end{equation*}
+        Calculo de $\E[X]$. Ahora de
+        \begin{equation*}
+            \E[X]=q\E[X]+1.
+        \end{equation*}
+        obtenemos
+        \begin{equation*}
+            (1-q)\E[X]=1.
+        \end{equation*}
+        Como $1-q=p$,
+        \begin{equation*}
+            p\E[X]=1.
+        \end{equation*}
+        Por tanto,
+        \begin{equation*}
+            \E[X]=\frac{1}{p}.
+        \end{equation*}
+        Ahora nuevamente por definición,
+        \begin{equation*}
+            \E[X^{2}]=\sum_{i=1}^{\infty}i^{2}pq^{i-1}.
+        \end{equation*}
+        Usamos ahora la identidad sugerida
+        \begin{equation*}
+            i^{2}pq^{i-1}=(i-1)^{2}pq^{i-1}+2(i-1)pq^{i-1}+pq^{i-1}.
+        \end{equation*}
+        Entonces,
+        \begin{equation*}
+            \E[X^{2}]=\sum_{i=1}^{\infty}(i-1)^{2}pq^{i-1}+2\sum_{i=1}^{\infty}(i-1)pq^{i-1}+\sum_{i=1}^{\infty}pq^{i-1}.
+        \end{equation*}
+        Ya sabems que
+        \begin{equation*}
+            \sum_{i=1}^{\infty}pq^{i-1}=1,
+        \end{equation*}
+        y también vimos que
+        \begin{equation*}
+            \sum_{i=1}^{\infty}(i-1)pq^{i-1}=q\E[X].
+        \end{equation*}
+        Falta el primer término. Haciendo $j=i-1$,
+        \begin{equation*}
+            \sum_{i=1}^{\infty}(i-1)^{2}pq^{i-1}=\sum_{j=0}^{\infty}j^{2}pq^{j}.
+        \end{equation*}
+        Factorizando $q$,
+        \begin{equation*}
+            =q\sum_{j=1}^{\infty}j^{2}pq^{j-1}=q\E[X^{2}].
+        \end{equation*}
+        Así,
+        \begin{equation*}
+            \E[X^{2}]=q\E[X^{2}]+2q\E[X]+1.
+        \end{equation*}
+        Calculo de $\E[X^{2}]$. Sustituimos
+        \begin{equation*}
+            \E[X]=\frac{1}{p}.
+        \end{equation*}
+        Entonces,
+        \begin{equation*}
+            E[X^{2}]=q\E[X^{2}]+\frac{2q}{p}+1.
+        \end{equation*}
+        Pasando términos,
+        \begin{equation*}
+            (1-q)\E[X^{2}]=\frac{2q}{p}+1.
+        \end{equation*}
+        Como $1-q=p$,
+        \begin{equation*}
+            p\E[X^{2}]=\frac{2q}{p}+1.
+        \end{equation*}
+        Por tanto,
+        \begin{equation*}
+            \E[X^{2}]=\frac{2q}{p^{2}}+\frac{1}{p}.
+        \end{equation*}
+        Uniendo en un solo denominador,
+        \begin{equation*}
+            \E[X^{2}]=\frac{2q+p}{p^{2}}.
+        \end{equation*}
+        Como $q=1-p$,
+        \begin{equation*}
+            2q+p=2(1-p)+p=2-p.
+        \end{equation*}
+        Así,
+        \begin{equation*}
+            \E[X^{2}]=\frac{2-p}{p^{2}}.
+        \end{equation*}
+        Caculo de la varianza. Por definición
+        \begin{equation*}
+            \Var(X)=\E[X^{2}]-\E[X]^{2}.
+        \end{equation*}
+        Sustituyendo,
+        \begin{equation*}
+            \Var(X)=\frac{2-p}{p^{2}}-\frac{1}{p^{2}}.
+        \end{equation*}
+        Entonces,
+        \begin{equation*}
+            \Var(X)=\frac{1-p}{p^{2}}.
+        \end{equation*}
+        Concluimos que
+        \begin{equation*}
+            \Var(X)=\frac{1-p}{p^{2}}.
+        \end{equation*}
+    \end{proof}
+
     \section*{Parte IV. Distribución binomial negativa}
 
     Una variable aleatoria $X$ tiene distribución binomial negativa de parámetros $(r, p)$ si se cumple que
@@ -279,6 +418,93 @@
             i^k \binom{i-1}{r-1} p^r = \frac{r}{p}\, i^{k-1} \binom{i}{r} p^{r+1}.
         \end{equation*}
     \end{mdframed}
+
+    \begin{proof}
+        Denotemos $q=1-p$. Por definición de esperanza,
+        \begin{equation*}
+            \E[X^{k}]=\sum_{i=r}^{\infty}i^{k}\binom{i-1}{r-1}p^{r}q^{i-r}.
+        \end{equation*}
+        Usamos ahora la identidad sugerida
+        \begin{equation*}
+            i^{k}\binom{i-1}{r-1}p^{r}=\frac{r}{p}i^{k-1}\binom{i}{r}p^{r+1}q^{i-r}.
+        \end{equation*}
+        Observemos que
+        \begin{equation*}
+        \binom{i}{r}p^{r+1}q^{i-r}=P(Y=i+1),
+        \end{equation*}
+        pues
+        \begin{equation*}
+            P(Y=i+1)=\binom{(i+1)-1}{r}p^{r+1}q^{(i+1)-(r+1)}=\binom{i}{r}p^{r+1}q^{i-r}.
+        \end{equation*}
+        Entonces,
+        \begin{equation*}
+            \E[X^{k}]=\frac{r}{p}\sum_{i=r}^{\infty}i^{k-1}P(Y=i+1).
+        \end{equation*}
+        Ahora hacemos el cambio de variable
+        \begin{equation*}
+            j=i+1.
+        \end{equation*}
+        Entonces $i=j-1$, y obtenemos
+        \begin{equation*}
+            \E[X^{k}]=\frac{r}{p}\sum_{j=r+1}^{\infty}(j-1)^{k-1}P(Y=j).
+        \end{equation*}
+        Pero esta suma es precisamente
+        \begin{equation*}
+            \E[(Y-1)^{k-1}].
+        \end{equation*}
+        Por tanto,
+        \begin{equation*}
+            \E[X^{k}]=\frac{r}{p}\E[(Y-1)^{k-1}].
+        \end{equation*}
+        Calculo de $\E[X]$. Tomamos $k=1$. Entonces,
+        \begin{equation*}
+            \E[X]=\frac{r}{p}\E[1].
+        \end{equation*}
+        Como $\E[1]=1$,
+        \begin{equation*}
+            \E[X]=\frac{r}{p}.
+        \end{equation*}
+        Calculo de $\E[X^{2}]$. Tomamos $k=2$. Entonces,
+        \begin{equation*}
+            \E[X^{2}]=\frac{r}{p}\E[Y-1].
+        \end{equation*}
+        Por linealidad de la esperanza,
+        \begin{equation*}
+            \E[X^{2}]=\frac{r}{p}(\E[Y]-1).
+        \end{equation*}
+        Como $Y$ tiene parametros $(r+1,p)$,
+        \begin{equation*}
+            \E[Y]=\frac{r+1}{p}.
+        \end{equation*}
+        Por tanto,
+        \begin{equation*}
+            \E[X^{2}]=\frac{r}{p}\paren{\frac{r+1}{p}-1}.
+        \end{equation*}
+        Simplificando,
+        \begin{equation*}
+            \E[X^{2}]=\frac{r(r+1-p)}{p^{2}}.
+        \end{equation*}
+        Calculo de la varianza. Por definción,
+        \begin{equation*}
+            \Var(X)=\E[X^{2}]-E[X]^{2}.
+        \end{equation*}
+        Sustituyendo las expresiones obtenidas,
+        \begin{equation*}
+            \Var(X)=\frac{r(r+1-p)}{p^{2}}-\frac{r^{2}}{p^{2}}.
+        \end{equation*}
+        Entonces,
+        \begin{equation*}
+            \Var(X)=\frac{r(r+1-p-r)}{p^{2}}.
+        \end{equation*}
+        Simplificando,
+        \begin{equation*}
+            \Var(X)=\frac{r(1-p)}{p^{2}}.
+        \end{equation*}
+        Concluimos que
+        \begin{equation*}
+            \Var(X)=r\frac{1-p}{p^{2}}.
+        \end{equation*}
+    \end{proof}
 
     \section*{Parte V. Distribución hipergeométrica}
 
@@ -305,6 +531,105 @@
         $i^k \binom{b}{i} = i^{k-1} b \binom{b-1}{i-1}$ y que $m\binom{b+n}{m} = (b+n)\binom{b+n-1}{m-1}$.
     \end{mdframed}
 
+    \begin{proof}
+        Por definición,
+        \begin{equation*}
+            \E[X^{k}]=\sum_{i=0}^{m}i^{k}\frac{\binom{b}{i}\binom{n}{m-i}}{\binom{b+n}{m}}.
+        \end{equation*}
+        El término $i=0$ es cero $k\geq1$, así que
+        \begin{equation*}
+            \E[X^{k}]=\sum_{i=1}^{m}i^{k}\frac{\binom{b}{i}\binom{n}{m-i}}{\binom{b+n}{m}}.
+        \end{equation*}
+        Usamos ahora la identidad sugerida
+        \begin{equation*}
+            i^{k}\binom{b}{i}=i^{k-1}b\binom{b-1}{i-1}.
+        \end{equation*}
+        Entonces
+        \begin{equation*}
+            \E[X^{k}]=\sum_{i=1}^{m}i^{k-1}b\binom{b-1}{i-1}\frac{\binom{n}{m-i}}{\binom{b+n}{m}}.
+        \end{equation*}
+        Además, usando
+        \begin{equation*}
+            m\binom{b+n}{m}=(b+n)\binom{b+n-1}{m-1},
+        \end{equation*}
+        obtenemos
+        \begin{equation*}
+            \frac{b}{\binom{b+n}{m}}=\frac{mb}{b+n}\frac{1}{\binom{b+n-1}{m-1}}.
+        \end{equation*}
+        Sustituyendo,
+        \begin{equation*}
+            \E[X^{k}]=m\frac{b}{b+n}\sum_{i=1}^{m}i^{k-1}\frac{\binom{b-1}{i-1}}{\binom{b+n-1}{m-1}}.
+        \end{equation*}
+        Ahora hacemos el cambio de variable
+        \begin{equation*}
+            j=i-1.
+        \end{equation*}
+        Entonces $i=j+1$, y
+        \begin{equation*}
+            \E[X^{k}]=m\frac{b}{b+n}\sum_{j=0}^{m-1}(j+1)^{k-1}\frac{\binom{b-1}{j}\binom{n}{(m-1)-j}}{\binom{b+n-1}{m-1}}.
+        \end{equation*}
+        Pero la fracción es exactamente $P(Y=j)$. Por tanto,
+        \begin{equation*}
+            \E[X^{k}]=m\frac{b}{b+n}\sum_{j=0}^{m-1}(j+1)^{k-1}P(Y=j).
+        \end{equation*}
+        Así,
+        \begin{equation*}
+            \E[X^{k}]=m\frac{b}{b+n}\E[(Y+1)^{k-1}].
+        \end{equation*}
+        Calculo de $\E[X]$. Tomemos $k=1$. Entonces,
+        \begin{equation*}
+            \E[X]=m\frac{b}{b+n}\E[1].
+        \end{equation*}
+        Como $\E[1]=1$,
+        \begin{equation*}
+            \E[X]=m\frac{b}{b+n}.
+        \end{equation*}
+        Si definimos
+        \begin{equation*}
+            p=\frac{b}{b+n},
+        \end{equation*}
+        entonces
+        \begin{equation*}
+            \E[X]=mp.
+        \end{equation*}
+        Calculo de $\E[X^{2}]$. Tomamos $k=2$. Entonces,
+        \begin{equation*}
+            \E[X^{2}]=m\frac{b}{b+n}\E[Y+1].
+        \end{equation*}
+        Por linealidad de la esperanza,
+        \begin{equation*}
+            \E[X^{2}]=m\frac{b}{b+n}(E[Y]+1).
+        \end{equation*}
+        Ahora $Y$ tiene parametros $(b-1,n,m-1)$, así que
+        \begin{equation*}
+            E[Y]=(m-1)\frac{b-1}{b+n-1}.
+        \end{equation*}
+        Por tanto,
+        \begin{equation*}
+            E[X^{2}]=m\frac{b}{b+n}\paren{(m-1)\frac{b-1}{b+n-1}+1}.
+        \end{equation*}
+        En terminos de $p$,
+        \begin{equation*}
+            \E[X^{2}]=mp\paren{(m-1)\frac{b-1}{b+n-1}+1}.
+        \end{equation*}
+        Calculo de la varianza. Por definición,
+        \begin{equation*}
+            \Var(X)=\E[X^{2}]-E[X]^{2}.
+        \end{equation*}
+        Usando las expresiones anteriores,
+        \begin{equation*}
+            \Var(X)=mp\paren{(m-1)\frac{b-1}{b+n-1}+1}-m^{2}p^{2}.
+        \end{equation*}
+        Observemos que
+        \begin{equation*}
+            \frac{b-1}{b+n-1}=\frac{b}{b+n}-\frac{n}{(b+n)(b+n-1)}.
+        \end{equation*}
+        Eqivalentemente, tras simplificar algebraicamente,
+        \begin{equation*}
+            \Var(X)=mp(1-p)\paren{1-\frac{m-1}{b+n-1}}.
+        \end{equation*}
+    \end{proof}
+
     \section*{Parte VI. Distribución Poisson}
 
     Una variable aleatoria $X$ tiene distribución Poisson de parámetro $\lambda > 0$ si se cumple que
@@ -327,6 +652,71 @@
         $e^t = \sum_{i=0}^{\infty} t^i / i!$ como que $e^t = \lim_{n\to\infty}(1 + t/n)^n$
         para todo $t \in \mathbb{R}$.
     \end{mdframed}
+
+    \begin{proof}
+        Sea $X$ una variable aleatoria con distribución Poisson de parámetro $\lambda\gt0$,
+        es decir,
+        \begin{equation*}
+            P(X=i)=\frac{\lambda^{i}}{i!}e^{-\lambda},
+        \end{equation*}
+        y sea $X_{n}$ una variable aleatoria binomial de parámetros $(n,p_{n})$, donde
+        \begin{equation*}
+            p_{n}=\frac{\lambda}{n}.
+        \end{equation*}
+        Entonces,
+        \begin{equation*}
+            P(X_{n}=i)=\binom{n}{i}\paren{\frac{\lambda}{n}}^{i}\paren{1-\frac{\lambda}{n}}^{n-i}.
+        \end{equation*}
+        Debemos demostrar que para todo $i\geq0$,
+        \begin{equation*}
+            \lim_{n\to\infty}P(X_{n}=i)=\frac{\lambda^{i}}{i!}e^{-\lambda}.
+        \end{equation*}
+        Fijemos $i\geq0$. Como $i$ es fijo, para $n$ suficientemente grasnde se tiene $i\leq n$.
+        Escribimos
+        \begin{equation*}
+            \binom{n}{i}=\frac{n(n-1)\cdots(n-i+1)}{i!}.
+        \end{equation*}
+        Por tanto,
+        \begin{equation*}
+            P(X_{n}=i)=\frac{n(n-1)\cdots(n-i+1)}{i!}\paren{\frac{\lambda}{n}}^{i}\paren{1-\frac{\lambda}{n}}^{n-i}.
+        \end{equation*}
+        Agrupando los factores,
+        \begin{equation*}
+            P(X_{n}=i)=\frac{\lambda^{i}}{i!}\paren{\frac{n(n-1)\cdots(n-i+1)}{n^{i}}}\paren{1-\frac{\lambda}{n}}^{n-i}.
+        \end{equation*}
+        Ahora observamos que
+        \begin{equation*}
+            \frac{n(n-1)\cdots(n-i+1)}{n^{i}}=\prod_{k=0}^{i-1}\paren{1-\frac{k}{n}}.
+        \end{equation*}
+        Como $i$ es fijo,
+        \begin{equation*}
+            \lim_{n\to\infty}\prod_{k=0}^{i-1}\paren{1-\frac{k}{n}}=1.
+        \end{equation*}
+        Por otra parte,
+        \begin{equation*}
+            \paren{1-\frac{\lambda}{n}}^{n-i}=\paren{1-\frac{\lambda}{n}}^{n}\paren{1-\frac{\lambda}{n}}^{-i}.
+        \end{equation*}
+        Usando que
+        \begin{equation*}
+            \lim_{n\to\infty}\paren{1-\frac{\lambda}{n}}^{n}=e^{-\lambda},
+        \end{equation*}
+        y además
+        \begin{equation*}
+            \lim_{n\to\infty}\paren{1-\frac{\lambda}{n}}^{-i}=1,
+        \end{equation*}
+        obtenemos
+        \begin{equation*}
+            \lim_{n\to\infty}\paren{1-\frac{\lambda}{n}}^{n-i}=e^{-\lambda}.
+        \end{equation*}
+        Tomando límite en la expresión de $P(X_{n}=i)$,
+        \begin{equation*}
+            \lim_{n\to\infty}P(X_{n}=i)=\frac{\lambda^{i}}{i!}\cdot1\cdot e^{-\lambda}.
+        \end{equation*}
+        Por tanto
+        \begin{equation*}
+            \lim_{n\to\infty}P(X_{n}=i)=\frac{\lambda^{i}}{i!}e^{-\lambda}=P(X=i).
+        \end{equation*}
+    \end{proof}
 
     \begin{mdframed}[style=mdpinkbox, frametitle={Ejercicio 8}]
         Sea $X$ una variable aleatoria Poisson de parámetro $\lambda > 0$. Encuentre $E[X]$ y $E[X^2]$
