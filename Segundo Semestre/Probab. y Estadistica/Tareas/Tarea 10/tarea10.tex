@@ -86,6 +86,41 @@
         \end{equation*}
     \end{mdframed}
 
+    \begin{proof}
+        Coomo $X$ es una variable aleatoria discreta con soporte contenido en $\N$, se tiene
+        \begin{equation*}
+            \E[X]=\sum_{n=1}^{\infty}nP(X=n).
+        \end{equation*}
+        Ahora observemos que para todo $n\in\N$,
+        \begin{equation*}
+            n=\sum_{k=1}^{n}1.
+        \end{equation*}
+        Sustituyendo esto en la expresión de esperanza,
+        \begin{equation*}
+            \E[X]=\sum_{n=1}^{\infty}\paren{\sum_{k=1}^{n}1}P(X=n).
+        \end{equation*}
+        Por distributividad,
+        \begin{equation*}
+            \E[X]=\sum_{n=1}^{\infty}\sum_{k=1}^{n}P(X=n).
+        \end{equation*}
+        Como todos los terminos son no negativos, podemos intercambiar el orden de sumación
+        \begin{equation*}
+            \E[X]=\sum_{k=1}^{\infty}\sum_{n=k}^{\infty}P(X=n).
+        \end{equation*}
+        Pero
+        \begin{equation*}
+            \sum_{n=k}^{\infty}P(X=n)=P(X\geq k).
+        \end{equation*}
+        Por tanto,
+        \begin{equation*}
+            \E[X]=\sum_{k=1}^{\infty}P(X\geq k).
+        \end{equation*}
+        Concluimos que
+        \begin{equation*}
+            \E[X]=\sum_{k=1}^{\infty}P(X\geq k).
+        \end{equation*}
+    \end{proof}
+
     \section*{Parte II. Distribución binomial}
 
     Recordemos que una variable aleatoria $X$ tiene distribución binomial de parámetros
@@ -106,6 +141,97 @@
         \noindent\textit{Sugerencia.} Escriba $\mathbb{E}[X^k]$ como una serie y considere que
         $i\binom{n}{i} = n\binom{n-1}{i-1}$.
     \end{mdframed}
+
+    \begin{proof}
+        Por definición de esperanza,
+        \begin{equation*}
+            \E[X^{k}]=\sum_{i=0}^{n}i^{k}\binom{n}{i}p^{i}(1-p)^{n-i}.
+        \end{equation*}
+        El término correcto correspondiente a $i=0$ es cero, así que
+        \begin{equation*}
+            \E[X^{k}]=\sum_{i=1}^{n}i^{k}\binom{n}{i}p^{i}(1-p)^{n-i}.
+        \end{equation*}
+        Escribimos
+        \begin{equation*}
+            i^{k}=i\cdot i^{k-1},
+        \end{equation*}
+        y usamos la identidad
+        \begin{equation*}
+            i\binom{n}{i}=n\binom{n-1}{i-1}.
+        \end{equation*}
+        Entonces,
+        \begin{equation*}
+            \E[X^{k}]=\sum_{i=1}^{n}i^{k-1}n\binom{n-1}{i-1}p^{i}(1-p)^{n-i}.
+        \end{equation*}
+        Factorizamos un $p$
+        \begin{equation*}
+            \E[X^{k}]=np\sum_{i=1}^{n}i^{k-1}\binom{n-1}{i-1}p^{i-1}(1-p)^{(n-1)-(i-1)}.
+        \end{equation*}
+        Ahora hacemos el cambio de variable
+        \begin{equation*}
+            j=i-1.
+        \end{equation*}
+        Entonces $i=j+1$, y cuando $i=1$, $j=0$ cuando $i=n$, $j=n-1$. Así,
+        \begin{equation*}
+            \E[X^{k}]=np\sum_{j=0}^{n-1}(j+1)^{k-1}\binom{n-1}{j}p^{j}(1-p)^{(n-1)-j}.
+        \end{equation*}
+        Pero esta suma es exactamente
+        \begin{equation*}
+            \E[(Y+1)^{k-1}].
+        \end{equation*}
+        Por lo tanto,
+        \begin{equation*}
+            \E[X^{k}]=np\E[(Y+1)^{k-1}]
+        \end{equation*}
+        Ahora calculamos $\E[X]$. Tomamos $k=1$. Entonces,
+        \begin{equation*}
+            \E[X]=np\E[1].
+        \end{equation*}
+        Como $\E[1]=1$,
+        \begin{equation*}
+            \E[X]=np.
+        \end{equation*}
+        Ahora $\E[X^{2}]$. Tomamos $k=2$. Entonces,
+        \begin{equation*}
+            \E[X^{2}]=np\E[Y+1].
+        \end{equation*}
+        Por linealidad de la esperanza,
+        \begin{equation*}
+            \E[X^{2}]=np(\E[Y]+1).
+        \end{equation*}
+        Como $Y$ tiene distribucion binomia con parametros $n-1$ y $p$,
+        \begin{equation*}
+            \E[Y]=(n-1)p.
+        \end{equation*}
+        Así,
+        \begin{equation*}
+            \E[X^{2}]=np((n-1)p+1).
+        \end{equation*}
+        Equivalentemente
+        \begin{equation*}
+            \E[X^{2}]=n(n-1)p^{2}+np.
+        \end{equation*}
+        Por ultimo calculemos la varianza. Por definición,
+        \begin{equation*}
+            \Var(X)=\E[X^{2}]-\E[X]^{2}.
+        \end{equation*}
+        Sustituyendo las expresiones obtenidas,
+        \begin{equation*}
+            \Var(X)=(n(n-1)p^{2}+np)-(np)^{2}.
+        \end{equation*}
+        Desarrollando,
+        \begin{equation*}
+            \Var(X)=n^{2}p^{2}-np^{2}+np-n^{2}p^{2}.
+        \end{equation*}
+        Simplificando,
+        \begin{equation*}
+            \Var(X)=np-np^{2}.
+        \end{equation*}
+        Factorizando
+        \begin{equation*}
+            \Var(X)=np(1-p)
+        \end{equation*}
+    \end{proof}
 
     \section*{Parte III. Distribución geométrica}
 
