@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1778612374.01712 "/home/void/DEMAT-UG/Segundo Semestre/Probab. y Estadistica/Tareas/Tarea 9/tarea9.tex" "tarea9.pdf" "tarea9" 1778612375.07787 0
-  "/home/void/DEMAT-UG/Segundo Semestre/Probab. y Estadistica/Tareas/Tarea 9/tarea9.tex" 1778605528.98632 25071 92e3e4657d129a95f173e9ada00bd51a ""
+["pdflatex"] 1779350333.94512 "/home/void/DEMAT-UG/Segundo Semestre/Probab. y Estadistica/Tareas/Tarea 9/tarea9.tex" "tarea9.pdf" "tarea9" 1779350334.97781 0
+  "/home/void/DEMAT-UG/Segundo Semestre/Probab. y Estadistica/Tareas/Tarea 9/tarea9.tex" 1779350333.79893 25070 6299620223dece4d6ea3e2aa87dca75e ""
   "/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1775415801 2375 baa924870cfb487815765f9094cf3728 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc" 1775415801 3486 c7eadf5dcc57b3b2d11736679f6636ba ""
   "/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1775415801 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
@@ -268,10 +268,10 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1775415801 43569 fd570f2fa160877d211e859f687312ba ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1776329205 5541339 b32eb00eb34cd5c925a7827d916d9dbd ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1776329161 3765586 f908b126a1b9387c6314a46965df5ea5 ""
-  "tarea9.aux" 1778612374.98104 742 5917d095af9396e3dd684f9458693d6d "pdflatex"
-  "tarea9.out" 1778612374.72014 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "tarea9.tex" 1778605528.98632 25071 92e3e4657d129a95f173e9ada00bd51a ""
-  "ugmath.sty" 1778605528.98632 6927 0945d85d01ac069a7abdf09bfb50e8a8 ""
+  "tarea9.aux" 1779350334.89288 742 5917d095af9396e3dd684f9458693d6d "pdflatex"
+  "tarea9.out" 1779350334.64205 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "tarea9.tex" 1779350333.79893 25070 6299620223dece4d6ea3e2aa87dca75e ""
+  "ugmath.sty" 1779350328.07471 6927 0945d85d01ac069a7abdf09bfb50e8a8 ""
   (generated)
   "tarea9.aux"
   "tarea9.log"

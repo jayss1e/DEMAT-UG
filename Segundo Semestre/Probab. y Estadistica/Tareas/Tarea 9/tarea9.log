@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.4.16)  12 MAY 2026 12:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.4.16)  21 MAY 2026 01:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1126,7 +1126,7 @@ Package rerunfilecheck Info: File `tarea9.out' has not changed.
 Here is how much of TeX's memory you used:
  39551 strings out of 467525
  881176 string characters out of 5425861
- 1416974 words of memory out of 5000000
+ 1416973 words of memory out of 5000000
  67762 multiletter control sequences out of 15000+600000
  670398 words of font info for 73 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
