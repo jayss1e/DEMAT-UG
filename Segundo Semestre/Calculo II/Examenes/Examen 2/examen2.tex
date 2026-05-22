@@ -1,0 +1,154 @@
+\documentclass[12pt,oneside,spanish]{amsbook}
+\newcommand{\grupo}{}
+% ------------------------------------------------------
+% Idioma y codificación
+% ------------------------------------------------------
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+% ------------------------------------------------------
+% Tipografía y formato
+% ------------------------------------------------------
+\usepackage{lmodern}    % Fuente Latin Modern
+\usepackage{microtype}  % Mejor espaciado
+\usepackage{xcolor}     % Colores
+\definecolor{UGblue}{RGB}{0,33,71}
+\definecolor{UGgold}{RGB}{212,175,55}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{titlesec}
+% Añade esto en el preámbulo (antes de \begin{document})
+\usepackage{bookmark}
+\bookmarksetup{open,numbered}
+\usepackage{tikz}
+\usetikzlibrary{calc,decorations.pathreplacing,angles,quotes}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{caption}
+
+% ------------------------------------------------------
+% Matemáticas
+% ------------------------------------------------------
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{mathrsfs}
+\usepackage{stmaryrd}
+\usepackage{physics}
+
+% ------------------------------------------------------
+% Otros paquetes útiles
+% ------------------------------------------------------
+\usepackage{enumitem}
+\usepackage{csquotes}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=UGblue,
+    urlcolor=UGgold,
+    citecolor=UGblue
+}
+\usepackage{multicol}
+
+% ------------------------------------------------------
+% Encabezados y pies de página
+% ------------------------------------------------------
+% ------------------------------------------------------
+% Teoremas, definiciones, etc.
+% ------------------------------------------------------
+\theoremstyle{plain}
+\newtheorem{teo}{Teorema}[section]
+\newtheorem{prop}[teo]{Proposición}
+\newtheorem{lema}[teo]{Lema}
+\theoremstyle{definition}
+\newtheorem{defi}[teo]{Definición}
+\theoremstyle{remark}
+\newtheorem{ejemplo}[teo]{Ejemplo}
+\newtheorem{obs}[teo]{Observación}
+
+% ------------------------------------------------------
+% Comandos útiles
+% ------------------------------------------------------
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\pfrac}[2]{\left( \frac{#1}{#2} \right)} %parentesis
+\newcommand{\bfrac}[2]{\left[ \frac{#1}{#2} \right]} %corchetes
+\newcommand{\vecpar}[1]{\left( #1 \right)}
+% En el preámbulo
+\newcommand{\point}[2]{\left( #1, #2 \right)}
+\newcommand{\pointfrac}[4]{\left( \frac{#1}{#2}, \frac{#3}{#4} \right)}
+\newcommand{\pointmix}[4]{\left( #1, \frac{#3}{#4} \right)} % Primera coordenada normal, segunda fracción
+\renewcommand{\qedsymbol}{$\blacksquare$}
+\newcommand{\gt}{\ensuremath{>}}
+\newcommand{\lt}{\ensuremath{<}}
+\renewcommand{\div}{|}
+
+\renewcommand{\baselinestretch}{1.2}
+\setlength{\parindent}{0pt}
+
+\newenvironment{solucion}
+{\par\noindent\textit{Solución.}\ }
+{\hfill$\blacktriangleleft$\par}
+
+% ------------------------------------------------------
+% Datos personales (modificar según tarea)
+% ------------------------------------------------------
+\newcommand{\alumno}{Ricardo León Martínez}
+\newcommand{\materia}{Elementos de Geometría}
+\newcommand{\profesor}{Valentina Muñoz Porras}
+\newcommand{\tarea}{Tarea 5}
+\newcommand{\fecha}{22/09/2025}
+
+\setlength{\parindent}{0pt}
+\begin{document}
+    \begin{center}
+        \begin{tabular}{c}
+            \includegraphics[width=2.5cm,height=2.5cm]{logo.png}\tabularnewline
+        \end{tabular}%
+        \begin{tabular}{c}
+            \textbf{UNIVERSIDAD DE GUANAJUATO}\tabularnewline
+            \textbf{\scriptsize{}DIVISIÓN DE CIENCIAS NATURALES Y EXACTAS}\tabularnewline
+            \textbf{\scriptsize{}CAMPUS GUANAJUATO}\tabularnewline
+        \end{tabular}
+    \par\end{center}
+
+    \begin{center}
+        \textbf{Examen Parcial 2 (Cálculo Diferencial e Integral I)}
+    \par\end{center}
+
+    \begin{tabular}{|l|l|l|}
+        \hline 
+        \multicolumn{3}{|l|}{\textbf{Nombre:\hspace*{10cm}}}\tabularnewline
+        \hline 
+        \textbf{Grupo:\hspace*{2cm}} & \textbf{Fecha:\hspace*{2cm}} & \textbf{Calificación:}\tabularnewline
+        \hline 
+        \multicolumn{3}{|l|}{\textbf{Profesor:} Fernando Núñez Medina.}\tabularnewline
+        \hline 
+    \end{tabular}
+
+    \vspace{0.5cm}
+
+    \textbf{Instrucciones:} Escribe limpia y ordenadamente el procedimiento
+    (si lo hay) de cada ejercicio y no escribas las respuestas en la hoja
+    del examen. ¡Suerte!
+
+    \begin{enumerate}
+        \item Calcula el área entre las gráficas de las funciones $f(x)=\sin(x)$ y $g(x)=x$ sobre
+        el intervalo $[-\pi,\pi]$.
+        \item \textbf{(Identidades suma-producto)} Prueba lo siguiente:\\
+        (a) $\sin(x)+\sin(y)=2\sin(\frac{x+y}{2})\cos(\frac{x-y}{2})$.\\
+        (b) $\cos(x)+\cos(y)=2\cos(\frac{x+y}{2})\cos(\frac{x-y}{2})$.
+        \item Calcula
+        \begin{equation*}
+            \lim_{n\to\infty}\frac{\cos(n)}{n^{2}+1}.
+        \end{equation*}
+        \textbf{Sugerencia:} Ten presente que $\abs{\cos(x)}\leq1$ para toda $x$.
+        \item Prueba que $\lim_{n\to\infty}\sqrt[n]{n^{2}+n}=1$. \textbf{Sugerencia:} Trata de
+        usar el lema del sándwich.
+        \item Considera una sucesión $(a_{n})$. Prueba que si $a_{n}\to L$ y $(a_{n_{k}})$ es
+        una subsucesión de $(a_{n})$, entonces $a_{n_{k}}\to L$.
+    \end{enumerate}
+
+\end{document}
