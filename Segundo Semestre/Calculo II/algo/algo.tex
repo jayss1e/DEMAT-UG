@@ -1,0 +1,139 @@
+\documentclass{article}
+\usepackage{amsmath, amsthm}
+
+\newtheorem{proposicion}{Proposición}
+\newtheorem{corolario}{Corolario}
+
+\begin{document}
+
+\section*{Criterios de Convergencia de Series}
+
+%--------------------------------------------------
+\begin{proposicion}[Criterio de acotación]
+Una serie de términos no negativos $\sum_{n=1}^{\infty} a_n$ converge si y sólo si
+sus sumas parciales están acotadas.
+\end{proposicion}
+
+%--------------------------------------------------
+\begin{proposicion}[Criterio de Cauchy para series]
+Una serie $\sum_{n=1}^{\infty} a_n$ converge si y sólo si para todo $\varepsilon > 0$
+existe $N \in \mathbb{N}$ tal que
+\[
+  \left|\sum_{i=n}^{m} a_i\right| < \varepsilon
+  \quad \text{para todo } m \geq n > N.
+\]
+\end{proposicion}
+
+%--------------------------------------------------
+\begin{proposicion}[Condición del $n$-ésimo término]
+Si $\sum_{n=1}^{\infty} a_n$ converge, entonces $a_n \to 0$.
+\end{proposicion}
+
+%--------------------------------------------------
+\begin{proposicion}[Criterio de comparación directa]
+Supongamos que existe $N \in \mathbb{N}$ tal que
+\[
+  0 \leq a_n \leq b_n \quad \text{para todo } n > N.
+\]
+\begin{enumerate}
+  \item[(a)] Si $\sum_{n=1}^{\infty} b_n$ converge, entonces $\sum_{n=1}^{\infty} a_n$ converge.
+  \item[(b)] Si $\sum_{n=1}^{\infty} a_n$ diverge, entonces $\sum_{n=1}^{\infty} b_n$ diverge.
+\end{enumerate}
+\end{proposicion}
+
+%--------------------------------------------------
+\begin{proposicion}[Criterio de comparación al límite del cociente]
+Si $a_n, b_n > 0$ y $\lim_{n\to\infty} a_n/b_n$ es un número real distinto de cero,
+entonces
+\[
+  \sum_{n=1}^{\infty} a_n \text{ converge} \iff \sum_{n=1}^{\infty} b_n \text{ converge}.
+\]
+\end{proposicion}
+
+%--------------------------------------------------
+\begin{proposicion}[Criterio de la integral]
+Supongamos que $f:[1,\infty)\to(0,\infty)$ es monótona decreciente. Entonces
+\[
+  \sum_{n=1}^{\infty} f(n) \text{ converge} \iff \int_1^{\infty} f \text{ converge}.
+\]
+\end{proposicion}
+
+%--------------------------------------------------
+\begin{proposicion}[$p$-series]
+Sea $p > 0$.
+\begin{enumerate}
+  \item[(a)] Si $p > 1$, entonces $\displaystyle\sum_{n=1}^{\infty} \frac{1}{n^p}$ converge.
+  \item[(b)] Si $0 < p \leq 1$, entonces $\displaystyle\sum_{n=1}^{\infty} \frac{1}{n^p}$ diverge.
+\end{enumerate}
+\end{proposicion}
+
+%--------------------------------------------------
+\begin{proposicion}[Criterio de la raíz]
+Consideremos una serie $\sum_{n=1}^{\infty} a_n$ de términos no negativos y definamos
+\[
+  \alpha = \lim_{n\to\infty} \sqrt[n]{a_n}.
+\]
+\begin{enumerate}
+  \item[(a)] Si $\alpha < 1$, entonces $\sum_{n=1}^{\infty} a_n$ converge.
+  \item[(b)] Si $\alpha > 1$, entonces $\sum_{n=1}^{\infty} a_n$ diverge.
+  \item[(c)] Si $\alpha = 1$, entonces $\sum_{n=1}^{\infty} a_n$ puede converger o diverger.
+\end{enumerate}
+\end{proposicion}
+
+%--------------------------------------------------
+\begin{proposicion}[Criterio del cociente]
+Consideremos una serie $\sum_{n=1}^{\infty} a_n$ de términos positivos y definamos
+\[
+  \alpha = \lim_{n\to\infty} \frac{a_{n+1}}{a_n}.
+\]
+\begin{enumerate}
+  \item[(a)] Si $\alpha < 1$, entonces $\sum_{n=1}^{\infty} a_n$ converge.
+  \item[(b)] Si $\alpha > 1$, entonces $\sum_{n=1}^{\infty} a_n$ diverge.
+  \item[(c)] Si $\alpha = 1$, entonces $\sum_{n=1}^{\infty} a_n$ puede converger o diverger.
+\end{enumerate}
+\end{proposicion}
+
+%--------------------------------------------------
+\begin{corolario}[Criterio de Raabe]
+Consideremos una serie $\sum_{n=1}^{\infty} a_n$ de términos positivos y definamos
+\[
+  \alpha = \lim_{n\to\infty} n\!\left(1 - \frac{a_{n+1}}{a_n}\right).
+\]
+\begin{enumerate}
+  \item[(a)] Si $\alpha > 1$, entonces $\sum_{n=1}^{\infty} a_n$ converge.
+  \item[(b)] Si $\alpha < 1$, entonces $\sum_{n=1}^{\infty} a_n$ diverge.
+  \item[(c)] Si $\alpha = 1$, entonces $\sum_{n=1}^{\infty} a_n$ puede converger o diverger.
+\end{enumerate}
+\end{corolario}
+
+%--------------------------------------------------
+\begin{proposicion}[Criterio de Leibniz]
+Si $(a_n)$ es una sucesión monótona decreciente que converge a cero, entonces
+las series alternantes
+\[
+  \sum_{n=1}^{\infty} (-1)^n a_n \qquad \text{y} \qquad \sum_{n=1}^{\infty} (-1)^{n+1} a_n
+\]
+convergen.
+\end{proposicion}
+
+%--------------------------------------------------
+\begin{proposicion}[Convergencia absoluta implica convergencia]
+Si $\sum_{n=1}^{\infty} a_n$ converge absolutamente, entonces converge y
+\[
+  \left|\sum_{n=1}^{\infty} a_n\right| \leq \sum_{n=1}^{\infty} |a_n|.
+\]
+\end{proposicion}
+
+%--------------------------------------------------
+\section*{Criterio para Series de Funciones}
+
+\begin{proposicion}[Criterio $M$ de Weierstrass]
+Sean $(f_n)$ una sucesión de funciones definidas en $D$ y $(M_n)$ una sucesión
+de números reales tales que
+\[
+  |f_n(x)| \leq M_n \quad \text{para todo } x \in D.
+\]
+Si $\sum_{n=1}^{\infty} M_n$ converge, entonces $\sum_{n=1}^{\infty} f_n$ converge uniformemente en $D$.
+\end{proposicion}
+
+\end{document}
