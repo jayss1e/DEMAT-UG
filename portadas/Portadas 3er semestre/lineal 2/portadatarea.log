@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.5.24)  28 MAY 2026 00:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.5.24)  28 MAY 2026 00:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -289,8 +289,8 @@ Package babel Info: Making . an active character on input line 675.
 Package babel Info: Making < an active character on input line 722.
 Package babel Info: Making > an active character on input line 722.
 ))
-LaTeX Encoding Info:    Redeclaring text command \guillemotleft (encoding OT1) on input line 18.
-LaTeX Encoding Info:    Redeclaring text command \guillemotright (encoding OT1) on input line 18.
+LaTeX Encoding Info:    Redeclaring text command \guillemotleft (encoding OT1) on input line 14.
+LaTeX Encoding Info:    Redeclaring text command \guillemotright (encoding OT1) on input line 14.
  (/usr/share/texmf-dist/tex/latex/ebgaramond/ebgaramond.sty
 Package: ebgaramond 2024/04/23 (Bob Tennent and autoinst) Style file for EB Garamond fonts.
  (/usr/share/texmf-dist/tex/generic/iftex/ifxetex.sty
@@ -491,14 +491,14 @@ File: tikzlibraryplotmarks.code.tex 2025-08-29 v3.1.11a (3.1.11a)
  (/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotmarks.code.tex
 File: pgflibraryplotmarks.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 )))
-LaTeX Font Info:    Trying to load font information for T1+SourceSansPro-TLF on input line 27.
+LaTeX Font Info:    Trying to load font information for T1+SourceSansPro-TLF on input line 23.
  (/usr/share/texmf-dist/tex/latex/sourcesanspro/T1SourceSansPro-TLF.fd
 File: T1SourceSansPro-TLF.fd 2020/01/19 (autoinst) Font definitions for T1/SourceSansPro-TLF.
 )
 LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/m/n' aliased to
-(Font)              `T1/SourceSansPro-TLF/regular/n' on input line 27.
+(Font)              `T1/SourceSansPro-TLF/regular/n' on input line 23.
 LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/regular/n' will be
-(Font)              scaled to size 10.0pt on input line 27.
+(Font)              scaled to size 10.0pt on input line 23.
  (/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count317
@@ -510,26 +510,26 @@ Package babel Info: 'spanish' activates 'spanish' shorthands.
 )
 \openout1 = `portadatarea.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
-LaTeX Font Info:    ... okay on input line 27.
-LaTeX Font Info:    Checking defaults for LY1/ptm/m/n on input line 27.
-LaTeX Font Info:    Trying to load font information for LY1+ptm on input line 27.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for LY1/ptm/m/n on input line 23.
+LaTeX Font Info:    Trying to load font information for LY1+ptm on input line 23.
  (/usr/share/texmf-dist/tex/latex/ly1/ly1ptm.fd
 File: ly1ptm.fd 2001/02/01 font definitions for LY1/ptm using Berry names.
 )
-LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    ... okay on input line 23.
  (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count318
@@ -549,71 +549,71 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-LaTeX Info: Redefining \. on input line 27.
-LaTeX Info: Redefining \% on input line 27.
+LaTeX Info: Redefining \. on input line 23.
+LaTeX Info: Redefining \% on input line 23.
 \c@mv@tabular=\count324
 \c@mv@boldtabular=\count325
 
 Package pgfplots notification 'compat/show suggested version=true': document has been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 
 LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/m/n' aliased to
-(Font)              `T1/SourceSansPro-TLF/regular/n' on input line 42.
+(Font)              `T1/SourceSansPro-TLF/regular/n' on input line 38.
 LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/regular/n' will be
-(Font)              scaled to size 15.5pt on input line 42.
+(Font)              scaled to size 15.5pt on input line 38.
 LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/b/n' aliased to
-(Font)              `T1/SourceSansPro-TLF/bold/n' on input line 42.
+(Font)              `T1/SourceSansPro-TLF/bold/n' on input line 38.
 LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/bold/n' will be
-(Font)              scaled to size 15.5pt on input line 42.
+(Font)              scaled to size 15.5pt on input line 38.
 LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/m/n' aliased to
-(Font)              `T1/SourceSansPro-TLF/regular/n' on input line 46.
+(Font)              `T1/SourceSansPro-TLF/regular/n' on input line 41.
 LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/regular/n' will be
-(Font)              scaled to size 10.5pt on input line 46.
+(Font)              scaled to size 10.5pt on input line 41.
 LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/m/n' will be
-(Font)              scaled to size 10.5pt on input line 46.
+(Font)              scaled to size 10.5pt on input line 41.
 LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/m/it' will be
-(Font)              scaled to size 10.5pt on input line 46.
+(Font)              scaled to size 10.5pt on input line 41.
 LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/m/n' aliased to
-(Font)              `T1/SourceSansPro-TLF/regular/n' on input line 104.
+(Font)              `T1/SourceSansPro-TLF/regular/n' on input line 102.
 LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/regular/n' will be
-(Font)              scaled to size 9.0pt on input line 104.
+(Font)              scaled to size 9.0pt on input line 102.
 LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/l/n' aliased to
-(Font)              `T1/SourceSansPro-TLF/light/n' on input line 104.
+(Font)              `T1/SourceSansPro-TLF/light/n' on input line 102.
 LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/light/n' will be
-(Font)              scaled to size 9.0pt on input line 104.
+(Font)              scaled to size 9.0pt on input line 102.
 LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/m/n' aliased to
-(Font)              `T1/SourceSansPro-TLF/regular/n' on input line 108.
+(Font)              `T1/SourceSansPro-TLF/regular/n' on input line 106.
 LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/regular/n' will be
-(Font)              scaled to size 48.0pt on input line 108.
+(Font)              scaled to size 42.0pt on input line 106.
 LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/b/n' aliased to
-(Font)              `T1/SourceSansPro-TLF/bold/n' on input line 108.
+(Font)              `T1/SourceSansPro-TLF/bold/n' on input line 106.
 LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/bold/n' will be
-(Font)              scaled to size 48.0pt on input line 108.
+(Font)              scaled to size 42.0pt on input line 106.
 LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/m/n' aliased to
-(Font)              `T1/SourceSansPro-TLF/regular/n' on input line 112.
+(Font)              `T1/SourceSansPro-TLF/regular/n' on input line 110.
 LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/regular/n' will be
-(Font)              scaled to size 27.0pt on input line 112.
+(Font)              scaled to size 27.0pt on input line 110.
 LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/m/n' will be
-(Font)              scaled to size 27.0pt on input line 112.
+(Font)              scaled to size 27.0pt on input line 110.
 LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/m/it' will be
-(Font)              scaled to size 27.0pt on input line 112.
+(Font)              scaled to size 27.0pt on input line 110.
 LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/m/n' aliased to
-(Font)              `T1/SourceSansPro-TLF/regular/n' on input line 120.
+(Font)              `T1/SourceSansPro-TLF/regular/n' on input line 117.
 LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/regular/n' will be
-(Font)              scaled to size 7.5pt on input line 120.
+(Font)              scaled to size 7.5pt on input line 117.
 LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/m/n' aliased to
-(Font)              `T1/SourceSansPro-TLF/regular/n' on input line 127.
+(Font)              `T1/SourceSansPro-TLF/regular/n' on input line 123.
 LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/regular/n' will be
-(Font)              scaled to size 15.0pt on input line 127.
+(Font)              scaled to size 15.0pt on input line 123.
 LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/m/n' will be
-(Font)              scaled to size 15.0pt on input line 127.
-LaTeX Font Info:    Trying to load font information for TS1+SourceSansPro-TLF on input line 146.
+(Font)              scaled to size 15.0pt on input line 123.
+LaTeX Font Info:    Trying to load font information for TS1+SourceSansPro-TLF on input line 139.
 (/usr/share/texmf-dist/tex/latex/sourcesanspro/TS1SourceSansPro-TLF.fd
 File: TS1SourceSansPro-TLF.fd 2020/01/19 (autoinst) Font definitions for TS1/SourceSansPro-TLF.
 )
 LaTeX Font Info:    Font shape `TS1/SourceSansPro-TLF/m/n' aliased to
-(Font)              `TS1/SourceSansPro-TLF/regular/n' on input line 146.
+(Font)              `TS1/SourceSansPro-TLF/regular/n' on input line 139.
 LaTeX Font Info:    Font shape `TS1/SourceSansPro-TLF/regular/n' will be
-(Font)              scaled to size 7.5pt on input line 146.
+(Font)              scaled to size 7.5pt on input line 139.
  [1
 
 
@@ -629,18 +629,18 @@ L3 programming layer <2026-01-19>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 29636 strings out of 467525
- 750646 string characters out of 5425861
- 3482698 words of memory out of 5000000
- 58134 multiletter control sequences out of 15000+600000
+ 28122 strings out of 467525
+ 716544 string characters out of 5425861
+ 2671084 words of memory out of 5000000
+ 56620 multiletter control sequences out of 15000+600000
  763913 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 117i,9n,121p,794b,14908s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 117i,9n,121p,794b,10380s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/ebgaramond/EBGaramond-Italic.pfb></usr/share/texmf-dist/fonts/type1/public/ebgaramond/EBGaramond-Regular.pfb></usr/share/texmf-dist/fonts/type1/adobe/sourcesanspro/SourceSansPro-Bold.pfb></usr/share/texmf-dist/fonts/type1/adobe/sourcesanspro/SourceSansPro-Light.pfb></usr/share/texmf-dist/fonts/type1/adobe/sourcesanspro/SourceSansPro-Regular.pfb>
-Output written on portadatarea.pdf (1 page, 3160874 bytes).
+Output written on portadatarea.pdf (1 page, 2004698 bytes).
 PDF statistics:
- 8183 PDF objects out of 8907 (max. 8388607)
- 4078 compressed objects within 41 object streams
+ 5152 PDF objects out of 5155 (max. 8388607)
+ 2570 compressed objects within 26 object streams
  0 named destinations out of 1000 (max. 500000)
- 28363 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 17807 words of extra memory for PDF output out of 20736 (max. 10000000)
 
