@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.3.20)  20 MAR 2026 17:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.5.24)  28 MAY 2026 00:09
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"/home/void/DEMAT-UG/Segundo Semestre/Algebra Lineal/Examenes/Examen 1/examen1.tex"
-(/home/void/DEMAT-UG/Segundo Semestre/Algebra Lineal/Examenes/Examen 1/examen1.tex
+**"/home/god/DEMAT-UG/Segundo Semestre/Algebra Lineal/Examenes/Examen 1/examen1.tex"
+(/home/god/DEMAT-UG/Segundo Semestre/Algebra Lineal/Examenes/Examen 1/examen1.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
 (/usr/share/texmf-dist/tex/latex/base/article.cls
@@ -1101,12 +1101,12 @@ Package rerunfilecheck Info: File `examen1.out' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  39506 strings out of 467525
- 880590 string characters out of 5425861
- 1421950 words of memory out of 5000000
+ 880587 string characters out of 5425861
+ 1421948 words of memory out of 5000000
  67731 multiletter control sequences out of 15000+600000
  660156 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,10n,108p,819b,1190s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,10n,108p,818b,1190s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
 Output written on examen1.pdf (2 pages, 109729 bytes).
 PDF statistics:

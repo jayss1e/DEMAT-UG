@@ -1,7 +1,7 @@
-PWD /home/void/DEMAT-UG/Segundo Semestre/Algebra Lineal/Examenes/Examen 1
+PWD /home/god/DEMAT-UG/Segundo Semestre/Algebra Lineal/Examenes/Examen 1
 INPUT /usr/share/texmf-dist/web2c/texmf.cnf
 INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
-INPUT /home/void/DEMAT-UG/Segundo Semestre/Algebra Lineal/Examenes/Examen 1/examen1.tex
+INPUT /home/god/DEMAT-UG/Segundo Semestre/Algebra Lineal/Examenes/Examen 1/examen1.tex
 OUTPUT examen1.log
 INPUT /usr/share/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/share/texmf-dist/tex/latex/base/article.cls
