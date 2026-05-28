@@ -1,0 +1,149 @@
+% portada_standalone.tex ──────────────────────────────────────────────────────
+% Portada Cálculo III — Universidad de Guanajuato
+% Clase: standalone → genera exactamente una página A4
+%
+% Compilar: pdflatex portada_standalone.tex
+% Unir:     pdftk portada_standalone.pdf tarea.pdf cat output entrega.pdf
+%
+% ─── EDITAR AQUÍ ─────────────────────────────────────────────────────────────
+\newcommand{\numtarea}{1}
+\newcommand{\nomprofesor}{\rule{5cm}{0.3pt}}
+% ─────────────────────────────────────────────────────────────────────────────
+
+\documentclass[tikz, border=0pt]{standalone}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{ebgaramond}
+\usepackage[default]{sourcesanspro}
+\usepackage{xcolor}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+\definecolor{ugblue}{HTML}{002D72}
+\definecolor{uggold}{HTML}{B8952A}
+
+\begin{document}
+\begin{tikzpicture}
+
+  \useasboundingbox (0,0) rectangle (210mm,297mm);
+  \fill[white] (0,0) rectangle (210mm,297mm);
+
+  %% ── Barras de color ─────────────────────────────────────────────────────────
+  \fill[ugblue] (0,287mm) rectangle (210mm,297mm);
+  \fill[uggold] (0,284mm) rectangle (210mm,287mm);
+  \fill[uggold] (0,11mm)  rectangle (210mm,14mm);
+  \fill[ugblue] (0,0)     rectangle (210mm,11mm);
+
+  %% ── Encabezado institucional ────────────────────────────────────────────────
+  \node[font=\fontsize{15.5}{19}\selectfont\sffamily\bfseries\color{ugblue},
+        anchor=center] at (105mm,275mm)
+    {\MakeUppercase{Universidad de Guanajuato}};
+
+  \node[font=\fontsize{10.5}{14}\selectfont\rmfamily\itshape\color{gray!65},
+        anchor=center] at (105mm,267.5mm)
+    {Divisi\'on de Ciencias Naturales y Exactas};
+
+  \node[font=\fontsize{10.5}{14}\selectfont\rmfamily\itshape\color{gray!65},
+        anchor=center] at (105mm,261mm)
+    {Departamento de Matem\'aticas};
+
+  %% ── Divisor superior ────────────────────────────────────────────────────────
+  \draw[ugblue!22, line width=0.4pt] (30mm,254.5mm) -- (101mm,254.5mm);
+  \fill[uggold]
+    (103mm,254.5mm)--(105mm,256.5mm)--(107mm,254.5mm)--(105mm,252.5mm)--cycle;
+  \draw[ugblue!22, line width=0.4pt] (109mm,254.5mm) -- (180mm,254.5mm);
+
+  %% ── Superficie sinc  z = sin(r)/r  con malla visible ───────────────────────
+  %% Colormap: azul (pico) → cian → verde → amarillo → naranja → rojo → púrpura
+  \begin{axis}[
+    at          = {(105mm,186mm)},
+    anchor      = center,
+    width       = 164mm,
+    height      = 120mm,
+    axis lines  = none,
+    view        = {40}{26},
+    z buffer    = sort,
+    clip        = false,
+    colormap    = {sincmap}{
+      rgb255=(170,0,210)   % púrpura  (z más bajo / borde exterior)
+      rgb255=(230,0,60)    % rojo-carmesí
+      rgb255=(255,90,0)    % naranja
+      rgb255=(255,220,0)   % amarillo
+      rgb255=(60,220,30)   % verde
+      rgb255=(0,210,210)   % cian
+      rgb255=(10,80,255)   % azul    (z más alto / pico central)
+    },
+    point meta min = -0.28,
+    point meta max =  1.00,
+  ]
+    \addplot3[
+      surf,
+      shader      = faceted interp,   % superficie suave + malla visible
+      samples     = 46,
+      samples y   = 46,
+      domain      = -9.5:9.5,
+      domain y    = -9.5:9.5,
+      line width  = 0.05pt,
+      point meta  = z,
+    ]
+    { sin( deg( sqrt(x*x + y*y + 0.01) ) )
+      / sqrt( x*x + y*y + 0.01 ) };
+  \end{axis}
+
+  %% ── Divisor inferior ────────────────────────────────────────────────────────
+  \draw[ugblue!22, line width=0.4pt] (30mm,121mm) -- (101mm,121mm);
+  \fill[uggold]
+    (103mm,121mm)--(105mm,123mm)--(107mm,121mm)--(105mm,119mm)--cycle;
+  \draw[ugblue!22, line width=0.4pt] (109mm,121mm) -- (180mm,121mm);
+
+  %% ── Título del curso ────────────────────────────────────────────────────────
+  \node[font=\fontsize{9}{11}\selectfont\sffamily\fontseries{l}\selectfont
+        \color{gray!48}, anchor=center] at (105mm,114mm)
+    {\MakeUppercase{Licenciatura en Matem\'aticas}};
+
+  \node[font=\fontsize{48}{54}\selectfont\sffamily\bfseries\color{ugblue},
+        anchor=center] at (105mm,97mm)
+    {C\'alculo~III};
+
+  \node[font=\fontsize{27}{31}\selectfont\rmfamily\itshape\color{uggold},
+        anchor=center] at (105mm,81mm)
+    {Tarea~\numtarea};
+
+  %% ── Separador ───────────────────────────────────────────────────────────────
+  \draw[ugblue!13, line width=0.35pt] (30mm,70.5mm) -- (180mm,70.5mm);
+
+  %% ── Fila 1: Alumno y NUA ────────────────────────────────────────────────────
+  \node[anchor=west,
+    font=\fontsize{7.5}{9}\selectfont\sffamily\color{gray!52}]
+    at (30mm,63mm) {\MakeUppercase{Alumno}};
+  \node[anchor=west,
+    font=\fontsize{7.5}{9}\selectfont\sffamily\color{gray!52}]
+    at (120mm,63mm) {\MakeUppercase{NUA}};
+
+  \node[anchor=west,
+    font=\fontsize{15}{18}\selectfont\rmfamily\color{black!85}]
+    at (30mm,55.5mm) {Ricardo Le\'on Mart\'inez};
+  \node[anchor=west,
+    font=\fontsize{15}{18}\selectfont\rmfamily\color{black!85}]
+    at (120mm,55.5mm) {827328};
+
+  \draw[ugblue!10, line width=0.3pt] (30mm,48mm) -- (180mm,48mm);
+
+  %% ── Fila 2: Profesor centrado ───────────────────────────────────────────────
+  \node[anchor=center,
+    font=\fontsize{7.5}{9}\selectfont\sffamily\color{gray!52}]
+    at (105mm,42mm) {\MakeUppercase{Profesor(a)}};
+
+  \node[anchor=center,
+    font=\fontsize{15}{18}\selectfont\rmfamily\color{black!85}]
+    at (105mm,34.5mm) {\nomprofesor};
+
+  %% ── Pie de página ───────────────────────────────────────────────────────────
+  \node[font=\fontsize{7.5}{9}\selectfont\sffamily\color{gray!36},
+        anchor=center] at (105mm,21mm)
+    {\MakeUppercase{Universidad de Guanajuato~·~Campus Guanajuato}};
+
+\end{tikzpicture}
+\end{document}
