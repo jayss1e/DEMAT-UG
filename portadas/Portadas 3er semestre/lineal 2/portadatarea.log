@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.5.24)  25 MAY 2026 01:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.5.24)  28 MAY 2026 00:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"/home/god/DEMAT-UG/portadas/Portadas 3er semestre/lineal 2/portada.tex"
-(/home/god/DEMAT-UG/portadas/Portadas 3er semestre/lineal 2/portada.tex
+**"/home/god/DEMAT-UG/portadas/Portadas 3er semestre/lineal 2/portadatarea.tex"
+(/home/god/DEMAT-UG/portadas/Portadas 3er semestre/lineal 2/portadatarea.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
 (/usr/share/texmf-dist/tex/latex/standalone/standalone.cls
@@ -502,13 +502,13 @@ LaTeX Font Info:    Font shape `T1/SourceSansPro-TLF/regular/n' will be
  (/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count317
-) (./portada.aux
+) (./portadatarea.aux
 LaTeX Info: Redefining \. on input line 8.
 LaTeX Info: Redefining \% on input line 8.
 Package babel Info: 'spanish' activates 'spanish' shorthands.
 (babel)             Reported on input line 8.
 )
-\openout1 = `portada.aux'.
+\openout1 = `portadatarea.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
 LaTeX Font Info:    ... okay on input line 27.
@@ -619,7 +619,7 @@ LaTeX Font Info:    Font shape `TS1/SourceSansPro-TLF/regular/n' will be
 
 Non-PDF special ignored!
 <special> papersize=597.50787pt,845.04684pt
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf-dist/fonts/enc/dvips/sourcesanspro/a_emkxm5.enc}{/usr/share/texmf-dist/fonts/enc/dvips/ebgaramond/ebg_ljow5q.enc}{/usr/share/texmf-dist/fonts/enc/dvips/ebgaramond/ebg_tcdnmr.enc}{/usr/share/texmf-dist/fonts/enc/dvips/sourcesanspro/a_5ponh6.enc}] (./portada.aux
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf-dist/fonts/enc/dvips/sourcesanspro/a_emkxm5.enc}{/usr/share/texmf-dist/fonts/enc/dvips/ebgaramond/ebg_ljow5q.enc}{/usr/share/texmf-dist/fonts/enc/dvips/ebgaramond/ebg_tcdnmr.enc}{/usr/share/texmf-dist/fonts/enc/dvips/sourcesanspro/a_5ponh6.enc}] (./portadatarea.aux
 LaTeX Info: Redefining \. on input line 8.
 LaTeX Info: Redefining \% on input line 8.
 )
@@ -630,14 +630,14 @@ L3 programming layer <2026-01-19>
  ) 
 Here is how much of TeX's memory you used:
  29636 strings out of 467525
- 750586 string characters out of 5425861
- 3482689 words of memory out of 5000000
+ 750646 string characters out of 5425861
+ 3482698 words of memory out of 5000000
  58134 multiletter control sequences out of 15000+600000
  763913 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 117i,9n,121p,789b,14908s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 117i,9n,121p,794b,14908s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/ebgaramond/EBGaramond-Italic.pfb></usr/share/texmf-dist/fonts/type1/public/ebgaramond/EBGaramond-Regular.pfb></usr/share/texmf-dist/fonts/type1/adobe/sourcesanspro/SourceSansPro-Bold.pfb></usr/share/texmf-dist/fonts/type1/adobe/sourcesanspro/SourceSansPro-Light.pfb></usr/share/texmf-dist/fonts/type1/adobe/sourcesanspro/SourceSansPro-Regular.pfb>
-Output written on portada.pdf (1 page, 3160874 bytes).
+Output written on portadatarea.pdf (1 page, 3160874 bytes).
 PDF statistics:
  8183 PDF objects out of 8907 (max. 8388607)
  4078 compressed objects within 41 object streams

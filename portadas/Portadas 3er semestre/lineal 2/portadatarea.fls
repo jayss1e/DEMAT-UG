@@ -1,8 +1,8 @@
 PWD /home/god/DEMAT-UG/portadas/Portadas 3er semestre/lineal 2
 INPUT /usr/share/texmf-dist/web2c/texmf.cnf
 INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
-INPUT /home/god/DEMAT-UG/portadas/Portadas 3er semestre/lineal 2/portada.tex
-OUTPUT portada.log
+INPUT /home/god/DEMAT-UG/portadas/Portadas 3er semestre/lineal 2/portadatarea.tex
+OUTPUT portadatarea.log
 INPUT /usr/share/texmf-dist/tex/latex/standalone/standalone.cls
 INPUT /usr/share/texmf-dist/tex/latex/standalone/standalone.cls
 INPUT /usr/share/texmf-dist/tex/latex/tools/shellesc.sty
@@ -249,10 +249,10 @@ INPUT /usr/share/texmf-dist/tex/latex/sourcesanspro/T1SourceSansPro-TLF.fd
 INPUT /usr/share/texmf-dist/fonts/tfm/adobe/sourcesanspro/SourceSansPro-Regular-tlf-t1.tfm
 INPUT /usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 INPUT /usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-INPUT ./portada.aux
-INPUT ./portada.aux
-INPUT portada.aux
-OUTPUT portada.aux
+INPUT ./portadatarea.aux
+INPUT ./portadatarea.aux
+INPUT portadatarea.aux
+OUTPUT portadatarea.aux
 INPUT /usr/share/texmf-dist/tex/latex/ly1/ly1ptm.fd
 INPUT /usr/share/texmf-dist/tex/latex/ly1/ly1ptm.fd
 INPUT /usr/share/texmf-dist/tex/latex/ly1/ly1ptm.fd
@@ -269,7 +269,7 @@ INPUT /usr/share/texmf-dist/fonts/tfm/adobe/sourcesanspro/SourceSansPro-Bold-tlf
 INPUT /usr/share/texmf-dist/fonts/tfm/adobe/sourcesanspro/SourceSansPro-Regular-tlf-t1.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/ebgaramond/EBGaramond-Regular-osf-t1.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/ebgaramond/EBGaramond-Italic-osf-t1.tfm
-OUTPUT portada.pdf
+OUTPUT portadatarea.pdf
 INPUT /usr/share/texmf-dist/fonts/tfm/adobe/sourcesanspro/SourceSansPro-Regular-tlf-t1.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/adobe/sourcesanspro/SourceSansPro-Light-tlf-t1.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/adobe/sourcesanspro/SourceSansPro-Regular-tlf-t1.tfm
@@ -305,7 +305,7 @@ INPUT /usr/share/texmf-dist/fonts/enc/dvips/ebgaramond/ebg_tcdnmr.enc
 INPUT /usr/share/texmf-dist/fonts/vf/adobe/sourcesanspro/SourceSansPro-Regular-tlf-ts1.vf
 INPUT /usr/share/texmf-dist/fonts/tfm/adobe/sourcesanspro/SourceSansPro-Regular-tlf-ts1--base.tfm
 INPUT /usr/share/texmf-dist/fonts/enc/dvips/sourcesanspro/a_5ponh6.enc
-INPUT portada.aux
+INPUT portadatarea.aux
 INPUT /usr/share/texmf-dist/fonts/type1/public/ebgaramond/EBGaramond-Italic.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/ebgaramond/EBGaramond-Regular.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/adobe/sourcesanspro/SourceSansPro-Bold.pfb

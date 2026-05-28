@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1779692603.89534 "/home/god/DEMAT-UG/portadas/Portadas 3er semestre/lineal 2/portada.tex" "portada.pdf" "portada" 1779692615.98999 0
-  "/home/god/DEMAT-UG/portadas/Portadas 3er semestre/lineal 2/portada.tex" 1779692588.7649 7134 a2ed6470ffad114da9513e635d9c1e2d ""
+["pdflatex"] 1779949606.31253 "/home/god/DEMAT-UG/portadas/Portadas 3er semestre/lineal 2/portadatarea.tex" "portadatarea.pdf" "portadatarea" 1779949619.76444 0
+  "/home/god/DEMAT-UG/portadas/Portadas 3er semestre/lineal 2/portadatarea.tex" 1779692588.7649 7134 a2ed6470ffad114da9513e635d9c1e2d ""
   "/usr/share/texmf-dist/fonts/enc/dvips/ebgaramond/ebg_ljow5q.enc" 1775415801 3064 ad039a5bf6faa075ad3278d742de72a1 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/ebgaramond/ebg_tcdnmr.enc" 1775415801 3038 e164542e716a689948526cfb8c023ec2 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/sourcesanspro/a_5ponh6.enc" 1775415801 3344 37c976a8b2fa4b8f132a488735054f7d ""
@@ -183,10 +183,10 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1775415801 43569 fd570f2fa160877d211e859f687312ba ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1779671578 5541339 b32eb00eb34cd5c925a7827d916d9dbd ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1779671494 3765597 9068596539d1ad8e2e7faf2270c192a3 ""
-  "portada.aux" 1779692615.87486 232 73e76a51b3ab6978a073af3f7982faa6 "pdflatex"
-  "portada.tex" 1779692588.7649 7134 a2ed6470ffad114da9513e635d9c1e2d ""
+  "portadatarea.aux" 1779949619.65371 232 73e76a51b3ab6978a073af3f7982faa6 "pdflatex"
+  "portadatarea.tex" 1779692588.7649 7134 a2ed6470ffad114da9513e635d9c1e2d ""
   (generated)
-  "portada.aux"
-  "portada.log"
-  "portada.pdf"
+  "portadatarea.aux"
+  "portadatarea.log"
+  "portadatarea.pdf"
   (rewritten before read)
