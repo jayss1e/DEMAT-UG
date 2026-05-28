@@ -1,0 +1,141 @@
+% portada_probabilidad.tex ────────────────────────────────────────────────────
+% Portada Elementos de Probabilidad — Universidad de Guanajuato
+%
+% ─── EDITAR AQUÍ ─────────────────────────────────────────────────────────────
+\newcommand{\numtarea}{2}
+\newcommand{\nomprofesor}{\rule{5cm}{0.3pt}}
+% ─────────────────────────────────────────────────────────────────────────────
+
+\documentclass[tikz, border=0pt]{standalone}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{ebgaramond}
+\usepackage[default]{sourcesanspro}
+\usepackage{xcolor}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+\definecolor{ugblue}{HTML}{002D72}
+\definecolor{uggold}{HTML}{B8952A}
+
+\begin{document}
+\begin{tikzpicture}
+
+  \useasboundingbox (0,0) rectangle (210mm,297mm);
+  \fill[white] (0,0) rectangle (210mm,297mm);
+
+  %% ── Barras de color ─────────────────────────────────────────────────────────
+  \fill[ugblue] (0,287mm) rectangle (210mm,297mm);
+  \fill[uggold] (0,284mm) rectangle (210mm,287mm);
+  \fill[uggold] (0,11mm)  rectangle (210mm,14mm);
+  \fill[ugblue] (0,0)     rectangle (210mm,11mm);
+
+  %% ── Encabezado institucional ────────────────────────────────────────────────
+  \node[font=\fontsize{15.5}{19}\selectfont\sffamily\bfseries\color{ugblue},
+        anchor=center] at (105mm,275mm)
+    {\MakeUppercase{Universidad de Guanajuato}};
+  \node[font=\fontsize{10.5}{14}\selectfont\rmfamily\itshape\color{gray!65},
+        anchor=center] at (105mm,267.5mm)
+    {Divisi\'on de Ciencias Naturales y Exactas};
+  \node[font=\fontsize{10.5}{14}\selectfont\rmfamily\itshape\color{gray!65},
+        anchor=center] at (105mm,261mm)
+    {Departamento de Matem\'aticas};
+
+  %% ── Divisor superior ────────────────────────────────────────────────────────
+  \draw[ugblue!22, line width=0.4pt] (30mm,254.5mm) -- (101mm,254.5mm);
+  \fill[uggold]
+    (103mm,254.5mm)--(105mm,256.5mm)--(107mm,254.5mm)--(105mm,252.5mm)--cycle;
+  \draw[ugblue!22, line width=0.4pt] (109mm,254.5mm) -- (180mm,254.5mm);
+
+  %% ── Distribución normal bivariada  z = exp(−(x²+y²)/2) ─────────────────────
+  %% La densidad de probabilidad conjunta de dos variables normales estándar
+  %% Colormap: oscuro (base/colas) → azul → cian → verde → amarillo → blanco
+  \begin{axis}[
+    at          = {(105mm,186mm)},
+    anchor      = center,
+    width       = 160mm,
+    height      = 118mm,
+    axis lines  = none,
+    view        = {35}{32},
+    z buffer    = sort,
+    clip        = false,
+    colormap    = {probmap}{
+      rgb255=(10,5,60)      % azul muy oscuro    (colas, z≈0)
+      rgb255=(50,0,180)     % púrpura-azul
+      rgb255=(0,60,255)     % azul brillante
+      rgb255=(0,180,255)    % azul cielo
+      rgb255=(0,220,180)    % cian-verde
+      rgb255=(80,230,50)    % verde claro
+      rgb255=(230,230,0)    % amarillo
+      rgb255=(255,150,0)    % naranja
+      rgb255=(255,240,220)  % blanco cálido     (pico central)
+    },
+    point meta min = 0,
+    point meta max = 1,
+  ]
+    \addplot3[
+      surf,
+      shader      = faceted interp,
+      samples     = 46,
+      samples y   = 46,
+      domain      = -3.4:3.4,
+      domain y    = -3.4:3.4,
+      line width  = 0.05pt,
+      point meta  = z,
+    ]
+    % Normal bivariada estándar (sin normalizar): pico = 1 en el origen
+    { exp( -(x*x + y*y) / 2 ) };
+  \end{axis}
+
+  %% ── Divisor inferior ────────────────────────────────────────────────────────
+  \draw[ugblue!22, line width=0.4pt] (30mm,121mm) -- (101mm,121mm);
+  \fill[uggold]
+    (103mm,121mm)--(105mm,123mm)--(107mm,121mm)--(105mm,119mm)--cycle;
+  \draw[ugblue!22, line width=0.4pt] (109mm,121mm) -- (180mm,121mm);
+
+  %% ── Título ──────────────────────────────────────────────────────────────────
+  \node[font=\fontsize{9}{11}\selectfont\sffamily\fontseries{l}\selectfont
+        \color{gray!48}, anchor=center] at (105mm,114mm)
+    {\MakeUppercase{Licenciatura en Matem\'aticas}};
+
+  \node[font=\fontsize{34}{40}\selectfont\sffamily\bfseries\color{ugblue},
+        anchor=center] at (105mm,97mm)
+    {Elementos de Probabilidad};
+
+  \node[font=\fontsize{27}{31}\selectfont\rmfamily\itshape\color{uggold},
+        anchor=center] at (105mm,81mm)
+    {Tarea~\numtarea};
+
+  %% ── Separador y datos ───────────────────────────────────────────────────────
+  \draw[ugblue!13, line width=0.35pt] (30mm,70.5mm) -- (180mm,70.5mm);
+
+  \node[anchor=west,
+    font=\fontsize{7.5}{9}\selectfont\sffamily\color{gray!52}]
+    at (30mm,63mm) {\MakeUppercase{Alumno}};
+  \node[anchor=west,
+    font=\fontsize{7.5}{9}\selectfont\sffamily\color{gray!52}]
+    at (120mm,63mm) {\MakeUppercase{NUA}};
+  \node[anchor=west,
+    font=\fontsize{15}{18}\selectfont\rmfamily\color{black!85}]
+    at (30mm,55.5mm) {Ricardo Le\'on Mart\'inez};
+  \node[anchor=west,
+    font=\fontsize{15}{18}\selectfont\rmfamily\color{black!85}]
+    at (120mm,55.5mm) {827328};
+
+  \draw[ugblue!10, line width=0.3pt] (30mm,48mm) -- (180mm,48mm);
+
+  \node[anchor=center,
+    font=\fontsize{7.5}{9}\selectfont\sffamily\color{gray!52}]
+    at (105mm,42mm) {\MakeUppercase{Profesor(a)}};
+  \node[anchor=center,
+    font=\fontsize{15}{18}\selectfont\rmfamily\color{black!85}]
+    at (105mm,34.5mm) {\nomprofesor};
+
+  \node[font=\fontsize{7.5}{9}\selectfont\sffamily\color{gray!36},
+        anchor=center] at (105mm,21mm)
+    {\MakeUppercase{Universidad de Guanajuato~·~Campus Guanajuato}};
+
+\end{tikzpicture}
+\end{document}
