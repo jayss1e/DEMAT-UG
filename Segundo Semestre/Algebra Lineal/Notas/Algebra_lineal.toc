@@ -15,10 +15,11 @@
 \contentsline {chapter}{\numberline {3}Transformaciones Lineales}{49}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Transformaciones lineales}{49}{section.3.1}%
 \contentsline {section}{\numberline {3.2}Isomorfismo}{56}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Representacion transformaciones por matrices}{60}{section.3.3}%
+\contentsline {section}{\numberline {3.3}Representacion transformaciones por matrices}{59}{section.3.3}%
 \contentsline {section}{\numberline {3.4}Funciones Lineales}{66}{section.3.4}%
-\contentsline {section}{\numberline {3.5}Transpuesta de una transformación lineal}{73}{section.3.5}%
+\contentsline {section}{\numberline {3.5}Transpuesta de una transformación lineal}{72}{section.3.5}%
 \contentsline {section}{\numberline {3.6}Ejercicios}{77}{section.3.6}%
 \contentsline {chapter}{\numberline {4}Determinante}{81}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Funciones Determinantes}{81}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Ejercicios}{86}{section.4.2}%
+\contentsline {section}{\numberline {4.2}Propiedades del determinante}{86}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Ejercicios}{86}{section.4.3}%

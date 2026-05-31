@@ -21,34 +21,38 @@
     
     
     \thispagestyle{empty}
-    \includepdf[pages=1]{linealdefinitivo.pdf}
+    \includepdf[pages=1]{portada_lineal.pdf}
 
     \begin{flushright}
-  
+      \thispagestyle{empty}
+
         \textit{Dedicado a todos aquellos que no creyeron\\
         que estas notas fueran a salir. (Uicab)}\\[1cm]
 
         \textbf{Ricardo}\\[0.3cm]
         \textit{A los tacos el paisa 2\\
         porque son unos rifados.\\
-        A román porque sufrió redactando\\
+        A Román porque sufrió redactando\\
         estas notas.\\
         A Uicab por su libreta\\
         de lineal.\\
-        Al grupo de todos infimos porque\\
-        hacen mas llevadera la univerisidad.\\
-        Y a mi mejor amiga Sam,\\
-        porque aunque no entienda del todo estas notas,\\
-        siempre estuvo ahí.}\\[1.2cm]
+        Al grupo de todos ínfimos porque\\
+        hacen más llevadera la universidad.\\
+        Y a Sam, porque aunque no entienda\\
+        del todo estas notas,\\
+        siempre estuvo ahí.\\
+        Y a Kaori, porque entre tareas, estrés\\
+        y examenes, también estuvo ahí.}\\[1.2cm]
+
 
         \textbf{Román}\\[0.3cm]
 
-        \textit{Al comedor de Cimat por la buena comida que dan.\\
+        \textit{Al comedor de CIMAT por la buena comida que dan.\\
         A spotify que me acompañó\\
         en cada momento durante la redacción.\\
         A Uicab que me ayudó a verificar las notas.\\
         Pero sobre todo, al grupo de todos ínfimos \\
-        que han mejorado mi paso por la universidad}
+        que han mejorado mi paso por la universidad.}
 
     \end{flushright}
 
@@ -64,7 +68,7 @@
         A pesar del cuidado puesto en su redacción,\\
         es posible que existan errores u omisiones.\\[0.3cm]
 
-        Cualquier corrección, sugerencia o comentario será bienvenida
+        Cualquier corrección, sugerencia o comentario será bienvenido
         en los correos: \\[0.3cm]
 
         carlos.roman@cimat.mx\\
@@ -140,7 +144,7 @@
     También, podemos notar que
     $$\Q \subset \R \subset \C.$$
     
-    \begin{teorema}[Fundamental del algebra]
+    \begin{teorema}[Fundamental del álgebra]
         En $\C$ todos los polinomios tienen sus soluciones o raíces ($\C$ es un campo algebraicamente cerrado).
     \end{teorema}
     
@@ -372,7 +376,7 @@
             \begin{cases}
                 a_{ij},\quad\text{ si }i\neq r,s,\\
                 a_{rj},\quad\text{ si }i=s,\\
-                a_{sj},\quad\text{ si }t=r.
+                a_{sj},\quad\text{ si }i=r.
             \end{cases}
         \end{equation*}
     \end{enumerate}
@@ -413,14 +417,14 @@
     \end{definicion}
 
     \begin{ejemplo}
-        $I_{n}\in M_{m\times n}(F)$
+        $I_{n}\in M_{n\times n}(F)$
         \begin{equation*}
             I_{n}=
             \begin{pmatrix}
                 1 & 0 & \cdots & 0\\
                 0 & 1 & \cdots & 0\\
-                \vdots & \vdots & \ddots 0\\
-                0 & 0 & \cdots 1
+                \vdots & \vdots & \ddots&  0\\
+                0 & 0 & \cdots & 1
             \end{pmatrix}
             =(\delta_{ij})
         \end{equation*}
@@ -512,7 +516,10 @@
 
     \begin{definicion}[Relación de equivalencia de matrices]
         Sean $A_{1},A_{2}\in M_{m\times n}(F)$, diremos que $A_{1}\sim A_{2}$ si existe un numero finito de
-        operaciones elementales $E_{1k},E_{2k},\dots,E_{\ell k}$.
+        operaciones elementales $E_{1k},E_{2k},\dots,E_{\ell k}$ tales que
+        \begin{equation*}
+            A_{2}=E_{\ell k}\cdots E_{2k}E_{1k}(A_{1}).
+        \end{equation*}
     \end{definicion}
 
     Tenemos una relación de equivalencia definida en $M_{m\times n}(F)$. Si $A\in M_{m\times n}(F)$ su clase
@@ -559,7 +566,7 @@
         Una matriz $A\in M_{m\times n}(F)$ está \textbf{reducida} por filas si
         \begin{enumerate}
             \item Todas las filas cero están en las últimas filas (se obtiene aplicando $E_{3}$.
-            Tenemos $r$ filas cero, $m-r$ filas cero).
+            Tenemos $r$ filas cero, $m-r$ filas no cero).
             \item El primer elemento de las $m-r$ filas no cero es 1 (pivote)
             \item En la columna donde hay un pivote todos los coeficientes son cero excepto el pivote que es 1.
         \end{enumerate}
@@ -576,7 +583,7 @@
                 0 & 0 & 0 & 0 & 0 & 0 & 0
             \end{pmatrix}
         \end{equation*}
-        Donde $A\in M_{5\times7}(F)$ tiene 3 filas no cero y dos pivotes.
+        Donde $A\in M_{5\times7}(F)$ con dos filas no cero hay tres pivotes
     \end{ejemplo}
 
     \vspace{1cm}
@@ -587,8 +594,8 @@
 
     \begin{proof}
         Sea $A=(a_{ij})\in M_{m\times n}(F)$. Supongamos que $A$ tiene $r$ filas cero ($0\leq r\leq m$) si $r=m$,
-        entonces $A=0_{m\times n}$ es la matriz cero y es reducida por filas. Supongamos que $r\lt m$, con la
-        operación que $r\lt m$, con la operación elemental 3, pasamos las $r$ filas a la parte baja de la matriz.
+        entonces $A=0_{m\times n}$ es la matriz cero y es reducida por filas. Supongamos que $r\lt m$,
+        con la operación elemental 3, pasamos las $r$ filas a la parte baja de la matriz.
         \begin{equation*}
             \begin{pmatrix}
                 a_{11} & \cdots & a_{1n}\\
@@ -615,7 +622,7 @@
         \begin{equation*}
             A_{2}=E_{2}^{-b_{m-r,k_{1}}\cdot 1+(m-r)}\cdots E_{2}^{-b_{3}k_{1}\cdot1+3}E_{2}^{-b_{2}k_{1}\cdot1+2}A_{1}
         \end{equation*}
-        para hcaer cero los coeficientes, distintos del pivote de la fila 1 en la columna $k$. Tenemos que volver a
+        para hacer cero los coeficientes, distintos del pivote de la fila 1 en la columna $k$. Tenemos que volver a
         hacer todos los coeficientes primeros de las filas no cero iguales a 1, y si tenemos una fila cero la movemos a la parte
         baja de la matriz. Esta nueva matriz es $A_{3}$. La columna $k_{1}$ de $A_{3}$ es
         \begin{equation*}
@@ -1660,6 +1667,60 @@
         matrices con coeficientes en $\R$. Encuentra las matrices reducidas por filas y escalonadas $R_1, R_2$ equivalentes a $A_1$ y $A_2$, respectivamente. Encuentra las matrices invertibles $P_1, P_2$ tales que $R_1 = P_1A_1, R_2 = P_2 A_2$.
     \end{ejercicio}
 
+    \begin{ejercicio}
+        Considera el siguiente sistema de ecuaciones lineales de 4
+        ecuaciones lineales en 4 variables en $\mathbb{R}$.
+        \begin{equation*}
+            \begin{matrix}
+                x_{1}+2x_{2}-x_{3}+x_{4}=3\\
+                x_{1}+5x_{2}-3x_{3}=2\\
+                -x_{1}-3x_{2}+2x_{3}-x_{4}=0\\
+                2x_{1}+7x_{2}-4x_{3}+x_{4}=5
+            \end{matrix}
+        \end{equation*}
+        \begin{enumerate}
+            \item[(a)] Escribe la matriz aumentada del sistema.
+            \item[(b)] Escribe la matriz equivalente, reducida por filas y escalonada.
+            \item[(c)] Determina cuales son las variables libres y cuales son las variables no libres.
+            \item[(d)] Encuentra el conjunto solucion del sistema.  
+        \end{enumerate}
+    \end{ejercicio}
+
+    \begin{ejercicio}
+        Encuentra las ternas $(b_{1},b_{2},b_{3})\in\mathbb{R}^{3}$ para las que
+        el sistema no tiene ninguna solución (justifica tu respuesta).
+        \begin{equation*}
+            \begin{pmatrix}
+                1 & 0 & 0\\
+                0 & 1 & 2\\
+                1 & 1 & 2
+            \end{pmatrix}
+            \begin{pmatrix}
+                x_{1}\\
+                x_{2}\\
+                x_{3}
+            \end{pmatrix}
+            =
+            \begin{pmatrix}
+                b_{1}\\
+                b_{2}\\
+                b_{3}
+            \end{pmatrix}
+        \end{equation*}
+    \end{ejercicio}
+
+    \begin{ejercicio}
+        Determina los valores $a\in\mathbb{R}$ para los que la siguiente
+        matriz es invertible (justifica tu respuesta)
+        \begin{equation*}
+            \begin{pmatrix}
+                1 & a & 1\\
+                0 & 1 & a\\
+                1 & a+1 & 2
+            \end{pmatrix}
+        \end{equation*}
+    \end{ejercicio}
+
     \chapter{Espacios Vectoriales}
 
     \section{Espacios Vectoriales}
@@ -1672,7 +1733,7 @@
         (v_{1},v_{2})&\mapsto v_{1}+v_{2}
     \end{align*}
 
-    \textbf{Prodcuto Escalar}
+    \textbf{Producto Escalar}
     \begin{align*}
         \cdot: F\times V&\to V\\
         (a,v)&\mapsto a\cdot v
@@ -1718,7 +1779,7 @@
     \begin{proof}
         (1) La suma es asociativa porque la suma en $F$ lo es
         \begin{equation*}
-            (a_{1},\dots,a_{n})+((b_{1},\dots,b_{n}),(c_{1},\dots,c_{n}))=((a_{1},\dots,a_{n})+(b_{1},\dots,b_{n})+(c_{1},\dots,c_{n}))
+            (a_{1},\dots,a_{n})+((b_{1},\dots,b_{n})+(c_{1},\dots,c_{n}))=((a_{1},\dots,a_{n})+(b_{1},\dots,b_{n})+(c_{1},\dots,c_{n}))
         \end{equation*}
         (2) La suma es conmutativa porque la suma en $F$ lo es
         \begin{equation*}
@@ -1779,7 +1840,7 @@
 
     \begin{proposicion}
         Sea $V$ un espacio vectorial sobre $F$ y sea $\{W_{\lambda}\}_{\lambda\in\Delta}$
-        una colección de subespcios vectoriales de $V$, entonces
+        una colección de subespacios vectoriales de $V$, entonces
         \begin{equation*}
             \bigcap_{\lambda\in\Delta}W_{\lambda},
         \end{equation*}
@@ -1852,7 +1913,7 @@
 
     \begin{definicion}[Independencia Lineal]
         Sea $V$ un espacio vectorial sobre $F$. Sea $S\subset V$, diremos que $S$ es \textbf{linealmente
-        idependiente} sobre $F$ si
+        independiente} sobre $F$ si
         \begin{enumerate}
             \item $S=\varnothing$
             \item Existe $n\in\N$, existen vectores $v_{1},\dots,v_{n}\in S$ y $(a_{1},\dots,a_{n})\in F^{n}\setminus(0,\dots,0)$
@@ -1994,7 +2055,7 @@
 
     \begin{proof}
         Sea $\{u_{1},\dots,u_{k}\}$ una base de $W_{1}\cap W_{2}$. Podemos completar esta
-        base para formar bases de $w_{1}$ Y $w_{2}$. Sabiendo esto, sean $v_{1}\in v_{n}\in W_{1}$
+        base para formar bases de $W_{1}$ Y $W_{2}$. Sabiendo esto, sean $v_{1}\dots v_{n}\in W_{1}$
         y $w_{1},\dots,w_{m}\in W_{2}$ tales que
         \begin{equation*}
             \BB=\{u_{1},\dots,u_{k},v_{1},\dots,v_{n}\}\quad\text{ y }\quad\BB^{\prime}=\{u_{1},\dots,u_{k},w_{1},\dots,w_{m}\}.
@@ -2014,9 +2075,9 @@
         \end{equation*}
         Luego existen escalares $\a_{1},\dots,\a_{n}\in F$ tales que
         \begin{equation*}
-            \sum_{i=1}^{m}c_{i}w_{i}=\sum_{i=1}^{k}\a_{i}v_{i}
+            \sum_{i=1}^{m}c_{i}w_{i}=\sum_{i=1}^{k}\a_{i}u_{i}
         \end{equation*}
-        Sin embargo, $\BB=\{u_{1},\dots,u_{k},w_{1},\dots,w_{m}\}$ es linealmente independiente
+        Sin embargo, $\BB^{\prime}=\{u_{1},\dots,u_{k},w_{1},\dots,w_{m}\}$ es linealmente independiente
         así que $c_{i}=0$ para todo $i=1,\dots,m$. Luego
         \begin{equation*}
             \sum_{i=1}^{k}a_{i}u_{i}+\sum_{i=1}^{n}b_{i}v_{i}=0.
@@ -2147,7 +2208,7 @@
                 e_{n}
             \end{pmatrix}
         \end{equation*}
-        Por hipotesis $\{v_{1},\dots,v_{n}\}$ donde $v_{i}=\{a_{1i},\dots,a_{in}\}$ forman una base de
+        Por hipotesis $\{v_{1},\dots,v_{n}\}$ donde $v_{i}=(a_{1i},\dots,a_{in})$ forman una base de
         $F^{n}$. Así que existen $b_{ij}\in F$, $\forall i,j\in\{1,\dots,n\}$ tales que
         \begin{align*}
             e_{i}&=\sum_{j=1}^{n}b_{ij}v_{j}\\
@@ -2192,14 +2253,16 @@
         \end{align*}
     \end{definicion}
 
-    Den
-
+    A partir de este punto, denotaremos al espacio vectorial de los polinomios de grado menor o igual a $n$ como
+    \[
+    \mathcal{P}_n = \llavesgrandes{\sum_{i = 1}^n a_ix^{i} : a_i \in F}.
+    \]
+    
     \begin{ejemplo}
-        Si $P_{n}=\biggl\{\sum_{i=0}^{n}c_{i}x^{i}:c_{i}\in\R\biggr\}$,
-        una base ordenada es $\BB=\{1,x,\dots,x^{n}\}$ se define la función
+        Sea $\mathcal{P}_{n}$, una base ordenada es $\BB=\{1,x,\dots,x^{n}\}$ se define la función
         \begin{align*}
-            \varphi_{\BB}:P_{n}&\to F^{n+1}\\
-            \sum^{n}_{i=0}c_{i}x^{i}&\mapsto(c_{0},c_{1},\dots,c_{n})
+            \varphi_{\BB}:\mathcal{P}_{n}&\to F^{n+1}\\
+            \sum^{n}_{i=0}a_{i}x^{i}&\mapsto(a_{0},a_{1},\dots,a_{n})
         \end{align*}
     \end{ejemplo}
 
@@ -2266,6 +2329,7 @@
     \end{proposicion}
     
     \begin{proof}
+    Tenemos que
         \begin{equation*}
             P
             \begin{pmatrix}
@@ -2342,7 +2406,7 @@
         \end{align*}
         \begin{align*}
             \cdot : \C \times V & \to V\\
-            (c,(x_1, x:2)) & \mapsto (cx_1 + c - 1, cx_2 + c - 1).
+            (c,(x_1, x_2)) & \mapsto (cx_1 + c - 1, cx_2 + c - 1).
         \end{align*}
         ¿Es $V$ un espacio vectorial sobre $\C$ con estas operaciones?.
     \end{ejercicio}
@@ -2470,13 +2534,34 @@
             \item[(b)] Encuentra todos los vectores $v \in \R^3$ tales que $[v]_\BB = [v]_\mathcal{C}$.
         \end{itemize}
     \end{ejercicio}
+
+    \begin{ejercicio}
+        Demuestra que para todo $a\in\mathbb{R}$, $W_{a}=\{(x_{1},x_{2},x_{3},x_{4},x_{5})\in\mathbb{R}^{5}:x_{1}+x_{2}+x_{3}=ax_{5},x_{4}=0\}$
+        es un subespacio vectorial de $\mathbb{R}^{5}$. Demuestra que todo
+        vector en $W_{a}$ es combinación lineal de los vectores $(a,0,0,0,1)$,
+        $(-1,1,0,0,0)$, $(-1,0,1,0,0)$. (justifica tu respuesta).
+    \end{ejercicio}
+
+    \begin{ejercicio}
+        Demuestra que $W=\{(x_{1},x_{2},x_{3},x_{4})\in\mathbb{R}^{4}:x_{1}x_{2}=0\}$
+        no es subespacio vectorial de $\mathbb{R}^{4}$
+    \end{ejercicio}
+
+    \begin{ejercicio}
+        Encuentra una base del siguiente subespacio vectorial de $\R^{4}$
+        (justifica tu respuesta).
+        \begin{equation*}
+            W=\{(x_{1},x_{2},x_{3},x_{4})\in\R^{4}:x_{1}+x_{2}+x_{3}+x_{4}=0\}.
+        \end{equation*}
+    \end{ejercicio}
     
     \chapter{Transformaciones Lineales}
 
     \section{Transformaciones lineales}
 
+
     \begin{definicion}[Transformación Lineal]
-        Sean $V,W$ espacios vectoriales sobre un campo $F$, una funcíón $T:V\to W$ es una
+        Sean $V,W$ espacios vectoriales sobre un campo $F$, una función $T:V\to W$ es una
         \textbf{transformación lineal} si
         \begin{equation*}
             T(av_{1}+v_{2})=aT(v_{1})+T(v_{2})
@@ -2485,15 +2570,11 @@
     \end{definicion}
 
     \textbf{Observación.}
+    Por inducción, la condición anterior se extiende a combinaciones lineales arbitrarias:
     \begin{equation*}
         T\parentesis{\sum_{i = 1}^na_iv_i} = \sum_{i = 1}^na_iT(v_i)
-        \tag{XXX}
-        \label{XXX}
     \end{equation*}
-    \begin{equation*}
-        T\parentesis{\sum_{i = 1}^na_iv_i} = T\parentesis{a_1v_1 + \sum_{i = 2}^na_iv_i} = a_1T(v_1) + T\parentesis{\sum_{i = 2}^na_iv_i}.
-    \end{equation*}
-    Usando inducción se obtiene \eqref{XXX}.
+    De la definición anterior también se deducen directamente las identidades $T(0)=0$ y $T(-v)=-T(v)$, que serán útiles en las demostraciones que siguen.
 
     \begin{ejemplo}
         Sea $A = (a_{ij}) \in M_{m \times n}(F)$ el producto
@@ -2564,7 +2645,7 @@
     \begin{ejemplo}
         Sean
         \begin{equation*}
-            T: \mathbb{R} \to \mathbb{R},
+            T: \mathbb{R}^{2} \to \mathbb{R}^{2},
         \end{equation*}
         $T(1,0) = (a_1, b_1)$ y $T(0, 1) = (a_2, b_2)$. Luego
         \begin{align*}
@@ -2602,7 +2683,7 @@
                 & = a \cdot 0 + 0\\
                 & = 0.
             \end{align*}
-            \item[(2)] Veamos que $T(0) = 0$, así que es no vacío. Sean $a \in F$, $T(v_1), T(v_2) \in \Im{T}$. Dado que $aT(v_1) + T(v_2) \in \Im{T}$, al ser una transformación lineal, se sigue que $T(av_1 + v_2) \in \Im{T}$.
+            \item[(2)] Veamos que $T(0) = 0$, así que es no vacío. Sean $a \in F$, $T(v_1), T(v_2) \in \Im (T$). Dado que $aT(v_1) + T(v_2) \in \Im (T)$, al ser una transformación lineal, se sigue que $T(av_1 + v_2) \in \Im (T)$.
         \end{itemize}
     \end{proof}
 
@@ -2614,11 +2695,7 @@
     \end{definicion}
 
     \begin{ejemplo}
-        Sea
-        \begin{equation*}
-            \mathcal{P} = \llavesgrandes{\sum_{i = 0}^na_ix^{i}:a_i \in \mathbb{R}}.
-        \end{equation*}
-        Tomemos la siguiente función
+        Sea $\mathcal{P}_n$. Tomemos la siguiente función
         \begin{align*}
             \mathcal{D}: \mathcal{P} & \to \mathcal{P}\\
             \sum_{i = 0}^na_ix^{i} & \mapsto \sum_{i = i}^nia_ix^{i-1}.
@@ -2638,7 +2715,7 @@
     \end{definicion}
 
     \begin{ejemplo}
-        El rango de la transformación lineal vista en el ejemplo (XXX) es 
+        El rango de la transformación lineal vista en el ejemplo $3.5$ es 
     \begin{equation*}
         \Im(\mathcal{D})= \llavesgrandes{\sum_{i = 0}^{n-1}a_ix^{i}: a_i \in \mathbb{R}} \qquad \implies \qquad \rg(\mathcal{D}) = n.
     \end{equation*}
@@ -2810,7 +2887,7 @@
     \begin{proof}
         Tenemos que probar que para todo $a \in F$, $w_1, w_2 \in W$, se cumple que
         \begin{equation*}
-            T^{-1}(aw_! + w_2) = a T^{-1}(w_1) + T^{-1}(w_2).
+            T^{-1}(aw_1 + w_2) = a T^{-1}(w_1) + T^{-1}(w_2).
         \end{equation*}
         Al ser $T$ lineal y biyectiva, existen únicos $v_1, v_2 \in V$ tales que
         \begin{align*}
@@ -2857,7 +2934,7 @@
     \begin{proof}
         Sea $\BB = \llaves{v_1, \dots , v_n}$ una base ordenada de $v$, la función que asigna las coordenadas 
         \begin{align*}
-            \varphi_{\BB}: V^n & \to F^n\\
+            \varphi_{\BB}: V & \to F^n\\
             v & \mapsto (a_1, \dots, a_n)
         \end{align*}
         donde $\Sigma_{i = 1}^n a_iv_i$ es lineal. En consecuencia $\ker (\varphi_\BB) = \llaves{0}$ y $\rg (\varphi_\BB) = n$. Así que $\Im (\varphi_\BB) = F^n$, es sobre. Por tanto es un isomorfismo lineal.
@@ -2906,7 +2983,7 @@
         Supongamos ahora que $\dim(V) = n$ y $\dim(W) = m$, con $m = n$.
         Sean $\{v_1,\dots,v_n\}$ una base de $V$ y la transformación lineal
         \begin{align*}
-            \varphi_{\mathcal{B}}:V & \to F\\
+            \varphi_{\mathcal{B}}:V & \to F^{n}\\
             v & \mapsto [v]_{\mathcal{B}},
         \end{align*}
         La cual es biyectiva y en consecuencia $V \simeq F^n$. De manera análoga, sea $\mathcal{B}' = \{w_1,\dots,w_n\}$ una base de $W$ y consideremos
@@ -2926,11 +3003,7 @@
     \end{proof}
     
     \begin{ejemplo}
-        Sea
-        \begin{equation*}
-            \mathcal{P}_n = \big\{\sum_{i = 0}^n a_ix^{i}:a_i \in \mathbb{R}, i = 0, \dots, n \big\}.
-        \end{equation*}
-        Con $\dim_{\mathbb{R}}(\mathcal{P}_n )= n + 1$ y la base $\BB = \llaves{1, x, x^2, \dots, x^n}$. Entonces
+        Sea $\mathcal{P}_n$. Con $\dim_{\mathbb{R}}(\mathcal{P}_n )= n + 1$ y la base $\BB = \llaves{1, x, x^2, \dots, x^n}$. Entonces
         \begin{align*}
             \varphi_\BB: \mathcal{P}_{n} & \to \mathbb{R}^{n + 1}\\
             \sum_{i = 0}^na_ix^{i} & \mapsto (a_0, a_1, \dots, a_n)
@@ -2953,6 +3026,8 @@
         \end{equation*}
         Con $A \in M_{m \times n}(F)$.
     \end{ejemplo}  
+
+    \section{Representacion transformaciones por matrices}
 
     Tomemos la siguiente transformación lineal,
     \begin{align*}
@@ -3014,8 +3089,6 @@
         \includegraphics[width=0.4\textwidth]{diagramas_conmutativos3.pdf}
     \end{figure}
 
-    \section{Representacion transformaciones por matrices}
-
     \begin{definicion}[Representación matricial]
         La matriz $A = (a_{ij}) \in M_{m \times n}(F)$ construida anteriormente, se llama \textbf{representación matricial} de $T$ respecto a las bases $\BB_V, \BB_W$. Usaremos la siguiente notación
         \begin{gather*}
@@ -3052,11 +3125,7 @@
     \end{ejemplo}
 
     \begin{ejemplo}
-        Sea el espacio vectorial
-        \begin{equation*}
-            \mathcal{P}_3 = \llaves{\sum_{i = 0}^{n} a_ix^{i} : a_i \in \R, \; i = 0, \dots, 3}.
-        \end{equation*}
-        Con su base ordenada $\BB = \llaves{1, x, x^2, x^3}$. Tomemos la transformación lineal
+        Sea el espacio vectorial $\mathcal{P}_3$. Con su base ordenada $\BB = \llaves{1, x, x^2, x^3}$. Tomemos la transformación lineal
         \begin{align*}
             \mathcal{D} : \mathcal{P}_3 & \to \mathcal{P}_3\\
             \sum_{i = 0}^{3}a_ix^{i} & \mapsto \sum_{i = 0}^3ia_ix^{i - 1}
@@ -3154,7 +3223,7 @@
     \begin{proposicion}
         Sean $V_1, V_2, V_3$ espacios vectoriales con bases ordenadas $\BB_1, \BB_2, \BB_3$ respectivamente, $T_1: V_1 \to V_2$ y $T_2:V_2 \to V_3$ transformaciones lineales y $\dim V_i = n_i$. Se cumple que
         \begin{equation*}
-            [T_2 \circ T_1]_{\BB_1, \BB_3} = [T_2]_{\BB_2, \BB_3}[T_1]_{\BB_!, \BB_2}
+            [T_2 \circ T_1]_{\BB_1, \BB_3} = [T_2]_{\BB_2, \BB_3}[T_1]_{\BB_1, \BB_2}
         \end{equation*}
     \end{proposicion}   
 
@@ -3295,7 +3364,7 @@
             &\hspace{1.6cm} v\longmapsto cT(v).
         \end{aligned}
     \end{equation*}
-    le damos estructura de campo sobre $F$ a $\mathcal{L}(V,W)$.
+    le damos estructura de espacio vectorial sobre $F$ a $\mathcal{L}(V,W)$.
 
     \begin{teorema}
         Sean $V, W$ espacios vectoriales sobre $F$ de dimensión $\dim_FV = n$ y $\dim_FW = m$; y las bases ordenadas $\BB_V = \llaves{v_1, \dots, v_n}$ y $\BB_W = \llaves{w_1, \dots, w_m}$. La función
@@ -3508,7 +3577,7 @@
         \varphi_v: V^* & \longrightarrow F\\
         f & \longmapsto f(v)
     \end{align*}
-    Siendo esta una transformación lienal, ya que
+    Siendo esta una transformación lineal, ya que
     \begin{align*}
         \varphi_v(af_1 + f_2) & = (af_1 + f_2)(v)\\
         & = af_1(v) + f_2(v)\\
@@ -3719,7 +3788,7 @@
         [T]_{\BB_2, \BB_3} = 
         \begin{pmatrix}
             1 & 1\\
-            0 & 2\\
+            0 & 1\\
             2 & 0\\
         \end{pmatrix}.
         \]
@@ -3914,6 +3983,53 @@
         Considera la base ordenada $\BB = \llaves{(1, 0 ,-1), (1, 1, 1), (2, 2, 0)}$ de $\R^3$. Encuentra la base dual.
     \end{ejercicio}
 
+    \begin{ejercicio}
+        Si existe, describe explicitamente una transformación lineal de $\R^{3}$
+        en $\R^{3}$ que tenga como imagen el subespacio vectorial generado por (1,0,1) y
+        (1,1,0). Si no existe, demuestralo.
+    \end{ejercicio}
+
+    \begin{ejercicio}
+        Sea $n\in\N$ y $\PP_{n}$ el espacio vectorial de polinomios
+        de grado menor o igual a $n$ con coeficiente en $\R$. Considera la transformación
+        lineal
+        \begin{align*}
+            T:\PP_{3}&\to\PP\\
+            f(x)&\mapsto xf^{\prime}(x)
+        \end{align*}
+        Considera la base ordenada $\BB=\{1,x+1,x^{2},x^{3}\}$ de $\PP_{3}$. Encuentra la matriz
+        que representa a $T$ en esta base ordenada.
+    \end{ejercicio}
+
+    \begin{ejercicio}
+        Sea $T:\R^{4}\to\R^{3}$ la transformación lineal dada por el producto de la matriz
+        \begin{equation*}
+            \begin{pmatrix}
+                2 & 1 & 0 & 1\\
+                0 & 1 & 0 & 1\\
+                2 & 2 & 0 & 2
+            \end{pmatrix}
+        \end{equation*}
+        encuentra (y justifica)\\
+        \textit{a)} (1 punto) la nulidad de $T$ y\\
+        \textit{b)} (1 punto) el rango de $T$.
+    \end{ejercicio}
+
+    \begin{ejercicio}
+        Sea $V$ un espacio vectorial de dimensión finita $n$, sobre $F$. Sea $T:V\to V$
+        una transformación lineal tal que $T\neq0$ y $T^{2}=0$. Demuestre que:\\
+        \textit{a)} $\Im(T)\subset\ker(T)$\\
+        \textit{b)} $\text{rango}(T)\leq\frac{n}{2}$.
+    \end{ejercicio}
+
+    \begin{ejercicio}
+        Sean $V,W$ y $U$ espacios vectoriales de dimensión finita, sobre un campo $F$. Sean $T:V\to W$ y $S:W\to U$ transformaciones lineales.
+        Demuestre que
+        \begin{equation*}
+            \nul(S\circ T)=\nul(T)+\dim(\Im(T)\cap\ker(T)).
+        \end{equation*}
+    \end{ejercicio}
+
     \chapter{Determinante}
 
     \section{Funciones Determinantes}
@@ -3921,7 +4037,7 @@
     \begin{definicion}[Función $n$-lineal]
         Sea $F$ un campo. Una función
         \[
-        D:M_{n \times n}(f) \longrightarrow F
+        D:M_{n \times n}(F) \longrightarrow F
         \]
         se llama \textbf{$n$-lineal} si para todo $i = \llaves{1, \dots, n}$ se cumple que
         \[
@@ -3956,7 +4072,7 @@
         Tomemos la función
         \begin{align*}
             D: M_{n \times n}(F) & \longrightarrow F\\
-            (a_{}ij) & \longmapsto \prod_{i = 1}^na_{ii}
+            (a_{ij}) & \longmapsto \prod_{i = 1}^na_{ii}
         \end{align*}
         Notemos que 
         \begin{align*}
@@ -4130,8 +4246,8 @@
             \begin{pmatrix}
                 \alpha_1\\
                 \vdots\\
-                \alpha_i\\
-                \alpha_{j}\\
+                \alpha_j\\
+                \alpha_{i}\\
                 \vdots\\
                 \alpha_n
             \end{pmatrix} + D
@@ -4207,7 +4323,7 @@
     \begin{lema}
         Sea $D:M_{n \times n}(F) \to F$ una función $n$-lineal, lo siguiente es equivalente.
         \begin{itemize}
-            \item[(1)] $D$ es alternante\\
+            \item[(1)] $D$ es alternante
             \item[(2)]  
             \[
             D\begin{pmatrix}
@@ -4278,6 +4394,59 @@
             \end{pmatrix} & \longmapsto a_{11}a_{22} - a_{12}a_{21}
         \end{align*}
     \end{proposicion}
+    
+    \begin{proof}
+        Ya probamos que esta función es determinante. Si
+        $D:M_{2\times2}(F)\to F$ una función determinante.
+        D es 2-lineal, sea $e_{1}=(1,0)$ y $e_{2}=(0,1)$, entonces
+        \begin{align*}
+            D
+            \begin{pmatrix}
+                a_{11} & a_{12}\\
+                a_{21} & a_{22}
+            \end{pmatrix}
+            &=
+            D
+            \begin{pmatrix}
+                a_{11}e_{1} & a_{12}e_{2}\\
+                a_{21}e_{1} & a_{22}e_{2}
+            \end{pmatrix}
+            \\
+            &=a_{11}D
+            \begin{pmatrix}
+                e_{1}\\
+                a_{21}e_{1}+a_{22}e_{2}
+            \end{pmatrix}
+            +
+            \begin{pmatrix}
+                a_{12}e_{2}\\
+                a_{21}e_{1}+a_{22}e_{2}
+            \end{pmatrix}\\
+            &=a_{11}\parentesis{
+                a_{21}D
+                \begin{pmatrix}
+                    e_{1}\\
+                    e_{1}
+                \end{pmatrix}
+                +D
+                \begin{pmatrix}
+                   e_{1}\\
+                   a_{22}e_{2} 
+                \end{pmatrix}
+            }+a_{21}D
+            \begin{pmatrix}
+                a_{12}e_{2}\\
+                e_{1}
+            \end{pmatrix}
+            +D
+            \begin{pmatrix}
+                a_{12}e_{2}\\
+                a_{22}e_{2}
+            \end{pmatrix}
+        \end{align*}
+    \end{proof}
+
+    \section{Propiedades del determinante}
 
     \section{Ejercicios}
 
@@ -4313,7 +4482,7 @@
             1 & c & c^2\\
         \end{pmatrix},
         \]
-        sobre $F$. Demuestra que es invertible si y solo si $a = b$ 0 $a = c$ o $b = c$.
+        sobre $F$. Demuestra que es invertible si y solo si $a, b, c$ son distintos entre sí.
     \end{ejercicio}
 
     \begin{ejercicio}
@@ -4329,6 +4498,8 @@
         \]
         donde $\varepsilon_i$ es la fila con todas las entradas cero, excepto el lugar $i$ que tiene un $1$.
     \end{ejercicio}
+
+
 % ku.e.de :)
 % aaaah no JAJAJJAJA
 % jajajajajajaj
