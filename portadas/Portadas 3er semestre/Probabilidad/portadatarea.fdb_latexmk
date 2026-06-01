@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1779950015.82547 "/home/god/DEMAT-UG/portadas/Portadas 3er semestre/Probabilidad/portadatarea.tex" "portadatarea.pdf" "portadatarea" 1779950026.72556 0
-  "/home/god/DEMAT-UG/portadas/Portadas 3er semestre/Probabilidad/portadatarea.tex" 1779950003.54574 6552 be84d8f11cbe26b70253eaf345eca0b0 ""
+["pdflatex"] 1780281706.03335 "/home/god/DEMAT-UG/portadas/Portadas 3er semestre/Probabilidad/portadatarea.tex" "portadatarea.pdf" "portadatarea" 1780281716.68033 0
+  "/home/god/DEMAT-UG/portadas/Portadas 3er semestre/Probabilidad/portadatarea.tex" 1780281705.75091 6552 9f78fabc2138b5809cf9d53d9563c385 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/ebgaramond/ebg_ljow5q.enc" 1775415801 3064 ad039a5bf6faa075ad3278d742de72a1 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/ebgaramond/ebg_tcdnmr.enc" 1775415801 3038 e164542e716a689948526cfb8c023ec2 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/sourcesanspro/a_5ponh6.enc" 1775415801 3344 37c976a8b2fa4b8f132a488735054f7d ""
@@ -181,10 +181,10 @@
   "/usr/share/texmf-dist/tex/latex/xcolor/xcolor.sty" 1775415801 55384 b454dec21c2d9f45ec0b793f0995b992 ""
   "/usr/share/texmf-dist/tex/latex/xkeyval/xkeyval.sty" 1775415801 5006 d7e899bb5d9717c7f214e9bc0284de7b ""
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1775415801 43569 fd570f2fa160877d211e859f687312ba ""
-  "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1779671578 5541339 b32eb00eb34cd5c925a7827d916d9dbd ""
-  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1779671494 3765597 9068596539d1ad8e2e7faf2270c192a3 ""
-  "portadatarea.aux" 1779950026.61646 232 73e76a51b3ab6978a073af3f7982faa6 "pdflatex"
-  "portadatarea.tex" 1779950003.54574 6552 be84d8f11cbe26b70253eaf345eca0b0 ""
+  "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1780279912 5541339 b32eb00eb34cd5c925a7827d916d9dbd ""
+  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1780279847 3765590 88c95c2db8f3fba28488ec2cfc0f8198 ""
+  "portadatarea.aux" 1780281716.56717 232 73e76a51b3ab6978a073af3f7982faa6 "pdflatex"
+  "portadatarea.tex" 1780281705.75091 6552 9f78fabc2138b5809cf9d53d9563c385 ""
   (generated)
   "portadatarea.aux"
   "portadatarea.log"
