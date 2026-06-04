@@ -1,0 +1,83 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{ugmath}
+\usepackage{float}
+\usepackage{placeins}
+\usepackage{array}
+\usepackage[labelfont=bf,labelsep=space]{caption}
+\newcommand{\paren}[1]{\left( #1 \right)}
+\newcommand{\alumno}{Ricardo León Martínez}
+\newcommand{\materia}{Elementos de Probabilidad y Estadistica}
+\newcommand{\profesor}{Claudia Reynoso Alcántara}
+\newcommand{\tarea}{Tarea 11}
+\newcommand{\fecha}{5/6/2026}
+
+\begin{document}
+
+    \begin{center}
+        {\large\textbf{UNIVERSIDAD DE GUANAJUATO}}\\[0.3cm]
+        {\normalsize\textbf{DIVISIÓN DE CIENCIAS NATURALES Y EXACTAS}}\\
+        {\normalsize\textbf{CAMPUS GUANAJUATO}}\\[1cm]
+
+        {\Large\textbf{\tarea\ (\materia)}}\\[1cm]
+    \end{center}
+
+    \noindent
+    \textbf{Nombre:} \alumno 
+    \hfill 
+    \textbf{Fecha:} \fecha 
+    \hfill 
+    \textbf{Calificación:} \rule{3cm}{0.4pt}
+
+    \vspace{0.3cm}
+
+    \section*{Parte I. Valor esperado y varianza}
+
+    \begin{mdframed}
+        Sea $X$ una variable aleatoria discreta tal que $P(X=a)=p$ y $P(X=b)=1-p$ para algunos $a,b,p\in\R$ con $a\leq b$
+        y $a\lt p\lt1$.
+        \begin{enumerate}
+            \item[(a)] Encuentre una expresión para $\E[X^{n}]$ para cada $n\geq1$ y determine $\Var(X)$.
+            \item[(b)] Suponiendo que $a=1$ y $b=-1$, encuentre $c\neq1$ tal que $\E[c^{X}]=1$. 
+        \end{enumerate}
+    \end{mdframed}
+
+    \begin{mdframed}
+        Sea $X$ una variable aleatoria con valor esperado $\mu=\E[X]$ y varianza $\sigma^{2}=\Var(X)$.
+        \begin{enumerate}
+            \item[(a)] Encuentre el valor esperado y varianza de $Y=(X-\mu)/\sigma^{2}$.
+            \item[(b)] Sean $a,b\in\R$. Encuentre el valor esperado y varianza de $Z=a+bY$.
+        \end{enumerate}
+    \end{mdframed}
+
+    \section*{Parte II. Distribución exponencial}
+
+    Recordemos que una variable aleatoria $X$ tiene \textbf{distribución exponencial} de parámetro $\lambda\gt0$ si tiene densidad
+    \begin{equation*}
+        f(r)=
+        \begin{cases}
+            xe^{-\lambda r},\hfill\quad\text{si }r\geq0,\\
+            0,\hfill\quad\text{en cualquier otro caso}.
+        \end{cases}
+    \end{equation*}
+
+    \begin{mdframed}
+        Sean $X$ una variable aleatoria exponencial de parámetro $\lambda\gt0$. Demuestra que para todo entero $n\geq1$ se cumple que
+        \begin{equation*}
+            \E[X^{n}]=\frac{n}{\lambda}\cdot\E[X^{n-1}].
+        \end{equation*}
+        Encuentre $E[X]$ y $E[X^{2}]$ y concluya que $\Var(X)=\frac{1}{\lambda^{2}}$. \textbf{Sugerencia:} Use integración por partes
+        con $u=r^{n}$ y $dv=\lambda e^{-\lambda r}dr$.
+    \end{mdframed}
+
+    \section*{Parte III. Distribución gamma}
+
+    La \textbf{función gamma} $\Gamma:\R_{\gt0}\to\R$ esta dada por
+    \begin{equation*}
+        \Gamma(\alpha)=\int_{0}^{\infty}e^{-r}r^{\alpha-1}dr\quad\text{para todo}\quad\alpha\gt0.
+    \end{equation*}
+
+    \begin{mdframed}
+        Demuestra usando integración por partes que $\Gamma(\alpha)=(\alpha-1)\Gamma$
+    \end{mdframed}
+
+\end{document}
