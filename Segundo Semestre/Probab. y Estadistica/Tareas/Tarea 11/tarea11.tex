@@ -32,7 +32,7 @@
 
     \section*{Parte I. Valor esperado y varianza}
 
-    \begin{mdframed}
+    \begin{mdframed}[style=mdpinkbox,frametitle={Ejercicio 1}]
         Sea $X$ una variable aleatoria discreta tal que $P(X=a)=p$ y $P(X=b)=1-p$ para algunos $a,b,p\in\R$ con $a\leq b$
         y $a\lt p\lt1$.
         \begin{enumerate}
@@ -41,7 +41,7 @@
         \end{enumerate}
     \end{mdframed}
 
-    \begin{mdframed}
+    \begin{mdframed}[style=mdpinkbox,frametitle={Ejercicio 2}]
         Sea $X$ una variable aleatoria con valor esperado $\mu=\E[X]$ y varianza $\sigma^{2}=\Var(X)$.
         \begin{enumerate}
             \item[(a)] Encuentre el valor esperado y varianza de $Y=(X-\mu)/\sigma^{2}$.
@@ -60,7 +60,7 @@
         \end{cases}
     \end{equation*}
 
-    \begin{mdframed}
+    \begin{mdframed}[style=mdpinkbox,frametitle={Ejercicio 3}]
         Sean $X$ una variable aleatoria exponencial de parámetro $\lambda\gt0$. Demuestra que para todo entero $n\geq1$ se cumple que
         \begin{equation*}
             \E[X^{n}]=\frac{n}{\lambda}\cdot\E[X^{n-1}].
@@ -71,13 +71,79 @@
 
     \section*{Parte III. Distribución gamma}
 
-    La \textbf{función gamma} $\Gamma:\R_{\gt0}\to\R$ esta dada por
+    La \textbf{Distribución gamma} $\Gamma:\R_{\gt0}\to\R$ esta dada por
     \begin{equation*}
         \Gamma(\alpha)=\int_{0}^{\infty}e^{-r}r^{\alpha-1}dr\quad\text{para todo}\quad\alpha\gt0.
     \end{equation*}
 
-    \begin{mdframed}
-        Demuestra usando integración por partes que $\Gamma(\alpha)=(\alpha-1)\Gamma$
+    \begin{mdframed}[style=mdpinkbox,frametitle={Ejercicio 4}]
+        Demuestra usando integración por partes que $\Gamma(\alpha)=(\alpha-1)\Gamma(\alpha-1)$ para $\alpha\gt1$. Encuentre
+        $\Gamma(1)$ y concluya que $\Gamma(n)=(n-1)!$.
+    \end{mdframed}
+
+    Recordemos que una variable aleatoria $X$ tiene \text{distribución gamma} de parametros $(\lambda,\alpha)$ con $\lambda\gt0$
+    y $\alpha\gt0$ si tiene densidad
+    \begin{equation*}
+        f(r)=
+        \begin{cases}
+            \frac{\lambda e^{-\lambda r}(\lambda r)^{\alpha-1}}{\Gamma(\alpha)},\hfill\text{si } r\geq0,\\
+            0,\qquad\text{en cualquier otro caso}.
+        \end{cases}
+    \end{equation*}
+
+    \begin{mdframed}[style=mdpinkbox,frametitle={Ejercicio 5}]
+        Sea $X$ una variable aleatoria gamma de parámetros $(\lambda,\alpha)$ con $\lambda\gt0$ y $\alpha\gt0$. Encuentre
+        $\E[X]$ y $\E[X^{2}]$ y concluya que $\Var(X)=\alpha/\lambda^{2}$. \textbf{Sugerencia.} Escriba $\lambda r^{n}e^{-\lambda r}(\lambda r)^{n+\alpha-1}$
+        y considere el cambia de variable $s=\lambda r$.
+    \end{mdframed}
+
+    \section*{Parte IV. Distribución beta}
+
+    Recordemos que variable aleatoria $X$ tiene \textbf{distribución beta} de parámetros $(a,b)$ con $a,b\gt0$ si tiene densidad
+    \begin{equation*}
+        f(r)=
+        \begin{cases}
+            \frac{1}{C(a,b)}r^{a-1}(1-r)^{b-1},\quad\text{ si }0\lt r\lt 1,\\
+            0,\hfill\text{en cualquier otro caso},
+        \end{cases}
+    \end{equation*}
+    donde
+    \begin{equation*}
+        C(a,b)=\int_{0}^{1}r^{a-1}(1-r)^{b-1}dr.
+    \end{equation*}
+
+    \begin{mdframed}[style=mdpinkbox,frametitle={Ejercicio 6}]
+        Sea $X$ una variable aleatoria beta de parametros $(a,b)$ con $a,b\gt0$. Demuestre que
+        \begin{equation*}
+            \E[X]=\frac{a}{a+b},\quad\text{ y }\quad\Var(X)=\frac{ab}{(a+b)^{2}(a+b+1)}.
+        \end{equation*}
+        \textbf{Sugerencia.} Use el hecho de que la función  gamma satisface que $\frac{\Gamma(a)\Gamma(b)}{\Gamma(a+b)}=C(a,b)$.
+    \end{mdframed}
+
+    \section*{Parte V. Integral de Stieltjes}
+
+    Sea $X$ una variable aleatoria y sea $F_{x}:\R\to\R$ su función de distribución. Recordemos que si una función $g:\R\to\R$ es
+    stieltjes integrable con respecto a $F_{x}$ en el intervalo $[a,b]$ con $a\leq b$, entonces
+    \begin{equation*}
+        \int_{a}^{b}g(r)dF_{X}(r)=\lim_{n\to\infty}\sum_{i=1}^{n}g(r_{i})(F_{x}(r_{i})-F_{x}(r_{i-1}))
+    \end{equation*}
+    donde para cada entero $n\geq1$ tomamos
+    \begin{equation*}
+        r_{0}=a,\quad r_{1}=a+\frac{b-a}{n},\quad r_{2}=a+2\frac{b-a}{n},\quad r_{3}=a+3\frac{b-a}{n},\cdots,r_{n-1}=a+(n-1)\frac{b-a}{n},\quad r_{n}=b.
+    \end{equation*}
+    Más aún, si
+    \begin{equation*}
+        \int_{-\infty}^{+\infty}g(r)dF_{X}(r):=\lim_{a\to+\infty}\int_{-a}^{+a}g(r)dF_{X}(r)
+    \end{equation*}
+    existe, lo llamamos el valor esperado de $g(X)$ y lo denotamos por $\E[g(X)]$. En particular, el valor esperado de $X$ es
+    \begin{equation*}
+        \E[X]=\int_{-\infty}^{+\infty}rdF_{X}(r):=\lim_{a\to+\infty}\int_{-a}^{+a}rdF_{X}(r)
+    \end{equation*}
+
+    \begin{mdframed}[style=mdpinkbox,frametitle={Ejercicio 7}]
+        Sea $X:\Omega\to\R$ una variable aleatoria no negativa, es decir, $X(\omega)\geq0$ para todo $\omega\in\Omega$.
+        Supongamos que $X$ tiene valor esperado $\E[X]$. Demuestre que $\E[X]\geq0$. \textbf{Sugerencia.} Demuestre que
+        $F_{X}(r)=0$ si $r\lt0$, y por ende que $\int_{-a}^{+a}rdF_{X}(r)=\int_{0}^{+a}rdF_{X}(r)$.
     \end{mdframed}
 
 \end{document}
