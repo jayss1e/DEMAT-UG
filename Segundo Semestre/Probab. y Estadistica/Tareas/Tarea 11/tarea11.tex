@@ -41,6 +41,79 @@
         \end{enumerate}
     \end{mdframed}
 
+    \begin{solucion}
+        \begin{enumerate}
+            \item[(a)] Encuentre una expresión para $\E[X^{n}]$ para cada $n\geq1$ y determine $\Var(X)$.\\
+            Por definición de esperanza
+            \begin{equation*}
+                \E[X^{n}]=\sum_{x}^{n}P(X=x).
+            \end{equation*}
+            Como el soporte de $X$ es $\{a,b\}$,
+            \begin{equation*}
+                \E[X^{n}]=pa^{n}+(1-p)b^{n},\quad n\geq1.
+            \end{equation*}
+            En particular,
+            \begin{equation*}
+                \E[X]=pa+(1-p)b,
+            \end{equation*}
+            y
+            \begin{equation*}
+                \E[X^{2}]=pa^{2}+(1-p)b^{2}.
+            \end{equation*}
+            Ahora, $\Var(X)=E[X^{2}]-(E[X])^{2}$. Por lo tanto,
+            \begin{equation*}
+                \Var(X)=(pa^{2}+(1-p)b^{2})-(pa+(1-p)b)^{2}.
+            \end{equation*}
+            Desarrollando el cuadrado,
+            \begin{align*}
+                \Var(X)&=pa^{2}+(1-p)b^{2}\\
+                &-(p^{2}a^{2}+2p(1-p)ab+(1-p)^{2}b^{2}).
+            \end{align*}
+            Agrupando términos,
+            \begin{equation*}
+                \Var(X)=p(1-p)a^{2}+p(1-p)b^{2}-2p(1-p)ab.
+            \end{equation*}
+            Factorizando,
+            \begin{equation*}
+                \Var(X)=p(1-p)(a-b)^{2}.
+            \end{equation*}
+            \item[(b)] Suponiendo que $a=1$ y $b=-1$, encuentre $c\neq1$ tal que $\E[c^{X}]=1$.\\
+            Ahora suponemos $a=1$, $b=1$. Entonces
+            \begin{equation*}
+                P(X=1)=p,\quad P(X=-1)=1-p
+            \end{equation*}
+            Queremos que $\E[c^{X}]=1$. Calculamos
+            \begin{equation*}
+                \E[c^{X}]=pc+(1-p)c^{-1}.
+            \end{equation*}
+            La condición es
+            \begin{equation*}
+                pc+\frac{1-p}{c}=1.
+            \end{equation*}
+            Multiplicando por $c$,
+            \begin{equation*}
+                pc^{2}-c+(1-p)=0.
+            \end{equation*}
+            Esta es una ecuación cuadrática. Su discriminante es
+            \begin{equation*}
+                \Delta=1-4p(1-p)=(2p-1)^{2}.
+            \end{equation*}
+            Luego,
+            \begin{equation*}
+                c=\frac{1\pm(2p-1)}{2p}.
+            \end{equation*}
+            Obtenemos las raices
+            \begin{equation*}
+                c_{1}=1,\quad\text{ si }\quad c_{2}=\frac{1-p}{p}.
+            \end{equation*}
+            Por lo tanto, el valor buscado distinto de 1 es
+            \begin{equation*}
+                c=\frac{1-p}{p}.
+            \end{equation*}
+            siempre que $p\neq\frac{1}{2}$.
+        \end{enumerate}
+    \end{solucion}
+
     \begin{mdframed}[style=mdpinkbox,frametitle={Ejercicio 2}]
         Sea $X$ una variable aleatoria con valor esperado $\mu=\E[X]$ y varianza $\sigma^{2}=\Var(X)$.
         \begin{enumerate}
@@ -48,6 +121,41 @@
             \item[(b)] Sean $a,b\in\R$. Encuentre el valor esperado y varianza de $Z=a+bY$.
         \end{enumerate}
     \end{mdframed}
+
+    \begin{solucion}
+        \begin{enumerate}
+            \item[(a)] Encuentre el valor esperado y varianza de $Y=(X-\mu)/\sigma^{2}$.\\
+            Esperanza. Por linealidad de la esperanza,
+            \begin{equation*}
+                E[Y]=\E\left[\frac{X-\mu}{\sigma^{2}}\right]=\frac{1}{\sigma^{2}}\E[X-\mu].
+            \end{equation*}
+            Como $\E[X]=\mu$,
+            \begin{equation*}
+                \E[X-\mu]=\E[X]-\mu=0.
+            \end{equation*}
+            Por tanto,
+            \begin{equation*}
+                \E[Y]=0.
+            \end{equation*}
+            \item[(b)] Sean $a,b\in\R$. Encuentre el valor esperado y varianza de $Z=a+bY$.
+        \end{enumerate}
+        Varianza. Usamos que para toda constante $c$,
+        \begin{equation*}
+            \Var(cX)=c^{2}\Var(X),\quad \Var(X+c)=\Var(X).
+        \end{equation*}
+        Entonces
+        \begin{equation*}
+            Y=\frac{1}{\sigma^{2}}(X-\mu)
+        \end{equation*}
+        y por lo tanto
+        \begin{equation*}
+            \Var(Y)=\paren{\frac{1}{\sigma^{2}}}^{2}\Var(X-\mu)
+        \end{equation*}
+        Como restar constante no altera la varianza,
+        \begin{equation*}
+            \Var(X-\mu)=\Var(X)=\sigma^{2}.
+        \end{equation*}
+    \end{solucion}
 
     \section*{Parte II. Distribución exponencial}
 
