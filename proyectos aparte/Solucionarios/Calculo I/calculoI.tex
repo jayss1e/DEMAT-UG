@@ -60,4 +60,130 @@
     
     \setcounter{page}{1}
     \tableofcontents
+
+    \chapter{Teoría Intuitiva de Conjuntos}
+
+    \section{Introducción}
+
+    \begin{ejercicio}
+        Prueba que el conjunto vacío es el único conjunto sin elementos.
+    \end{ejercicio}
+
+    \begin{proof}
+        Supongamos que $A$ es un conjunto sin elementos. Entonces para toda $x$, $x\notin A$.
+        Para probar que $A\subseteq\varnothing$, sea $x\in A$. Esto es imposible, pues $A$ no tiene
+        elementos. Luego la implicación
+        \begin{equation*}
+            x\in A\implies x\in\varnothing
+        \end{equation*}
+        es verdadera para todo $x$, y por lo tanto $A\subseteq\varnothing$. Por la proposición 1,
+        $\varnothing\subseteq A$. En consecuencia, por el criterio de la igualadad de conjuntos $A=\varnothing$.
+        Por lo tanto, el conjunto vacío es único.
+    \end{proof}
+
+    \section{Notación de Conjuntos Mediante una Condición}
+
+    \begin{ejercicio}
+        Expresa los conjuntos siguientes mediante alguna condición.
+        \begin{multicols}{2}
+            \begin{enumerate}
+                \item[(a)] $\{1,3,5,7,\dots\}$.
+                \item[(b)] $\{2,4,6,8,\dots\}$.
+                \item[(c)] $\{9,10,11,12,\dots\}$.
+                \item[(d)] $\{7,8,\dots,93,94\}$.
+                \item[(e)] $\{1,2,4,8,16,\dots\}$.
+                \item[(f)] $\{1,1/2,1/3,1/4,\dots\}$.   
+            \end{enumerate}
+        \end{multicols}
+    \end{ejercicio}
+
+    \begin{solucion}
+        \begin{multicols}{2}
+            \begin{enumerate}
+            \item[(a)] $\{1,3,5,7,\dots\}=\{2n-1:n\in\N\}$.
+            \item[(b)] $\{2,4,6,8,\dots\}=\{2n:n\in\N\}$.
+            \item[(c)] $\{9,10,11,12,\dots\}=\{n\in\N: n\geq9\}$.
+            \item[(d)] $\{7,8,\dots,93,94\}=\{n\in\N:7\leq n\leq94\}$.
+            \item[(e)] $\{1,2,4,8,16,\dots\}=\{2^{n}:n\in\N\cup\{0\}\}$.
+            \item[(f)] $\{1,1/2,1/3,1/4,\dots\}=\left\{\frac{1}{n}:n\in\N\right\}$.  
+            \end{enumerate}            
+        \end{multicols}
+    \end{solucion}
+
+    \begin{ejercicio}
+        Prueba que
+        \begin{equation*}
+            \{x:x\notin x\}
+        \end{equation*}
+        no es un conjunto. \textbf{Sugerencia:} Procede por contradicción, supón que $A:=\{x:x\notin x\}$
+        es un conjunto y considera los casos en que $A\in A$ y $A\notin A$
+    \end{ejercicio}
+
+    \begin{proof}
+        Supongamos, por contradicción, que
+        \begin{equation*}
+            A:=\{x:x\notin x\}
+        \end{equation*}
+        es un conjunto. Por definición de $A$,
+        \begin{equation*}
+            x\in A\ssi x\notin x.
+        \end{equation*}
+        En particular, tomando $x=A$, obtenemos
+        \begin{equation*}
+            A\in A\ssi A\notin A.
+        \end{equation*}
+        Ahora analizamos los dos casos posibles. Primer caso $A\in A$. Como $A\in A$ y los elementos de
+        $A$ son precisamente los conjuntos no pertenecen a si mismos, se sigue que
+        \begin{equation*}
+            A\notin A
+        \end{equation*}
+        lo cual contradice la hipótesis $A\in A$. Segundo caso $A\notin A$. Como $A$ no pertenece a su mismo,
+        satisface la propiedad que define a los elementos de $A$. Por tanto,
+        \begin{equation*}
+            A\in A,
+        \end{equation*}
+        lo cual contradice la hipótesis de $A\notin A$. En ambos casos llegamos a una contradicción.
+        Luego nuestra suposición inicial era falsa. Por consiguiente,
+        \begin{equation*}
+            \{x:x\notin x\}
+        \end{equation*}
+        no es un conjunto.
+    \end{proof}
+
+    \vspace{1cm}
+
+    \section{Operaciones con Conjuntos}
+
+    \begin{ejercicio}
+        Sean $A=\{0,1,2,3,4,5,6,7,8,9\}$, $B=\{5,6,7,8,9\}$, $C=\{0,1,2,3,4\}$, $D=\{3,4,5\}$ y
+        $E=\{a,e,i,o,u\}$ y $F=\{a,e,o\}$. Calcula lo siguiente:
+        \begin{multicols}{2}
+            \begin{enumerate}
+                \item[(a)] $A\cup B$, $B\cup C$ y $D\cup F$.
+                \item[(b)] $A\cap B$, $B\cap C$ y $D\cap F$. 
+                \item[(c)] $B\cup C\cup D$ y $B\cap C\cap D$.
+                \item[(d)] $B\cup D\cup E$ y $B\cap D\cap E$.
+                \item[(c)] $A\setminus B$, $B\setminus A$, $B\setminus C$ y $A\setminus D$.  
+                \item[(c)] $A\setminus E$, $E\setminus A$, $E\setminus F$ y $F\setminus E$. 
+            \end{enumerate}
+        \end{multicols}
+    \end{ejercicio}
+
+    \begin{solucion}
+        \begin{enumerate}
+            \item[(a)] $A\cup B$, $B\cup C$ y $D\cup F$.
+            \begin{equation*}
+                A\cup B=\{0,1,2,3,4,5,6,7,8,9\},\quad B\cup C=\{0,1,2,3,4,5,6,7,8,9\},\quad D\cup F=\{3,4,5,a,e,o\}.
+            \end{equation*}
+            \item[(b)] $A\cap B$, $B\cap C$ y $D\cap F$.
+            \begin{equation*}
+                A\cap B=\{5,6,7,8,9\},\quad B\cap C=\varnothing,\quad D\cap F=\varnothing.
+            \end{equation*}
+            \item[(c)] $B\cup C\cup D$ y $B\cap C\cap D$.
+            \begin{equation*}
+                B\cup C\cup D=\{0,1,2,3,4,5,6,7,8,9\},\quad B\cap C\cap D=\varnothing
+            \end{equation*}
+        \end{enumerate}
+    \end{solucion}
+
 \end{document}

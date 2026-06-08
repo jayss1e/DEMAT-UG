@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.5.31)  7 JUN 2026 22:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.5.31)  8 JUN 2026 00:47
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1104,12 +1104,12 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 ))
-<portada_solucionario_calculo1.pdf, id=31, 597.50786pt x 845.04686pt>
+<portada_solucionario_calculo1.pdf, id=47, 597.50786pt x 845.04686pt>
 File: portada_solucionario_calculo1.pdf Graphic file (type pdf)
 <use portada_solucionario_calculo1.pdf>
 Package pdftex.def Info: portada_solucionario_calculo1.pdf  used on input line 24.
 (pdftex.def)             Requested size: 597.5064pt x 845.0448pt.
-<portada_solucionario_calculo1.pdf, id=33, page=1, 597.50786pt x 845.04686pt>
+<portada_solucionario_calculo1.pdf, id=49, page=1, 597.50786pt x 845.04686pt>
 File: portada_solucionario_calculo1.pdf Graphic file (type pdf)
 <use portada_solucionario_calculo1.pdf, page 1>
 Package pdftex.def Info: portada_solucionario_calculo1.pdf , page1 used on input line 24.
@@ -1151,7 +1151,29 @@ LaTeX Font Info:    Font shape `T1/LibertinusSerif-TLF/b/n' will be
  (./calculoI.toc
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
+LaTeX Font Info:    Font shape `T1/LibertinusSerif-TLF/b/n' will be
+(Font)              scaled to size 12.0pt on input line 2.
+ (/usr/share/texmf-dist/tex/latex/microtype/mt-cmr.cfg
+File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
 )
+LaTeX Font Info:    Trying to load font information for U+msa on input line 2.
+ (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+) (/usr/share/texmf-dist/tex/latex/microtype/mt-msa.cfg
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 2.
+ (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) (/usr/share/texmf-dist/tex/latex/microtype/mt-msb.cfg
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+)
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 2.
+ (/usr/share/texmf-dist/tex/latex/jknapltx/ursfs.fd
+File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
+)
+LaTeX Font Info:    Trying to load font information for U+stmry on input line 2.
+ (/usr/share/texmf-dist/tex/latex/stmaryrd/Ustmry.fd))
 \tf@toc=\write5
 \openout5 = `calculoI.toc'.
 
@@ -1159,10 +1181,38 @@ LaTeX Info: Redefining \% on input line 1.
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.63 \end{document}
-                    [1
+l.64     \chapter
+                 {Teoría Intuitiva de Conjuntos} [1
 
-{/usr/share/texmf-dist/fonts/enc/dvips/libertinus-type1/lbn1_75t36g.enc}{/usr/share/texmf-dist/fonts/enc/dvips/libertinus-type1/lbn1_sfissr.enc}] (./calculoI.aux
+{/usr/share/texmf-dist/fonts/enc/dvips/libertinus-type1/lbn1_75t36g.enc}{/usr/share/texmf-dist/fonts/enc/dvips/libertinus-type1/lbn1_sfissr.enc}]
+LaTeX Font Info:    Font shape `T1/LibertinusSerif-TLF/m/sl' in size <12> not available
+(Font)              Font shape `T1/LibertinusSerif-TLF/m/it' tried instead on input line 64.
+LaTeX Font Info:    Font shape `T1/LibertinusSerif-TLF/m/it' will be
+(Font)              scaled to size 12.0pt on input line 64.
+LaTeX Info: Redefining \. on input line 64.
+LaTeX Info: Redefining \% on input line 64.
+Package babel Info: 'spanish' activates 'spanish' shorthands.
+(babel)             Reported on input line 64.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.64     \chapter
+                 {Teoría Intuitiva de Conjuntos} [2
+
+]
+Cap\'{\i }tulo 1.
+LaTeX Font Info:    Font shape `T1/LibertinusSerif-TLF/m/n' will be
+(Font)              scaled to size 17.28pt on input line 66.
+LaTeX Font Info:    Font shape `T1/LibertinusSerif-TLF/b/n' will be
+(Font)              scaled to size 17.28pt on input line 66.
+[3]
+LaTeX Info: Redefining \. on input line 169.
+LaTeX Info: Redefining \% on input line 169.
+ [4]
+LaTeX Info: Redefining \. on input line 189.
+LaTeX Info: Redefining \% on input line 189.
+ [5] (./calculoI.aux
 LaTeX Info: Redefining \. on input line 12.
 LaTeX Info: Redefining \% on input line 12.
 )
@@ -1171,21 +1221,21 @@ LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
 Package rerunfilecheck Info: File `calculoI.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+(rerunfilecheck)             Checksum: D7ADC707B3F4FFC4416E6AFDDB14C5D8;797.
  ) 
 Here is how much of TeX's memory you used:
- 43302 strings out of 467525
- 964243 string characters out of 5425861
- 1520722 words of memory out of 5000000
- 71457 multiletter control sequences out of 15000+600000
- 657213 words of font info for 69 fonts, out of 8000000 for 9000
+ 43601 strings out of 467525
+ 970623 string characters out of 5425861
+ 1528723 words of memory out of 5000000
+ 71672 multiletter control sequences out of 15000+600000
+ 685286 words of font info for 117 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,17n,131p,1067b,1194s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texmf-dist/fonts/type1/public/libertinus-type1/LibertinusSerif-Bold.pfb></usr/share/texmf-dist/fonts/type1/public/libertinus-type1/LibertinusSerif-Italic.pfb></usr/share/texmf-dist/fonts/type1/public/libertinus-type1/LibertinusSerif-Regular.pfb>
-Output written on calculoI.pdf (3 pages, 338063 bytes).
+</usr/share/texmf-dist/fonts/type1/public/libertinus-type1/LibertinusSerif-Bold.pfb></usr/share/texmf-dist/fonts/type1/public/libertinus-type1/LibertinusSerif-Italic.pfb></usr/share/texmf-dist/fonts/type1/public/libertinus-type1/LibertinusSerif-Regular.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on calculoI.pdf (7 pages, 426489 bytes).
 PDF statistics:
- 75 PDF objects out of 1000 (max. 8388607)
- 44 compressed objects within 1 object stream
- 3 named destinations out of 1000 (max. 500000)
- 18556 words of extra memory for PDF output out of 20736 (max. 10000000)
+ 161 PDF objects out of 1000 (max. 8388607)
+ 109 compressed objects within 2 object streams
+ 14 named destinations out of 1000 (max. 500000)
+ 32412 words of extra memory for PDF output out of 35830 (max. 10000000)
 
