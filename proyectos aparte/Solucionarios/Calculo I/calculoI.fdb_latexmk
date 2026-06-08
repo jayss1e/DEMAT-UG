@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1780901230.07556 "/home/god/DEMAT-UG/proyectos aparte/Solucionarios/Calculo I/calculoI.tex" "calculoI.pdf" "calculoI" 1780901231.42361 0
-  "/home/god/DEMAT-UG/proyectos aparte/Solucionarios/Calculo I/calculoI.tex" 1780901229.8738 6820 d5741efe20c5b6f2736de19569bf0275 ""
+["pdflatex"] 1780954700.84156 "/home/god/DEMAT-UG/proyectos aparte/Solucionarios/Calculo I/calculoI.tex" "calculoI.pdf" "calculoI" 1780954702.26454 0
+  "/home/god/DEMAT-UG/proyectos aparte/Solucionarios/Calculo I/calculoI.tex" 1780954700.63274 11401 96bc79723761f26785851885aa0c9976 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/libertinus-type1/lbn1_75t36g.enc" 1775415801 3035 7d37ee7011b797a1b8ca3680e8da3d4d ""
   "/usr/share/texmf-dist/fonts/enc/dvips/libertinus-type1/lbn1_sfissr.enc" 1775415801 3029 779a1fead300a8a6914296dbb8c4e4e5 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/libertinus-type1/lbn1_sncvby.enc" 1775415801 3045 5b2f4fc72b43c1454ef46e1ac83df287 ""
@@ -39,6 +39,7 @@
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1775415801 32722 d7379af29a190c3f453aba36302ff5a9 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1775415801 32726 0a1aea6fcd6468ee2cf64d891f5c43c8 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1775415801 32569 5e5ddc8df908dea60932f3c484a54c0d ""
+  "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb" 1775415801 32626 4f5c1b83753b1dd3a97d1b399a005b4b ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb" 1775415801 31764 459c573c03a4949a528c2cc7f557e217 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1775415801 34694 ad62b13721ee8eda1dcc8993c8bd7041 ""
   "/usr/share/texmf-dist/fonts/type1/public/libertinus-type1/LibertinusSerif-Bold.pfb" 1775415801 675251 b4942b11d39cc2a83029e76fba3c7eb8 ""
@@ -292,10 +293,10 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1775415801 43569 fd570f2fa160877d211e859f687312ba ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1780279912 5541339 b32eb00eb34cd5c925a7827d916d9dbd ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1780279847 3765590 88c95c2db8f3fba28488ec2cfc0f8198 ""
-  "calculoI.aux" 1780901231.29265 1110 5614d5b4f3368ed85b6830ed9273cbb4 "pdflatex"
-  "calculoI.out" 1780901231.29465 797 d7adc707b3f4ffc4416e6afddb14c5d8 "pdflatex"
-  "calculoI.tex" 1780901229.8738 6820 d5741efe20c5b6f2736de19569bf0275 ""
-  "calculoI.toc" 1780901231.29465 380 d9c35c4c95874798a89771d30bcf4e2d "pdflatex"
+  "calculoI.aux" 1780954702.1236 1110 8e998ffa81f0a67b36b8fbf850088002 "pdflatex"
+  "calculoI.out" 1780954702.1256 797 d7adc707b3f4ffc4416e6afddb14c5d8 "pdflatex"
+  "calculoI.tex" 1780954700.63274 11401 96bc79723761f26785851885aa0c9976 ""
+  "calculoI.toc" 1780954702.1256 380 d9c35c4c95874798a89771d30bcf4e2d "pdflatex"
   "portada_solucionario_calculo1.pdf" 1780892375.37487 54626 32a64118980fdd04ad393a2482c446b5 ""
   "ugmath.sty" 1780898822.8114 10528 c36bddd7d8014d8bed3642dd10335a70 ""
   (generated)
