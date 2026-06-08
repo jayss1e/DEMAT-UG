@@ -1,0 +1,63 @@
+\documentclass[12pt,a4paper]{book}
+\raggedbottom
+
+\usepackage{ugmath}
+\usepackage{float}
+\usepackage{placeins}
+\usepackage[labelfont=bf,labelsep=space]{caption}
+\usepackage{pdfpages}
+\usepackage{tikz-cd}
+\usepackage{amsthm}
+\DeclareMathOperator{\rg}{rg}
+\renewcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\llaves}[1]{\{#1\}}
+\newcommand{\parentesis}[1]{\left(#1\right)}
+\newcommand{\corchetes}[1]{\left[#1\right]}
+\newcommand{\llavesgrande}[1]{\big\{#1\big\}}
+\newcommand{\llavesgrandes}[1]{\left\{#1\right\}}
+
+
+\begin{document}
+    
+    
+    \thispagestyle{empty}
+    \includepdf[pages=1]{portada_solucionario_calculo1.pdf}
+
+    \begin{flushright}
+      \thispagestyle{empty}
+
+        \textit{Dedicado a sam, por que es mi mejor amiga\\
+        y siempre a estado ahi para mi. Dedicado a Kaori que\\
+        es tmb mi mejor amiga y que compartimos el sufrimiento\\
+        de cursar carreras de ciencias puras.}\\[1cm]
+
+        \textit{La neta estas lo hago para estudiar en vacaciones\\
+        y prepararme para recursarla y entenderla bien.}\\[1.2cm]
+
+    \end{flushright}
+
+    % ---------------- NOTA DE ERRORES ----------------
+
+    \cleardoublepage
+    \thispagestyle{empty}
+
+    \begin{mdframed}[style=mdgreenbox]
+        \begin{center}
+        \small
+        Este solucionario fue elaborado con fines académicos.\\
+        A pesar del cuidado puesto en su redacción,\\
+        es posible que existan errores u omisiones.\\[0.3cm]
+
+        Cualquier corrección, sugerencia o comentario será bienvenido
+        en los correos: \\[0.3cm]
+
+        
+        ricardo.leon@cimat.mx
+        \end{center}
+    \end{mdframed}
+
+    % -------------------------------------------------
+    
+    \setcounter{page}{1}
+    \tableofcontents
+\end{document}
