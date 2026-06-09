@@ -307,4 +307,88 @@
         \end{equation*}
     \end{solucion}
 
+    \begin{ejercicio}
+        Prueba los incisos (b), (c) y (d) de la proposición 2.
+    \end{ejercicio}
+
+    \begin{proof}
+        \begin{enumerate}
+            \item[(b)] De la serie de implicaciones
+            \begin{align*}
+                x\in A\cup(B\cup C)&\implies x\in A\lor(x\in B\lor x\in C)\\
+                &\implies (x\in A\lor x\in B)\lor x\in C\\
+                &\implies x\in(A\cup B)\cup C
+            \end{align*}
+            obtenemos que $A\cup(B\cup C)\subseteq (A\cup B)\cup C$. Es fácil ver que las implicaciones
+            que aparecen también se cumplen en el sentido contrario, de lo cual obtenemos que $(A\cup B)\cup C\subseteq A\cup(B\cup C)$
+            y, en consecuencia, que $A\cup(B\cup C)=(A\cup B)\cup C$. La prueba de que $A\cap(B\cap C)=(A\cap B)\cap C$
+            es similar.
+            \item[(c)] De la serie de implicaciones
+            \begin{align*}
+                x\in A\cup(B\cap C)&\implies x\in A\lor(x\in B\wedge x\in C)\\
+                &\implies (x\in A\lor x\in B)\wedge(x\in A\lor x\in C)\\
+                &\implies x\in (A\cup B)\cap(A\cup C)
+            \end{align*}
+            obtenemos que $A\cup(B\cap C)\subseteq (A\cup B)\cap(A\cup C)$. Es fácil ver que las implicaciones
+            que aparecen también se cumplen en el sentido contrario, de lo cual obtenemos $(A\cup B)\cap(A\cup C)\subseteq A\cup(B\cap C)$ y,
+            en consecuencia, que $A\cup(B\cap C)=(A\cup B)\cap(A\cup C)$. La prueba de que $A\cap(B\cup C)=(A\cap B)\cup(A\cap C)$ es
+            similar.
+            \item[(d)] De la serie de implicaciones
+            \begin{align*}
+                x\in A\setminus(B\cup C)&\implies x\in A \wedge x\notin(B\cup C)\\
+                &\implies x\in A\wedge(x\notin B\lor x\notin C)\\
+                &\implies (x\in A\wedge x\notin B)\lor (x\in A\wedge x\notin C)\\
+                &\implies x\in (A\setminus B)\cup(A\setminus C)
+            \end{align*}
+            obtenemos que $A\setminus(B\cup C)\subseteq(A\setminus B)\cup(A\setminus C)$. Es fácil ver que las implicaciones
+            que aparecen también se cumplen en el sentido horario, de lo cual obtenemos $(A\setminus B)\cup(A\setminus C)\subseteq A\setminus(B\cup C)$
+            y, en consecuencia, que $A\setminus(B\cup C)=(A\setminus B)\cup(A\setminus C)$. La prueba de que $A\setminus(B\cap C)=(A\setminus B)\cup(A\setminus C)$
+            es similar.
+        \end{enumerate}
+    \end{proof}
+
+    \begin{ejercicio}
+        Prueba la proposición 3
+    \end{ejercicio}
+
+    \begin{proof}
+        \begin{enumerate}
+            \item[(a)] De la serie de implicaciones
+            \begin{align*}
+                x\in A\cup\varnothing&\implies x\in A\lor x\in\varnothing\\
+                &\implies x\in A
+            \end{align*}
+            obtenemos que $A\cup\varnothing\subseteq A$. Si $x\in A$ por definción es claro que $x\in A\cup\varnothing$.
+            En consecuencia $A\subseteq A\cup\varnothing$ y, por lo tanto,
+            \begin{equation*}
+                A\cup\varnothing=A.
+            \end{equation*}
+            Sea ahora $x\in A\cap\varnothing$.
+            Entonces, por definición de intersección, $x\in A$ y $x\in\varnothing$. Pero $x\in\varnothing$ es imposible,
+            ya que el conjunto vacío no tiene elementos. Por lo tanto, no existe ningún $x$ tal que $x\in A\cap\varnothing$.
+            En consecuencia, $A\cap\varnothing$ no tiene elementos, es decir,
+            \begin{equation*}
+                A\cap\varnothing=\varnothing.
+            \end{equation*}
+            De la serie de implicaciones,
+            \begin{align*}
+                x\in A\setminus\varnothing&\implies x\in A\wedge x\notin\varnothing\\
+                &\implies x\in A
+            \end{align*}
+            obtenemos que $A\setminus\varnothing\subseteq A$. Si $x\in A$ por definición es claro que
+            $x\in A\setminus\varnothing$ y, en consecuencia, $A\subseteq A\setminus\varnothing$. Por lo
+            tanto
+            \begin{equation*}
+                A\setminus\varnothing=A.
+            \end{equation*}
+            Sea $x\in \varnothing\setminus A$. Entonces por definición de diferencia de conjuntos, $x\in\varnothing\wedge x\notin A$.
+            Pero $x\in\varnothing$ es imposible, ya que el conjunto vacío no tiene elementos. Por lo tanto,
+            no existe ningún $x$ tal que $x\in \varnothing\setminus A$. En consecuencia, $\varnothing\setminus A$
+            no tiene elementos, es decir,
+            \begin{equation*}
+                \varnothing\setminus A=\varnothing.
+            \end{equation*}
+        \end{enumerate}
+    \end{proof}
+
 \end{document}
