@@ -534,6 +534,17 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/libertinus-type1/LibertinusSerif-Re
 INPUT /usr/share/texmf-dist/fonts/tfm/public/libertinus-type1/LibertinusSerif-Bold-tlf-t1.tfm
 INPUT /usr/share/texmf-dist/fonts/vf/public/libertinus-type1/LibertinusSerif-Bold-tlf-t1.vf
 INPUT /usr/share/texmf-dist/fonts/tfm/public/libertinus-type1/LibertinusSerif-Bold-tlf-t1--base.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/libertinus-type1/LibertinusSerif-Regular-tlf-t1.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/libertinus-type1/LibertinusSerif-Bold-tlf-t1.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/libertinus-type1/LibertinusSerif-Regular-tlf-t1.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/rsfs/rsfs5.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/stmaryrd/stmary5.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/libertinus-type1/LibertinusSerif-Regular-tlf-t1.tfm
+INPUT /usr/share/texmf-dist/fonts/vf/public/libertinus-type1/LibertinusSerif-Bold-tlf-t1.vf
+INPUT /usr/share/texmf-dist/fonts/tfm/public/libertinus-type1/LibertinusSerif-Bold-tlf-t1--base.tfm
 INPUT calculoI.aux
 INPUT ./calculoI.out
 INPUT ./calculoI.out

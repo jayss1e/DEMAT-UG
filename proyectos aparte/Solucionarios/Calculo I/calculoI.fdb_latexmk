@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1780993827.52529 "/home/god/DEMAT-UG/proyectos aparte/Solucionarios/Calculo I/calculoI.tex" "calculoI.pdf" "calculoI" 1780993828.93762 0
-  "/home/god/DEMAT-UG/proyectos aparte/Solucionarios/Calculo I/calculoI.tex" 1780993825.80277 16043 9c4bfbfd8783d661c5e13789896f73e0 ""
+["pdflatex"] 1781037140.53626 "/home/god/DEMAT-UG/proyectos aparte/Solucionarios/Calculo I/calculoI.tex" "calculoI.pdf" "calculoI" 1781037142.04218 0
+  "/home/god/DEMAT-UG/proyectos aparte/Solucionarios/Calculo I/calculoI.tex" 1781037140.33202 19262 06151b880768d3454ff9f58de67ad7ec ""
   "/usr/share/texmf-dist/fonts/enc/dvips/libertinus-type1/lbn1_75t36g.enc" 1775415801 3035 7d37ee7011b797a1b8ca3680e8da3d4d ""
   "/usr/share/texmf-dist/fonts/enc/dvips/libertinus-type1/lbn1_sfissr.enc" 1775415801 3029 779a1fead300a8a6914296dbb8c4e4e5 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/libertinus-type1/lbn1_sncvby.enc" 1775415801 3045 5b2f4fc72b43c1454ef46e1ac83df287 ""
@@ -9,8 +9,10 @@
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1775415801 1004 54797486969f23fa377b128694d548df ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1775415801 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1775415801 916 f87d7c45f9c908e672703b83b72241a3 ""
+  "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm" 1775415801 924 9904cf1d39e9767e7a3622f2a125a565 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm" 1775415801 928 2dc8d444221b7a635bb58038579b861a ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm" 1775415801 908 2921f8a10601f252058503cc6570e581 ""
+  "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm" 1775415801 940 75ac932a52f80982a9f8ea75d03a34cf ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm" 1775415801 940 228d6584342e91276bf566bcf9716b83 ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmex10.tfm" 1775415801 992 662f679a0b3d2d53c1b94050fdaa3f50 ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm" 1775415801 1524 4414a8315f39513458b80dfc63bff03a ""
@@ -31,6 +33,7 @@
   "/usr/share/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm" 1775415801 688 37338d6ab346c2f1466b29e195316aa4 ""
   "/usr/share/texmf-dist/fonts/tfm/public/rsfs/rsfs5.tfm" 1775415801 684 3a51bd4fd9600428d5264cf25f04bb9a ""
   "/usr/share/texmf-dist/fonts/tfm/public/stmaryrd/stmary10.tfm" 1775415801 848 f478e0761563bbc369eca609a1741348 ""
+  "/usr/share/texmf-dist/fonts/tfm/public/stmaryrd/stmary5.tfm" 1775415801 848 e1bc58a31b9ed9c3729ffea165acfaac ""
   "/usr/share/texmf-dist/fonts/tfm/public/stmaryrd/stmary6.tfm" 1775415801 848 068dd119e13b75777e62821af7d4f2a6 ""
   "/usr/share/texmf-dist/fonts/tfm/public/stmaryrd/stmary8.tfm" 1775415801 848 6125cdd3627e68d3db8013b98e587508 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb" 1775415801 30251 6afa5cb1d0204815a708a080681d4674 ""
@@ -293,10 +296,10 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1775415801 43569 fd570f2fa160877d211e859f687312ba ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1780279912 5541339 b32eb00eb34cd5c925a7827d916d9dbd ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1780279847 3765590 88c95c2db8f3fba28488ec2cfc0f8198 ""
-  "calculoI.aux" 1780993828.80078 1111 1ca0707772a7ce49f09a42b1440efd41 "pdflatex"
-  "calculoI.out" 1780993828.80278 797 d7adc707b3f4ffc4416e6afddb14c5d8 "pdflatex"
-  "calculoI.tex" 1780993825.80277 16043 9c4bfbfd8783d661c5e13789896f73e0 ""
-  "calculoI.toc" 1780993828.80362 380 d9c35c4c95874798a89771d30bcf4e2d "pdflatex"
+  "calculoI.aux" 1781037141.88718 1581 6fc14f1592a1dfc097a6cb1a3bdd5967 "pdflatex"
+  "calculoI.out" 1781037141.89018 1397 ca93efb262e28d98b8ab5f332094e33e "pdflatex"
+  "calculoI.tex" 1781037140.33202 19262 06151b880768d3454ff9f58de67ad7ec ""
+  "calculoI.toc" 1781037141.89118 651 e861388989bbc0e40e9f8599e6f31fe9 "pdflatex"
   "portada_solucionario_calculo1.pdf" 1780892375.37487 54626 32a64118980fdd04ad393a2482c446b5 ""
   "ugmath.sty" 1780898822.8114 10528 c36bddd7d8014d8bed3642dd10335a70 ""
   (generated)

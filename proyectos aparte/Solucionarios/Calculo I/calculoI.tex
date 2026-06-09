@@ -388,7 +388,76 @@
             \begin{equation*}
                 \varnothing\setminus A=\varnothing.
             \end{equation*}
+            \item[(b)] Si $x\in A\cup B$ entonces $x\in A$ y como $A\subseteq B$ se tiene que $x\in B$ y, por lo tanto
+            $A\cup B\subseteq B$. Ahora si $x\in B$ entonces como $A\subseteq B$, obtenemos $x\in A$ y por definición de unión
+            $x\in A\cup B$, por consiguiente $B\subseteq A\cup B$. Concluimos que,
+            \begin{equation*}
+                A\cup B=B.
+            \end{equation*}
+            Si $x\in A\cap B$ entonces por definición de intersección $x\in A$ y, por tanto $A\cap B\subseteq A$. Ahora si $x\in A$ entonces como $A\subseteq B$
+            tenemos que $x\in B$ y por definición de intersección $x\in A\cap B$, y asi, $A\subseteq A\cap B$.
+            Concluimos que
+            \begin{equation*}
+                A\cap B=A.
+            \end{equation*}
+            Si $x\in A\setminus B$ entonces $x\in A\wedge x\notin B$, pero esto es imposible porque $A\subseteq B$, por lo que no existe $x$
+            tal que $x\in A\setminus B$. En consecuencia, $A\setminus B$ no tiene elementos por ende,
+            \begin{equation*}
+                A\setminus B=\varnothing.
+            \end{equation*}
+            \item[(c)] Si $x\in A\cup C$ entonces $x\in A$, pero como $A\subseteq B$ entonces $x\in B$ y por lo tanto
+            $x\in B\cup C$. Concuimos que
+            \begin{equation*}
+                A\cup C\subseteq B\cup C
+            \end{equation*}
+            Si $x\in A\cap C$ entonces $x\in A$ y como $A\subseteq B$ entonces $x\in B$ y por lo tanto $x\in B\cap C$. Concluimos que
+            \begin{equation*}
+                A\cap C\subseteq B\cap C
+            \end{equation*}
+            Si $x\in C\setminus B$ entonces $x\in C\wedge x\notin B$, como $A\subseteq B$ entonces si $x\notin B$ se tiene $x\notin A$
+            De esta forma como $x\in C\setminus B$ tambien se tiene que $x\in C$ y por lo tanto $x\in C\wedge x\notin A$. Esto es,
+            \begin{equation*}
+                C\setminus B\subseteq C\setminus A.
+            \end{equation*}
         \end{enumerate}
     \end{proof}
+
+    \chapter{Los Números Reales}
+
+    \section{Axiomas de los Números Reales}
+
+    \subsection{Axiomas de la Suma y del Producto}
+
+    \begin{ejercicio}
+        Prueba el inciso (b) de la proposición 4.
+    \end{ejercicio}
+
+    \begin{proof}
+        Notemos que
+        \begin{align*}
+            xy&=z\\
+            \implies x^{-1}(xy)&=x^{-1}z\text{ (multiplicamos por $x^{-1}$ a ambos miembros de la igualdad)}\\
+            \implies (x^{-1}x)y&=x^{-1}z\text{ (asociatividad del producto)}\\
+            \implies 1y&=x^{-1}z\text{ (propiedad de $x^{-1}$)}\\
+            \implies y&=\frac{z}{x}.\text{ (definición de división)}
+        \end{align*}
+    \end{proof}
+
+    \begin{ejercicio}
+        Prueba el inciso (b) de la proposición 5.
+    \end{ejercicio}
+
+    \begin{proof}
+        Supongamos que el número $y$ cumple que $x\cdot y=x$ para todo $x\in\R$. Notemos que
+        \begin{align*}
+            x\cdot y&=x\\
+            \implies y&=x\cdot x^{-1}\text{ (ley de cancelación para el producto)}\\
+            \implies y&=1.\text{ (propiedad de $x^{-1}$)}
+        \end{align*}
+    \end{proof}
+
+    \begin{ejercicio}
+        Prueba el inciso (b) de la proposición 6.
+    \end{ejercicio}
 
 \end{document}

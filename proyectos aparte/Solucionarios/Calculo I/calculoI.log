@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.5.31)  9 JUN 2026 02:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.5.31)  9 JUN 2026 14:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1104,12 +1104,12 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 ))
-<portada_solucionario_calculo1.pdf, id=47, 597.50786pt x 845.04686pt>
+<portada_solucionario_calculo1.pdf, id=59, 597.50786pt x 845.04686pt>
 File: portada_solucionario_calculo1.pdf Graphic file (type pdf)
 <use portada_solucionario_calculo1.pdf>
 Package pdftex.def Info: portada_solucionario_calculo1.pdf  used on input line 24.
 (pdftex.def)             Requested size: 597.5064pt x 845.0448pt.
-<portada_solucionario_calculo1.pdf, id=49, page=1, 597.50786pt x 845.04686pt>
+<portada_solucionario_calculo1.pdf, id=61, page=1, 597.50786pt x 845.04686pt>
 File: portada_solucionario_calculo1.pdf Graphic file (type pdf)
 <use portada_solucionario_calculo1.pdf, page 1>
 Package pdftex.def Info: portada_solucionario_calculo1.pdf , page1 used on input line 24.
@@ -1222,9 +1222,40 @@ LaTeX Info: Redefining \% on input line 336.
 LaTeX Info: Redefining \. on input line 390.
 LaTeX Info: Redefining \% on input line 390.
  [8]
-LaTeX Info: Redefining \. on input line 394.
-LaTeX Info: Redefining \% on input line 394.
- [9] (./calculoI.aux
+LaTeX Info: Redefining \. on input line 425.
+LaTeX Info: Redefining \% on input line 425.
+ [9]
+LaTeX Info: Redefining \. on input line 425.
+LaTeX Info: Redefining \% on input line 425.
+ [10
+
+]
+Cap\'{\i }tulo 2.
+LaTeX Font Info:    Font shape `T1/LibertinusSerif-TLF/m/n' will be
+(Font)              scaled to size 14.4pt on input line 429.
+LaTeX Font Info:    Font shape `T1/LibertinusSerif-TLF/b/n' will be
+(Font)              scaled to size 14.4pt on input line 429.
+
+pdfTeX warning (ext4): destination with the same identifier (name{ejercicio.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.431     \begin{ejercicio}
+                           
+LaTeX Font Info:    Font shape `T1/LibertinusSerif-TLF/m/n' will be
+(Font)              scaled to size 8.0pt on input line 443.
+LaTeX Font Info:    Font shape `T1/LibertinusSerif-TLF/m/n' will be
+(Font)              scaled to size 6.0pt on input line 443.
+
+pdfTeX warning (ext4): destination with the same identifier (name{ejercicio.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.446     \begin{ejercicio}
+                           
+pdfTeX warning (ext4): destination with the same identifier (name{ejercicio.3}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.459     \begin{ejercicio}
+                            [11] (./calculoI.aux
 LaTeX Info: Redefining \. on input line 12.
 LaTeX Info: Redefining \% on input line 12.
 )
@@ -1233,21 +1264,21 @@ LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
 Package rerunfilecheck Info: File `calculoI.out' has not changed.
-(rerunfilecheck)             Checksum: D7ADC707B3F4FFC4416E6AFDDB14C5D8;797.
+(rerunfilecheck)             Checksum: CA93EFB262E28D98B8AB5F332094E33E;1397.
  ) 
 Here is how much of TeX's memory you used:
- 43618 strings out of 467525
- 970965 string characters out of 5425861
- 1531724 words of memory out of 5000000
- 71674 multiletter control sequences out of 15000+600000
- 685826 words of font info for 121 fonts, out of 8000000 for 9000
+ 43681 strings out of 467525
+ 972608 string characters out of 5425861
+ 1532725 words of memory out of 5000000
+ 71699 multiletter control sequences out of 15000+600000
+ 708693 words of font info for 147 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,17n,131p,1067b,1194s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/libertinus-type1/LibertinusSerif-Bold.pfb></usr/share/texmf-dist/fonts/type1/public/libertinus-type1/LibertinusSerif-Italic.pfb></usr/share/texmf-dist/fonts/type1/public/libertinus-type1/LibertinusSerif-Regular.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on calculoI.pdf (11 pages, 446447 bytes).
+Output written on calculoI.pdf (13 pages, 453489 bytes).
 PDF statistics:
- 188 PDF objects out of 1000 (max. 8388607)
- 130 compressed objects within 2 object streams
- 23 named destinations out of 1000 (max. 500000)
- 32412 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 213 PDF objects out of 1000 (max. 8388607)
+ 153 compressed objects within 2 object streams
+ 28 named destinations out of 1000 (max. 500000)
+ 43188 words of extra memory for PDF output out of 51595 (max. 10000000)
 
