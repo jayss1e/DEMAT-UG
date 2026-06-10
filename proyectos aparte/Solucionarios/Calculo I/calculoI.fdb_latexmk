@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1781037140.53626 "/home/god/DEMAT-UG/proyectos aparte/Solucionarios/Calculo I/calculoI.tex" "calculoI.pdf" "calculoI" 1781037142.04218 0
-  "/home/god/DEMAT-UG/proyectos aparte/Solucionarios/Calculo I/calculoI.tex" 1781037140.33202 19262 06151b880768d3454ff9f58de67ad7ec ""
+["pdflatex"] 1781037841.59131 "/home/god/DEMAT-UG/proyectos aparte/Solucionarios/Calculo I/calculoI.tex" "calculoI.pdf" "calculoI" 1781037843.09065 0
+  "/home/god/DEMAT-UG/proyectos aparte/Solucionarios/Calculo I/calculoI.tex" 1781037841.38934 19924 06661a023271aee7e948237ecaa01720 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/libertinus-type1/lbn1_75t36g.enc" 1775415801 3035 7d37ee7011b797a1b8ca3680e8da3d4d ""
   "/usr/share/texmf-dist/fonts/enc/dvips/libertinus-type1/lbn1_sfissr.enc" 1775415801 3029 779a1fead300a8a6914296dbb8c4e4e5 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/libertinus-type1/lbn1_sncvby.enc" 1775415801 3045 5b2f4fc72b43c1454ef46e1ac83df287 ""
@@ -296,10 +296,10 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1775415801 43569 fd570f2fa160877d211e859f687312ba ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1780279912 5541339 b32eb00eb34cd5c925a7827d916d9dbd ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1780279847 3765590 88c95c2db8f3fba28488ec2cfc0f8198 ""
-  "calculoI.aux" 1781037141.88718 1581 6fc14f1592a1dfc097a6cb1a3bdd5967 "pdflatex"
-  "calculoI.out" 1781037141.89018 1397 ca93efb262e28d98b8ab5f332094e33e "pdflatex"
-  "calculoI.tex" 1781037140.33202 19262 06151b880768d3454ff9f58de67ad7ec ""
-  "calculoI.toc" 1781037141.89118 651 e861388989bbc0e40e9f8599e6f31fe9 "pdflatex"
+  "calculoI.aux" 1781037842.95005 1581 001dd9229c80fc4fb1cdf1d6dac8349d "pdflatex"
+  "calculoI.out" 1781037842.95105 1397 ca93efb262e28d98b8ab5f332094e33e "pdflatex"
+  "calculoI.tex" 1781037841.38934 19924 06661a023271aee7e948237ecaa01720 ""
+  "calculoI.toc" 1781037842.95105 651 e861388989bbc0e40e9f8599e6f31fe9 "pdflatex"
   "portada_solucionario_calculo1.pdf" 1780892375.37487 54626 32a64118980fdd04ad393a2482c446b5 ""
   "ugmath.sty" 1780898822.8114 10528 c36bddd7d8014d8bed3642dd10335a70 ""
   (generated)
