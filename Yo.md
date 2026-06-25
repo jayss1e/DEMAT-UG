@@ -32,21 +32,21 @@ La neta reprobe todo porque me autosaboteo y soy un derrotista, lo peor de todo 
 **Algebra Lineal I-Claudio Reynoso Alcantara**\
 La mejor profesora que e tenido, me encantan sus clases, si algun dia me dedico al algebra es gracias a ella. No tengo nada mas que agragar 10/10.
 Si reprobe es enteramente culpa mia.\
-*Estado: Reprobada*
+*Estado: Reprobada (5.0)*
 
 **Calculo Diferencial e Integral II-Fernando Nuñez Medina**\
 Ya dije que me gusta de este profe. La materia no me gusto, reafirmo mi odio hacia el analisis, no me gusta, no puedo con este tipo de materias.
 Nuevamente si reprobe es enteramente mi culpa.\
-*Estado: Reprobada*
+*Estado: Reprobada (3.5)*
 
 **Elementos de Estadistica y Probabilidad-Josue Daniel Vazquez Becerra**\
 El profe me agrada mucho, convivimos bastante y llegamos a conectar mucho como alumno profesor, pero la verdad no me gusta la forma en la que da la clase
 sobre todo en su enfoque en pruebas narradas, es mas preferencia mia pero vengo de pruebas rigurosas y no digo que las narradas sean mas o menos rigurosas
 pero se sienten muy fuera de lugar las primeras veces, aqui me di cuenta que no me gusta probabilidad en ninguna de sus formas. De igual forma el profe fue
 muy benevolente y si reprobe es por mi entera culpa.\
-*Estado: Reprobada*
+*Estado: Reprobada (4.0)*
 
 **Fisica I**
 La neta me confie, la maestra es agradable pero leer los powerpoints pues se siente aburrido y mas a las horas donde ocurre la clase, igual fue muy benevolente
 y si reprobe fue mi culpa.\
-*Estado: No se*
+*Estado: Reprobada (4.0)*
