@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1782200229.87082 "c:/Users/Radoj/OneDrive/Documentos/DEMAT-UG/proyectos aparte/Solucionarios/Calculo I/calculoI.tex" "calculoI.pdf" "calculoI" 1782200232.39688 0
-  "c:/Users/Radoj/OneDrive/Documentos/DEMAT-UG/proyectos aparte/Solucionarios/Calculo I/calculoI.tex" 1782200229 21301 2e4106697170dd25e961b5ea40a80454 ""
+["pdflatex"] 1782544516.63888 "c:/Users/Radoj/OneDrive/Documentos/DEMAT-UG/proyectos aparte/Solucionarios/Calculo I/calculoI.tex" "calculoI.pdf" "calculoI" 1782544519.16365 0
+  "c:/Users/Radoj/OneDrive/Documentos/DEMAT-UG/proyectos aparte/Solucionarios/Calculo I/calculoI.tex" 1782544515 22288 1c11e056ae3d8374efb41e427446b6b1 ""
   "c:/texlive/2026/texmf-dist/fonts/enc/dvips/libertinus-type1/lbn1_75t36g.enc" 1781159968 3035 7d37ee7011b797a1b8ca3680e8da3d4d ""
   "c:/texlive/2026/texmf-dist/fonts/enc/dvips/libertinus-type1/lbn1_sfissr.enc" 1781159968 3029 779a1fead300a8a6914296dbb8c4e4e5 ""
   "c:/texlive/2026/texmf-dist/fonts/enc/dvips/libertinus-type1/lbn1_sncvby.enc" 1781159968 3045 5b2f4fc72b43c1454ef46e1ac83df287 ""
@@ -297,10 +297,10 @@
   "c:/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1781168113 5619402 ad1310ccf7f36101ef3e8f014a173c46 ""
   "c:/texlive/2026/texmf-var/web2c/pdftex/pdflatex.fmt" 1781168354 3656615 172de1e60f9ceb0c1b535d0ac44496bf ""
   "c:/texlive/2026/texmf.cnf" 1781168076 713 e69b156964470283e0530f5060668171 ""
-  "calculoI.aux" 1782200232 1581 001dd9229c80fc4fb1cdf1d6dac8349d "pdflatex"
-  "calculoI.out" 1782200232 1397 ca93efb262e28d98b8ab5f332094e33e "pdflatex"
-  "calculoI.tex" 1782200229 21301 2e4106697170dd25e961b5ea40a80454 ""
-  "calculoI.toc" 1782200232 651 e861388989bbc0e40e9f8599e6f31fe9 "pdflatex"
+  "calculoI.aux" 1782544518 1581 209a54540634d88c91a92b44bdbfc309 "pdflatex"
+  "calculoI.out" 1782544518 1397 ca93efb262e28d98b8ab5f332094e33e "pdflatex"
+  "calculoI.tex" 1782544515 22288 1c11e056ae3d8374efb41e427446b6b1 ""
+  "calculoI.toc" 1782544518 651 e861388989bbc0e40e9f8599e6f31fe9 "pdflatex"
   "portada_solucionario_calculo1.pdf" 1782172968 54773 32a64118980fdd04ad393a2482c446b5 ""
   "ugmath.sty" 1782172968 10881 c36bddd7d8014d8bed3642dd10335a70 ""
   (generated)

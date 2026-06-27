@@ -516,4 +516,38 @@
         \end{equation*}
     \end{proof}
 
+    \begin{ejercicio}
+        Prueba que si $x$ y $y$ son números reales, entonces
+        \begin{enumerate}
+            \item[(a)] (+x)(+y)=+(xy).
+            \item[(b)] (-x)(+y)=-(xy).
+            \item[(c)] (+x)(-y)=-(xy).
+            \item[(d)] (-x)(-y)=+(xy).   
+        \end{enumerate}
+    \end{ejercicio}
+
+    \begin{proof}
+        El inciso (a) es claro, pues $+x=x$, $+y=y$ y $+(xy)=xy$.\\
+        Inciso (b). Primero veamos que
+        \begin{equation*}
+            (-x)(+y)+(xy)=0.
+        \end{equation*}
+        En efecto, por el ejercicio anterior,
+        \begin{align*}
+            (-x)(y)+(xy)&=(-1)xy+xy\\
+            &=xy(-1+1)\\
+            &=xy\cdot0\\
+            &=0.
+        \end{align*}
+        Por lo tanto,
+        \begin{equation*}
+            (-x)(+y)+(xy)=0.
+        \end{equation*}
+        Por la unicidad del inverso aditivo,
+        \begin{equation*}
+            (-x)(+y)=-xy.
+        \end{equation*}
+    \end{proof}
+
+
 \end{document}
