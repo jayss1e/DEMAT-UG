@@ -1,0 +1,570 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{ugmath}
+\usepackage{float}
+\usepackage{placeins}
+\usepackage{array}
+\usepackage[labelfont=bf,labelsep=space]{caption}
+\newcommand{\paren}[1]{\left( #1 \right)}
+
+\title{Solucion de Problemas\\
+Taller de calculo}
+
+\author{Equipo 5}
+
+\begin{document}
+    \maketitle
+
+    \textbf{Lema 1. (Criterio de comparación)} Sean $(a_{n})$ y $(b_{n})$ sucesiones tales que
+    $0\leq a_{n}\leq b_{n}$ para todo $n\in\N$ si $\sum b_{n}$ converge
+    entonces $\sum a_{n}$ converge
+
+    \begin{proof}
+        Sean
+        \begin{equation*}
+            A_{n}=\sum_{k=1}^{n}a_{k}\quad\text{ y }\quad B_{n}=\sum_{k=1}^{n}b_{k}
+        \end{equation*}
+        las sucesiones de sumas parciales. Como $a_{n}\geq0$ para todo $n$,
+        \begin{equation*}
+            A_{n+1}=A_{n}+a_{n+1}\geq A_{n}.
+        \end{equation*}
+        Como $a_{k}\leq b_{k}$ para todo $k$,
+        \begin{equation*}
+            A_{n}=\sum_{k=1}^{n}a_{k}\leq \sum_{k=1}^{n}b_{k}=B_{n}.
+        \end{equation*}
+        Por hipotesis $\sum_{k=1}^{\infty}b_{k}$ converge, asi que $(B_{n})$
+        converge a algún $L$. Como $b_{k}\geq0$, $(B_{n})$ tambien es creciente.
+        Por lo tanto $B_{n}\leq L$ para todo $n$. Combinando ambas desigualdades
+        \begin{equation*}
+            A_{n}\leq B_{n}\leq L.\quad\forall n.
+        \end{equation*}
+        Así, $(A_{n})$ es creciente y acotada superiormente por $L$. Por el teorema de
+        Weierstrass $(A_{n})$ converge, es decir,
+        \begin{equation*}
+            \lim_{n\to\infty}A_{n}\text{ existe.}
+        \end{equation*}
+        Esto significa que la serie
+        \begin{equation*}
+            \sum_{k=1}^{\infty}a_{k}
+        \end{equation*}
+        converge.
+    \end{proof}
+
+    \begin{ejercicio}
+        Prueba el Teorema 1.
+    \end{ejercicio}
+
+    \begin{proof}
+        Sea
+        \begin{equation*}
+            S_{n}=\sum_{i=1}^{n}x_{i}
+        \end{equation*}
+        la $n-$ésima suma parcial de la serie, y sea $S$ el valor al que converge, es
+        \begin{equation*}
+            \lim_{n\to\infty}S_{n}=S.
+        \end{equation*}
+        Por la definición 2, esto significa que
+        \begin{equation}
+            \forall\e\gt0\exists n_{0}\in\N\text{ tal que }n\geq n_{0}\implies\abs{S_{n}-S}\lt\frac{\e}{2}.
+        \end{equation}
+        Nótese que para $n\geq2$,
+        \begin{equation}
+            x_{n}=S_{n}-S_{n-1}.
+        \end{equation}
+        Sea $\e\gt0$ dado. Por (1), existe $n_{0}\in\N$ tal que
+        \begin{equation*}
+            n\geq n_{0}\implies\abs{S_{n}-S}\lt\frac{\e}{2}.
+        \end{equation*}
+        Sea $n\geq n_{0}+1$ arbitrario. Entonces tanto $n$ como $n-1$ son
+        mayores o iguales que $n_{0}$, así que se cumplen simultaneamente
+        \begin{equation*}
+            \abs{S_{n}-S}\lt\frac{\e}{2}\quad\text{ y }\quad\abs{S_{n-1}-S}\lt\frac{\e}{2}.
+        \end{equation*}
+        Usando (2) y la desigualdad del triangulo
+        \begin{equation*}
+            \abs{x_{n}}=\abs{(S_{n}-S)-(S_{n-1}-S)}\leq\abs{S_{n}-S}+\abs{S_{n-1}-S}\lt\frac{\e}{2}+\frac{\e}{2}=\e.
+        \end{equation*}
+        Hemos demostrado que, dado cualquier $\e\gt0$, tomando $n_{1}:=n_{0}+1$ se cumple,
+        \begin{equation*}
+            n\geq n_{1}\implies \abs{x_{n}-0}\lt\e.
+        \end{equation*}
+        Por esto precisamente, por la definición 2, la afirmación de que
+        \begin{equation*}
+            \lim_{n\to\infty}x_{n}=0.
+        \end{equation*}
+    \end{proof}
+
+    \begin{ejercicio}
+        Usando la Definición 2 prueba que la serie
+        \begin{equation*}
+            \sum_{n=1}^{\infty}\frac{1}{2^{n}}
+        \end{equation*}
+        es convergente.
+    \end{ejercicio}
+
+    \begin{proof}
+        Sea
+        \begin{equation*}
+            S_{n}=\sum_{k=1}^{n}\frac{1}{2^{k}}
+        \end{equation*}
+        la sucesión de sumas parciales de la serie. Por la fórmula
+        de la suma de una progesión geométrica,
+        \begin{equation*}
+            S_{n}=\frac{\frac12\paren{1-\paren{\frac12}^{n}}}{1-\frac{1}{2}}=1-\frac{1}{2^{n}}.
+        \end{equation*}
+        Afirmamos que
+        \begin{equation*}
+            \lim_{n\to\infty}S_{n}=1.
+        \end{equation*}
+        En efecto, sea $\e\gt0$. Como $\e\gt0$, por la propiedad arquimediana
+        existe $N\in\N$ tal que
+        \begin{equation*}
+            2^{N}\gt\frac{1}{\e}.
+        \end{equation*}
+        Equivalentemente
+        \begin{equation*}
+            \frac{1}{2^{N}}\gt\e.
+        \end{equation*}
+        Ahora, si $n\geq N$, se tiene
+        \begin{equation*}
+            2^{n}\geq 2^{N},
+        \end{equation*}
+        y, como la función $x\mapsto\frac{1}{x}$ es estrictamente decreciente en
+        $(0,\infty)$,
+        \begin{equation*}
+            \frac{1}{2^{n}}\leq\frac{1}{2^{N}}\lt\e.
+        \end{equation*}
+        Además,
+        \begin{equation*}
+            \abs{S_{n}-1}=\abs{1-\frac{1}{2^{n}}-1}=\frac{1}{2^{n}}.
+        \end{equation*}
+        Por consiguiente,
+        \begin{equation*}
+            \abs{S_{n}-1}-\frac{1}{2^{n}}\leq\frac{1}{2^{N}}\lt\e.
+        \end{equation*}
+        Como $\e\gt0$ fue arbitrario
+        \begin{equation*}
+            \lim_{n\to\infty}S_{n}=1.
+        \end{equation*}
+        Por definición de convergencia de sieries,
+        \begin{equation*}
+            \sum_{n=1}^{\infty}\frac{1}{2^{n}}
+        \end{equation*}
+        converge y su suma es 1.
+    \end{proof}
+
+    \begin{ejercicio}[\textbf{(Criterio de Raabe)}]
+        Supón que $a_{n}\gt0$ para todo $n$ y que
+        \begin{equation*}
+            \lim_{n\to\infty}n\paren{\frac{a_{n}}{a_{n+1}}-1}=\ell,
+        \end{equation*}
+        entonces,
+        \begin{itemize}
+            \item si $\ell\gt1$ la serie $\sum a_{n}$ converge;
+            \item si $\ell\lt1$ la serie diverge.
+        \end{itemize}
+    \end{ejercicio}
+
+    \begin{proof}
+        Caso $\ell\gt1$.\\
+        Como $\ell\gt1$, podemos elegir $\e=\frac{\ell-1}{2}\gt0$. Por la
+        definición de limite, existe $N\in\N$ tal que para todo $n\geq N$:
+        \begin{equation*}
+            \abs{n\paren{\frac{a_{n}}{a_{n-1}}-1}-\ell}\lt\e.
+        \end{equation*}
+        Abriendo el valor absoluto
+        \begin{equation*}
+            -\e\lt n\paren{\frac{a_{n}}{a_{n+1}}-1}-\ell\lt\e.
+        \end{equation*}
+        Sumando $\ell$ en ambos lados,
+        \begin{equation*}
+            \e-\ell\lt n\paren{\frac{a_{n}}{a_{n+1}}-1}\lt\ell+\e
+        \end{equation*}
+        llamamos $r=\ell-\e=\frac{\ell+1}{2}$, que satisface $r\gt1$ porque
+        $\ell\gt1$. De la desigualdad izquierda obtenemos que para todo
+        $n\geq N$
+        \begin{equation*}
+            n\paren{\frac{a_{n}}{a_{n+1}}-1}\geq r.
+        \end{equation*}
+        Multiplicando por $a_{n+1}\gt0$,
+        \begin{equation*}
+            na_{n}-na_{n+1}\geq ra_{n+1}
+        \end{equation*}
+        sumando y restando $a_{n+1}$ del lado izquierdo obtenemos
+        \begin{align*}
+            na_{n}-na_{n+1}+a_{n+1}-a_{n+1}&\geq ra_{n+1}\\
+            na_{n}-na_{n+1}-a_{n+1}&\geq ra_{n+1}-a_{n+1}\\
+            na_{n}-(n+1)a_{n+1}&\geq(r-1)a_{n+1}
+        \end{align*}
+        Definamos $b_{n}=na_{n}$. La desigualdad anterior dice
+        \begin{equation*}
+            b_{n}-b_{n+1}\geq(r-1)a_{n+1},
+        \end{equation*}
+        es decir, $b_{n}$ es estrictamente decreciente para $n\geq N$.
+        Sumando telescopicamente de $N$ a $M$
+        \begin{equation*}
+            \sum_{n=N}^{M}(b_{n}-b_{n+1})=b_{N}-b_{M+1}\geq(r-1)\sum_{n=N}^{M}a_{n+1}.
+        \end{equation*}
+        Como $b_{M+1}=(M+1)a_{M+1}\gt0$, se tiene $b_{N}-b_{M+1}\leq b_{N}$,
+        y, entonces
+        \begin{equation*}
+            (r-1)\sum_{n=N}^{M}a_{n+1}\leq b_{N}.
+        \end{equation*}
+        Dividiendo entre $(r-1)\gt0$,
+        \begin{equation*}
+            \sum_{n=N}^{M}a_{n+1}\leq\frac{b_{N}}{r-1}.
+        \end{equation*}
+        Consideramos las sumas parciales
+        \begin{equation*}
+            S_{M}=\sum_{n=1}^{M}a_{n}
+        \end{equation*}
+        y las partimos en dos trozos
+        \begin{equation*}
+            S_{M}=\sum_{n=1}^{N}a_{n}+\sum_{n=N+1}^{M}a_{n}
+        \end{equation*}
+        y
+        \begin{equation*}
+            \sum_{n=N+1}^{M}a_{n}=\sum_{n=N}^{M-1}a_{n+1}\leq\frac{b_{N}}{r-1}.
+        \end{equation*}
+        Entonces para todo $M$,
+        \begin{equation*}
+            S_{M}\leq\sum_{n=1}^{N}a_{n}+\frac{b_{N}}{r-1}:=K
+        \end{equation*}
+        donde $K$ no depende de $M$. Como $S_{M}$ es creciente y acotada
+        superiormente por $K$, por el teorema de Weierstrass, $(S_{M})$. Por lo tanto
+        $\sum a_{n}$ converge.
+    \end{proof}
+
+    \begin{ejercicio}[\textbf{(Criterio de condensación de Cauchy)}]
+        Si la sucesión $(a_{n})_{n\geq1}$ satisface $a_{n}\geq a_{n+1}\geq0$
+        para todo $n\in\N$, entonces $\sum a_{n}$ converge si y solo si $\sum2^{k}a_{2^{k}}$
+        converge.
+    \end{ejercicio}
+
+    \begin{proof}
+        Para cada $k\in\N$, consideremos el bloque de indices $\{2^{k},2^{k}+1,\dots,2^{k+1}-1\}$,
+        el cual contiene exactamente $2^{k}$ elementos. Como $(a_{n})$ es no creciente, para todo $i$
+        en dicho bloque se cumple $a_{2^{k+1}}\leq a_{i}\leq a_{2^{k}}$. Sumando sobre los $2^{k}$ indices
+        del bloque
+        \begin{equation*}
+            2^{k}a_{2^{k+1}}\leq\sum_{i=2^{k}}^{2^{k+1}-1}a_{i}\leq2^{k}a_{2^{k}}.
+        \end{equation*}
+        Sumando ahora sobre los bloques $k=1,\dots,m$
+        \setcounter{equation}{0}
+        \begin{equation}
+            \sum_{k=1}^{m}2^{k}a_{2^{k+1}}\leq\sum_{k=1}^{m}\sum_{i=2^{k}}^{2^{k+1}-1}a_{i}\leq\sum_{k=1}^{m}2^{k}a_{2^{k}}.
+        \end{equation}
+        Simplifiquemos cada extremo de (1). Por un lado,
+        \begin{equation*}
+            \sum_{k=1}^{m}2^{k}a_{2^{k+1}}=\frac12\sum_{k=1}^{m}2^{k+1}a_{2^{k+1}}=\frac12\paren{\sum_{k=1}^{m+1}2^{k}a_{2^{k}}-2a_{2}}.
+        \end{equation*}
+        Por otro lado, los bloques disjuntos y su union es $\{2,3,\dots,2^{m+1}-1\}$, asi que
+        \begin{equation*}
+            \sum_{k=1}^{m}\sum_{i=2^{k}}^{2^{k+1}-1}a_{i}=\sum_{i=1}^{2^{m+1}-1}a_{i}-a_{1}.
+        \end{equation*}
+        Sustituyendo ambas simplificaciones en (1) obtenemos
+        \begin{equation}
+            \frac12\paren{\sum_{k=1}^{m+1}2^{k}a_{2^{k}}-2a_{2}}\leq\sum_{i=1}^{2^{m+1}-1}a_{i}-a_{1}\leq\sum_{k=1}^{m}2^{k}a_{2^{k}}
+        \end{equation}
+        Con esta desigualdad podemos probar ambas implicaciones.\\
+        Supongamos primero que $\sum2^{k}a_{2^{k}}$ converge. Entonces sus sumas parciales estan acotadas,
+        y por la desigualdad derecha de (2), las sumas parciales $\sum_{i=1}^{2^{m+1}-1}a_{i}$ tambien estan acotadas superiormente.
+        Como $a_{i}\geq0$, las sumas parciales de $\sum a_{n}$ forman una sucesión no decreciente y acotada, luego convergen. Así,
+        $\sum a_{n}$ converge.\\
+        Supongamos ahora que $\sum a_{n}$ converge. Entonces, en particular,
+        \begin{equation*}
+            \lim_{m\to\infty}\sum_{i=1}^{2^{m+1}-1}a_{i}
+        \end{equation*}
+        existe, y por la desigualdad izquierda de (2),
+        \begin{equation*}
+            \sum_{k=1}^{m+1}2^{k}a_{2^{k}}\leq2\sum_{i=1}^{2^{m+1}-1}a_{i}-2a_{1}+2a_{2},
+        \end{equation*}
+        de modo que las sumas parciales $\sum_{k=1}^{m+1}2^{k}a_{2^{k}}$ esta acotadas superiormente. Como
+        $2^{k}a_{2^{k}}\geq0$, forman una sucesión no decreciente y acotada, luego convergen. Así, $\sum2^{n}a_{2^{n}}$
+        converge.\\
+        De ambas implicaciones concluimos que
+        \begin{equation*}
+            \sum_{n=1}^{\infty}a_{n}\text{ converge}\ssi\sum_{n=1}^{\infty}2^{n}a_{2^{n}}\text{ converge}
+        \end{equation*}
+    \end{proof}
+
+    \begin{ejercicio}
+        Si la serie $\sum\abs{x_{n}}$ converge entonces $\sum x_{n}$
+        converge.
+    \end{ejercicio}
+
+    \begin{proof}
+        Para cada $n$, define
+        \begin{equation*}
+            y_{n}=x_{n}+\abs{x_{n}}.
+        \end{equation*}
+        Como $x_{n}\leq\abs{x_{n}}$ siempre, se tiene $y\geq0$.
+        Y como $x_{n}\geq-\abs{x_{n}}$, tambien se tiene $y_{n}\leq2\abs{x_[n]}$.
+        Entonces
+        \begin{equation*}
+            0\leq y_{n}\leq 2\abs{x_{n}}
+        \end{equation*}
+        para todo $n$. Por hipotesis $\sum\abs{x_[n]}$ converge, así que $\sum2\abs{x_{n}}$
+        también converge. Por el crierio de comparación la serie
+        \begin{equation*}
+            \sum y_{n}
+        \end{equation*}
+        converge. Ahora despejamos $x_{n}$,
+        \begin{equation*}
+            x_{n}=y_{n}-\abs{x_{n}}.
+        \end{equation*}
+        La diferencia de series convergentes converge. Por lo tanto
+        $\sum x_{n}$ converge.
+    \end{proof}
+
+    \begin{ejercicio}
+        Prueba que la serie
+        \begin{equation*}
+            \sum_{n=1}^{\infty}(-1)^{n+1}\frac1n
+        \end{equation*}
+        converge.
+    \end{ejercicio}
+
+    \begin{proof}
+        Primero veamos que la subsucesion de sumas parciales pares, $S_{2n}$,
+        es creciente. Calculamos
+        \begin{equation*}
+            S_{2n+2}-S_{2n}=\frac{1}{2n+1}-\frac{1}{2n+2}.
+        \end{equation*}
+        Como $2n+1\lt2n+2$, se tiene
+        \begin{equation*}
+            \frac{1}{2n+1}\gt\frac{1}{2n+2},
+        \end{equation*}
+        asi que
+        \begin{equation*}
+            s_{2n+2}-S_{2n}\gt0\implies S_{2n+2}\gt S_{2n}.
+        \end{equation*}
+        Entonces $(S_{2n})$ es estrictamente creciente. De forma analoga
+        \begin{equation*}
+            S_{2n+3}-S_{2n+1}=-\frac{1}{2n+2}+\frac{1}{2n+3}=\frac{1}{2n+3}-\frac{1}{2n+2}\lt0
+        \end{equation*}
+        porque $2n+3\gt 2n+2$. Entonces $(S_{2n+1})$ es estrictamente decreciente.\\
+        Toda suma par es menor que toda suma impar. En efecto, primero para un mismo bloque
+        \begin{equation*}
+            S_{2n+1}-S_{2n}=\frac{1}{2n+1}\gt0\implies S_{2n}\lt S_{2n+1},
+        \end{equation*} 
+        como $(S_{n})$ crece y $(S_{2n+1})$ decrece, y $S_{2n}\lt S_{2n+1}$
+        en cada paso, se concluye que para tods $n,m$
+        \begin{equation*}
+            S_{2n}\lt S_{2m+1}.
+        \end{equation*}
+        Ahora, $(S_{2n})$ es creciente y acotada superiormente, por el teorema de Weierstrass
+        converge, es decir
+        \begin{equation*}
+            S_{2n}\to L_{1}.
+        \end{equation*}
+        $(S_{2n+1})$ es decreciente y acotada inferiormente, por lo tanto, tambien converge,
+        es decir,
+        \begin{equation*}
+            S_{2n+1}\to L_{2}.
+        \end{equation*}
+        Como $S_{2n+1}-S_{2n}=\frac{1}{2n+1}\to0$ cuando $n\to\infty$,
+        tomando el limite en ambos lados
+        \begin{equation*}
+            L_{2}-L_{1}=\lim_{n\to\infty}\frac{1}{2n+1}=0\implies L_{1}=L_{2}=L.
+        \end{equation*}
+        Ya sabemos que las sumas pares y las impares convergen al mismo limite $L$.
+        Como toda la sucesión $(S_{n})$ esta formada exactamente por estas dos subsucesiones,
+        se concluye que
+        \begin{equation*}
+            S_{n}\to L.
+        \end{equation*}
+        Por lo tanto la serie
+        \begin{equation*}
+            \sum_{k=1}^{\infty}(-1)^{n+1}\frac{1}{n}
+        \end{equation*}
+        converge.
+    \end{proof}
+
+    \begin{ejercicio}
+        Sea $(x_{n})_{n\geq1}$ una sucesión decreciente de numeros positivos tal que
+        $\lim_{n\to\infty}x_{n}=0$, entonces
+        \begin{equation*}
+            \sum_{n=1}^{\infty}(-1)^{n+1}x_{n}
+        \end{equation*}
+        es converge. Mas aun, si
+        \begin{equation*}
+            S_{k}=\sum_{n=1}^{k}(-1)^{n+1}x_{n}\quad\text{ y }\quad S=\sum_{n=1}^{\infty}(-1)^{n+1}x_{n}
+        \end{equation*}
+        entonces
+        \begin{equation*}
+            \abs{S-S_{k}}\leq x_{k+1}\quad\text{para todo }k\geq1.
+        \end{equation*}
+    \end{ejercicio}
+
+    \begin{proof}
+        Demostremos primero la convergencia. Consideremos las subsucesiones de sumas parciales con
+        índice par e índice impar, $S_{2k}$ y $S_{2k+1}$. Notemos primero que
+        \begin{equation*}
+            S_k = x_1-x_2+x_3-x_4+\cdots+(-1)^{k+1}x_k.
+        \end{equation*}
+
+        Si $k$ es impar, podemos agrupar
+        \begin{equation*}
+            S_k = x_1-(x_2-x_3)-(x_4-x_5)-\cdots-(x_{k-1}-x_k),
+        \end{equation*}
+        y como $(x_n)$ es no creciente, cada paréntesis es no negativo, de donde $S_k\le x_1$. Si $k$
+        es par, análogamente
+        \begin{equation*}
+            S_k = x_1-(x_2-x_3)-(x_4-x_5)-\cdots-(x_{k-2}-x_{k-1})-x_k \le x_1.
+        \end{equation*}
+        En cualquier caso, $S_k\le x_1$; es decir, $(S_k)_{k\ge1}$ está acotada superiormente por $x_1$.
+
+        Ahora bien, para la subsucesión de índices pares,
+        \begin{equation*}
+            S_{2k+2}-S_{2k}=x_{2k+1}-x_{2k+2}\ge 0,
+        \end{equation*}
+        pues $(x_n)$ es no creciente. Así, $(S_{2k})_{k\ge1}$ es creciente, y por lo anterior está
+        acotada superiormente; por el teorema de sucesiones monótonas acotadas, $(S_{2k})_{k\ge1}$
+        converge, digamos a $S$.
+
+        Por otro lado, para todo $k\in\mathbb{N}$ se cumple la identidad
+        \begin{equation*}
+            S_{2k+1}=S_{2k}+x_{2k+1}.
+        \end{equation*}
+        Como $(S_{2k})$ converge a $S$ y, por hipótesis, $\lim_{n\to\infty}x_n=0$ (en particular
+        $\lim_{k\to\infty}x_{2k+1}=0$), se sigue que
+        \begin{equation*}
+            \lim_{k\to\infty} S_{2k+1}=\lim_{k\to\infty}S_{2k}+\lim_{k\to\infty}x_{2k+1}=S+0=S.
+        \end{equation*}
+
+        Como ambas subsucesiones —la de índices pares y la de índices impares, que en conjunto
+        cubren todo $\mathbb{N}$— convergen al mismo límite $S$, concluimos que $(S_k)_{k\ge1}$
+        converge a $S$, es decir, la serie $\sum(-1)^{n+1}x_n$ converge.
+
+        Demostremos ahora la cota del resto $|S-S_k|\le x_{k+1}$. Fijemos $k\ge1$ y escribamos la
+        cola de la serie a partir del índice $k+1$:
+        \begin{equation*}
+            R_k:=S-S_k=\sum_{i=k+1}^{\infty}(-1)^{i+1}x_i.
+        \end{equation*}
+
+        Factoricemos el signo global escribiendo $R_k=(-1)^{k+2}T_k$, donde
+        \begin{equation*}
+            T_k := x_{k+1}-x_{k+2}+x_{k+3}-x_{k+4}+\cdots
+        \end{equation*}
+
+        Agrupando por parejas a partir del segundo término,
+        \begin{equation*}
+            T_k = x_{k+1}-(x_{k+2}-x_{k+3})-(x_{k+4}-x_{k+5})-\cdots,
+        \end{equation*}
+        y como $(x_n)$ es no creciente, cada paréntesis es no negativo, de donde $T_k\le x_{k+1}$.
+
+        Agrupando en cambio desde el primer término,
+        \begin{equation*}
+            T_k = (x_{k+1}-x_{k+2})+(x_{k+3}-x_{k+4})+\cdots \ge 0,
+        \end{equation*}
+        pues cada paréntesis es no negativo.
+
+        Por lo tanto $0\le T_k\le x_{k+1}$, y como $R_k=\pm T_k$ según la paridad de $k$, se tiene
+        \begin{equation*}
+            |S-S_k|=|R_k|=T_k\le x_{k+1}.
+        \end{equation*}
+
+        Como $k\ge1$ era arbitrario, la desigualdad se cumple para todo $k\ge1$.
+    \end{proof}
+
+    \begin{ejercicio}
+        Prueba que si la serie $\sum x_{n}$, es absolutamente
+        convergente entonces todos sus reordenamientos convergen al mismo valor.
+    \end{ejercicio}
+
+    \begin{proof}
+        Llamemos
+        \begin{equation*}
+            S_{n}=\sum_{k=1}^{n}x_{k}\quad\text{ y }\quad T_{n}=\sum_{k=1}^{n}x_{\sigma(k)}
+        \end{equation*}
+        a las sumas parciales de la serie original y del reordenamiento respectivamente.
+        Sea $\e\gt0$. Como $\sum \abs{x_{n}}$ converge, sus sumas parciales forman una sucesión
+        de cauchy, lo que en particular significa que existe $N$ tal que
+        \begin{equation*}
+            \sum_{n=N+1}^{\infty}\abs{x_{n}}\lt\e
+        \end{equation*}
+        Ahora, como $\sigma$ es una biyección, los índices $1,2,\dots,N$ aparecen en todos los
+        lugares de la lista $\sigma(1),\sigma(2),\sigma(3),\dots$. Entonces existe $M$ tal que
+        \begin{equation*}
+            \{1,2,\dots,N\}\subseteq\{\sigma(1),\sigma(2),\dots,\sigma(M)\}.
+        \end{equation*}
+        Es decir, para $m\geq M$, los terminos $x_{1},x_{2},\dots,x_{N}$
+        ya estan dentro de $T_{m}$. Acotamos ahora $\abs{T_{m}-S_{N}}$ para
+        $m\geq M$. Al restar $S_N$ a $T_m$, los términos $x_1,\dots,x_N$ se cancelan
+        (pues, como $m\geq M$, todos ellos aparecen entre $x_{\sigma(1)},\dots,x_{\sigma(m)}$).
+        Lo que queda es una suma de algunos de los términos $x_{\sigma(k)}$ con $\sigma(k)>N$;
+        como $\sigma$ es inyectiva, estos son términos $x_{n}$ con $n>N$ y todos distintos
+        entre sí. Es decir,
+        \begin{equation*}
+            T_{m}-S_{N}=x_{n_{1}}+x_{n_{2}}+\cdots+x_{n_{r}}
+        \end{equation*}
+        para ciertos índices distintos $n_{1},\dots,n_{r}>N$. Por la desigualdad del triángulo,
+        \begin{equation*}
+            \abs{T_{m}-S_{N}}\leq\abs{x_{n_{1}}}+\abs{x_{n_{2}}}+\cdots+\abs{x_{n_{r}}}.
+        \end{equation*}
+        Como los índices $n_{1},\dots,n_{r}$ son distintos y todos mayores que $N$, esta suma es
+        parte de la suma de la cola $\sum_{n=N+1}^{\infty}\abs{x_{n}}$; y como esta última tiene
+        solo términos no negativos, cualquier suma parcial de sus términos está acotada por la suma
+        total. Por lo tanto,
+        \begin{equation*}
+            \abs{T_{m}-S_{N}}\leq\sum_{n=N+1}^{\infty}\abs{x_{n}}\lt\e.
+        \end{equation*}
+        Acotamos $\abs{S-S_{N}}$
+        \begin{equation*}
+            \abs{S-S_{N}}=\abs{\sum_{n=N+1}^{\infty}x_{n}}\leq \sum_{n=N+1}^{\infty}\abs{x_{n}}\lt\e
+        \end{equation*}
+        Juntamos todo con la desigualdad del triangulo. Para $m\geq M$
+        \begin{equation*}
+            \abs{T_{m}-S}\leq\abs{T_{m}-S_{N}}+\abs{S_{N}-S}\lt \e+\e=2\e
+        \end{equation*}
+        Como $\e\gt0$ era arbitrario, esto prueba que
+        \begin{equation*}
+            T_{m}\to S.
+        \end{equation*}
+    \end{proof}
+
+    \begin{ejercicio}
+        Supon ahora que la serie $\sum x_{n}$ es condicionalmente
+        convergente. Sean $p_{1},p_{2},p_{3},\dots$ los términos
+        estrictamente positivos en la sucesión $(x_{n})_{n\geq1}$
+        en el mismo orden en el que aparecen en la serie original;
+        de la misma manera, sea $-q_{1},-q_{2},-q_{3},\dots$ la sucesión
+        de terminos estrictamente negativos, en el mismo orden en que
+        aparecen en $\{x_{n}\}$. Prueba que ambas sucesiones $(p_{n})_{n\geq1}$
+        y $(q_{n})_{n\geq1}$ tienen una infinidad de término y que ambas series $\sum p_{n}$
+        y $\sum q_{n}$ divergen a $+\infty$
+    \end{ejercicio}
+
+    \begin{proof}
+        Notemos primero que, como $p_n\ge0$ y los términos nulos no contribuyen a la suma, la serie
+        $\sum_n p_n$ converge si y solo si converge la serie formada exclusivamente por sus términos
+        estrictamente positivos, $\sum_k p_k'$, y en tal caso ambas tienen la misma suma
+        (análogamente para $q_n$ y $q_k'$). Basta entonces con estudiar la convergencia de
+        $\sum p_n$ y $\sum q_n$.
+
+        Supongamos, buscando una contradicción, que $\sum p_n$ converge. Como por hipótesis
+        $\sum x_n$ converge, la serie $\sum(x_n-p_n)$ converge, al ser diferencia de dos series
+        convergentes. Pero $x_n-p_n=-q_n$, así que $\sum(-q_n)$ converge, y por lo tanto
+        $\sum q_n=-\sum(-q_n)$ también converge.
+
+        Pero entonces, como $|x_n|=p_n+q_n$, la serie $\sum|x_n|=\sum p_n+\sum q_n$ sería suma de
+        dos series convergentes y, por lo tanto, convergería. Esto contradice que $\sum x_n$ es
+        condicionalmente convergente, es decir, que $\sum|x_n|$ diverge. Esta contradicción muestra
+        que $\sum p_n$ diverge. Como además $p_n\ge0$ para todo $n$, sus sumas parciales forman una
+        sucesión no decreciente; si la serie diverge, es porque estas sumas parciales no están
+        acotadas, es decir, $\sum p_n=+\infty$.
+
+        El mismo argumento, intercambiando los papeles de $p_n$ y $q_n$, muestra que $\sum q_n$
+        también diverge a $+\infty$: si $\sum q_n$ convergiera, entonces $\sum(x_n+q_n)=\sum p_n$
+        convergería (pues $x_n+q_n=p_n$), y de nuevo $\sum|x_n|=\sum p_n+\sum q_n$ convergería —
+        la misma contradicción.
+
+        Finalmente, si $(x_n)$ tuviera solo un número finito de términos estrictamente positivos,
+        entonces $p_n$ sería distinto de cero solo para finitos índices, y la serie $\sum p_n$ sería,
+        en esencia, una suma finita, que converge trivialmente — contradiciendo lo que acabamos de
+        probar. Así, $(x_n)$ tiene infinitos términos estrictamente positivos, es decir, la sucesión
+        $(p_n')$ es infinita. El mismo argumento aplicado a $q_n$ muestra que $(x_n)$ tiene infinitos
+        términos estrictamente negativos.
+    \end{proof}
+
+\end{document}
