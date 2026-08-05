@@ -21,4 +21,4 @@
 \contentsline {section}{\numberline {3.6}Ejercicios}{77}{section.3.6}%
 \contentsline {chapter}{\numberline {4}Determinante}{81}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Funciones Determinantes}{81}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Ejercicios}{86}{section.4.2}%
+\contentsline {section}{\numberline {4.2}Ejercicios}{94}{section.4.2}%

@@ -18,7 +18,7 @@
 
 
 \begin{document}
-    
+        
     
     \thispagestyle{empty}
     \includepdf[pages=1]{portada_algebra_lineal.pdf}
@@ -4017,7 +4017,7 @@
 
     \begin{ejercicio}
         Sea $V$ un espacio vectorial de dimensión finita $n$, sobre $F$. Sea $T:V\to V$
-        una transformación lineal tal que $T\neq0$ y $T^{2}=0$. Demuestre que:\\
+        una transformación lineal tal que $T\neq 0$ y $T^{2}=0$. Demuestre que:\\
         \textit{a)} $\Im(T)\subset\ker(T)$\\
         \textit{b)} $\text{rango}(T)\leq\frac{n}{2}$.
     \end{ejercicio}
@@ -4396,30 +4396,25 @@
     \end{proposicion}
 
     \begin{proof}
-        Ya probamos que esta función es determinante. Si
-        $D:M_{2\times2}(F)\to F$ una función determinante.
-        D es 2-lineal, sea $e_{1}=(1,0)$ y $e_{2}=(0,1)$, entonces
+        Ya probamos que esta función es determinante. Veamos si es única. Sean $e_1$ y $e_2$ los vectores canónicos correspondientes, tenemos que
         \begin{align*}
             D
             \begin{pmatrix}
-                a_{11} & a_{12}\\
-                a_{21} & a_{22}
-            \end{pmatrix}
-            &=
-            D
+                a_{11} + a_{12}\\
+                a_{21} + a_{22}
+            \end{pmatrix} & = D
             \begin{pmatrix}
                 a_{11}e_{1} & a_{12}e_{2}\\
                 a_{21}e_{1} & a_{22}e_{2}
-            \end{pmatrix}
-            \\
-            &=a_{11}D
+            \end{pmatrix}\\
+            & = a_{11}D
             \begin{pmatrix}
                 e_{1}\\
                 a_{21}e_{1}+a_{22}e_{2}
             \end{pmatrix}
-            +
+            + a_{12}D
             \begin{pmatrix}
-                a_{12}e_{2}\\
+                e_{2}\\
                 a_{21}e_{1}+a_{22}e_{2}
             \end{pmatrix}\\
             &=a_{11}\parentesis{
@@ -4428,23 +4423,525 @@
                     e_{1}\\
                     e_{1}
                 \end{pmatrix}
-                +D
+                +a_{22}D
                 \begin{pmatrix}
                    e_{1}\\
-                   a_{22}e_{2} 
+                   a_{22}e_{2}
                 \end{pmatrix}
-            }+a_{21}D
-            \begin{pmatrix}
-                a_{12}e_{2}\\
-                e_{1}
+                }
+             + a_{12} \parentesis{a_{21}D\begin{pmatrix}
+                e_2\\e_1
             \end{pmatrix}
-            +D
-            \begin{pmatrix}
-                a_{12}e_{2}\\
-                a_{22}e_{2}
-            \end{pmatrix}
+             + a_{22}D \begin{pmatrix}
+                 e_2\\e_2
+             \end{pmatrix}
+             } \tag{4.1.1} \label{4.1.1}
         \end{align*}
+        Dado que $D$ es función determinante, se sigue que
+        \[
+        D\begin{pmatrix}
+            e_1\\e_1
+        \end{pmatrix} = 0, \qquad D\begin{pmatrix}
+            e_1 \\ e_2
+        \end{pmatrix} = 1, \qquad D\begin{pmatrix}
+            e_2\\e_1
+        \end{pmatrix} = - 1, \qquad D\begin{pmatrix}
+            e_2 \\ e_2
+        \end{pmatrix} = 0.
+        \]
+        Por lo cual, de \eqref{4.1.1}, concluimos que
+        \[
+        D \begin{pmatrix}
+            a_{11} & a_{12}\\
+            a_{21} & a_{22}
+        \end{pmatrix} = a_{11}a_{22} - a_{12}a_{21}.
+        \]
+        En consecuencia, $D$ es la única función determinante.
     \end{proof}
+
+    \begin{definicion}
+        Definamos ahora el grupo simétrico de $n$ letras, esto es
+        \[
+        S_n := \llaves{\sigma: \llaves{1, \dots, n} \to \llaves{1, \dots, n} | \quad \sigma \text{ es biyección (es permutación)}}
+        \]
+        También, tendremos que $|S_n| = n!$, si $\sigma_1, \sigma_2 \in S_n$ entonces $\sigma_1 \circ \sigma_2 \in S_n$. Además, si $D$ es una función determinante y $e_i$ los vectores canónicos, entonces tendremos que
+        \[
+        D \begin{pmatrix}
+            e_{\sigma(1)}\\
+            e_{\sigma(2)}\\
+            \vdots\\
+            e_{\sigma(n)}\\
+        \end{pmatrix} = \begin{cases}
+            1 \text{ si necesito un número par de cambios de $I_n$ para obtener} \begin{pmatrix}
+                e_{\sigma(1)}\\
+                \vdots\\
+                e_{\sigma(n)}
+            \end{pmatrix}.\\
+            - 1 \text{ si necesito un número impar de cambios de $I_n$ para obtener} \begin{pmatrix}
+                e_{\sigma(1)}\\
+                \vdots\\
+                e_{\sigma(n)}
+            \end{pmatrix}.\\
+        \end{cases}
+        \]
+        Esto es $-1$ o $1$ ya que $D(I_n) = 1$.
+    \end{definicion}
+
+    \begin{ejemplo}
+        Veamos el grupo simétrico de 3 letras:
+        \[
+        S_3 = \llavesgrandes{\begin{pmatrix}
+            1 & 2 & 3 \\
+            1 & 2 & 3 \\
+        \end{pmatrix}, \begin{pmatrix}
+            1 & 2 & 3 \\
+            1 & 3 & 2 \\
+        \end{pmatrix}, \begin{pmatrix}
+            1 & 2 & 3 \\
+            3 & 2 & 1 \\
+        \end{pmatrix}, \begin{pmatrix}
+            1 & 2 & 3 \\
+            2 & 1 & 3 \\
+        \end{pmatrix}, \begin{pmatrix}
+            1 & 2 & 3 \\
+            2 & 3 & 1 \\
+        \end{pmatrix}, \begin{pmatrix}
+            1 & 2 & 3 \\
+            3 & 1 & 2 \\
+        \end{pmatrix}
+        }.
+        \]
+    \end{ejemplo}
+
+    \begin{definicion}
+        Si $A = (a_{ij}) \in M_{n \times n}(F)$ con $i,j \in \llaves{1, \dots, n}$, definimos
+        \[
+        A(i | j) \in M_{(n - 1) \times (n - 1)}(F)
+        \]
+        que resulta de eliminar en $A$ la fila $i$ y la columna $j$. La llamaremos matriz de cofactores $ij$.
+    \end{definicion}
+    \begin{ejemplo}
+        Sea la matriz
+        \[
+        A = \begin{pmatrix}
+            a_{11} & a_{12} & a_{13}\\
+            a_{21} & a_{22} & a_{23}\\
+            a_{31} & a_{32} & a_{33}\\
+        \end{pmatrix}.
+        \]
+        Así,
+        \[
+        A(1 | 1) = \begin{pmatrix}
+            a_{22} & a_{23}\\
+            a_{32} & a_{33}\\
+        \end{pmatrix}, \qquad A(3 | 1) = \begin{pmatrix}
+            a_{12} & a_{13}\\
+            a_{22} & a_{23}\\
+        \end{pmatrix}        
+        \]
+    \end{ejemplo}
+
+    Tomemos la función
+    \[
+    D_1 \begin{pmatrix}
+        a_{11} & a_{12} & a_{13}\\
+        a_{21} & a_{22} & a_{23}\\
+        a_{31} & a_{32} & a_{33}\\
+    \end{pmatrix} = \sum_{i = 1}^3 (-1)^{i + 1}a_{i1}D(A(i|j))
+    \]
+    Notemos que podemos obtener el determinante de la matriz de tamaño $3 \times 3$ mediante esta función usando cofactores, esto es
+    \begin{align*}
+    \sum_{i = 1}^3 (-1)^{i + 1}a_{i1}D(A(i|j))
+    & = (-1)^2 a_{11}D \begin{pmatrix}
+        a_{22} & a_{23}\\
+        a_{32} & a_{33}\\
+    \end{pmatrix} + (-1)^3 a_{21}D\begin{pmatrix}
+        a_{12} & a_{13}\\
+        a_{32} & a_{33}\\
+    \end{pmatrix} + (-1)^4 a_{31}D\begin{pmatrix}
+        a_{12} & a_{13}\\
+        a_{22} & a_{23}\\
+    \end{pmatrix}\\
+    & = a_{11}(a_{22}a_{33} - a_{23}a_{32}) - a_{21}(a_{12}a_{33} - a_{13}a_{32}) + a_{31}(a_{12}a_{23} - a_{13}a_{22)}\\
+    & = a_{11}a_{22}a_{33} - a_{11}a_{23}a_{32} - a_{12}a_{21}a_{33} + a_{13}a_{21}a_{32} + a_{12}a_{23}a_{31} - a_{13}a_{22}a_{31}.
+    \end{align*}
+    Podemos notar, que los índices de cada $a$, coincide con las columnas del grupo simétrico visto en el ejemplo $4.2$.
+
+    \begin{lema}
+        Una combinación lineal de funciones $n$-lineales es $n$-lineal si $D_1, \dots, D_s:M_{n \times n}(F) \longrightarrow F$ son $n$-lineales, entonces
+        \begin{align*}
+            \sum_{i = 1}^{n} c_iD_i : M_{n \times n}(F) & \longrightarrow F,\\
+            A & \longmapsto \sum_{i = 1}^{s}c_iD_i(A).
+        \end{align*}
+    \end{lema}
+
+    \begin{proof}
+        Notemos que
+        \begin{gather*}
+        \parentesis{\sum_{i = 1}^nc_iD_i}
+        \begin{pmatrix}
+            \alpha_1\\
+            \vdots\\
+            b_k\alpha_k + \beta_k\\
+            \vdots\\
+            \alpha_n
+        \end{pmatrix} = \sum_{i = 1}^nc_iD_i
+        \begin{pmatrix}
+            \alpha_1\\
+            \vdots\\
+            b_k\alpha_k + \beta_k\\
+            \vdots\\
+            \alpha_n
+        \end{pmatrix}\\
+        = \sum_{i = 1}^nc_i \parentesis{b_k D_i
+        \begin{pmatrix}
+            \alpha_1\\
+            \vdots\\
+            \alpha_k\\
+            \vdots\\
+            \alpha_n
+        \end{pmatrix} + D_i 
+        \begin{pmatrix}
+            \alpha_1\\
+            \vdots\\
+            \beta_k\\
+            \vdots\\
+            \alpha_n
+        \end{pmatrix}}\\
+        = b_k \parentesis{\sum_{i = 1}^nc_iD_i}
+        \begin{pmatrix}
+             \alpha_1\\
+             \vdots\\
+             \alpha_k\\
+             \vdots\\
+             \alpha_n
+        \end{pmatrix} + \parentesis{\sum_{i = 1}^nc_iD_i}
+        \begin{pmatrix}
+            \alpha_1\\
+            \vdots\\
+            \beta_k\\
+            \vdots\\
+            \alpha_n
+        \end{pmatrix}   
+        \end{gather*}
+        Demostrando así lo deseado.
+    \end{proof}
+
+    \begin{teorema}
+        Sean $n \geq 2$ y 
+        \[
+        D: M_{(n - 1) \times (n - 1)}(F) \longrightarrow F,
+        \]
+        una función determinante, para $j \in \llaves{1, \dots, n}$, la función
+        \begin{align*}
+            E_j: M_{n \times n}(F) & \longrightarrow F\\
+            A = (a_{ij}) & \longmapsto \sum_{i = 1}^n(-1)^{i + j}a_{ij}D(A(i|j))
+        \end{align*}
+        es determinante.
+    \end{teorema}
+
+    \begin{proof}
+        Veamos que $E_j$ cumple las tres condiciones para ser una función determinante.
+
+        \textbf{(1) $E_j$ es $n$-lineal.}
+
+        Fijemos $k \in \llaves{1, \dots, n}$ y veamos que $E_j$ es lineal en la fila $k$. Sea $A$ la matriz de filas $\alpha_1, \dots, \alpha_n$ y sea $B$ la matriz que resulta de sustituir en $A$ la fila $k$ por $c\alpha_k + \beta_k$, dejando las demás filas iguales. Por definición,
+        \begin{equation}
+            E_j(B) = \sum_{i \neq k} (-1)^{i+j} a_{ij} D(B(i|j)) + (-1)^{k+j}(ca_{kj} + b_{kj}) D(B(k|j)).
+            \label{eq:Ej_1}
+        \end{equation}
+        Si $i \neq k$, al eliminar la fila $i$ y la columna $j$ de $B$, la fila $k$ de $B(i|j)$ sigue siendo $c\alpha_k + \beta_k$ (restringida a las columnas distintas de $j$), mientras que las demás filas son las de $A$. Como $D$ es $(n-1)$-lineal, es lineal en dicha fila, por lo que
+        \begin{equation}
+            D(B(i|j)) = c \, D(A(i|j)) + D(A'(i|j)),
+            \label{eq:Ej_2}
+        \end{equation}
+        donde $A'$ es la matriz que resulta de sustituir la fila $k$ de $A$ por $\beta_k$. Por otro lado, si $i = k$, la matriz $B(k|j)$ se obtiene eliminando precisamente la fila que se modificó, por lo que $B(k|j) = A(k|j) = A'(k|j)$, sin importar el contenido de dicha fila.
+
+        Sustituyendo \eqref{eq:Ej_2} en \eqref{eq:Ej_1} y separando los coeficientes $c$ y $1$ correspondientes a $a_{kj}$ y $b_{kj}$, respectivamente, obtenemos
+        \begin{align*}
+            E_j(B) & = c \parentesis{\sum_{i \neq k} (-1)^{i+j} a_{ij} D(A(i|j)) + (-1)^{k+j} a_{kj} D(A(k|j))} \\
+            & \quad + \parentesis{\sum_{i \neq k} (-1)^{i+j} a_{ij} D(A'(i|j)) + (-1)^{k+j} b_{kj} D(A'(k|j))} \\
+            & = c \, E_j(A) + E_j(A').
+        \end{align*}
+        Como $k$ era arbitrario, $E_j$ es lineal en cada una de las $n$ filas, es decir, $E_j$ es $n$-lineal.
+
+        \textbf{(2) $E_j$ es alternante.}
+
+        Por el lema anterior, basta ver que $E_j(A) = 0$ cuando $A$ tiene dos filas consecutivas iguales, es decir, cuando $\alpha_k = \alpha_{k+1}$ para algún $k \in \llaves{1, \dots, n-1}$.
+
+        Si $i \neq k, k+1$, la matriz $A(i|j)$ contiene tanto a la fila $k$ como a la fila $k+1$ de $A$, las cuales son iguales; como $D$ es alternante, $D(A(i|j)) = 0$. Por lo tanto, en la suma que define a $E_j(A)$ solo sobreviven los términos $i = k$ e $i = k+1$:
+        \begin{equation}
+            E_j(A) = (-1)^{k+j} a_{kj} D(A(k|j)) + (-1)^{k+1+j} a_{k+1,j} D(A(k+1|j)).
+            \label{eq:Ej_3}
+        \end{equation}
+        Como $\alpha_k = \alpha_{k+1}$, se tiene $a_{kj} = a_{k+1,j}$. Además, al eliminar la fila $k$ de $A$, la fila $k+1$ ocupa su lugar; como esta es igual a la fila $k$, resulta que $A(k|j) = A(k+1|j)$. Sustituyendo esto en \eqref{eq:Ej_3},
+        \begin{equation*}
+            E_j(A) = a_{kj} D(A(k|j)) \parentesis{(-1)^{k+j} + (-1)^{k+1+j}} = 0.
+        \end{equation*}
+        Por lo tanto, $E_j$ es alternante.
+
+        \textbf{(3) $E_j(I_n) = 1$.}
+
+        En $I_n = (\delta_{ij})$ todas las entradas de la columna $j$ son cero salvo $\delta_{jj} = 1$, así que en la suma que define $E_j(I_n)$ solo sobrevive el término $i = j$:
+        \begin{equation*}
+            E_j(I_n) = \sum_{i=1}^n (-1)^{i+j} \delta_{ij} D(I_n(i|j)) = (-1)^{2j} D(I_n(j|j)) = D(I_{n-1}) = 1,
+        \end{equation*}
+        donde usamos que $I_n(j|j) = I_{n-1}$ y que $D(I_{n-1}) = 1$ por hipótesis.
+
+        De (1), (2) y (3) concluimos que $E_j$ es una función determinante.
+    \end{proof}
+
+    \begin{corolario}
+        Para todo $n \in \N$, existe una función determinante $D: M_{n \times n}(F) \to F$.
+    \end{corolario}
+
+    \begin{proof}
+        Procedemos por inducción sobre $n$. Para $n = 1$, la función $\det: M_{1 \times 1}(F) \to F$ dada por $a \mapsto a$ es claramente una función determinante. Supongamos que existe una función determinante $D: M_{(n-1) \times (n-1)}(F) \to F$. Por el teorema anterior, para cualquier $j \in \llaves{1, \dots, n}$, la función
+        \begin{equation*}
+            E_j : M_{n \times n}(F) \to F, \qquad A = (a_{ij}) \mapsto \sum_{i=1}^n (-1)^{i+j} a_{ij} D(A(i|j))
+        \end{equation*}
+        es una función determinante en $M_{n \times n}(F)$. Esto completa la inducción.
+    \end{proof}
+
+    \begin{teorema}
+        Para $n \in \N$, existe una única función determinante $\det: M_{n \times n}(F) \to F$, dada por
+        \begin{equation}
+            \det(A) = \sum_{\sigma \in S_n} \text{signo}(\sigma) \, a_{1\sigma(1)} a_{2\sigma(2)} \cdots a_{n\sigma(n)}.
+            \label{eq:leibniz}
+        \end{equation}
+    \end{teorema}
+
+    \begin{proof}
+        La existencia ya fue probada en el corolario anterior. Veamos la unicidad. Sea $D: M_{n \times n}(F) \to F$ una función determinante arbitraria y sea $A = (a_{ij}) \in M_{n \times n}(F)$ con filas $\alpha_1, \dots, \alpha_n$. Escribiendo cada fila en términos de los vectores canónicos $e_1, \dots, e_n$ y usando que $D$ es $n$-lineal en cada fila, obtenemos
+        \begin{equation*}
+            D(A) = D
+            \begin{pmatrix}
+                \sum_{k_1 = 1}^n a_{1k_1} e_{k_1} \\
+                \vdots \\
+                \sum_{k_n = 1}^n a_{nk_n} e_{k_n}
+            \end{pmatrix}
+            = \sum_{k_1 = 1}^n \cdots \sum_{k_n = 1}^n a_{1k_1} a_{2k_2} \cdots a_{nk_n} \, D
+            \begin{pmatrix}
+                e_{k_1} \\
+                \vdots \\
+                e_{k_n}
+            \end{pmatrix}.
+        \end{equation*}
+        Como $D$ es alternante,
+        \begin{equation*}
+            D
+            \begin{pmatrix}
+                e_{k_1} \\
+                \vdots \\
+                e_{k_n}
+            \end{pmatrix}
+            = 0
+        \end{equation*}
+        salvo que $k_1, \dots, k_n$ sean todos distintos, es decir, salvo que exista $\sigma \in S_n$ tal que $k_i = \sigma(i)$ para todo $i$. Así,
+        \begin{equation*}
+            D(A) = \sum_{\sigma \in S_n} a_{1\sigma(1)} a_{2\sigma(2)} \cdots a_{n\sigma(n)} \, D
+            \begin{pmatrix}
+                e_{\sigma(1)} \\
+                \vdots \\
+                e_{\sigma(n)}
+            \end{pmatrix}.
+        \end{equation*}
+        Como vimos anteriormente,
+        \begin{equation*}
+            D
+            \begin{pmatrix}
+                e_{\sigma(1)} \\
+                \vdots \\
+                e_{\sigma(n)}
+            \end{pmatrix}
+            = \pm 1
+        \end{equation*}
+        dependiendo únicamente de la paridad de $\sigma$, es decir, es igual a $\text{signo}(\sigma)$, y este valor no depende de $D$ pues $D(I_n) = 1$. Por lo tanto,
+        \begin{equation*}
+            D(A) = \sum_{\sigma \in S_n} \text{signo}(\sigma) \, a_{1\sigma(1)} a_{2\sigma(2)} \cdots a_{n\sigma(n)},
+        \end{equation*}
+        expresión que no depende de $D$. Esto prueba que $D$ está completamente determinada, es decir, que la función determinante es única. Como esta expresión coincide con \eqref{eq:leibniz}, concluimos que $\det$, dada por \eqref{eq:leibniz}, es la única función determinante en $M_{n \times n}(F)$.
+    \end{proof}
+
+    \begin{proposicion}
+        Sean $A, B \in M_{n \times n}(F)$. Entonces
+        \begin{equation*}
+            \det(AB) = \det(A) \cdot \det(B).
+        \end{equation*}
+    \end{proposicion}
+
+    \begin{proof}
+        Fijemos $B \in M_{n \times n}(F)$ y definamos
+        \begin{align*}
+            D: M_{n \times n}(F) & \longrightarrow F \\
+            A & \longmapsto \det(A \cdot B).
+        \end{align*}
+        Si $A$ tiene filas $\alpha_1, \dots, \alpha_n$, entonces $AB$ tiene filas $\alpha_1 B, \dots, \alpha_n B$, donde $\alpha_i B$ denota la $i$-ésima fila de $AB$. Como el producto de matrices es lineal en las filas del primer factor y $\det$ es $n$-lineal,
+        \begin{equation*}
+            D
+            \begin{pmatrix}
+                \alpha_1 \\
+                \vdots \\
+                c\alpha_k + \beta_k \\
+                \vdots \\
+                \alpha_n
+            \end{pmatrix}
+            = \det
+            \begin{pmatrix}
+                \alpha_1 B \\
+                \vdots \\
+                c\alpha_k B + \beta_k B \\
+                \vdots \\
+                \alpha_n B
+            \end{pmatrix}
+            = c \, D
+            \begin{pmatrix}
+                \alpha_1 \\
+                \vdots \\
+                \alpha_k \\
+                \vdots \\
+                \alpha_n
+            \end{pmatrix}
+            + D
+            \begin{pmatrix}
+                \alpha_1 \\
+                \vdots \\
+                \beta_k \\
+                \vdots \\
+                \alpha_n
+            \end{pmatrix}.
+        \end{equation*}
+        Por lo tanto, $D$ es $n$-lineal.
+
+        Si $A$ tiene dos filas iguales, entonces $AB$ también tiene dos filas iguales, y como $\det$ es alternante, $D(A) = \det(AB) = 0$. Por lo tanto, $D$ es alternante.
+
+        Finalmente, $D(I_n) = \det(I_n B) = \det(B)$.
+
+        Supongamos primero que $\det(B) \neq 0$. Entonces $\tfrac{1}{\det(B)} D$ es $n$-lineal, alternante y manda $I_n$ a $1$, es decir, es una función determinante. Por la unicidad de la función determinante,
+        \begin{equation*}
+            \frac{1}{\det(B)} D(A) = \det(A), \qquad \forall A \in M_{n \times n}(F),
+        \end{equation*}
+        de donde $D(A) = \det(AB) = \det(A)\det(B)$.
+
+        Supongamos ahora que $\det(B) = 0$. Entonces $D(I_n) = 0$, y como $D$ es $n$-lineal y alternante, el mismo argumento usado en la demostración de la unicidad de la función determinante muestra que
+        \begin{equation*}
+            D(A) = \sum_{\sigma \in S_n} a_{1\sigma(1)} \cdots a_{n\sigma(n)} \, D
+            \begin{pmatrix}
+                e_{\sigma(1)} \\
+                \vdots \\
+                e_{\sigma(n)}
+            \end{pmatrix}
+            = \sum_{\sigma \in S_n} a_{1\sigma(1)} \cdots a_{n\sigma(n)} \, \text{signo}(\sigma) \, D(I_n) = 0,
+        \end{equation*}
+        para toda $A \in M_{n \times n}(F)$. Por lo tanto, $D(A) = \det(AB) = 0 = \det(A) \cdot 0 = \det(A)\det(B)$.
+
+        En cualquier caso, $\det(AB) = \det(A)\det(B)$.
+    \end{proof}
+
+    \begin{corolario}
+        Si $A \in M_{n \times n}(F)$ es invertible, entonces $\det(A) \neq 0$. Además, $\det(A^{-1}) = \det(A)^{-1}$.
+    \end{corolario}
+
+    \begin{proof}
+        Como $A$ es invertible, existe $A^{-1}$ tal que $AA^{-1} = I_n$. Por la proposición anterior,
+        \begin{equation*}
+            \det(A) \cdot \det(A^{-1}) = \det(AA^{-1}) = \det(I_n) = 1,
+        \end{equation*}
+        de donde $\det(A) \neq 0$ y $\det(A^{-1}) = \det(A)^{-1}$.
+    \end{proof}
+
+    \begin{corolario}
+        Si $A, B \in M_{n \times n}(F)$ son conjugadas (semejantes), entonces $\det(A) = \det(B)$.
+    \end{corolario}
+
+    \begin{proof}
+        Como $A, B$ son conjugadas, existe $P \in M_{n \times n}(F)$ invertible tal que $A = PBP^{-1}$. Así,
+        \begin{equation*}
+            \det(A) = \det(P) \cdot \det(B) \cdot \det(P^{-1}) = \det(B) \cdot \det(PP^{-1}) = \det(B) \cdot \det(I_n) = \det(B).
+        \end{equation*}
+    \end{proof}
+
+    \begin{definicion}
+        Sea $T: V \to V$ lineal, con $V$ de dimensión finita $n$. Definimos el \textbf{determinante de $T$} como
+        \begin{equation*}
+            \det(T) \coloneqq \det([T]_\mathcal{B}),
+        \end{equation*}
+        donde $[T]_\mathcal{B}$ es la representación matricial de $T$ respecto a una base ordenada $\mathcal{B}$ de $V$. Esta definición no depende de la base $\mathcal{B}$ elegida, pues las representaciones matriciales de $T$ respecto a dos bases distintas son matrices conjugadas, y por el corolario anterior, matrices conjugadas tienen el mismo determinante.
+    \end{definicion}
+
+    \begin{teorema}
+        Sea $A \in M_{n \times n}(F)$. Entonces $A$ es invertible si y solo si $\det(A) \neq 0$.
+    \end{teorema}
+
+    \begin{proof}
+        Si $A$ es invertible, por el corolario anterior $\det(A) \neq 0$.
+
+        Supongamos ahora que $\det(A) \neq 0$. Construiremos explícitamente la inversa de $A$ mediante la matriz adjunta.
+
+        \textbf{Afirmación.} Para toda $A \in M_{n \times n}(F)$ se tiene $\det(A) = \det(A^t)$, donde $A^t = (a_{ji})$ es la matriz transpuesta de $A$. Además, $A(i|j)^t = A^t(j|i)$.
+
+        En efecto, procedemos por inducción sobre $n$ (el caso $n = 1$ es trivial). Fijemos $j \in \llaves{1, \dots, n}$; usando que $\det = E_j$ y expandiendo $\det(A^t)$ por la columna $j$ de $A^t$ (es decir, por la fila $j$ de $A$),
+        \begin{align*}
+            \det(A^t) & = \sum_{i=1}^n (-1)^{i+j} a_{ji} \det(A^t(i|j)) = \sum_{i=1}^n (-1)^{i+j} a_{ji} \det(A(j|i)^t) \\
+            & = \sum_{i=1}^n (-1)^{i+j} a_{ji} \det(A(j|i)),
+        \end{align*}
+        donde en el último paso usamos la hipótesis de inducción, pues $A(j|i)$ es de tamaño $(n-1) \times (n-1)$. Pero el lado derecho es precisamente la expansión de $\det(A)$ por cofactores a lo largo de la fila $j$, es decir,
+        $\det(A) = \sum_{i=1}^n (-1)^{i+j} a_{ji} \det(A(j|i))$. Por lo tanto, $\det(A) = \det(A^t)$.
+
+        Definamos ahora, para $i, j \in \llaves{1, \dots, n}$,
+        \begin{equation*}
+            c_{ij} \coloneqq (-1)^{i+j} \det(A(i|j)),
+        \end{equation*}
+        de modo que $\det(A) = \sum_{i=1}^n a_{ji} c_{ji}$ para todo $j \in \llaves{1, \dots, n}$ (expansión por la fila $j$).
+
+        Sean ahora $k \neq j$ y $B$ la matriz que resulta de reemplazar en $A$ la columna $j$ por la columna $k$, dejando las demás columnas iguales. Como $B$ tiene dos columnas iguales (la $j$ y la $k$), $B^t$ tiene dos filas iguales, y como $\det = E_k$ es alternante,
+        \begin{equation*}
+            0 = \det(B) = \det(B^t) = \sum_{i=1}^n (-1)^{i+k} b_{ik} \det(B(i|k)) = \sum_{i=1}^n (-1)^{i+k} a_{ij} \det(A(i|k)) = \sum_{i=1}^n a_{ij} c_{ik}.
+        \end{equation*}
+        Combinando ambos casos,
+        \begin{equation}
+            \sum_{i=1}^n c_{ik} a_{ij} = \delta_{kj} \det(A) =
+            \begin{cases}
+                \det(A) & \text{si } k = j, \\
+                0 & \text{si } k \neq j,
+            \end{cases}
+            \label{eq:adj}
+        \end{equation}
+        y \eqref{eq:adj} es precisamente el coeficiente $(k,j)$ del producto $(a_{ki})(c_{ij})^t$. Es decir,
+        \begin{equation*}
+            A \cdot \text{Adj}(A) = \det(A) \, I_n,
+        \end{equation*}
+        donde definimos la \textbf{matriz adjunta} de $A$ como
+        \begin{equation*}
+            \text{Adj}(A) \coloneqq (c_{ij})^t \in M_{n \times n}(F), \qquad c_{ij} = (-1)^{i+j} \det(A(i|j)).
+        \end{equation*}
+        Como $\det(A) \neq 0$, podemos dividir entre $\det(A)$, obteniendo
+        \begin{equation*}
+            A \cdot \parentesis{\frac{1}{\det(A)} \text{Adj}(A)} = I_n.
+        \end{equation*}
+        Por lo tanto, $A$ es invertible y $A^{-1} = \dfrac{1}{\det(A)} \text{Adj}(A)$.
+    \end{proof}
+
+    \begin{ejemplo}
+        Sea $A = \begin{pmatrix} a_{11} & a_{12} \\ a_{21} & a_{22} \end{pmatrix}$ con $\det(A) = a_{11}a_{22} - a_{12}a_{21} \neq 0$. Calculemos su matriz adjunta. Los cofactores son
+        \begin{align*}
+            c_{11} & = (-1)^{1+1} a_{22} = a_{22}, & c_{12} & = (-1)^{1+2} a_{21} = -a_{21}, \\
+            c_{21} & = (-1)^{2+1} a_{12} = -a_{12}, & c_{22} & = (-1)^{2+2} a_{11} = a_{11},
+        \end{align*}
+        así que
+        \begin{equation*}
+            \text{Adj}(A) = \begin{pmatrix} c_{11} & c_{21} \\ c_{12} & c_{22} \end{pmatrix} = \begin{pmatrix} a_{22} & -a_{12} \\ -a_{21} & a_{11} \end{pmatrix},
+        \end{equation*}
+        y se verifica directamente que
+        \begin{equation*}
+            A \cdot \text{Adj}(A) = \begin{pmatrix} \det(A) & 0 \\ 0 & \det(A) \end{pmatrix} = \det(A) \, I_2.
+        \end{equation*}
+    \end{ejemplo}
+
+    
+    
+    
+    
 
     \section{Ejercicios}
 
@@ -4472,7 +4969,7 @@
 
     \begin{ejercicio}
         Considera la matriz de Vandermonde
-        \[
+        \[ 
         A = 
         \begin{pmatrix}
             1 & a & a^2\\
@@ -4497,9 +4994,9 @@
         donde $\varepsilon_i$ es la fila con todas las entradas cero, excepto el lugar $i$ que tiene un $1$.
     \end{ejercicio}
 
-
 % ku.e.de :)
 % aaaah no JAJAJJAJA
 % jajajajajajaj
 % ya quedaron ahora siiiiiii
+%QUE DIOS TE AYUDE HERMANO \#graciasreynoso \#esbroma \#tengoodioamorporreynoso \#yanoaguanto \#loditodo \#noesperabanadaymedecepcione \#uicabctm 
 \end{document}
