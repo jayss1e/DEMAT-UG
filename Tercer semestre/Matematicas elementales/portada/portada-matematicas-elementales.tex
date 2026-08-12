@@ -1,0 +1,153 @@
+% ======================================================================
+%  PORTADA — Matemáticas Elementales
+%  Compila con pdflatex (no requiere fuentes externas ni XeLaTeX).
+% ======================================================================
+\documentclass[12pt]{article}
+
+\usepackage[paperwidth=21cm,paperheight=29.7cm,margin=0cm]{geometry}
+\usepackage{tikz}
+\usepackage{xcolor}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{mathpazo}      % serif elegante (Palatino), disponible en cualquier TeX Live
+\usepackage{microtype}     % permite \textls (tracking / letter-spacing)
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+
+% ---------- paleta ----------
+\definecolor{board}{HTML}{17302B}
+\definecolor{boardDeep}{HTML}{0D1F1B}
+\definecolor{boardLight}{HTML}{1E3A33}
+\definecolor{panelC}{HTML}{0A1815}
+\definecolor{chalk}{HTML}{ECE6D6}
+\definecolor{chalkDim}{HTML}{BFC0B8}
+\definecolor{brass}{HTML}{C9A25B}
+\definecolor{brassBright}{HTML}{E9CB8C}
+
+% ---------- datos de la portada (edita aquí) ----------
+\newcommand{\ugName}{UNIVERSIDAD DE GUANAJUATO}
+\newcommand{\courseTitle}{Matemáticas}
+\newcommand{\courseAccent}{Elementales}
+\newcommand{\courseSubtitle}{Notas de clase para un curso introductorio}
+\newcommand{\authorName}{Ricardo León Martínez}
+\newcommand{\profName}{Dra. Claudia Reynoso Alcántara}
+\newcommand{\deptLine}{Departamento de Matemáticas}
+\newcommand{\divLine}{División de Ciencias Naturales y Exactas}
+\newcommand{\coverYear}{2026}
+
+\begin{document}
+\begin{tikzpicture}[remember picture, overlay]
+\node[anchor=south west, inner sep=0pt] at (current page.south west) {%
+\begin{tikzpicture}[x=1cm, y=1cm]
+  \useasboundingbox (0,0) rectangle (21,29.7);
+
+  % ===================== FONDO =====================
+  \fill[boardDeep] (0,0) rectangle (21,29.7);
+  \shade[shading=radial, inner color=boardLight, outer color=boardDeep,
+         opacity=0.55] (14.5,26) ellipse (10 and 7.5);
+  \shade[shading=radial, inner color=boardDeep, outer color=board,
+         opacity=0.6] (10.5,0) ellipse (13 and 10);
+
+  % ===================== TEXTURA / GEOMETRÍA DECORATIVA =====================
+  % líneas diagonales tenues
+  \draw[chalk, opacity=0.10, line width=0.3pt] (1,24.5) -- (11,15);
+  \draw[chalk, opacity=0.08, line width=0.3pt] (2,10.5) -- (13,25);
+
+  % arco de compás
+  \draw[brass, opacity=0.35, line width=0.55pt]
+        (5.2,26.2) to[out=-8,in=165] (19,15.9);
+  \draw[brass, opacity=0.22, line width=0.4pt, dash pattern=on 1pt off 2.5pt]
+        (5.2,26.2) -- (19,15.9);
+  \fill[brass, opacity=0.55] (5.2,26.2) circle (0.045);
+  \fill[brass, opacity=0.55] (19,15.9) circle (0.045);
+
+  % diagrama de Venn fantasma
+  \draw[chalk!60!brass, opacity=0.16, line width=0.5pt] (4.0,23.6) circle (2.35);
+  \draw[brass, opacity=0.16, line width=0.5pt] (6.5,23.6) circle (2.35);
+
+  % recta numérica fantasma
+  \draw[chalk, opacity=0.18, line width=0.4pt] (12.4,20.9) -- (18.5,20.9);
+  \foreach \x in {13.0,14.35,15.7,17.05,18.4}{
+    \draw[chalk, opacity=0.18, line width=0.4pt] (\x,20.75) -- (\x,21.05);
+  }
+
+  % retícula de puntos (divisibilidad)
+  \foreach \p/\q in {15.9/27.3,16.5/27.3,17.1/27.3,15.9/26.8,16.5/26.8,15.9/26.3}{
+    \fill[brass, opacity=0.30] (\p,\q) circle (0.028);
+  }
+
+  % marcas de registro en las esquinas
+  \foreach \pos/\hx/\hy in {tl/0.74/28.96, tr/20.26/28.96, bl/0.74/3.28, br/20.26/3.28}{}
+  \begin{scope}[brass, opacity=0.45, line width=0.4pt]
+    % arriba-izq
+    \draw (0.74,28.6) -- (0.74,28.96) -- (1.1,28.96);
+    % arriba-der
+    \draw (19.9,28.96) -- (20.26,28.96) -- (20.26,28.6);
+    % abajo-izq (justo sobre la franja inferior)
+    \draw (0.74,3.55) -- (0.74,3.91) -- (1.1,3.91);
+    % abajo-der
+    \draw (19.9,3.91) -- (20.26,3.91) -- (20.26,3.55);
+  \end{scope}
+
+  % ===================== ENCABEZADO =====================
+  \node[anchor=north west] at (1.48,28.9) {%
+    \begin{tikzpicture}[baseline=-0.09cm]
+      \fill[brass] (0,0) circle (0.045);
+    \end{tikzpicture}%
+    \hspace{2mm}\color{brassBright}\fontsize{9}{9}\selectfont\ttfamily
+    \textls[260]{\ugName}%
+  };
+
+  % ===================== BLOQUE PRINCIPAL =====================
+  \node[anchor=north west, text width=15.6cm, align=left] at (1.69,16.84) {%
+
+    % rayita + punto (firma del diseño original)
+    \begin{tikzpicture}[baseline]
+      \draw[brass, line width=1pt] (0,0) -- (1.1,0);
+      \draw[brass, line width=0.7pt] (1.55,0) circle (0.075);
+      \fill[brass] (1.55,0) circle (0.035);
+    \end{tikzpicture}
+
+    \vspace{7mm}
+
+    {\fontsize{40}{40}\selectfont\color{chalk}\courseTitle\par}
+    {\fontsize{42}{42}\selectfont\itshape\color{brassBright}\courseAccent\par}
+
+    \vspace{3mm}
+    {\itshape\fontsize{11}{13}\selectfont\color{chalkDim}\courseSubtitle\par}
+
+    \vspace{5mm}
+    {\color{brass!45!board}\rule{9cm}{0.4pt}}
+    \vspace{5mm}
+
+    {\ttfamily\fontsize{7}{7}\selectfont\color{brass}\textls[200]{ELABORADAS POR}\par}
+    \vspace{2mm}
+    {\ttfamily\fontsize{11}{11}\selectfont\color{chalk}\authorName\par}
+
+    \vspace{5mm}
+    {\color{brass!45!board}\rule{9cm}{0.4pt}}
+    \vspace{5mm}
+
+    {\ttfamily\fontsize{7}{7}\selectfont\color{brass}\textls[200]{PROFESORA}\par}
+    \vspace{2mm}
+    {\itshape\fontsize{12}{12}\selectfont\color{chalk}\profName\par}
+  };
+
+  % ===================== FRANJA INFERIOR =====================
+  \fill[panelC] (0,0) rectangle (21,2.54);
+  \draw[brass, opacity=0.18, line width=0.4pt] (0,2.54) -- (21,2.54);
+
+  \node[anchor=west, text width=10cm, align=left] at (1.48,1.27) {%
+    {\ttfamily\fontsize{7.5}{9}\selectfont\color{chalkDim}\deptLine\par}
+    {\ttfamily\fontsize{7.5}{9}\selectfont\color{chalkDim!70!black}\divLine\par}
+  };
+
+  \node[anchor=east] at (19.52,1.27) {%
+    \fontsize{22}{22}\selectfont\itshape\color{brassBright}\coverYear%
+  };
+
+\end{tikzpicture}%
+};
+\end{tikzpicture}
+\clearpage
+\end{document}
