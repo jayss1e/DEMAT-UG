@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.6.11)  13 AUG 2026 18:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.6.11)  13 AUG 2026 19:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -289,8 +289,8 @@ Package babel Info: Making . an active character on input line 675.
 Package babel Info: Making < an active character on input line 722.
 Package babel Info: Making > an active character on input line 722.
 ))
-LaTeX Encoding Info:    Redeclaring text command \guillemotleft (encoding OT1) on input line 19.
-LaTeX Encoding Info:    Redeclaring text command \guillemotright (encoding OT1) on input line 19.
+LaTeX Encoding Info:    Redeclaring text command \guillemotleft (encoding OT1) on input line 21.
+LaTeX Encoding Info:    Redeclaring text command \guillemotright (encoding OT1) on input line 21.
  (c:/texlive/2026/texmf-dist/tex/latex/ebgaramond/ebgaramond.sty
 Package: ebgaramond 2024/04/23 (Bob Tennent and autoinst) Style file for EB Garamond fonts.
  (c:/texlive/2026/texmf-dist/tex/generic/iftex/ifxetex.sty
@@ -561,12 +561,12 @@ File: tikzlibraryplotmarks.code.tex 2025-08-29 v3.1.11a (3.1.11a)
  (c:/texlive/2026/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotmarks.code.tex
 File: pgflibraryplotmarks.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 )))
-LaTeX Font Info:    Trying to load font information for T1+SourceSansThree-TLF on input line 30.
+LaTeX Font Info:    Trying to load font information for T1+SourceSansThree-TLF on input line 32.
  (c:/texlive/2026/texmf-dist/tex/latex/sourcesans/T1SourceSansThree-TLF.fd
 File: T1SourceSansThree-TLF.fd 2026/05/03 (autoinst) Font definitions for T1/SourceSansThree-TLF.
 )
 LaTeX Font Info:    Font shape `T1/SourceSansThree-TLF/m/n' will be
-(Font)              scaled to size 10.0pt on input line 30.
+(Font)              scaled to size 10.0pt on input line 32.
  (c:/texlive/2026/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2026-02-18 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count330
@@ -578,26 +578,26 @@ Package babel Info: 'spanish' activates 'spanish' shorthands.
 )
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 30.
-LaTeX Font Info:    ... okay on input line 30.
-LaTeX Font Info:    Checking defaults for LY1/ptm/m/n on input line 30.
-LaTeX Font Info:    Trying to load font information for LY1+ptm on input line 30.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for LY1/ptm/m/n on input line 32.
+LaTeX Font Info:    Trying to load font information for LY1+ptm on input line 32.
  (c:/texlive/2026/texmf-dist/tex/latex/ly1/ly1ptm.fd
 File: ly1ptm.fd 2001/02/01 font definitions for LY1/ptm using Berry names.
 )
-LaTeX Font Info:    ... okay on input line 30.
+LaTeX Font Info:    ... okay on input line 32.
  (c:/texlive/2026/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count331
@@ -617,49 +617,49 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (c:/texlive/2026/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-LaTeX Info: Redefining \. on input line 30.
-LaTeX Info: Redefining \% on input line 30.
+LaTeX Info: Redefining \. on input line 32.
+LaTeX Info: Redefining \% on input line 32.
 \c@mv@tabular=\count337
 \c@mv@boldtabular=\count338
 
 Package pgfplots notification 'compat/show suggested version=true': document has been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 
 LaTeX Font Info:    Font shape `T1/SourceSansThree-TLF/m/n' will be
-(Font)              scaled to size 15.5pt on input line 45.
+(Font)              scaled to size 15.5pt on input line 47.
 LaTeX Font Info:    Font shape `T1/SourceSansThree-TLF/b/n' will be
-(Font)              scaled to size 15.5pt on input line 45.
+(Font)              scaled to size 15.5pt on input line 47.
 LaTeX Font Info:    Font shape `T1/SourceSansThree-TLF/m/n' will be
-(Font)              scaled to size 10.5pt on input line 48.
+(Font)              scaled to size 10.5pt on input line 50.
 LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/m/n' will be
-(Font)              scaled to size 10.5pt on input line 48.
+(Font)              scaled to size 10.5pt on input line 50.
 LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/m/it' will be
-(Font)              scaled to size 10.5pt on input line 48.
+(Font)              scaled to size 10.5pt on input line 50.
 LaTeX Font Info:    Font shape `T1/SourceSansThree-TLF/m/n' will be
-(Font)              scaled to size 9.0pt on input line 117.
+(Font)              scaled to size 9.0pt on input line 119.
 LaTeX Font Info:    Font shape `T1/SourceSansThree-TLF/l/n' will be
-(Font)              scaled to size 9.0pt on input line 117.
+(Font)              scaled to size 9.0pt on input line 119.
 LaTeX Font Info:    Font shape `T1/SourceSansThree-TLF/m/n' will be
-(Font)              scaled to size 50.0pt on input line 121.
+(Font)              scaled to size 50.0pt on input line 123.
 LaTeX Font Info:    Font shape `T1/SourceSansThree-TLF/b/n' will be
-(Font)              scaled to size 50.0pt on input line 121.
+(Font)              scaled to size 50.0pt on input line 123.
 LaTeX Font Info:    Font shape `T1/SourceSansThree-TLF/m/n' will be
-(Font)              scaled to size 27.0pt on input line 125.
+(Font)              scaled to size 27.0pt on input line 127.
 LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/m/n' will be
-(Font)              scaled to size 27.0pt on input line 125.
+(Font)              scaled to size 27.0pt on input line 127.
 LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/m/it' will be
-(Font)              scaled to size 27.0pt on input line 125.
+(Font)              scaled to size 27.0pt on input line 127.
 LaTeX Font Info:    Font shape `T1/SourceSansThree-TLF/m/n' will be
-(Font)              scaled to size 7.5pt on input line 132.
+(Font)              scaled to size 7.5pt on input line 134.
 LaTeX Font Info:    Font shape `T1/SourceSansThree-TLF/m/n' will be
-(Font)              scaled to size 15.0pt on input line 138.
+(Font)              scaled to size 15.0pt on input line 140.
 LaTeX Font Info:    Font shape `T1/EBGaramond-OsF/m/n' will be
-(Font)              scaled to size 15.0pt on input line 138.
-LaTeX Font Info:    Trying to load font information for TS1+SourceSansThree-TLF on input line 154.
+(Font)              scaled to size 15.0pt on input line 140.
+LaTeX Font Info:    Trying to load font information for TS1+SourceSansThree-TLF on input line 162.
 (c:/texlive/2026/texmf-dist/tex/latex/sourcesans/TS1SourceSansThree-TLF.fd
 File: TS1SourceSansThree-TLF.fd 2026/05/03 (autoinst) Font definitions for TS1/SourceSansThree-TLF.
 )
 LaTeX Font Info:    Font shape `TS1/SourceSansThree-TLF/m/n' will be
-(Font)              scaled to size 7.5pt on input line 154.
+(Font)              scaled to size 7.5pt on input line 162.
  [1
 
 
@@ -675,15 +675,15 @@ L3 programming layer <2026-05-26>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 26330 strings out of 467167
- 673568 string characters out of 5413691
- 1256875 words of memory out of 5000000
- 55163 multiletter control sequences out of 15000+600000
+ 26334 strings out of 467167
+ 673613 string characters out of 5413691
+ 1256903 words of memory out of 5000000
+ 55167 multiletter control sequences out of 15000+600000
  762736 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  117i,7n,121p,821b,2034s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2026/texmf-dist/fonts/type1/public/ebgaramond/EBGaramond-Italic.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/ebgaramond/EBGaramond-Regular.pfb><c:/texlive/2026/texmf-dist/fonts/type1/adobe/sourcesans/SourceSans3-Bold.pfb><c:/texlive/2026/texmf-dist/fonts/type1/adobe/sourcesans/SourceSans3-Light.pfb><c:/texlive/2026/texmf-dist/fonts/type1/adobe/sourcesans/SourceSans3-Regular.pfb>
-Output written on main.pdf (1 page, 244505 bytes).
+Output written on main.pdf (1 page, 244306 bytes).
 PDF statistics:
  43 PDF objects out of 1000 (max. 8388607)
  28 compressed objects within 1 object stream

@@ -8,7 +8,9 @@
 %
 % ─── EDITAR AQUÍ ─────────────────────────────────────────────────────────────
 \newcommand{\numtarea}{1}
-\newcommand{\nomprofesor}{Fernando Nuñez Medina}
+\newcommand{\nomalumno}{Ricardo Le\'on Mart\'inez}
+\newcommand{\fecha}{21/08/2026}
+\newcommand{\nomprofesor}{\rule{5cm}{0.3pt}}
 % ─────────────────────────────────────────────────────────────────────────────
 
 \documentclass[tikz, border=0pt]{standalone}
@@ -132,22 +134,28 @@
     at (30mm,63mm) {\MakeUppercase{Alumno}};
   \node[anchor=west,
     font=\fontsize{7.5}{9}\selectfont\sffamily\color{gray!52}]
-    at (120mm,63mm) {\MakeUppercase{NUA}};
+    at (120mm,63mm) {\MakeUppercase{Fecha}};
   \node[anchor=west,
     font=\fontsize{15}{18}\selectfont\rmfamily\color{black!85}]
-    at (30mm,55.5mm) {Ricardo Le\'on Mart\'inez};
+    at (30mm,55.5mm) {\nomalumno};
   \node[anchor=west,
     font=\fontsize{15}{18}\selectfont\rmfamily\color{black!85}]
-    at (120mm,55.5mm) {827328};
+    at (120mm,55.5mm) {\fecha};
 
   \draw[ugblue!10, line width=0.3pt] (30mm,48mm) -- (180mm,48mm);
 
-  \node[anchor=center,
+  \node[anchor=west,
     font=\fontsize{7.5}{9}\selectfont\sffamily\color{gray!52}]
-    at (105mm,42mm) {\MakeUppercase{Profesor(a)}};
-  \node[anchor=center,
+    at (30mm,42mm) {\MakeUppercase{Profesor(a)}};
+  \node[anchor=west,
     font=\fontsize{15}{18}\selectfont\rmfamily\color{black!85}]
-    at (105mm,34.5mm) {\nomprofesor};
+    at (30mm,34.5mm) {\nomprofesor};
+
+  \node[anchor=west,
+    font=\fontsize{7.5}{9}\selectfont\sffamily\color{gray!52}]
+    at (120mm,42mm) {\MakeUppercase{Calificaci\'on}};
+  \draw[ugblue!40, line width=0.5pt, rounded corners=1.2pt]
+    (120mm,26.5mm) rectangle (155mm,38.5mm);
 
   \node[font=\fontsize{7.5}{9}\selectfont\sffamily\color{gray!36},
         anchor=center] at (105mm,21mm)
