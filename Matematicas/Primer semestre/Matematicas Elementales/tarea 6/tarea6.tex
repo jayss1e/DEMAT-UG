@@ -1,0 +1,176 @@
+\documentclass[12pt,a4paper]{article}
+\newcommand{\grupo}{}
+% ------------------------------------------------------
+% Idioma y codificación
+% ------------------------------------------------------
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+% ------------------------------------------------------
+% Tipografía y formato
+% ------------------------------------------------------
+\usepackage{lmodern}    % Fuente Latin Modern
+\usepackage{microtype}  % Mejor espaciado
+\usepackage{xcolor}     % Colores
+\definecolor{UGblue}{RGB}{0,33,71}
+\definecolor{UGgold}{RGB}{212,175,55}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{titlesec}
+% Añade esto en el preámbulo (antes de \begin{document})
+\usepackage{bookmark}
+\bookmarksetup{open,numbered}
+\usepackage{tikz}
+\usetikzlibrary{calc,decorations.pathreplacing,angles,quotes}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{caption}
+
+% ------------------------------------------------------
+% Matemáticas
+% ------------------------------------------------------
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{mathrsfs}
+\usepackage{stmaryrd}
+\usepackage{physics}
+
+% ------------------------------------------------------
+% Otros paquetes útiles
+% ------------------------------------------------------
+\usepackage{enumitem}
+\usepackage{csquotes}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=UGblue,
+    urlcolor=UGgold,
+    citecolor=UGblue
+}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+\usepackage{multicol}
+
+% ------------------------------------------------------
+% Encabezados y pies de página
+% ------------------------------------------------------
+
+% ------------------------------------------------------
+% Teoremas, definiciones, etc.
+% ------------------------------------------------------
+\theoremstyle{plain}
+\newtheorem{teo}{Teorema}[section]
+\newtheorem{prop}[teo]{Proposición}
+\newtheorem{lema}[teo]{Lema}
+\theoremstyle{definition}
+\newtheorem{defi}[teo]{Definición}
+\theoremstyle{remark}
+\newtheorem{ejemplo}[teo]{Ejemplo}
+\newtheorem{obs}[teo]{Observación}
+
+% ------------------------------------------------------
+% Comandos útiles
+% ------------------------------------------------------
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+
+\newcommand{\vecpar}[1]{\left( #1 \right)}
+\renewcommand{\qedsymbol}{$\blacksquare$}
+\newcommand{\gt}{\ensuremath{>}}
+\newcommand{\lt}{\ensuremath{<}}
+\renewcommand{\div}{$÷$}
+
+\renewcommand{\baselinestretch}{1.2}
+\setlength{\parindent}{0pt}
+
+\newenvironment{solucion}
+{\par\noindent\textbf{Solución.}\ }
+{\hfill$\blacktriangleleft$\par}
+
+\begin{document}
+\title{Tarea 6, Matemáticas elementales\\Ejercicio 1 inciso a), Ejericio 3 inciso a), Ejercicio 4, inciso a)}
+\author{Said Huizar Dorantes. LIC. EN MATEMÁTICAS\\
+        Axel Magaña Falcón. LIC. EN COMPUTACIÓN MATEMÁTICA\\
+        Egny Alejandrina Madrid. LIC. EN MATEMÁTICAS\\
+        Ricardo León Martínez. LIC. EN MATEMÁTICAS}
+\date{28 de octubre de 2025}
+\maketitle
+
+\textbf{Ejercicio 1 Inciso a)} \\
+Sea $f:\mathbb{R}\to\mathbb{R}$ dada por $f(x)=(x-1)^2$. Halla el rango de $f$.
+\begin{solucion}
+    Sea $f:\mathbb{R}\to\mathbb{R}$ definida por $f(x)=(x-1)^2$. 
+Para determinar su rango, buscamos todos los valores reales $y$ que puede tomar la función. 
+Dado que el cuadrado de cualquier número real es siempre no negativo, se tiene 
+$(x-1)^2 \ge 0$ para todo $x \in \mathbb{R}$, de modo que $f(x) \ge 0$ en todo punto de su dominio. 
+Por lo tanto, todos los valores de $f$ pertenecen al conjunto $[0,\infty)$.  
+
+Para comprobar que cada número real no negativo se alcanza efectivamente, 
+consideremos un $y \ge 0$ arbitrario y resolvamos la ecuación 
+\[
+y = (x - 1)^2.
+\]
+Al extraer raíz cuadrada en ambos lados se obtiene 
+$x - 1 = \pm \sqrt{y}$, y por tanto 
+$x = 1 \pm \sqrt{y}$, que son números reales para todo $y \ge 0$. 
+Esto muestra que, para cualquier $y \ge 0$, existe al menos un $x \in \mathbb{R}$ tal que $f(x)=y$.  
+
+En consecuencia, el conjunto de valores posibles de $f$ es 
+\[
+R_f = [0,\infty),
+\]
+por lo que el rango de la función está dado por $[0,\infty)$. 
+\end{solucion}
+
+\textbf{Ejercicio 3 Inciso a)}\\
+Sean $f:A\to B$ y $A^\prime\subset A$, $B^\prime\subset B$. Demuestra que si $f$ es inyectiva,
+entonces
+\[
+    f^{-1}(f(A^\prime))=A^\prime.
+\]
+\begin{proof}
+    Veamos primero que $A^\prime\subset f^{-1}(f(A^\prime))$. Sea $a\in A^\prime$.
+    Entonces $f(a)\in f(A^\prime)$ por definicion de imagen directa. Por definicion de imagen
+    inversa, $a\in f^{-1}(f(A^\prime))$ puesto que $f(a)\in f(A^\prime)$. Como $a$ fue 
+    arbitrario, se tiene $A^\prime\subset f^{-1}(f(A^\prime))$.\\
+    Ahora veamos que $f^{-1}(f(A^\prime))\subset A^\prime$. Sea $x\in f^{-1}(f(A^\prime))$.
+    Entonces $f(x)\in f(A^\prime)$. Por definicion de $f(A^\prime)$ existe $a^\prime\in A^\prime$
+    tal que $f(x)=f(a^\prime)$. Como $f$ es inyectiva, de $f(x)=f(a^\prime)$ se deduce $x=a^\prime$.
+    Por tanto $x\in A^\prime$. Como $x$ fue arbitrario, resulta $f^{-1}(f(A^\prime))\subset A^\prime$.
+    Por doble contencion se obtiene
+    \begin{align*}
+        f^{-1}(f(A^\prime))=A^\prime.
+    \end{align*}
+\end{proof}
+
+\textbf{Ejercicio 4 Inciso a)}\\
+Sea $A$ un conjunto no vacio. Demuestra por definicion que
+\begin{align*}
+    \{\{x\}:x\in A\},
+\end{align*}
+es una particion de A.
+\begin{proof}
+    Sea $\Omega = A$ un conjunto no vacío y consideremos la clase 
+$\mathcal{F} = \{A_x : x \in A\}$, donde para cada $x \in A$ se define 
+$A_x = \{x\}$. Nótese primero que, por construcción, cada conjunto $A_x$ 
+es no vacío, pues contiene al elemento $x$. Si tomamos dos índices distintos 
+$x, y \in A$ con $x \neq y$, entonces 
+$A_x \cap A_y = \{x\} \cap \{y\} = \varnothing$, 
+de modo que los conjuntos de la clase son disjuntos dos a dos. 
+Por otra parte, dado que para todo $a \in A$ se cumple 
+$a \in \{a\} = A_a$, se tiene que 
+\[
+\bigcup_{x \in A} A_x = A = \Omega.
+\]
+En consecuencia, la clase 
+$\mathcal{F} = \{A_x : x \in A\}$ 
+constituye una partición de $\Omega$.
+
+\end{proof}
+
+
+
+\end{document}

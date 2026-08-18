@@ -1,0 +1,377 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{ugmath}
+\usepackage{float}
+\usepackage{placeins}
+\usepackage[labelfont=bf,labelsep=space]{caption}
+\newcommand{\alumno}{Ricardo León Martínez}
+\newcommand{\materia}{Algebra Lineal I}
+\newcommand{\profesor}{Claudia Reynoso Alcántara}
+\newcommand{\tarea}{Tarea 2}
+\newcommand{\fecha}{9/2/2026}
+
+\begin{document}
+    \begin{center}
+    {\large\textbf{UNIVERSIDAD DE GUANAJUATO}}\\[0.3cm]
+    {\normalsize\textbf{DIVISIÓN DE CIENCIAS NATURALES Y EXACTAS}}\\
+    {\normalsize\textbf{CAMPUS GUANAJUATO}}\\[1cm]
+
+    {\Large\textbf{\tarea\ (\materia)}}\\[1cm]
+    \end{center}
+
+    \textbf{Nombre:} \alumno \hfill 
+    \textbf{Fecha:} \fecha \hfill 
+    \textbf{Calificación:} \rule{3cm}{0.4pt} \\[0.3cm]
+
+    En todos los problemas $F$ es un campo ($\mathbb{Q},\mathbb{R},\mathbb{C}$).
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 1}]
+        Demuestra que el intercambio de dos filas en una matris $m\times n$ con coeficientes en
+        $F$, puede hacerse mediante un número finito de operaciones elementales fila de los
+        otros dos tipos.
+    \end{mdframed}
+
+    \begin{proof}
+        Consideremos dos filas distintas, digamos la fila $i$ y la fila $j$. Denotemos estas
+        filas por
+        \begin{align*}
+            R_{i},\quad R_{j}.
+        \end{align*}
+        Reemplazamos la fila $R_{i}$ por
+        \begin{align*}
+            R_{i}\to R_{i}+R_{j}.
+        \end{align*}
+        Ahora las filas son
+        \begin{align*}
+            R_{i}=R_{i}+R_{j},\qquad R_{j}=R_{j}.
+        \end{align*}
+        Reemplazamos la fila $R_{j}$ por
+        \begin{align*}
+            R_{j}\to R_{i}-R_{j}.
+        \end{align*}
+        Sustituyendo el valor actual de $R_{i}$, obtenemos
+        \begin{align*}
+            R_{j}=(R_{i}+R_{j})-R_{j}=R_{i}.
+        \end{align*}
+        En este punto
+        \begin{align*}
+            R_{i}=R_{i}+R_{j},\qquad R_{j}=R_{i}.
+        \end{align*}
+        Reemplazando la fila $R_{i}$ por
+        \begin{align*}
+            R_{i}\to R_{i}-R_{j}.
+        \end{align*}
+        Sustituyendo,
+        \begin{align*}
+            R_{i}=(R_{i}+R_{j})-R_{i}=R_{j}.
+        \end{align*}
+        Después de estas tres operaciones elementales, las filas quedan
+        \begin{align*}
+            R_{i}=R_{j}, \qquad R_{j}=R_{i},
+        \end{align*}
+        es decir, las filas $i$ y $j$ han sido intercambiadas
+    \end{proof}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 2}]
+        Sea $(A\text{\textbar}B)\in M_{m\times(n+1)}(F)$ una matriz aumentada correspondiente a un sistema
+        de $m$ ecuaciones lineales en $n$ variables. Demuestra que si $(A_{1}\text{\textbar}B_{1})$
+        es una matriz equivalente por filas a $(A\text{\textbar}B)$ entonces toda solución del sistema
+        correspondiente a $(A\text{\textbar}B)$ es solución del sistema correspondiente a $(A_{1}\text{\textbar}B_{1})$.
+    \end{mdframed}
+
+    \begin{proof}
+        Como $A_{1}\text{\textbar}B_{1}$ es equivalente por filas a $(A\text{\textbar}B)$, los sistemas
+        de ecuaciones lineales asociados a estas matrices son equivalentes. Por lo visto en clase
+        sabemos que si dos sistemas de ecuaciones lineales son equivalentes se sigue inmediatamente que
+        ambos sistemas poseen exactamente el mismo conjunto solución. En particular toda solución
+        del sistema asociado a $A_{1}\text{\textbar}B_{1}$ es tambien solución del sistema asociado a
+        $(A\text{\textbar}B)$.
+    \end{proof}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 3}]
+        Encuentra todas las soluciones que el sistema:
+        \begin{align*}
+            \begin{cases}
+                2x_{1}-3x_{2}-7x_{3}+x_{4}+2x_{5}=-2\\
+                x_{1}-2x_{2}-4x_{3}+3x_{4}+x_{5}=-1\\
+                2x_{1}-4x_{3}+3x_{4}+x_{5}=3\\
+                x_{3}+6x_{4}+2x_{5}=0.
+            \end{cases}
+        \end{align*}
+        tiene en $\mathbb{Q}^{5}$.
+    \end{mdframed}
+
+    \begin{solucion}
+        Consideremos el siguiente sistema de ecuaciones lineales
+        \begin{align*}
+            \begin{cases}
+                2x_{1}-3x_{2}-7x_{3}+x_{4}+2x_{5}=-2\\
+                x_{1}-2x_{2}-4x_{3}+3x_{4}+x_{5}=-1\\
+                2x_{1}-4x_{3}+3x_{4}+x_{5}=3\\
+                x_{3}+6x_{4}+2x_{5}=0.
+            \end{cases}
+        \end{align*}
+        La matriz aumentada de $S$ es
+        \begin{align*}
+            \left(
+                \begin{array}{ccccc|c}
+                    2 & -3 & -7 & 1 & 2 & -2\\
+                    1 & -2 & -4 & 3 & 1 & -1\\
+                    2 & 0 & -4 & 3 & 1 & 3\\
+                    0 & 0 & 1 & 6 & 2 & 0
+                \end{array}
+            \right).
+        \end{align*}
+        Multilicando la fila 1 por $\frac{1}{2}$ y restandola a la fila 2 tenemos
+        \begin{align*}
+            \left(
+                \begin{array}{ccccc|c}
+                    2 & -3 & -7 & 1 & 2 & -2\\
+                    0 & -\frac{1}{2} & -\frac{1}{2} & \frac{5}{2} & 0 & 0\\
+                    2 & 0 & -4 & 3 & 1 & 3\\
+                    0 & 0 & 1 & 6 & 2 & 0
+                \end{array}
+            \right).
+        \end{align*}
+        Le restamos la fila 1 a la fila 3 obteniendo
+        \begin{align*}
+            \left(
+                \begin{array}{ccccc|c}
+                    2 & -3 & -7 & 1 & 2 & -2\\
+                    0 & -\frac{1}{2} & -\frac{1}{2} & \frac{5}{2} & 0 & 0\\
+                    0 & 3 & 3 & 2 & -1 & 5\\
+                    0 & 0 & 1 & 6 & 2 & 0
+                \end{array}
+            \right).
+        \end{align*}
+        Multiplicamos la fila 2 por -6 y la restamos a la fila 6
+        \begin{align*}
+            \left(
+                \begin{array}{ccccc|c}
+                    2 & -3 & -7 & 1 & 2 & -2\\
+                    0 & -\frac{1}{2} & -\frac{1}{2} & \frac{5}{2} & 0 & 0\\
+                    0 & 0 & 0 & 17 & -1 & 5\\
+                    0 & 0 & 1 & 6 & 2 & 0
+                \end{array}
+            \right).
+        \end{align*}
+        Por ultimo, intercambiamos las filas 4 y 3 obtenemos la matriz
+        \begin{align*}
+            \left(
+                \begin{array}{ccccc|c}
+                    2 & -3 & -7 & 1 & 2 & -2\\
+                    0 & -\frac{1}{2} & -\frac{1}{2} & \frac{5}{2} & 0 & 0\\
+                    0 & 0 & 1 & 6 & 2 & 0\\
+                    0 & 0 & 0 & 17 & -1 & 5
+                \end{array}
+            \right)
+        \end{align*}
+        o bien el sistema de ecuaciones lineales
+        \begin{align}
+            \begin{cases}
+                2x_{1}-3x_{2}-7x_{3}+x_{4}+2x_{5}=-2\\
+                \frac{1}{2}x_{2}-\frac{1}{2}x_{3}+\frac{5}{2}x_{4}=0\\
+                x_{3}+6x_{4}+2x_{5}=0\\
+                17x_{4}-x_{5}=5
+            \end{cases}
+        \end{align}
+        De la ecuación 4 del sistema (1) tenemos
+        \begin{align}
+            17x_{4}=5+x_{5} \implies x_{4}=\frac{5}{17}+\frac{1}{17}x_{5}.
+        \end{align}
+        De la ecuacion 3 del sistema (1) y de (2)
+        \begin{align}
+            x_{3}=-6x_{4}-2x_{5}=-6\left(\frac{5}{17}+\frac{1}{17}x_{5}\right)-2x_{5}=-\frac{30}{17}-\frac{40}{17}x_{5}.
+        \end{align}
+        De la ecuacion 2 del sistema (1) y de (3) y (2)
+        \begin{align*}
+            -\frac{1}{2}x_{2}=\frac{1}{2}x_{3}-\frac{5}{2}x_{4}=\frac{1}{2}\left(-\frac{30}{17}-\frac{40}{17}x_{5}\right)-\frac{5}{2}\left(\frac{5}{17}+\frac{1}{17}x_{5}\right)=-\frac{-55}{34}-\frac{45}{34}x_{5}\\
+        \end{align*}
+        luego,
+        \begin{align}
+            x_{2}=\frac{55}{17}-\frac{45}{17}x_{5}
+        \end{align}
+        De la ecuacion (1) y de (4),(3) y (2)
+        \begin{align*}
+            2x_{1}=-2+3x_{2}+7x_{3}-x_{4}-2x_{5}&=-2+3\left(\frac{55}{17}-\frac{45}{17}x_{5}\right)+7\left(-\frac{30}{17}-\frac{40}{17}x_{5}\right)-\left(\frac{5}{17}+\frac{1}{17}x_{5}\right)-2x_{5}\\
+            &=-\frac{84}{17}-\frac{180}{17}x_{5}
+        \end{align*}
+        entonces,
+        \begin{align*}
+            x_{1}=-\frac{42}{17}-\frac{90}{17}x_{5}.
+        \end{align*}
+        Sea $x_{5}=t$, con $t\in\mathbb{Q}$. Entonces
+        \begin{align*}
+            (x_{1},x_{2},x_{3},x_{4},x_{5})=\left(-\frac{42}{17}-\frac{90}{17}t,\frac{55}{17}-\frac{45}{17}t,-\frac{30}{17}-\frac{40}{17}t,\frac{5}{17}+\frac{1}{17}t,t\right).
+        \end{align*}
+        Así, el conjunto solución es
+        \begin{align*}
+            S=\{\left(-\frac{42}{17}-\frac{90}{17}t,\frac{55}{17}-\frac{45}{17}t,-\frac{30}{17}-\frac{40}{17}t,\frac{5}{17}+\frac{1}{17}t,t\right):t\in\mathbb{Q}\}.
+        \end{align*}
+    \end{solucion}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 4}]
+        Sean $m,n\in\mathbb{N}$ y sea el $r$ el número de pivotes de una matriz reducida por filas de
+        tamaño $m\times n$ con coeficientes $F$. Demuestra que si $r\lt n$, entonces el sistema lineal
+        homogéneo asociado tiene una infinidad de soluciones.
+    \end{mdframed}
+
+    \begin{proof}
+        Como $A$ está en forma reducida por filas y tiene $r$ pivotes, existen exactamente $r$
+        columnas pivote. Dado que $r\lt n$, se sigue que no todas las columnas son columnas pivote.
+        Por definición, toda columna que no es columna pivote corresponde a una variable libre del
+        sistema homogéneo. En consecuencia, el sistema tiene al menos una variable libre.
+        Sea $x_{j}$ una de estas variables libres. Como el sistema es homogéneo, podemos asignar a
+        $x_{j}$ cualquier valor de $F$, y los valores de las demas variables quedan determinados por
+        las ecuaciones del sistema. Como $F$ es inifinito, existen infinitos valores posibles para
+        $x_{j}$, y por lo tanto el sistema posee infinitas soluciones distintas.
+    \end{proof}
+
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 5}]
+        Determina si las siguientes matrices definidas sobre el campo de los números reales:
+        \begin{align*}
+            \begin{aligned}
+                \left(
+                    \begin{array}{ccc}
+                        2 & -1 & 0\\
+                        1 & -2 & 1\\
+                        1 & 3 & -1
+                    \end{array}
+                \right)
+                \quad
+                \left(
+                    \begin{array}{ccc}
+                        1 & 1 & 0\\
+                        0 & 1 & 0\\
+                        0 & 0 & 1
+                    \end{array}
+                \right),
+            \end{aligned}
+        \end{align*}
+        son equivalentes por filas a la matriz
+        \begin{align*}
+            \left(
+                \begin{array}{ccc}
+                    1 & 0 & 0\\
+                    0 & 1 & 0\\
+                    0 & 0 & 1
+                \end{array}
+            \right).
+        \end{align*}
+        Si es así, describe las operaciones elementales de fila que aplicaste en cada caso.
+    \end{mdframed}
+    
+    \begin{solucion}
+        Consideremos la siguiente matriz
+        \begin{align*}
+            \left(
+                \begin{array}{ccc}
+                    2 & -1 & 0\\
+                    1 & -2 & 1\\
+                    1 & 3 & -1
+                \end{array}
+            \right).
+        \end{align*}
+        Dividimos la fila 1 por 2
+        \begin{align*}
+            \left(
+                \begin{array}{ccc}
+                    1 & -\frac{1}{2} & 0\\
+                    1 & -2 & 1\\
+                    1 & 3 & -1
+                \end{array}
+            \right).
+        \end{align*}
+        Restamos la fila 1 a la fila 2
+        \begin{align*}
+            \left(
+                \begin{array}{ccc}
+                    1 & -\frac{1}{2} & 0\\
+                    0 & -\frac{3}{2} & 1\\
+                    1 & 3 & -1
+                \end{array}
+            \right).
+        \end{align*}
+        Restamos la fila 1 a la fila 3
+        \begin{align*}
+            \left(
+                \begin{array}{ccc}
+                    1 & -\frac{1}{2} & 0\\
+                    0 & -\frac{3}{2} & 1\\
+                    0 & \frac{7}{2} & -1
+                \end{array}
+            \right).
+        \end{align*}
+        Dividimos la fila 2 por $-\frac{3}{2}$
+        \begin{align*}
+            \left(
+                \begin{array}{ccc}
+                    1 & -\frac{1}{2} & 0\\
+                    0 & 1 & -\frac{2}{3}\\
+                    0 & \frac{7}{2} & -1
+                \end{array}
+            \right).
+        \end{align*}
+        Multiplicando la fila 2 por $\frac{7}{2}$ y la restamos a la fila 3
+        \begin{align*}
+            \left(
+                \begin{array}{ccc}
+                    1 & -\frac{1}{2} & 0\\
+                    0 & 1 & -\frac{2}{3}\\
+                    0 & 0 & \frac{4}{3}
+                \end{array}
+            \right)
+        \end{align*}
+        Dividimos la fila 3 por $\frac{4}{3}$
+        \begin{align*}
+            \left(
+                \begin{array}{ccc}
+                    1 & -\frac{1}{2} & 0\\
+                    0 & 1 & -\frac{2}{3}\\
+                    0 & 0 & 1
+                \end{array}
+            \right).
+        \end{align*}
+        Multiplicamos la fila 3 por $-\frac{2}{3}$ y la restamos a la fila 2
+        \begin{align*}
+            \left(
+                \begin{array}{ccc}
+                    1 & -\frac{1}{2} & 0\\
+                    0 & 1 & 0\\
+                    0 & 0 & 1
+                \end{array}
+            \right).
+        \end{align*}
+        Finalmente, multiplicamos la fila 2 por $-\frac{1}{2}$ y la restamos a la fila 2
+        \begin{align*}
+            \left(
+                \begin{array}{ccc}
+                    1 & 0 & 0\\
+                    0 & 1 & 0\\
+                    0 & 0 & 1
+                \end{array}
+            \right).
+        \end{align*}
+        Ahora consideremos la matriz
+        \begin{align*}
+            \left(
+                \begin{array}{ccc}
+                    1 & 1 & 0\\
+                    0 & 1 & 0\\
+                    0 & 0 & 1
+                \end{array}
+            \right).
+        \end{align*}
+        Restamos la fila 2 a la fila 1
+        \begin{align*}
+            \left(
+                \begin{array}{ccc}
+                    1 & 0 & 0\\
+                    0 & 1 & 0\\
+                    0 & 0 & 1
+                \end{array}
+            \right).
+        \end{align*}
+        Así, las dos matrices son equivalentes por filas a la matriz identidad.
+    \end{solucion}
+\end{document}

@@ -1,0 +1,374 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{ugmath}
+\usepackage{float}
+\usepackage{placeins}
+\usepackage[labelfont=bf,labelsep=space]{caption}
+\newcommand{\paren}[1]{\left( #1 \right)}
+\newcommand{\alumno}{Ricardo León Martínez}
+\newcommand{\materia}{Calculo Diferencia e Integral II}
+\newcommand{\profesor}{Fernando Nuñez Medina}
+\newcommand{\tarea}{Tarea 3}
+\newcommand{\fecha}{13/2/2026}
+
+\begin{document}
+    \begin{center}
+    {\large\textbf{UNIVERSIDAD DE GUANAJUATO}}\\[0.3cm]
+    {\normalsize\textbf{DIVISIÓN DE CIENCIAS NATURALES Y EXACTAS}}\\
+    {\normalsize\textbf{CAMPUS GUANAJUATO}}\\[1cm]
+
+    {\Large\textbf{\tarea\ (\materia)}}\\[1cm]
+    \end{center}
+
+    \textbf{Nombre:} \alumno \hfill 
+    \textbf{Fecha:} \fecha \hfill 
+    \textbf{Calificación:} \rule{3cm}{0.4pt} \\[0.3cm]
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 1}]
+        Muestre un ejemplo de una función $f$ tal que $\abs{f}$ sea integrable en un intervalo $[a,b]$ y $f$ no lo sea.
+    \end{mdframed}
+
+    \begin{solucion}
+        Sea $[a,b]\subset\mathbb{R}$ un intervalo y definamos la función
+        \begin{align*}
+            f:[a,b]\to\mathbb{R},\qquad f(x)=
+            \begin{cases}
+                1,\text{ si }x\in\mathbb{Q},\\
+                -1,\text{ si }x\in\mathbb{R}\setminus\mathbb{Q}.
+            \end{cases}
+        \end{align*}
+        Para todo $x\in[a,b]$ se tiene
+        \begin{align*}
+            \abs{f(x)}=1.
+        \end{align*}
+        Luego $\abs{f}$ es la función constante igual a 1, la cual es integrable y,
+        \begin{align*}
+            \int_{a}^{b}\abs{f(x)}dx=\int_{a}^{b}1dx=b-a.
+        \end{align*}
+        En cualquier subintervalo de $[a,b]$, la función $f$ toma los valores de 1 y -1 pues los raciones e irracionales
+        son densos en $\mathbb{R}$. Por lo tanto, para toda partición $P$,
+        \begin{align*}
+        L(f,P)=-(b-a),\qquad U(f,P)=(b-a).
+        \end{align*}
+        En consecuencia, las sumas inferiores y superiores no coinciden por lo tanto $f$ no es integrable en $[a,b]$.
+    \end{solucion}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 2}]
+        Sean $f$ y $g$ funciones integrables en un intervalo $[a,b]$ tales que $g\geq0$ y para toda $x\in[a,b]$,
+        \begin{align*}
+            m\leq f(x)\leq M.
+        \end{align*}
+        Prueba que
+        \begin{align*}
+            m\int_{a}^{b}g\leq\int_{a}^{b}fg\leq M \int_{a}^{b}g.
+        \end{align*}
+    \end{mdframed}
+    
+    \begin{proof}
+        Sabemos que para toda $x\in[a,b]$,
+        \begin{align*}
+            m\leq f(x)\leq M.
+        \end{align*}
+        Multiplicando la desigualda por $g\geq0$,
+        \begin{align*}
+            mg\leq fg \leq Mg.
+        \end{align*}
+        Por la linealidad y monotonia de la integral definida se concluye que,
+        \begin{align*}
+            m\int_{a}^{b}g\leq\int_{a}^{b}fg\leq M \int_{a}^{b}g.
+        \end{align*}
+    \end{proof}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 3}]
+        \textbf{(Teorema del valor intermedio para integrales)} Prueba que si $f$ es una función continua en un intervalo
+        $[a,b]$, entonces existe $c\in[a,b]$ tal que
+        \begin{align*}
+            \int_{a}^{b}f=f(c)(b-a).
+        \end{align*}
+    \end{mdframed}
+
+    \begin{proof}
+        Tengamos en cuenta que
+        \begin{align*}
+            m=\min\{f(x):x\in[a,b]\}
+        \end{align*}
+        y
+        \begin{align*}
+            M=\max\{f(x):x\in[a,b]\}.
+        \end{align*}
+        En consecuencia por el ejercicio 4 de la tarea 2,
+        \begin{align*}
+            m\leq\frac{1}{b-a}\int_{a}^{b}f\leq M.
+        \end{align*}
+        Definamos
+        \begin{align*}
+            A:=\frac{1}{b-a}\int_{a}^{b}f(x)dx.
+        \end{align*}
+        Por el paso anterior,
+        \begin{align*}
+            A\in[m,M].
+        \end{align*}
+        Dado que $f$ es continua en $[a,b]$, su imagen es el intervalo cerrado $[m,M]$. Por el teorema del
+        valor intermedio, existe un punto $c\in[a,b]$ tal que
+        \begin{align*}
+            f(c)=A
+        \end{align*}
+        Mutliplicando la igualdad anterior por $b-a$, obtenemos
+        \begin{align*}
+            \int_{a}^{b}f(x)dx==f(c)(b-a).
+        \end{align*}
+    \end{proof}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 4}]
+        \textbf{(Integral de una función par)} Prueba que si $f$ es una función par e integrable en un intervalo
+        $[-a,a]$, entonces
+        \begin{align*}
+            \int_{-a}^{a}f=2\int_{0}^{a}f.
+        \end{align*}
+        \textbf{Sugerencia:} Sean $P=\{t_{0},\dots,t_{n}\}$ una partición del intervalo $[0,a]$ y $Q=\{-t_{0},\dots,-t_{n}\}$;
+        así $Q$ es una partición del intervalo $[-a,0]$. Prueba que
+        \begin{align*}
+            L(f,Q)=L(f,P)
+        \end{align*}
+        y
+        \begin{align*}
+            U(f,Q)=U(f,P)
+        \end{align*}
+        y usalo para probar lo afirmado.
+    \end{mdframed}
+
+    \begin{proof}
+        Sean $P=\{t_{0},\dots,t_{n}\}$ una partición del intervalo $[0,a]$ y $Q=\{-t_{0},\dots,-t_{n}\}$;
+        así $Q$ es una partición del intervalo $[-a,0]$. Consideremos un subintervalo $[t_{i-1},t_{i}]\subset[0,a]$.
+        El subintervalo correspondiente en $Q$ es $[-t_{i},-t_{i-1}]\subset[-a,0]$. Como $f$ es par
+        \begin{align*}
+            \{f(x):x\in[-t_{i},-t_{i-1}]\}=\{f(x):x\in[t_{i-1},t_{i}]\}.
+        \end{align*}
+        Por lo tanto,
+        \begin{align*}
+            \inf_{x\in[-t_{i},-t_{i-1}]}f(x)=\inf_{x\in[t_{i-1},t_{i}]}f(x),
+        \end{align*}
+        y de manera analoga,
+        \begin{align*}
+            \sup_{x\in[-t_{i},-t_{i-1}]}f(x)=\sup_{x\in[t_{i-1},t_{i}]}f(x)
+        \end{align*}
+        Sean $L(f,P)$ y $U(f,P)$ las sumas inferiores y superiores asociadas a $P$ en $[0,a]$, y por $L(f,Q),U(f,Q)$
+        las correspondientes a $Q$ en $[-a,0]$. Como los infimos y supremos de los subintervalos coinciden, se obtiene
+        \begin{align*}
+            L(f,Q)=L(f,P),\qquad U(f,Q)=U(f,P).
+        \end{align*}
+        Sea $R=P\cup Q$ la particion de $[-a,a]$ inducida por $P$ y $Q$. Entonces,
+        \begin{align*}
+            L(f,R)=L(f,P)+L(f,Q)=2L(f,P),\\
+            U(f,R)=u(f,P)+U(f,Q)=2U(f,P)
+        \end{align*}
+        Tomando supremo dobre todas las particiones $P$ de $[0,a]$, obtenemos
+        \begin{align*}
+            \int_{-a}^{a}f(x)dx=2\int_{0}^{a}f(x)dx.
+        \end{align*}
+    \end{proof}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 5}]
+        Sea $n$ un numero natural. Muestra la fórmula
+        \begin{align*}
+            \int\sin^{n}(x)dx=-\frac{1}{n}\sin^{n-1}(x)\cos(x)+\frac{n-1}{n}\int\sin^{n-2}(x)dx.
+        \end{align*}
+    \end{mdframed}
+
+    \begin{proof}
+        Procederemos por inducción. Para $n=1$ es claro ya que
+        \begin{align*}
+            \int\sin(x)dx&=-\sin^{0}(x)\cos(x)+0\int\sin^{-1}(x)dx\\
+            &=-\cos(x).
+        \end{align*}
+        Ahora supongamos que es cierto para $n=k$. Probaremos la iguadad para $n=k+1$. Consideremos la siguiente
+        integral.
+        \begin{align*}
+            \int\sin^{k+1}(x)dx=\int\sin^{k}(x)\sin(x)dx.
+        \end{align*}
+        Integremos por partes, tomemos $u=\sin^{k}(x)$ y $dv=\sin(x)dx$, entonces $du=k\sin^{k-1}(x)\cos(x)dx$ y
+        $v=-\cos(x)$. Así,
+        \begin{align*}
+            \int udv&=uv-\int vdu.\\
+            &=-\sin^{k}(x)\cos(x)+\int\cos(x)k\sin^{k-1}(x)\cos(x)dx\\
+            &=-\sin^{k}(x)\cos(x)+k\int\sin^{k-1}(x)\cos^{2}(x)dx\\
+            &=-\sin^{k}(x)\cos(x)+k\int\sin^{k-1}(x)(1-\sin^{2}(x))dx\\
+            &=-\sin^{k}(x)\cos(x)+k\int\sin^{k-1}(x)-\sin^{k+1}(x)dx\\
+            &=-\sin^{k}(x)\cos(x)+k\int\sin^{k-1}(x)dx-k\int\sin^{k+1}(x)dx.
+        \end{align*}
+        Luego,
+        \begin{align*}
+            \int\sin^{k+1}(x)dx=-\sin^{k}(x)\cos(x)+k\int\sin^{k-1}(x)dx-k\int\sin^{k+1}(x)dx.
+        \end{align*}
+        Despejando,
+        \begin{align*}
+            (k+1)\int\sin^{k+1}(x)dx=-\sin^{k}(x)\cos(x)+k\int\sin^{k-1}(x)dx
+        \end{align*}
+        y por lo tanto
+        \begin{align*}
+            \int\sin^{k+1}(x)dx=-\frac{1}{k+1}\sin^{k}(x)\cos(x)+\frac{k}{k+1}\int\sin^{k-1}(x)dx
+        \end{align*}
+        De esta forma se cumple para $n=k+1$. Así, la igualdad queda demostrada por inducción para todo $n\in\mathbb{N}$.
+    \end{proof}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 6}]
+        Calcula las integrales siguientes:
+        \begin{multicols}{2}
+            \begin{enumerate}
+                \item[(a)]  $\displaystyle\int\left(e^{x}+\frac{3}{x}-1\right)dx.$
+                \item[(b)]  $\displaystyle\int\left(7\sec^{2}\left(x\right)+8\sqrt{x}\right)dx.$
+                \item[(c)]  $\displaystyle\int x^{2}\cos\left(x\right)dx.$
+                \item[(d)]  $\displaystyle\int x\ln\left(x\right)dx.$
+                \item[(e)]  $\displaystyle\int\sin\left(2x-5\right)dx.$
+                \item[(f)]  $\displaystyle\int x^{2}\ln\left(x^{3}+1\right)dx.$
+            \end{enumerate}
+        \end{multicols}
+    \end{mdframed}
+
+    \begin{solucion}
+        \begin{enumerate}
+            \item[(a)] $\displaystyle\int(e^{x}+\frac{3}{x}-1)dx$.\\
+            Puesto que
+            \begin{align*}
+                \int e^{x}dx=e^{x}, \int\frac{1}{x}dx=\ln(x) \text{ y }\int dx=x.
+            \end{align*}
+            Entonces por la linealidad de la integral indefinida obtenemos que
+            \begin{align*}
+                \int\left(e^{x}+\frac{3}{x}-1\right)dx&=\int e^{x}dx+3\int\frac{1}{x}dx-\int dx\\
+                &=e^{x}+3\ln(x)-x.
+            \end{align*}
+            \item[(b)] $\displaystyle\int\paren{7\sec^{2}(x)+8\sqrt{x}}$.\\
+            Puesto que
+            \begin{align*}
+                \int\sec^{2}(x)dx=\tan(x)\text{ y }\int\sqrt{x}dx=\frac{2\sqrt{x^{3}}}{3}.
+            \end{align*}
+            Entonces por la linealidad de la integral indefinida obtenemos que
+            \begin{align*}
+                \int\paren{7\sec^{2}(x)+8\sqrt{x}}dx&=7\int\sec^{2}(x)dx+8\int\sqrt{x}dx\\
+                &=7\tan(x)+\frac{16\sqrt{x^{3}}}{3}.
+            \end{align*}
+            \item[(c)] $\displaystyle\int x^{2}\cos(x)dx$.\\
+            Sea $u=x^{2}$ y $dv=\cos(x)dx$. Entonces $du=2xdx$ y $v=\sin(x)$. En consecuencia,
+            \begin{align*}
+                \int x^{2}\cos(x)dx&=\int udv\\
+                &=uv-\int vdu\\
+                &=x^{2}\sin(x)-\int\sin(x)\cos(x)dx.
+            \end{align*}
+            Hagamos $u=\sin(x)$ y $du=\cos(x)dx$. Por lo tanto
+            \begin{align*}
+                \int\sin(x)\cos(x)dx&=\int udu\\
+                &=\frac{1}{2}u^{2}\\
+                &=\frac{1}{2}\sin^{2}(x)
+            \end{align*}
+            Así,
+            \begin{align*}
+                \int x^{2}\cos(x)dx=x^{2}\sin(x)-\frac{1}{2}\sin^{2}(x).
+            \end{align*}
+            \item[(d)] $\displaystyle\int x\ln(x)dx$.\\
+            Sea $u=\ln(x)$ y $dv=xdx$. Entonces $du=\frac{1}{x}dx$ y $v=\frac{x^{2}}{2}$. En consecuencia
+            \begin{align*}
+                \int x\ln(x)dx&=\int udv\\
+                &=uv-\int vdu\\
+                &=\frac{x^{2}\ln(x)}{2}-\frac{1}{2}\int x^{2}\cdot\frac{1}{x}dx\\
+                &=\frac{x^{2}\ln(x)}{2}-\frac{x^{2}}{4}.
+            \end{align*}
+            \item[(e)] $\displaystyle\int\sin(2x+5)$.\\
+            Hagamos $u=2x-5$ y $du=2dx$. Por lo tanto
+            \begin{align*}
+                \int\sin(2x-5)dx&=\frac{1}{2}\int\sin(u)du\\
+                &=\frac{1}{2}\cos(u)\\
+                &=\frac{1}{2}\cos(2x-5).
+            \end{align*}
+            \item[(d)] $\displaystyle\int x^{2}\ln(x^{3}+1)dx$.
+            Hagamos $u=x^{3}+1$ y $du=3x^{2}dx$. Por lo tanto
+            \begin{align*}
+                \int x^{2}\ln(x^{3}+1)dx&=\frac{1}{3}\int\ln(u)du\\
+                &=\frac{1}{3}u\ln(u)-u\\
+                &=\frac{1}{3}(x^{3}+1)\ln(x^{3}+1)-(x^{3}+1).
+            \end{align*}
+        \end{enumerate}
+    \end{solucion}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 7}]
+        \begin{multicols}{2}
+            \begin{enumerate}
+                \item[(a)]  $\int\sqrt{4-x^{2}}dx.$
+                \item[(b)]  $\int\sqrt{9+x^{2}}dx.$
+                \item[(c)]  $\int\sqrt{x^{2}-2}dx.$
+            \end{enumerate}
+        \end{multicols}
+    \end{mdframed}
+
+    \begin{solucion}
+        \begin{enumerate}
+            \item[(a)] $\displaystyle\int\sqrt{4-x^{2}}dx$.\\
+            Hagamos $x=2\sin(\theta)$ y $dx=2\cos(\theta)d\theta$. Por lo tanto
+            \begin{align*}
+            \int\sqrt{4-x^{2}}dx&=\int\sqrt{4-4\sin^{2}(\theta)}2\cos(\theta)d\theta\\
+            &=\int\sqrt{4\cos^{2}(\theta)}2\cos(\theta)d\theta\\
+            &=4\int\cos^{2}(\theta)d\theta.
+            \end{align*}
+            Recordemos la identidad
+            \begin{align*}
+                \cos^{2}(x)=\frac{1+\cos(2x)}{2}.
+            \end{align*}
+            Así,
+            \begin{align*}
+                4\int\cos^{2}(\theta)du&=4\int\frac{1+\cos(2\theta)}{2}\\
+                &=2\int d\theta+2\int\cos(2\theta)d\theta\\
+                &=2\theta+\sin(\theta).
+            \end{align*}
+            Notemos que $\theta=arcsin(\frac{x}{2})$. En consecuencia
+            \begin{align*}
+                \int\sqrt{4-x^{2}}=2\arcsin(\frac{x}{2})+\frac{x}{2}.
+            \end{align*}
+            \item[(b)] $\displaystyle\int\sqrt{9+x^{2}}dx$.\\
+            Hagamos $x=3\tan(\theta)$ y $dx=3\sec^{2}(\theta)d\theta$. Por lo tanto
+            \begin{align*}
+                \int\sqrt{9+x^{2}}dx&=\int\sqrt{9+9\tan^{2}(\theta)}3\sec^{2}(\theta)d\theta\\
+                &=\int\sqrt{9\sec^{2}(\theta)}3\sec^{2}(\theta)d\theta\\
+                &=9\int\sec^{3}(\theta)d\theta.
+            \end{align*}
+            Sea $u=\sec(\theta)$ y $dv=sec^{2}(\theta)d\theta$. Entoncs $du=sec(\theta)\tan(\theta)d\theta$ y $v=\tan(\theta)$. En consecuencia
+            \begin{align*}
+                \int\sec^{3}(u)&=\int udv\\
+                &=uv-\int vdu\\
+                &=sec(\theta)\tan(\theta)-\int\tan^{2}(\theta)\sec(\theta)d\theta\\
+                &=sec(\theta)\tan(\theta)-\int\sec^{3}(\theta)-\sec(\theta)d\theta\\
+                &=sec(\theta)\tan(\theta)-\int\sec^{3}(\theta)d\theta+\int\sec(\theta)d\theta.
+            \end{align*}
+            Por lo tanto,
+            \begin{align*}
+                \int\sec^{3}(\theta)=sec(\theta)\tan(\theta)-\int\sec^{3}(\theta)d\theta+\ln\paren{\abs{\sec(\theta)+\tan(\theta)}}.
+            \end{align*}
+            Despejando,
+            \begin{align*}
+                2\int\sec^{3}(\theta)d\theta=sec(\theta)\tan(\theta)+\ln\paren{\abs{\sec(\theta)+\tan(\theta)}}
+            \end{align*}
+            y por lo tanto
+            \begin{align*}
+                \int\sec^{3}(\theta)d\theta=\frac{1}{2}sec(\theta)\tan(\theta)+\frac{1}{2}\ln\paren{\abs{\sec(\theta)+\tan(\theta)}}.
+            \end{align*}
+            Notemos que $\theta=\arctan(\frac{x}{3})$. Así
+            \begin{align*}
+                \int\sqrt{9+x^{2}}dx=\frac{9x}{6}\sec(\arctan(\frac{x}{3}))+\frac{9}{2}\ln\paren{\abs{sec\left(\arctan\left(\frac{x}{3}\right)\right)+\frac{x}{3}}}.
+            \end{align*}
+            \item[(c)] $\int\sqrt{x^{2}-2}dx$.\\
+            Hagamos $x=\sqrt{2}\sec(\theta)$ con $0\leq \theta\leq \frac{\pi}{2}$ y $dx=\sqrt{2}\sec(\theta)\tan(\theta)$. En consecuencia
+            \begin{align*}
+                \int\sqrt{x^{2}-2}dx&=\int\sqrt{2\sec^{2}(\theta)-2}\sqrt{2}\sec(\theta)\tan(\theta)d\theta\\
+                &=\int\sqrt{2\tan^{2}(\theta)}\sqrt{2}\sec(\theta)\tan(\theta)d\theta\\
+                &=\sqrt{2}\int\tan^{2}(\theta)\sec(\theta)\\
+                &=\sqrt{2}\int\sec^{3}(\theta)d\theta-\sqrt{2}\int\sec(\theta)d\theta
+            \end{align*}
+            Luego, por el inciso anteior
+            \begin{align*}
+                \sqrt{2}\int\sec^{3}(\theta)d\theta-\sqrt{2}\int\sec(\theta)d\theta=&\frac{\sqrt{2}}{2}sec(\theta)\tan(\theta)+\frac{\sqrt{2}}{2}\ln\paren{\abs{\sec(\theta)+\tan(\theta)}}\\
+                &-\ln\paren{\abs{\sec(\theta)+\tan(\theta)}}.
+            \end{align*}
+            Notemos que $\theta=\arcsec(\frac{x}{\sqrt{2}})$. Así,
+            \begin{align*}
+                \int\sqrt{x^{2}-2}dx=\frac{x}{2}\tan(\arcsec(\frac{x}{\sqrt{2}}))+\frac{\sqrt{2}-2}{2}\ln\paren{\abs{\frac{x}{\sqrt{2}}+\tan(\arcsec(\frac{x}{\sqrt{2}}))}}.
+            \end{align*}
+        \end{enumerate}
+    \end{solucion}
+\end{document}

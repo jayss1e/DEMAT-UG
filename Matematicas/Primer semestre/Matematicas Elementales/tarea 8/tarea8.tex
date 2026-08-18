@@ -1,0 +1,232 @@
+\documentclass[12pt,a4paper]{article}
+\newcommand{\grupo}{}
+% ------------------------------------------------------
+% Idioma y codificación
+% ------------------------------------------------------
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+% ------------------------------------------------------
+% Tipografía y formato
+% ------------------------------------------------------
+\usepackage{lmodern}    % Fuente Latin Modern
+\usepackage{microtype}  % Mejor espaciado
+\usepackage{xcolor}     % Colores
+\definecolor{UGblue}{RGB}{0,33,71}
+\definecolor{UGgold}{RGB}{212,175,55}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{titlesec}
+% Añade esto en el preámbulo (antes de \begin{document})
+\usepackage{bookmark}
+\bookmarksetup{open,numbered}
+\usepackage{tikz}
+\usetikzlibrary{calc,decorations.pathreplacing,angles,quotes}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{caption}
+
+% ------------------------------------------------------
+% Matemáticas
+% ------------------------------------------------------
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{mathrsfs}
+\usepackage{stmaryrd}
+\usepackage{physics}
+
+% ------------------------------------------------------
+% Otros paquetes útiles
+% ------------------------------------------------------
+\usepackage{enumitem}
+\usepackage{csquotes}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=UGblue,
+    urlcolor=UGgold,
+    citecolor=UGblue
+}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+\usepackage{multicol}
+
+% ------------------------------------------------------
+% Encabezados y pies de página
+% ------------------------------------------------------
+% ------------------------------------------------------
+% Teoremas, definiciones, etc.
+% ------------------------------------------------------
+\theoremstyle{plain}
+\newtheorem{teo}{Teorema}[section]
+\newtheorem{prop}[teo]{Proposición}
+\newtheorem{lema}[teo]{Lema}
+\theoremstyle{definition}
+\newtheorem{defi}[teo]{Definición}
+\theoremstyle{remark}
+\newtheorem{ejemplo}[teo]{Ejemplo}
+\newtheorem{obs}[teo]{Observación}
+
+% ------------------------------------------------------
+% Comandos útiles
+% ------------------------------------------------------
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\pfrac}[2]{\left( \frac{#1}{#2} \right)} %parentesis
+\newcommand{\bfrac}[2]{\left[ \frac{#1}{#2} \right]} %corchetes
+\newcommand{\vecpar}[1]{\left( #1 \right)}
+% En el preámbulo
+\newcommand{\point}[2]{\left( #1, #2 \right)}
+\newcommand{\pointfrac}[4]{\left( \frac{#1}{#2}, \frac{#3}{#4} \right)}
+\newcommand{\pointmix}[4]{\left( #1, \frac{#3}{#4} \right)} % Primera coordenada normal, segunda fracción
+\renewcommand{\qedsymbol}{$\blacksquare$}
+\newcommand{\gt}{\ensuremath{>}}
+\newcommand{\lt}{\ensuremath{<}}
+\renewcommand{\div}{$÷$}
+
+\renewcommand{\baselinestretch}{1.2}
+\setlength{\parindent}{0pt}
+
+\newenvironment{solucion}
+{\par\noindent\textbf{Solución.}\ }
+{\hfill$\blacktriangleleft$\par}
+
+% ------------------------------------------------------
+% Datos personales (modificar según tarea)
+% ------------------------------------------------------
+\newcommand{\alumno}{Ricardo León Martínez}
+\newcommand{\materia}{Elementos de Geometría}
+\newcommand{\profesor}{Valentina Muñoz Porras}
+\newcommand{\tarea}{Tarea 5}
+\newcommand{\fecha}{22/09/2025}
+
+\setlength{\parindent}{0pt}
+
+\begin{document}
+    \textbf{Ejercicio 1, Inciso (a)}\\
+    Sea $A$ un conjunto no vacio 
+    arbitrario y sea
+    \begin{align*}
+        R={(a,a):a\in A}.
+    \end{align*}
+    Demuestra que $R$ es una relacion de equivalencia sobre $A$ y que si
+    $S$ es cualquier otra relacion de equivalencia sobre $A$, entonces
+    $R\subseteq S$. Ademas, halla la particion inducida por $R$.
+    \begin{proof}
+        Primero, veamos que $R$ es una relacion de equivalencia. Para 
+        todo $a \in A$, $(a, a) \in R$ por definición de $R$, por lo que
+        $R$ es reflexiva. Supongamos $(a, b) \in R$. Por definición
+    de $R$, $a = b$. Entonces, por analogía con el caso anterior, 
+    $(b, a) = (a, a) \in R$. Así, $R$ es simétrica.
+        Supongamos $(a, b) \in R$ y $(b, c)
+    \in R$. Por definición de $R$, $a = b$ y $b = c$, luego $a = c$.
+    Entonces $(a, c) = (a, a) \in R$. Con esto hemos probado que 
+    $R$ es transitiva. Asi, hemos probado que $R$ es una relacion
+        de equivalencia.\\
+        Ahora sea $S$ una relacion de equivalencia sobre $A$, como $S$
+        es reflexiva, para todo $a\in A$, $(a,a)\in S$. Pero, $R=
+        \{(a,a):a\in A\}$, luego $R\subseteq S$.\\
+        Por ultimo la clase de equivalencia de $a\in A$ es
+        \begin{align*}
+            [a]=\{x\in A,(a,x)\in R\}
+        \end{align*}
+        Pero $(a,x)\in\mathbb{R}$ implica $a=x$, luego $[a]=\{a\}$. Por
+        lo que la particion inducida por $R$ es
+        \begin{align*}
+            \mathcal{P}=\{\{a\}:a\in A\}.
+        \end{align*}
+    \end{proof}
+    \textbf{Ejercicio 2, inciso (a)}\\
+    Sea $A=\mathbb{Z}\times(\mathbb{Z}\setminus{0})$.
+    Considera la realacion en $A$ dada por
+    \begin{align*}
+        R=\{((a,b),(c,d))\in A\times A:ad=bc\}
+    \end{align*}
+    Demuestra que $R$ es una relacion de equivalencia y halla la particion
+    inducida por ella.
+    \begin{proof}
+        Sea $(a,b)\in R$, tenemos que mostrar que $((a,b),(a,b))\in R$. La
+        condicion es $ab=ba$ lo cual es cierto por la conmutatividad 
+        del producto en $\mathbb{Z}$ por lo tanto $R$ es reflexiva.
+        Ahora supongamos que $((a,b),(c,d))\in\mathbb{R}$
+        es decir, $ad=bc$, queremos ver que $cb=da$ pero $ad=bc$ implica
+        $cb=da$ por la conmutatividad del producto en $\mathbb{Z}$, asi, $R$
+        es simetrica. Por ultimo supongamos $((a,b),(c,d))\in\mathbb{R}$ y
+        $((c,d),(e,f))\in\mathbb{R}$ es decir $ad=bc$ y $cf=dc$. De $ad=bc$
+        tenemos $adf=bcf$ y de igual forma de $cf=dc$ se tiene que $bcf=bdc$
+        entonces $adf=bdc$ con $d\neq0$, cancelamos d, asi teniendo $af=bc$
+        por lo tanto $R$ es transitiva.
+        Asi, $R$ es una relacion de equivalencia.\\
+        Por último, la clase de equivalencia de $(a,b)\in A$ es
+        \begin{align*}
+        [(a,b)] = \{(c,d)\in A : a d = b c\}.
+        \end{align*}
+            Por lo que la partición inducida por $R$ es
+            \begin{align*}
+                \mathcal{P} = \big\{\,\{\{(a,b) \in \mathbb{N}\times\mathbb{N} : \frac{c}{d}=r\}:r\in\mathbb{Q}\}\big\}.
+            \end{align*}
+    \end{proof}
+    \textbf{Ejercicio 3, inciso (a)}\\
+    Sean $A=\mathbb{N}\times\mathbb{N}$ y
+    \begin{align*}
+        R=\{((a,b),(c,d))\in A\times A:a+d=b+c\}
+    \end{align*}
+    demuestra que $R$ es una relacion de equivalencia.
+    \begin{proof}
+        Primero, veamos que $R$ es una relación de equivalencia.
+        Sea $(a,b) \in A$. Entonces
+            \begin{align*}
+                a+b = b+a,                
+            \end{align*}
+        por la conmutatividad de la suma en $\mathbb{N}$, por lo que $((a,b),(a,b)) \in R$. Así, $R$ es reflexiva.
+        Ahora supongamos que $((a,b),(c,d)) \in R$, es decir,
+            \begin{align*}
+                a + d = b + c.
+            \end{align*}
+        Reordenando términos se obtiene
+            \begin{align*}
+                c + b = d + a,
+            \end{align*}
+        lo cual muestra que $((c,d),(a,b)) \in R$, por lo tanto $R$ es simétrica.
+        Por último, supongamos que $((a,b),(c,d)) \in R$ y $((c,d),(e,f)) \in R$, es decir,
+            \begin{align*}
+                a + d = b + c \qquad\text{y}\qquad c + f = d + e.
+            \end{align*}
+        sumando se tiene que
+            \begin{align*}
+                (a+d)+(c+f)=(b+c)+(d+e)
+            \end{align*}
+        Por la asociatividad de la suma en $\mathbb{N}$ se sigue que
+            \begin{align*}
+                (a+f)+(d+c)=(b+c)+(d+c).
+            \end{align*}
+        De esta manera
+            \begin{align*}
+                a + f = b + e,
+            \end{align*}
+        por lo que $((a,b),(e,f)) \in R$. Así, $R$ es transitiva.
+        Con esto hemos probado que $R$ es una relación de equivalencia.
+        Ahora, la clase de equivalencia de $(a,b) \in A$ es
+            \begin{align*}
+                [(a,b)] = \{(c,d) \in A : a + d = b + c\}.
+            \end{align*}
+        La partición inducida por $R$ es entonces
+            \begin{align*}
+                \mathcal{P} = \big\{\,\{\{(a,b) \in \mathbb{N}\times\mathbb{N} : a-b=k\}:k\in\mathbb{Z}\}\big\}.
+            \end{align*}
+    \end{proof}
+    \textbf{Ejercicio 4, inciso a}\\
+    Demuestra que $\mathbb{Q}^{n}$ es numerable.
+    \begin{proof}
+        Procedamos por induccion. El caso $n=1$ es claro ya que $\mathbb{Q}$
+        es numerable. Supongamos para $n=k$. Probemos para $n=k+1$. Notemos que
+    \[
+        \mathbb{Q}^{k}\times\mathbb{Q}=\mathbb{Q}^{k+1}.
+    \]
+    Por el lema 1 se sigue que es verdadero para $n=k+1$. Por lo tanto
+    $\mathbb{Q}^{n}$ es numerable.
+    \end{proof}
+\end{document}

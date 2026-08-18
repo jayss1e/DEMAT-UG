@@ -1,0 +1,165 @@
+% portada_calculo1.tex ────────────────────────────────────────────────────────
+% Portada Cálculo 1 — Universidad de Guanajuato
+% Gráfica: la derivada como límite de secantes → tangente
+%   — directamente relacionada con los temas centrales de Cálculo 1:
+%     · Razón de cambio promedio (rectas secantes)
+%     · Límite que define la derivada
+%     · Recta tangente como razón de cambio instantánea
+%
+% ─── EDITAR AQUÍ ─────────────────────────────────────────────────────────────
+\newcommand{\numtarea}{1}
+\newcommand{\nomalumno}{Ricardo Le\'on Mart\'inez}
+\newcommand{\fecha}{21/08/2026}
+\newcommand{\nomprofesor}{Fernando Nuñez Medina}
+% ─────────────────────────────────────────────────────────────────────────────
+
+\documentclass[tikz, border=0pt]{standalone}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{ebgaramond}
+\usepackage[default]{sourcesanspro}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+\definecolor{ugblue}{HTML}{002D72}
+\definecolor{uggold}{HTML}{B8952A}
+\definecolor{roseteal}{HTML}{006666}
+
+\begin{document}
+\begin{tikzpicture}
+
+  \useasboundingbox (0,0) rectangle (210mm,297mm);
+  \fill[white] (0,0) rectangle (210mm,297mm);
+
+  %% ── Barras de color ─────────────────────────────────────────────────────────
+  \fill[ugblue] (0,287mm) rectangle (210mm,297mm);
+  \fill[uggold] (0,284mm) rectangle (210mm,287mm);
+  \fill[uggold] (0,11mm)  rectangle (210mm,14mm);
+  \fill[ugblue] (0,0)     rectangle (210mm,11mm);
+
+  %% ── Encabezado institucional ────────────────────────────────────────────────
+  \node[font=\fontsize{15.5}{19}\selectfont\sffamily\bfseries\color{ugblue},
+        anchor=center] at (105mm,275mm)
+    {\MakeUppercase{Universidad de Guanajuato}};
+  \node[font=\fontsize{10.5}{14}\selectfont\rmfamily\itshape\color{gray!65},
+        anchor=center] at (105mm,267.5mm)
+    {Divisi\'on de Ciencias Naturales y Exactas};
+  \node[font=\fontsize{10.5}{14}\selectfont\rmfamily\itshape\color{gray!65},
+        anchor=center] at (105mm,261mm)
+    {Departamento de Matem\'aticas};
+
+  %% ── Divisor superior ────────────────────────────────────────────────────────
+  \draw[ugblue!22, line width=0.4pt] (30mm,254.5mm) -- (101mm,254.5mm);
+  \fill[uggold]
+    (103mm,254.5mm)--(105mm,256.5mm)--(107mm,254.5mm)--(105mm,252.5mm)--cycle;
+  \draw[ugblue!22, line width=0.4pt] (109mm,254.5mm) -- (180mm,254.5mm);
+
+  %% ── Gráfica: secantes convergiendo a la tangente ────────────────────────────
+  %% f(x) = x^3/9 - x + 3 ,  f'(x) = x^2/3 - 1
+  %% Punto de tangencia: x0 = 3  →  f(3)=3 , f'(3)=2
+  %% Secantes por (x1,f(x1)) y (3,f(3)) con x1 = 1.9, 2.3, 2.7
+  %% pendientes:  1.0345 , 1.3543 , 1.71   →  convergen a la pendiente 2
+  \begin{axis}[
+    at          = {(105mm,188mm)},
+    anchor      = center,
+    width       = 140mm,
+    height      = 120mm,
+    axis lines  = middle,
+    axis line style = {ugblue!60, line width=0.55pt, -stealth},
+    xtick       = \empty,
+    ytick       = \empty,
+    xmin=-3.5, xmax=3.7,
+    ymin=1.15, ymax=4.9,
+    clip        = true,
+  ]
+
+    %% guías punteadas hacia el punto P
+    \addplot[dashed, gray!55, line width=0.4pt] coordinates {(3.0,0)(3.0,3.0)};
+    \addplot[dashed, gray!55, line width=0.4pt] coordinates {(-3.5,3.0)(3.0,3.0)};
+
+    %% curva f(x)
+    \addplot[ugblue, line width=1.5pt, smooth, domain=-3.35:3.35, samples=160]
+      {x^3/9 - x + 3};
+
+    %% secantes: teal, opacidad creciente = h decreciente
+    \addplot[roseteal!30, line width=0.7pt, domain=1.55:3.35]
+      {1.0345*(x-3.0)+3.0};
+    \addplot[roseteal!55, line width=0.85pt, domain=1.95:3.35]
+      {1.3543*(x-3.0)+3.0};
+    \addplot[roseteal!85, line width=1.0pt, domain=2.35:3.35]
+      {1.71*(x-3.0)+3.0};
+
+    %% recta tangente: dorado, la más prominente
+    \addplot[uggold, line width=1.8pt, domain=1.55:3.65]
+      {2*(x-3.0)+3.0};
+
+    %% puntos de secante sobre la curva
+    \addplot[only marks, mark=*, mark size=1.3pt, roseteal!85]
+      coordinates {(1.9,1.8622)(2.3,2.0519)(2.7,2.4870)};
+
+    %% punto de tangencia P
+    \addplot[only marks, mark=*, mark size=2.1pt, uggold, draw=ugblue, line width=0.5pt]
+      coordinates {(3.0,3.0)};
+
+  \end{axis}
+
+  %% ── Divisor inferior ────────────────────────────────────────────────────────
+  \draw[ugblue!22, line width=0.4pt] (30mm,121mm) -- (101mm,121mm);
+  \fill[uggold]
+    (103mm,121mm)--(105mm,123mm)--(107mm,121mm)--(105mm,119mm)--cycle;
+  \draw[ugblue!22, line width=0.4pt] (109mm,121mm) -- (180mm,121mm);
+
+  %% ── Título ──────────────────────────────────────────────────────────────────
+  \node[font=\fontsize{9}{11}\selectfont\sffamily\fontseries{l}\selectfont
+        \color{gray!48}, anchor=center] at (105mm,114mm)
+    {\MakeUppercase{Licenciatura en Matem\'aticas}};
+
+  \node[font=\fontsize{50}{56}\selectfont\sffamily\bfseries\color{ugblue},
+        anchor=center] at (105mm,97mm)
+    {C\'alculo~1};
+
+  \node[font=\fontsize{27}{31}\selectfont\rmfamily\itshape\color{uggold},
+        anchor=center] at (105mm,81mm)
+    {Tarea~\numtarea};
+
+  %% ── Separador y datos ───────────────────────────────────────────────────────
+  \draw[ugblue!13, line width=0.35pt] (30mm,70.5mm) -- (180mm,70.5mm);
+
+  \node[anchor=west,
+    font=\fontsize{7.5}{9}\selectfont\sffamily\color{gray!52}]
+    at (30mm,63mm) {\MakeUppercase{Alumno}};
+  \node[anchor=west,
+    font=\fontsize{7.5}{9}\selectfont\sffamily\color{gray!52}]
+    at (120mm,63mm) {\MakeUppercase{Fecha}};
+  \node[anchor=west,
+    font=\fontsize{15}{18}\selectfont\rmfamily\color{black!85}]
+    at (30mm,55.5mm) {\nomalumno};
+  \node[anchor=west,
+    font=\fontsize{15}{18}\selectfont\rmfamily\color{black!85}]
+    at (120mm,55.5mm) {\fecha};
+
+  \draw[ugblue!10, line width=0.3pt] (30mm,48mm) -- (180mm,48mm);
+
+  \node[anchor=west,
+    font=\fontsize{7.5}{9}\selectfont\sffamily\color{gray!52}]
+    at (30mm,42mm) {\MakeUppercase{Profesor}};
+  \node[anchor=west,
+    font=\fontsize{15}{18}\selectfont\rmfamily\color{black!85}]
+    at (30mm,34.5mm) {\nomprofesor};
+
+  \node[anchor=west,
+    font=\fontsize{7.5}{9}\selectfont\sffamily\color{gray!52}]
+    at (120mm,42mm) {\MakeUppercase{Calificaci\'on}};
+  \draw[ugblue!40, line width=0.5pt, rounded corners=1.2pt]
+    (120mm,26.5mm) rectangle (155mm,38.5mm);
+
+  \node[font=\fontsize{7.5}{9}\selectfont\sffamily\color{gray!36},
+        anchor=center] at (105mm,21mm)
+    {\MakeUppercase{Universidad de Guanajuato~·~Campus Guanajuato}};
+
+\end{tikzpicture}
+\end{document}

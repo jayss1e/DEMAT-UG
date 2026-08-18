@@ -1,0 +1,180 @@
+\documentclass[12pt,a4paper]{article}
+\newcommand{\grupo}{}
+% ------------------------------------------------------
+% Idioma y codificación
+% ------------------------------------------------------
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+% ------------------------------------------------------
+% Tipografía y formato
+% ------------------------------------------------------
+\usepackage{lmodern}    % Fuente Latin Modern
+\usepackage{microtype}  % Mejor espaciado
+\usepackage{xcolor}     % Colores
+\definecolor{UGblue}{RGB}{0,33,71}
+\definecolor{UGgold}{RGB}{212,175,55}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{titlesec}
+% Añade esto en el preámbulo (antes de \begin{document})
+\usepackage{bookmark}
+\bookmarksetup{open,numbered}
+\usepackage{tikz}
+\usetikzlibrary{calc,decorations.pathreplacing,angles,quotes}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{caption}
+
+% ------------------------------------------------------
+% Matemáticas
+% ------------------------------------------------------
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{mathrsfs}
+\usepackage{stmaryrd}
+\usepackage{physics}
+
+% ------------------------------------------------------
+% Otros paquetes útiles
+% ------------------------------------------------------
+\usepackage{enumitem}
+\usepackage{csquotes}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=UGblue,
+    urlcolor=UGgold,
+    citecolor=UGblue
+}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+\usepackage{multicol}
+
+% ------------------------------------------------------
+% Encabezados y pies de página
+% ------------------------------------------------------
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{Calculo Diferencial e Integral I}
+\rhead{Ricardo Leon Martinez}
+\cfoot{\thepage}
+% ------------------------------------------------------
+% Teoremas, definiciones, etc.
+% ------------------------------------------------------
+\theoremstyle{plain}
+\newtheorem{teo}{Teorema}[section]
+\newtheorem{prop}[teo]{Proposición}
+\newtheorem{lema}[teo]{Lema}
+\theoremstyle{definition}
+\newtheorem{defi}[teo]{Definición}
+\theoremstyle{remark}
+\newtheorem{ejemplo}[teo]{Ejemplo}
+\newtheorem{obs}[teo]{Observación}
+
+% ------------------------------------------------------
+% graficas
+% ------------------------------------------------------
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{siunitx}
+% ------------------------------------------------------
+% Comandos útiles
+% ------------------------------------------------------
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\pfrac}[2]{\left( \frac{#1}{#2} \right)} %parentesis
+\newcommand{\bfrac}[2]{\left[ \frac{#1}{#2} \right]} %corchetes
+\newcommand{\vecpar}[1]{\left( #1 \right)}
+% En el preámbulo
+\newcommand{\point}[2]{\left( #1, #2 \right)}
+\newcommand{\pointfrac}[4]{\left( \frac{#1}{#2}, \frac{#3}{#4} \right)}
+\newcommand{\pointmix}[4]{\left( #1, \frac{#3}{#4} \right)} % Primera coordenada normal, segunda fracción
+\renewcommand{\qedsymbol}{$\blacksquare$}
+\newcommand{\gt}{\ensuremath{>}}
+\newcommand{\lt}{\ensuremath{<}}
+\renewcommand{\div}{$÷$}
+
+\renewcommand{\baselinestretch}{1.2}
+\setlength{\parindent}{0pt}
+
+\newenvironment{solucion}
+{\par\noindent\textbf{Solución.}\ }
+{\hfill$\blacktriangleleft$\par}
+
+% ------------------------------------------------------
+% Datos personales (modificar según tarea)
+% ------------------------------------------------------
+\newcommand{\alumno}{Ricardo León Martínez}
+\newcommand{\materia}{Calculo Diferencial e Integral I}
+\newcommand{\profesor}{Fernando Nuñez Medina}
+\newcommand{\tarea}{Tarea 12}
+\newcommand{\fecha}{14/11/2025}
+
+\setlength{\parindent}{0pt}
+
+\begin{document}
+    \begin{center}
+        {\large\textbf{UNIVERSIDAD DE GUANAJUATO}}\\[0.3cm]
+        {\normalsize\textbf{DIVISIÓN DE CIENCIAS NATURALES Y EXACTAS}}\\
+        {\normalsize\textbf{CAMPUS GUANAJUATO}}\\[1cm]
+
+        {\Large\textbf{\tarea\ (\materia)}}\\[1cm]
+    \end{center}
+    \textbf{Nombre:} \alumno \hfill 
+    \textbf{Fecha:} \fecha \hfill 
+    \textbf{Calificación:} \rule{3cm}{0.4pt} \\[0.3cm]
+    \begin{enumerate}[left=0pt, label=\textbf{\arabic*.}]
+        \item Prueba que si $f:B\to\mathbb{R}$ es continua y $A\subset B$,
+        entonces $f|_{A}:A\to\mathbb{R}$ es continua.
+        \item \textbf{(Las funciones continuas mandan intervalos cerrados
+        y acotados en intervalos cerrados y acotados)} Prueba que si $f$ es continua en $[a,b]$,
+        entonces $f([a,b])=[m,M]$, donde $m=\min\{f(x):x\in[a,b]\}$ y $m=\max\{f(x):x\in[a,b]\}$.
+        \item Prueba que si $f:B\to C$ y $g:A\to B$ son funciones uniformemente continuas, entonces
+        $f\circ g:A\to C$ es uniformemente continua.
+        \item \textbf{(Derivada de las funciones trigonometruicas inversas)}
+        Usa la proposicion 62 (derivada de una funcion inversa) para mostrar lo siguiente
+            \begin{enumerate}
+                \item[(a)] $\arcsin^{\prime}(x)=\frac{1}{\sqrt{1-x^2}},\text{ } -1\lt x\lt 1$. 
+                \item[(b)] $\arccos^{\prime}(x)=\frac{-1}{\sqrt{1-x^2}},\text{ } -1\lt x\lt 1$.
+                \item[(c)] $\arctan^{\prime}(x)=\frac{1}{1+x^2},\text{ } -\infty\lt x\lt\infty$.
+                \item[(d)] $\arccot^{\prime}(x)=\frac{-1}{1+x^2},\text{ } -\infty\lt x\lt\infty$.
+                \item[(e)] $\arcsec^{\prime}(x)=
+                    \begin{cases*}
+                        \frac{1}{x\sqrt{x^2-1}},\text{ }x\gt1,\\
+                        \frac{-1}{x\sqrt{x^2-1}},\text{ }x\lt-1.
+                    \end{cases*}$
+                \item[(f)] $\arccsc^{\prime}(x)=
+                    \begin{cases*}
+                        \frac{-1}{x\sqrt{x^2-1}},\text{ }x\gt1,\\
+                        \frac{-1}{x\sqrt{x^2-1}},\text{ }x\lt-1.
+                    \end{cases*}$ 
+            \end{enumerate}
+        \item Encuentra los minimos y maximos globales de la funcion $f(x)=x^3-3x^2+1$
+                en el intervalo $[-1,1]$.
+        \item Supongamos que un diseñador de recipientes desea contruir un recipiente cilindrico
+        de carton sin tapa. Se requiere que el cilindro tenga volumen $V$ de $27\pi cm^3$.
+        ¿Cuales seran las dimensiones del cilindro que minimicen la cantidad de carton empleado
+        para construirlo?
+        \item Expresa los polinomios siguientes como polinomios de taylor
+            \begin{enumerate}
+                \item[(a)] $f(x)=5$.
+                \item[(b)] $f(x)=2x+1$.
+                \item[(c)] $f(x)=4x^2-9x+6$.
+                \item[(d)] $f(x)=x^{10}-2x^3+3x^2+7x-11$.
+            \end{enumerate}
+        \item Realiza lo siguiente:
+            \begin{enumerate}
+                \item[(a)] Calcula los polinomios de taylor centrados en 0 de la funcion
+                $\cos(x)$.
+                \item[(b)] Estimna el numero $\cos(2)$ con una exactitud de tres cifras decimales.
+            \end{enumerate}
+    \end{enumerate}
+\end{document}

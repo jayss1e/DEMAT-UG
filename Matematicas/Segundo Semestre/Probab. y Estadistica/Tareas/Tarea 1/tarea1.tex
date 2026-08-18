@@ -1,0 +1,318 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{ugmath}
+\usepackage{float}
+\usepackage{placeins}
+\usepackage[labelfont=bf,labelsep=space]{caption}
+\newcommand{\alumno}{Ricardo León Martínez}
+\newcommand{\materia}{Elementos de Probabilidad y Estadistica}
+\newcommand{\profesor}{Josué Daniel Vázquez Becerra}
+\newcommand{\tarea}{Tarea 1}
+\newcommand{\fecha}{10/2/2026}
+
+\begin{document}
+    \begin{center}
+    {\large\textbf{UNIVERSIDAD DE GUANAJUATO}}\\[0.3cm]
+    {\normalsize\textbf{DIVISIÓN DE CIENCIAS NATURALES Y EXACTAS}}\\
+    {\normalsize\textbf{CAMPUS GUANAJUATO}}\\[1cm]
+
+    {\Large\textbf{\tarea\ (\materia)}}\\[1cm]
+    \end{center}
+
+    \textbf{Nombre:} \alumno \hfill 
+    \textbf{Fecha:} \fecha \hfill 
+    \textbf{Calificación:} \rule{3cm}{0.4pt} \\[0.3cm]
+
+    Parte I. Conteo
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 1}]
+        Cierta semana, Fernanda desea salir a cenar cada noche de lunes a viernes a algunos de sus
+        siete restaurantes favoritos de Guanajuato.
+        \begin{enumerate}
+            \item[(a)] Si Fernanada no desea cenar en un mismo restaurante más de una vez, ¿de cuántas
+            maneras diferentes puede organizar sus salidas?
+            \item[(b)] Fernanda reconsideró su postura, y estaría dispuesta a cenar en el mismo lugar más
+            de una vez, bajo la condición de no hacerlo en días consecutivos. ¿De cuantas maneras diferentes
+            puede hacer esto?
+        \end{enumerate}
+    \end{mdframed}
+
+    \begin{solucion}
+        \begin{enumerate}
+            \item[(a)]Si Fernanada no desea cenar en un mismo restaurante más de una vez, ¿de cuántas
+            maneras diferentes puede organizar sus salidas?\\
+            Son 5 días distintos y hay 7 restaurantes, sin repetir. Se usa la formaula de seleccion
+            ordenada sin reemplazo
+            \begin{align*}
+                V=\frac{n!}{(n-k)!}
+            \end{align*}
+            Aquí $n=7$,$k=5$
+            \begin{align*}
+                V=\frac{7!}{2!}=2520
+            \end{align*}
+            Por lo tanto hay 2520 maneras de organizar su salida.
+
+            \item[(b)] Fernanda reconsideró su postura, y estaría dispuesta a cenar en el mismo lugar más
+            de una vez, bajo la condición de no hacerlo en días consecutivos. ¿De cuantas maneras diferentes
+            puede hacer esto?\\
+            Se permite repetir, pero no en dias consecutivos, en el primer dia hay 7 opciones. Cada
+            dia siguiente no puede repetir el anterior por lo tanto cada por cada dia hay 6 opciones.
+            Así, por el principio multiplicativo
+            \begin{align*}
+                7\cdot6^{4}=7\cdot1296=9072.
+            \end{align*}
+            Por lo tanto hay 9072 maneras de hacer esto.
+        \end{enumerate}
+    \end{solucion}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 2}]
+        Una baraja de póquer contiene un total de 52 cartas, 12 cartas distintas por cada tipo entre corazones,
+        tréboles, diamantes y picas. Para cierto juego, Sofía, Luisa, Rubén y Marco recibirán una mano de 13 cartas
+        cada uno.
+        \begin{enumerate}
+            \item[(a)] ¿De cuántas maneras distintas puede Sofía recibir su mano?
+            \item[(b)] ¿De cuántas maneras distintas pueden los cuatro jugadores recibir sus manos?
+            \item[(c)] Explique el por qué la respuesta a la parte (b) no es la respuesta a la parte (a) elevada
+            a la cuarta potencia.
+        \end{enumerate}
+    \end{mdframed}
+
+    \begin{solucion}
+        \begin{enumerate}
+            \item[(a)]¿De cuántas maneras distintas puede Sofía recibir su mano?\\
+            Sofia tiene 13 cartas de una baraja de 52, y el orden no importa. Es una selccion no rodenada sin
+            reemplazo
+            \begin{align*}
+                \binom{52}{13}
+            \end{align*}
+            Por lo tanto hay $\binom{52}{13}$ maneras distintas de recibir su mano.
+            \item[(b)] ¿De cuántas maneras distintas pueden los cuatro jugadores recibir sus manos?\\
+            Las manos se reparten simultaneamente, sin importar el orden de las cartas en cada jugador, viendolo
+            por etapas. Mano de sofia: $\binom{52}{13}$, mano de luisa quedando 39 cartas $\binom{39}{13}$,
+            mano de ruben quedando 26 cartas $\binom{26}{13}$ y por ultimo la mano de marco quedando 13 cartas
+            $\binom{13}{13}=1$. Así, por el principio multiplicativo
+            \begin{align*}
+                \binom{52}{13}\binom{39}{13}\binom{26}{13}\binom{13}{13}
+            \end{align*}
+            Por lo tanto hay $\binom{52}{13}\binom{39}{13}\binom{26}{13}\binom{13}{13}$ maneras distintas
+            de recibir sus manos.
+            \item[(c)] Explique el por qué la respuesta a la parte (b) no es la respuesta a la parte (a) elevada
+            a la cuarta potencia.\\
+            Porque las elecciones no son idependientes. Despues de repartir la mano de sofia, ya no quedan
+            52 cartas, sino 39, despues 26 y luego 13. Elevar $\binom{52}{13}$ a la cuerta implicaria suponer
+            que cada jugador elige sus 13 cartas de una baraja completa, lo cual no ocurre.
+        \end{enumerate}
+    \end{solucion}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 3}]
+        Supongamos que queremos formar una fila de ocho personas identificadas por letras $A,B,C,D,E,\\
+        F,G,H$.
+        ¿De cuántas maneras distintas podemos hacer esto en cada un de los siguientes casos?
+        \begin{enumerate}
+            \item[(a)] Si no hay ninguna restriccion sobre el orden de la fila.
+            \item[(b)] Si las personas $D$ y $H$ deben estar sentadas de manera consecutiva.
+            \item[(c)] Si $A,B,C,D$ son hombres, mientras que $E,F,G,H$ son mujeres, y ninguna cantidad de mujeres
+            puede estar formada de maneras consecutivas.
+            \item[(d)] Si hay cuatro parejas (digamos $A$ y $H$, $B$ y $G$, $C$ y $F$, $D$ y $E$), y cada persona
+            debe estar sentada junto con su pareja. 
+        \end{enumerate}
+    \end{mdframed}
+
+    \begin{solucion}
+        \begin{enumerate}
+            \item[(a)] Si no hay ninguna restriccion sobre el orden de la fila.\\
+            Se trata de ordenar 8 personas distinas en una fila
+            \begin{align*}
+                8!
+            \end{align*}
+            Asi, hay $8!$ maneras distintas.
+            \item[(b)] Si las personas $D$ y $H$ deben estar sentadas de manera consecutiva.\\
+            Considerando el bloque $(D,H)$ como una sola unidad. El bloque puede estar como
+            $DH$ o $HD$ osea 2 formas. Juntos con las otras 6 personas, hay 7 objetos a ordenar.
+            Entonces
+            \begin{align*}
+                7!\cdot2
+            \end{align*}
+            Por lo tanto hay $7!\cdot2$ maneras distintas.
+            \item[(c)] Si $A,B,C,D$ son hombres, mientras que $E,F,G,H$ son mujeres, y ninguna cantidad de mujeres
+            puede estar formada de maneras consecutivas.\\
+            Primero acomodamos a los 5 hombres $A,B,C,D$
+            \begin{align*}
+                4!
+            \end{align*}
+            Esto genera 5 espacios posibles donde colocar mujeres
+            \begin{align*}
+                \_H\_H\_H\_H\_
+            \end{align*}
+            Elegimos 4 de esos 5 espacios para colocar mujeres
+            \begin{align*}
+                \binom{5}{4}
+            \end{align*}
+            Luego ordenamos a las 4 mujeres distintas
+            \begin{align*}
+                4!
+            \end{align*}
+            Por el principio multiplicativo
+            \begin{align*}
+                4!\cdot\binom{5}{4}\cdot4!
+            \end{align*}
+            Así, hay $4!\binom{5}{4}4!$ maneras distintas.
+            \item[(d)] Si hay cuatro parejas (digamos $A$ y $H$, $B$ y $G$, $C$ y $F$, $D$ y $E$), y cada persona
+            debe estar sentada junto con su pareja.\\
+            Cada pareja se considera como un bloque. Hay 4 bloques y se pueden ordenar de $4!$ formas.
+            Dentro de cada pareja hay 2 ordenes posibles. Entonces
+            \begin{align*}
+                4!\cdot2^{4}
+            \end{align*}
+            Por lo tanto hay $4!\cdot2^{4}$ maneras distintas.
+        \end{enumerate}
+    \end{solucion}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 4}]
+        Un grupo de cuatro estudiantes quiere ordenar dos pizzas de Peter´s Pizza. Cada pizza
+        puede ser pequeña, mediana o grande. Además, cada pizza puede llevar desde cero hasta cinco
+        ingredientes (adicionales a la salsa de tomate y queso de la base). ¿De cuántas maneras posibles
+        pueden ordenar sus dos pizzas?
+    \end{mdframed}
+
+    \begin{solucion}
+        Para cada pizza hay dos decisiones independientes. Primero se elige el tamaño,
+        que puede ser pequeña, mediana o grande, lo cual da 3 posibilidades. Despues se eligen
+        los ingredientes adicionales, como hay 5 ingredientes posibles y se puede escoger cualquiera
+        de ellos o ninguno, el numero de elecciones posibles de ingredientes es $2^{5}$. Por el
+        principio multiplicativo, una sola pizza puede pedirse de $3\cdot2^{5}=96$ maneras distintas.
+        Como se desean ordenar dos pizzas y cada una se elige de manera independiente de la otra, el
+        número total de formas de hacer el pedido es el cuadrado de esa cantidad, es decir, 
+        \begin{align*}
+            96^{2}=9216
+        \end{align*}
+        Por lo tanto, pueden ordenar sus dos pizzas de 9216 maneras distintas.
+    \end{solucion}
+
+    Para los siguientes tres ejercicios, basta dar argumentos combinatorios (narrativos).
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 5}]
+        Demuestre la siguiente igualdad
+        \begin{align*}
+            \binom{2n}{n}=\binom{n}{0}^{2}+\binom{n}{1}^{2}+\cdots+\binom{n}{n}^{2}
+        \end{align*}
+    \end{mdframed}
+
+    \begin{proof}
+        Consideremos un conjunto de $2n$ elementos, particionado en dos subconjuntos disjuntos
+        de tamaño $n$ cada uno. Por ejemplo, un conjunto $A$ con $n$ elementos y un conjunto $B$
+        con $n$ elementos, con $A\cap B=\emptyset$. Elegimos directamente $n$ elementos de
+        un conjunto de $2n$ elementos. El número de formas de hacerlo es
+        \begin{align*}
+            \binom{2n}{n}.
+        \end{align*}
+        Elegimos primero cuantos elementos tomar del conjunto $A$. Sea $k$ el número de elementos elegidos
+        de $A$, con $0\leq k\leq n$. Entonces necesariamente se deben elegir $n-k$ elementos de $B$.
+        El numero de formas de elegir $k$ elementos de $A$ es
+        \begin{align*}
+            \binom{n}{k}.
+        \end{align*}
+        El número de formas de elegir $n-k$ elementos de $B$ es
+        \begin{align*}
+            \binom{n}{n-k}.
+        \end{align*}
+        Por el principio multiplicativo
+        \begin{align*}
+            \binom{n}{k}\binom{n}{n-k}
+        \end{align*}
+        formas de hacer la eleccion. Al permitir que $k$ recorra todos los valores de 0 a $n$, el número
+        total de formas es
+        \begin{align*}
+            \sum_{k=0}^{n}\binom{n}{k}\binom{n}{n-k}
+        \end{align*}
+        Ambos procedimientos cuentan el mismo conjunto, por lo que los resultados son iguales. Así,
+        \begin{align*}
+            \binom{2n}{n}=\sum_{k=0}^{n}\binom{n}{k}\binom{n}{n-k}=\sum_{k=0}^{n}\binom{n}{k}^{2}.
+        \end{align*}
+    \end{proof}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 6}]
+        Demuestre la igualdad del bastón de Hockey
+        \begin{align*}
+            \binom{n+1}{k+1}=\binom{k}{k}+\binom{k+1}{k}+\cdots+\binom{n}{k}
+        \end{align*}
+    \end{mdframed}
+
+    \begin{proof}
+        Fijemos $n$ y $k$ con $0\leq k\leq n$. Consideremos un conjunto con $n+1$ elementos
+        y fijemos a uno de ellos, al que llamaremos $x$. Elegimos directamente $k+1$ elementos de un conjunto
+        con $n+1$ elementos. El numero de formas de hacerlo es
+        \begin{align*}
+            \binom{n+1}{k+1}.
+        \end{align*}
+        Contamos los subconjuntos de tamaño $k+1$ segun la posicion de $x$. Supongamos que el subconjunto elegido,
+        el elemento $x$ ocupa la posición mas grande al ordenar los elementos de manera fija. Entonces
+        los otros $k$ elementos deben elegirse entre los elementos que son menores que $x$. Si $x$ es el
+        elemento numero $1+j$, entonces hay exactamente $j$ elementos menores que el, y el numero de formas de
+        elegir los otros $k$ elementos es
+        \begin{align*}
+            \binom{j}{k}.
+        \end{align*}
+        Al permitir que $j$ recorra todos los valores desde $k$ hasta $n$, se obtiene todas las posibilidades,
+        y el numero total de subconjuntos es
+        \begin{align*}
+            \binom{k}{k}+\binom{k+1}{k}+\cdots+\binom{n}{k}
+        \end{align*}
+        Ambos procedimientos cuentan el mismo conjunto de subconjuntos de tamaño $k+1$. Por lo que
+        los resultados son iguales
+        \begin{align*}
+            \binom{n+1}{k+1}=\binom{k}{k}+\binom{k+1}{k}+\cdots+\binom{n}{k}.
+        \end{align*}
+    \end{proof}
+
+    \begin{mdframed}[style=mdbluebox,frametitle={Ejercicio 7}]
+        Consideremos una carrera atlética con $m$ corredores en la que lso empates simultáneos son
+        posibles. Por ejemplo, si hubiera 7 corredores, es posible tener 3 en primer lugar, 2 en segundo
+        y 1 en tercero. Denotemos por $N(m)$ el número total de posibles resultados. Notemos que $N(1)=1$
+        mientras que $N(2)=3$.
+        \begin{enumerate}
+            \item[(a)] Enliste todos los posibles resultados para $m=3$.
+            \item[(b)] Tomemos $N(0):=1$. Demuestre que se cumplen las relaciones recursivas
+            \begin{align*}
+                N(m)=\sum_{k=1}^{m}\binom{m}{k}N(m-k)=\sum_{k=0}^{m-1}\binom{m}{m-k}N(k)
+            \end{align*} 
+        \end{enumerate}
+    \end{mdframed}
+    \begin{solucion}
+        \begin{enumerate}
+            \item[(a)] Enliste todos los posibles resultados para $m=3$.\\
+            Para $m=3$, hay tres posibles resultados. No hay empates: $1^{\circ},2^{\circ},3^{\circ}$.
+            Empate de dos corredores: 2 en primer lugar y 1 en segundo y 1 en primer lugar y 2 en segundo.
+            Empate total: 3 corredores en primer lugar. Por lo tanto, los tipos posibles son
+            \begin{align*}
+                (1,1,1), \quad (2,1), \quad (1,2), \quad (3).
+            \end{align*}
+            $(1,1,1)$: $3!=6$ resultados. $(2,1)$: elegir los 2 del empate $\binom{3}{2}=3$. $(1,2)$:
+            elegir el que queda solo $\binom{3}{1}=3$. (3): 1 resultado. Entonces
+            \begin{align*}
+                N(3)=6+3+3+1=13.
+            \end{align*}
+            \item[(b)] Tomemos $N(0):=1$. Demuestre que se cumplen las relaciones recursivas\\
+            Sea $k$ el número de corredores que ocupan el primer lugar, con
+            \begin{align*}
+                1\leq k\leq m.
+            \end{align*}
+            Elegimos cuales $k$ corredores quedan en primer lugar, esto puede hacerse de $\binom{m}{k}$
+            maneras. Los $m-k$ corredores restantes pueden ordenarse en cualquier resultado valido, con
+            empates permitidos. Por definicion, eso puede hacerse de $N(m-k)$ maneras. Por el principio
+            multiplicativo, para un valor fijo de $k$ hay
+            \begin{align*}
+                \binom{m}{k}N(m-k)
+            \end{align*}
+            resultados posibles. Al permitir que $k$ recorra todos los valores de 1 a $m$, se obtienen
+            todos los resultados posibles, sin omisiones ni repeticiones. Por lo tanto,
+            \begin{align*}
+                N(m)=\sum_{k=1}^{m}\binom{m}{k}N(m-k).
+            \end{align*}
+            Haciendo el cambio de indicie $j=m-k$, cuando $k=1$ se tiene $j=m-1$ y cuando $k=m$ se tiene
+            $j=0$. Entonces,
+            \begin{align*}
+                 N(m)=\sum_{j=0}^{m-1}\binom{m}{m-j}N(j).
+            \end{align*}
+        \end{enumerate}
+    \end{solucion}
+\end{document}

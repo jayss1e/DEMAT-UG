@@ -1,0 +1,23 @@
+\documentclass[12pt]{article}
+
+\usepackage[margin=1.5cm]{geometry}
+
+\begin{document}
+
+\section{Reto Épico: La Maldición de la Hidra (o test de estrés para nuestro pato)
+}
+
+Al ejecutar el programa se puede observar que el ciclo encargado de recorrer el vector de cabezas nunca termina y el programa se queda ejecutándose indefinidamente. Esto ocurre porque el vector que contiene las cabezas de la Hidra se está pasando por referencia a la función \texttt{combatirHidra}.
+
+Al pasar el vector por referencia, cualquier modificación que se haga dentro de la función afecta directamente al vector original. Dentro del ciclo \texttt{for}, en cada iteración se elimina una cabeza, pero también se agregan nuevas cabezas al mismo vector usando \texttt{push\_back}. Esto provoca que el tamaño del vector aumente constantemente.
+
+El problema principal es que la condición del ciclo \texttt{for} depende del tamaño del vector (\texttt{cabezas.size()}). Como el tamaño del vector sigue creciendo mientras el ciclo se está ejecutando, la condición de paro nunca se cumple y el ciclo se vuelve infinito. Por esta razón, el programa nunca termina y es necesario detenerlo manualmente.
+
+Para solucionar este problema, se elimina el símbolo \texttt{\&} en el parámetro de la función, de modo que el vector se pase por valor en lugar de por referencia. Esto significa que la función trabaja con una copia del vector original y no con el vector real.
+
+Al usar una copia, los cambios que se hacen dentro de la función no afectan al vector original. Aunque el vector local siga creciendo dentro del ciclo, este crecimiento no provoca un ciclo infinito en el programa principal, y la función puede terminar correctamente. De esta manera, el ciclo logra completar su ejecución y el programa finaliza sin problemas.
+
+En conclusión, el error se debía a modificar directamente un vector que también se usaba para controlar la condición de un ciclo. Al pasar el vector por valor, se evita este comportamiento y el programa funciona como se esperaba.
+
+\end{document}
+

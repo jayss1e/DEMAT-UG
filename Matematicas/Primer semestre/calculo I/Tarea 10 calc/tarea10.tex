@@ -1,0 +1,470 @@
+\documentclass[12pt,a4paper]{article}
+\newcommand{\grupo}{}
+% ------------------------------------------------------
+% Idioma y codificación
+% ------------------------------------------------------
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+% ------------------------------------------------------
+% Tipografía y formato
+% ------------------------------------------------------
+\usepackage{lmodern}    % Fuente Latin Modern
+\usepackage{microtype}  % Mejor espaciado
+\usepackage{xcolor}     % Colores
+\definecolor{UGblue}{RGB}{0,33,71}
+\definecolor{UGgold}{RGB}{212,175,55}
+\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{titlesec}
+% Añade esto en el preámbulo (antes de \begin{document})
+\usepackage{bookmark}
+\bookmarksetup{open,numbered}
+\usepackage{tikz}
+\usetikzlibrary{calc,decorations.pathreplacing,angles,quotes}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{caption}
+
+% ------------------------------------------------------
+% Matemáticas
+% ------------------------------------------------------
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{mathrsfs}
+\usepackage{stmaryrd}
+\usepackage{physics}
+
+% ------------------------------------------------------
+% Otros paquetes útiles
+% ------------------------------------------------------
+\usepackage{enumitem}
+\usepackage{csquotes}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=UGblue,
+    urlcolor=UGgold,
+    citecolor=UGblue
+}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+\usepackage{multicol}
+
+% ------------------------------------------------------
+% Encabezados y pies de página
+% ------------------------------------------------------
+\usepackage{fancyhdr}
+\setlength{\headheight}{14.49998pt}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{Calculo Diferencial e Integral I}
+\rhead{Ricardo Leon Martinez}
+\cfoot{\thepage}
+% ------------------------------------------------------
+% Teoremas, definiciones, etc.
+% ------------------------------------------------------
+\theoremstyle{plain}
+\newtheorem{teo}{Teorema}[section]
+\newtheorem{prop}[teo]{Proposición}
+\newtheorem{lema}[teo]{Lema}
+\theoremstyle{definition}
+\newtheorem{defi}[teo]{Definición}
+\theoremstyle{remark}
+\newtheorem{ejemplo}[teo]{Ejemplo}
+\newtheorem{obs}[teo]{Observación}
+
+% ------------------------------------------------------
+% Comandos útiles
+% ------------------------------------------------------
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\pfrac}[2]{\left( \frac{#1}{#2} \right)} %parentesis
+\newcommand{\bfrac}[2]{\left[ \frac{#1}{#2} \right]} %corchetes
+\newcommand{\vecpar}[1]{\left( #1 \right)}
+% En el preámbulo
+\newcommand{\point}[2]{\left( #1, #2 \right)}
+\newcommand{\pointfrac}[4]{\left( \frac{#1}{#2}, \frac{#3}{#4} \right)}
+\newcommand{\pointmix}[4]{\left( #1, \frac{#3}{#4} \right)} % Primera coordenada normal, segunda fracción
+\renewcommand{\qedsymbol}{$\blacksquare$}
+\newcommand{\gt}{\ensuremath{>}}
+\newcommand{\lt}{\ensuremath{<}}
+\renewcommand{\div}{$÷$}
+
+\renewcommand{\baselinestretch}{1.2}
+\setlength{\parindent}{0pt}
+
+\newenvironment{solucion}
+{\par\noindent\textbf{Solución.}\ }
+{\hfill$\blacktriangleleft$\par}
+
+% ------------------------------------------------------
+% Datos personales (modificar según tarea)
+% ------------------------------------------------------
+\newcommand{\alumno}{Ricardo León Martínez}
+\newcommand{\materia}{Calculo Diferencia e Integral I}
+\newcommand{\profesor}{Fernando Nuñez Medina}
+\newcommand{\tarea}{Tarea 10}
+\newcommand{\fecha}{31/10/2025}
+
+\setlength{\parindent}{0pt}
+
+\begin{document}
+\begin{center}
+    {\large\textbf{UNIVERSIDAD DE GUANAJUATO}}\\[0.3cm]
+    {\normalsize\textbf{DIVISIÓN DE CIENCIAS NATURALES Y EXACTAS}}\\
+    {\normalsize\textbf{CAMPUS GUANAJUATO}}\\[1cm]
+
+    {\Large\textbf{\tarea\ (\materia)}}\\[1cm]
+\end{center}
+
+\textbf{Nombre:} \alumno \hfill 
+\textbf{Fecha:} \fecha \hfill 
+\textbf{Calificación:} \rule{3cm}{0.4pt} \\[0.3cm]
+
+\begin{enumerate}[left=0pt, label=\textbf{\arabic*.}]
+    \item \textbf{(Potencias racionales)} Prueba que el inciso (c) del ejercicio 1 de la tarea 9
+    tambien se cumple si $m$ es un numero entero, es decir, prueba que si $x$ es un numero real,
+    $m$ es un numero entero y $n$ es un numero natural tales que $(x^m)^{1/n}$ y $(x^{1/n})^m$
+    estan definidos, entonces
+        \begin{align*}
+            (x^m)^{\frac{1}{n}}=(x^{\frac{1}{n}})^m.
+        \end{align*}
+    \begin{proof}
+    Sean \( x \in \mathbb{R} \), \( m \in \mathbb{Z} \) y \( n \in \mathbb{N} \) tales que las expresiones \((x^m)^{1/n}\) y \((x^{1/n})^m\) estén definidas.
+
+    \textbf{Caso 1: \( m \geq 0 \).}
+
+    En este caso, \( m \) es un número natural o cero.
+
+    Por definición de potencia entera positiva, tenemos
+    \[
+    x^m = \underbrace{x \cdot x \cdot \ldots \cdot x}_{m \text{ veces}}.
+    \]
+    Luego, aplicando la potencia racional \( 1/n \), se obtiene:
+    \[
+    (x^m)^{1/n} = \sqrt[n]{x^m}.
+    \]
+    Por otra parte,
+    \[
+    x^{1/n} = \sqrt[n]{x} \implies (x^{1/n})^m = (\sqrt[n]{x})^m = \underbrace{\sqrt[n]{x} \cdot \ldots \cdot \sqrt[n]{x}}_{m \text{ veces}} = \sqrt[n]{x^m}.
+    \]
+    Por lo tanto,
+    \[
+    (x^m)^{1/n} = (x^{1/n})^m \quad \text{para todo } m \ge 0.
+    \]
+
+    \textbf{Caso 2: \( m < 0 \).}
+
+    Sea \( m = -k \) con \( k \in \mathbb{N} \).  
+    Entonces:
+    \[
+    (x^m)^{1/n} = (x^{-k})^{1/n} = \left( \frac{1}{x^k} \right)^{1/n} = \frac{1}{(x^k)^{1/n}}.
+    \]
+    Por otra parte,
+    \[
+    (x^{1/n})^m = (x^{1/n})^{-k} = \frac{1}{(x^{1/n})^k}.
+    \]
+    Pero, del caso anterior (válido para \( k > 0 \)):
+    \[
+    (x^{1/n})^k = (x^k)^{1/n}.
+    \]
+    Por sustitución:
+    \[
+    (x^{1/n})^{-k} = \frac{1}{(x^k)^{1/n}}.
+    \]
+    Por tanto,
+    \[
+    (x^m)^{1/n} = (x^{1/n})^m.
+    \]
+
+    Esto es que, para todo \( x \in \mathbb{R} \), \( m \in \mathbb{Z} \) y \( n \in \mathbb{N} \) tales que ambas expresiones estén definidas, se cumple
+
+    \[
+    (x^m)^{1/n} = (x^{1/n})^m.
+    \]
+    \end{proof}
+    \item Sea $f:I\to J$ una funcion sobre, donde $I$ y $J$ son intervalos. Prueba lo siguiente:
+        \begin{enumerate}[label=(\alph*)]
+            \item Si $f$ es creciente, entonces $f$ es invertible y $f^{-1}$ es creciente.
+            \item Si $f$ es decreciente, entonces $f$ es invertible y $f^{-1}$ es decreciente.
+        \end{enumerate}
+    \begin{proof}
+        Sea \(f:I\to J\) con \(I,J\) intervalos y \(J=f(I)\) el \emph{rango} de \(f\).
+
+        \textbf{(a) \(f\) estrictamente creciente \(\Rightarrow\) \(f\) es invertible y \(f^{-1}\) es creciente.}
+
+        \textit{Inyectividad.} Supongamos \(x_1,x_2\in I\) y \(f(x_1)=f(x_2)\). Si \(x_1\neq x_2\), sin pérdida de generalidad supongamos \(x_1<x_2\). Como \(f\) es creciente, de \(x_1<x_2\) se sigue \(f(x_1)<f(x_2)\), lo cual contradice \(f(x_1)=f(x_2)\). Por tanto \(x_1=x_2\). Así \(f\) es inyectiva. Como \(f\) es inyectiva y su imagen es \(J\), existe la función inversa \(f^{-1}:J\to I\).
+
+        \textit{Monotonía de \(f^{-1}\).} Sean \(y_1,y_2\in J\) tales que \(y_1<y_2\). Definimos \(x_1=f^{-1}(y_1)\) y \(x_2=f^{-1}(y_2)\), de modo que \(f(x_1)=y_1\) y \(f(x_2)=y_2\). Supongamos, por contrapositiva, que \(x_1\ge x_2\). Si \(x_1=x_2\) entonces \(y_1=f(x_1)=f(x_2)=y_2\), contradicción con \(y_1<y_2\). Si \(x_1>x_2\), por la estricta creciente de \(f\) se tendría \(f(x_1)>f(x_2)\), es decir \(y_1>y_2\), nuevamente contradicción. Por tanto no puede suceder \(x_1\ge x_2\); necesariamente \(x_1<x_2\). Esto muestra que \(y_1<y_2\) implica \(f^{-1}(y_1)=x_1<f^{-1}(y_2)=x_2\). Es decir, \(f^{-1}\) es estrictamente creciente en \(J\).
+
+        \textbf{(b) \(f\) estrictamente decreciente \(\Rightarrow\) \(f\) es invertible y \(f^{-1}\) es decreciente.}
+
+        El argumento es análogo al caso (a) cambiando las desigualdades.
+
+        \textit{Inyectividad.} Si \(x_1<x_2\) y \(f\) es decreciente entonces \(f(x_1)>f(x_2)\). Por tanto no pueden existir \(x_1\neq x_2\) con \(f(x_1)=f(x_2)\); así \(f\) es inyectiva y admite inversa \(f^{-1}:J\to I\).
+
+        \textit{Monotonía de \(f^{-1}\).} Sean \(y_1,y_2\in J\) con \(y_1<y_2\) y \(x_1=f^{-1}(y_1),\ x_2=f^{-1}(y_2)\). Si se tuviera \(x_1\le x_2\) entonces por la decrecencia de \(f\) seguiría \(f(x_1)\ge f(x_2)\), es decir \(y_1\ge y_2\), contradicción. Por tanto necesariamente \(x_1>x_2\). Así \(y_1<y_2\) implica \(f^{-1}(y_1)>f^{-1}(y_2)\), esto es, \(f^{-1}\) es decreciente.
+
+    \end{proof}
+    \item Da un ejemplo de una funcion $f:\mathbb{R}\to\mathbb{R}$ que sea continua solo en un
+    punto $x=0$,
+    Definimos
+    \[
+    f(x)=
+    \begin{cases}
+    x, & x\in\mathbb{Q},\\[4pt]
+    0, & x\in\mathbb{R}\setminus\mathbb{Q}.
+    \end{cases}
+    \]
+    \begin{proof}
+        Demostraremos que \(f\) es continua en \(0\) y que es discontinua en todo \(a\neq 0\).
+
+        \textit{Continuidad en \(0\).} Sea \(\varepsilon>0\). Tomemos \(\delta=\varepsilon\). Si \(|x-0|<\delta\) entonces:
+
+        - si \(x\in\mathbb{Q}\), \(f(x)=x\) y por tanto \(|f(x)-f(0)|=|x-0|<\delta=\varepsilon\);
+        - si \(x\notin\mathbb{Q}\), \(f(x)=0\) y \(|f(x)-f(0)|=0<\varepsilon\).
+
+        Así, para todo \(\varepsilon>0\) existe \(\delta=\varepsilon\) tal que \(|x-0|<\delta\Rightarrow |f(x)-f(0)|<\varepsilon\). Por lo tanto \(f\) es continua en \(0\).
+
+        \textit{Discontinuidad en \(a\neq 0\).} Sea \(a\in\mathbb{R}\) con \(a\neq 0\). Consideramos dos casos:
+
+        1. \(a\in\mathbb{Q}\). Entonces \(f(a)=a\neq 0\). Existe una sucesión de números irracionales \((y_n)\) tal que \(y_n\to a\). Para cada \(n\) se tiene \(f(y_n)=0\). Por tanto \(\lim_{n\to\infty}f(y_n)=0\neq a=f(a)\). Esto muestra que \(f\) no es continua en \(a\).
+
+        2. \(a\notin\mathbb{Q}\). Entonces \(f(a)=0\). Existe una sucesión de números racionales \((r_n)\) con \(r_n\to a\). Para cada \(n\) se tiene \(f(r_n)=r_n\) y por tanto \(\lim_{n\to\infty}f(r_n)=\lim_{n\to\infty}r_n=a\neq 0=f(a)\). De nuevo \(f\) no es continua en \(a\).
+
+        En ambos subcasos \(f\) es discontinua en \(a\). Por tanto \(f\) es discontinua en todo punto \(a\neq 0\).
+
+        por lo que $f(x)$ es continua solo en $x=0$ y discontinua en todo $x\neq0$.
+
+    \end{proof}
+    \item Muestra que el rango de un polinomio de grado impar es todo $\mathbb{R}$.
+    \begin{proof}
+        Sea \(p(x)=a_n x^n + a_{n-1}x^{n-1}+\cdots+a_0\) un polinomio real con coeficientes \(a_i\in\mathbb{R}\) y \(\deg p=n\) impar. Es decir, \(n=2k+1\) para algún \(k\in\mathbb{N}_0\), y \(a_n\neq 0\).
+
+        1. \textit{Comportamiento en los extremos.} Como \(n\) es impar, se tiene
+        \[
+        \lim_{x\to+\infty} a_n x^n = 
+        \begin{cases}
+        +\infty, & a_n>0,\\[4pt]
+        -\infty, & a_n<0,
+        \end{cases}
+        \qquad
+        \lim_{x\to-\infty} a_n x^n =
+        \begin{cases}
+        -\infty, & a_n>0,\\[4pt]
+        +\infty, & a_n<0.
+        \end{cases}
+        \]
+        Dado que los términos de menor grado son de orden inferior frente a \(a_n x^n\), se concluye que
+        \[
+        \lim_{x\to+\infty} p(x)=
+        \begin{cases}
+        +\infty, & a_n>0,\\[4pt]
+        -\infty, & a_n<0,
+        \end{cases}
+        \qquad
+        \lim_{x\to-\infty} p(x)=
+        \begin{cases}
+        -\infty, & a_n>0,\\[4pt]
+        +\infty, & a_n<0.
+        \end{cases}
+        \]
+        En particular, los límites en \(+\infty\) y \(-\infty\) tienen signos opuestos.
+
+        2. \textit{Aplicación del Teorema del Valor Intermedio (TVI).} Sea \(y\in\mathbb{R}\) arbitrario. Consideremos la función continua
+        \[
+        q(x):=p(x)-y.
+        \]
+        Por la observación anterior existen \(X_1,X_2\in\mathbb{R}\) con \(X_1<X_2\) tales que \(q(X_1)\) y \(q(X_2)\) tienen signos opuestos (por ejemplo, tomar \(X_1\) suficientemente negativo y \(X_2\) suficientemente positivo). Concretamente, si \(a_n>0\) entonces \(q(X_1)<0\) para \(X_1\) muy negativo y \(q(X_2)>0\) para \(X_2\) muy positivo; el caso \(a_n<0\) es análogo intercambiando signos.
+
+        Como \(q\) es continua en el intervalo \([X_1,X_2]\) y \(q(X_1)\cdot q(X_2)<0\), el Teorema del Valor Intermedio garantiza la existencia de \(c\in(X_1,X_2)\) tal que
+        \[
+        q(c)=0.
+        \]
+        Es decir, \(p(c)-y=0\), o bien \(p(c)=y\).
+
+        3. \textit{Conclusión.} Dado que \(y\in\mathbb{R}\) era arbitrario, para cada \(y\) existe \(c\in\mathbb{R}\) con \(p(c)=y\). Así la imagen (rango) de \(p\) es \(\mathbb{R}\).
+    \end{proof}
+    \item \textbf{(Derivada de la funcion exponencial)} Como comentamos anteriormente, la funcion
+    exponencial $e^{x}$ es la funcion inversa de la funcion logaritmo natural $\ln(x)$. Sabiendo
+    que para $x\gt0$,
+        \begin{align*}
+            \ln^\prime(x)=\frac{1}{x},
+        \end{align*}
+    Prueba que la derivada de la funcion exponencial $e^x$ es la funcion exponencial $e^x$.
+    \begin{proof}
+        Sea \(e^x:\mathbb{R}\to(0,\infty)\) la función inversa de \(\ln:(0,\infty)\to\mathbb{R}\). Entonces para todo \(x\in\mathbb{R}\) se cumple
+        \[
+        \ln(e^x)=x.
+        \]
+
+        La función \(\ln\) es diferenciable en todo \(t>0\) y su derivada es \(\ln'(t)=\dfrac{1}{t}\). En particular, \(\ln'(e^x)=\dfrac{1}{e^x}\) y esta cantidad es distinta de cero para todo \(x\in\mathbb{R}\). Por el teorema de la derivada de la función inversa, se tiene que \(e^x\) es diferenciable en todo \(x\in\mathbb{R}\) y su derivada viene dada por
+        \[
+        (e^x)'=\frac{1}{\ln'(e^x)}.
+        \]
+        Sustituyendo \(\ln'(e^x)=\dfrac{1}{e^x}\) obtenemos
+        \[
+        (e^x)'=\frac{1}{\dfrac{1}{e^x}}=e^x.
+        \]
+
+        De forma equivalente, aplicando directamente la regla de la cadena a \(\ln(e^x)=x\):
+        \[
+        \frac{1}{e^x}\cdot (e^x)' = 1 \quad\Longrightarrow\quad (e^x)'=e^x.
+        \]
+
+        Por tanto, para todo \(x\in\mathbb{R}\),
+        \[
+        \dfrac{d}{dx}e^x = e^x.
+        \]
+    \end{proof}
+    \item La recta tangente a la grafica de una funcion $f$ en el punto $(1,2)$ pasa por el
+    punto $(3,4)$. Encuentra $f(1)$ y $f^\prime(1)$.
+    \begin{solucion}
+        Puesto que \((1,2)\) pertenece a la gráfica de \(f\), se tiene
+        \[
+        f(1)=2.
+        \]
+
+        La ecuación de la recta tangente a la gráfica de \(f\) en el punto \((1,2)\) viene dada por
+        \[
+        y-2=f'(1)(x-1).
+        \]
+        Dado que dicha recta pasa por \((3,4)\), sustituimos \((x,y)=(3,4)\) en la ecuación anterior y obtenemos
+        \[
+        4-2=f'(1)(3-1).
+        \]
+        Por tanto
+        \[
+        2=2\,f'(1)\quad\Longrightarrow\quad f'(1)=1.
+        \]
+        Así,
+        \[
+        f'(1)=1.
+        \]
+    \end{solucion}
+    \item Realiza lo siguiente:
+        \begin{enumerate}[label=(\alph*)]
+            \item Dibuja la siguiente hiperbola
+            \begin{align*}
+                \frac{x^2}{4}-\frac{y^2}{2}=1.
+            \end{align*}
+            \item Usa la derivacion implicita para calcular la pendiente de la racta tangente
+            $T$ a la hiperbola del inciso (a) en el punto $(3,\sqrt{5/2})$.
+            \item Encuentra la ecuacion de $T$.
+            \item Dibuja la grafica de $T$.
+        \end{enumerate}
+                    \begin{solucion}
+                        \begin{enumerate}[label=(\alph*)]
+                \item La grafica es\\
+                \begin{center}
+                \begin{tikzpicture}
+                    \begin{axis}[
+                        axis lines = middle,
+                        xlabel = $x$, ylabel = $y$,
+                        xmin = -5, xmax = 5, ymin = -4, ymax = 4
+                    ]
+
+                    % Usando parametrización
+                    \addplot[blue, thick, samples=100, domain=-2:2] 
+                        ({2*cosh(x)}, {sqrt(2)*sinh(x)});
+                    \addplot[blue, thick, samples=100, domain=-2:2] 
+                        ({2*cosh(x)}, {-sqrt(2)*sinh(x)});
+                    \addplot[blue, thick, samples=100, domain=-2:2] 
+                        ({-2*cosh(x)}, {sqrt(2)*sinh(x)});
+                    \addplot[blue, thick, samples=100, domain=-2:2] 
+                        ({-2*cosh(x)}, {-sqrt(2)*sinh(x)});
+
+                    \end{axis}
+                    \end{tikzpicture}
+                    \end{center}
+                \item Diferenciando implícitamente la ecuación de la hipérbola respecto de \(x\) obtenemos
+                    \[
+                    \frac{d}{dx}\!\left(\frac{x^2}{4}-\frac{y^2}{2}\right)=\frac{d}{dx}(1).
+                    \]
+                    Calculando las derivadas,
+                    \[
+                    \frac{2x}{4}-\frac{2y\,y'}{2}=0,
+                    \]
+                    de donde se simplifica a
+                    \[
+                    \frac{x}{2}-y\,y'=0.
+                    \]
+                    Despejando \(y'\),
+                    \[
+                    y'=\frac{x}{2y}.
+                    \]
+                    En el punto \(\bigl(3,\sqrt{5/2}\,\bigr)\) la pendiente es
+                    \[
+                    y'\Big|_{(3,\sqrt{5/2})}=\frac{3}{2\sqrt{5/2}}.
+                    \]
+                    Observando que \(\sqrt{5/2}=\dfrac{\sqrt{10}}{2}\), se puede simplificar:
+                    \[
+                    \frac{3}{2\sqrt{5/2}}=\frac{3}{\sqrt{10}}=\frac{3\sqrt{10}}{10}.
+                    \]
+                    Por tanto la pendiente de la tangente en el punto dado es
+                    \[
+                    m=\dfrac{3\sqrt{10}}{10}.
+                    \]
+
+                    \item La ecuación punto-pendiente de la recta tangente \(T\) en \(\bigl(3,\sqrt{5/2}\,\bigr)\) es
+                    \[
+                    y-\sqrt{\tfrac{5}{2}} \;=\; \frac{3\sqrt{10}}{10}\,(x-3).
+                    \]
+                    Usando \(\sqrt{5/2}=\dfrac{\sqrt{10}}{2}\) se puede reescribir \(T\) en forma explícita \(y=mx+b\). Calculamos la ordenada al origen:
+                    \[
+                    b=\sqrt{\tfrac{5}{2}} - m\cdot 3 = \frac{\sqrt{10}}{2} - 3\cdot\frac{3\sqrt{10}}{10}
+                    = \sqrt{10}\!\left(\frac{1}{2}-\frac{9}{10}\right)
+                    = \sqrt{10}\!\left(\frac{5-9}{10}\right)
+                    = -\frac{2\sqrt{10}}{5}.
+                    \]
+                    Así, la ecuación en forma pendiente-intersección es
+                    \[
+                    \,y=\frac{3\sqrt{10}}{10}\,x-\frac{2\sqrt{10}}{5}\,.
+                    \]
+                    \item La grafica es
+                    \begin{center}
+                        \begin{tikzpicture}
+                        \begin{axis}[
+                            axis lines = middle,
+                            xlabel = $x$,
+                            ylabel = $y$,
+                            xmin = -5, xmax = 5,
+                            ymin = -4, ymax = 4,
+                            grid = both
+                        ]
+
+                        % Hipérbola (azul)
+                        \addplot[domain = -5:-2, samples = 100, thick, blue] 
+                            {sqrt((x^2/4 - 1)*2)};
+                        \addplot[domain = -5:-2, samples = 100, thick, blue] 
+                            {-sqrt((x^2/4 - 1)*2)};
+                        \addplot[domain = 2:5, samples = 100, thick, blue] 
+                            {sqrt((x^2/4 - 1)*2)};
+                        \addplot[domain = 2:5, samples = 100, thick, blue] 
+                            {-sqrt((x^2/4 - 1)*2)};
+
+                        % Recta (rojo)
+                        \addplot[domain = -5:5, thick, red] 
+                            {(3*sqrt(10)/10)*x - (2*sqrt(10)/5)};
+
+                        % Leyenda
+                        \node[blue] at (axis cs: -4,3) {Hipérbola};
+                        \node[red] at (axis cs: 2,-2) {Recta};
+
+                        \end{axis}
+                        \end{tikzpicture}
+                    \end{center}
+                \end{enumerate}
+            \end{solucion}
+    \item Encuentra los intervalos abiertos donde la funcion $f(x)=2x^3-3x^2+1$ es creciente
+    o decreciente utilizando la receta de la subseccion 5.8.1.
+
+\end{enumerate}
+
+
+
+\end{document}
