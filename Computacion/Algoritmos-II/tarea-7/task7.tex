@@ -1,0 +1,145 @@
+\documentclass{article}
+
+\usepackage[letterpaper]{geometry}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage[spanish, activeacute]{babel}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{amssymb,times}
+\usepackage{graphicx}
+\usepackage{latexsym}
+\usepackage{subcaption}
+\usepackage{xcolor}
+\usepackage{pifont}
+\usepackage{bbm}
+\usepackage{pstricks}
+\usepackage{pstricks-add}
+\usepackage{pst-all}
+\usepackage{mathrsfs}
+\usepackage{pgfplots}
+\usepackage{longtable}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{kantlipsum}
+\usepackage[inline]{enumitem}
+\usepackage[export]{adjustbox}
+\usepackage{array}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{mdframed}
+\usepackage{minted}
+\usepackage{tabularx}
+\usepackage{adjustbox}
+\usepackage[dvipsnames]{xcolor}
+
+\usepackage{algorithm}
+\usepackage{algpseudocodex}
+
+
+\usepackage{caption}
+\captionsetup[sub]{labelformat=empty}
+
+\definecolor{bgcolor}{RGB}{240,245,255}
+
+\usetikzlibrary{angles, quotes, positioning}
+\renewcommand\thesection{\arabic{section}}
+\renewcommand{\proofname}{Demostración}
+\renewcommand{\qedsymbol}{$\blacksquare$}
+\newcommand{\pa}[1]{\left(#1\right)}
+\newtheorem{lemma}{Lema}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+
+\newenvironment{solution}
+{\par\noindent\textit{Solución.}\ }
+{\hfill$\blacktriangle$\par}
+
+\begin{document}
+    
+    \begin{table*}
+        \centering
+        \begin{tabular}{cc}
+            \adjustbox{valign=c}{\includegraphics[width=0.12\linewidth, valign=m]{logo-ug.png}} & 
+            \adjustbox{valign=c}{
+                \begin{tabular}{c}
+                    {\large\uppercase{\textbf{Universidad de Guanajuato}}}\\
+                    {\small\uppercase{División de Ciencias Naturales y Exactas}}\\
+                    {\small\uppercase{Campus Guanajuato}}
+                \end{tabular}
+            }
+        \end{tabular}
+    \end{table*}
+
+    \begin{center}
+        \textbf{Tarea 7 (Estructuras de Datos y Algoritmos I)}\\
+
+        \begin{table*}
+            \centering
+            \begin{tabularx}{1\textwidth}{|X|X|X|}
+                \hline
+                \multicolumn{3}{|l|}{\textbf{Nombre:} Axel Magaña Falcón.}\\[2pt]
+                \hline
+                \textbf{Grupo: } 2$^\circ$ & \textbf{Fecha: }31/05/2026 & \textbf{Calificación:}\\[2pt]
+                \hline
+                \multicolumn{3}{|l|}{\textbf{Docente:} Claudia Esteves.}\\[2pt]
+                \hline
+            \end{tabularx}
+        \end{table*}
+    \end{center}
+
+    \begin{enumerate}[label=\textbf{Problema \arabic*}]
+        \setcounter{enumi}{3}
+        \item \textbf{(Karamell)} \href{https://codeforces.com/gym/105327/submission/376832433}{\textcolor{ForestGreen}{\textbf{Accepted}} (Enlace a mi solución)}.
+        
+        Uma observación importante para resolver este problema es notar que si tenemos un par de conjuntos $A, B$ de bolsas de caramelos tales que 
+        \begin{align*}
+            \sum_{x \in A}x = \sum_{x \in B} x, 
+        \end{align*}
+        existe una forma de ordenar $A\cup B$ de forma que todas las bolsas de caramelos en $A$ las reciba Alice y todas las bolsas de caramelos en $B$ las reciba Bob, repartiéndolas según lo descrito en el problema. Véase el siguiente algoritmo en pseudocódigo que describe el proceso anterior:
+
+        \begin{algorithm}[H]
+            \begin{algorithmic}[1]
+                \Procedure{OrderCaramels}{$A,B$}
+                    \State $a \gets 0$
+                    \State $b \gets 0$
+                    \State $L \gets \varnothing$
+
+                    \While{$A \neq \varnothing$ or $B \neq \varnothing$}
+                        \If {$a \leq b$}
+                            \State $a \gets a + A\text{\texttt{.back}}()$
+                            \State $L\text{\texttt{.push\_back}}(A\text{\texttt{.back()}})$
+                            \State $A\text{\texttt{.pop\_back}}()$
+                        \Else
+                            \State $b \gets b + B\text{\texttt{.back}}()$
+                            \State $L\text{\texttt{.push\_back}}(B\text{\texttt{.back()}})$
+                            \State $B\text{\texttt{.pop\_back}}()$
+                        \EndIf
+                    \EndWhile
+
+                    \Return $L$ \Comment{$L$ será un ordenamiento válido}
+                \EndProcedure
+            \end{algorithmic}
+        \end{algorithm}
+
+        Así, nuestro problema se reduce a encontrar una partición del arreglo de bolsas de caramelos de dos subconjuntos cuyas sumas sean iguales. Llámese $A =\{a_1,a_2,\dots,a_n\}$ al conjunto de bolsas de caramelos. Sea $DP : \N\times\N \to 2^A, DP(i, k) \mapsto S$ donde $S \subset \{a_j : j \leq i\}$ es tal que $\sum_{x \in S} x = k$ para todo $1 \leq i \leq N$ y
+        \begin{align*}
+            1 \leq k \leq \frac{1}{2}\sum_{i=0}^N a_i
+        \end{align*}
+        Supongamos que $DP(i, k) = \varnothing$ si dicho subconjunto no existe. Al definir $DP$ como
+        \begin{align*}
+            DP(i, k) =
+            \begin{cases}
+                \{a_0\} &\text{si } i = 1,\,\,\text{y}\,\,a_0 = k,\\
+                DP(i-1, k) &\text{si }i > 1\text{ y }DP(i-1,k) \neq \varnothing,\\
+                DP(i-1, k-a_i) &\text{si }i > 1,\,\,k-a_i \geq 0\,\,\text{y}\,\,DP(i-1,k-a_i) \neq \varnothing,\\
+                \varnothing &\text{si no se cumplen los casos anteriores,}
+            \end{cases}
+        \end{align*}
+        podemos implementar la \texttt{DP} usando \texttt{bitset}. Con dicha solución, el problema se resuleve en ${\cal O}(N^2)$ (dado que $a_i$ es a lo más 100 y $N$ es a lo más 100).
+    \end{enumerate}
+\end{document}

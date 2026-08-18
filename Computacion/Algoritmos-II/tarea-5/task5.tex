@@ -1,0 +1,105 @@
+\documentclass{article}
+
+\usepackage[letterpaper]{geometry}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage[spanish, activeacute]{babel}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{amssymb,times}
+\usepackage{graphicx}
+\usepackage{latexsym}
+\usepackage{subcaption}
+\usepackage{xcolor}
+\usepackage{pifont}
+\usepackage{bbm}
+\usepackage{pstricks}
+\usepackage{pstricks-add}
+\usepackage{pst-all}
+\usepackage{mathrsfs}
+\usepackage{pgfplots}
+\usepackage{longtable}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{kantlipsum}
+\usepackage[inline]{enumitem}
+\usepackage[export]{adjustbox}
+\usepackage{array}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{mdframed}
+\usepackage{minted}
+\usepackage{tabularx}
+\usepackage{adjustbox}
+\usepackage[dvipsnames]{xcolor}
+
+
+\usepackage{caption}
+\captionsetup[sub]{labelformat=empty}
+
+\definecolor{bgcolor}{RGB}{240,245,255}
+
+\usetikzlibrary{angles, quotes, positioning}
+\renewcommand\thesection{\arabic{section}}
+\renewcommand{\proofname}{Demostración}
+\renewcommand{\qedsymbol}{$\blacksquare$}
+\newcommand{\pa}[1]{\left(#1\right)}
+\newtheorem{lemma}{Lema}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+
+\newenvironment{solution}
+{\par\noindent\textit{Solución.}\ }
+{\hfill$\blacktriangle$\par}
+
+\begin{document}
+    
+    \begin{table*}
+        \centering
+        \begin{tabular}{cc}`'
+            \adjustbox{valign=c}{\includegraphics[width=0.12\linewidth, valign=m]{logo-ug.png}} & 
+            \adjustbox{valign=c}{
+                \begin{tabular}{c}
+                    {\large\uppercase{\textbf{Universidad de Guanajuato}}}\\
+                    {\small\uppercase{División de Ciencias Naturales y Exactas}}\\
+                    {\small\uppercase{Campus Guanajuato}}
+                \end{tabular}
+            }
+        \end{tabular}
+    \end{table*}
+
+    \begin{center}
+        \textbf{Tarea 5 (Estructuras de Datos y Algoritmos I)}\\
+
+        \begin{table*}
+            \centering
+            \begin{tabularx}{1\textwidth}{|X|X|X|}
+                \hline
+                \multicolumn{3}{|l|}{\textbf{Nombre:} Axel Magaña Falcón.}\\[2pt]
+                \hline
+                \textbf{Grupo: } 2$^\circ$ & \textbf{Fecha: }30/04/2026 & \textbf{Calificación:}\\[2pt]
+                \hline
+                \multicolumn{3}{|l|}{\textbf{Profesor:} Claudia Esteves.}\\[2pt]
+                \hline
+            \end{tabularx}
+        \end{table*}
+    \end{center}
+
+    \begin{enumerate}[label=\textbf{Problema \Alph*}]
+        \item \textbf{(Range Sum of BST)} [\href{https://leetcode.com/problems/range-sum-of-bst/submissions/1990615591}{\textcolor{ForestGreen}{\textbf{Accepted}} (Enlace a mi solución)}].
+
+        El problema requiere únicamente aprovecharse de la invariante del árbol de búsqueda para encontrar los nodos que nos interesan. Supongamos que nos encontramos en un nodo con valor $x$. Si $x \in [l, r]$, entonces los sumamos a nuestra respuesta. Nótese que seguimos la exploracion al nodo izquierdo si $x > l$ (de otro modo, todo el subárbol tendrá valores menores al intervalo). Del mismo modo, continuamos hacia el nodo derecho sólo si $x < r$.
+
+        \item \textbf{(Priority Queue)} [\href{https://judge.u-aizu.ac.jp/onlinejudge/review.jsp?rid=11445993}{\textcolor{ForestGreen}{\textbf{Accepted}} (Enlace a mi solución)}].   
+        
+        Este problema es simplemente una implementación directa de una estructura de \textit{Max-Heap}.
+        
+        \item \textbf{(Powering the Hero)} [\href{https://codeforces.com/contest/1800/submission/372897557}{\textcolor{ForestGreen}{\textbf{Accepted}} (Enlace a mi solución)}].
+        
+        Basta observar que al aparecer un héroe en la pila de cartas, será siempre posible tomar la carta de bonificación de valor más alto previa a él (no necesariamente será dicho héroe quien use la carta de bonificación, pues en otros casos puede que sea usada por un héroe posterior). Así, conservando una cola de prioridad se resuelve el problema en $\mathcal{O}(n \log n)$.
+    \end{enumerate}
+\end{document}

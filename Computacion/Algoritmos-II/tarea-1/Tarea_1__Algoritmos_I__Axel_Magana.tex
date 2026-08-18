@@ -1,0 +1,115 @@
+\documentclass{article}
+
+\usepackage[letterpaper]{geometry}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage[spanish, activeacute]{babel}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{amssymb,times}
+\usepackage{graphicx}
+\usepackage{latexsym}
+\usepackage{subcaption}
+\usepackage{xcolor}
+\usepackage{pifont}
+\usepackage{bbm}
+\usepackage{pstricks}
+\usepackage{pstricks-add}
+\usepackage{pst-all}
+\usepackage{mathrsfs}
+\usepackage{pgfplots}
+\usepackage{longtable}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{kantlipsum}
+\usepackage[inline]{enumitem}
+\usepackage[export]{adjustbox}
+\usepackage{array}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{mdframed}
+\usepackage{minted}
+\usepackage{tabularx}
+\usepackage{adjustbox}
+\usepackage[dvipsnames]{xcolor}
+
+
+\usepackage{caption}
+\captionsetup[sub]{labelformat=empty}
+
+\definecolor{bgcolor}{RGB}{240,245,255}
+
+\usetikzlibrary{angles, quotes, positioning}
+\renewcommand\thesection{\arabic{section}}
+\renewcommand{\proofname}{Demostración}
+\renewcommand{\qedsymbol}{$\blacksquare$}
+\newcommand{\pa}[1]{\left(#1\right)}
+\newtheorem{lemma}{Lema}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+
+\newenvironment{solution}
+{\par\noindent\textit{Solución.}\ }
+{\hfill$\blacktriangle$\par}
+
+\begin{document}
+    
+    \begin{table*}
+        \centering
+        \begin{tabular}{cc}
+            \adjustbox{valign=c}{\includegraphics[width=0.12\linewidth, valign=m]{logo-ug.png}} & 
+            \adjustbox{valign=c}{
+                \begin{tabular}{c}
+                    {\large\uppercase{\textbf{Universidad de Guanajuato}}}\\
+                    {\small\uppercase{División de Ciencias Naturales y Exactas}}\\
+                    {\small\uppercase{Campus Guanajuato}}
+                \end{tabular}
+            }
+        \end{tabular}
+    \end{table*}
+
+    \begin{center}
+        \textbf{Tarea 1 (Estructuras de Datos y Algoritmos I)}\\
+
+        \begin{table*}
+            \centering
+            \begin{tabularx}{1\textwidth}{|X|X|X|}
+                \hline
+                \multicolumn{3}{|l|}{\textbf{Nombre:} Axel Magaña Falcón.}\\[2pt]
+                \hline
+                \textbf{Grupo: } 2$^\circ$A & \textbf{Fecha: }16/02/2026 & \textbf{Calificación:}\\[2pt]
+                \hline
+                \multicolumn{3}{|l|}{\textbf{Profesor:} Claudia Esteves.}\\[2pt]
+                \hline
+            \end{tabularx}
+        \end{table*}
+    \end{center}
+
+    \begin{enumerate}[label=\textbf{Problema \arabic*}]
+        \item \textbf{(Factory Machines)} [\textcolor{ForestGreen}{\textbf{Accepted}}].
+        
+        Nótese que la capacidad para producir los $t$ productos en una cierta cantidad de tiempo tiene un comportamiento monónoto. Es decir, si las $n$ máquinas son incapaces de producir los productos en un tiempo $r$, tampoco lo podrán hacer en $r - 1$. Del mismo modo, si las másq pueden completar la tarea en un timepo $r$ entonces lo podrán hacer en $r + 1$. Lo anterior nos permite realizar una búsqueda binaria sobre la respuesta.
+
+        Para verificar si una máquina puede producir los productos en $r$ unidades de tiempo, basta con revisar cuántos productos puede realizar cada máquina de forma individual, para cada máquina. Es decir, $\lfloor k_i / r \rfloor$.
+
+        Así, puede resolverse el problema en $\mathcal{O}(n\log n)$ en tiempo y $\mathcal{O}(n)$ en memoria.
+
+        \item \textbf{(Eko: Nísperos de Oswaldo)} [\textcolor{ForestGreen}{\textbf{Accepted}}].
+        
+        La idea es similar al problema anterior, solamente que el comportamiento monótono es inverso. Es decir, si se puede obtener la madera necesaria en una altura de corte $r$, entonces se podrá también en una altura de $r - 1$. Del mismo modo, si no es posible obtener la madera necesaria en una altura de corte de $r$, entonces tampoco se podrá en altura $r + 1$. Por ende, es posible buscar la respuesta usando búsqueda binaria.
+
+        Para verificar si una altura $r$ es suficiente para cortar la madera necesaria, de forma similar al problema anterior, basta con iterar sorbe cada árbol y calcular la cantidad de madera obtenida en el corte.
+
+        Así, puede resolverse el problema en $\mathcal{O}(n\log n)$ en tiempo y $\mathcal{O}(n)$ en memoria.
+
+        \item \textbf{(Limited Repainting)} [\textcolor{ForestGreen}{\textbf{Accepted}}].
+        
+        Para este problema, aunque el planteamiento es el mismo que en los anteriores—es decir, basta con hacer una búsqueda binaria sobre la penalización—debe antes hacerse la observación de que una solución \textit{greedy} al pintar las celdas es siempre óptimo respecto al número de operaciones necesarias. Nótese que, si buscamos una penzalización de máximo $r$, solo nos interesa conservar el color correcto en aquellas celdas con penalización mayor a $r$. Así, si pintamos una celda del mismo color que el anterior, a menos que las restricciones nos lo impidan, minimiza el número de operaciones. Mientras mayor sea la penalización máxima, menos celdas nos interesa pintal del color correcto y por ende, tiene un comportamiento monótono en donde, mientras mayor sea la penalización máxima, menor será el número de operaciones necesarias para obtenerla.
+
+        Así, puede resolverse el problema en $\mathcal{O}(n\log n)$ en tiempo y $\mathcal{O}(n)$ en memoria.
+    \end{enumerate}
+\end{document}

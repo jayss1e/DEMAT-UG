@@ -1,0 +1,111 @@
+\documentclass{article}
+
+\usepackage[letterpaper]{geometry}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage[spanish, activeacute]{babel}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{amssymb,times}
+\usepackage{graphicx}
+\usepackage{latexsym}
+\usepackage{subcaption}
+\usepackage{xcolor}
+\usepackage{pifont}
+\usepackage{bbm}
+\usepackage{pstricks}
+\usepackage{pstricks-add}
+\usepackage{pst-all}
+\usepackage{mathrsfs}
+\usepackage{pgfplots}
+\usepackage{longtable}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{kantlipsum}
+\usepackage[inline]{enumitem}
+\usepackage[export]{adjustbox}
+\usepackage{array}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{mdframed}
+\usepackage{minted}
+\usepackage{tabularx}
+\usepackage{adjustbox}
+\usepackage[dvipsnames]{xcolor}
+
+
+\usepackage{caption}
+\captionsetup[sub]{labelformat=empty}
+
+\definecolor{bgcolor}{RGB}{240,245,255}
+
+\usetikzlibrary{angles, quotes, positioning}
+\renewcommand\thesection{\arabic{section}}
+\renewcommand{\proofname}{Demostración}
+\renewcommand{\qedsymbol}{$\blacksquare$}
+\newcommand{\pa}[1]{\left(#1\right)}
+\newtheorem{lemma}{Lema}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+
+\newenvironment{solution}
+{\par\noindent\textit{Solución.}\ }
+{\hfill$\blacktriangle$\par}
+
+\begin{document}
+    
+    \begin{table*}
+        \centering
+        \begin{tabular}{cc}
+            \adjustbox{valign=c}{\includegraphics[width=0.12\linewidth, valign=m]{logo-ug.png}} & 
+            \adjustbox{valign=c}{
+                \begin{tabular}{c}
+                    {\large\uppercase{\textbf{Universidad de Guanajuato}}}\\
+                    {\small\uppercase{División de Ciencias Naturales y Exactas}}\\
+                    {\small\uppercase{Campus Guanajuato}}
+                \end{tabular}
+            }
+        \end{tabular}
+    \end{table*}
+
+    \begin{center}
+        \textbf{Tarea 6 (Estructuras de Datos y Algoritmos I)}\\
+
+        \begin{table*}
+            \centering
+            \begin{tabularx}{1\textwidth}{|X|X|X|}
+                \hline
+                \multicolumn{3}{|l|}{\textbf{Nombre:} Axel Magaña Falcón.}\\[2pt]
+                \hline
+                \textbf{Grupo: } 2$^\circ$ & \textbf{Fecha: }15/05/2026 & \textbf{Calificación:}\\[2pt]
+                \hline
+                \multicolumn{3}{|l|}{\textbf{Docente:} Claudia Esteves.}\\[2pt]
+                \hline
+            \end{tabularx}
+        \end{table*}
+    \end{center}
+
+    El problema requiere únicamente simular una estructura de \texttt{set} usando un árbol de búsqueda.
+
+    \begin{enumerate}[label=\textbf{Solución \arabic*}]
+        \item \textbf{(Red-Black Tree)} \href{https://atcoder.jp/contests/abc164/submissions/75796791}{\textcolor{ForestGreen}{\textbf{Accepted}} (Enlace a mi solución)}.
+        
+        Puesto que el Red-Black Tree es un árbol de búsqueda auto-balanceado, hace las operaciones de búsqueda e incersión en tiempo ${\cal O}(\log n)$ sin importar el orden en que los elementos se insertan. 
+        
+        \item \textbf{(BST)} \href{https://atcoder.jp/contests/abc164/submissions/75796910}{\textcolor{ForestGreen}{\textbf{Accepted}} (Enlace a mi solución)}.
+        
+        A pesar de la respuesta positiva del evaluador, si agregamos las cadenas en orden lexcográfico, el BST forma una línea, que resuelve las operaciones en tiempo ${\cal O}(n)$.
+        
+        \item \textbf{(BST óptimo con random shuffle)} \href{https://atcoder.jp/contests/abc164/submissions/75813989}{\textcolor{ForestGreen}{\textbf{Accepted}} (Enlace a mi solución)}.
+        
+        La mejor forma de usar un BST regular, es permutando aleatoriamente la lista de cadenas antes de insertarlas al árbol. Así, el árbol estaría esperadamente balanceado durante la incersión, resultado en un tiempo promedio de operaciones de ${\cal O}(\log n)$.
+
+        \item \textbf{(BST subóptimo)} \href{https://atcoder.jp/contests/abc164/submissions/75796972}{\textcolor{orange}{\textbf{Time Limit Exceeded}} (Enlace a mi solución)}.
+        
+        Para probar el peor caso antes mencionado, hice un envío ordenando la lista antes de insertarla en el árbol. En efecto, el evaluador respondió con tiempo límite excedido, puesto que las operaciones se hacen en tiempo lineal.
+    \end{enumerate}
+\end{document}

@@ -1,0 +1,105 @@
+\documentclass{article}
+
+\usepackage[letterpaper]{geometry}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage[spanish, activeacute]{babel}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{amssymb,times}
+\usepackage{graphicx}
+\usepackage{latexsym}
+\usepackage{subcaption}
+\usepackage{xcolor}
+\usepackage{pifont}
+\usepackage{bbm}
+\usepackage{pstricks}
+\usepackage{pstricks-add}
+\usepackage{pst-all}
+\usepackage{mathrsfs}
+\usepackage{pgfplots}
+\usepackage{longtable}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{kantlipsum}
+\usepackage[inline]{enumitem}
+\usepackage[export]{adjustbox}
+\usepackage{array}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{mdframed}
+\usepackage{minted}
+\usepackage{tabularx}
+\usepackage{adjustbox}
+\usepackage[dvipsnames]{xcolor}
+
+
+\usepackage{caption}
+\captionsetup[sub]{labelformat=empty}
+
+\definecolor{bgcolor}{RGB}{240,245,255}
+
+\usetikzlibrary{angles, quotes, positioning}
+\renewcommand\thesection{\arabic{section}}
+\renewcommand{\proofname}{Demostración}
+\renewcommand{\qedsymbol}{$\blacksquare$}
+\newcommand{\pa}[1]{\left(#1\right)}
+\newtheorem{lemma}{Lema}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+
+\newenvironment{solution}
+{\par\noindent\textit{Solución.}\ }
+{\hfill$\blacktriangle$\par}
+
+\begin{document}
+    
+    \begin{table*}
+        \centering
+        \begin{tabular}{cc}`'
+            \adjustbox{valign=c}{\includegraphics[width=0.12\linewidth, valign=m]{logo-ug.png}} & 
+            \adjustbox{valign=c}{
+                \begin{tabular}{c}
+                    {\large\uppercase{\textbf{Universidad de Guanajuato}}}\\
+                    {\small\uppercase{División de Ciencias Naturales y Exactas}}\\
+                    {\small\uppercase{Campus Guanajuato}}
+                \end{tabular}
+            }
+        \end{tabular}
+    \end{table*}
+
+    \begin{center}
+        \textbf{Tarea 4 (Estructuras de Datos y Algoritmos I)}\\
+
+        \begin{table*}
+            \centering
+            \begin{tabularx}{1\textwidth}{|X|X|X|}
+                \hline
+                \multicolumn{3}{|l|}{\textbf{Nombre:} Axel Magaña Falcón.}\\[2pt]
+                \hline
+                \textbf{Grupo: } 2$^\circ$A & \textbf{Fecha: }17/03/2026 & \textbf{Calificación:}\\[2pt]
+                \hline
+                \multicolumn{3}{|l|}{\textbf{Profesor:} Claudia Esteves.}\\[2pt]
+                \hline
+            \end{tabularx}
+        \end{table*}
+    \end{center}
+
+    \begin{enumerate}[label=\textbf{Problema \arabic*}]
+        \item \textbf{(Jzzhu and Children)} [\textcolor{ForestGreen}{\textbf{Accepted}}].
+    
+        Se trata sencillamente de una simulación. Es decir, basta con implementar una \texttt{queue} de \texttt{pair<int,int>} guardando el ínidce original del elemento y los chocolates restantes a entregar al niño. Al procesar el primer elemento de la cola, se entregan $m$ chocolates al niño y se retira de la cola si es que ya ha recibidos todos los chocolates. De lo contrario, regresa al final de la cola. Una vez retirado un niño de la cola, se guarda su ínidce en una variable para imprimir al finalizar el programa, es decir, cuando la cola quede vacía. 
+
+        \item \textbf{(Parenthesis Balance)} [\textcolor{ForestGreen}{\textbf{Accepted}}].
+        
+        Este problema puede resolverse en tiempo lineal usando una pila. Supongamos que hemos procesado la cadena hasta cierto punto y procesamos un caracter de cierre, es decir, \texttt{)} o \texttt{]}. En dicho caso, si la pila está vacía o contiene en su elemento superior un caracter distinto al caracter de apertura correspondiente, significa que la cadena es incorrecta. De lo contrario, podemos eliminar el caracter de apertura de la pila y continuar. La cadena será correcta si al terminar de procesar cada caracter, la pila resulta vacía.
+
+        \item \textbf{(Nearest Smaller Values)} [\textcolor{ForestGreen}{\textbf{Accepted}}].
+        
+        Éste problema puede también resolverse en tiempo lineal con una cola. Al leer el siguiente elemento $a_i$ en el arreglo, conservamos una pila. Si el elemento superior de la pila es mayor a $a_i$, entocnes podemos descartarlo y eleiminarlo de la pila, esto pues deja de ser relevante para cualquier índice siguiente. Repetimos este proceso hasta que la pila queda vacía o el elemento superior es menor a $a_i$, que en este caso será nuestra respuesta para el ínidce $i$.
+    \end{enumerate}
+\end{document}

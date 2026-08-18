@@ -1,0 +1,107 @@
+\documentclass{article}
+
+\usepackage[letterpaper]{geometry}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage[spanish, activeacute]{babel}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{amssymb,times}
+\usepackage{graphicx}
+\usepackage{latexsym}
+\usepackage{subcaption}
+\usepackage{xcolor}
+\usepackage{pifont}
+\usepackage{bbm}
+\usepackage{pstricks}
+\usepackage{pstricks-add}
+\usepackage{pst-all}
+\usepackage{mathrsfs}
+\usepackage{pgfplots}
+\usepackage{longtable}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{kantlipsum}
+\usepackage[inline]{enumitem}
+\usepackage[export]{adjustbox}
+\usepackage{array}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{mdframed}
+\usepackage{minted}
+\usepackage{tabularx}
+\usepackage{adjustbox}
+\usepackage[dvipsnames]{xcolor}
+
+
+\usepackage{caption}
+\captionsetup[sub]{labelformat=empty}
+
+\definecolor{bgcolor}{RGB}{240,245,255}
+
+\usetikzlibrary{angles, quotes, positioning}
+\renewcommand\thesection{\arabic{section}}
+\renewcommand{\proofname}{Demostración}
+\renewcommand{\qedsymbol}{$\blacksquare$}
+\newcommand{\pa}[1]{\left(#1\right)}
+\newtheorem{lemma}{Lema}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+
+\newenvironment{solution}
+{\par\noindent\textit{Solución.}\ }
+{\hfill$\blacktriangle$\par}
+
+\begin{document}
+    
+    \begin{table*}
+        \centering
+        \begin{tabular}{cc}`'
+            \adjustbox{valign=c}{\includegraphics[width=0.12\linewidth, valign=m]{logo-ug.png}} & 
+            \adjustbox{valign=c}{
+                \begin{tabular}{c}
+                    {\large\uppercase{\textbf{Univers`~idad de Guanajuato}}}\\
+                    {\small\uppercase{División de Ciencias Naturales y Exactas}}\\
+                    {\small\uppercase{Campus Guanajuato}}
+                \end{tabular}
+            }
+        \end{tabular}
+    \end{table*}
+
+    \begin{center}
+        \textbf{Tarea 3 (Estructuras de Datos y Algoritmos I)}\\
+
+        \begin{table*}
+            \centering
+            \begin{tabularx}{1\textwidth}{|X|X|X|}
+                \hline
+                \multicolumn{3}{|l|}{\textbf{Nombre:} Axel Magaña Falcón.}\\[2pt]
+                \hline
+                \textbf{Grupo: } 2$^\circ$A & \textbf{Fecha: }17/03/2026 & \textbf{Calificación:}\\[2pt]
+                \hline
+                \multicolumn{3}{|l|}{\textbf{Profesor:} Claudia Esteves.}\\[2pt]
+                \hline
+            \end{tabularx}
+        \end{table*}
+    \end{center}
+
+    \begin{enumerate}[label=\textbf{Problema \arabic*}]
+        \item \textbf{(Bubble Sort)} [\textcolor{ForestGreen}{\textbf{Accepted}}].
+    
+        Sobre este problema hay poco qué comentar. Es una implementación estándar de Bubble Sort e imprimir el arreglo tras cada intercambio de elementos.
+
+        \item \textbf{(Insertion Sort)} [\textcolor{ForestGreen}{\textbf{Accepted}}].
+        
+        En este problema tampoco hay nada qué comentar. Es una implementación estándar de Insertion Sort, imprimiendo el arreglo tras cada cada paso de inserción. 
+
+        \item \textbf{(Inversion Count)} [\textcolor{ForestGreen}{\textbf{Accepted}}].
+        
+        \textit{La solución estándar \textbf{(Merge Sort)}}: Para calcular las inversiones de un arreglo, es posible hacerlo mientras se ordena utilizando Merge Sort. Supongamos que nos encontramos en un paso intermedio a punto de hacer un merge de dos subarreglos. Supongamos que, durante el merge, agregamos un elemento del subarreglo izquierdo y hemos agregado previamente $k$ elementos del subarreglo derecho. Puesto que dichos $k$ elementos se encontraban a la derecha en el orden del arreglo original, nos permite contabilizar $k$ inversiones. Dicho proceso, en cada ejecución del proceso de merge nos permite contabilizar todas las inversiones en un tiempo de $\mathcal{O}(n \log n)$.
+
+        \textit{Mi solución \textbf{(Árbol de Fenwick)}}: El Árbol de Fenwick es una estructura que nos permite calcular la suma de cada prefijo de un arreglo y actualizar un valor del mismo en un tiempo $\mathcal{O}(\log n)$. Puesto que el problema nos asegura un $A_i$ máximo de $10^7$, podemos utilizar un Árbol de Fenwick de tamaño $10^7$ para contabilizar los elementos existentes en el prefijo hasta $i$ del arreglo. Al iterar sobre el elemento $i + 1$ podemos calcular los elementos mayores a él que se encuentran detrás, esto nos permite encontrar las inversiones tales que $A_j > A_i$ para todo $0 \leq j \leq i$. Finalmente, actualizas la estructura contabilizando el elemento $i$ y dicho proceso se repite iterando sobre cada elemento, lo que nos permite contabilizar las inversiones en un tiempo de $\mathcal{O}(n \log n)$.
+    \end{enumerate}
+\end{document}
