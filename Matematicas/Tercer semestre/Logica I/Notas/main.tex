@@ -121,7 +121,6 @@
     sino de la relación entre la verdad de una afirmación y la de otra.\\
     El lenguaje de la lógica proposicional contiene palabras como \comillas{no}, \comillas{y}, \comillas{o}, \comillas{implica} y
     \comillas{si y solo si}. Estas palabras se representan mediante símbolos:
-
     \begin{gather*}
         \neg\text{ para \comillas{no}, }\land\text{ para \comillas{y}, }\lor\text{ para \comillas{o},}\\
         \rightarrow\text{ para \comillas{implica}, }\leftrightarrow\text{ para \comillas{si y solo si}.}
@@ -179,6 +178,82 @@
     Podemos considerar las fórmulas que incluyen estos símbolos como abreviaturas de fórmulas más complicadas que solo contienen 
     $\neg$ y $\wedge$. La inclusión de estos símbolos hace que las fórmulas sean más fáciles de leer (para nosotros, los humanos).
 
+    \vspace{2cm}
+
+    Asimismo, con el fin de facilitar la lectura, utilizamos ciertas convenciones. El uso de estas abreviaturas y convenciones modifica
+    en cierta medida nuestra noción de fórmula. Una de estas convenciones es la siguiente:
+
+    \begin{quote}
+        (C1) Si $F$ o $(F)$ es una fórmula, entonces consideremos que $F$ y $(F)$ son la misma fórmula.
+    \end{quote}
+
+    Es decir, podemos omitir los paréntesis más externos. Esto amplía nuestra definición de fórmula. Técnicamente, según la definición
+    anterior, $A\wedge B$ no es una fórmula. Sin embargo siguiendo la convención (C1), no distinguimos entre $A\wedge B$ y la
+    fórmula $(A\wedge B)$.\\
+    El uso de la convención (C1) da lugar a algunas ambigüedades que abordaremos a continuación. Supongamos que, en (R1), $F$ denota
+    $A\wedge B$ (lo cual, según (C1), es una fórmula). Entonces, $\neg F$ no representa la fórmula $\neg A\wedge B$. Más bien, $\neg F$
+    denota la fórmula $\neg(A\wedge B)$. Como veremos, $\neg A\wedge B$ y $\neg(A\wedge B)$ no significan lo mismo. Del mismo modo,
+    $F\wedge G$ denota la fórmula $(F)\wedge (G)$.\\
+    El uso de (C1) también requiere precaución a la hora de definir el concepto de \comillas{subfórmula}. Una subfórmula de una fórmula
+    $F$ (considerada como una cadena de símbolos) es una subcadena de $F$ que es a su vez una fórmula. Sin embargo, debido a (C1), no todas esas
+    subcadenas son subformulas. Por lo tanto, no queremos tomar esta propiedad como la definición de \comillas{subfórmula}. En su lugar,
+    definimos \comillas{subfórmula} de la siguiente manera.
+
+    \begin{definicion}[Subfórmula]
+        Las siguientes reglas definen las subfórmulas de una fórmula.\\
+        Cualquier fórmula es una subfórmula de si misma.\\
+        Cualquier subfórmula de $F$ es también una subfórmula de $\neg F$.\\
+        Cualquier subfórmula de $F$ o $G$ es también una subfórmula de ($F\wedge G$).
+    \end{definicion}
+
+    \begin{ejemplo}
+        Sean $A$ y $B$ fórmula atómicas y sea $F$ la fórmula $\neg(\neg A\wedge\neg B)$.\\
+        La fórmula $A\wedge\neg B$ aparece como una subcadena de $F$, pero no es una subfórmula de $F$. No hay forma de construir
+        la fórmula $F$ a partir de la fórmula $A\wedge\neg B$. Las subfórmulas de $F$ son $A,B,\neg A,\neg B,(\neg A\wedge \neg B)$
+        y $\neg(\neg A\wedge \neg B)$.
+    \end{ejemplo}
+
+    Una vez descrita la sintaxis de la lógica proposicional, pasamos ahora a describir la semántica. Es decir, explicamos cómo interpretar
+    las fórmulas. No solo debemos describir la semántica de los símbolos \comillas{$\wedge$} y \comillas{$\neg$}, sino que también debemos explicar
+    como interpretar las fórmulas en las que estos símbolos aparecen juntos. Para ello, establecemos el \textit{orden de las operaciones}.
+    La función de los paréntesis es determinar qué subfórmulas deben tenerse en cuenta en primer lugar al interpretar una fórmula. Si no hay paréntesis,
+    entonces utilizamos la sigueinte regla:
+    \begin{gather*}
+        \neg\text{ tiene prioridad sobre }\wedge.
+    \end{gather*}
+
+    Por ejemplo, la fórmula $\neg(A\wedge B)$ significa \comillas{no tanto $A$ como $B$}. Los paréntesis nos indican que el símbolo \comillas{$\vee$}
+    en esta fórmula tiene prioridad sobre \comillas{$\neg$}. La fórmula $\neg A\wedge B$, por otro lado, tiene una interpretación diferente. A falta
+    de paréntesis, aplicamos la regla de que $neg$ tiene prioridad sobre $\wedge$. Por lo tanto, esta fórmula significa \comillas{ni $A$ ni $B$}.\\
+    La semántica de la lógica proposicional viene definida por esta regla, junto con las Tablas 1.1 y 1.2.\\
+    Estos son ejemplos de \textit{tablas de verdad}. Cada fila de estas tablas asigna valores de verdad a fórmulas atómicas y proporciona
+    los valores de verdad resultantes para fórmulas mas complejas. Por ejemplo, la tercera fila de la Tabla 1.1 nos indica que, si
+    $A$ es verdadera y $B$ es falsa, entonces $(A\wedge B)$ es falsa, Vemos que $(A\wedge B)$ tiene el valor de verdad 1 solo si tanto $A$
+    como $B$ tiene el valor de verdad 1, lo que se corresponde con nuestra noción de \comillas{y}. Del mismo modo, la Tabla 1.2 nos indica
+    que $\neg A$ tiene el valor de verdad opuesto al de $A$, lo que corresponde con nuestra noción de negación.\\
+    Utilizando estas dos tablas de verdad, podemos hallar tablas de verdad para cualquier fórmula. Esto se debe a que toda fórmula se
+    construye a partir de fórmulas atómicas mediante las reglas (R1) y (R2). Supongamos, por ejemplo, que queremos hallar una tabla de verdadf para la fórmula
+    $\neg(\neg A\wedge \neg B)$. Dado los valores de verdad de $A$ y $B$, podemos utilizar la Tabla 1.2 para hallar los valores de verdad de
+    $\neg A$ y $\neg B$. Dado los valore sde verdad de $\neg A$ y $\neg B$, podemos utilizar la Tabla 1.1 para hallar el valor de verdad de
+    $(A\wedge\neg B)$. Por último, podemos volver a consultar la Tabla 1.2 para hallar el valor de verdad de $\neg(\neg A\wedge\neg B)$. La
+    tabla de verdad resultante para esta fórmula se muestra en la Tabla 1.3.\\
+    Obsérvese que las fórmulas que aparecen en la parte superior de la Tabla 1.3 son precisamente las subfórmulas del Ejemplo 1.2.
+    En esta tabla vemos que la fórmula $\neg(\neg A\wedge \neg B)$ tiene valor de verdad 1 si y solo si $A$ o $B$ tiene valor de verdad
+    1. Esta fórmula se corresponde con la noción de \comillas{o} que se ha comentado anteriormente. El símbolo $\vee$ se utiliza para
+    denotar esta útil noción.
+
+    \begin{table}[h]
+        \centering
+        \begin{tabular}{c|c|c}
+            $A$ & $B$ & $(A\wedge B)$\\
+            \hline
+            0 & 0 & 0\\
+            0 & 1 & 0\\
+            1 & 0 & 0\\
+            1 & 1 & 1
+        \end{tabular}
+        \caption{Tabla de verdad para $(A\wedge B)$}
+    \end{table}
 
 
 \end{document}
