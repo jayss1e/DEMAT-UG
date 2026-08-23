@@ -50,6 +50,11 @@
 \newcommand{\llavesgrande}[1]{\big\{#1\big\}}
 \newcommand{\llavesgrandes}[1]{\left\{#1\right\}}
 \newcommand{\comillas}[1]{``#1''}
+\usepackage{booktabs}
+\addto\captionsspanish{%
+  \renewcommand{\tablename}{Tabla}
+}
+
 
 
 \begin{document}
@@ -242,18 +247,99 @@
     1. Esta fórmula se corresponde con la noción de \comillas{o} que se ha comentado anteriormente. El símbolo $\vee$ se utiliza para
     denotar esta útil noción.
 
-    \begin{table}[h]
+    % ----- Tabla 1.1 -----
+    \begin{table}[htbp]
         \centering
-        \begin{tabular}{c|c|c}
-            $A$ & $B$ & $(A\wedge B)$\\
+        \caption{Tabla de verdad de $A \land B$}
+        \renewcommand{\arraystretch}{1.5}
+        \setlength{\tabcolsep}{15pt}
+        \begin{tabular}{c | c | c}
+            $A$ & $B$ & $(A \land B)$ \\
             \hline
-            0 & 0 & 0\\
-            0 & 1 & 0\\
-            1 & 0 & 0\\
-            1 & 1 & 1
+            0 & 0 & 0 \\
+            0 & 1 & 0 \\
+            1 & 0 & 0 \\
+            1 & 1 & 1 \\
         \end{tabular}
-        \caption{Tabla de verdad para $(A\wedge B)$}
     \end{table}
+
+    \vspace{0.5cm}
+
+    % ----- Tabla 1.2 -----
+    \begin{table}[htbp]
+        \centering
+        \caption{Tabla de verdad de $\neg A$}
+        \renewcommand{\arraystretch}{1.5}
+        \setlength{\tabcolsep}{15pt}
+        \begin{tabular}{c | c}
+            $A$ & $\neg A$\\
+            \hline
+            0 & 1 \\
+            1 & 0 
+        \end{tabular}
+    \end{table}
+    
+    \vspace{0.5cm}
+
+    % ----- Tabla 1.3 -----
+    \begin{table}[htbp]
+        \centering
+        \caption{Tabla de verdad de $A\vee B$}
+        \renewcommand{\arraystretch}{1.5}
+        \setlength{\tabcolsep}{15pt}
+        \begin{tabular}{c | c | c | c | c | c}
+            $A$ & $B$ & $\neg A$ & $\neg B$ & $(\neg A\wedge\neg B)$ & $\neg(\neg A\wedge\neg B)$ \\
+            \hline
+            0 & 0 & 1 & 1 & 1 & 0 \\
+            0 & 1 & 1 & 0 & 0 & 1 \\
+            1 & 0 & 0 & 1 & 0 & 1 \\
+            1 & 1 & 0 & 0 & 0 & 1
+        \end{tabular}
+    \end{table}
+
+    \vspace{0.5cm}
+
+    % ----- Tabla 1.4 -----
+    \begin{table}[htbp]
+        \centering
+        \caption{Tabla de verdad de $(A\rightarrow B)$}
+        \renewcommand{\arraystretch}{1.5}
+        \setlength{\tabcolsep}{15pt}
+        \begin{tabular}{c | c | c | c | c}
+            $A$ & $B$ & $\neg A$ & $(B\vee\neg A)$ & $(A\rightarrow B)$ \\
+            \hline
+            0 & 0 & 1 & 1 & 1\\
+            0 & 1 & 1 & 1 & 1\\
+            1 & 0 & 0 & 0 & 0\\
+            1 & 1 & 0 & 1 & 1
+        \end{tabular}
+    \end{table}
+
+    \vspace{1cm}
+
+    \begin{definicion}[Disyunción]
+        El símbolo $\vee$ se define de la siguiente maner: para cualquier fórmula $F$ y $G$, $(F\vee G)$ es una abreviatura de
+        $\neg(\neg F\wedge \neg G)$. La fórmula $(F\vee G)$ se denomina disyunción de $F$ y $G$.
+    \end{definicion}
+
+    Otras dos abreviaturas que resultan útiles son las siguientes.
+
+    \begin{definicion}
+        Los simbolos $\rightarrow$ y $\ssi$ se definen de la siguiente manera:\\ 
+        $(F\rightarrow G)$ es la abreviatura de $(G\vee\neg F)$, y\\
+        $(F\ssi G)$ es la abreviatura de $((F\rightarrow G)\wedge(G\rightarrow F))$.
+    \end{definicion}
+
+    Anteriormente señalamos qe el símbolo $\rightarrow$ se corresponde con la palabra \comillas{implica} y que el simbolo $\ssi$ se corresponde con la
+    expresión \comillas{si y solo si}. Una vez más, estas correspondencias no son más que recursos mnemotécnicos para la semántica de los símbolos.
+    Por ejemplo, $(A\ssi B)$ es verdadero si $A$ y $B$ tienen los mismos valores de verdad y, en caso contrario, es falso. Así pues, $\ssi$ se comporta
+    exactamente igual que la expresión \comillas{si y solo si}. La relación entre $\rightarrow$ e \comillas{implica} es un poco más tenue. Consideremos
+    la tabla de verdad para $(A\rightarrow B)$(Tabla 1.4).\\
+    Veamos que  $(A\rightarrow B)$ es verdadero a menos que $A$ sea verdadero y $B$ sea falso. En particular, $(A\rightarrow B)$ es verdadero siempre que $A$
+    sea falso. Por lo tanto, en lógica, una proposición falsa implica cualquier cosa. Esto difiere del uso coloquial de la palabra \comillas{implica}. No
+    diriamos \comillas{Que Barcelona esté a orillas del Sena implica que Aristóteles esté muerto} o, lo que es aún más flagrante, \comillas{Que Barcelona esté a orillas
+    del Sena implica que Barcelona no esté a orillas del Sena}. Sin embargo, $(A\rightarrow B)$ y $(A\rightarrow\neg A)$ son enunciados verdaderos de la
+    lógica proposicional siempre que $A$ sea falso.
 
 
 \end{document}
