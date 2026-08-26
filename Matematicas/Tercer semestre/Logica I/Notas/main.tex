@@ -339,7 +339,166 @@
     sea falso. Por lo tanto, en lógica, una proposición falsa implica cualquier cosa. Esto difiere del uso coloquial de la palabra \comillas{implica}. No
     diriamos \comillas{Que Barcelona esté a orillas del Sena implica que Aristóteles esté muerto} o, lo que es aún más flagrante, \comillas{Que Barcelona esté a orillas
     del Sena implica que Barcelona no esté a orillas del Sena}. Sin embargo, $(A\rightarrow B)$ y $(A\rightarrow\neg A)$ son enunciados verdaderos de la
-    lógica proposicional siempre que $A$ sea falso.
+    lógica proposicional siempre que $A$ sea falso.\\
+    Una vez introducidos lso nuevos símbolos, debemos determinar el orden de operación de dichos símbolos. A la hora de evaluar el valor de verdad de una fórmula,
+    debemos saber el orden en el que hay que proceder. En lugar de clasificar todos los símbolos en una jerarquía, establecemos una única regla:
 
+    \begin{quote}
+        $\neg$ tiene prioridad sobre $\wedge$, $\vee$, $\rightarrow$ y $\ssi$
+    \end{quote}
+
+    Además, los paréntesis indican el orden en el que hay que proceder.
+
+    \begin{ejemplo}
+        Consideremos la fórmula $((\neg A\rightarrow B)\wedge C)\vee\neg(A\vee D)$. LLamemos esta fórmula $F$. Supongamos que sabemos que los valores de verdad de
+        $A$, $B$, $C$ y $D$ son 1, 0, 1 y 0, respectivamente. Para calcular el valor de verdad de $F$, comenzamos con la subfórmula $\neg A$ (usando la Tabla 1.2),
+        ya que $\neg$ tiene prioridad. A continuación, evaluamos la subfórmula $(\neg A\rightarrow B)$(Tabla 1.4), que se encuentra en el conjunto de paréntesis
+        más interno. A continuación calculamos los valores de verdad de $((\neg A\rightarrow B)\wedge C)$ y de $(A\wedge D)$(Tabla 1.1). Después, calculamos los
+        valores de $\neg(A\wedge D)$(Tabla 1.2) y, por último, los de $F$ (Tabla 1.3). Obtenemos los siguientes valores de verdad.
+
+        % ----- Tabla -----
+        \begin{table*}[htbp]
+            \renewcommand{\arraystretch}{1.5}
+            \setlength{\tabcolsep}{10pt}
+            \begin{tabular}{c |c |c |c |c |c |c |c |c |c}
+                A & B & C & D & $\neg A$ & $(\neg A\rightarrow B)$ & $((\neg A\rightarrow B)\wedge C)$ & $(A\wedge D)$ & $\neg (A\wedge D)$ & $F$\\
+                \hline
+                1 & 0 & 1 & 0 & 0 & 1 & 1 & 0 & 1 & 1
+            \end{tabular}
+        \end{table*}
+
+        Esta es solo una fila de una tabla de verdad para esta fórmula. Podríamos elegir otros valores de verdad para $A$, $B$, $C$ y $D$ distintos de
+        1, 0, 1 y 0. Dado que hay dos valores posibles para cada una de estas cuatro fórmulas atómicas, hay $2^{4}=16$ formas de asignar valores de verdad
+        a $A$, $B$, $C$ y $D$. Por lo tanto, la tabla completa tiene 16 filas.
+    \end{ejemplo}
+
+    La función de los paréntesis no es solo determinar el orden de las operaciones, sino también facilitar la lectura de las fórmulas. Con este fin, omitimos los paréntesis
+    cuando no son necesarios. Ya hemos comentado la convención (C1) que nos permite omitir los paréntisis más externos de la fórmula (F). También utilizamos
+    la siguiente convención.
+
+    \begin{quote}
+        (C2) Para cualqueir fórmula $F$, $G$ y $H$,\\
+        consideramos que $F\wedge G\wedge H$ es la misma fórmula que $(F\wedge G)\wedge H$\\
+        y que $F\vee G\vee H$ es la misma fórmula que $(F\vee G)\vee H$.
+    \end{quote}
+
+    Dado que las fórmulas $(F\wedge G)\wedge H$ y $F\wedge(G\wedge H)$ tienen las mismas tablas de verdad, no hay ambigüedad al omitir los paréntesis y escribir
+    simplemente $F\wedge G\wedge H$. Por el contrario, $F\wedge G\vee H$ es ambigüa y no está permitida como fórmula de la lógica proposicional. Las
+    fórmulas $(F\wedge G)\vee H$ y $F\wedge(G\vee H)$ no tienen la mismas tablas de verdad.
+
+    \section{Validez, satisfactibilidad y contradicción}
+
+    Sea $S=\{A_{1},\dots,A_{n}\}$ un conjunto de fórmulas atómicas. Sea $\FF(\SS)$ el conjunto de todos las fórmulas que
+    pueden construirse a partir de las fórmulas atómicas de $\SS$.
+
+    \begin{definicion}[Asignación]
+        Una \textit{asignación} de $\SS$ es una función
+        \begin{equation*}
+            \AA:\SS\to\{0,1\}.
+        \end{equation*}
+    \end{definicion}
+
+    Es decir, una asignación de $\SS$ asigna valores de verdad a cada fórmula atómica de $\SS$. Una asignación $\AA$ de $\SS$ se extiende naturalmente a todo
+    $\FF(\SS)$. Para cualquier fórmula $F$ en $\FF(\SS)$, una asignación $\AA$ de $\SS$ se corresponde con una fila única de la tabla de verdad de $F$.
+    Definimos $\AA(F)$ como el valor de verdad de $F$ en esa fila. Una asignación $\AA$ de $\SS$ también se extiende a ciertas fórmulas que no están en $\FF(\SS)$.
+    Supongamos que $F_{0}$ es una fórmula que no está en $\FF(\SS)$. Sea $\SS_{0}$ el conjunto de subfórmulas atómicas de $F_{0}$. Si cada extensión de $\AA$
+    a $\SS\cup\SS_{0}$ tiene el mismo valor para $F_{0}$, entonces definimos $\AA(F_{0})$ como este valor.
+
+    \begin{ejemplo}
+        Sean $A$ y $B$ fórmulas atómicas. Sea $\AA$ la asignación de $\{A,B\}$ definida por $\AA(A)=1$ y $\AA(B)=0$. Entonces,
+        \begin{align*}
+            \AA(A\wedge B)&=0,\\
+            \AA(A\vee B)&=1,\\
+            \AA(A\wedge(C\vee\neg C))&=1,\text{ y}\\
+            \AA(B\vee(C\wedge\neg C))&=0.
+        \end{align*}
+    \end{ejemplo}
+
+    La razón por la que $\AA(A\wedge(C\vee\neg C))=1$ es que $\AA(A)=1$ y, independientemente del valor de verdad que asignemos a $C$, $(C\vee\neg C)$
+    tiene valor de verdad 1. Del mismo modo, $\AA(B\vee(C\wedge\neg C))=0$ porque tanto $B$ como $(C\wedge\neg C)$ tienen valor de verdad 0, independientemente del
+    valor de verdad de $C$.\\
+    Sea $\AA$ una asignación de $\SS$ y sea $F$ una fórmula. Si $\AA(F)=1$, entonces decimos que $F$ se cumple bajo la asignación $\AA$. De forma equivalente,
+    decimos que $A$ modela a $F$. Escribimos $A\models F$ para denotar este concepto.
+
+    \begin{definicion}[Validez y tautología]
+        Una fórmula es \textit{válida} si se cumple para cualquier asignación. Utilizamos $\models F$ para indicarlo. Una fórmula válida se denomina
+        \textit{tautología}. 
+    \end{definicion}
+
+    \begin{ejemplo}
+        La fórmula $(C\vee\neg C)$ del ejemplo anterior es una tautología.
+    \end{ejemplo}
+
+    \begin{definicion}[Satisfacibilidad]
+        Una fórmula es satisfacible si se cumple bajo alguna condición.
+    \end{definicion}
+
+    \begin{definicion}
+        Una fórmula es insatisfacible si no se cumple con ninguna asignación. Una fórmula insatisfacible se denomina contradicción.
+    \end{definicion}
+
+    \begin{ejemplo}
+        La fórmula $(C\wedge\neg C)$ es una contradicción.
+    \end{ejemplo}
+
+    Supongamos que queremos determinar si una fórmula dad es válida o no. Este es un ejemplo \textit{problema de decisión}. Un problema de decisión es cualquier
+    problema que, dada una entrada determinada, plantee una pregunta que debe responderse con un \comillas{si} o un \comillas{no}. Dada una fórmula $F$ como entrada,
+    podemos preguntarnos \comillas{¿Es $F$ satisfacible?}, y nos referimos a esto como el \textit{problema de satisfacibilidad}. En lógica proposicional, las
+    tablas de verdad proporcionan un enfoque sistemático para resolver este tipo de problemas de decisión. Si todos los valores de verdad de $F$ son 1, entonces
+    $F$ es valida. Si algun valor de verdad es 1, entonces $F$ es satisfactible. De lo contrario, si ningún valor de verdad es 1, $F$ es insatisfactible.
+
+    \begin{ejemplo}
+        Consideremos la fórmula $(A\wedge(A\rightarrow B))\rightarrow B$. Para determinar si esta fórmula es satisfactible, calculamos la siguiente tabla
+        de verdad.
+
+         % ----- Tabla -----
+        \begin{table*}[htbp]
+            \centering
+            \renewcommand{\arraystretch}{1.5}
+            \setlength{\tabcolsep}{10pt}
+            \begin{tabular}{c | c | c | c | c}
+                $A$ & $B$ & $A\rightarrow B$ & $A\wedge(A\rightarrow B)$ & $(A\wedge(A\rightarrow B))\rightarrow B$\\
+                \hline
+                0 & 0 & 1 & 0 & 1\\
+                0 & 1 & 1 & 0 & 1\\
+                1 & 0 & 0 & 0 & 1\\
+                1 & 1 & 1 & 1 & 1
+            \end{tabular}
+        \end{table*}
+        
+        Vemos que $(A\wedge(A\rightarrow B))\rightarrow B$ tiene valor de verdad 1 bajo cualquier asignación. Por lo tanto, esta fórmula no solo es
+        satisfactible, si no que además es válida.
+    \end{ejemplo}
+
+    \vspace{2.4cm}
+
+    \begin{ejemplo}
+        Consderemos ahora la fórmula $((A\rightarrow B)\rightarrow A)\wedge\neg A$. Supongamos que queremos determinar si esta fórmula es satisfactible o no.
+        De nuevo, elaboramos una tabla de verdad.
+
+        \begin{table*}[htbp]
+            \centering
+            \renewcommand{\arraystretch}{1.5}
+            \setlength{\tabcolsep}{10pt}
+            \begin{tabular}{c | c | c | c | c | c}
+                $A$ & $B$ & $(A\rightarrow B)$ & $((A\rightarrow B)\rightarrow A)$ & $\neg A$ & $((A\rightarrow B)\rightarrow A)\wedge\neg A$\\ 
+                \hline
+                0 & 0 & 1 & 0 & 1 & 0 \\
+                0 & 1 & 1 & 0 & 1 & 0 \\
+                1 & 0 & 0 & 1 & 0 & 0 \\
+                1 & 1 & 1 & 1 & 0 & 0
+            \end{tabular}
+        \end{table*}
+
+        Esta fórmula es insatisfactible. Es una contradicción
+    \end{ejemplo}
+
+    En teoría, podemos determinar si una fórmula $F$ es válida, satisfacible o insatisfacible consultando una tabla de verdad. Por desgracia, esto no siempre
+    es un método eficiente. Si $F$ contiene $n$ fórmulas atómicas, hay que calcular $2^{n}$ filas en la tabla de verdad de $F$. Así pues, si $F$ tiene, por ejemplo,
+    23 fórmulas atómicas, calcular una tabla de verdad no es factible. Uno de nuestros objetivos en este capítulo es encontrar métodos alternativos para resolver
+    los problemas de validez y satisfacibilidad que eviten el uso de tablas de verdad. En términos más generales, nuestro objetivo es idear diversas formas de
+    determinar si una fórmula dada es o no una consecuencia de un conjunto dado de fórmulas. Este es un problema central de cualquier lógica.
+
+    \section{Consecuencia y equivalencia}
 
 \end{document}
