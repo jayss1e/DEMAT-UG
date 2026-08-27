@@ -1,8 +1,8 @@
-PWD c:/Users/Radoj/OneDrive/Documentos/DEMAT-UG/Carrera/Tercer semestre/Portadas tareas/Calculo I
+PWD c:/Users/Radoj/OneDrive/Documentos/DEMAT-UG/Matematicas/Tercer semestre/Portadas tareas/Calculo I
 INPUT c:/texlive/2026/texmf.cnf
 INPUT c:/texlive/2026/texmf-dist/web2c/texmf.cnf
 INPUT c:/texlive/2026/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT c:/Users/Radoj/OneDrive/Documentos/DEMAT-UG/Carrera/Tercer semestre/Portadas tareas/Calculo I/main.tex
+INPUT c:/Users/Radoj/OneDrive/Documentos/DEMAT-UG/Matematicas/Tercer semestre/Portadas tareas/Calculo I/main.tex
 OUTPUT main.log
 INPUT c:/texlive/2026/texmf-dist/tex/latex/standalone/standalone.cls
 INPUT c:/texlive/2026/texmf-dist/tex/latex/standalone/standalone.cls

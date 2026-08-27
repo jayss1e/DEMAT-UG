@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.6.11)  16 AUG 2026 13:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.6.11)  26 AUG 2026 22:28
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"c:/Users/Radoj/OneDrive/Documentos/DEMAT-UG/Carrera/Tercer semestre/Portadas tareas/Calculo I/main.tex"
-(c:/Users/Radoj/OneDrive/Documentos/DEMAT-UG/Carrera/Tercer semestre/Portadas tareas/Calculo I/main.tex
+**"c:/Users/Radoj/OneDrive/Documentos/DEMAT-UG/Matematicas/Tercer semestre/Portadas tareas/Calculo I/main.tex"
+(c:/Users/Radoj/OneDrive/Documentos/DEMAT-UG/Matematicas/Tercer semestre/Portadas tareas/Calculo I/main.tex
 LaTeX2e <2026-06-01>
 L3 programming layer <2026-05-26>
 (c:/texlive/2026/texmf-dist/tex/latex/standalone/standalone.cls
@@ -676,14 +676,14 @@ L3 programming layer <2026-05-26>
  ) 
 Here is how much of TeX's memory you used:
  26334 strings out of 467167
- 673613 string characters out of 5413691
+ 673625 string characters out of 5413691
  1256912 words of memory out of 5000000
  55167 multiletter control sequences out of 15000+600000
  762736 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 117i,7n,121p,821b,2034s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 117i,7n,121p,825b,2034s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2026/texmf-dist/fonts/type1/public/ebgaramond/EBGaramond-Italic.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/ebgaramond/EBGaramond-Regular.pfb><c:/texlive/2026/texmf-dist/fonts/type1/adobe/sourcesans/SourceSans3-Bold.pfb><c:/texlive/2026/texmf-dist/fonts/type1/adobe/sourcesans/SourceSans3-Light.pfb><c:/texlive/2026/texmf-dist/fonts/type1/adobe/sourcesans/SourceSans3-Regular.pfb>
-Output written on main.pdf (1 page, 244948 bytes).
+Output written on main.pdf (1 page, 244813 bytes).
 PDF statistics:
  43 PDF objects out of 1000 (max. 8388607)
  28 compressed objects within 1 object stream

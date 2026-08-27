@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1786909905.63197 "c:/Users/Radoj/OneDrive/Documentos/DEMAT-UG/Carrera/Tercer semestre/Portadas tareas/Calculo I/main.tex" "main.pdf" "main" 1786909907.71691 0
-  "c:/Users/Radoj/OneDrive/Documentos/DEMAT-UG/Carrera/Tercer semestre/Portadas tareas/Calculo I/main.tex" 1786909904 7811 b338222be18f8f9ac7f6c9cfb19a65bf ""
+["pdflatex"] 1787804910.00211 "c:/Users/Radoj/OneDrive/Documentos/DEMAT-UG/Matematicas/Tercer semestre/Portadas tareas/Calculo I/main.tex" "main.pdf" "main" 1787804911.93049 0
+  "c:/Users/Radoj/OneDrive/Documentos/DEMAT-UG/Matematicas/Tercer semestre/Portadas tareas/Calculo I/main.tex" 1787804909 7811 1e340a8d8ced34bb500ca566702c1e0b ""
   "c:/texlive/2026/texmf-dist/fonts/enc/dvips/ebgaramond/ebg_ljow5q.enc" 1781156654 3064 ad039a5bf6faa075ad3278d742de72a1 ""
   "c:/texlive/2026/texmf-dist/fonts/enc/dvips/ebgaramond/ebg_tcdnmr.enc" 1781156654 3038 e164542e716a689948526cfb8c023ec2 ""
   "c:/texlive/2026/texmf-dist/fonts/enc/dvips/sourcesans/a_44crgg.enc" 1781165407 3189 07f24b21456d2816a1594a40998dce08 ""
@@ -190,8 +190,8 @@
   "c:/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1781168113 5619402 ad1310ccf7f36101ef3e8f014a173c46 ""
   "c:/texlive/2026/texmf-var/web2c/pdftex/pdflatex.fmt" 1781168354 3656615 172de1e60f9ceb0c1b535d0ac44496bf ""
   "c:/texlive/2026/texmf.cnf" 1781168076 713 e69b156964470283e0530f5060668171 ""
-  "main.aux" 1786909907 232 73e76a51b3ab6978a073af3f7982faa6 "pdflatex"
-  "main.tex" 1786909904 7811 b338222be18f8f9ac7f6c9cfb19a65bf ""
+  "main.aux" 1787804911 232 73e76a51b3ab6978a073af3f7982faa6 "pdflatex"
+  "main.tex" 1787804909 7811 1e340a8d8ced34bb500ca566702c1e0b ""
   (generated)
   "main.aux"
   "main.log"

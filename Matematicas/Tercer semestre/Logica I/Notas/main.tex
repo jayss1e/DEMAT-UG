@@ -501,4 +501,90 @@
 
     \section{Consecuencia y equivalencia}
 
+    A continuación, introducimos el concepto fundamental de consecuencia. En primer lugar, definimos qué significa que una fórmula sea consecuencia
+    de otra. Más adelante en esta sección, definimos de forma similar que significa que una fórmula sea consecuencia de un conjunto de fórmulas.
+
+    \begin{definicion}
+        La fórmula $G$ es una \textit{consecuencia} de la fórmula $F$ si, para toda asignación $\AA$, si $\AA\models F$, entonces $\AA\models G$. Lo denotamos como
+        $F\models G$.
+    \end{definicion}
+
+    Ten en cuenta que el símbolo $\models$ se utiliza de diversas formas. Siempre hay una fórmula a la derecha de este símbolo. Cuando escribimos $\models F$,
+    la interpretación de \comillas{$\models$} depende de con que rellenemos el espacio en blanco. El espacio en blanco puede rellenarse con una asignación $A$,
+    con una fórmula $G$ o dejarse vacío (conjunto vacío). Las tres interpretaciones correpondientes a $\models$ son las siguientes:
+
+    \begin{itemize}
+        \item[$\bullet$] $\AA\models F$ significa que $\AA(F)=1$. Esto se lee como \comillas{$\AA$ modela $F$}.
+        \item[$\bullet$] $G\models F$ significa que toda asignación que modela a $G$ tambien modela $F$. Es decir, $F$ es una consecuencia de $G$.
+        \item[$\bullet$] $\models F$ significa que toda asignación satisface $F$. Es decir, $F$ es una tautología. 
+    \end{itemize}
+
+    Así pues, aunque $\models$ tiene múltiples interpretaciones, en contexto no resulta ambiguo. El concepto de consecuencia está estrechamente relacionado con el
+    concepto de \comillas{implica} que se ha tratado en la sección 1.1. Una fórmula $G$ es consecuencia de una fórmula $F$ si y solo si \comillas{$F$ implica $G$}
+    es siempre verdadero. Reformulamos esto como la siguiente proposición.
+
+    \begin{proposicion}[Consecuencia]
+        Para cualquier fórmula $F$ y $G$, $G$ es una \textit{consecuencia} de $F$ si y solo si $F\rightarrow G$ es una tautología.
+    \end{proposicion}
+
+    \begin{proof}
+        Demostraremos que $F\rightarrow G$ no es tautología si y solo si $G$ no es una consecuencia de $F$.
+        Según la definición de \comillas{tautología}, $F\rightarrow G$ no es una tautología si y solo si existe una asignación $\AA$ tal que
+        $\AA\models\neg(F\rightarrow G)$. Segun la definición de \comillas{$\rightarrow$}, $A\models\neg(F\rightarrow G)$ si y solo si $A\models \neg(\neg F\vee G)$.
+        Segun la semántica de la lógica proposicional, $A\models\neg(\neg F\vee G)$ si y solo si tanto $\AA\models F$ como $\AA\models G$. Por último, según la definición
+        de consecuencia \comillas{consecuencia} existe una asignación $A$ tal que $\AA\models F$ y $\AA\models\neg G$ si y solo si $G$ no es una consecuencia de $F$.
+    \end{proof}
+
+    Supongamos que queremos determinar si la fórmula $G$ es o no una consecuencia de la fórmula $F$. A esto lo denominamos \comillas{probelma de la consecuencia}.
+    Según la porposición 1.1 esto puede reformularse como un problema de validez (puesto que $G$ es consecuencia de $F$ si y solo si $G\rightarrow F$ es válido).
+    Estos problemas pueden resolverse calculando una tabla de verdad. Si los valores de verdad de $F\rightarrow G$ son todos 1, entonces $G$ es una consecuencia de $F$.
+    De lo contrario, no lo es. En particular, si $F$ es una contradicción, entonces $G$ es una consecuencia de $F$ independientemente de $G$.
+
+    \begin{ejemplo}
+        Sean $F$ y $G$ fórmulas. cada una de las siguientes afirmaciones puede verificarse fácilmente calculando la tabla de verdad.
+        \begin{gather*}
+            (F\wedge G)\models F\\
+            F\models(F\vee G)\\
+            (F\wedge\neg F)\models G
+        \end{gather*}
+    \end{ejemplo}
+
+    \begin{definicion}[Equivalencia]
+        Si $G$ es una consecuencia de $F$ y $F$ es una consecuencia de $G$, entonces decimos que $F$ y $G$ son equivalentes. Lo expresamos
+        como $F\equiv G$.
+    \end{definicion}
+
+    De la proposición 1.1 se deduce que dos fórmulas $F$ y $G$ son equivalentes si y solos si $F\ssi G$ es una tautología. Por lo tanto, podemos determinar si dos fórmulas
+    $F$ y $G$ son equivalentes calculando una tabla de verdad. Cada una de las equivalencias de los siguientes ejemplos puede verificarse fácilmente de esta manera.
+
+    \begin{ejemplo}
+        Para todas las fórmulas $F$ y $G$, $(F\wedge G)\equiv(G\wedge F)$ y $(F\vee G)\equiv(G\vee F)$
+    \end{ejemplo}
+
+    \vspace{1.5cm}
+
+    \begin{ejemplo}
+        Para cualquier fórmula $F$ y cualquier tautología $T$, $(F\wedge T)\equiv F$ y $(F\vee T)\equiv T$.
+    \end{ejemplo}
+
+    \begin{ejemplo}
+        Para cualquier fórmula $F$ y cualquier contradicción $\perp$, $(F\wedge\perp)\equiv\perp$ y $(F\vee\perp)\equiv F$.
+    \end{ejemplo}
+
+    \begin{ejemplo}[Leyes distributivas]
+        Las dos equivalencias siguientes muestran las reglas de distributividad para $\wedge$ y $\vee$. Para todas las fórmulas $F$, $G$ y $H$,
+        \begin{align*}
+            (F\wedge(G\vee H))&\equiv((F\wedge G)\vee(F\wedge H))\text{ y}\\
+            (F\vee(G\wedge H))&\equiv((F\vee G)\wedge(F\vee H)).
+        \end{align*}
+    \end{ejemplo}
+
+    \begin{ejemplo}[Leyes de De morgan]
+        Para todas las fórmulas $F$ y $G$
+        \begin{align*}
+            \neg(F\wedge G)&\equiv(\neg F\vee\neg G),\text{ y}\\
+            \neg(F\vee G)&\equiv(\neg F\wedge\neg G).
+        \end{align*}
+    \end{ejemplo}
+
 \end{document}

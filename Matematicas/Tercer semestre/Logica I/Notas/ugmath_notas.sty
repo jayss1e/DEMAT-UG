@@ -340,10 +340,14 @@
 \renewcommand{\theejemplo}{\thechapter.\arabic{ejemplo}}
 
 % ─── Entorno ejemplo ───────────────────────────────────────────────
-\newenvironment{ejemplo}{%
+\newenvironment{ejemplo}[1][]{%
   \refstepcounter{ejemplo}%
   \par\medskip
   \noindent\textbf{Ejemplo \theejemplo}%
+  \ifx&#1&%
+  \else%
+    \textbf{ (#1)}%
+  \fi
   \par\smallskip
 }{%
   \hfill$\blacktriangle$\par\medskip

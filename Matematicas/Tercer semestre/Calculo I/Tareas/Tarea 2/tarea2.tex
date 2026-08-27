@@ -1,0 +1,71 @@
+\documentclass[12pt,a4paper]{article}
+\raggedbottom
+
+\usepackage{ugmath}
+\usepackage{float}
+\usepackage{placeins}
+\usepackage[labelfont=bf,labelsep=space]{caption}
+\usepackage{pdfpages}
+\usepackage{tikz-cd}
+\usepackage{amsthm}
+\renewcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\llaves}[1]{\{#1\}}
+\newcommand{\parentesis}[1]{\left(#1\right)}
+\newcommand{\corchetes}[1]{\left[#1\right]}
+\newcommand{\llavesgrande}[1]{\big\{#1\big\}}
+\newcommand{\llavesgrandes}[1]{\left\{#1\right\}}
+
+
+\begin{document}
+        
+    
+    \thispagestyle{empty}
+    \includepdf[pages=1]{main.pdf}
+
+    \begin{problema}
+        Encuentra $\bigcup_{n=1}^{\infty}A_{n}$ y $\bigcap_{n=1}^{\infty}A_{n}$ si $A_{n}=\{n,n+1,n+1,\dots\}$ para cada $n\in\N$.
+    \end{problema}
+
+    \begin{problema}
+        Prueba los incisos (c) y (d) de la proposición 2.
+    \end{problema}
+
+    \begin{problema}
+        Prueba el inciso (b) de la proposición 4.
+    \end{problema}
+
+    \begin{problema}
+        Sea $x$ un n mero real. Prueba, usando la unicidad del inverso aditivo,
+        lo siguiente:
+        \begin{multicols}{2}
+            \begin{enumerate}
+                \item[(a)] $\left(-1\right)x=-x.$
+                \item[(b)] $-\left(-x\right)=x.$
+            \end{enumerate}
+        \end{multicols}
+        \textbf{Sugerencia:} Para proba, que por ejemplo, el inciso (a) muestra primero que $(-1)x+x=0$ y posteriormente usa la unicidad del invesro aditivo.
+    \end{problema}
+
+    \begin{problema}
+        Sea $x$ un número real distinto de cero. Prueba, usando la unicidad del inverso multiplicativo, que
+        \begin{equation*}
+            (x^{-1})^{-1}=x.
+        \end{equation*}
+    \end{problema}
+
+    \begin{problema}
+        Prueba que si $x\leq y$ y $y\leq x$, entonces $x=y$.
+    \end{problema}
+
+    \begin{problema}
+        Prueba que si $x\lt y$ y $z\lt w$, entonces $x+z\lt y+w$.
+    \end{problema}
+
+    \begin{problema}
+        Sea $A$ un conjunto no vacío. Prueba que si $x\lt c$ para toda $x\in A$, entonces
+        \begin{equation*}
+            \sup(A)\leq c.
+        \end{equation*}
+    \end{problema}
+
+\end{document}
