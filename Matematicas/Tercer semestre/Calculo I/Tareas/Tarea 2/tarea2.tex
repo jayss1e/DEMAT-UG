@@ -26,13 +26,134 @@
         Encuentra $\bigcup_{n=1}^{\infty}A_{n}$ y $\bigcap_{n=1}^{\infty}A_{n}$ si $A_{n}=\{n,n+1,n+1,\dots\}$ para cada $n\in\N$.
     \end{problema}
 
+    \begin{proof}
+        Sea $x\in\bigcup_{n=1}^{\infty}A_{n}$. Por definición de la unión, existe $n\in\N$ tal que $x\in A_{n}$. Como
+        \begin{equation*}
+            A_{n}=\{1,2,\dots,n\},
+        \end{equation*}
+        se sigue que $x$ es uno de los números $1,2,\dots,n$. En particular, $x\in\N$. Por lo tanto
+        \begin{equation*}
+            x\in\bigcup_{n=1}^{\infty}A_{n}\subseteq\N.
+        \end{equation*}
+        Sea $x\in\N$. Tomemos $n=x$. Entonces
+        \begin{equation*}
+            A_{x}=\{1,2,\dots,x\}.
+        \end{equation*}
+        Claramente $x\in A_{x}$. Por definición de unión,
+        \begin{equation*}
+            x\in x\in\bigcup_{n=1}^{\infty}A_{n}.
+        \end{equation*}
+        Por consiguiente,
+        \begin{equation*}
+            \N\subseteq x\in\bigcup_{n=1}^{\infty}A_{n}.
+        \end{equation*}
+        Concluimos que,
+        \begin{equation*}
+            x\in\bigcup_{n=1}^{\infty}A_{n}=\N.
+        \end{equation*}
+        Sea
+        \begin{equation*}
+            x\in\bigcap_{n=1}^{\infty}A_{n}.
+        \end{equation*}
+        Por definición de intersección, $x\in A_{n}$ para todo $n\in\N$. En particular, tomando $n=1$,
+        \begin{equation*}
+            x\in A_{1}=\{1\}.
+        \end{equation*}
+        Luego $x=1$. Por tanto,
+        \begin{equation*}
+            x\in\bigcap_{n=1}^{\infty}A_{n}\subseteq\{1\}.
+        \end{equation*}
+        Sea $x=1$. Para todo $n\in\N$,
+        \begin{equation*}
+            1\in A_{n}
+        \end{equation*}
+        Por definición de intersección,
+        \begin{equation*}
+            1\in\bigcap_{n=1}^{\infty}A_{n}.
+        \end{equation*}
+        Así,
+        \begin{equation*}
+            \{1\}\in\bigcap_{n=1}^{\infty}A_{n}
+        \end{equation*}
+        Concluimos que
+        \begin{equation*}
+            x\in\bigcap_{n=1}^{\infty}A_{n}=\{1\}.
+        \end{equation*}
+    \end{proof}
+
     \begin{problema}
         Prueba los incisos (c) y (d) de la proposición 2.
     \end{problema}
 
+    \begin{proof}
+        \begin{enumerate}
+            \item[(c)] (1) $A\cup(B\cap C)=(A\cup B)\cap(A\cup C)$.\\
+            De la serie de implicaciones
+            \begin{align*}
+                x\in A\cup(B\cap C)&\implies x\in A\vee(x\in B\wedge x\in C)\\
+                &\implies(x\in A\vee x\in B)\wedge(x\in A\vee x\in C)\\
+                &\implies x\in (A\cup B)\cap(A\cup C)
+            \end{align*}
+            obtenemos que $A\cup(B\cap C)\subseteq(A\cup B)\cap(A\cup C)$. Es facil ver que las implicaciones que aparecen también se cumplen
+            en el sentido contrario de lo cual obtenemos $(A\cup B)\cap(A\cup C)\subseteq A\cup(B\cap C)$ y, en consecuencia, $A\cup(B\cap C)=(A\cup B)\cap(A\cup C)$.\\
+            (2) $A\cap(B\cup C)=(A\cap B)\cup(A\cap C)$.\\
+            De la serie de implicaciones
+            \begin{align*}
+                x\in A\cap(B\cup C)&\implies x\in A\wedge(x\in B\vee x\in C)\\
+                &\implies(x\in A\wedge x\in B)\vee(x\in A\wedge x\in C)\\
+                &\implies x\in(A\cap B)\cup(A\cap C).
+            \end{align*}
+            obtenemos que $A\cap(B\cup C)\subseteq(A\cap B)\cup(A\cap C)$. Es facil ver que las implicaciones que aparecen también se cumplen en el sentido contrario
+            de lo cual obtenemos $(A\cap B)\cup(A\cap C)\subseteq A\cap(B\cup C)$ y, en consecuencia, $A\cap(B\cup C)=(A\cap B)\cup(A\cap C)$.
+            \item[(d)] (1) $A\setminus(B\cup C)=(A\setminus B)\cup(A\setminus C)$.\\
+            De la serie de implicaciones
+            \begin{align*}
+                x\in A\setminus (B\cup C)&\implies x\in A\wedge x\notin(B\cup C)\\
+                &\implies x\in A\wedge(x\notin B\vee x\notin C)\\
+                &\implies (x\in A\wedge x\notin B)\vee(x\in A\wedge x\notin C)\\
+                &\implies x\in (A\setminus B)\cup(A\setminus C)
+            \end{align*}
+            obtenemos que $A\setminus(B\cup C)\subseteq(A\setminus B)\cup(A\setminus C)$. Es facil ver que las implicaciones que aparecen también se cumplen en el
+            sentido contrario de lo cual obtenemos $(A\setminus B)\cup(A\setminus C)\subseteq A\setminus(B\cup C)$ y, en consecuencia $A\setminus(B\cup C)=(A\setminus B)\cup(A\setminus C)$.\\
+            (2) $A\setminus(B\cap C)=(A\setminus B)\cap (A\setminus C)$.\\
+            De la serie de implicaciones
+            \begin{align*}
+                x\in A\setminus(B\cap C)&\implies x\in A\wedge x\notin (B\cap C)\\
+                &\implies x\in A\wedge(x\notin B\wedge x\notin C)\\
+                &\implies (x\in A\wedge x\notin B)\wedge(x\in A\wedge x\notin C)\\
+                &\implies (A\setminus B)\cap(A\setminus C)
+            \end{align*}
+            obtenemos que $A\setminus(B\cap C)\subseteq(A\setminus B)\cap (A\setminus C)$. Es facil ver que las implicaciones que aparecen también se cumplen en el sentido
+            contrario de lo cual obtenemos $(A\setminus B)\cap (A\setminus C)\subseteq A\setminus(B\cap C)$ y, en consecuencia $A\setminus(B\cap C)=(A\setminus B)\cap (A\setminus C)$.
+        \end{enumerate}
+    \end{proof}
+
     \begin{problema}
         Prueba el inciso (b) de la proposición 4.
     \end{problema}
+
+    \begin{proof}
+        Partimos de la igualdad
+        \begin{equation*}
+            xy=z.
+        \end{equation*}
+        multiplicamos ambos lados por el inverso multiplicativo de $x$,
+        \begin{equation*}
+            x^{-1}(xy)=x^{-1}z.
+        \end{equation*}
+        Por la asociatividad del producto
+        \begin{equation*}
+            (x^{-1}x)y=x^{-1}z.
+        \end{equation*}
+        Como $x^{-1}x=1$, tenemos
+        \begin{equation*}
+            1\cdot y=x^{-1}z.
+        \end{equation*}
+        y por la propiedad del neutro multiplicativo
+        \begin{equation*}
+            y=x^{-1}z.
+        \end{equation*}
+    \end{proof}
 
     \begin{problema}
         Sea $x$ un n mero real. Prueba, usando la unicidad del inverso aditivo,
@@ -46,6 +167,45 @@
         \textbf{Sugerencia:} Para proba, que por ejemplo, el inciso (a) muestra primero que $(-1)x+x=0$ y posteriormente usa la unicidad del invesro aditivo.
     \end{problema}
 
+    \begin{proof}
+        \begin{enumerate}
+            \item[(a)] $(-1)x=-x$\\
+            Queremos probar que
+            \begin{equation*}
+                (-1)x+x=0.
+            \end{equation*}
+            Calculemos,
+            \begin{equation*}
+                x+(-1)x=1\cdot x+(-1)x=(1+(-1))x=0\cdot x=0. 
+            \end{equation*}
+            De aqui tenemos que
+            \begin{equation*}
+                (-1)x+x=0
+            \end{equation*}
+            y, por la regla de cancelación para la suma,
+            \begin{equation*}
+                (-1)x=-x.
+            \end{equation*}
+            \item[(b)] $-(-x)=x$.\\
+            Por definición, $-x$ es el inverso aditivo de $x$, es decir,
+            \begin{equation*}
+                x+(-x)=0.
+            \end{equation*}
+            Esto también significa que $x$ es el inverso aditivo de $-x$, es decir,
+            \begin{equation*}
+                (-x)+x=0.
+            \end{equation*}
+            Pero por definición, el inverso aditivo de $-x$ es $-(-x)$. De esta forma
+            \begin{equation*}
+                -(-x)+(-x)=0.
+            \end{equation*}
+            Así, por la regla de cancelación para la suma,
+            \begin{equation*}
+                -(-x)=x.
+            \end{equation*}
+        \end{enumerate}
+    \end{proof}
+
     \begin{problema}
         Sea $x$ un número real distinto de cero. Prueba, usando la unicidad del inverso multiplicativo, que
         \begin{equation*}
@@ -53,13 +213,67 @@
         \end{equation*}
     \end{problema}
 
+    \begin{proof}
+        Por definición, $x^{-1}$ es el inverso multiplicativo de $x$, es decir,
+        \begin{equation*}
+            x\cdot x^{-1}=1.
+        \end{equation*}
+        Esto también significa que $x$ es el inverso multiplicativo de $x^{-1}$. Pero por definición
+        \begin{equation*}
+            x^{-1}\cdot(x^{-1})^{-1}=1,
+        \end{equation*}
+        los cuales existen ya que $x\neq0$. Así, por la regla de cancelación para el producto
+        \begin{equation*}
+            (x^{-1})^{-1}=x.
+        \end{equation*}
+    \end{proof}
+
     \begin{problema}
         Prueba que si $x\leq y$ y $y\leq x$, entonces $x=y$.
     \end{problema}
 
+    \begin{proof}
+        Por hipótesis, $x\leq y$ y $y\leq x$. Esto significa que,
+        \begin{equation*}
+            y-x\geq0\qquad\text{ y }\qquad x-y\geq0.
+        \end{equation*}
+        Sumando estas dos desigualdades,
+        \begin{equation*}
+            (y-x)+(x-y)\geq0+0,
+        \end{equation*}
+        es decir,
+        \begin{equation*}
+            0\geq0.
+        \end{equation*}
+        Por tricotomia, la única posibilidad es que ambas diferencias sean cero. Así,
+        \begin{equation*}
+            y-x=0\qquad\text{ y }\qquad x-y=0,
+        \end{equation*}
+        lo que implica que $x=y$.
+    \end{proof}
+
     \begin{problema}
         Prueba que si $x\lt y$ y $z\lt w$, entonces $x+z\lt y+w$.
     \end{problema}
+
+    \begin{proof}
+        Por hipótesis tenemos que
+        \begin{equation*}
+            x\lt y\qquad\text{ y }\qquad z\lt w
+        \end{equation*}
+        De la primera desigualdad, por la preservación del orden bajo la suma se tiene,
+        \begin{equation*}
+            x+z\lt y+z.
+        \end{equation*}
+        Por otra parte, de la segunda desigualdad, nuevamente por la preservación del orden bajo la suma, se tiene
+        \begin{equation*}
+            y+z\lt y+w.
+        \end{equation*}
+        Así, por transitividad se concluye que,
+        \begin{equation*}
+            x+z\lt y+w.
+        \end{equation*}
+    \end{proof}
 
     \begin{problema}
         Sea $A$ un conjunto no vacío. Prueba que si $x\lt c$ para toda $x\in A$, entonces
@@ -67,5 +281,13 @@
             \sup(A)\leq c.
         \end{equation*}
     \end{problema}
+
+    \begin{proof}
+        Por hipótesis, para todo $x\in A$ se tiene $x\lt c$, lo que implica $x\leq$. Así, $c$ es una cota superior de $A$, y dado que $A$ es no vacío, por el axioma del
+        supremo, existe $\sup(A)$. Por definición, $\sup(A)$ es la menor cota superior de $A$. Como $c$ es una cota superior de $A$, debe cumplirse que
+        \begin{equation*}
+            \sup(A)\leq c.
+        \end{equation*}
+    \end{proof}
 
 \end{document}

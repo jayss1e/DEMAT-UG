@@ -1,0 +1,440 @@
+\documentclass[12pt,a4paper]{article}
+\raggedbottom
+
+\usepackage{ugmath}
+\usepackage{float}
+\usepackage{placeins}
+\usepackage[labelfont=bf,labelsep=space]{caption}
+\usepackage{pdfpages}
+\usepackage{tikz-cd}
+\usepackage{amsthm}
+\renewcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\llaves}[1]{\{#1\}}
+\newcommand{\parentesis}[1]{\left(#1\right)}
+\newcommand{\corchetes}[1]{\left[#1\right]}
+\newcommand{\llavesgrande}[1]{\big\{#1\big\}}
+\newcommand{\llavesgrandes}[1]{\left\{#1\right\}}
+
+
+\begin{document}
+        
+    \thispagestyle{empty}
+    \includepdf[pages=1]{main.pdf}
+
+    \begin{problema}
+        Prueba los incisos (b) y (c) de la proposición 3.
+    \end{problema}
+
+    \begin{proof}
+        \begin{enumerate}
+            \item[(b)] Si $x\in A\cup B$ entonces $x\in A$ y como $A\subseteq B$ se tiene que $x\in B$ y, por lo tanto
+            $A\cup B\subseteq B$. Ahora si $x\in B$ entonces como $A\subseteq B$, obtenemos $x\in A$ y por definición de unión
+            $x\in A\cup B$, por consiguiente $B\subseteq A\cup B$. Concluimos que,
+            \begin{equation*}
+                A\cup B=B.
+            \end{equation*}
+            Si $x\in A\cap B$ entonces por definición de intersección $x\in A$ y, por tanto $A\cap B\subseteq A$. Ahora si $x\in A$ entonces como $A\subseteq B$
+            tenemos que $x\in B$ y por definición de intersección $x\in A\cap B$, y asi, $A\subseteq A\cap B$.
+            Concluimos que
+            \begin{equation*}
+                A\cap B=A.
+            \end{equation*}
+            Si $x\in A\setminus B$ entonces $x\in A\wedge x\notin B$, pero esto es imposible porque $A\subseteq B$, por lo que no existe $x$
+            tal que $x\in A\setminus B$. En consecuencia, $A\setminus B$ no tiene elementos por ende,
+            \begin{equation*}
+                A\setminus B=\varnothing.
+            \end{equation*}
+            \item[(c)] Si $x\in A\cup C$ entonces $x\in A$, pero como $A\subseteq B$ entonces $x\in B$ y por lo tanto
+            $x\in B\cup C$. Concuimos que
+            \begin{equation*}
+                A\cup C\subseteq B\cup C
+            \end{equation*}
+            Si $x\in A\cap C$ entonces $x\in A$ y como $A\subseteq B$ entonces $x\in B$ y por lo tanto $x\in B\cap C$. Concluimos que
+            \begin{equation*}
+                A\cap C\subseteq B\cap C
+            \end{equation*}
+            Si $x\in C\setminus B$ entonces $x\in C\wedge x\notin B$, como $A\subseteq B$ entonces si $x\notin B$ se tiene $x\notin A$
+            De esta forma como $x\in C\setminus B$ tambien se tiene que $x\in C$ y por lo tanto $x\in C\wedge x\notin A$. Esto es,
+            \begin{equation*}
+                C\setminus B\subseteq C\setminus A.
+            \end{equation*}
+        \end{enumerate}
+    \end{proof}
+
+    \begin{problema}
+        Prueba el inciso (b) de la proposición 5.
+    \end{problema}
+
+    \begin{proof}
+        Supongamos que existe $y\in\R$ y $x\neq0$ tal que
+        \begin{equation*}
+            x\cdot y=x.
+        \end{equation*}
+        Por la regla de cancelación de producto obtenemos,
+        \begin{equation*}
+            y=x\cdot x^{-1}.
+        \end{equation*}
+        Así, por la unicidad del inverso multiplicativo
+        \begin{equation*}
+            y=1.
+        \end{equation*}
+        Por lo que el único número $y$ tal que cumple con la expresión inicial es 1. Por lo tanto existe un unico nuetro multiplicativo y es el 1.
+    \end{proof}
+    
+    \begin{problema}
+        \textbf{(Leyes de los signos para la multiplicaci n)} Prueba que
+        si $x$ y $y$ son n meros reales, entonces
+        \begin{enumerate}
+            \item[(a)] $(+x)\left(+y\right)=+(xy).$ 
+            \item[(b)] $(-x)\left(+y\right)=-(xy).$
+            \item[(c)] $\left(+x\right)\left(-y\right)=-\left(xy\right).$
+            \item[(d)] $(-x)(-y)=+\left(xy\right).$
+        \end{enumerate}
+        Las leyes de los signos para la multiplicaci n se resumen de manera
+        conveniente como 
+        \begin{equation*}
+            \begin{array}{ccccc}
+            + & \text{por} & + & \text{da} & +\\
+            - & \text{por} & + & \text{da} & -\\
+            + & \text{por} & - & \text{da} & -\\
+            - & \text{por} & - & \text{da} & +
+            \end{array}
+        \end{equation*}
+        \textbf{Sugerencia:} El inciso (a) es claro, pues $+x=x,$ $+y=y$
+        y $+\left(xy\right)=xy.$ Usa la unicidad del inverso aditivo para
+        probar los incisos (b) y (c). Finalmente, deduce (d) de los incisos
+        (b) y (c).
+    \end{problema}
+
+    \begin{proof}
+        \begin{enumerate}
+            \item[(a)] $(+x)(+y)=+(xy)$.\\
+            Es claro pues $+x=x$, $+y=y$ y $+(xy)$.
+            \item[(b)] $(-x)(+y)=-(xy)$.\\
+            Consideremos $(-x)y$. Escribimos $-x$ como $(-1)\cdot x$. Entonces,
+            \begin{equation*}
+                (-x)y=[(-1)x]y.
+            \end{equation*}
+            Por la asociatividad de el producto,
+            \begin{equation*}
+                [(-1)\cdot x]\cdot y=(-1)(x\cdot y).
+            \end{equation*}
+            Ahora por el problema 4 de la tarea 2, se cumple que
+            \begin{equation*}
+                (-1)(xy)=-(xy).
+            \end{equation*}
+            Por lo tanto, $(-x)(+y)=-(xy)$.
+            \item[(c)] $(+x)(-y)=-(xy)$.\\
+            Consideremos $(-y)(x)$. Escribimos $-y$ como $(-1)\cdot y$. Entonces,
+            \begin{equation*}
+                (x)(-y)=x\cdot[(-1)\cdot y].
+            \end{equation*}
+            Por la asociatividad de la multiplicación,
+            \begin{equation*}
+                x\cdot[(-1)\cdot y]=(-1)(xy).
+            \end{equation*}
+            Así, nuevamente por el problema 4 de la tarea 2 se cumple que
+            \begin{equation*}
+                (-1)(xy)=-(xy).
+            \end{equation*}
+            \item[(d)] $(-x)(-y)=(+xy)$.\\
+            Escribimos los números negativos en términos de $-1$,
+            \begin{equation*}
+                -x=(-1)\cdot x,\qquad -y=(-1)\cdot y.
+            \end{equation*}
+            Entonces su producto es
+            \begin{equation*}
+                (-x)(-y)=[(-1)\cdot x]\cdot[(-1)\cdot y].
+            \end{equation*}
+            Aplicando la asociatividad y la conmutatividad tenemos que
+            \begin{equation}
+                (-x)(-y)=[(-1)\cdot x]\cdot[(-1)\cdot y]=[(-1)\cdot(-1)]\cdot(xy)
+            \end{equation}
+            Ahora calculamos $(-1)\cdot(-1)$. Sabemos que $0=0\cdot0$, pero $0=(1+(-1))$. Entonces,
+            \begin{equation*}
+                0+0=(1+(-1))\cdot(1+(-1)).
+            \end{equation*}
+            Expandiendo usando la distributividad,
+            \begin{align*}
+                (1+(-1))\cdot(1+(-1))&=(1+(-1))\cdot1+(1+(-1))\cdot(-1)\\
+                &=1\cdot1+(-1)\cdot1+1\cdot(-1)+(-1)\cdot(-1)\\
+                &=1+(-1)+(-1)+(-1)\cdot(-1)\\
+                &=(1-1-1)+(-1)(-1)\\
+                &=-1+(-1)(-1).
+            \end{align*}
+            Como $0\cdot0=0$ tenemos que
+            \begin{equation*}
+                0=-1+(-1)(-1)
+            \end{equation*}
+            de aquí,
+            \begin{equation*}
+                (-1)\cdot(-1)=1
+            \end{equation*}
+            sustituyendo en (1)
+            \begin{equation*}
+                (-x)(-y)=[(-1)(-1)](xy)=1\cdot(xy)=xy.
+            \end{equation*}
+            Así,
+            \begin{equation*}
+                (-x)(-y)=-(xy).
+            \end{equation*}
+        \end{enumerate}
+    \end{proof}
+
+    \begin{problema}
+        Sean $x$ y $y$ números reales. Prueba que si $xy=0$, entonces $x=0$ o $y=0$. \textbf{Segerencia:} Procede por contradicción.
+    \end{problema}
+
+    \begin{proof}
+        Supongamos que $xy=0$. Procedamos por contradicción, supongamos que
+        \begin{equation*}
+            x\neq0\qquad\text{y}\qquad y\neq0.
+        \end{equation*}
+        Como $x\neq0$ entonces existe $x^{-1}\in\R$ tal que
+        \begin{equation*}
+            x^{-1}\cdot x=1.
+        \end{equation*}
+        Multiplicando la igualdad $xy=0$ por $x^{-1}$, obtenemos
+        \begin{equation*}
+            x^{-1}xy=x^{-1}0,
+        \end{equation*}
+        y, por la asociatividad, la unicidad del inverso multiplicativo, se tiene que
+        \begin{equation*}
+            y=0
+        \end{equation*}
+        pero esto contradice que $y\neq0$. Por tanto, concluimos que
+        \begin{equation*}
+            x=0\text{ ó } y=0
+        \end{equation*}
+    \end{proof}
+    
+    \begin{problema}
+        Prueba que si $0\leq x\lt y$ y $0\leq z\lt w$, entonces $xz\lt yw$.
+    \end{problema}
+
+    \begin{proof}
+        Por hipótesis tenemos que
+        \begin{equation*}
+            x\lt y\qquad\text{ y }\qquad z\lt w.
+        \end{equation*}
+        De la primer desigualdad, dado que $0\leq x\lt y$, entonces, por la preservación del orden bajo el producto por numeros positivosm, se tiene
+        \begin{equation*}
+            xz\lt yz.
+        \end{equation*}
+        Por otra parte, de la segunda desigualdad, nuevamente por la preservación del orden bajo el producto por numeros positivos, se tiene
+        \begin{equation*}
+            yz\lt yw.
+        \end{equation*}
+        Así, por transitividad se concluye que
+        \begin{equation*}
+            xz\lt yw.
+        \end{equation*}
+    \end{proof}
+
+    \begin{problema}
+        Prueba la proposición 12.
+    \end{problema}
+
+    \begin{proof}
+        Como $A$ es acotado inferiormente, existe $m\in\mathbb{R}$ tal que
+        \begin{equation*}
+            m\leq a,\qquad\forall a\in A.
+        \end{equation*}
+            Consideremos el conjunto
+        \begin{equation*}
+            -A={-a:a\in A}.
+        \end{equation*}
+        Primero, $-A\neq\varnothing$, pues $A\neq\varnothing$. Además, $-A$ está acotado superiormente. En efecto, si $m$ es una cota inferior de $A$, entonces
+        \begin{equation*}
+            m\leq a,\qquad\forall a\in A,
+        \end{equation*}
+        y multiplicando por $-1$, invirtiendo la desigualdad,
+        \begin{equation*}
+            -a\leq-m,\qquad\forall a\in A.
+        \end{equation*}
+        Por tanto, $-m$ es una cota superior de $-A$. Por el axioma del supremo, existe
+        \begin{equation*}
+            s=\sup(-A).
+        \end{equation*}
+        Definimos
+        \begin{equation*}
+            \alpha=-s.
+        \end{equation*}
+        Afirmamos que
+        \begin{equation*}
+            \alpha=\inf(A).
+        \end{equation*}
+        Veamos que cumple las dos propiedades de la definición de ínfimo. Primero, como
+        \begin{equation*}
+            s=\sup(-A),
+        \end{equation*}
+        tenemos
+        \begin{equation*}
+            -a\leq s,\qquad\forall a\in A.
+        \end{equation*}
+        Multiplicando por $-1$, invirtiendo la desigualdad,
+        \begin{equation*}
+            -s\leq a,\qquad\forall a\in A.
+        \end{equation*}
+        Es decir,
+        \begin{equation*}
+            \alpha\leq a,\qquad\forall a\in A.
+        \end{equation*}
+        Luego $\alpha$ es una cota inferior de $A$. Sea ahora $l$ una cota inferior cualquiera de $A$. Entonces
+        \begin{equation*}
+            l\leq a,\qquad\forall a\in A.
+        \end{equation*}
+        Por tanto,
+        \begin{equation*}
+            -a\leq-l,\qquad\forall a\in A,
+        \end{equation*}
+        de modo que $-l$ es una cota superior de $-A$. Como
+        \begin{equation*}
+            s=\sup(-A),
+        \end{equation*}
+        necesariamente
+        \begin{equation*}
+            s\leq-l.
+        \end{equation*}
+        Multiplicando por $-1$, invirtiendo la desigualdad,
+        \begin{equation*}
+            -s\geq l.
+        \end{equation*}
+        Por la definición de $\alpha$,
+        \begin{equation*}
+            l\leq\alpha.
+        \end{equation*}
+        Por tanto, $\alpha$ es una cota inferior de $A$ mayor o igual que cualquier otra cota inferior de $A$. Luego,
+        \begin{equation*}
+            \alpha=\inf(A).
+        \end{equation*}
+    \end{proof}
+
+    \begin{problema}
+        Prueba que para todo número natural $n$ se cumple que
+        \begin{equation*}
+            n\lt n+1.
+        \end{equation*}
+    \end{problema}
+
+    \begin{proof}
+        Sea $n=1$. Entonces
+        \begin{equation*}
+            1\lt 2.
+        \end{equation*}
+        Supongamos ahora que para algun $n\in\N$, se cumple
+        \begin{equation*}
+            n\lt n+1.
+        \end{equation*}
+        Debemos demostrar que también es verdadera para $n+1$, es decir, que
+        \begin{equation*}
+            n+1\lt n+2
+        \end{equation*}
+        Por la hipotesis de inducción sabemos que
+        \begin{equation*}
+            n\lt n+1.
+        \end{equation*}
+        Por tanto,
+        \begin{equation*}
+            n+1\lt (n+1)+1.
+        \end{equation*}
+        Esto es,
+        \begin{equation*}
+            n+1\lt n+2.
+        \end{equation*}
+        Y esto es precisamente lo que queríamos demostrar.
+    \end{proof}
+
+    \begin{problema}
+        Determina si las reglas de correspondencia $f$ de los cuadros de
+        los incisos siguientes son funciones (argumenta tu respuesta).
+        \begin{center}
+            (a)~~~%
+            \begin{tabular}{|c|c|}
+                \hline 
+                \hspace{0.2cm}$x$\hspace{0.2cm} & $f\left(x\right)$\tabularnewline
+                \hline 
+                \hline 
+                $1$ & $0$\tabularnewline
+                \hline 
+                $2$ & $5$\tabularnewline
+                \hline 
+                $3$ & $7$\tabularnewline
+                \hline 
+                $4$ & $7$\tabularnewline
+                \hline 
+                $5$ & $8$\tabularnewline
+                \hline 
+            \end{tabular}~~~~~~(b)~~~%
+            \begin{tabular}{|c|c|}
+                \hline 
+                \hspace{0.2cm}$x$\hspace{0.2cm} & $f\left(x\right)$\tabularnewline
+                \hline 
+                \hline 
+                $1$ & 0\tabularnewline
+                \hline 
+                $2$ & 0\tabularnewline
+                \hline 
+                $3$ & 0\tabularnewline
+                \hline 
+                $4$ & 0\tabularnewline
+                \hline 
+                $5$ & 0\tabularnewline
+                \hline 
+            \end{tabular}~~~~~~(c)~~~%
+            \begin{tabular}{|c|c|}
+                \hline 
+                \hspace{0.2cm}$x$\hspace{0.2cm} & $f\left(x\right)$\tabularnewline
+                \hline 
+                \hline 
+                $1$ & $3$\tabularnewline
+                \hline 
+                $2$ & $3$\tabularnewline
+                \hline 
+                $3$ & $5$\tabularnewline
+                \hline 
+                $4$ & $7$\tabularnewline
+                \hline 
+                $4$ & $6$\tabularnewline
+                \hline 
+            \end{tabular}\par
+        \end{center}
+    \end{problema}
+
+    \begin{solucion}
+        \begin{enumerate}
+            \item[(a)] Es una función ya que le asigna a cada elemento $x$ un único elemento de $f(x)$.
+            \item[(b)] Es una función ya que le asigna a cada elemento $x$ un único elemento de $f(x)$.
+            \item[(c)] No es una función ya que le asigna más de un elemento de $x$ a un único elemento de $f(x)$.  
+        \end{enumerate}
+    \end{solucion}
+
+    \begin{problema}
+        Calcula el dominio de las funciones siguientes:
+        \begin{multicols}{2}
+            \begin{enumerate}
+                \item[(a)] $f(x)=x^{2}-5.$
+                \item[(b)] $f(x)=\sqrt{x+2}.$
+                \item[(c)] $f(x)=\frac{2}{x-3}.$
+            \end{enumerate}
+        \end{multicols}
+    \end{problema}
+
+    \begin{solucion}
+        \begin{enumerate}
+            \item[(a)] $f(x)=x^{2}-5$.\\
+            Ya que es un polinomio y por lo tanto no tiene mas restricciones el dominio de $f$ es $\R$.
+            \item[(b)] $f(x)=\sqrt{x+2}$.\\
+            Dado que la raíz cuadrada de números negativos no esta definida en $\R$, el domino de la función $f$ es
+            \begin{equation*}
+                \{x:x\geq-2\}=[-2,\infty).
+            \end{equation*}
+            \item[(c)] $f(x)=\frac{2}{x-3}$.\\
+            Dado que la división por 0 no esta definida, el dominio de la función $f$ es
+            \begin{equation*}
+                \R\setminus\{3\}=(-\infty,3)\cup(3,+\infty).
+            \end{equation*}
+        \end{enumerate}
+    \end{solucion}
+
+\end{document}
