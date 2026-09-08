@@ -1,0 +1,902 @@
+\documentclass[12pt,a4paper]{book}
+\raggedbottom
+
+
+% -------------------------------------------------
+% Diseño de capítulos y secciones
+% -------------------------------------------------
+
+\usepackage{titlesec}
+\usepackage{xcolor}
+
+\definecolor{chapterrule}{gray}{0.55}
+
+\titleformat{\chapter}[hang]
+  {\sffamily\bfseries\Large}
+  {\thechapter}
+  {1em}
+  {}
+  [\vspace{0.5ex}{\color{chapterrule}\titlerule[0.4pt]}]
+
+\titlespacing*{\chapter}
+  {0pt}
+  {0pt}
+  {2.5ex}
+
+\titleformat{\section}
+  {\sffamily\bfseries\normalsize}
+  {\thesection}
+  {1em}
+  {}
+
+\titlespacing*{\section}
+  {0pt}
+  {2.5ex}
+  {1ex}
+
+% -------------------------------------------------
+
+\usepackage{ugmath_notas}
+\usepackage{float}
+\usepackage{placeins}
+\usepackage[labelfont=bf,labelsep=space]{caption}
+\usepackage{pdfpages}
+\usepackage{tikz-cd}
+\usepackage{amsthm}
+\renewcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\comillas}[1]{``#1''}
+\newcommand{\llaves}[1]{\{#1\}}
+\newcommand{\parentesis}[1]{\left(#1\right)}
+\newcommand{\corchetes}[1]{\left[#1\right]}
+\newcommand{\llavesgrande}[1]{\big\{#1\big\}}
+\newcommand{\llavesgrandes}[1]{\left\{#1\right\}}
+\usepackage{booktabs}
+\addto\captionsspanish{%
+  \renewcommand{\tablename}{Tabla}
+}
+
+
+
+\begin{document}
+        
+    
+  \thispagestyle{empty}
+  \includepdf[pages=1]{portada_analisis_matematico.pdf}
+
+  \begin{flushright}
+    \thispagestyle{empty}
+
+    \textbf{Ricardo}\\[0.3cm]  
+      Aqui son las dedicatorias pero hay que ponerlas hasta el final
+      \textbf{Toshi}\\[0.3cm]
+      Oka
+  \end{flushright}
+
+  % ---------------- NOTA DE ERRORES ----------------
+
+  \cleardoublepage
+  \thispagestyle{empty}
+
+  \begin{mdframed}[style=mdgreenbox]
+    \begin{center}
+    \small
+    Estas notas fueron elaboradas con fines académicos.\\
+    A pesar del cuidado puesto en su redacción,\\
+    es posible que existan errores u omisiones.\\[0.3cm]
+
+    Cualquier corrección, sugerencia o comentario será bienvenido
+    en los correos: \\[0.3cm]
+
+    ricardo.leon@cimat.mx\\
+    gt.todakaastudillo@ugto.mx
+    \end{center}
+  \end{mdframed}
+
+  % -------------------------------------------------
+    
+  \setcounter{page}{1}
+  \tableofcontents
+
+  \chapter{Números Reales}
+ 
+  En este capítulo construimos, a partir de un puñado de axiomas, el sistema de los números reales que usaremos durante todo el curso. Empezamos con el lenguaje básico de conjuntos, después presentamos los axiomas de cuerpo, de orden y de completitud que caracterizan a $\mathbb{R}$, y terminamos estudiando a los números enteros: divisibilidad, inducción matemática y números primos.
+  
+  % ======================================================
+  \section{Notación básica de conjuntos}
+  % ======================================================
+  
+  Para construir a los números reales necesitamos primero un poco del lenguaje básico de la teoría de conjuntos.
+  
+  \begin{definicion}[Conjunto]
+    Un \textbf{conjunto} es una colección bien definida de objetos.
+  \end{definicion}
+  
+  Por ejemplo, la colección de las vocales del abecedario, $\{a,e,i,o,u\}$, es un conjunto. Para indicar que $x$ es un elemento de un conjunto $A$ escribimos $x \in A$ (léase ``$x$ pertenece a $A$''), y para indicar que $x$ no es un elemento de $A$ escribimos $x \notin A$ (``$x$ no pertenece a $A$'').
+  
+  \begin{definicion}[Subconjunto]
+    Diremos que un conjunto $A$ es \textbf{subconjunto} de un conjunto $B$, lo cual escribiremos $A \subset B$, si todo elemento de $A$ es también elemento de $B$.
+  \end{definicion}
+  
+  Siempre que se introduce un objeto matemático hay que decir cuándo dos de esos objetos son iguales. Para conjuntos, el criterio es el siguiente.
+  
+  \noindent\textbf{Criterio (igualdad de conjuntos).} Dos conjuntos son iguales si y sólo si tienen exactamente los mismos elementos. En consecuencia, para probar que $A=B$ basta mostrar que $A \subset B$ y que $B \subset A$.
+  
+  \begin{definicion}[Conjunto vacío]
+    El \textbf{conjunto vacío}, denotado por $\emptyset$, es el conjunto que no tiene elementos.
+  \end{definicion}
+  
+  \begin{proposicion}
+    El conjunto vacío es subconjunto de cualquier conjunto.
+  \end{proposicion}
+  
+  \begin{proof}
+    Procedemos por contradicción. Supongamos que existe un conjunto $A$ tal que $\emptyset \not\subset A$. Esto significa que existe $x \in \emptyset$ con $x \notin A$, lo cual es imposible, pues el conjunto vacío no tiene elementos. Por lo tanto, tal conjunto $A$ no existe, y en consecuencia $\emptyset$ es subconjunto de cualquier conjunto.
+  \end{proof}
+  
+  No todo conjunto se puede describir enumerando sus elementos entre llaves. Para estos casos usamos la \textbf{notación de conjuntos mediante una condición}: si $X$ es un conjunto y $P(x)$ es una condición sobre los elementos de $X$, escribimos
+  \begin{equation*}
+    \{x \in X : P(x)\}
+  \end{equation*}
+  para denotar al conjunto de los $x \in X$ tales que se cumple $P(x)$. El símbolo ``$:$'' se lee ``tal que'' (o ``tales que''). Cuando se trabaja con un conjunto fijo $X$, en ocasiones escribiremos simplemente $\{x : P(x)\}$, entendiendo que los $x$ en consideración son elementos de $X$.
+  
+  % ======================================================
+  \section{Distintas clases de números}
+  % ======================================================
+  
+  Recordemos que el conjunto de los números naturales es
+  \begin{equation*}
+    \mathbb{N} = \{1,2,3,4,\dots\}.
+  \end{equation*}
+  A partir de él definimos los enteros, los racionales y los irracionales:
+  \begin{equation*}
+    \mathbb{Z} = \{\dots,-3,-2,-1,0,1,2,3,\dots\}
+  \end{equation*}
+  \begin{equation*}
+    \mathbb{Q} = \{a/b : a,b \in \mathbb{Z},\ b \neq 0\}
+  \end{equation*}
+  \begin{equation*}
+    \mathbb{I} = \mathbb{R}\setminus\mathbb{Q}
+  \end{equation*}
+  es decir, el conjunto de los números irracionales es el conjunto de todos los números reales que no son racionales. Algunos irracionales conocidos son $\sqrt{2}$, $\pi$ y $e$. Notemos que
+  \begin{equation*}
+    \mathbb{N} \subset \mathbb{Z} \subset \mathbb{Q} \subset \mathbb{R}, \qquad \mathbb{I} \subset \mathbb{R}, \qquad \mathbb{R} = \mathbb{Q} \cup \mathbb{I}, \qquad \mathbb{Q} \cap \mathbb{I} = \emptyset.
+  \end{equation*}
+  
+  Vale la pena notar que una misma fracción puede escribirse de más de una forma: $3/15$ y $1/5$ son expresiones distintas para el mismo número racional; cuando el numerador y el denominador no comparten factores comunes (como en $1/5$), decimos que la fracción está en su \textbf{forma reducida}.
+  
+  \begin{ejemplo}
+    \textbf{Ejemplos de cada clase de número.}
+    \begin{equation*}
+      2\in\mathbb{N}, \qquad -3\in\mathbb{Z}\setminus\mathbb{N}, \qquad \frac{1}{2}\in\mathbb{Q}\setminus\mathbb{Z}, \qquad \sqrt{2},\ \pi,\ e \in\mathbb{I}.
+    \end{equation*}
+    Todo número racional tiene una expansión decimal finita o periódica; por ejemplo,
+    \begin{equation*}
+      \frac{1}{4}=0.25, \qquad \frac{1}{3}=0.\overline{3}=0.333\ldots
+    \end{equation*}
+    Los números irracionales, en cambio, tienen una expansión decimal infinita y no periódica; ésta es, de hecho, una manera equivalente de definir a $\mathbb{I}$.
+  \end{ejemplo}
+  
+  % ======================================================
+  \section{Axiomas de cuerpo}
+  % ======================================================
+  
+  En $\mathbb{R}$ existen dos operaciones, la suma o adición ``$+$'' y el producto o multiplicación ``$\cdot$'', que satisfacen los axiomas siguientes. En lo que sigue, $x,y,z$ denotan números reales.
+  
+  \begin{enumerate}[leftmargin=2.4em]
+    \item[\textbf{1.}] \textbf{Conmutatividad de la suma:} $x+y=y+x$.
+    \item[\textbf{2.}] \textbf{Asociatividad de la suma:} $x+(y+z)=(x+y)+z$.
+    \item[\textbf{3.}] \textbf{Existencia del neutro aditivo:} existe un número real, denotado por $0$, tal que $x+0=x$.
+    \item[\textbf{4.}] \textbf{Existencia de inversos aditivos:} dado $x \in \mathbb{R}$, existe un número real, llamado el inverso aditivo de $x$ y denotado por $-x$, tal que $x+(-x)=0$.
+    \item[\textbf{5.}] \textbf{Conmutatividad del producto:} $x\cdot y = y \cdot x$.
+    \item[\textbf{6.}] \textbf{Asociatividad del producto:} $x\cdot(y\cdot z)=(x\cdot y)\cdot z$.
+    \item[\textbf{7.}] \textbf{Existencia del neutro multiplicativo:} existe un número real distinto de $0$, denotado por $1$, tal que $x \cdot 1 = x$.
+    \item[\textbf{8.}] \textbf{Existencia de inversos multiplicativos:} dado $x \in \mathbb{R}$ con $x \neq 0$, existe un número real, llamado el inverso multiplicativo de $x$ y denotado por $x^{-1}$, tal que $x \cdot x^{-1}=1$.
+    \item[\textbf{9.}] \textbf{Distributividad:} $x\cdot(y+z) = x\cdot y + x\cdot z$.
+  \end{enumerate}
+  
+  Notemos que los primeros cuatro axiomas se refieren a la suma, los cuatro siguientes al producto, y el último relaciona ambas operaciones. Otros símbolos que usaremos para el producto $x\cdot y$ son $xy$, $x(y)$ y $(x)(y)$.
+  
+  De estos nueve axiomas se sigue, usando la asociatividad, que la suma (o el producto) de tres o más números reales no depende de cómo los agrupemos; por ello escribimos simplemente $x+y+z$ o $xyz$ sin paréntesis.
+  
+  Con los axiomas 4 y 8 podemos definir la resta y la división.
+  
+  \begin{definicion}[Resta y división de números reales]
+    Sean $x,y \in \mathbb{R}$.
+    \begin{enumerate}[label=(\alph*)]
+      \item Definimos la \textbf{resta} de $x$ menos $y$ como $x-y = x+(-y)$.
+      \item Si $x \neq 0$, definimos el \textbf{cociente} de $y$ entre $x$ como $\dfrac{y}{x} = y \cdot x^{-1}$.
+    \end{enumerate}
+  \end{definicion}
+  
+  Un primer resultado de los axiomas de cuerpo son las leyes de cancelación, que hemos usado desde nuestros cursos de álgebra elemental para ``despejar'' una variable en una ecuación.
+  
+  \begin{proposicion}[Leyes de cancelación]
+    \begin{enumerate}[label=(\alph*)]
+      \item Si $x+y=z$, entonces $y=z-x$.
+      \item Si $x \neq 0$ y $xy=z$, entonces $y = z/x$.
+    \end{enumerate}
+  \end{proposicion}
+  
+  \begin{proof}
+    (a) Notemos que
+    \begin{align*}
+      x+y                  & =z                                                \\
+      \Rightarrow -x+(x+y) & = -x+z   &  & \text{(sumamos $-x$ a ambos lados)} \\
+      \Rightarrow (-x+x)+y & = -x+z   &  & \text{(asociatividad de la suma)}   \\
+      \Rightarrow 0+y      & = -x+z   &  & \text{(propiedad de $-x$)}          \\
+      \Rightarrow y        & = -x+z   &  & \text{(propiedad del $0$)}          \\
+      \Rightarrow y        & = z+(-x) &  & \text{(conmutatividad de la suma)}  \\
+      \Rightarrow y        & = z-x.   &  & \text{(definición de la resta)}
+    \end{align*}
+    La demostración del inciso (b) es análoga, usando el axioma 8 en vez del axioma 4.
+  \end{proof}
+  
+  Con la ley de cancelación podemos mostrar que los inversos aditivo y multiplicativo de un número son únicos.
+  
+  \begin{proposicion}[Unicidad de los inversos]
+    \begin{enumerate}[label=(\alph*)]
+      \item Dado $x \in \mathbb{R}$, el número $-x$ es el único real que satisface $x+(-x)=0$.
+      \item Dado $x \in \mathbb{R}$ con $x \neq 0$, el número $x^{-1}$ es el único real que satisface $x \cdot x^{-1}=1$.
+    \end{enumerate}
+  \end{proposicion}
+  
+  \begin{proof}
+    (a) Supongamos que $y$ satisface $x+y=0$. Por la ley de cancelación (con $z=0$), $y=0-x=-x$. La demostración de (b) es análoga.
+  \end{proof}
+  
+  \begin{corolario}
+    Para todo $x \in \mathbb{R}$ se cumple que $-(-x)=x$.
+  \end{corolario}
+  
+  \begin{proof}
+    Por el axioma 4, $(-x)+x=0$, es decir, $x$ satisface la ecuación que define al inverso aditivo de $-x$. Por la unicidad de los inversos, $x$ debe ser precisamente ese inverso, es decir, $x=-(-x)$.
+  \end{proof}
+  
+  % ======================================================
+  \section{Axiomas de orden}
+  % ======================================================
+  
+  Además de la suma y el producto, en $\mathbb{R}$ contamos con una relación de orden ``$<$'' entre números reales que cumple los axiomas siguientes (la expresión $x<y$ se lee ``$x$ es menor que $y$''; geométricamente, significa que al situar a $x$ y a $y$ sobre la recta numérica, $x$ queda a la izquierda de $y$).
+  
+  \begin{enumerate}[leftmargin=2.6em]
+    \item[\textbf{10.}] \textbf{Tricotomía:} dados $x,y \in \mathbb{R}$, se cumple una y sólo una de las condiciones
+          \begin{equation*}
+            x<y, \qquad x=y, \qquad y<x.
+          \end{equation*}
+    \item[\textbf{11.}] \textbf{Transitividad:} si $x<y$ y $y<z$, entonces $x<z$.
+    \item[\textbf{12.}] \textbf{Preservación del orden bajo la suma:} si $x<y$, entonces $x+z<y+z$ para todo $z \in \mathbb{R}$.
+    \item[\textbf{13.}] \textbf{Preservación del orden bajo el producto por positivos:} si $x<y$ y $z$ es positivo, entonces $xz<yz$.
+  \end{enumerate}
+  
+  Antes de seguir necesitamos precisar qué significa que un número sea positivo o negativo.
+  
+  \begin{definicion}[Números positivos y negativos]
+    Sea $x \in \mathbb{R}$.
+    \begin{enumerate}[label=(\alph*)]
+      \item Diremos que $x$ es \textbf{positivo} si $0<x$.
+      \item Diremos que $x$ es \textbf{negativo} si $x<0$.
+    \end{enumerate}
+  \end{definicion}
+  
+  Además de ``$<$'', definimos las relaciones siguientes.
+  
+  \begin{definicion}
+    Sean $x,y \in \mathbb{R}$.
+    \begin{enumerate}[label=(\alph*)]
+      \item Definimos $x>y$ si $y<x$.
+      \item Definimos $x \leq y$ si $x<y$ o $x=y$.
+      \item Definimos $x \geq y$ si $y \leq x$.
+    \end{enumerate}
+  \end{definicion}
+  
+  La primera consecuencia de los axiomas de orden es la siguiente.
+  
+  \begin{proposicion}
+    Sean $x,y \in \mathbb{R}$. Entonces $x<y$ si y sólo si $y-x>0$.
+  \end{proposicion}
+  
+  \begin{proof}
+    Por la preservación del orden bajo la suma (axioma 12),
+    \begin{equation*}
+      x<y \;\Rightarrow\; x-x < y-x \;\Rightarrow\; 0<y-x \quad \text{(por la propiedad de $-x$).}
+    \end{equation*}
+    Las implicaciones contrarias también se cumplen (basta sumar $x$ a ambos lados), de donde se sigue la equivalencia.
+  \end{proof}
+  
+  También necesitaremos la siguiente propiedad, útil para acotar un número por otro salvo un error arbitrariamente pequeño.
+  
+  \begin{proposicion}
+    Si $a,b \in \mathbb{R}$ satisfacen $a \leq b+\varepsilon$ para todo $\varepsilon>0$, entonces $a \leq b$.
+  \end{proposicion}
+  
+  \begin{proof}
+    Procedemos por contradicción. Supongamos que $b<a$, y tomemos $\varepsilon = \dfrac{a-b}{2}>0$ (positivo, pues $a>b$ por la proposición anterior). Notemos que
+    \begin{equation*}
+      b+\varepsilon = b+\frac{a-b}{2} = \frac{a+b}{2}.
+    \end{equation*}
+    Por otro lado, de $b<a$ y el axioma 12,
+    \begin{equation*}
+      b<a \;\Rightarrow\; b+a<a+a=2a \;\Rightarrow\; \frac{a+b}{2}<a.
+    \end{equation*}
+    Así, $b+\varepsilon<a$, es decir, $a>b+\varepsilon$, lo cual contradice la hipótesis $a\leq b+\varepsilon$ para ese mismo $\varepsilon$. Por lo tanto $b<a$ es imposible, y concluimos que $a \leq b$.
+  \end{proof}
+  
+  % ======================================================
+  \section{Cotas, supremo e ínfimo}
+  % ======================================================
+  
+  Los axiomas de orden nos permiten comparar dos números reales a la vez. Ahora usaremos ese orden para describir el comportamiento de un \emph{conjunto completo} de números reales: qué tan ``grande'' o ``pequeño'' puede llegar a ser.
+  
+  \begin{definicion}[Cota superior]
+    Sea $S$ un conjunto de números reales. Si existe un número real $b$ tal que $x\leq b$ para todo $x\in S$, diremos que $b$ es una \textbf{cota superior} de $S$ y que $S$ está \textbf{acotado superiormente} por $b$.
+  
+    Si $b$ es cota superior de $S$ y además $b\in S$, entonces lo denominamos el \textbf{máximo} de $S$, y lo denotamos por $b=\max S$.
+  \end{definicion}
+  
+  Los conjuntos sin cotas superiores se llaman \textbf{no acotados superiormente}.
+  
+  \begin{definicion}[Cota inferior]
+    Sea $S$ un conjunto de números reales. Si existe un número real $a$ tal que $a\leq x$ para todo $x\in S$, diremos que $a$ es una \textbf{cota inferior} de $S$ y que $S$ está \textbf{acotado inferiormente} por $a$.
+  
+    Si $a$ es cota inferior de $S$ y además $a\in S$, entonces lo denominamos el \textbf{mínimo} de $S$, y lo denotamos por $a=\min S$.
+  \end{definicion}
+  
+  \begin{ejemplo}
+    \textbf{Cotas superiores e inferiores.}
+    \begin{enumerate}[label=(\arabic*)]
+      \item $\mathbb{R}=(-\infty,\infty)$ no tiene cota inferior ni cota superior.
+      \item $\mathbb{R}^+=(0,\infty)$: $0$ es una cota inferior, pero $\mathbb{R}^+$ no tiene cota superior. Además, $\mathbb{R}^+$ carece de mínimo, pues $0\notin\mathbb{R}^+$.
+      \item $\mathbb{R}^+\cup\{0\}=[0,\infty)$: $0$ es una cota inferior y el conjunto no está acotado superiormente. Como $0$ pertenece al conjunto, $\min(\mathbb{R}^+\cup\{0\})=0$.
+      \item $S=[0,2]$ es un conjunto acotado: $0$ es una cota inferior y $2$ es una cota superior, con $\min S=0$ y $\max S=2$.
+      \item $T=[1,3)$ está acotado inferior y superiormente, con $\min T=1$; sin embargo, $\max T$ no existe (ningún elemento de $T$ es mayor o igual que todos los demás, pues $T$ no incluye a su extremo derecho).
+    \end{enumerate}
+  \end{ejemplo}
+  
+  El último ejemplo muestra que un conjunto acotado superiormente no siempre tiene máximo. Sin embargo, entre todas las cotas superiores de un conjunto acotado siempre hay una que es la ``mejor'' posible: la más pequeña. A esa cota especial la llamamos el \textbf{supremo}.
+  
+  \begin{definicion}[Supremo]
+    Sea $S$ un conjunto de números reales acotado superiormente. Un número real $b$ se denomina \textbf{extremo superior} o \textbf{supremo} de $S$ si satisface las dos propiedades siguientes:
+    \begin{enumerate}[label=(\arabic*)]
+      \item $b$ es una cota superior de $S$.
+      \item Ningún número menor que $b$ es cota superior de $S$.
+    \end{enumerate}
+    Al número $b$ que satisface ambas propiedades lo denotamos por $b=\sup S$.
+  \end{definicion}
+  
+  En otras palabras, el supremo es la cota superior más pequeña.
+  
+  \begin{definicion}[Ínfimo]
+    Sea $S$ un conjunto de números reales acotado inferiormente. Un número real $a$ se denomina \textbf{extremo inferior} o \textbf{ínfimo} de $S$ si satisface las dos propiedades siguientes:
+    \begin{enumerate}[label=(\arabic*)]
+      \item $a$ es una cota inferior de $S$.
+      \item Ningún número mayor que $a$ es cota inferior de $S$.
+    \end{enumerate}
+    Al número $a$ que satisface ambas propiedades lo representamos por $a=\inf S$.
+  \end{definicion}
+  
+  Análogamente, el ínfimo es la cota inferior más grande. Cuando el máximo (o el mínimo) de un conjunto existe, coincide con su supremo (o su ínfimo, respectivamente); pero, como muestra el siguiente ejemplo, el supremo y el ínfimo pueden existir incluso cuando el máximo o el mínimo no.
+  
+  \begin{ejemplo}
+    \textbf{Supremo e ínfimo.}
+    \begin{enumerate}[label=(\arabic*)]
+      \item $S=[0,1]$: está acotado por sus extremos. Como $0\in S$, $\min S = \inf S = 0$; y como $1\in S$, $\max S = \sup S = 1$.
+      \item $T=[0,1)$: $0$ es cota inferior y $0\in T$, así que $\min T = \inf T = 0$. Por otro lado, $1$ es cota superior de $T$, pero no existe $\max T$ (pues $1\notin T$); sin embargo, ninguna cota superior menor que $1$ funciona (siempre hay elementos de $T$ más grandes que ella), así que $\sup T = 1$.
+    \end{enumerate}
+  \end{ejemplo}
+  
+  Hasta ahora, nada en los axiomas de cuerpo y de orden garantiza que un conjunto acotado superiormente efectivamente \emph{tenga} un supremo (de hecho, $\mathbb{Q}$ satisface ambos tipos de axiomas y, sin embargo, el conjunto $\{x\in\mathbb{Q} : x^2<2\}$, acotado superiormente en $\mathbb{Q}$, no tiene supremo racional). Por ello necesitamos un último axioma, que es precisamente lo que distingue a $\mathbb{R}$ de $\mathbb{Q}$.
+  
+  \noindent\textbf{Axioma (completitud, o axioma del supremo).} Se cumplen las dos afirmaciones siguientes:
+  \begin{enumerate}[label=(\alph*)]
+    \item Todo conjunto no vacío $S$ de números reales que esté acotado superiormente admite un supremo; es decir, existe un número real $b$ tal que $b=\sup S$.
+    \item Todo conjunto no vacío $S$ de números reales que esté acotado inferiormente admite un ínfimo; es decir, existe un número real $a$ tal que $a=\inf S$.
+  \end{enumerate}
+  
+  El axioma de completitud es, junto con los axiomas de cuerpo y de orden, uno de los tres pilares sobre los que se construye $\mathbb{R}$: cualquier conjunto de números que satisfaga los tres tipos de axiomas es, esencialmente, una copia de los números reales.
+  
+  % ======================================================
+  \section{El número \texorpdfstring{$e$}{e} es irracional}
+  % ======================================================
+  
+  Como aplicación de las herramientas anteriores, mostramos que el número $e$, definido mediante la serie
+  \begin{equation*}
+    e = \sum_{k=0}^{\infty} \frac{1}{k!} = 1+1+\frac{1}{2!}+\frac{1}{3!}+\cdots,
+  \end{equation*}
+  no es racional. La demostración combina un argumento de divisibilidad (¿qué tan bien se puede aproximar $e$ por una suma finita?) con una cota tipo serie geométrica.
+  
+  \begin{teorema}[Irracionalidad de $e$]
+    El número $e$ es irracional.
+  \end{teorema}
+  
+  \begin{proof}
+    Procedemos por contradicción. Supongamos que $e$ es racional, es decir, $e=\dfrac{a}{b}$ para ciertos $a,b\in\mathbb{Z}^+$. Multiplicando por $b!$,
+    \begin{equation*}
+      b!\,e = a(b-1)!,
+    \end{equation*}
+    que es un entero positivo.
+  
+    Por otro lado, usando la serie que define a $e$,
+    \begin{equation*}
+      b!\,e = b!\sum_{k=0}^{\infty}\frac{1}{k!} = \sum_{k=0}^{\infty}\frac{b!}{k!} = \underbrace{\sum_{k=0}^{b}\frac{b!}{k!}}_{(\ast)} + \underbrace{\sum_{k=b+1}^{\infty}\frac{b!}{k!}}_{(\ast\ast)}.
+    \end{equation*}
+  
+    \textbf{La suma $(\ast)$ es un entero positivo:} para $0\leq k\leq b$, el cociente $\dfrac{b!}{k!}=(k+1)(k+2)\cdots b$ es un producto de enteros, así que cada término (y por lo tanto la suma completa) es un entero positivo.
+  
+    \textbf{La suma $(\ast\ast)$ está estrictamente entre $0$ y $1$:} escribiendo $k=b+i$ con $i\geq 1$,
+    \begin{equation*}
+      (\ast\ast) = \sum_{i=1}^{\infty}\frac{b!}{(b+i)!} = \sum_{i=1}^{\infty}\frac{1}{(b+1)(b+2)\cdots(b+i)}.
+    \end{equation*}
+    Como $b+1<b+2<\cdots<b+i$, se tiene $(b+1)(b+2)\cdots(b+i) \geq (b+1)^i$, así que
+    \begin{equation*}
+      0 < (\ast\ast) \leq \sum_{i=1}^{\infty}\frac{1}{(b+1)^i}.
+    \end{equation*}
+    Esta última es una serie geométrica de razón $r=\dfrac{1}{b+1}<1$ (pues $b\geq 1$), así que
+    \begin{equation*}
+      \sum_{i=1}^{\infty}\frac{1}{(b+1)^i} = \frac{\frac{1}{b+1}}{1-\frac{1}{b+1}} = \frac{1}{b} \leq 1.
+    \end{equation*}
+    Por lo tanto, $0<(\ast\ast)<1$ (la desigualdad es estricta pues $(b+1)(b+2)\cdots(b+i)>(b+1)^i$ para $i\geq 2$).
+  
+    \textbf{Conclusión.} Hemos mostrado que
+    \begin{equation*}
+      b!\,e = \underbrace{(\ast)}_{\in\,\mathbb{Z}^+} + \underbrace{(\ast\ast)}_{0<\,\cdot\,<1},
+    \end{equation*}
+    pero también que $b!\,e = a(b-1)!\in\mathbb{Z}^+$. Como no existe ningún entero estrictamente entre $0$ y $1$, un entero no puede escribirse como otro entero más una cantidad estrictamente entre $0$ y $1$. Esta contradicción muestra que la suposición inicial es falsa. Por lo tanto, $e$ no puede ser racional.
+  \end{proof}
+  
+  \begin{problema}
+    Demostrar, con un argumento similar, que $\pi$ es irracional.
+  \end{problema}
+  
+  % ======================================================
+  \section{Representación geométrica e intervalos}
+  % ======================================================
+  
+  Cada número real se representa como un punto sobre una recta, la \emph{recta real o recta numérica}. Las relaciones ``$<$'' y ``$\leq$'' permiten definir un tipo especial de subconjuntos de $\mathbb{R}$ a los que llamaremos \textbf{intervalos}.
+  
+  \begin{definicion}[Intervalos]
+    Sean $a,b \in \mathbb{R}$.
+    \begin{enumerate}[label=(\alph*)]
+      \item Definimos los intervalos finitos
+            \begin{equation*}
+              (a,b) = \{x : a<x<b\}, \qquad [a,b] = \{x : a \leq x \leq b\},
+            \end{equation*}
+            \begin{equation*}
+              (a,b] = \{x : a<x\leq b\}, \qquad [a,b) = \{x : a \leq x <b\}.
+            \end{equation*}
+            Al conjunto $(a,b)$ le llamamos \textbf{intervalo abierto}, a $[a,b]$ \textbf{intervalo cerrado}, a $(a,b]$ \textbf{intervalo semiabierto por la izquierda y semicerrado por la derecha}, y a $[a,b)$ \textbf{intervalo semicerrado por la izquierda y semiabierto por la derecha}.
+      \item Definimos también los intervalos infinitos
+            \begin{equation*}
+              (a,\infty) = \{x : a<x\}, \quad [a,\infty) = \{x : a \leq x\}, \quad (-\infty,a) = \{x : x<a\},
+            \end{equation*}
+            \begin{equation*}
+              (-\infty,a] = \{x : x \leq a\}, \qquad (-\infty,\infty) = \mathbb{R}.
+            \end{equation*}
+    \end{enumerate}
+  \end{definicion}
+  
+  Notemos que si $b<a$, entonces $(a,b)=[a,b]=(a,b]=[a,b)=\emptyset$; también $(a,a)=(a,a]=[a,a)=\emptyset$, mientras que $[a,a]=\{a\}$. De aquí en adelante, salvo que se indique lo contrario, al considerar intervalos de la forma $(a,b)$, $(a,b]$ o $[a,b)$ supondremos que $a<b$, y al considerar $[a,b]$ supondremos que $a \leq b$.
+  
+  % ======================================================
+  \section{Conjuntos inductivos y los números enteros}
+  % ======================================================
+  
+  Para caracterizar con precisión al conjunto de los números enteros (y más adelante a los números primos) usamos la noción de \textbf{conjunto inductivo}.
+  
+  \begin{definicion}[Conjunto inductivo]
+    Un conjunto de números reales se denomina \textbf{conjunto inductivo} si:
+    \begin{enumerate}[label=(\alph*)]
+      \item $1$ pertenece al conjunto.
+      \item Para cada $x$ del conjunto, el número $x+1$ también pertenece al conjunto.
+    \end{enumerate}
+  \end{definicion}
+  
+  Es decir, un conjunto inductivo empieza en $1$ y, una vez dentro, no es posible ``salir'' sumando $1$ repetidamente; esto es justamente lo que hace a $\mathbb{N}=\{1,2,3,\dots\}$ un conjunto inductivo.
+  
+  \begin{definicion}[Entero]
+    Un número real se denomina \textbf{entero} si pertenece a todo conjunto inductivo. El conjunto de los enteros positivos se designa por $\mathbb{Z}^+$.
+  \end{definicion}
+  
+  $\mathbb{Z}^+$ es el menor conjunto inductivo, en el sentido de que está contenido en cualquier otro. A los inversos aditivos de los enteros positivos los llamamos \textbf{enteros negativos}, $\mathbb{Z}^-$. Así,
+  \begin{equation*}
+    \mathbb{Z}^+ \cup \mathbb{Z}^- \cup \{0\} = \mathbb{Z} \quad \Longrightarrow \quad (\mathbb{Z},+) \text{ es un grupo.}
+  \end{equation*}
+  
+  \subsection{Divisibilidad: definiciones básicas}
+  
+  \begin{definicion}[Divisor y múltiplo]
+    Sean $a,d \in \mathbb{Z}$. Diremos que $d$ \textbf{divide} a $a$, lo cual escribimos $d \mid a$, si existe un entero $c$ tal que $a=cd$. En este caso decimos que $d$ es un \textbf{divisor} o \textbf{factor} de $a$, y que $a$ es un \textbf{múltiplo} de $d$.
+  \end{definicion}
+  
+  \begin{ejemplo}
+    $3\mid 12$, pues $12=4\cdot 3$; los divisores positivos de $12$ son $1,2,3,4,6,12$. En cambio, $3\nmid 7$: no existe ningún entero $c$ tal que $7=3c$.
+  \end{ejemplo}
+  
+  \begin{definicion}[Número primo]
+    Un \textbf{número primo} es un número natural mayor que $1$ cuyos únicos divisores positivos son él mismo y la unidad.
+  \end{definicion}
+  
+  \begin{definicion}[Número compuesto]
+    Si $n>0$ y $n$ no es primo ni es $1$, decimos que $n$ es \textbf{compuesto}.
+  \end{definicion}
+  
+  \begin{ejemplo}
+    Los primeros números primos son
+    \begin{equation*}
+      2,3,5,7,11,13,17,19,23,29,\dots
+    \end{equation*}
+    Notemos que $2$ es el único primo par: cualquier otro número par $n=2k$ con $k>1$ tiene a $2$ como divisor propio, así que es compuesto. Los primeros números compuestos son $4,6,8,9,10,12,\dots$; el número $1$ no se considera ni primo ni compuesto.
+  \end{ejemplo}
+  
+  Si $d$ no divide a $a$ escribimos $d \nmid a$.
+  
+  % ======================================================
+  \section{Principio de inducción}
+  % ======================================================
+  
+  En esta sección estudiamos el \textbf{principio de inducción matemática}, una herramienta fundamental para probar afirmaciones de la forma $\forall n \in \mathbb{N},\ P(n)$.
+  
+  \begin{proposicion}[Principio de inducción matemática]
+    Sea $A \subset \mathbb{N}$. Supongamos que $A$ cumple las dos condiciones siguientes:
+    \begin{enumerate}[label=(\alph*)]
+      \item $1 \in A$.
+      \item Si $k \in A$, entonces $k+1 \in A$.
+    \end{enumerate}
+    Entonces $A=\mathbb{N}$.
+  \end{proposicion}
+  
+  A la hipótesis del inciso (b) se le conoce como \textbf{hipótesis de inducción}. El principio se usa para probar que una fórmula o condición $P(n)$ se cumple para todo $n \in \mathbb{N}$: basta considerar el conjunto $A=\{n \in \mathbb{N} : P(n) \text{ se cumple}\}$ y verificar que cumple (a) y (b); entonces $A=\mathbb{N}$, es decir, $P(n)$ se cumple para todo $n$.
+  
+  \begin{ejemplo}
+    \textbf{Suma de los primeros $n$ enteros.}
+    Probemos que para todo $n \in \mathbb{N}$ se cumple que
+    \begin{equation*}
+      1+2+\cdots+n = \frac{n(n+1)}{2}.
+    \end{equation*}
+  
+    \textbf{Solución.} Sea $P(n)$ la fórmula anterior y consideremos $A=\{n \in \mathbb{N} : P(n)\}$. Mostraremos que $A$ cumple las condiciones (a) y (b) del principio de inducción.
+  
+    (a) Es claro que $1 \in A$, pues $1 = 1(1+1)/2$.
+  
+    (b) Supongamos que $k \in A$, es decir, que $1+2+\cdots+k = k(k+1)/2$. Entonces
+    \begin{equation*}
+      1+2+\cdots+k+(k+1) = \frac{k(k+1)}{2}+(k+1) = \frac{k(k+1)+2(k+1)}{2} = \frac{(k+1)(k+2)}{2},
+    \end{equation*}
+    lo cual muestra que $k+1 \in A$.
+  
+    Por el principio de inducción, $A=\mathbb{N}$, es decir, la fórmula se cumple para todo $n \in \mathbb{N}$.
+  \end{ejemplo}
+  
+  En la práctica, la prueba de que $P(n)$ se cumple para todo $n$, como la del ejemplo anterior, se abrevia probando sólo lo siguiente:
+  \begin{enumerate}[label=(\roman*)]
+    \item $P(n)$ se cumple para $n=1$ (\emph{base inductiva}).
+    \item Si $P(n)$ se cumple para $n=k$, entonces se cumple para $n=k+1$ (\emph{paso inductivo}).
+  \end{enumerate}
+  
+  \begin{problema}
+    Demostrar por inducción la siguiente fórmula:
+    \begin{equation*}
+      1^2+2^2+3^2+\cdots+n^2 = \frac{n(n+1)(2n+1)}{6}
+    \end{equation*}
+  \end{problema}
+  
+  % ======================================================
+  \section{Propiedades de divisibilidad}
+  % ======================================================
+  
+  Sean $a,b,c,d,n,m \in \mathbb{Z}$. La divisibilidad satisface las siguientes propiedades:
+  
+  \begin{center}
+    \begin{tabular}{lll}
+      \toprule
+            & \textbf{Propiedad} & \textbf{Enunciado}                                  \\
+      \midrule
+      i)    & Reflexiva          & $n \mid n$                                          \\
+      ii)   & Transitiva         & $d\mid n$ y $n\mid m$ $\Rightarrow$ $d\mid m$       \\
+      iii)  & Linealidad         & $d\mid n$ y $d\mid m$ $\Rightarrow$ $d\mid (an+bm)$ \\
+      iv)   & Multiplicación     & $d\mid n$ $\Rightarrow$ $ad\mid an$                 \\
+      v)    & Cancelación        & $ad\mid an$ y $a\neq 0$ $\Rightarrow$ $d\mid n$     \\
+      vi)   & Unidad             & $1\mid n$ \quad (1 divide a cualquier entero)       \\
+      vii)  & Cero               & $n\mid 0$ \quad (todo entero divide a 0)            \\
+      viii) & Comparación        & $d\mid n$ y $n\neq 0$ $\Rightarrow$ $|d|\leq |n|$   \\
+      ix)   & Antisimetría       & $d\mid n$ y $n\mid d$ $\Rightarrow$ $|d|=|n|$       \\
+      x)    & Divisor conjugado  & $d\mid n$ y $d\neq 0$ $\Rightarrow$ $(n/d)\mid n$   \\
+      xi)   & Sólo el cero       & $0\mid n$ $\Rightarrow$ $n=0$                       \\
+      \bottomrule
+    \end{tabular}
+  \end{center}
+  
+  \begin{definicion}[Divisor conjugado]
+    Si $d\mid n$, al número $n/d$ se le llama \textbf{divisor conjugado} de $d$.
+  \end{definicion}
+  
+  \begin{definicion}[Común divisor]
+    Si $d\mid a$ y $d\mid b$, decimos que $d$ es \textbf{común divisor} de $a$ y $b$. El $1$ siempre es un común divisor de cualquier par de enteros.
+  \end{definicion}
+  
+  \begin{ejemplo}
+    \textbf{Propiedades de divisibilidad en acción.}
+    \begin{itemize}
+      \item \textbf{Transitiva:} $3\mid 12$ y $12\mid 24$, así que $3\mid 24$.
+      \item \textbf{Linealidad:} $4\mid 8$ y $4\mid 20$, así que $4\mid(3\cdot 8+2\cdot 20)=4\mid 76$ (en efecto, $76=19\cdot 4$).
+      \item \textbf{Divisor conjugado:} como $3\mid 12$, el divisor conjugado de $3$ es $12/3=4$; y en efecto $4$ también divide a $12$.
+      \item \textbf{Común divisor:} los divisores positivos de $12$ son $1,2,3,4,6,12$, y los de $20$ son $1,2,4,5,10,20$; los comunes son $1,2,4$, así que $4$ es el mayor de ellos.
+    \end{itemize}
+  \end{ejemplo}
+  
+  \begin{teorema}[Existencia de un común divisor como combinación lineal]
+    Dados dos números $a$ y $b$, existe un común divisor $d$ de ambos que puede escribirse en la forma
+    \begin{equation*}
+      d = xa+yb, \qquad x,y \in \mathbb{Z}.
+    \end{equation*}
+    Además, cada divisor común de $a$ y $b$ divide a $d$.
+  \end{teorema}
+  
+  \begin{teorema}[Todo entero mayor que 1 se factoriza en primos]
+    Cada número entero $n>1$ es primo, o bien producto de números primos.
+  \end{teorema}
+  
+  \begin{proof}
+    Por inducción (fuerte).
+  
+    \textbf{Base inductiva:}
+    \begin{equation*}
+      n=2=1\cdot 2, \qquad n=3=1\cdot 3, \qquad n=4=2\cdot 2.
+    \end{equation*}
+  
+    \textbf{Hipótesis.} El teorema se cumple para todo entero $k$ con $1<k<n$.
+  
+    \textbf{Paso inductivo.} Consideramos $k+1$. Si $k+1$ es primo, no hay nada más que probar. Si $k+1$ no es primo, entonces $k+1=cd$ con $1<c\leq k$ y $1<d\leq k$. Por la hipótesis de inducción, tanto $c$ como $d$ son primos o producto de primos, y por lo tanto también lo es $k+1=cd$.
+  \end{proof}
+  
+  \begin{teorema}[Existencia y unicidad del máximo común divisor]
+    Dados los enteros $a$ y $b$, existe un único $d$ con las siguientes propiedades:
+    \begin{enumerate}[label=\roman*)]
+      \item $d \geq 0$,
+      \item $d\mid a$ y $d\mid b$ ($d$ es divisor común),
+      \item si $e\mid a$ y $e\mid b$, entonces $e\mid d$ (todo divisor común de $a,b$ divide a $d$).
+    \end{enumerate}
+  \end{teorema}
+  
+  \begin{definicion}[Máximo común divisor (mcd)]
+    El número $d$ del teorema anterior se llama \textbf{máximo común divisor} de $a$ y $b$, y se denota $d=(a,b)$ o $d=\gcd(a,b)$.
+  \end{definicion}
+  
+  \begin{definicion}[Números coprimos]
+    Si $(a,b)=1$, decimos que $a$ y $b$ son \textbf{primos entre sí} (o \textbf{coprimos}).
+  \end{definicion}
+  
+  \begin{ejemplo}
+    \textbf{Cálculo del mcd por listado de divisores.}
+    Retomando el ejemplo anterior, los divisores positivos comunes de $12$ y $20$ son $1,2,4$; el mayor de ellos es $4$, así que $(12,20)=4$. Este método funciona bien para números pequeños, pero se vuelve poco práctico para números grandes; en un curso de teoría de números se estudia el \textbf{algoritmo de Euclides}, un método mucho más eficiente para calcular el mcd de cualquier par de enteros.
+  \end{ejemplo}
+  
+  \begin{ejemplo}
+    \begin{equation*}
+      7=1\cdot 7, \qquad 13=1\cdot 13, \qquad 35=5\cdot 7
+    \end{equation*}
+    \begin{equation*}
+      11=1\cdot 11, \qquad 6=1\cdot 2\cdot 3, \qquad 66=1\cdot 2\cdot 3\cdot 11
+    \end{equation*}
+    Como estas factorizaciones no comparten factores primos:
+    \begin{equation*}
+      (7,11)=1, \qquad (13,6)=1, \qquad (35,66)=1 \;\Longrightarrow\; 35 \text{ y } 66 \text{ son coprimos.}
+    \end{equation*}
+  \end{ejemplo}
+  
+  \begin{teorema}[Propiedades del mcd]
+    \begin{enumerate}[label=\roman*)]
+      \item \textbf{Conmutativa:} $(a,b)=(b,a)$
+      \item \textbf{Asociativa:} $(a,(b,c)) = ((a,b),c)$
+      \item \textbf{Distributiva:} $(ac,bc) = |c|\,(a,b)$
+      \item \textbf{Casos base:} $(a,1)=(1,a)=1$, \qquad $(a,0)=(0,a)=|a|$
+    \end{enumerate}
+  \end{teorema}
+  
+  \begin{lema}[Lema de Euclides]
+    Si $a\mid bc$ y $(a,b)=1$, entonces $a\mid c$.
+  \end{lema}
+  
+  En palabras: si $a$ divide a un producto $bc$, pero $a$ no comparte factores con $b$ (son coprimos), entonces toda la responsabilidad de ser divisible por $a$ recae en $c$.
+  
+  \begin{ejemplo}
+    Sean $a=3$, $b=7$, $c=6$:
+    \begin{equation*}
+      3 \mid 7\cdot 6, \qquad (3,7)=1 \;\Longrightarrow\; 3\mid 6 \;\Longrightarrow\; 6=2\cdot 3
+    \end{equation*}
+  \end{ejemplo}
+  
+  \begin{proof}
+    Como $(a,b)=1$, por el teorema de la combinación lineal existen $x,y\in\mathbb{Z}$ tales que $1=xa+yb$. Multiplicando ambos lados por $c$,
+    \begin{equation*}
+      c = cxa+cyb.
+    \end{equation*}
+    Notemos que $a\mid cxa$ (es un múltiplo evidente de $a$), y como $a\mid bc$, también $a\mid cyb$ (pues $cyb=y\cdot(bc)$). Así, ambos sumandos del lado derecho son divisibles por $a$, y por linealidad,
+    \begin{equation*}
+      a \mid (cxa+cyb) = c.
+    \end{equation*}
+  \end{proof}
+  
+  % ======================================================
+  \section{Infinitud de los números primos}
+  % ======================================================
+  
+  \begin{teorema}[Infinitud de los primos]
+    Existen infinitos números primos.
+  \end{teorema}
+  
+  Veamos primero la idea con un ejemplo. Supongamos, por un momento, que sólo existieran 3 números primos: $\{2,3,5\}$. Multiplicándolos y sumando $1$ obtenemos un número que revela la existencia de un primo nuevo:
+  \begin{equation*}
+    N_1 = 2\cdot 3\cdot 5+1 = 31 \quad \Longrightarrow \quad \{2,3,5,31\}
+  \end{equation*}
+  \begin{equation*}
+    N_2 = 2\cdot 3\cdot 5\cdot 31+1 = 931 = 7^2 \cdot 19
+  \end{equation*}
+  \begin{equation*}
+    N_3 = 2\cdot 3\cdot 5\cdot 7\cdot 19\cdot 31+1 = 123691 = 37\cdot 3343
+  \end{equation*}
+  Esta es la idea detrás de la demostración general.
+  
+  \begin{proof}
+    Procedemos por contradicción. Supongamos que el conjunto de números primos es finito: $\{p_1,p_2,\dots,p_n\}$. Consideremos
+    \begin{equation*}
+      N = p_1\cdot p_2 \cdots p_n + 1 = \prod_{k=1}^{n} p_k + 1.
+    \end{equation*}
+  
+    Sólo hay dos posibilidades para $N$: si $N$ es primo, entonces $N$ es un primo que no está en la lista (pues $N$ es estrictamente mayor que todos los $p_k$), lo cual contradice que la lista contenía a todos los primos. Si $N$ es compuesto, entonces algún $p_i$ de la lista divide a $N$; pero también $p_i \mid \prod_{k=1}^n p_k$, así que
+    \begin{equation*}
+      p_i \;\Big|\; \Big(N - \prod_{k=1}^n p_k\Big) = 1,
+    \end{equation*}
+    lo cual es imposible para un primo. En ambos casos llegamos a una contradicción, así que el conjunto de los primos no puede ser finito.
+  \end{proof}
+  
+  \begin{problema}
+    Probar el siguiente teorema.
+    \begin{enumerate}[label=\roman*)]
+      \item Si un número primo $p$ no divide a un número $a$, entonces $(p,a)=1$.
+    \end{enumerate}
+  \end{problema}
+  
+  \begin{proof}
+    Sea $d=(p,a)$. Como $d\mid p$ y $p$ es primo, sólo hay dos opciones: $d=1$ ó $d=p$. Si fuera $d=p$, entonces de $d\mid a$ se seguiría $p\mid a$, contradiciendo la hipótesis de que $p\nmid a$. Por lo tanto la única posibilidad es $d=1$, es decir, $(p,a)=1$.
+  \end{proof}
+  
+  El resultado siguiente se conoce como el \textbf{primer teorema de Euclides}: si $p$, $a$ y $b$ son números enteros, $p$ divide a $ab$ y $p$ es primo, entonces $p$ divide a $a$ o $p$ divide a $b$.
+  
+  \begin{problema}
+    Demostrar el primer teorema de Euclides: si un número primo $p$ divide a un producto $ab$, entonces $p\mid a$ o $p\mid b$. \\
+    \emph{(Fecha de entrega: viernes)}
+  \end{problema}
+  
+  % ======================================================
+  \section{Primos de Mersenne}
+  % ======================================================
+  
+  \begin{definicion}[Primo de Mersenne]
+    Un \textbf{primo de Mersenne} es un número primo de la forma $2^p-1$, donde $p$ es primo.
+  \end{definicion}
+  
+  La definición anterior no es casualidad: como veremos a continuación, para que $2^n-1$ sea primo es \emph{necesario} que $n$ lo sea.
+  
+  \begin{teorema}[Condición necesaria para que $2^n-1$ sea primo]
+    Si $2^n-1$ es primo, entonces $n$ es primo.
+  \end{teorema}
+  
+  \begin{proof}
+    Procedemos por contradicción. Supongamos que $2^n-1$ es primo pero que $n$ es compuesto, es decir, $n=ab$ con $1<a<n$ y $1<b<n$. Entonces
+    \begin{equation*}
+      2^n-1 = 2^{ab}-1 = (2^a)^b - 1^b.
+    \end{equation*}
+    Recordemos la identidad
+    \begin{equation*}
+      x^n-y^n = (x-y)\sum_{k=0}^{n-1} x^k y^{n-1-k}.
+    \end{equation*}
+    Aplicándola con $x=2^a$, $y=1$ y exponente $b$,
+    \begin{equation*}
+      (2^a)^b-1^b = (2^a-1)\sum_{k=0}^{b-1}(2^a)^k(1)^{b-1-k} = (2^a-1)\left[1+2^a+(2^a)^2+\cdots+(2^a)^{b-1}\right].
+    \end{equation*}
+    Como $b>1$, el corchete tiene más de un sumando y por lo tanto es mayor que $1$. Por otro lado, como $a>1$,
+    \begin{equation*}
+      2^a>2 \;\Rightarrow\; 2^a-1>1.
+    \end{equation*}
+    Así, $2^a-1$ es un divisor de $2^n-1$ con $2^a-1 \neq 1$ y $2^a-1 \neq 2^n-1$ (pues el otro factor, el corchete, también es mayor que $1$); es decir, $2^a-1$ es un \textbf{divisor no trivial} de $2^n-1$. Esto muestra que $2^n-1$ es compuesto, lo cual contradice la hipótesis. Por lo tanto, si $2^n-1$ es primo, entonces $n$ debe ser primo.
+  \end{proof}
+  
+  El recíproco del teorema anterior es falso: que $p$ sea primo no garantiza que $2^p-1$ lo sea.
+  
+  \begin{ejemplo}
+    \textbf{Los primeros primos de Mersenne.}
+    \begin{equation*}
+      M_2=2^2-1=3, \qquad M_3=2^3-1=7, \qquad M_5=2^5-1=31, \qquad M_7=2^7-1=127
+    \end{equation*}
+    Notemos que $p=11$ es primo, pero
+    \begin{equation*}
+      M_{11}=2^{11}-1=2047=23\cdot 89
+    \end{equation*}
+    \emph{no} es primo. Los siguientes sí lo son:
+    \begin{equation*}
+      M_{13}=2^{13}-1=8191, \qquad M_{17}=2^{17}-1=131071, \qquad M_{19}=2^{19}-1.
+    \end{equation*}
+    Los primos de Mersenne son extremadamente escasos: hasta ahora se conocen poco más de 50, y el más grande encontrado hasta la fecha es
+    \begin{equation*}
+      M_{136279841}=2^{136279841}-1,
+    \end{equation*}
+    un número con más de 41 millones de dígitos.
+  \end{ejemplo}
+  
+  % ======================================================
+  \section{Primos de Fermat}
+  % ======================================================
+  
+  \begin{definicion}[Primo de Fermat]
+    Un \textbf{primo de Fermat} es un número primo de la forma $2^{2^m}+1$, con $m\geq 0$.
+  \end{definicion}
+  
+  De manera análoga al caso de los primos de Mersenne, la primalidad de $2^n+1$ impone una restricción fuerte sobre el exponente $n$: debe ser una potencia de $2$.
+  
+  \begin{teorema}[Condición necesaria para que $2^n+1$ sea primo]
+    Si $2^n+1$ es primo, entonces $n$ es una potencia de $2$.
+  \end{teorema}
+  
+  \begin{proof}
+    Procedemos por contradicción. Supongamos que $2^n+1$ es primo pero que $n$ \emph{no} es una potencia de $2$. Entonces podemos escribir
+    \begin{equation*}
+      n = 2^k \cdot l, \qquad \text{con } l \text{ impar, } l>1,\ k\geq 0.
+    \end{equation*}
+    Notemos que
+    \begin{equation*}
+      2^n+1 = 2^{2^k l}+1 = \left(2^{2^k}\right)^l+1 = \left(2^{2^k}\right)^l-(-1)^l,
+    \end{equation*}
+    donde la última igualdad usa que $l$ es impar, así que $(-1)^l=-1$. Aplicando la identidad $x^l-y^l=(x-y)\sum_{m=0}^{l-1}x^my^{l-1-m}$ con $x=2^{2^k}$ y $y=-1$,
+    \begin{align*}
+      \left(2^{2^k}\right)^l-(-1)^l
+      & = \left[2^{2^k}-(-1)\right]\sum_{m=0}^{l-1}\left(2^{2^k}\right)^m(-1)^{l-1-m} \\
+      & = \left(2^{2^k}+1\right)\sum_{m=0}^{l-1}\left(2^{2^k}\right)^m(-1)^{l-1-m}.
+    \end{align*}
+    Como $l$ es impar, $l-1$ es par, de modo que $(-1)^{l-1-m}=(-1)^m$ para cada $m$. Así,
+    \begin{equation*}
+      2^n+1 = \left(2^{2^k}+1\right)\left[1-2^{2^k}+\left(2^{2^k}\right)^2-\left(2^{2^k}\right)^3+\cdots+\left(2^{2^k}\right)^{l-1}\right].
+    \end{equation*}
+    Para todo $k\geq 0$ se tiene $2^{2^k}+1>1$, y como $l>1$,
+    \begin{equation*}
+      1<2^{2^k}+1<2^n+1.
+    \end{equation*}
+    Esto muestra que $2^{2^k}+1$ divide a $2^n+1$, con $2^{2^k}+1\neq 1$ y $2^{2^k}+1\neq 2^n+1$; es decir, $2^{2^k}+1$ es un divisor no trivial de $2^n+1$. Por lo tanto $2^n+1$ es compuesto, lo cual contradice la hipótesis. Concluimos que, si $2^n+1$ es primo, entonces $n$ debe ser una potencia de $2$.
+  \end{proof}
+  
+  % ======================================================
+  \section{Teorema fundamental de la aritmética}
+  % ======================================================
+  
+  Cerramos el capítulo con el resultado que da nombre a esta rama de las matemáticas: todo entero mayor que $1$ se descompone en primos de una única manera.
+  
+  \begin{teorema}[Teorema fundamental de la aritmética]
+    Todo entero $n>1$ puede representarse como el producto de factores primos de una sola manera, salvo por el orden en que se escriban los factores.
+  \end{teorema}
+  
+  El teorema tiene dos partes: la \textbf{existencia} de la factorización, que ya probamos en la Sección 1.10 (todo entero $n>1$ es primo o producto de primos), y la \textbf{unicidad}, que es lo que hace que la factorización sea verdaderamente útil: no importa cómo factoricemos un número, siempre llegaremos exactamente a los mismos factores primos (con las mismas multiplicidades).
+  
+  \begin{ejemplo}
+    \begin{equation*}
+      27 = 3^3, \qquad 720720 = 2^4\cdot 3^2\cdot 5\cdot 7\cdot 11\cdot 13.
+    \end{equation*}
+    Podemos verificar esta última factorización dividiendo sucesivamente entre primos:
+    \begin{equation*}
+      720720 = 2\cdot 360360 = 2^2\cdot 180180 = 2^3\cdot 90090 = 2^4\cdot 45045 = 2^4\cdot 3^2\cdot 5005 = 2^4\cdot 3^2\cdot 5\cdot 1001 = 2^4\cdot 3^2\cdot 5\cdot 7\cdot 11\cdot 13.
+    \end{equation*}
+    Sin importar en qué orden hubiéramos ido sacando los factores primos, habríamos llegado a la misma lista.
+  \end{ejemplo}
+  
+  Ya vimos en la Sección 1.10 que todo entero $n>1$ es primo o producto de primos; lo que resta por argumentar, usando de nuevo inducción, es que dicha descomposición es \emph{única}. La idea central es que el primer teorema de Euclides (la tarea de la sección anterior) es exactamente la herramienta que permite comparar dos factorizaciones distintas de un mismo número y concluir que, en realidad, deben coincidir.
+  
+  \begin{problema}
+    Completar, por inducción sobre $n$, la demostración de la unicidad de la descomposición en primos del teorema fundamental de la aritmética. (Sugerencia: usa el primer teorema de Euclides.)
+  \end{problema}
+  
+  La unicidad de la factorización en primos es la razón por la que los números primos se consideran los ``átomos'' de los números enteros: todo entero mayor que $1$ se construye, de manera esencialmente única, a partir de ellos. Esta idea se generaliza en álgebra abstracta a estructuras más generales llamadas \textbf{dominios de factorización única}.
+  
+  \subsection*{Resumen del capítulo}
+  
+  A lo largo de este capítulo construimos $\mathbb{R}$ a partir de tres tipos de axiomas: los \textbf{axiomas de cuerpo} (que rigen la suma y el producto), los \textbf{axiomas de orden} (que nos permiten comparar números), y el \textbf{axioma de completitud} (que garantiza la existencia de supremos e ínfimos, y es lo que distingue a $\mathbb{R}$ de $\mathbb{Q}$). A partir de ahí, usando la noción de conjunto inductivo, definimos a los enteros $\mathbb{Z}$ y estudiamos el principio de inducción matemática, una de las herramientas de demostración más importantes del curso. Terminamos con divisibilidad y números primos: el máximo común divisor, el lema y el primer teorema de Euclides, la infinitud de los primos, los primos de Mersenne y de Fermat, y el teorema fundamental de la aritmética. Todas estas ideas —los axiomas de $\mathbb{R}$, la inducción, y la aritmética de los enteros— reaparecerán constantemente en el resto del curso.
+
+      
+\end{document}

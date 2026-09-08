@@ -1,0 +1,159 @@
+% portada_matematicas_elementales.tex ────────────────────────────────────────
+% Portada Matemáticas Elementales — Universidad de Guanajuato
+% Gráfica: Triángulo de Sierpiński (profundidad 6) dibujado en TikZ puro
+%   — Conexión directa con los temas del curso:
+%     · Inducción matemática   (la construcción ES inductiva)
+%     · Teoría de conjuntos    (es un conjunto fractal del plano)
+%     · Teoría de números      (coincide con el triángulo de Pascal mod 2)
+%     · Demostración           (la prueba de la autosimilaridad usa inducción)
+%
+% ─── EDITAR AQUÍ ─────────────────────────────────────────────────────────────
+\newcommand{\numtarea}{2}
+\newcommand{\nomalumno}{Ricardo Le\'on Mart\'inez}
+\newcommand{\fecha}{7/09/2026}
+\newcommand{\nomprofesor}{Claudia Reynoso Alcántara}
+% ─────────────────────────────────────────────────────────────────────────────
+
+\documentclass[tikz, border=0pt]{standalone}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{ebgaramond}
+\usepackage[default]{sourcesanspro}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+\definecolor{ugblue}{HTML}{002D72}
+\definecolor{uggold}{HTML}{B8952A}
+
+%% ── Colores de los agujeros por nivel de recursión ───────────────────────────
+%% Los agujeros alternan dorado UG y blanco, creando un encaje fractal.
+\definecolor{scolor0}{HTML}{C8A020}   % dorado UG  — nivel 1 (agujero grande)
+\definecolor{scolor1}{HTML}{FFFFFF}   % blanco     — nivel 2
+\definecolor{scolor2}{HTML}{D4B050}   % dorado claro — nivel 3
+\definecolor{scolor3}{HTML}{F0F0FF}   % azul muy pálido — nivel 4
+\definecolor{scolor4}{HTML}{EDD88A}   % dorado pálido — nivel 5
+\definecolor{scolor5}{HTML}{F8F8FF}   % casi blanco   — nivel 6
+
+%% ── Comando recursivo: rellena el agujero central y recursa en 3 esquinas ───
+%% Argumentos: {niveles restantes}{índice de color 0-5}
+%% En el sistema de coordenadas local, el triángulo va de (0,0) a (1,0)
+%% a (0.5, 0.866). El agujero central es el triángulo invertido en el medio.
+\newcommand{\sierphole}[2]{%
+  \ifnum#1>0
+    \pgfmathtruncatemacro{\nm}{#1-1}%
+    \pgfmathtruncatemacro{\nc}{int(mod(#2+1,6))}%
+    % Agujero central: triángulo invertido en la posición media
+    \fill[scolor#2] (.25,0)--(.75,0)--(.5,.4330127)--cycle;%
+    % Recursión en las tres esquinas (escala 0.5, desplazamiento en coords padre)
+    \begin{scope}[scale=.5]%
+      \sierphole{\nm}{\nc}%
+    \end{scope}%
+    \begin{scope}[scale=.5, shift={(.5,0)}]%
+      \sierphole{\nm}{\nc}%
+    \end{scope}%
+    \begin{scope}[scale=.5, shift={(.25,.4330127)}]%
+      \sierphole{\nm}{\nc}%
+    \end{scope}%
+  \fi
+}
+
+\begin{document}
+\begin{tikzpicture}
+
+  \useasboundingbox (0,0) rectangle (210mm,297mm);
+  \fill[white] (0,0) rectangle (210mm,297mm);
+
+  %% ── Barras de color ─────────────────────────────────────────────────────────
+  \fill[ugblue] (0,287mm) rectangle (210mm,297mm);
+  \fill[uggold] (0,284mm) rectangle (210mm,287mm);
+  \fill[uggold] (0,11mm)  rectangle (210mm,14mm);
+  \fill[ugblue] (0,0)     rectangle (210mm,11mm);
+
+  %% ── Encabezado institucional ────────────────────────────────────────────────
+  \node[font=\fontsize{15.5}{19}\selectfont\sffamily\bfseries\color{ugblue},
+        anchor=center] at (105mm,275mm)
+    {\MakeUppercase{Universidad de Guanajuato}};
+  \node[font=\fontsize{10.5}{14}\selectfont\rmfamily\itshape\color{gray!65},
+        anchor=center] at (105mm,267.5mm)
+    {Divisi\'on de Ciencias Naturales y Exactas};
+  \node[font=\fontsize{10.5}{14}\selectfont\rmfamily\itshape\color{gray!65},
+        anchor=center] at (105mm,261mm)
+    {Departamento de Matem\'aticas};
+
+  %% ── Divisor superior ────────────────────────────────────────────────────────
+  \draw[ugblue!22, line width=0.4pt] (30mm,254.5mm) -- (101mm,254.5mm);
+  \fill[uggold]
+    (103mm,254.5mm)--(105mm,256.5mm)--(107mm,254.5mm)--(105mm,252.5mm)--cycle;
+  \draw[ugblue!22, line width=0.4pt] (109mm,254.5mm) -- (180mm,254.5mm);
+
+  %% ── Triángulo de Sierpiński ──────────────────────────────────────────────────
+  %% Triángulo equilátero: base 136 mm, altura ≈ 118 mm
+  %% Vértices en la página: (37,130)mm — (173,130)mm — (105,248)mm
+  %% Sistema de coordenadas local: 1 unidad = 136 mm
+  \begin{scope}[shift={(37mm,130mm)}, x=136mm, y=136mm]
+    % Fondo: triángulo sólido azul UG
+    \fill[ugblue] (0,0)--(1,0)--(.5,.8660254)--cycle;
+    % Agujeros fractales (profundidad 6 = 364 agujeros en total)
+    \sierphole{6}{0}
+  \end{scope}
+
+  %% ── Divisor inferior ────────────────────────────────────────────────────────
+  \draw[ugblue!22, line width=0.4pt] (30mm,121mm) -- (101mm,121mm);
+  \fill[uggold]
+    (103mm,121mm)--(105mm,123mm)--(107mm,121mm)--(105mm,119mm)--cycle;
+  \draw[ugblue!22, line width=0.4pt] (109mm,121mm) -- (180mm,121mm);
+
+  %% ── Título (dos líneas para respetar márgenes) ──────────────────────────────
+  \node[font=\fontsize{9}{11}\selectfont\sffamily\fontseries{l}\selectfont
+        \color{gray!48}, anchor=center] at (105mm,114mm)
+    {\MakeUppercase{Licenciatura en Matem\'aticas}};
+
+  \node[font=\fontsize{38}{44}\selectfont\sffamily\bfseries\color{ugblue},
+        align=center, anchor=center] at (105mm,97mm)
+    {Matem\'aticas\\Elementales};
+
+  \node[font=\fontsize{27}{31}\selectfont\rmfamily\itshape\color{uggold},
+        anchor=center] at (105mm,79mm)
+    {Tarea~\numtarea};
+
+  %% ── Separador y datos ───────────────────────────────────────────────────────
+  \draw[ugblue!13, line width=0.35pt] (30mm,69mm) -- (180mm,69mm);
+
+  \node[anchor=west,
+    font=\fontsize{7.5}{9}\selectfont\sffamily\color{gray!52}]
+    at (30mm,62mm) {\MakeUppercase{Alumno}};
+  \node[anchor=west,
+    font=\fontsize{7.5}{9}\selectfont\sffamily\color{gray!52}]
+    at (120mm,62mm) {\MakeUppercase{Fecha}};
+  \node[anchor=west,
+    font=\fontsize{15}{18}\selectfont\rmfamily\color{black!85}]
+    at (30mm,54.5mm) {\nomalumno};
+  \node[anchor=west,
+    font=\fontsize{15}{18}\selectfont\rmfamily\color{black!85}]
+    at (120mm,54.5mm) {\fecha};
+
+  \draw[ugblue!10, line width=0.3pt] (30mm,47mm) -- (180mm,47mm);
+
+  \node[anchor=west,
+    font=\fontsize{7.5}{9}\selectfont\sffamily\color{gray!52}]
+    at (30mm,41mm) {\MakeUppercase{Profesor(a)}};
+  \node[anchor=west,
+    font=\fontsize{15}{18}\selectfont\rmfamily\color{black!85}]
+    at (30mm,33.5mm) {\nomprofesor};
+
+  \node[anchor=west,
+    font=\fontsize{7.5}{9}\selectfont\sffamily\color{gray!52}]
+    at (120mm,41mm) {\MakeUppercase{Calificaci\'on}};
+  \draw[ugblue!40, line width=0.5pt, rounded corners=1.2pt]
+    (120mm,25.5mm) rectangle (155mm,37.5mm);
+
+  \node[font=\fontsize{7.5}{9}\selectfont\sffamily\color{gray!36},
+        anchor=center] at (105mm,21mm)
+    {\MakeUppercase{Universidad de Guanajuato~·~Campus Guanajuato}};
+
+\end{tikzpicture}
+\end{document}
