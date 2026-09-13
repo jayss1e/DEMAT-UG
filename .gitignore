@@ -7,4 +7,6 @@
 *.odt
 _minted
 *.listing
-.vscode
+.vscode# Claude Code
+.claude/
+CLAUDE.md
