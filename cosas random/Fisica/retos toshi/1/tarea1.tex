@@ -1,0 +1,322 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{ugmath}
+\newcommand{\paren}[1]{\left( #1 \right)}
+\newcommand{\alumno}{Ricardo León Martínez}
+\newcommand{\materia}{Termodinámica}
+\newcommand{\tarea}{Tarea 1}
+\newcommand{\fecha}{13/9/2026}
+
+\begin{document}
+    \begin{center}
+    {\large\textbf{UNIVERSIDAD DE GUANAJUATO}}\\[0.3cm]
+    {\normalsize\textbf{DIVISIÓN DE CIENCIAS NATURALES Y EXACTAS}}\\
+    {\normalsize\textbf{CAMPUS GUANAJUATO}}\\[1cm]
+
+    {\Large\textbf{\tarea\ (\materia)}}\\[0.2cm]
+    {\normalsize\textit{Fundamentos}}\\[1cm]
+    \end{center}
+
+    \textbf{Nombre:} \alumno \hfill
+    \textbf{Fecha:} \fecha \hfill
+    \textbf{Calificación:} \rule{3cm}{0.4pt} \\[0.3cm]
+
+    \begin{problema}
+        Supongamos que nuestro termómetro está basado en un sistema en el cual medimos el
+        valor de la propiedad termométrica $X$. Consideramos la temperatura $T$ como $T=T(X)$.
+        Elegimos la relación más sencilla entre $T$ y $X$, es decir, la función lineal dada por
+        \begin{equation*}
+            T(X)=aX+b,
+        \end{equation*}
+        con $a,b=\text{ctes.}$ a ser determinadas. Esta escala lineal significa que cada
+        intervalo $\Delta T$ corresponde al mismo cambio $\Delta X$ en el valor de la propiedad
+        termométrica. Para determinar esta escala elegimos dos puntos de calibración. Para el
+        caso de las escalas Celsius y Fahrenheit estos puntos de calibración son:
+        \begin{enumerate}
+            \item[1.] Punto de congelación: $0^{\circ}\text{C}$ o $32^{\circ}\text{F}$.
+            \item[2.] Punto de ebullición: $100^{\circ}\text{C}$ o $212^{\circ}\text{F}$.
+        \end{enumerate}
+        Considerando esto, encontrar una relación entre las escalas Celsius y Fahrenheit.
+    \end{problema}
+
+    \begin{solucion}
+        Tanto la escala Celsius como la escala Fahrenheit son funciones lineales de la
+        misma propiedad termométrica $X$:
+        \begin{equation*}
+            T_{C}(X)=a_{1}X+b_{1}, \qquad T_{F}(X)=a_{2}X+b_{2}, \qquad a_{1}\neq0.
+        \end{equation*}
+        Despejando $X$ de la primera relación,
+        \begin{equation*}
+            X=\frac{T_{C}-b_{1}}{a_{1}},
+        \end{equation*}
+        y sustituyendo en la segunda,
+        \begin{equation*}
+            T_{F}=a_{2}\paren{\frac{T_{C}-b_{1}}{a_{1}}}+b_{2}
+            =\underbrace{\paren{\frac{a_{2}}{a_{1}}}}_{m}T_{C}+\underbrace{\paren{b_{2}-\frac{a_{2}b_{1}}{a_{1}}}}_{n}.
+        \end{equation*}
+        Es decir, $T_{F}=mT_{C}+n$: la composición de dos funciones lineales es lineal, de modo que
+        Fahrenheit es necesariamente una función lineal de Celsius. Para hallar $m$ y $n$ usamos
+        los dos puntos de calibración dados, $(T_{C},T_{F})=(0,32)$ y $(100,212)$:
+        \begin{gather*}
+            32=m(0)+n \implies n=32,\\
+            212=m(100)+32 \implies m=\frac{212-32}{100}=\frac{180}{100}=\frac{9}{5}.
+        \end{gather*}
+        Por lo tanto, la relación buscada entre las escalas Celsius y Fahrenheit es
+        \begin{equation*}
+            T_{F}=\frac{9}{5}T_{C}+32, \qquad \text{equivalentemente}\qquad T_{C}=\frac{5}{9}\paren{T_{F}-32}.
+        \end{equation*}
+    \end{solucion}
+
+    \begin{problema}
+        Un cilindro aislado que contiene un pistón contiene también oxígeno a una temperatura
+        de $20^{\circ}\text{C}$ y a una presión de $15\text{ atm}$ en un volumen de $22$ litros.
+        Se baja el pistón, disminuyendo con ello el volumen del gas a $16$ litros, y al mismo
+        tiempo se eleva la temperatura a $25^{\circ}\text{C}$. Suponiendo que el oxígeno se
+        comporta como un gas ideal en tales condiciones, ¿cuál será su presión final?
+    \end{problema}
+
+    \begin{solucion}
+        Como el oxígeno se comporta como gas ideal en ambos estados, y la cantidad de sustancia
+        $n$ no cambia,
+        \begin{equation*}
+            \frac{P_{1}V_{1}}{T_{1}}=\frac{P_{2}V_{2}}{T_{2}}.
+        \end{equation*}
+        Los datos, en unidades absolutas de temperatura, son
+        \begin{gather*}
+            P_{1}=15\text{ atm}, \qquad V_{1}=22\text{ L}, \qquad T_{1}=20+273.15=293.15\text{ K},\\
+            V_{2}=16\text{ L}, \qquad T_{2}=25+273.15=298.15\text{ K}.
+        \end{gather*}
+        Despejando $P_{2}$,
+        \begin{equation*}
+            P_{2}=\frac{P_{1}V_{1}T_{2}}{T_{1}V_{2}}=\frac{(15)(22)(298.15)}{(293.15)(16)}.
+        \end{equation*}
+        Numéricamente,
+        \begin{equation*}
+            P_{2}=\frac{330}{16}\cdot\frac{298.15}{293.15}=20.625\times1.0171\approx20.98\text{ atm}.
+        \end{equation*}
+        Por lo tanto,
+        \begin{equation*}
+            P_{2}\approx20.98\text{ atm}\approx21.0\text{ atm}.
+        \end{equation*}
+    \end{solucion}
+
+    \begin{problema}
+        ¿En qué temperatura coinciden las escalas Fahrenheit y Celsius?
+        \begin{enumerate}
+            \item[(a)] $-40^{\circ}\text{F}$
+            \item[(b)] $0^{\circ}\text{F}$
+            \item[(c)] $32^{\circ}\text{F}$
+            \item[(d)] $40^{\circ}\text{F}$
+            \item[(e)] $104^{\circ}\text{F}$
+        \end{enumerate}
+        Explique su respuesta.
+    \end{problema}
+
+    \begin{solucion}
+        Buscamos el valor numérico $T$ tal que $T_{F}=T_{C}=T$. Usando la relación obtenida en el
+        problema 1,
+        \begin{equation*}
+            T_{F}=\frac{9}{5}T_{C}+32,
+        \end{equation*}
+        imponemos $T_{F}=T_{C}=T$:
+        \begin{gather*}
+            T=\frac{9}{5}T+32,\\
+            T-\frac{9}{5}T=32,\\
+            -\frac{4}{5}T=32,\\
+            T=-40.
+        \end{gather*}
+        Por lo tanto las escalas coinciden en $-40^{\circ}\text{C}=-40^{\circ}\text{F}$, que
+        corresponde a la opción \textbf{(a)}.
+    \end{solucion}
+
+    \begin{problema}
+        ¿En qué temperatura coinciden las escalas Fahrenheit y Kelvin?
+        \begin{enumerate}
+            \item[(a)] $-100^{\circ}\text{F}$
+            \item[(b)] $273^{\circ}\text{F}$
+            \item[(c)] $574^{\circ}\text{F}$
+            \item[(d)] $844^{\circ}\text{F}$
+        \end{enumerate}
+        Explique su respuesta.
+    \end{problema}
+
+    \begin{solucion}
+        Buscamos el valor numérico $T$ tal que $T_{F}=T_{K}=T$. La escala Celsius se relaciona
+        con la escala Kelvin mediante $T_{C}=T_{K}-273.15$, y con la escala Fahrenheit mediante
+        $T_{F}=\frac{9}{5}T_{C}+32$ (problema 1). Combinando ambas,
+        \begin{equation*}
+            T_{F}=\frac{9}{5}\paren{T_{K}-273.15}+32.
+        \end{equation*}
+        Imponiendo $T_{F}=T_{K}=T$,
+        \begin{gather*}
+            T=\frac{9}{5}\paren{T-273.15}+32,\\
+            T=\frac{9}{5}T-\frac{9}{5}(273.15)+32,\\
+            -\frac{4}{5}T=-491.67+32=-459.67,\\
+            T=\frac{459.67\times5}{4}\approx574.6.
+        \end{gather*}
+        (Con la aproximación usual $273.15\approx273$ se obtiene $T\approx574.25$.) En cualquier
+        caso, el valor numérico donde ambas escalas coinciden es $T\approx574^{\circ}\text{F}$,
+        que corresponde a la opción \textbf{(c)}.
+    \end{solucion}
+
+    \begin{problema}
+        ¿Cuál de las siguientes cantidades tiene la más grande densidad de partícula (moléculas
+        por unidad de volumen)?
+        \begin{enumerate}
+            \item[(A)] $0.8$ L de gas nitrógeno a $350\text{ K}$ y a $100\text{ kPa}$.
+            \item[(C)] $1.5$ L de gas oxígeno a $300\text{ K}$ y a $80\text{ kPa}$.
+        \end{enumerate}
+    \end{problema}
+
+    \begin{solucion}
+        Para un gas ideal, la densidad de partícula (moléculas por unidad de volumen) es
+        \begin{equation*}
+            \frac{N}{V}=\frac{P}{k_{B}T},
+        \end{equation*}
+        donde $k_{B}$ es la constante de Boltzmann. En particular, $N/V$ no depende del volumen
+        total de la muestra ni del tipo de gas, sino únicamente del cociente $P/T$. Comparamos
+        entonces $P/T$ para cada caso:
+        \begin{gather*}
+            \paren{\frac{P}{T}}_{A}=\frac{100\text{ kPa}}{350\text{ K}}\approx0.286\text{ kPa/K},\\
+            \paren{\frac{P}{T}}_{C}=\frac{80\text{ kPa}}{300\text{ K}}\approx0.267\text{ kPa/K}.
+        \end{gather*}
+        Como $\paren{P/T}_{A}>\paren{P/T}_{C}$, la muestra $A$ (nitrógeno) tiene la mayor
+        densidad de partícula, a pesar de tener el volumen total más pequeño.
+    \end{solucion}
+
+    \begin{problema}
+        Considere 2 contenedores, cada uno con $0.5$ moles de uno de los siguientes gases.
+        ¿Cuál tiene la temperatura más elevada?
+        \begin{enumerate}
+            \item[(A)] $8.0$ L de gas helio a $120\text{ kPa}$.
+            \item[(B)] $6.0$ L de gas neón a $160\text{ kPa}$.
+        \end{enumerate}
+    \end{problema}
+
+    \begin{solucion}
+        De la ecuación de gas ideal $PV=nRT$, con $n=0.5$ moles fijo en ambos contenedores,
+        \begin{equation*}
+            T=\frac{PV}{nR}.
+        \end{equation*}
+        Como $n$ y $R$ son iguales en ambos casos, basta comparar el producto $PV$:
+        \begin{gather*}
+            (PV)_{A}=(120\text{ kPa})(8.0\text{ L})=960\text{ kPa}\cdot\text{L},\\
+            (PV)_{B}=(160\text{ kPa})(6.0\text{ L})=960\text{ kPa}\cdot\text{L}.
+        \end{gather*}
+        Los productos $PV$ son iguales, de modo que \textbf{ambos gases están a la misma
+        temperatura}. Explícitamente, en unidades del SI ($P$ en Pa, $V$ en m$^{3}$),
+        $PV=960\text{ J}$ en ambos casos, y
+        \begin{equation*}
+            T=\frac{960}{(0.5)(8.314)}\approx230.9\text{ K}.
+        \end{equation*}
+    \end{solucion}
+
+    \begin{problema}
+        Si el médico le dice que tiene una temperatura de $310\ ^{\circ}\text{K}$,
+        ¿debería preocuparse? Explique su respuesta.
+    \end{problema}
+
+    \begin{solucion}
+        Esta pregunta es de interpretación, no de cálculo matemático propiamente dicho; basta
+        convertir la temperatura para juzgarla. Con $T_{C}=T_{K}-273.15$,
+        \begin{equation*}
+            T_{C}=310-273.15=36.85^{\circ}\text{C},
+        \end{equation*}
+        y en Fahrenheit, $T_{F}=\frac{9}{5}(36.85)+32\approx98.3^{\circ}\text{F}$. Este valor está
+        dentro del rango normal de temperatura corporal humana (aproximadamente
+        $36.5$–$37.5^{\circ}\text{C}$, o $97.7$–$99.5^{\circ}\text{F}$), y por debajo del umbral
+        habitual de fiebre ($\sim38^{\circ}\text{C}\approx311\text{ K}$). Así que no, no debería
+        preocuparse: $310\text{ K}$ es esencialmente una temperatura corporal normal.
+    \end{solucion}
+
+    \begin{problema}
+        Cierta cantidad de un gas ideal a $12.0^{\circ}\text{C}$ y a una presión de
+        $108\text{ kPa}$ ocupa un volumen de $2.47\text{ m}^{3}$.
+        \begin{enumerate}
+            \item[(a)] ¿Cuántas moléculas del gas hay?
+            \item[(b)] Si la presión llega a $316\text{ kPa}$ y si elevamos la temperatura a
+            $31.0^{\circ}\text{C}$, ¿qué volumen ocupará el gas?
+        \end{enumerate}
+    \end{problema}
+
+    \begin{solucion}
+        \begin{enumerate}
+            \item[(a)] Con $T_{1}=12.0+273.15=285.15\text{ K}$, de $P_{1}V_{1}=nRT_{1}$,
+            \begin{equation*}
+                n=\frac{P_{1}V_{1}}{RT_{1}}=\frac{(1.08\times10^{5}\text{ Pa})(2.47\text{ m}^{3})}{(8.314\text{ J/(mol K)})(285.15\text{ K})}.
+            \end{equation*}
+            Numéricamente,
+            \begin{equation*}
+                n=\frac{2.6676\times10^{5}}{2370.7}\approx112.5\text{ mol}.
+            \end{equation*}
+            El número de moléculas es $N=nN_{A}$, con $N_{A}=6.022\times10^{23}\text{ mol}^{-1}$:
+            \begin{equation*}
+                N=(112.5)(6.022\times10^{23})\approx6.78\times10^{25}\text{ moléculas}.
+            \end{equation*}
+            \item[(b)] Como $n$ no cambia,
+            \begin{equation*}
+                \frac{P_{1}V_{1}}{T_{1}}=\frac{P_{2}V_{2}}{T_{2}}
+                \implies
+                V_{2}=\frac{P_{1}V_{1}T_{2}}{T_{1}P_{2}}.
+            \end{equation*}
+            Con $T_{2}=31.0+273.15=304.15\text{ K}$ y $P_{2}=316\text{ kPa}$,
+            \begin{equation*}
+                V_{2}=\frac{(108)(2.47)(304.15)}{(285.15)(316)}\text{ m}^{3}
+                =\frac{81135}{90107}\text{ m}^{3}\approx0.900\text{ m}^{3}.
+            \end{equation*}
+        \end{enumerate}
+    \end{solucion}
+
+    \begin{problema}
+        Un tubo abierto-cerrado con una longitud $L=25.0\text{ m}$ contiene aire a presión
+        atmosférica. Se lanza verticalmente a un lago de agua fresca hasta que el agua alcanza
+        la mitad del tubo, como se aprecia en la figura del enunciado. ¿Qué profundidad $h$
+        tiene el borde inferior (abierto) del tubo? Suponga que la temperatura es la misma en
+        todas partes y que no cambia.
+    \end{problema}
+
+    \begin{solucion}
+        Antes de sumergirse, el tubo (cerrado en el extremo superior, abierto en el inferior)
+        está lleno de aire a presión atmosférica $P_{0}$ en toda su longitud $L$, con volumen
+        $V_{i}=AL$, donde $A$ es el área transversal.
+
+        Al sumergir el tubo con el extremo abierto hacia abajo, el agua asciende por el extremo
+        abierto y comprime el aire atrapado en la parte cerrada. Cuando el agua ocupa exactamente
+        la mitad inferior del tubo, el aire queda confinado en la mitad superior, con volumen
+        \begin{equation*}
+            V_{f}=A\frac{L}{2}.
+        \end{equation*}
+        Como la temperatura permanece constante, aplicamos la ley de Boyle:
+        \begin{equation*}
+            P_{0}V_{i}=P_{f}V_{f} \implies P_{0}(AL)=P_{f}A\frac{L}{2} \implies P_{f}=2P_{0}.
+        \end{equation*}
+
+        Ahora relacionamos $P_{f}$ con la profundidad mediante la hidrostática. Sea $h$ la
+        profundidad del extremo inferior (abierto) del tubo respecto a la superficie del lago.
+        La interfaz aire-agua dentro del tubo está a una distancia $L/2$ por encima de dicho
+        extremo, luego su profundidad respecto a la superficie es $h-\frac{L}{2}$. Como esta
+        interfaz está conectada hidrostáticamente con el lago a través del extremo abierto, la
+        presión ahí es
+        \begin{equation*}
+            P_{f}=P_{0}+\rho g\paren{h-\frac{L}{2}},
+        \end{equation*}
+        con $\rho$ la densidad del agua. Sustituyendo $P_{f}=2P_{0}$,
+        \begin{equation*}
+            2P_{0}=P_{0}+\rho g\paren{h-\frac{L}{2}}
+            \implies
+            h=\frac{L}{2}+\frac{P_{0}}{\rho g}.
+        \end{equation*}
+        Con $P_{0}=1.013\times10^{5}\text{ Pa}$, $\rho=1.00\times10^{3}\text{ kg/m}^{3}$,
+        $g=9.81\text{ m/s}^{2}$ y $L=25.0\text{ m}$:
+        \begin{equation*}
+            \frac{P_{0}}{\rho g}=\frac{1.013\times10^{5}}{(1.00\times10^{3})(9.81)}\approx10.33\text{ m},
+        \end{equation*}
+        de modo que
+        \begin{equation*}
+            h=12.5+10.33\approx22.8\text{ m}.
+        \end{equation*}
+        Como consistencia: el extremo superior (cerrado) queda entonces a $h-L\approx-2.2\text{ m}$,
+        es decir, sobresale unos $2.2\text{ m}$ por encima de la superficie del lago, tal como se
+        aprecia en la figura (el aire atrapado queda parcialmente por encima del nivel del agua).
+    \end{solucion}
+
+\end{document}

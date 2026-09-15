@@ -1,1 +1,35 @@
 \babel@toc {spanish}{}\relax 
+\contentsline {chapter}{\numberline {1}Lógica proposicional}{3}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Proposiciones y conectivos lógicos}{3}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Cuantificadores}{4}{section.1.2}%
+\contentsline {chapter}{\numberline {2}Tipos de demostración}{7}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Demostración directa}{7}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Demostraciones indirectas}{7}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Demostración por contrapositiva}{7}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Demostración por reducción al absurdo}{8}{subsection.2.2.2}%
+\contentsline {section}{\numberline {2.3}Demostración por inducción matemática}{8}{section.2.3}%
+\contentsline {chapter}{\numberline {3}Teoría de conjuntos}{11}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Conjuntos, subconjuntos y operaciones básicas}{11}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Propiedades de las operaciones de conjuntos}{12}{section.3.2}%
+\contentsline {section}{\numberline {3.3}El conjunto potencia y el producto cartesiano}{14}{section.3.3}%
+\contentsline {chapter}{\numberline {4}Relaciones y funciones}{17}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Relaciones}{17}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Composición de relaciones}{17}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Funciones}{18}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Inyectividad, sobreyectividad y biyectividad}{20}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Inversas de una función}{21}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Conjuntos numerables}{23}{section.4.6}%
+\contentsline {section}{\numberline {4.7}Imagen inversa}{23}{section.4.7}%
+\contentsline {chapter}{\numberline {5}Inducción matemática}{25}{chapter.5}%
+\contentsline {section}{\numberline {5.1}El principio de inducción}{25}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Inducción fuerte}{25}{section.5.2}%
+\contentsline {chapter}{\numberline {6}Relaciones de equivalencia}{27}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Propiedades de una relación}{27}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Relaciones de equivalencia}{28}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Clases de equivalencia}{28}{section.6.3}%
+\contentsline {chapter}{\numberline {7}Introducción a la construcción de las estructuras numéricas}{31}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Los números naturales}{31}{section.7.1}%
+\contentsline {subsection}{\numberline {7.1.1}Axiomas de Peano}{31}{subsection.7.1.1}%
+\contentsline {subsection}{\numberline {7.1.2}La suma}{32}{subsection.7.1.2}%
+\contentsline {subsection}{\numberline {7.1.3}El producto}{34}{subsection.7.1.3}%
+\contentsline {subsection}{\numberline {7.1.4}Orden}{35}{subsection.7.1.4}%

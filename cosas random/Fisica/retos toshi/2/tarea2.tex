@@ -1,0 +1,612 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{ugmath}
+\newcommand{\paren}[1]{\left( #1 \right)}
+\newcommand{\pd}[3]{\left(\frac{\partial #1}{\partial #2}\right)_{#3}}
+\newcommand{\alumno}{Ricardo León Martínez}
+\newcommand{\materia}{Termodinámica}
+\newcommand{\tarea}{Tarea 2}
+\newcommand{\fecha}{16/02/2024}
+
+\begin{document}
+    \begin{center}
+    {\large\textbf{UNIVERSIDAD DE GUANAJUATO}}\\[0.3cm]
+    {\normalsize\textbf{DIVISIÓN DE CIENCIAS E INGENIERÍA FÍSICA}}\\
+    {\normalsize\textbf{CAMPUS GUANAJUATO}}\\[1cm]
+
+    {\Large\textbf{\tarea\ (\materia)}}\\[1cm]
+    \end{center}
+
+    \textbf{Nombre:} \alumno \hfill
+    \textbf{Profesor:} Dr. Néstor M. De Los Santos López \hfill
+    \textbf{Fecha:} \fecha \\[0.3cm]
+
+    \begin{problema}[Diferencial total]
+        Investigar si $df$ representa un diferencial total:
+        \begin{enumerate}
+            \item[(1)] $df=\cos x\sin y\,dx-\sin x\cos y\,dy$.
+            \item[(2)] $df=\sin x\cos y\,dx+\cos x\sin y\,dy$.
+            \item[(3)] $df=x^{3}y^{2}dx-y^{3}x^{2}dy$.
+        \end{enumerate}
+    \end{problema}
+
+    \begin{solucion}
+        Una expresión $df=M(x,y)dx+N(x,y)dy$, con $M,N$ de clase $C^{1}$, es un diferencial
+        total (exacto) si y sólo si
+        \begin{equation*}
+            \frac{\partial M}{\partial y}=\frac{\partial N}{\partial x}.
+        \end{equation*}
+        \begin{enumerate}
+            \item[(1)] Aquí $M=\cos x\sin y$, $N=-\sin x\cos y$. Entonces
+            \begin{equation*}
+                \frac{\partial M}{\partial y}=\cos x\cos y, \qquad \frac{\partial N}{\partial x}=-\cos x\cos y.
+            \end{equation*}
+            Como $\cos x\cos y\neq-\cos x\cos y$ en general, \textbf{$df$ no es un diferencial total.}
+            \item[(2)] Aquí $M=\sin x\cos y$, $N=\cos x\sin y$. Entonces
+            \begin{equation*}
+                \frac{\partial M}{\partial y}=-\sin x\sin y=\frac{\partial N}{\partial x}.
+            \end{equation*}
+            Se cumple la igualdad, así que \textbf{$df$ sí es un diferencial total.} De hecho
+            \begin{equation*}
+                f(x,y)=-\cos x\cos y+\text{cte.}
+            \end{equation*}
+            satisface $df=\sin x\cos y\,dx+\cos x\sin y\,dy$.
+            \item[(3)] Aquí $M=x^{3}y^{2}$, $N=-x^{2}y^{3}$. Entonces
+            \begin{equation*}
+                \frac{\partial M}{\partial y}=2x^{3}y, \qquad \frac{\partial N}{\partial x}=-2xy^{3}.
+            \end{equation*}
+            Como $2x^{3}y\neq-2xy^{3}$ en general, \textbf{$df$ no es un diferencial total.}
+        \end{enumerate}
+    \end{solucion}
+
+    \begin{problema}[Derivadas parciales]
+        Sea $f(x,y,z)=0$. Verifique las siguientes relaciones:
+        \begin{enumerate}
+            \item[(1)] $\displaystyle\pd{x}{y}{z}=\frac{1}{\pd{y}{x}{z}}$.
+            \item[(2)] $\displaystyle\pd{x}{y}{z}\pd{y}{z}{x}\pd{z}{x}{y}=-1$.
+        \end{enumerate}
+    \end{problema}
+
+    \begin{solucion}
+        La relación $f(x,y,z)=0$ define implícitamente a cada variable en función de las
+        otras dos. Escribamos, por brevedad, $f_{x}\equiv\pd{f}{x}{y,z}$, $f_{y}\equiv\pd{f}{y}{x,z}$,
+        $f_{z}\equiv\pd{f}{z}{x,y}$, y supongamos $f_{x},f_{y},f_{z}\neq0$ (condición del teorema
+        de la función implícita). El diferencial de $f=0$ es
+        \begin{equation*}
+            f_{x}\,dx+f_{y}\,dy+f_{z}\,dz=0.
+        \end{equation*}
+        \begin{enumerate}
+            \item[(1)] Fijando $z$ (i.e., $dz=0$), la relación anterior da $f_{x}dx+f_{y}dy=0$,
+            de donde
+            \begin{equation*}
+                \pd{x}{y}{z}=-\frac{f_{y}}{f_{x}}, \qquad \pd{y}{x}{z}=-\frac{f_{x}}{f_{y}}.
+            \end{equation*}
+            Multiplicando,
+            \begin{equation*}
+                \pd{x}{y}{z}\cdot\pd{y}{x}{z}=\paren{-\frac{f_{y}}{f_{x}}}\paren{-\frac{f_{x}}{f_{y}}}=1,
+            \end{equation*}
+            lo cual equivale exactamente a la relación pedida.
+            \item[(2)] De manera análoga, fijando cada variable a su turno,
+            \begin{equation*}
+                \pd{x}{y}{z}=-\frac{f_{y}}{f_{x}}, \qquad
+                \pd{y}{z}{x}=-\frac{f_{z}}{f_{y}}, \qquad
+                \pd{z}{x}{y}=-\frac{f_{x}}{f_{z}}.
+            \end{equation*}
+            Multiplicando las tres,
+            \begin{equation*}
+                \pd{x}{y}{z}\pd{y}{z}{x}\pd{z}{x}{y}
+                =(-1)^{3}\cdot\frac{f_{y}}{f_{x}}\cdot\frac{f_{z}}{f_{y}}\cdot\frac{f_{x}}{f_{z}}
+                =-1.
+            \end{equation*}
+        \end{enumerate}
+    \end{solucion}
+
+    \begin{problema}[Integral de camino]
+        \begin{enumerate}
+            \item[a)] La integral de camino
+            \begin{equation*}
+                I(C)=\int_{A(C)}^{B}\left[\alpha(x,y)dx+\beta(x,y)dy\right]
+            \end{equation*}
+            debe calcularse para dos puntos finales fijos $A$ y $B$ en el plano $xy$. En
+            general, tendrá diferentes valores para diferentes caminos $C_{i}$ entre $A$ y $B$.
+            Demostrar que $I$ es independiente del camino si y sólo si $\dfrac{\partial\alpha}{\partial y}=\dfrac{\partial\beta}{\partial x}$.
+            \item[b)] Elija especialmente $\alpha(x,y)=y^{2}e^{x}$, $\beta(x,y)=2ye^{x}$; calcule
+            \begin{equation*}
+                I_{AB}=\int_{A}^{B}\left[\alpha(x,y)dx+\beta(x,y)dy\right],
+            \end{equation*}
+            para $A=(0,0)$, $B=(1,1)$. Considere primero si el problema es razonable. En caso
+            afirmativo, encuentre el valor de $I_{AB}$.
+            \item[c)] Haga las mismas investigaciones que en b), pero con los roles
+            intercambiados de $\alpha$ y $\beta$, i.e., $\alpha(x,y)=2ye^{x}$, $\beta(x,y)=y^{2}e^{x}$.
+        \end{enumerate}
+    \end{problema}
+
+    \begin{solucion}
+        \begin{enumerate}
+            \item[a)] Sean $C_{1}$ y $C_{2}$ dos caminos de $A$ a $B$ contenidos en un dominio
+            $D\subset\mathbb{R}^{2}$ simplemente conexo. Supongamos primero que
+            $\alpha_{y}=\beta_{x}$ en todo $D$. El camino cerrado $\Gamma=C_{1}-C_{2}$ (ir por
+            $C_{1}$ de $A$ a $B$ y regresar por $C_{2}$) encierra una región $R\subset D$, y por
+            el teorema de Green,
+            \begin{equation*}
+                \oint_{\Gamma}\left(\alpha\,dx+\beta\,dy\right)=\iint_{R}\paren{\frac{\partial\beta}{\partial x}-\frac{\partial\alpha}{\partial y}}dA=0.
+            \end{equation*}
+            Pero $\oint_{\Gamma}=\int_{C_{1}}-\int_{C_{2}}$, así que $\int_{C_{1}}=\int_{C_{2}}$:
+            $I$ no depende del camino.
+
+            Recíprocamente, si $I$ es independiente del camino, entonces $\oint_{\Gamma}=0$ para
+            \emph{todo} lazo cerrado $\Gamma$ en $D$ (formado como diferencia de dos caminos
+            entre los mismos puntos). Por Green,
+            \begin{equation*}
+                \iint_{R}\paren{\beta_{x}-\alpha_{y}}dA=0
+            \end{equation*}
+            para toda región $R\subset D$. Tomando $R$ un disco de radio $\varepsilon\to0$
+            alrededor de un punto arbitrario $(x_{0},y_{0})$ y usando la continuidad de
+            $\beta_{x}-\alpha_{y}$, el teorema del valor medio para integrales fuerza
+            $\beta_{x}(x_{0},y_{0})-\alpha_{y}(x_{0},y_{0})=0$. Como $(x_{0},y_{0})$ es
+            arbitrario, $\alpha_{y}=\beta_{x}$ en todo $D$.
+            \item[b)] Verificamos primero la exactitud:
+            \begin{equation*}
+                \frac{\partial\alpha}{\partial y}=2ye^{x}=\frac{\partial\beta}{\partial x}.
+            \end{equation*}
+            Se cumple, así que por el inciso a) el problema \emph{sí es razonable}: $I_{AB}$
+            no depende del camino elegido, sólo de los extremos. Buscamos $\varphi$ con
+            $\varphi_{x}=y^{2}e^{x}$, $\varphi_{y}=2ye^{x}$. Integrando la primera respecto a $x$,
+            \begin{equation*}
+                \varphi(x,y)=y^{2}e^{x}+g(y).
+            \end{equation*}
+            Derivando respecto a $y$ e igualando a $\beta$, $2ye^{x}+g'(y)=2ye^{x}\implies g'(y)=0$.
+            Así, $\varphi(x,y)=y^{2}e^{x}$ (salvo constante), y
+            \begin{equation*}
+                I_{AB}=\varphi(1,1)-\varphi(0,0)=1^{2}e^{1}-0=e.
+            \end{equation*}
+            \item[c)] Ahora $\alpha=2ye^{x}$, $\beta=y^{2}e^{x}$. Verificamos exactitud:
+            \begin{equation*}
+                \frac{\partial\alpha}{\partial y}=2e^{x}, \qquad \frac{\partial\beta}{\partial x}=y^{2}e^{x}.
+            \end{equation*}
+            Como $2e^{x}\neq y^{2}e^{x}$ en general, la forma $\alpha\,dx+\beta\,dy$
+            \textbf{no es exacta}: por el inciso a), el problema \emph{no es razonable} tal como
+            está planteado, pues $I_{AB}$ depende del camino elegido, no sólo de $A$ y $B$.
+            Ilustramos esto con dos caminos concretos de $A=(0,0)$ a $B=(1,1)$:
+            \begin{itemize}
+                \item \emph{Recta $y=x$}, con $x=y=t$, $t\in[0,1]$:
+                \begin{equation*}
+                    I=\int_{0}^{1}\left[2te^{t}+t^{2}e^{t}\right]dt=\int_{0}^{1}\frac{d}{dt}\paren{t^{2}e^{t}}dt=t^{2}e^{t}\Big|_{0}^{1}=e.
+                \end{equation*}
+                \item \emph{Camino quebrado} $(0,0)\to(1,0)\to(1,1)$: en el primer tramo $y=0$,
+                de modo que $\alpha\,dx+\beta\,dy=0$; en el segundo tramo $x=1$ fijo, $dx=0$, y
+                \begin{equation*}
+                    I=\int_{0}^{1}y^{2}e\,dy=\frac{e}{3}.
+                \end{equation*}
+            \end{itemize}
+            Como $e\neq e/3$, se confirma que la integral depende del camino: $I_{AB}$ no está
+            bien definida sin especificar la trayectoria.
+        \end{enumerate}
+    \end{solucion}
+
+    \begin{problema}[Expansión, compresibilidad]
+        Suponiendo que la ecuación de estado de un gas es $p=p(V,T)$, expresar el coeficiente
+        de expansión de volumen térmico isobárico,
+        \begin{equation*}
+            \beta=\frac{1}{V}\pd{V}{T}{P},
+        \end{equation*}
+        y la compresibilidad isotérmica,
+        \begin{equation*}
+            \kappa_{T}=-\frac{1}{V}\pd{V}{p}{T},
+        \end{equation*}
+        en términos de derivadas de $p(V,T)$.
+    \end{problema}
+
+    \begin{solucion}
+        Aplicamos las identidades del problema 2 a la relación implícita
+        $F(p,V,T)\equiv p-p(V,T)=0$. Por la regla de reciprocidad,
+        \begin{equation*}
+            \pd{V}{p}{T}=\frac{1}{\pd{p}{V}{T}}.
+        \end{equation*}
+        Así,
+        \begin{equation*}
+            \boxed{\kappa_{T}=-\frac{1}{V\pd{p}{V}{T}}.}
+        \end{equation*}
+        Por la regla cíclica aplicada a $(V,T,p)$,
+        \begin{equation*}
+            \pd{V}{T}{p}\pd{T}{p}{V}\pd{p}{V}{T}=-1
+            \implies
+            \pd{V}{T}{p}=-\frac{1}{\pd{T}{p}{V}\pd{p}{V}{T}}
+            =-\frac{\pd{p}{T}{V}}{\pd{p}{V}{T}},
+        \end{equation*}
+        usando de nuevo la reciprocidad $\pd{T}{p}{V}=1/\pd{p}{T}{V}$. Por lo tanto,
+        \begin{equation*}
+            \boxed{\beta=-\frac{1}{V}\cdot\frac{\pd{p}{T}{V}}{\pd{p}{V}{T}}.}
+        \end{equation*}
+        En particular, dividiendo ambas cajas, $\beta/\kappa_{T}=\pd{p}{T}{V}$, una relación de
+        consistencia útil entre las tres cantidades.
+    \end{solucion}
+
+    \begin{problema}[Ecuación de estado]
+        Para una sustancia homogénea con número molar $n$ se han encontrado las siguientes
+        relaciones:
+        \begin{equation*}
+            \beta=\frac{nR}{pV}, \qquad \kappa_{T}=\frac{1}{T}+\frac{a}{V},
+        \end{equation*}
+        con $\beta,\kappa_{T}$ definidas como en el problema anterior y $R$ la constante
+        universal de los gases. Encuentra la ecuación de estado $f(T,p,V)=0$.
+    \end{problema}
+
+    \begin{solucion}
+        De $\beta=\frac1V\pd VTp=\dfrac{nR}{pV}$ obtenemos, sin depender de $\kappa_{T}$,
+        \begin{equation*}
+            \pd{V}{T}{p}=\frac{nR}{p}.
+        \end{equation*}
+        Integrando en $T$ a $p$ fijo, $V(T,p)=\dfrac{nRT}{p}+\varphi(p)$, con $\varphi$ una
+        función por determinar. Ahora imponemos $\kappa_{T}=-\frac1V\pd Vpp=\frac1T+\frac aV$
+        literalmente:
+        \begin{equation*}
+            \pd{V}{p}{T}=-\frac{V}{T}-a
+            \implies
+            -\frac{nRT}{p^{2}}+\varphi'(p)=-\frac{nRT/p+\varphi(p)}{T}-a
+            =-\frac{nR}{p}-\frac{\varphi(p)}{T}-a.
+        \end{equation*}
+        Agrupando por potencias de $T$,
+        \begin{equation*}
+            \underbrace{\paren{-\frac{nR}{p^{2}}}}_{\text{coef.\ de }T}T+\underbrace{\paren{\varphi'(p)+\frac{nR}{p}+a}}_{\text{coef.\ constante}}+\underbrace{\varphi(p)}_{\text{coef.\ de }1/T}\cdot\frac1T=0.
+        \end{equation*}
+        Como $\{T,1,1/T\}$ son funciones linealmente independientes de $T$, esta identidad para
+        \emph{todo} $T$ exige que el coeficiente de $T$ se anule: $-nR/p^{2}=0$, lo cual es
+        imposible para $n,R,p\neq0$. Es decir, \textbf{tal como está escrito, con el término
+        $1/T$, el par $(\beta,\kappa_{T})$ no es integrable}: no existe ninguna $V(T,p)$ que
+        satisfaga ambas relaciones simultáneamente (falla la igualdad de derivadas cruzadas
+        $\partial_{p}\partial_{T}V=\partial_{T}\partial_{p}V$).
+
+        La forma correcta, integrable, es la que reemplaza $1/T$ por $1/p$:
+        $\kappa_{T}=\dfrac1p+\dfrac aV$, dimensionalmente compatible con $\beta=nR/(pV)$, que
+        también exhibe un factor $1/p$. Verifiquemos que esta versión sí es integrable: con
+        $\pd Vpp=-\frac{V}{p}-a$,
+        \begin{equation*}
+            \partial_{p}\pd{V}{T}{p}=\partial_{p}\paren{\frac{nR}{p}}=-\frac{nR}{p^{2}},
+            \qquad
+            \partial_{T}\pd{V}{p}{T}=\partial_{T}\paren{-\frac Vp-a}=-\frac1p\pd{V}{T}{p}=-\frac{nR}{p^{2}}.
+        \end{equation*}
+        Las derivadas cruzadas coinciden idénticamente: el sistema es integrable. Procedemos con
+        $\kappa_{T}=1/p+a/V$. Sustituyendo $V=\frac{nRT}{p}+\varphi(p)$,
+        \begin{equation*}
+            -\frac{nRT}{p^{2}}+\varphi'(p)=-\frac{nRT/p+\varphi(p)}{p}-a
+            =-\frac{nRT}{p^{2}}-\frac{\varphi(p)}{p}-a.
+        \end{equation*}
+        Los términos $-nRT/p^{2}$ se cancelan en ambos lados, quedando la EDO lineal
+        \begin{equation*}
+            \varphi'(p)+\frac{\varphi(p)}{p}=-a.
+        \end{equation*}
+        Con factor integrante $p$, $(p\varphi)'=-ap$, de donde $p\varphi(p)=-\dfrac{ap^{2}}{2}+C$,
+        es decir $\varphi(p)=-\dfrac{ap}{2}+\dfrac{C}{p}$. Tomando la constante de integración
+        $C=0$ (para que, en el límite $a\to0$, se recupere exactamente la ley del gas ideal
+        $V=nRT/p$), obtenemos
+        \begin{equation*}
+            V(T,p)=\frac{nRT}{p}-\frac{ap}{2},
+        \end{equation*}
+        es decir, la ecuación de estado buscada es
+        \begin{equation*}
+            \boxed{f(T,p,V)=pV-nRT+\frac{a}{2}p^{2}=0.}
+        \end{equation*}
+        (Puede verificarse por sustitución directa que esta $V(T,p)$ reproduce exactamente
+        $\beta=nR/(pV)$ y $\kappa_{T}=1/p+a/V$.)
+    \end{solucion}
+
+    \begin{problema}[Ecuación de Van der Waals]
+        La ecuación de Van der Waals, para una sustancia con volumen molar $V$,
+        \begin{equation*}
+            \paren{p+\frac{a}{V^{2}}}(V-b)=RT,
+        \end{equation*}
+        describe cualitativamente la transición gas-líquido.
+        \begin{enumerate}
+            \item[a)] Expresar las constantes $a$ y $b$ mediante $V_{c}$ y $T_{c}$.
+            \item[b)] Reescribir la ecuación en términos de las cantidades reducidas
+            $\pi=p/p_{c}$, $v=V/V_{c}$, $t=T/T_{c}$.
+            \item[c)] Calcular $\kappa_{T}=-\frac1V\pd VpT$ para $V=V_{c}$. ¿Qué comportamiento
+            muestra $\kappa_{T}$ cuando $T\to T_{c}^{+}$? ¿Cómo se entiende físicamente?
+            \item[d)] Calcular $\beta=\frac1V\pd VTp$.
+        \end{enumerate}
+    \end{problema}
+
+    \begin{solucion}
+        Despejamos $p=\dfrac{RT}{V-b}-\dfrac{a}{V^{2}}$.
+        \begin{enumerate}
+            \item[a)] El punto crítico es un punto de inflexión horizontal de la isoterma
+            $T=T_{c}$: $\pd pVT=0$ y $\left(\dfrac{\partial^{2}p}{\partial V^{2}}\right)_{T}=0$ (en notación abreviada, $p_{V}=0=p_{VV}$)
+            en $V=V_{c}$. Calculamos
+            \begin{equation*}
+                p_{V}=-\frac{RT}{(V-b)^{2}}+\frac{2a}{V^{3}}, \qquad
+                p_{VV}=\frac{2RT}{(V-b)^{3}}-\frac{6a}{V^{4}}.
+            \end{equation*}
+            Igualando ambas a cero en $(V_{c},T_{c})$ y dividiendo la segunda entre la primera,
+            \begin{equation*}
+                \frac{2}{V_{c}-b}=\frac{3}{V_{c}} \implies b=\frac{V_{c}}{3}.
+            \end{equation*}
+            Sustituyendo en $p_{V}=0$ (con $V_{c}-b=2V_{c}/3$),
+            \begin{equation*}
+                \frac{RT_{c}}{(2V_{c}/3)^{2}}=\frac{2a}{V_{c}^{3}} \implies a=\frac{9RT_{c}V_{c}}{8}.
+            \end{equation*}
+            Como bono, sustituyendo en la ecuación de estado se obtiene la razón universal
+            \begin{equation*}
+                p_{c}=\frac{3RT_{c}}{8V_{c}}, \qquad \text{es decir} \qquad \frac{p_{c}V_{c}}{RT_{c}}=\frac38.
+            \end{equation*}
+            \item[b)] Sustituyendo $p=\pi p_{c}$, $V=vV_{c}$, $T=tT_{c}$, $b=V_{c}/3$,
+            $a=9RT_{c}V_{c}/8$ y $p_{c}=3RT_{c}/(8V_{c})$ en $p=RT/(V-b)-a/V^{2}$:
+            \begin{align*}
+                \pi p_{c}&=\frac{RtT_{c}}{V_{c}(v-1/3)}-\frac{9RT_{c}V_{c}/8}{v^{2}V_{c}^{2}}
+                =\frac{RT_{c}}{V_{c}}\left[\frac{t}{v-1/3}-\frac{9}{8v^{2}}\right].
+            \end{align*}
+            Como $RT_{c}/V_{c}=8p_{c}/3$, dividiendo entre $p_{c}$:
+            \begin{equation*}
+                \pi=\frac{8}{3}\left[\frac{t}{v-1/3}-\frac{9}{8v^{2}}\right]=\frac{8t}{3v-1}-\frac{3}{v^{2}},
+            \end{equation*}
+            es decir, la \textbf{ecuación reducida de Van der Waals} (ley de estados
+            correspondientes):
+            \begin{equation*}
+                \boxed{\paren{\pi+\frac{3}{v^{2}}}(3v-1)=8t.}
+            \end{equation*}
+            \item[c)] Usando $\kappa_{T}=-1/(Vp_{V})$ del problema 4, evaluamos $p_{V}$ en
+            $V=V_{c}$ (a temperatura $T$ general, no necesariamente $T_{c}$), con
+            $V_{c}-b=2V_{c}/3$ y $a=9RT_{c}V_{c}/8$:
+            \begin{align*}
+                p_{V}\big|_{V_{c}}&=-\frac{RT}{(2V_{c}/3)^{2}}+\frac{2a}{V_{c}^{3}}
+                =-\frac{9RT}{4V_{c}^{2}}+\frac{9RT_{c}}{4V_{c}^{2}}
+                =\frac{9R}{4V_{c}^{2}}(T_{c}-T).
+            \end{align*}
+            Por lo tanto,
+            \begin{equation*}
+                \boxed{\kappa_{T}(V_{c})=-\frac{1}{V_{c}\cdot\frac{9R}{4V_{c}^{2}}(T_{c}-T)}=\frac{4V_{c}}{9R(T-T_{c})}.}
+            \end{equation*}
+            Cuando $T\to T_{c}^{+}$, $\kappa_{T}\to+\infty$: la compresibilidad isotérmica
+            \emph{diverge} en el punto crítico. Físicamente, esto significa que cerca de $T_{c}$
+            una variación arbitrariamente pequeña de presión produce una variación de volumen
+            arbitrariamente grande; las fluctuaciones de densidad del fluido se vuelven muy
+            grandes, lo cual es precisamente el origen microscópico de la opalescencia crítica.
+            \item[d)] Usando $\beta=-\frac1V\cdot p_{T}/p_{V}$ del problema 4, con
+            $p_{T}=\pd pTV=\dfrac{R}{V-b}$ y $p_{V}$ como arriba (ahora en $V$ general),
+            \begin{align*}
+                \beta&=-\frac1V\cdot\frac{R/(V-b)}{-RT/(V-b)^{2}+2a/V^{3}}
+                =\frac{RV^{2}(V-b)}{RTV^{3}-2a(V-b)^{2}}.
+            \end{align*}
+            Es decir,
+            \begin{equation*}
+                \boxed{\beta=\frac{RV^{2}(V-b)}{RTV^{3}-2a(V-b)^{2}}.}
+            \end{equation*}
+            Como verificación de consistencia, en el límite diluido $V\to\infty$ el término
+            dominante da $\beta\to RV^{3}/(RTV^{3})=1/T$, el valor del gas ideal, como debe ser.
+        \end{enumerate}
+    \end{solucion}
+
+    \begin{problema}[Gas real (Dieterici)]
+        La ecuación de estado de un gas real viene dada por
+        \begin{equation*}
+            p=\frac{nRT}{V-nb}\,e^{-na/(RTV)},
+        \end{equation*}
+        con $n=N/N_{A}$, $R$ la constante universal de los gases y $a,b$ constantes materiales
+        (gas de Dieterici).
+        \begin{enumerate}
+            \item[1)] A partir de la expansión virial en la densidad de partículas $\rho=N/V$,
+            \begin{equation*}
+                p=k_{B}T\rho\paren{1+\sum_{v=1}^{\infty}B_{v}\rho^{v}},
+            \end{equation*}
+            calcular $B_{1}$ y la temperatura de Boyle $T_{B}$ (definida por $B_{1}(T_{B})=0$),
+            en términos de $a$ y $b$.
+            \item[2)] Comparar $B_{1}$ con el coeficiente virial de la ecuación de Van der Waals.
+            ¿Qué significado físico tienen $a$ y $b$?
+            \item[3)] ¿Cómo se relaciona $\pd p\rho T$ con $\kappa_{T}$? ¿Qué signo debe
+            esperarse por argumentos físicos?
+            \item[4)] Calcular $\pd p\rho T$ para el gas de Dieterici, hallar $T_{0}(\rho)$
+            donde este cociente se anula, y $T_{c}$ como el máximo de $T_{0}(\rho)$. Expresar
+            $a,b$ mediante $T_{c},\rho_{c}$. ¿Qué relación existe entre $T_{c}$ y $T_{B}$?
+            \item[5)] Describir cualitativamente las isotermas $p(\rho)$. ¿Dónde no son físicas?
+            ¿Cuándo se licúa el gas al aumentar la presión?
+        \end{enumerate}
+    \end{problema}
+
+    \begin{solucion}
+        \begin{enumerate}
+            \item[1)] Con $V=N/\rho$ y $N=nN_{A}$, la ecuación de estado se reescribe en
+            $(\rho,T)$: usando $V-nb=n(N_{A}/\rho-b)$,
+            \begin{equation*}
+                p=\frac{RT}{N_{A}/\rho-b}\,e^{-a\rho/(RTN_{A})}
+                =k_{B}T\cdot\frac{\rho}{1-b\rho/N_{A}}\cdot e^{-a\rho/(RTN_{A})},
+            \end{equation*}
+            usando $R/N_{A}=k_{B}$; nótese que esta expresión ya no depende de $n$, como debe
+            ser para una cantidad intensiva. Para aligerar la notación definamos las constantes
+            por partícula
+            \begin{equation*}
+                \gamma\equiv\frac{b}{N_{A}}, \qquad \alpha\equiv\frac{a}{N_{A}^{2}},
+            \end{equation*}
+            de modo que $a\rho/(RTN_{A})=\alpha\rho/(k_{B}T)$ y
+            \begin{equation*}
+                p=k_{B}T\rho\cdot\frac{1}{1-\gamma\rho}\cdot e^{-\alpha\rho/(k_{B}T)}.
+            \end{equation*}
+            Expandiendo a primer orden en $\rho$,
+            \begin{equation*}
+                \frac{p}{k_{B}T\rho}=\left[1+\gamma\rho+O(\rho^{2})\right]\left[1-\frac{\alpha}{k_{B}T}\rho+O(\rho^{2})\right]
+                =1+\paren{\gamma-\frac{\alpha}{k_{B}T}}\rho+O(\rho^{2}),
+            \end{equation*}
+            de donde
+            \begin{equation*}
+                \boxed{B_{1}=\gamma-\frac{\alpha}{k_{B}T}=\frac{1}{N_{A}}\paren{b-\frac{a}{RT}}.}
+            \end{equation*}
+            $B_{1}(T_{B})=0$ da
+            \begin{equation*}
+                \boxed{T_{B}=\frac{a}{Rb}.}
+            \end{equation*}
+            \item[2)] Para Van der Waals,
+            \begin{equation*}
+                p=\frac{RT}{V-b}-\frac{a}{V^{2}}
+                =\frac{RT}{V}\paren{1+\frac{b}{V}+\cdots}-\frac{a}{V^{2}}
+                =\frac{RT}{V}\left[1+\paren{b-\frac{a}{RT}}\frac1V+\cdots\right],
+            \end{equation*}
+            de modo que su primer coeficiente virial (en volumen molar) es también
+            $b-a/(RT)$: \textbf{ambas ecuaciones de estado coinciden hasta el segundo
+            coeficiente virial}, y sólo difieren en coeficientes de orden superior. En ambos
+            modelos, $b$ representa el volumen excluido por el tamaño finito de las moléculas
+            (repulsión de corto alcance) y $a$ mide la intensidad de la atracción intermolecular
+            de largo alcance (reduce la presión respecto al gas ideal).
+            \item[3)] Como $\rho=N/V$ (a $N$ fijo), $V=N/\rho$ y $\pd V\rho{N,T}=-N/\rho^{2}=-V/\rho$.
+            Por la regla de la cadena,
+            \begin{equation*}
+                \pd p\rho T=\pd pVT\cdot\pd V\rho T=\paren{-\frac{1}{V\kappa_{T}}}\paren{-\frac{V}{\rho}}=\frac{1}{\rho\kappa_{T}},
+            \end{equation*}
+            usando $\pd pVT=-1/(V\kappa_{T})$ (problema 4). Es decir,
+            \begin{equation*}
+                \boxed{\kappa_{T}=\frac{1}{\rho\,\pd p\rho T}.}
+            \end{equation*}
+            La estabilidad mecánica de la materia exige $\kappa_{T}>0$ (si no, el sistema
+            colapsaría o explotaría espontáneamente); como $\rho>0$, debe cumplirse
+            $\pd p\rho T>0$: comprimir el gas a temperatura fija (aumentar $\rho$) debe aumentar
+            la presión.
+            \item[4)] De $\ln p=\ln(k_{B}T)+\ln\rho-\ln(1-\gamma\rho)-\alpha\rho/(k_{B}T)$,
+            \begin{equation*}
+                \pd p\rho T=p\left[\frac1\rho+\frac{\gamma}{1-\gamma\rho}-\frac{\alpha}{k_{B}T}\right].
+            \end{equation*}
+            Como $p>0$, esto se anula cuando el corchete se anula, lo que define $T_{0}(\rho)$:
+            \begin{equation*}
+                \frac1\rho+\frac{\gamma}{1-\gamma\rho}=\frac{\alpha}{k_{B}T_{0}}
+                \implies
+                k_{B}T_{0}=\frac{\alpha\rho(1-\gamma\rho)}{(1-\gamma\rho)+\gamma\rho}=\alpha\rho(1-\gamma\rho).
+            \end{equation*}
+            Así,
+            \begin{equation*}
+                T_{0}(\rho)=\frac{\alpha}{k_{B}}\rho(1-\gamma\rho),
+            \end{equation*}
+            una parábola invertida en $\rho$, nula en $\rho=0$ y en $\rho=1/\gamma$. Su máximo
+            se obtiene de $dT_{0}/d\rho=0$: $1-2\gamma\rho=0\implies\rho_{c}=1/(2\gamma)$, y
+            \begin{equation*}
+                T_{c}=T_{0}(\rho_{c})=\frac{\alpha}{4k_{B}\gamma}.
+            \end{equation*}
+            Invirtiendo estas relaciones,
+            \begin{equation*}
+                \gamma=\frac{1}{2\rho_{c}} \implies \boxed{b=\frac{N_{A}}{2\rho_{c}},}
+                \qquad
+                \alpha=4k_{B}\gamma T_{c}=\frac{2k_{B}T_{c}}{\rho_{c}} \implies \boxed{a=\frac{2N_{A}RT_{c}}{\rho_{c}}.}
+            \end{equation*}
+            Comparando con $T_{B}=\alpha/(k_{B}\gamma)$ y $T_{c}=\alpha/(4k_{B}\gamma)$,
+            \begin{equation*}
+                \boxed{T_{B}=4T_{c}.}
+            \end{equation*}
+            \item[5)] Para $T>T_{c}$, $\pd p\rho T>0$ en todo $\rho$ físico: la isoterma
+            $p(\rho)$ es monótona creciente (comportamiento de fluido supercrítico, una sola
+            fase). Para $T<T_{c}$, $T_{0}(\rho)$ tiene dos raíces reales y $p(\rho)$ desarrolla
+            un máximo y un mínimo locales (un "lazo" tipo van der Waals): en el tramo entre
+            ambos, $\pd p\rho T<0$, lo cual viola $\kappa_{T}>0$ y por tanto \textbf{no es
+            físico} (mecánicamente inestable); ese tramo se sustituye, en la práctica, por una
+            línea horizontal de coexistencia líquido-gas (construcción de Maxwell) a la presión
+            de saturación correspondiente. En $T=T_{c}$ el máximo y el mínimo se funden en un
+            único punto de inflexión horizontal: el punto crítico. Por lo tanto, \textbf{sólo
+            para $T<T_{c}$} se puede licuar el gas aumentando la presión (cruzando la región de
+            coexistencia); para $T>T_{c}$ no existe una transición de fase discontinua al
+            comprimir.
+        \end{enumerate}
+    \end{solucion}
+
+    \begin{problema}[Gas ideal vs. gas real]
+        Las desviaciones del comportamiento de un gas ideal se aproximan mediante:
+        \begin{enumerate}
+            \item[1)] Volumen excluido: $p(V-nb)=nRT$.
+            \item[2)] Virial en presión: $pV=nRT(1+A_{1}p)$, $A_{1}=A_{1}(T)$.
+            \item[3)] Virial en volumen: $pV=nRT\paren{1+\dfrac{B_{1}}{V}}$, $B_{1}=B_{1}(T)$.
+        \end{enumerate}
+        Calcule, para las tres, $\kappa_{T}$ y $\beta$, y compare con el gas ideal.
+    \end{problema}
+
+    \begin{solucion}
+        Para el gas ideal, $V=nRT/p$, de donde $\beta_{\text{id}}=1/T$ y $\kappa_{T,\text{id}}=1/p$.
+        \begin{enumerate}
+            \item[1)] De $V=nb+\dfrac{nRT}{p}$,
+            \begin{equation*}
+                \pd VTp=\frac{nR}{p}, \qquad \pd Vpp=-\frac{nRT}{p^{2}}.
+            \end{equation*}
+            Como $V=n(RT+bp)/p$,
+            \begin{equation*}
+                \boxed{\beta=\frac{nR/p}{V}=\frac{R}{RT+bp},}\qquad
+                \boxed{\kappa_{T}=\frac{nRT/p^{2}}{V}=\frac{RT}{p(RT+bp)}.}
+            \end{equation*}
+            Ambas son menores que sus análogas ideales ($1/T$, $1/p$): el volumen excluido hace
+            al gas menos expansible y menos compresible que el ideal.
+            \item[2)] Aquí $V=\dfrac{nRT}{p}+nRTA_{1}(T)$. A $p$ fijo,
+            \begin{equation*}
+                \pd VTp=\frac{nR}{p}+nR\left[A_{1}+TA_{1}'\right],
+            \end{equation*}
+            y dividiendo entre $V=\frac{nRT}p(1+pA_1)$,
+            \begin{equation*}
+                \boxed{\beta=\frac1T+\frac{pA_{1}'(T)}{1+pA_{1}(T)}}
+            \end{equation*}
+            (si $A_{1}$ no depende de $T$, se recupera $\beta=1/T$ exactamente). A $T$ fijo,
+            $A_{1}(T)$ es constante y
+            \begin{equation*}
+                \pd Vpp=-\frac{nRT}{p^{2}},
+            \end{equation*}
+            (el término $nRTA_{1}$ no depende de $p$), de donde
+            \begin{equation*}
+                \boxed{\kappa_{T}=\frac{nRT/p^{2}}{V}=\frac{1}{p\left(1+pA_{1}(T)\right)}.}
+            \end{equation*}
+            \item[3)] Aquí conviene usar $p=p(V,T)$ del problema 4, ya que $V$ no se despeja
+            fácilmente:
+            \begin{equation*}
+                p=\frac{nRT}{V}+\frac{nRTB_{1}(T)}{V^{2}}.
+            \end{equation*}
+            Entonces
+            \begin{align*}
+                p_{T}&=\frac{nR}{V}+\frac{nR\left[B_{1}+TB_{1}'\right]}{V^{2}}, &
+                p_{V}&=-\frac{nRT}{V^{2}}\left(1+\frac{2B_{1}}{V}\right).
+            \end{align*}
+            Usando $\kappa_{T}=-1/(Vp_{V})$ y $\beta=-p_{T}/(Vp_{V})$ del problema 4,
+            \begin{equation*}
+                \boxed{\kappa_{T}=\frac1p\cdot\frac{1+B_{1}/V}{1+2B_{1}/V},}\qquad
+                \boxed{\beta=\frac1T\cdot\frac{1+\dfrac{B_{1}+TB_{1}'}{V}}{1+\dfrac{2B_{1}}{V}}.}
+            \end{equation*}
+            A orden dominante en $1/V$ (gas diluido), $\kappa_{T}\approx\dfrac1p\paren{1-\dfrac{B_{1}}{V}}$
+            y $\beta\approx\dfrac1T\paren{1+\dfrac{TB_{1}'-B_{1}}{TV}}$: en los tres modelos, las
+            correcciones al comportamiento ideal ($1/p$, $1/T$) son de orden $1/V$, como se
+            espera de una expansión virial en la densidad.
+        \end{enumerate}
+    \end{solucion}
+
+    \begin{problema}[Un capacitor]
+        Las placas de un capacitor de placas paralelas con capacidad $C$ llevan las cargas $Q$
+        y $-Q$. Cuando las placas se acercan un poco, la capacidad aumenta un $dC$.
+        \begin{enumerate}
+            \item[a)] ¿Qué trabajo mecánico debe realizarse con ese pequeño acercamiento?
+            \item[b)] ¿Cómo cambia la energía del campo en el capacitor?
+            \item[c)] ¿Es reversible el cambio de estado?
+        \end{enumerate}
+    \end{problema}
+
+    \begin{solucion}
+        El capacitor está aislado (carga $Q$ fija, sin conexión a una fuente externa), así que
+        no hay trabajo eléctrico de transporte de carga ($\delta W_{\text{elec}}=V\,dq=0$ pues
+        $dq=0$); el único intercambio de energía es el trabajo mecánico $\delta W$ realizado al
+        mover las placas. La energía electrostática almacenada es
+        \begin{equation*}
+            U=\frac{Q^{2}}{2C}.
+        \end{equation*}
+        \begin{enumerate}
+            \item[a)-b)] Con $Q$ fijo,
+            \begin{equation*}
+                dU=\frac{Q^{2}}{2}\,d\paren{\frac1C}=-\frac{Q^{2}}{2C^{2}}\,dC.
+            \end{equation*}
+            Por conservación de energía (sin intercambio de calor, proceso puramente mecánico
+            cuasiestático), $\delta W=dU$, es decir
+            \begin{equation*}
+                \boxed{\delta W=-\frac{Q^{2}}{2C^{2}}\,dC.}
+            \end{equation*}
+            Como el enunciado da $dC>0$ (las placas se acercan), $\delta W<0$: el agente
+            externo \emph{no} necesita suministrar trabajo positivo; por el contrario, las
+            placas cargadas se atraen entre sí, y para que el acercamiento sea cuasiestático
+            (no una caída libre) el agente externo debe \emph{extraer} (absorber) una cantidad
+            de trabajo $|\delta W|=Q^{2}dC/(2C^{2})$, que las placas realizan sobre él. La
+            energía del campo, en consecuencia, \textbf{disminuye} en exactamente esa cantidad,
+            $dU=-Q^{2}dC/(2C^{2})<0$: la energía perdida por el campo es la energía extraída
+            mecánicamente.
+            \item[c)] Sí, el proceso es \textbf{reversible}: al tratarse de un acercamiento
+            cuasiestático sin disipación (sin corrientes resistivas ni fricción), basta con
+            invertir el movimiento —separar las placas lentamente— para recorrer exactamente el
+            mismo camino en sentido inverso, devolviendo al campo la energía $Q^{2}dC/(2C^{2})$
+            mediante el trabajo mecánico ahora suministrado por el agente externo, y regresando
+            al sistema a su estado original sin generación neta de entropía.
+        \end{enumerate}
+    \end{solucion}
+
+\end{document}
