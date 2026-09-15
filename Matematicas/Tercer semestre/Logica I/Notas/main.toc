@@ -1,5 +1,31 @@
 \babel@toc {spanish}{}\relax 
 \contentsline {chapter}{\numberline {1}Lógica Proposicional}{3}{chapter.1}%
-\contentsline {section}{\numberline {1.1}¿Que es la lógica proposicional?}{3}{section.1.1}%
-\contentsline {section}{\numberline {1.2}Validez, satisfactibilidad y contradicción}{8}{section.1.2}%
+\contentsline {section}{\numberline {1.1}¿Qué es la lógica proposicional?}{3}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Validez, satisfacibilidad y contradicción}{8}{section.1.2}%
 \contentsline {section}{\numberline {1.3}Consecuencia y equivalencia}{11}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Demostraciones formales}{13}{section.1.4}%
+\contentsline {section}{\numberline {1.5}Demostración por inducción}{24}{section.1.5}%
+\contentsline {subsection}{\numberline {1.5.1}Inducción matemática}{25}{subsection.1.5.1}%
+\contentsline {subsection}{\numberline {1.5.2}Inducción sobre la complejidad de las fórmulas}{27}{subsection.1.5.2}%
+\contentsline {section}{\numberline {1.6}Formas normales}{29}{section.1.6}%
+\contentsline {section}{\numberline {1.7}Fórmulas de Horn}{34}{section.1.7}%
+\contentsline {section}{\numberline {1.8}Resolución}{38}{section.1.8}%
+\contentsline {subsection}{\numberline {1.8.1}Cláusulas}{39}{subsection.1.8.1}%
+\contentsline {subsection}{\numberline {1.8.2}Resolventes}{40}{subsection.1.8.2}%
+\contentsline {subsection}{\numberline {1.8.3}Completitud de la resolución}{42}{subsection.1.8.3}%
+\contentsline {section}{\numberline {1.9}Completitud y compacidad}{46}{section.1.9}%
+\contentsline {chapter}{\numberline {2}Estructuras y lógica de primer orden}{55}{chapter.2}%
+\contentsline {section}{\numberline {2.1}El lenguaje de la lógica de primer orden}{55}{section.2.1}%
+\contentsline {section}{\numberline {2.2}La sintaxis de la lógica de primer orden}{56}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Semántica y estructuras}{59}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Ejemplos de estructuras}{67}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Grafos}{67}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}Bases de datos relacionales}{70}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.3}Órdenes lineales}{72}{subsection.2.4.3}%
+\contentsline {subsection}{\numberline {2.4.4}Sistemas numéricos}{73}{subsection.2.4.4}%
+\contentsline {section}{\numberline {2.5}El tamaño de una estructura}{74}{section.2.5}%
+\contentsline {section}{\numberline {2.6}Relaciones entre estructuras}{81}{section.2.6}%
+\contentsline {subsection}{\numberline {2.6.1}Encajes}{81}{subsection.2.6.1}%
+\contentsline {subsection}{\numberline {2.6.2}Subestructuras}{85}{subsection.2.6.2}%
+\contentsline {subsection}{\numberline {2.6.3}Diagramas}{89}{subsection.2.6.3}%
+\contentsline {section}{\numberline {2.7}Teorías y modelos}{91}{section.2.7}%

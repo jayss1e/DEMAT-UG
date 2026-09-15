@@ -1,0 +1,27 @@
+\documentclass[tikz,border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usetikzlibrary{positioning,calc}
+\begin{document}
+\begin{tikzpicture}
+    % Primer paso
+    \node (c1a) {$C_1$};
+    \node (c2a) [right=2.4cm of c1a] {$C_3$};
+    \node (ra) [below=0.9cm of $(c1a)!0.5!(c2a)$] {$\{A,B\}$};
+    \draw (c1a) -- (ra);
+    \draw (c2a) -- (ra);
+
+    % Segundo paso
+    \node (c1b) [below=1.6cm of ra] {$\{A,B\}$};
+    \node (c2b) [right=2.4cm of c1b] {$C_4$};
+    \node (rb) [below=0.9cm of $(c1b)!0.5!(c2b)$] {$\{A\}$};
+    \draw (c1b) -- (rb);
+    \draw (c2b) -- (rb);
+
+    % Tercer paso
+    \node (c1c) [below=1.6cm of rb] {$C_2$};
+    \node (c2c) [right=2.4cm of c1c] {$\{A\}$};
+    \node (rc) [below=0.9cm of $(c1c)!0.5!(c2c)$] {$\emptyset$};
+    \draw (c1c) -- (rc);
+    \draw (c2c) -- (rc);
+\end{tikzpicture}
+\end{document}

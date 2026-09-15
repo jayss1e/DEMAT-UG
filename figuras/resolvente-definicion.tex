@@ -1,0 +1,12 @@
+\documentclass[tikz,border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usetikzlibrary{positioning,calc}
+\begin{document}
+\begin{tikzpicture}
+    \node (c1) {$C_1$};
+    \node (c2) [right=2.4cm of c1] {$C_2$};
+    \node (r) [below=0.9cm of $(c1)!0.5!(c2)$] {$R$};
+    \draw (c1) -- (r);
+    \draw (c2) -- (r);
+\end{tikzpicture}
+\end{document}
