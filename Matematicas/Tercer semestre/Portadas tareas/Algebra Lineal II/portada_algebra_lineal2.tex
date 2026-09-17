@@ -1,0 +1,154 @@
+% portada_algebra_lineal2.tex ─────────────────────────────────────────────────
+% Portada Álgebra Lineal 2 — Universidad de Guanajuato
+% Gráfica: forma canónica de Jordan J = diag(J_1(λ1), J_2(λ2), J_3(λ3))
+%   — directamente relacionada con los temas centrales de Álgebra Lineal 2:
+%     · Diagonalización y su generalización cuando faltan eigenvectores
+%     · Eigenvalores con multiplicidad algebraica mayor a la geométrica
+%     · Bloques de Jordan (operadores nilpotentes sobre cada eigenespacio)
+%
+% ─── EDITAR AQUÍ ─────────────────────────────────────────────────────────────
+\newcommand{\numtarea}{1}
+\newcommand{\nomalumno}{Ricardo Le\'on Mart\'inez}
+\newcommand{\fecha}{21/09/2026}
+\newcommand{\nomprofesor}{Herbert Kanarek Blando}
+% ─────────────────────────────────────────────────────────────────────────────
+
+\documentclass[tikz, border=0pt]{standalone}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{ebgaramond}
+\usepackage[default]{sourcesanspro}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usetikzlibrary{matrix,calc}
+
+\definecolor{ugblue}{HTML}{002D72}
+\definecolor{uggold}{HTML}{B8952A}
+
+\begin{document}
+\begin{tikzpicture}
+
+  \useasboundingbox (0,0) rectangle (210mm,297mm);
+  \fill[white] (0,0) rectangle (210mm,297mm);
+
+  %% ── Barras de color ─────────────────────────────────────────────────────────
+  \fill[ugblue] (0,287mm) rectangle (210mm,297mm);
+  \fill[uggold] (0,284mm) rectangle (210mm,287mm);
+  \fill[uggold] (0,11mm)  rectangle (210mm,14mm);
+  \fill[ugblue] (0,0)     rectangle (210mm,11mm);
+
+  %% ── Encabezado institucional ────────────────────────────────────────────────
+  \node[font=\fontsize{15.5}{19}\selectfont\sffamily\bfseries\color{ugblue},
+        anchor=center] at (105mm,275mm)
+    {\MakeUppercase{Universidad de Guanajuato}};
+  \node[font=\fontsize{10.5}{14}\selectfont\rmfamily\itshape\color{gray!65},
+        anchor=center] at (105mm,267.5mm)
+    {Divisi\'on de Ciencias Naturales y Exactas};
+  \node[font=\fontsize{10.5}{14}\selectfont\rmfamily\itshape\color{gray!65},
+        anchor=center] at (105mm,261mm)
+    {Departamento de Matem\'aticas};
+
+  %% ── Divisor superior ────────────────────────────────────────────────────────
+  \draw[ugblue!22, line width=0.4pt] (30mm,254.5mm) -- (101mm,254.5mm);
+  \fill[uggold]
+    (103mm,254.5mm)--(105mm,256.5mm)--(107mm,254.5mm)--(105mm,252.5mm)--cycle;
+  \draw[ugblue!22, line width=0.4pt] (109mm,254.5mm) -- (180mm,254.5mm);
+
+  %% ── Forma canónica de Jordan ────────────────────────────────────────────────
+  %% J = diag(J_1(λ1), J_2(λ2), J_3(λ3)): bloques triangulares superiores con
+  %% el eigenvalor en la diagonal y 1's en la superdiagonal; cero en el resto.
+  %% Rejilla: celda 14mm, separación 2.5mm ⇒ paso 16.5mm; matriz 6×6 centrada
+  %% en (105mm,186mm). Los realces de bloque se dibujan primero (coordenadas
+  %% calculadas a partir de la rejilla) para que queden detrás de los números.
+  \fill[ugblue!16,  rounded corners=1.5mm] (55.75mm,186.25mm) rectangle (104.75mm,235.25mm);
+  \fill[uggold!28,  rounded corners=1.5mm] (105.25mm,153.25mm) rectangle (137.75mm,185.75mm);
+  \fill[ugblue!16,  rounded corners=1.5mm] (138.25mm,136.75mm) rectangle (154.25mm,152.75mm);
+
+  \matrix (M) [
+    matrix of math nodes,
+    column sep = 2.5mm,
+    row sep    = 2.5mm,
+    nodes = {
+      anchor         = center,
+      minimum width  = 14mm,
+      minimum height = 14mm,
+      font           = \fontsize{17}{17}\selectfont,
+    },
+  ] at (105mm,186mm) {
+    \color{ugblue}\lambda_1 & \color{black!60}1       & \color{black!25}0       & \color{black!25}0       & \color{black!25}0       & \color{black!25}0 \\
+    \color{black!25}0       & \color{ugblue}\lambda_1 & \color{black!60}1       & \color{black!25}0       & \color{black!25}0       & \color{black!25}0 \\
+    \color{black!25}0       & \color{black!25}0       & \color{ugblue}\lambda_1 & \color{black!25}0       & \color{black!25}0       & \color{black!25}0 \\
+    \color{black!25}0       & \color{black!25}0       & \color{black!25}0       & \color{uggold!80!black}\lambda_2 & \color{black!60}1       & \color{black!25}0 \\
+    \color{black!25}0       & \color{black!25}0       & \color{black!25}0       & \color{black!25}0       & \color{uggold!80!black}\lambda_2 & \color{black!25}0 \\
+    \color{black!25}0       & \color{black!25}0       & \color{black!25}0       & \color{black!25}0       & \color{black!25}0       & \color{ugblue}\lambda_3 \\
+  };
+
+  %% Corchetes de la matriz
+  \coordinate (nw) at ($(M.north west)+(-3mm, 2mm)$);
+  \coordinate (sw) at ($(M.south west)+(-3mm,-2mm)$);
+  \coordinate (ne) at ($(M.north east)+( 3mm, 2mm)$);
+  \coordinate (se) at ($(M.south east)+( 3mm,-2mm)$);
+
+  \draw[ugblue, line width=1.1pt]
+    ($(nw)+(4mm,0)$) -- (nw) -- (sw) -- ($(sw)+(4mm,0)$);
+  \draw[ugblue, line width=1.1pt]
+    ($(ne)+(-4mm,0)$) -- (ne) -- (se) -- ($(se)+(-4mm,0)$);
+
+  %% ── Divisor inferior ────────────────────────────────────────────────────────
+  \draw[ugblue!22, line width=0.4pt] (30mm,121mm) -- (101mm,121mm);
+  \fill[uggold]
+    (103mm,121mm)--(105mm,123mm)--(107mm,121mm)--(105mm,119mm)--cycle;
+  \draw[ugblue!22, line width=0.4pt] (109mm,121mm) -- (180mm,121mm);
+
+  %% ── Título ──────────────────────────────────────────────────────────────────
+  \node[font=\fontsize{9}{11}\selectfont\sffamily\fontseries{l}\selectfont
+        \color{gray!48}, anchor=center] at (105mm,114mm)
+    {\MakeUppercase{Licenciatura en Matem\'aticas}};
+
+  \node[font=\fontsize{42}{48}\selectfont\sffamily\bfseries\color{ugblue},
+        anchor=center] at (105mm,97mm)
+    {\'Algebra Lineal~2};
+
+  \node[font=\fontsize{27}{31}\selectfont\rmfamily\itshape\color{uggold},
+        anchor=center] at (105mm,81mm)
+    {Tarea~\numtarea};
+
+  %% ── Separador y datos ───────────────────────────────────────────────────────
+  \draw[ugblue!13, line width=0.35pt] (30mm,70.5mm) -- (180mm,70.5mm);
+
+  \node[anchor=west,
+    font=\fontsize{7.5}{9}\selectfont\sffamily\color{gray!52}]
+    at (30mm,63mm) {\MakeUppercase{Alumno}};
+  \node[anchor=west,
+    font=\fontsize{7.5}{9}\selectfont\sffamily\color{gray!52}]
+    at (120mm,63mm) {\MakeUppercase{Fecha}};
+  \node[anchor=west,
+    font=\fontsize{15}{18}\selectfont\rmfamily\color{black!85}]
+    at (30mm,55.5mm) {\nomalumno};
+  \node[anchor=west,
+    font=\fontsize{15}{18}\selectfont\rmfamily\color{black!85}]
+    at (120mm,55.5mm) {\fecha};
+
+  \draw[ugblue!10, line width=0.3pt] (30mm,48mm) -- (180mm,48mm);
+
+  \node[anchor=west,
+    font=\fontsize{7.5}{9}\selectfont\sffamily\color{gray!52}]
+    at (30mm,42mm) {\MakeUppercase{Profesor}};
+  \node[anchor=west,
+    font=\fontsize{15}{18}\selectfont\rmfamily\color{black!85}]
+    at (30mm,34.5mm) {\nomprofesor};
+
+  \node[anchor=west,
+    font=\fontsize{7.5}{9}\selectfont\sffamily\color{gray!52}]
+    at (120mm,42mm) {\MakeUppercase{Calificaci\'on}};
+  \draw[ugblue!40, line width=0.5pt, rounded corners=1.2pt]
+    (120mm,26.5mm) rectangle (155mm,38.5mm);
+
+  \node[font=\fontsize{7.5}{9}\selectfont\sffamily\color{gray!36},
+        anchor=center] at (105mm,21mm)
+    {\MakeUppercase{Universidad de Guanajuato~·~Campus Guanajuato}};
+
+\end{tikzpicture}
+\end{document}
