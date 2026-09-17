@@ -1,4 +1,4 @@
-\documentclass[12pt,a4paper]{book}
+\message{ !name(main.tex)}\documentclass[12pt,a4paper]{book}
 \raggedbottom
 
 
@@ -87,8 +87,11 @@
 
 
 \begin{document}
-        
-    
+
+\message{ !name(main.tex) !offset(-3) }
+
+
+
     \thispagestyle{empty}
     \includepdf[pages=1]{portada_logica_matematica.pdf}
 
@@ -96,7 +99,7 @@
       \thispagestyle{empty}
 
         \textbf{Ricardo}\\[0.3cm]
-        
+
         Aqui son las dedicatorias pero hay que ponerlas hasta el final
 
         \textbf{Roman}
@@ -123,7 +126,7 @@
     \end{mdframed}
 
     % -------------------------------------------------
-    
+
     \setcounter{page}{1}
     \tableofcontents
 
@@ -141,7 +144,7 @@
 
     son fórmulas atómicas. Las fórmulas atómicas son los elementos básicos que se utilizan para construir
     proposiciones. En cualquier lógica, una proposición se considera un tipo concreto de fórmula. En la
-    lógica proposicional, no existe distinción entre estos dos términos. Utilizamos \comillas{fórmula} y 
+    lógica proposicional, no existe distinción entre estos dos términos. Utilizamos \comillas{fórmula} y
     \comillas{proposición} indistintamente.\\
     En la lógica proposicional, al igual que en todas las lógicas que estudiamos, cada proposición es verdadera
     o falsa. A la proposición se le asigna, en consecuencia, un \textit{valor de verdad} de 1 o 0. En el ejemplo anterior, podemos
@@ -209,7 +212,7 @@
     Obsérvese que hemos restringido la definición de fórmula a los símbolos primitivos $\neg$ y $\wedge$. Si tuviéramos que escribir
     la sintaxis de la lógica proposicional a un ordenador, esta definición de fórmula sería suficiente. Sin embargo, para que las fórmulas
     resulten más comprensibles para los humanos, incluimos los demás símbolos ($\vee,$ $\rightarrow,$ y $\ssi$) que se definirán más adelante.
-    Podemos considerar las fórmulas que incluyen estos símbolos como abreviaturas de fórmulas más complicadas que solo contienen 
+    Podemos considerar las fórmulas que incluyen estos símbolos como abreviaturas de fórmulas más complicadas que solo contienen
     $\neg$ y $\wedge$. La inclusión de estos símbolos hace que las fórmulas sean más fáciles de leer (para nosotros, los humanos).
 
     \vspace{2cm}
@@ -304,10 +307,10 @@
             $A$ & $\neg A$\\
             \hline
             0 & 1 \\
-            1 & 0 
+            1 & 0
         \end{tabular}
     \end{table}
-    
+
     \vspace{0.5cm}
 
     % ----- Tabla 1.3 -----
@@ -451,7 +454,7 @@
 
     \begin{definicion}[Validez y tautología]
         Una fórmula es \textit{válida} si se cumple para cualquier asignación. Utilizamos $\models F$ para indicarlo. Una fórmula válida se denomina
-        \textit{tautología}. 
+        \textit{tautología}.
     \end{definicion}
 
     \begin{ejemplo}
@@ -494,7 +497,7 @@
                 1 & 1 & 1 & 1 & 1
             \end{tabular}
         \end{table*}
-        
+
         Vemos que $(A\wedge(A\rightarrow B))\rightarrow B$ tiene valor de verdad 1 bajo cualquier asignación. Por lo tanto, esta fórmula no solo es
         satisfacible, si no que además es válida.
     \end{ejemplo}
@@ -510,7 +513,7 @@
             \renewcommand{\arraystretch}{1.5}
             \setlength{\tabcolsep}{10pt}
             \begin{tabular}{c | c | c | c | c | c}
-                $A$ & $B$ & $(A\rightarrow B)$ & $((A\rightarrow B)\rightarrow A)$ & $\neg A$ & $((A\rightarrow B)\rightarrow A)\wedge\neg A$\\ 
+                $A$ & $B$ & $(A\rightarrow B)$ & $((A\rightarrow B)\rightarrow A)$ & $\neg A$ & $((A\rightarrow B)\rightarrow A)\wedge\neg A$\\
                 \hline
                 0 & 0 & 1 & 0 & 1 & 0 \\
                 0 & 1 & 1 & 0 & 1 & 0 \\
@@ -545,7 +548,7 @@
     \begin{itemize}
         \item[$\bullet$] $\AA\models F$ significa que $\AA(F)=1$. Esto se lee como \comillas{$\AA$ modela $F$}.
         \item[$\bullet$] $G\models F$ significa que toda asignación que modela a $G$ también modela $F$. Es decir, $F$ es una consecuencia de $G$.
-        \item[$\bullet$] $\models F$ significa que toda asignación satisface $F$. Es decir, $F$ es una tautología. 
+        \item[$\bullet$] $\models F$ significa que toda asignación satisface $F$. Es decir, $F$ es una tautología.
     \end{itemize}
 
     Así pues, aunque $\models$ tiene múltiples interpretaciones, en contexto no resulta ambiguo. El concepto de consecuencia está estrechamente relacionado con el
@@ -1090,7 +1093,7 @@
     consecuencia. Demostramos en el Teorema \ref{thm:correccion} que si $G$ puede demostrarse formalmente a partir de $\FF$,
     entonces $G$ es consecuencia de $\FF$. Afirmamos, sin demostrarlo, que lo contrario también es cierto: si
     $\FF\models G$ entonces $\FF\vdash G$. Así, el símbolo $\models$ introducido en la sección anterior y el símbolo $\vdash$
-    introducido en la presente sección significan lo mismo en lógica proposicional. Este es el Teorema de completud para la
+    introducido en la presente sección significan lo mismo en lógica proposicional. Este es el Teorema de completitud para la
     lógica proposicional, cuya demostración se dará al concluir este capítulo.
 
     \section{Demostración por inducción}
@@ -1099,7 +1102,7 @@
     Este tipo de demostración surge de las reglas de la lógica. Se dice que tales demostraciones tienen lugar \textit{dentro} de
     la lógica, y nos referimos a ellas como demostraciones internas. Las demostraciones formales tienen un alcance limitado.
     Solo pueden demostrar enunciados que puedan escribirse en la lógica. En cambio, podemos querer demostrar algo sobre la
-    lógica misma. Podemos querer demostrar, por ejemplo, que toda oración de la lógica posee cierta propiedad. Tales
+    lógica misma. Podemos querer demostrar, por ejemplo, que toda sentencia de la lógica posee cierta propiedad. Tales
     enunciados que se refieren a la lógica misma generalmente no pueden ni plantearse ni demostrarse dentro de la lógica. Damos
     demostraciones externas para tales enunciados. Las demostraciones externas a veces se llaman metamatemáticas. Sin embargo,
     esta terminología contradice el hecho de que las demostraciones externas suelen ser de naturaleza más matemática que las
@@ -1721,7 +1724,7 @@
     regla es llevar las fórmulas a FNC. La esencia de la resolución es que, una vez que las fórmulas están en FNC, solo
     necesitamos dos reglas para deducirlo todo. Esto proporcionará un algoritmo para el problema de equivalencia y los demás
     problemas de decisión de la sección anterior. También nos acerca un paso más a la demostración del Teorema de
-    completud para la lógica proposicional.
+    completitud para la lógica proposicional.
 
     \subsection{Cláusulas}
 
@@ -1857,7 +1860,7 @@
     una fórmula $F$ en FNC, entonces $R$ es consecuencia de $F$. Aparentemente, la resolución es un fragmento de nuestro
     sistema de demostración formal. Como mostramos ahora, la resolución es tan poderosa como las demostraciones formales.
 
-    \subsection{Completud de la resolución}
+    \subsection{Completitud de la resolución}
 
     Mostramos que la resolución puede usarse para determinar si una fórmula dada es satisfacible o no. Podemos suponer que
     la fórmula está en FNC. Dada cualquier fórmula $F$ en FNC, sea $\mathrm{Res}_{0}(F)=\{C\mid C\text{ es una cláusula de }F\}$.
@@ -1994,7 +1997,7 @@
     verdad pueden llegar rápidamente a una conclusión. Solo necesitamos calcular la tabla de verdad hasta hallar un valor de
     verdad de 1.\\
     Resumimos los principales resultados de esta sección en el siguiente teorema. Este teorema es una versión finita del
-    Teorema de completud para la lógica proposicional.
+    Teorema de completitud para la lógica proposicional.
 
     \begin{teorema}\label{thm:completitud-finita}
         Sean $F$ y $G$ fórmulas de la lógica proposicional. Sea $H$ la fórmula en FNC obtenida al aplicar el Algoritmo FNC a
@@ -2020,13 +2023,13 @@
         Por demostración por contradicción, tenemos $\{F\}\vdash\neg\neg G$. Finalmente, $\{F\}\vdash G$ por Doble negación.
     \end{proof}
 
-    \section{Completud y compacidad}
+    \section{Completitud y compacidad}
 
-    La completud y la compacidad son dos propiedades que una lógica puede o no poseer. Concluimos nuestro estudio de la
+    La completitud y la compacidad son dos propiedades que una lógica puede o no poseer. Concluimos nuestro estudio de la
     lógica proposicional mostrando que esta lógica posee, en efecto, cada una de estas propiedades.\\
     Una lógica es un lenguaje formal que cuenta con reglas para deducir la verdad de un enunciado a partir de la de otro. Si
-    una oración $G$ puede deducirse de un conjunto de oraciones $\FF$ usando estas reglas, entonces escribimos
-    $\FF\vdash G$. La notación $\FF\models G$, por otro lado, significa que siempre que cada oración de $\FF$ sea
+    una sentencia $G$ puede deducirse de un conjunto de sentencias $\FF$ usando estas reglas, entonces escribimos
+    $\FF\vdash G$. La notación $\FF\models G$, por otro lado, significa que siempre que cada sentencia de $\FF$ sea
     verdadera, $G$ también lo es. Si $\FF\vdash G$, entonces $\FF\models G$. Lo contrario, sin embargo, no es
     necesariamente cierto. Dicho de otra manera, $\FF\models G$ significa que $\FF$ implica $G$ y $\FF\vdash G$ significa que
     podemos demostrar que $\FF$ implica $G$ usando las reglas de la lógica. Pero que algo sea verdadero no significa que
@@ -2035,18 +2038,18 @@
     $\FF\vdash G$), entonces decimos que la lógica es \textit{completa}.
 
     \begin{quote}
-        (Completud:) $\FF\models G$ si y solo si $\FF\vdash G$.
+        (Completitud:) $\FF\models G$ si y solo si $\FF\vdash G$.
     \end{quote}
 
     En la Sección 1.4 definimos la notación $\FF\vdash G$ para la lógica proposicional enumerando un conjunto de reglas. Sin
-    embargo, la completud debe entenderse no como un enunciado sobre estas reglas específicas, sino como un enunciado
-    sobre la lógica misma. La completud afirma la existencia de una lista de reglas que nos permite deducir toda
+    embargo, la completitud debe entenderse no como un enunciado sobre estas reglas específicas, sino como un enunciado
+    sobre la lógica misma. La completitud afirma la existencia de una lista de reglas que nos permite deducir toda
     consecuencia a partir de cualquier conjunto de fórmulas de la lógica. Para demostrar esto necesitamos exhibir tal lista
     de reglas. Mostramos que las reglas de las Tablas 1.5 y 1.6, junto con las reglas de la resolución, bastan para la
-    lógica proposicional. Como veremos en el Capítulo 9, la lógica de segundo orden no tiene completud. No podemos dar una
-    lista agradable de reglas que nos permita deducir toda consecuencia a partir de cualquier conjunto de oraciones de
+    lógica proposicional. Como veremos en el Capítulo 9, la lógica de segundo orden no tiene completitud. No podemos dar una
+    lista agradable de reglas que nos permita deducir toda consecuencia a partir de cualquier conjunto de sentencias de
     segundo orden.\\
-    Para demostrar que la lógica proposicional tiene completud, debemos pasar de conjuntos finitos a conjuntos infinitos
+    Para demostrar que la lógica proposicional tiene completitud, debemos pasar de conjuntos finitos a conjuntos infinitos
     de fórmulas. Si $F$ es finito, entonces $F\models G$ si y solo si $F\vdash G$ por el Teorema
     \ref{thm:completitud-finita}. Supongamos ahora que $F$ es infinito. Si $F$ es un conjunto de fórmulas en FNC, entonces
     puede verse como un conjunto de cláusulas. El conjunto $\mathrm{Res}_{n}(F)$ se define como se hizo para conjuntos
@@ -2054,7 +2057,7 @@
     nuevo, $\mathrm{Res}^{*}(F)$ es el conjunto de todas las cláusulas que pueden deducirse de $F$ usando resolución. Si $F$
     es infinito, entonces $\mathrm{Res}^{*}(F)$ es infinito y no puede verse como una fórmula. Tal conjunto infinito de
     cláusulas es satisfacible si y solo si existe una asignación que modela cada cláusula del conjunto. Para demostrar que
-    la lógica proposicional tiene completud, basta demostrar lo siguiente.
+    la lógica proposicional tiene completitud, basta demostrar lo siguiente.
 
     \begin{proposicion}\label{prop:res-infinito}
         Sea $F$ un conjunto de fórmulas en FNC. Entonces $\emptyset\in\mathrm{Res}^{*}(F)$ si y solo si $F$ es
@@ -2087,7 +2090,7 @@
     \end{quote}
 
     Dicho de otra manera, la compacidad afirma que $F$ es satisfacible si y solo si todo subconjunto finito de $F$ es
-    satisfacible. Al igual que con la completud, una dirección de la compacidad siempre se cumple. Si $F$ es satisfacible,
+    satisfacible. Al igual que con la completitud, una dirección de la compacidad siempre se cumple. Si $F$ es satisfacible,
     entonces todo subconjunto finito de $F$ también debe ser satisfacible. Pero el hecho de que todo subconjunto finito de
     un conjunto sea satisfacible no significa necesariamente que el conjunto mismo lo sea. Consideremos, por ejemplo, el
     siguiente conjunto de oraciones en español.
@@ -2144,7 +2147,7 @@
     Estamos listos ahora para demostrar que la lógica proposicional tiene compacidad.
 
     \begin{teorema}[Compacidad de la lógica proposicional]\label{thm:compacidad}
-        Un conjunto de oraciones de la lógica proposicional es satisfacible si y solo si todo subconjunto finito es
+        Un conjunto de sentencias de la lógica proposicional es satisfacible si y solo si todo subconjunto finito es
         satisfacible.
     \end{teorema}
     \begin{proof}
@@ -2168,12 +2171,12 @@
     \end{proof}
 
     La Proposición \ref{prop:res-infinito} se sigue de la compacidad. Ahora podemos demostrar que la lógica proposicional
-    tiene completud. Podríamos dar una demostración similar a la del Teorema \ref{thm:completitud-finita} usando la
+    tiene completitud. Podríamos dar una demostración similar a la del Teorema \ref{thm:completitud-finita} usando la
     Proposición \ref{prop:res-infinito} en lugar de las Proposiciones \ref{prop:vacio-implica-insatisfacible} y
     \ref{prop:insatisfacible-implica-vacio}. Sin embargo, la compacidad produce una demostración más directa.
 
-    \begin{teorema}[Completud de la lógica proposicional]\label{thm:completitud}
-        Para cualquier oración $G$ y conjunto de oraciones $\FF$, $\FF\models G$ si y solo si $\FF\vdash G$.
+    \begin{teorema}[Completitud de la lógica proposicional]\label{thm:completitud}
+        Para cualquier sentencia $G$ y conjunto de sentencias $\FF$, $\FF\models G$ si y solo si $\FF\vdash G$.
     \end{teorema}
     \begin{proof}
         Por el Teorema \ref{thm:correccion}, si $\FF\vdash G$, entonces $\FF\models G$.\\
@@ -2428,13 +2431,13 @@
     \end{ejercicio}
 
     \begin{ejercicio}\label{ej:consistencia}
-        Si una contradicción puede deducirse de un conjunto de oraciones, entonces se dice que el conjunto de oraciones
-        es \textit{inconsistente}. En caso contrario, el conjunto de oraciones es \textit{consistente}. Sea $\FF$ un
-        conjunto de oraciones. Muestre que $\FF$ es consistente si y solo si es satisfacible.
+        Si una contradicción puede deducirse de un conjunto de sentencias, entonces se dice que el conjunto de sentencias
+        es \textit{inconsistente}. En caso contrario, el conjunto de sentencias es \textit{consistente}. Sea $\FF$ un
+        conjunto de sentencias. Muestre que $\FF$ es consistente si y solo si es satisfacible.
     \end{ejercicio}
 
     \begin{ejercicio}
-        Supongamos que $\FF$ es un conjunto inconsistente de oraciones (según se definió en el Ejercicio
+        Supongamos que $\FF$ es un conjunto inconsistente de sentencias (según se definió en el Ejercicio
         \ref{ej:consistencia}). Para cada $G\in\FF$, sea $\FF_{G}$ el conjunto obtenido al eliminar $G$ de $\FF$.
         \begin{enumerate}[label=(\alph*)]
             \item Demuestre que, para cualquier $G\in\FF$, $\FF_{G}\vdash\neg G$ usando el resultado del Ejercicio
@@ -2444,18 +2447,18 @@
     \end{ejercicio}
 
     \begin{ejercicio}
-        Un conjunto de oraciones $\FF$ se dice \textit{cerrado bajo conjunción} si para cualesquiera $F$ y $G$ en $\FF$,
+        Un conjunto de sentencias $\FF$ se dice \textit{cerrado bajo conjunción} si para cualesquiera $F$ y $G$ en $\FF$,
         $F\wedge G$ también está en $\FF$. Supongamos que $\FF$ está cerrado bajo conjunción y es inconsistente (según se
         definió en el Ejercicio \ref{ej:consistencia}). Demuestre que, para cualquier $G\in\FF$, existe $F\in\FF$ tal que
         $\{F\}\vdash\neg G$.
     \end{ejercicio}
 
     \begin{ejercicio}
-        Llamamos a un conjunto de oraciones \textit{minimal insatisfacible} si es insatisfacible, pero todo subconjunto
+        Llamamos a un conjunto de sentencias \textit{minimal insatisfacible} si es insatisfacible, pero todo subconjunto
         propio es satisfacible.
         \begin{enumerate}[label=(\alph*)]
-            \item Muestre que existen conjuntos minimales insatisfacibles de oraciones de tamaño $n$ para cualquier $n$.
-            \item Muestre que todo conjunto insatisfacible de oraciones tiene un subconjunto minimal insatisfacible.
+            \item Muestre que existen conjuntos minimales insatisfacibles de sentencias de tamaño $n$ para cualquier $n$.
+            \item Muestre que todo conjunto insatisfacible de sentencias tiene un subconjunto minimal insatisfacible.
         \end{enumerate}
     \end{ejercicio}
 
@@ -2521,18 +2524,18 @@
     orden sea mucho más expresivo que la lógica proposicional. Se llaman el cuantificador existencial y el cuantificador
     universal, respectivamente. En cualquier fórmula de primer orden, cada cuantificador va inmediatamente seguido de una
     variable. Leemos $\exists x$ como \comillas{existe $x$ tal que} y $\forall x$ como \comillas{para todo $x$.}\\
-    A continuación se muestra un ejemplo de una oración de la lógica de primer orden: $\forall y\exists xR(f(x),y)$. Esta
-    oración dice que para todo $y$ existe $x$ tal que la relación $R$ se cumple para el par ordenado $(f(x),y)$. Aquí $f$
-    es una función unaria y $R$ es una relación binaria. Que esta oración sea verdadera o no depende del contexto. Si la
-    relación $R$ es la igualdad, entonces esta oración es verdadera si y solo si la función $f$ es sobreyectiva.\\
+    A continuación se muestra un ejemplo de una sentencia de la lógica de primer orden: $\forall y\exists xR(f(x),y)$. Esta
+    sentencia dice que para todo $y$ existe $x$ tal que la relación $R$ se cumple para el par ordenado $(f(x),y)$. Aquí $f$
+    es una función unaria y $R$ es una relación binaria. Que esta sentencia sea verdadera o no depende del contexto. Si la
+    relación $R$ es la igualdad, entonces esta sentencia es verdadera si y solo si la función $f$ es sobreyectiva.\\
     Debido a la ubicuidad de la igualdad en las matemáticas, agregamos a nuestra lista de símbolos fijos el símbolo $=$ para
     \comillas{igual.} Seguimos refiriéndonos a esto como \comillas{lógica de primer orden,} aunque a menudo se le llama
     \comillas{lógica de primer orden con igualdad.} La inclusión de la igualdad permite que los cuantificadores realmente
-    cuantifiquen. Por ejemplo, la oración
+    cuantifiquen. Por ejemplo, la sentencia
     \begin{equation*}
         \exists x_{1}\exists x_{2}\exists x_{3}(\neg(x_{1}=x_{2})\wedge\neg(x_{1}=x_{3})\wedge\neg(x_{2}=x_{3}))
     \end{equation*}
-    dice que existen al menos tres elementos distintos. Del mismo modo, podemos escribir oraciones que digan que existen al
+    dice que existen al menos tres elementos distintos. Del mismo modo, podemos escribir sentencias que digan que existen al
     menos siete elementos, o menos de 23 elementos, o exactamente 45 elementos.\\
     Hemos enumerado ya por completo los símbolos de la lógica de primer orden. Nuestro siguiente objetivo es definir la
     sintaxis y la semántica. Es decir, necesitamos decir qué cadenas de estos símbolos son admisibles como fórmulas y
@@ -2640,19 +2643,19 @@
         si $\varphi=\exists x\psi$, entonces $\libre(\varphi)=\libre(\psi)-\{x\}$.
     \end{quote}
 
-    \begin{definicion}[Oración]\label{def:sentencia}
-        Una \textit{oración} de la lógica de primer orden es una fórmula que no tiene variables libres.
+    \begin{definicion}[Sentencia]\label{def:sentencia}
+        Una \textit{sentencia} de la lógica de primer orden es una fórmula que no tiene variables libres.
     \end{definicion}
 
     \begin{ejemplo}
-        $\exists x\forall yP(x,y)\vee\forall x\exists yQ(x,y)$ es una oración de la lógica de primer orden, mientras que
-        $\exists xP(x,y)\vee\forall xQ(x,y)$ es una fórmula pero no una oración ($y$ es una variable libre).
+        $\exists x\forall yP(x,y)\vee\forall x\exists yQ(x,y)$ es una sentencia de la lógica de primer orden, mientras que
+        $\exists xP(x,y)\vee\forall xQ(x,y)$ es una fórmula pero no una sentencia ($y$ es una variable libre).
     \end{ejemplo}
 
     \begin{ejemplo}
-        Sea $\varphi$ la fórmula $\forall y\exists xf(x)=y$. Entonces $\varphi$ es una oración, ya que ambas variables que
+        Sea $\varphi$ la fórmula $\forall y\exists xf(x)=y$. Entonces $\varphi$ es una sentencia, ya que ambas variables que
         ocurren en $\varphi$ están cuantificadas. Las fórmulas $f(x)=y$ y $\exists xf(x)=y$ son ambas subfórmulas de
-        $\varphi$. Ninguna de estas subfórmulas es una oración.
+        $\varphi$. Ninguna de estas subfórmulas es una sentencia.
     \end{ejemplo}
 
     En contraste con las variables libres de una fórmula $\varphi$, las variables ligadas de $\varphi$ son aquellas
@@ -2682,8 +2685,8 @@
     cada ocurrencia libre de $x_{i}$ en $\varphi$ por el término $t_{i}$. Al usar esta notación, siempre debe suponerse que
     cada $t_{i}$ no contiene ninguna de las variables en $\lig(\varphi)$. (Por ejemplo, si $\varphi(x)$ es
     $\exists y\neg(x=y)$, entonces no permitimos la sustitución $\varphi(y)$.)\\
-    La presencia de variables libres distingue las fórmulas de las oraciones. Esta distinción no existía en la lógica
-    proposicional. La noción de verdad se define solo para las oraciones. No tiene sentido preguntar si la fórmula
+    La presencia de variables libres distingue las fórmulas de las sentencias. Esta distinción no existía en la lógica
+    proposicional. La noción de verdad se define solo para las sentencias. No tiene sentido preguntar si la fórmula
     $y=x+1$ es verdadera o no. Pero sí podemos preguntar si $\forall y\exists x(y=x+1)$ o $c_{1}=c_{2}+1$ son verdaderas o
     no. La respuesta, como ya hemos indicado, depende del contexto.
 
@@ -2695,27 +2698,27 @@
     embargo, debemos ser más precisos al definir la semántica de una lógica. El objetivo de esta sección es definir
     formalmente la semántica de la lógica de primer orden. Primero, describimos intuitivamente la semántica con algunos
     ejemplos.\\
-    Considere la oración de primer orden
+    Considere la sentencia de primer orden
     \begin{equation*}
         \forall y\exists xf(x)=y.
     \end{equation*}
-    Esta oración dice que para todo $y$ existe $x$ tal que $f(x)=y$. Para determinar si esta oración es verdadera o no,
+    Esta sentencia dice que para todo $y$ existe $x$ tal que $f(x)=y$. Para determinar si esta sentencia es verdadera o no,
     necesitamos un contexto. Depende de qué representen las variables y qué sea la función $f$. Por ejemplo, supongamos que
-    las variables son números reales y $f$ está definida por la regla $f(x)=x^{2}$. Entonces la oración anterior es falsa,
+    las variables son números reales y $f$ está definida por la regla $f(x)=x^{2}$. Entonces la sentencia anterior es falsa,
     ya que no existe $x$ tal que $f(x)=-1$. Si la función $f$ está definida por $f(x)=x^{3}$ (o si las variables representan
-    números complejos), entonces la oración es verdadera.\\
+    números complejos), entonces la sentencia es verdadera.\\
     Considere ahora $\forall x\forall y(R(x,y)\rightarrow\exists z(\neg(z=x)\wedge\neg(z=y)\wedge(R(x,z)\wedge R(z,y))))$.
-    Esta oración dice que, para cualesquiera $x$ y $y$, si $R(x,y)$ se cumple, entonces existe algún $z$ distinto de $x$ y
+    Esta sentencia dice que, para cualesquiera $x$ y $y$, si $R(x,y)$ se cumple, entonces existe algún $z$ distinto de $x$ y
     de $y$ tal que tanto $R(x,z)$ como $R(z,y)$ se cumplen. Supongamos de nuevo que las variables representan números
-    reales. Si la relación $R(x,y)$ significa $x<y$, entonces la oración anterior es verdadera, ya que entre cualesquiera
+    reales. Si la relación $R(x,y)$ significa $x<y$, entonces la sentencia anterior es verdadera, ya que entre cualesquiera
     dos números reales existen otros números reales. Es decir, los números reales son densos. Sin embargo, si las variables
-    representan enteros (o si $R$ significa $\leq$), entonces esta oración es falsa.\\
-    Así pues, que una oración sea verdadera o no depende de dos cosas: nuestro conjunto subyacente y nuestra
+    representan enteros (o si $R$ significa $\leq$), entonces esta sentencia es falsa.\\
+    Así pues, que una sentencia sea verdadera o no depende de dos cosas: nuestro conjunto subyacente y nuestra
     interpretación de los símbolos de función, constante y relación. Esta observación nos lleva al concepto central de este
     capítulo. Una \textit{estructura} consiste en un conjunto subyacente junto con una interpretación de diversas funciones,
     constantes y relaciones. El papel de las estructuras en la lógica de primer orden es análogo al papel que desempeñan las
-    asignaciones en la lógica proposicional. Dada cualquier oración $\varphi$ y cualquier estructura $M$, definimos qué
-    significa que $M$ modele a $\varphi$. Intuitivamente, esto significa que la oración $\varphi$ es verdadera respecto de
+    asignaciones en la lógica proposicional. Dada cualquier sentencia $\varphi$ y cualquier estructura $M$, definimos qué
+    significa que $M$ modele a $\varphi$. Intuitivamente, esto significa que la sentencia $\varphi$ es verdadera respecto de
     $M$. Como en la lógica proposicional, escribimos $M\models\varphi$ para denotar este concepto. La definición formal de
     este concepto se dará más adelante en esta sección.\\
     Las estructuras surgen de manera natural en muchas ramas de las matemáticas. Por ejemplo, un espacio vectorial es una
@@ -2779,37 +2782,37 @@
 
     \begin{definicion}\label{def:v-formula-sentencia}
         Sea $\VV$ un vocabulario. Una \textit{$\VV$-fórmula} es una fórmula en la que toda función, relación y constante
-        pertenece a $\VV$. Una \textit{$\VV$-oración} es una $\VV$-fórmula que es una oración.
+        pertenece a $\VV$. Una \textit{$\VV$-sentencia} es una $\VV$-fórmula que es una sentencia.
     \end{definicion}
 
-    Si $M$ es una $\VV$-estructura, entonces cada $\VV$-oración $\varphi$ es verdadera o falsa en $M$. Si $\varphi$ es
+    Si $M$ es una $\VV$-estructura, entonces cada $\VV$-sentencia $\varphi$ es verdadera o falsa en $M$. Si $\varphi$ es
     verdadera en $M$, decimos que $M$ modela $\varphi$ y escribimos $M\models\varphi$. Las estructuras en lógica de primer
     orden desempeñan un papel análogo al de las asignaciones en lógica proposicional. Pero mientras que, en lógica
-    proposicional, solo había finitas asignaciones posibles para una oración, no hay fin a la cantidad de estructuras que
-    pueden o no modelar una oración dada de la lógica de primer orden.\\
-    Intuitivamente, $M\models\varphi$ significa que la oración $\varphi$ es verdadera respecto de $M$. Debemos definir
+    proposicional, solo había finitas asignaciones posibles para una sentencia, no hay fin a la cantidad de estructuras que
+    pueden o no modelar una sentencia dada de la lógica de primer orden.\\
+    Intuitivamente, $M\models\varphi$ significa que la sentencia $\varphi$ es verdadera respecto de $M$. Debemos definir
     este concepto con precisión. Antes de hacerlo, consideramos un ejemplo más.
 
     \begin{ejemplo}\label{ej:var-sentencia}
         Consideremos de nuevo la estructura $R$ del Ejemplo \ref{ej:estructura-R-aritmetica}. El vocabulario de esta
         estructura es $\{+,\cdot,0,1\}$, que denotamos por $\VV_{ar}$ (el vocabulario de la aritmética).\\
-        Consideremos la $\VV_{ar}$-oración $\forall x\exists y(1+x\cdot x=y)$. Esta oración dice que para cualquier $x$
+        Consideremos la $\VV_{ar}$-sentencia $\forall x\exists y(1+x\cdot x=y)$. Esta sentencia dice que para cualquier $x$
         existe $y$ que es igual a $x^{2}+1$. Esto es verdadero en $R$. Si tomamos cualquier número real, lo elevamos al
         cuadrado y le sumamos uno, el resultado es otro número real. Así, $R\models\forall x\exists y(1+x\cdot x=y)$.\\
-        Consideremos ahora la $\VV_{ar}$-oración $\forall y\exists x(1+x\cdot x=y)$. Esta oración afirma que para todo
-        $y$ existe $x$ tal que $1+x^{2}=y$. Esta oración no es verdadera en $R$. Si tomamos, por ejemplo, $y=-2$, entonces
-        no existe tal $x$. Así, la estructura $R$ no modela la oración $\forall y\exists x(1+x\cdot x=y)$.
+        Consideremos ahora la $\VV_{ar}$-sentencia $\forall y\exists x(1+x\cdot x=y)$. Esta sentencia afirma que para todo
+        $y$ existe $x$ tal que $1+x^{2}=y$. Esta sentencia no es verdadera en $R$. Si tomamos, por ejemplo, $y=-2$, entonces
+        no existe tal $x$. Así, la estructura $R$ no modela la sentencia $\forall y\exists x(1+x\cdot x=y)$.
     \end{ejemplo}
 
-    Sea $M$ una $\VV$-estructura y sea $\varphi$ una $\VV$-oración. Definimos ahora formalmente qué significa que $M$
-    modele a $\varphi$. Primero definimos este concepto para oraciones $\varphi$ que no contienen las abreviaturas $\vee$,
+    Sea $M$ una $\VV$-estructura y sea $\varphi$ una $\VV$-sentencia. Definimos ahora formalmente qué significa que $M$
+    modele a $\varphi$. Primero definimos este concepto para sentencias $\varphi$ que no contienen las abreviaturas $\vee$,
     $\rightarrow$, $\ssi$ ni $\forall$. Definimos $M\models\varphi$ por inducción sobre el número total de ocurrencias de
     los símbolos $\wedge$, $\neg$ y $\exists$. Si $\varphi$ tiene cero ocurrencias de estos símbolos, entonces $\varphi$ es
     atómica.
 
     \begin{itemize}
         \item[$\bullet$] Si $\varphi$ es atómica, entonces $\varphi$ tiene la forma $t_{1}=t_{2}$ o $R(t_{1},\dots,t_{m})$
-        donde $t_{1},\dots,t_{m}$ son términos y $R$ es una relación de $\VV$. Dado que $\varphi$ es una oración,
+        donde $t_{1},\dots,t_{m}$ son términos y $R$ es una relación de $\VV$. Dado que $\varphi$ es una sentencia,
         $\varphi$ no contiene variables, así que cada $t_{i}$ se interpreta como algún elemento $a_{i}$ del universo $U$ de
         $M$. En este caso,
         \begin{align*}
@@ -2820,7 +2823,7 @@
     \end{itemize}
 
     Supongamos ahora que $\varphi$ contiene $m+1$ ocurrencias de $\wedge$, $\neg$ y $\exists$. Supongamos que $M\models\psi$
-    se ha definido para cualquier oración $\psi$ que contenga a lo sumo $m$ ocurrencias de estos símbolos. Dado que las
+    se ha definido para cualquier sentencia $\psi$ que contenga a lo sumo $m$ ocurrencias de estos símbolos. Dado que las
     fórmulas de primer orden se construyen a partir de fórmulas atómicas usando las reglas (R1), (R2) y (R3), hay tres
     posibilidades para $\varphi$.
 
@@ -2866,20 +2869,20 @@
         $M_{C}\models\psi(c)$ para alguna constante $c$ de $\VV(M)$.
     \end{itemize}
 
-    Hemos definido ahora $M\models\varphi$ para cualquier oración $\varphi$ que no use $\vee$, $\rightarrow$, $\ssi$ ni
+    Hemos definido ahora $M\models\varphi$ para cualquier sentencia $\varphi$ que no use $\vee$, $\rightarrow$, $\ssi$ ni
     $\forall$. Dado que cada uno de estos símbolos se define en función de $\neg$, $\wedge$ y $\exists$, la definición de
-    $M\models\varphi$ puede extenderse a todas las oraciones de manera natural. Supongamos que, para alguna oración
+    $M\models\varphi$ puede extenderse a todas las sentencias de manera natural. Supongamos que, para alguna sentencia
     $\varphi'$, se ha definido $M\models\varphi'$. Supongamos además que $\varphi$ tiene una subfórmula de la forma
-    $\neg(\neg\psi\wedge\neg\theta)$. Sea $\varphi'$ la oración obtenida al reemplazar una ocurrencia de la subfórmula
+    $\neg(\neg\psi\wedge\neg\theta)$. Sea $\varphi'$ la sentencia obtenida al reemplazar una ocurrencia de la subfórmula
     $\neg(\neg\psi\wedge\neg\theta)$ en $\varphi$ por $(\psi\vee\theta)$. Definimos que $M\models\varphi$ signifique lo
     mismo que $M\models\varphi'$. Del mismo modo, si $\varphi'$ se obtiene de $\varphi$ reemplazando una subfórmula de la
     forma $(\psi\rightarrow\theta)$ por $(\neg\psi\vee\theta)$, $(\psi\ssi\theta)$ por $(\psi\rightarrow\theta)\wedge(\theta\rightarrow\psi)$,
     o $\neg\exists x\neg\psi(x)$ por $\forall x\psi(x)$, entonces, por definición, $M\models\varphi$ si y solo si
     $M\models\varphi'$.\\
-    Hemos definido ahora qué significa que una $\VV$-estructura $M$ sea un modelo de una $\VV$-oración $\varphi$.
-    Extendemos además la definición para que se aplique a todas las $\VV(M)$-oraciones. Recordemos que $\VV(M)$ es la
+    Hemos definido ahora qué significa que una $\VV$-estructura $M$ sea un modelo de una $\VV$-sentencia $\varphi$.
+    Extendemos además la definición para que se aplique a todas las $\VV(M)$-sentencias. Recordemos que $\VV(M)$ es la
     expansión de $\VV$ obtenida al agregar una nueva constante por cada elemento del universo de $M$. Existe una expansión
-    natural de $M$ a una $\VV(M)$-estructura denotada por $M_{C}$. Para cualquier $\VV(M)$-oración $\varphi$, definimos
+    natural de $M$ a una $\VV(M)$-estructura denotada por $M_{C}$. Para cualquier $\VV(M)$-sentencia $\varphi$, definimos
     $M\models\varphi$ como $M_{C}\models\varphi$. Para cualquier $\VV$-estructura $M$, nos referimos a las constantes de
     $\VV(M)$ que no están en $\VV$ como \textit{parámetros}.
 
@@ -2892,13 +2895,13 @@
             (3<5)\wedge(-2<0),\quad\text{y}\\
             \neg\exists x((x<-2)\wedge(5<x)).
         \end{gather*}
-        Las dos primeras son $\VV_{<}$-oraciones. Las otras dos son $\VV_{<}(R_{<})$-oraciones que no son
-        $\VV_{<}$-oraciones. Consideramos a $-2$, $0$, $3$ y $5$ como parámetros.
+        Las dos primeras son $\VV_{<}$-sentencias. Las otras dos son $\VV_{<}(R_{<})$-sentencias que no son
+        $\VV_{<}$-sentencias. Consideramos a $-2$, $0$, $3$ y $5$ como parámetros.
     \end{ejemplo}
 
-    Obsérvese que no hemos definido el concepto de \comillas{modelar} para fórmulas que no son oraciones. Por convención,
+    Obsérvese que no hemos definido el concepto de \comillas{modelar} para fórmulas que no son sentencias. Por convención,
     cuando se dice que una estructura $M$ modela una fórmula $\varphi(x_{1},\dots,x_{n})$, lo que se quiere decir es que $M$
-    modela la oración $\forall x_{1}\dots\forall x_{n}\varphi(x_{1},\dots,x_{n})$. Por supuesto, la fórmula
+    modela la sentencia $\forall x_{1}\dots\forall x_{n}\varphi(x_{1},\dots,x_{n})$. Por supuesto, la fórmula
     $\varphi(x_{1},\dots,x_{n})$ puede ser verdadera para algunos valores de $x_{1},\dots,x_{n}$ y no para otros. El
     conjunto de $n$-tuplas para las cuales la fórmula se cumple se llama el \textit{conjunto definido} por $\varphi$.
 
@@ -2925,7 +2928,7 @@
             (\neg(x<3)\wedge\neg(x=3)\wedge(5<x))\vee(x=5)\vee(x<-2).
         \end{gather*}
         Sea $\varphi(x,y)$ la primera fórmula y sea $\psi(x)$ la segunda fórmula. Entonces $R_{<}\models\varphi(x,y)$. Con
-        esto queremos decir que $R_{<}$ modela la oración $\forall x\forall y\varphi(x,y)$. Se sigue que el conjunto
+        esto queremos decir que $R_{<}$ modela la sentencia $\forall x\forall y\varphi(x,y)$. Se sigue que el conjunto
         definido por $\varphi(x,y)$ es todo $\R^{2}$. En cambio, la fórmula $\psi(x)$ no se cumple para todo $x$ en $\R$.
         Así, $R_{<}$ no modela esta fórmula. El conjunto $\psi(R_{<})$ definido por $\psi(x)$ es $(-\infty,-2)\cup(3,5]$.
         Obsérvese que $R_{<}$ tampoco modela la fórmula $\neg\psi(x)$. El conjunto $\neg\psi(R_{<})$ es $[-2,3]\cup(5,\infty)$,
@@ -2933,12 +2936,12 @@
     \end{ejemplo}
 
     Si $M$ modela a $\varphi$, decimos que $\varphi$ se cumple en $M$, o simplemente, que $\varphi$ es verdadera en $M$.
-    Una oración puede ser verdadera en una estructura y no en otra. Si una $\VV$-oración $\varphi$ se cumple en toda
-    $\VV$-estructura, entonces es \textit{válida} (o una \textit{tautología}). Si la oración $\varphi$ se cumple en alguna
+    Una sentencia puede ser verdadera en una estructura y no en otra. Si una $\VV$-sentencia $\varphi$ se cumple en toda
+    $\VV$-estructura, entonces es \textit{válida} (o una \textit{tautología}). Si la sentencia $\varphi$ se cumple en alguna
     estructura, entonces es \textit{satisfacible}. En caso contrario, si no hay ninguna estructura en la que $\varphi$ sea
     verdadera, entonces $\varphi$ es \textit{insatisfacible} (o una \textit{contradicción}).\\
     Usamos la misma terminología que en lógica proposicional. Damos las definiciones análogas de consecuencia y
-    equivalencia. Para $\VV$-oraciones $\theta$ y $\varphi$, \comillas{$\theta$ es consecuencia de $\varphi$} significa
+    equivalencia. Para $\VV$-sentencias $\theta$ y $\varphi$, \comillas{$\theta$ es consecuencia de $\varphi$} significa
     que, para toda $\VV$-estructura $M$, si $M\models\varphi$ entonces $M\models\theta$. Y \comillas{$\theta$ es
     equivalente a $\varphi$} significa que $\theta$ y $\varphi$ son consecuencias la una de la otra. De nuevo, usamos la
     siguiente notación:
@@ -2949,9 +2952,9 @@
     \end{gather*}
 
     La definición de satisfacibilidad puede extenderse para aplicarse a todas las fórmulas de la lógica de primer orden (no
-    solo a las oraciones). La fórmula $\varphi(x_{1},\dots,x_{m})$ es satisfacible si y solo si la oración
+    solo a las sentencias). La fórmula $\varphi(x_{1},\dots,x_{m})$ es satisfacible si y solo si la sentencia
     $\forall x_{1}\dots\forall x_{m}\varphi(x_{1},\dots,x_{m})$ es satisfacible. Por lo tanto, las nociones de
-    insatisfacibilidad, tautología y consecuencia también se aplican a las fórmulas, además de a las oraciones (véase el
+    insatisfacibilidad, tautología y consecuencia también se aplican a las fórmulas, además de a las sentencias (véase el
     Ejercicio 2.6).\\
     Uno de nuestros objetivos principales es resolver los siguientes problemas de decisión.
 
@@ -2983,7 +2986,7 @@
     necesitamos hallar una estructura en la que sea verdadera.
 
     \begin{ejemplo}\label{ej:satisfacible-sucesor}
-        Sea $\varphi$ la oración $\forall x\exists yR(x,y)\wedge\exists y\forall x\neg R(x,y)$. Para mostrar que esto es
+        Sea $\varphi$ la sentencia $\forall x\exists yR(x,y)\wedge\exists y\forall x\neg R(x,y)$. Para mostrar que esto es
         satisfacible, debemos hallar una estructura $M$ que modele $\varphi$.\\
         Sea $M=(\N\mid R)$ donde $\N$ denota los números naturales y la relación binaria $R$ se interpreta como la relación
         sucesor. Es decir, $R(x,y)$ se cumple si y solo si $y=x+1$ ($y$ es el sucesor de $x$).\\
@@ -2998,21 +3001,21 @@
 
     \begin{ejemplo}\label{ej:relacion-equivalencia-fol}
         Sea $\VV_{E}$ el vocabulario $\{E\}$ que consiste en una relación binaria. Sea $M$ una $\VV_{E}$-estructura. La
-        relación $E$ es una relación de equivalencia sobre $M$ si y solo si $M$ modela las tres oraciones
+        relación $E$ es una relación de equivalencia sobre $M$ si y solo si $M$ modela las tres sentencias
         \begin{gather*}
             \forall xE(x,x)\\
             \forall x\forall y(E(x,y)\rightarrow E(y,x))\\
             \forall x\forall y\forall z((E(x,y)\wedge E(y,z)\rightarrow E(x,z))).
         \end{gather*}
-        La primera oración, llamémosla $\varphi_{1}$, dice que $E$ es reflexiva; la segunda oración, $\varphi_{2}$, dice
-        que $E$ es simétrica; y la tercera oración $\varphi_{3}$ dice que $E$ es transitiva.\\
+        La primera sentencia, llamémosla $\varphi_{1}$, dice que $E$ es reflexiva; la segunda sentencia, $\varphi_{2}$, dice
+        que $E$ es simétrica; y la tercera sentencia $\varphi_{3}$ dice que $E$ es transitiva.\\
         Ya hemos visto relaciones de equivalencia antes. \comillas{Equivalencia} fue el nombre que dimos a la relación
         $\equiv$ entre fórmulas de la lógica proposicional. Es fácil ver que esta relación merece el nombre que le dimos.
         Claramente satisface las tres condiciones de una relación de equivalencia. Es decir, la $\VV_{E}$-estructura
         $(U\mid E)$ modela cada $\varphi_{i}$, donde $U$ es el conjunto de todas las fórmulas de la lógica proposicional y
         $E$ se interpreta como $\equiv$.\\
-        Podemos mostrar que estas tres oraciones no son redundantes, es decir, que las tres son necesarias para definir la
-        noción de relación de equivalencia. Para ello, mostramos que ninguna de estas oraciones es consecuencia de las
+        Podemos mostrar que estas tres sentencias no son redundantes, es decir, que las tres son necesarias para definir la
+        noción de relación de equivalencia. Para ello, mostramos que ninguna de estas sentencias es consecuencia de las
         otras dos. Por ejemplo, para mostrar que $\varphi_{2}$ no es consecuencia de $\varphi_{1}$ y $\varphi_{3}$, debemos
         hallar una estructura que sea modelo de $\varphi_{1}\wedge\varphi_{3}\wedge\neg\varphi_{2}$. Es decir, debemos
         exhibir una $\VV_{E}$-estructura donde $E$ sea reflexiva y transitiva, pero no simétrica. La $\VV_{E}$-estructura
@@ -3069,17 +3072,17 @@
     conjunto de vértices. El vocabulario $\VV_{G}$ de $G$ consiste en una única relación binaria $R$. La estructura $G$
     interpreta $R$ como la relación de adyacencia. Es decir, para elementos $a$ y $b$ de $U$, $G\models R(a,b)$ si y solo si
     el grafo tiene una arista entre los vértices $a$ y $b$.\\
-    Cada uno de los grafos anteriores modela cada una de las siguientes dos $\VV_{G}$-oraciones.
+    Cada uno de los grafos anteriores modela cada una de las siguientes dos $\VV_{G}$-sentencias.
     \begin{gather*}
         \forall x\neg R(x,x)\\
         \forall x\forall y(R(x,y)\ssi R(y,x))
     \end{gather*}
-    La primera de estas oraciones dice que la relación binaria $R$ no es reflexiva (ningún vértice es adyacente a sí
-    mismo). La segunda oración dice que $R$ es simétrica. De ahora en adelante, cuando hablemos de un \textit{grafo},
-    queremos decir una $\VV_{G}$-estructura que modela las dos oraciones anteriores. Nuestra noción de \comillas{grafo} se
+    La primera de estas sentencias dice que la relación binaria $R$ no es reflexiva (ningún vértice es adyacente a sí
+    mismo). La segunda sentencia dice que $R$ es simétrica. De ahora en adelante, cuando hablemos de un \textit{grafo},
+    queremos decir una $\VV_{G}$-estructura que modela las dos sentencias anteriores. Nuestra noción de \comillas{grafo} se
     describe con más precisión, en términos de la teoría de grafos, como un \comillas{grafo no dirigido sin aristas
     múltiples ni lazos.}\\
-    Los Grafos 1 a 4 también modelan la oración $\forall x\exists yR(x,y)$, que afirma que cada vértice es adyacente a
+    Los Grafos 1 a 4 también modelan la sentencia $\forall x\exists yR(x,y)$, que afirma que cada vértice es adyacente a
     algún otro vértice. Sin embargo, esto no es cierto para todos los grafos. Por ejemplo, considere el siguiente grafo:
 
     \begin{center}
@@ -3102,30 +3105,30 @@
     \end{definicion}
 
     Cada uno de los Grafos 1 a 4 es conexo. Dado que cada uno tiene más de un vértice, cada uno modela
-    $\forall x\exists yR(x,y)$. Por otro lado, ninguno de estos grafos modela $\exists x\forall yR(x,y)$. Esta oración
+    $\forall x\exists yR(x,y)$. Por otro lado, ninguno de estos grafos modela $\exists x\forall yR(x,y)$. Esta sentencia
     afirma que existe un vértice adyacente a todo vértice. Dado que ningún vértice es adyacente a sí mismo, ningún grafo
-    modela esta oración (es decir, la negación de $\exists x\forall yR(x,y)$ es consecuencia de $\forall x\neg R(x,x)$).
+    modela esta sentencia (es decir, la negación de $\exists x\forall yR(x,y)$ es consecuencia de $\forall x\neg R(x,x)$).
     Sin embargo, el Grafo 1 contiene un vértice que es adyacente a todo vértice distinto de sí mismo. Esto puede expresarse
     en lógica de primer orden de la siguiente manera:
     \begin{equation*}
         \exists x\forall y(\neg(x=y)\rightarrow R(x,y)).
     \end{equation*}
-    El Grafo 4 también modela esta oración.\\
+    El Grafo 4 también modela esta sentencia.\\
     Para distinguir el Grafo 1 del Grafo 4, podemos decir que el Grafo 1 contiene un \textit{único} vértice que es
-    adyacente a todo vértice distinto de sí mismo. Esto puede expresarse como una oración de la lógica de primer orden.
-    Para simplificar esta oración, sea $\varphi(x)$ la fórmula $\forall y(\neg(x=y)\rightarrow R(x,y))$. Para cualquier
+    adyacente a todo vértice distinto de sí mismo. Esto puede expresarse como una sentencia de la lógica de primer orden.
+    Para simplificar esta sentencia, sea $\varphi(x)$ la fórmula $\forall y(\neg(x=y)\rightarrow R(x,y))$. Para cualquier
     grafo $G$ y cualquier vértice $a$ de $G$, $G\models\varphi(a)$ si y solo si $a$ es adyacente a todo vértice de $G$
-    distinto de $a$ mismo. La siguiente oración dice que existe un único elemento así:
+    distinto de $a$ mismo. La siguiente sentencia dice que existe un único elemento así:
     \begin{equation*}
         \exists y\varphi(y)\wedge\forall z(\varphi(z)\rightarrow(z=y)).
     \end{equation*}
-    Esta oración distingue al Grafo 1 de los Grafos 2 a 4.\\
-    El Grafo 4, por otro lado, se caracteriza por la siguiente oración, que dice que $\varphi(x)$ se cumple para todo
+    Esta sentencia distingue al Grafo 1 de los Grafos 2 a 4.\\
+    El Grafo 4, por otro lado, se caracteriza por la siguiente sentencia, que dice que $\varphi(x)$ se cumple para todo
     vértice $x$.
     \begin{equation*}
         \forall x\forall y(\neg(x=y)\rightarrow R(x,y)).
     \end{equation*}
-    A cualquier grafo que modele esta oración se le llama una \textit{clica} (o \textit{grafo completo}). A la clica que
+    A cualquier grafo que modele esta sentencia se le llama una \textit{clica} (o \textit{grafo completo}). A la clica que
     tiene $n$ vértices se le llama la $n$-clica y se denota por $K_{n}$. Así, el Grafo 4 es la 8-clica $K_{8}$. Obsérvese
     que, cuando se especifica $n$, usamos el artículo definido al referirnos a la $n$-clica. Esto se debe a que dos
     $n$-clicas cualesquiera son esencialmente la misma. Más precisamente, son isomorfas.
@@ -3162,17 +3165,17 @@
         $G$ y $H$ son las letras usadas para representar los vértices.
     \end{ejemplo}
 
-    Hemos exhibido una $\VV_{G}$-oración que distingue al Grafo 1 del Grafo 4. Podemos hacer algo mucho mejor que esto.
-    Existe una $\VV_{G}$-oración que distingue al Grafo 1 de todos los grafos que no son isomorfos al Grafo 1. Es decir,
-    existe una $\VV_{G}$-oración $\varphi_{G}$ tal que, para cualquier grafo $H$, $H\models\varphi_{G}$ si y solo si $H$
+    Hemos exhibido una $\VV_{G}$-sentencia que distingue al Grafo 1 del Grafo 4. Podemos hacer algo mucho mejor que esto.
+    Existe una $\VV_{G}$-sentencia que distingue al Grafo 1 de todos los grafos que no son isomorfos al Grafo 1. Es decir,
+    existe una $\VV_{G}$-sentencia $\varphi_{G}$ tal que, para cualquier grafo $H$, $H\models\varphi_{G}$ si y solo si $H$
     es isomorfo a $G$. Demostramos esto en la Sección 2.6 como Proposición \ref{prop:sentencia-caracteriza-grafo-finito}. En
     este sentido, la lógica de primer orden es un lenguaje poderoso para describir grafos finitos.\\
     En otro sentido, sin embargo, la lógica de primer orden no es un lenguaje poderoso. Propiedades básicas de la teoría de
-    grafos no pueden expresarse usando lógica de primer orden. Por ejemplo, no existe ninguna oración de primer orden que
+    grafos no pueden expresarse usando lógica de primer orden. Por ejemplo, no existe ninguna sentencia de primer orden que
     diga que un grafo tiene un número par de vértices. Tampoco puede la lógica de primer orden decir que un grafo es
-    conexo. Recordemos que la oración $\forall x\exists yR(x,y)$ se cumple en cualquier grafo conexo que tenga más de un
-    vértice. Sin embargo, el hecho de que esta oración se cumpla en una estructura no significa que sea conexa. No existe
-    una $\VV_{G}$-oración $\varphi$ tal que $G\models\varphi$ si y solo si $G$ es un grafo conexo. Estas y otras
+    conexo. Recordemos que la sentencia $\forall x\exists yR(x,y)$ se cumple en cualquier grafo conexo que tenga más de un
+    vértice. Sin embargo, el hecho de que esta sentencia se cumpla en una estructura no significa que sea conexa. No existe
+    una $\VV_{G}$-sentencia $\varphi$ tal que $G\models\varphi$ si y solo si $G$ es un grafo conexo. Estas y otras
     limitaciones de la lógica de primer orden se discuten en la Sección 4.7.
 
     \subsection{Bases de datos relacionales}
@@ -3277,50 +3280,50 @@
     \end{itemize}
 
     Estas cuatro estructuras tienen mucho en común. Todas son $\VV_{<}$-estructuras y cada una de ellas modela las
-    siguientes $\VV_{<}$-oraciones:
+    siguientes $\VV_{<}$-sentencias:
     \begin{gather*}
         \forall x\forall y((x<y)\rightarrow\neg(y<x))\\
         \forall x(\neg(x<x))\\
         \forall x\forall y((x<y)\vee(y<x)\vee(x=y))\\
         \forall x\forall y\forall z(((x<y)\wedge(y<z))\rightarrow(x<z)).
     \end{gather*}
-    Tomadas en conjunto, estas oraciones dicen que $<$ ordena linealmente al conjunto subyacente. Cada una de las cuatro
-    estructuras modela cada una de estas cuatro oraciones. Sin embargo, esto no es cierto para todas las
-    $\VV_{<}$-oraciones. Sea $\varphi$ la oración $\forall x\exists y(y<x)$, que dice que no hay un elemento más pequeño.
+    Tomadas en conjunto, estas sentencias dicen que $<$ ordena linealmente al conjunto subyacente. Cada una de las cuatro
+    estructuras modela cada una de estas cuatro sentencias. Sin embargo, esto no es cierto para todas las
+    $\VV_{<}$-sentencias. Sea $\varphi$ la sentencia $\forall x\exists y(y<x)$, que dice que no hay un elemento más pequeño.
     Claramente, $\R_{<}$, $\Q_{<}$ y $\Z_{<}$ son modelos de $\varphi$. Sin embargo, $\N_{<}$ sí tiene un elemento más
-    pequeño, a saber, 1. Así, $\N_{<}$ no modela $\varphi$; más bien, $\N_{<}$ modela la oración
-    $\exists x\forall y\neg(y<x)$, que afirma que existe un elemento más pequeño. Llamemos $\theta$ a esta oración.
-    Obsérvese que $\theta$ es equivalente a $\neg\varphi$. La oración $\theta$ distingue a $\N_{<}$ de los otros tres
+    pequeño, a saber, 1. Así, $\N_{<}$ no modela $\varphi$; más bien, $\N_{<}$ modela la sentencia
+    $\exists x\forall y\neg(y<x)$, que afirma que existe un elemento más pequeño. Llamemos $\theta$ a esta sentencia.
+    Obsérvese que $\theta$ es equivalente a $\neg\varphi$. La sentencia $\theta$ distingue a $\N_{<}$ de los otros tres
     modelos.\\
-    A continuación, busquemos una oración de primer orden que distinga a $\Z_{<}$ de las otras tres estructuras.
+    A continuación, busquemos una sentencia de primer orden que distinga a $\Z_{<}$ de las otras tres estructuras.
     Observemos que $\Z_{<}$ no tiene un elemento más pequeño y no es densa. Un conjunto linealmente ordenado es
     \textit{denso} si entre cualesquiera dos elementos hay otro elemento. Esta propiedad puede expresarse en lógica de
-    primer orden mediante la siguiente $\VV_{<}$-oración
+    primer orden mediante la siguiente $\VV_{<}$-sentencia
     \begin{equation*}
         \forall x\forall y((x<y)\rightarrow\exists z((x<z)\wedge(z<y))).
     \end{equation*}
-    Llamemos $\delta$ a esta oración. Tanto $\Q_{<}$ como $\R_{<}$ modelan $\delta$. Entre cualesquiera dos números
+    Llamemos $\delta$ a esta sentencia. Tanto $\Q_{<}$ como $\R_{<}$ modelan $\delta$. Entre cualesquiera dos números
     racionales $a$ y $b$ existen infinitos números racionales [$(a+b)/2$, por ejemplo]. Lo mismo es cierto para los números
     reales. Sin embargo, los enteros no son densos. Entre 1 y 2 no hay otros enteros. Así, $\Z_{<}\models\neg\delta$. La
-    $\VV_{<}$-oración $\varphi\wedge\neg\delta$ distingue a $\Z_{<}$ de las otras tres estructuras.\\
+    $\VV_{<}$-sentencia $\varphi\wedge\neg\delta$ distingue a $\Z_{<}$ de las otras tres estructuras.\\
     Supongamos ahora que queremos distinguir entre $\Q_{<}$ y $\R_{<}$. Podríamos usar el hecho de que $\R_{<}$ es más
     grande que $\Q_{<}$. (En la siguiente sección discutimos en detalle el tamaño de una estructura y mostramos que, en
     cierto sentido preciso, hay más números reales que números racionales.) Otra característica distintiva es la
-    completud del orden. Un orden lineal es \textit{completo en el orden} si no puede partirse en dos intervalos
+    completitud del orden. Un orden lineal es \textit{completo en el orden} si no puede partirse en dos intervalos
     abiertos. El conjunto de los números racionales, por ejemplo, es la unión de los intervalos $(-\infty,\sqrt{2})$ y
     $(\sqrt{2},\infty)$. Los paréntesis \comillas{(} y \comillas{)} indican que los intervalos no contienen los extremos
     (esto es lo que queremos decir con \comillas{abierto}). Dado que $\sqrt{2}$ no es un número racional, todo número
-    racional está en uno de estos dos intervalos. Así, $\Q_{<}$ no tiene completud en el orden. La estructura $\R_{<}$,
-    por otro lado, sí tiene completud en el orden. Esta es una característica distintiva de los números reales.\\
-    Sin embargo, si intentamos hallar una $\VV_{<}$-oración que distinga a $\R_{<}$ de $\Q_{<}$, fracasaremos. Para toda
-    $\VV_{<}$-oración $\varphi$, $\R_{<}\models\varphi$ si y solo si $\Q_{<}\models\varphi$. Damos una demostración
+    racional está en uno de estos dos intervalos. Así, $\Q_{<}$ no tiene completitud en el orden. La estructura $\R_{<}$,
+    por otro lado, sí tiene completitud en el orden. Esta es una característica distintiva de los números reales.\\
+    Sin embargo, si intentamos hallar una $\VV_{<}$-sentencia que distinga a $\R_{<}$ de $\Q_{<}$, fracasaremos. Para toda
+    $\VV_{<}$-sentencia $\varphi$, $\R_{<}\models\varphi$ si y solo si $\Q_{<}\models\varphi$. Damos una demostración
     elemental de esto en la Sección 5.2. Nuestro lenguaje de primer orden es demasiado débil para expresar cualquier
     diferencia entre estas estructuras. Señalamos que $\R_{<}$ es completa en el orden mientras que $\Q_{<}$ no lo es, pero
-    no podemos expresar esto mediante una oración de primer orden (inténtelo). Más bien, la completud del orden es un
+    no podemos expresar esto mediante una sentencia de primer orden (inténtelo). Más bien, la completitud del orden es un
     concepto de segundo orden. En lógica de segundo orden podemos expresar cosas como \comillas{no existen dos
     subconjuntos tales que\dots} También señalamos que $\R$ es más grande que $\Q$, pero, como veremos en el Capítulo 4, la
     lógica de primer orden no puede distinguir entre un número infinito y otro. Tanto $\Q_{<}$ como $\R_{<}$ son infinitas,
-    y eso es todo lo que la lógica de primer orden puede decir. Desde el punto de vista de las $\VV_{<}$-oraciones, las
+    y eso es todo lo que la lógica de primer orden puede decir. Desde el punto de vista de las $\VV_{<}$-sentencias, las
     estructuras $\R_{<}$ y $\Q_{<}$ son idénticas.
 
     \subsection{Sistemas numéricos}
@@ -3348,13 +3351,13 @@
     \end{equation*}
     son $\VV_{ar}$-fórmulas. De nuevo, 3 y $x^{5}$ no son símbolos de $\VV_{ar}$; son abreviaturas de los $\VV_{ar}$-términos
     $(1+(1+1))$ y $x\cdot(x\cdot(x\cdot(x\cdot x)))$, respectivamente.\\
-    Todavía no podemos expresar la completud del orden en este vocabulario, pero sí podemos distinguir entre las
-    estructuras $R$ y $Q$. La $\VV_{ar}$-oración $\exists x(x^{2}=1+1)$ afirma la existencia de $\sqrt{2}$. Se sigue que
-    $R$ modela esta oración y $Q$ no. Del mismo modo, la ecuación $2x+3=0$ tiene solución en $Q$ pero no en $A$. Así,
+    Todavía no podemos expresar la completitud del orden en este vocabulario, pero sí podemos distinguir entre las
+    estructuras $R$ y $Q$. La $\VV_{ar}$-sentencia $\exists x(x^{2}=1+1)$ afirma la existencia de $\sqrt{2}$. Se sigue que
+    $R$ modela esta sentencia y $Q$ no. Del mismo modo, la ecuación $2x+3=0$ tiene solución en $Q$ pero no en $A$. Así,
     $Q\models\exists x(2x+3=0)$, mientras que $A\models\neg\exists x(2x+3=0)$.\\
     Para progresar de $\N$ a $\Z$, a $Q$, agregamos soluciones para cada vez más polinomios. Llegamos al final del camino
     con los números complejos $C$. Los números complejos se obtienen agregando a los reales la solución $i=\sqrt{-1}$ de la
-    ecuación $x^{2}+1=0$. La $\VV_{ar}$-oración $\exists x(x^{2}+1=0)$ distingue a $C$ de las demás estructuras de nuestra
+    ecuación $x^{2}+1=0$. La $\VV_{ar}$-sentencia $\exists x(x^{2}+1=0)$ distingue a $C$ de las demás estructuras de nuestra
     lista. El conjunto $\C$ consiste en todos los números de la forma $a+bi$ donde $a$ y $b$ son ambos números reales. El
     Teorema Fundamental del Álgebra establece que, para cualquier polinomio no constante $P(x)$ con coeficientes en $\C$, la
     ecuación $P(x)=0$ tiene solución en $\C$ (esto es cierto incluso para polinomios de más de una variable). Así, no hay
@@ -3616,7 +3619,7 @@
 
     Por la Proposición \ref{prop:formulas-contables}, la mayoría de los subconjuntos de $\N$ no son definibles en ningún
     vocabulario contable. La misma idea usada para demostrar la Proposición \ref{prop:formulas-contables} puede usarse
-    para mostrar que hay una cantidad contable de oraciones en español, o en cualquier otro idioma natural. Así, existen
+    para mostrar que hay una cantidad contable de sentencias en español, o en cualquier otro idioma natural. Así, existen
     incontables números reales que eluden descripción en cualquier idioma natural. Del mismo modo, existen incontables
     subconjuntos de los números naturales que no pueden definirse. La siguiente proposición muestra que esto también es
     cierto para las funciones sobre los números naturales.
@@ -3801,7 +3804,7 @@
     \end{definicion}
 
     \begin{definicion}[Equivalencia elemental]\label{def:equivalencia-elemental}
-        Sean $M$ y $N$ $\VV$-estructuras. Si $M$ y $N$ modelan las mismas $\VV$-oraciones, decimos que $M$ y $N$ son
+        Sean $M$ y $N$ $\VV$-estructuras. Si $M$ y $N$ modelan las mismas $\VV$-sentencias, decimos que $M$ y $N$ son
         \textit{elementalmente equivalentes}, denotado por $M\equiv N$.
     \end{definicion}
 
@@ -3814,7 +3817,7 @@
     \end{proposicion}
     \begin{proof}
         Sea $f:M\rightarrow N$ un isomorfismo. Entonces tanto $f$ como $f^{-1}$ preservan toda fórmula. En particular, para
-        cualquier oración $\varphi$, $M\models\varphi$ si y solo si $N\models\varphi$.
+        cualquier sentencia $\varphi$, $M\models\varphi$ si y solo si $N\models\varphi$.
     \end{proof}
 
     Si las $\VV$-estructuras $M$ y $N$ son elementalmente equivalentes, entonces no podemos distinguirlas usando lógica de
@@ -3940,12 +3943,12 @@
         Esto se sigue inmediatamente de la Proposición \ref{prop:encaje-preserva-existenciales}.
     \end{proof}
 
-    En particular, las oraciones existenciales se preservan bajo extensiones. Intuitivamente, una oración existencial
+    En particular, las sentencias existenciales se preservan bajo extensiones. Intuitivamente, una sentencia existencial
     afirma que una fórmula sin cuantificadores $\varphi_{0}(\bar{y})$ se cumple para alguna tupla $\bar{y}$ de elementos
     del universo. Si esto es cierto en $M$ y $M\subset N$, entonces también debe ser cierto en $N$, ya que toda tupla de
     elementos del universo de $M$ es también una tupla de elementos del universo de $N$. Del mismo modo, si
     $\varphi_{0}(\bar{y})$ se cumple para todas las tuplas $\bar{y}$ de elementos del universo de $N$, entonces, en
-    particular, se cumple para todos los elementos de cualquier subestructura de $N$. Así, las oraciones de la forma
+    particular, se cumple para todos los elementos de cualquier subestructura de $N$. Así, las sentencias de la forma
     $\forall\bar{y}\varphi_{0}(\bar{y})$ se preservan bajo subestructuras.
 
     \begin{definicion}[Fórmula universal]\label{def:formula-universal}
@@ -3993,16 +3996,16 @@
 
     El concepto de diagrama (y, más específicamente, de diagrama elemental) de una $\VV$-estructura $M$ es un concepto
     fundamental que usaremos repetidamente en este libro (principalmente en el Capítulo 4). Intuitivamente, un diagrama de
-    $M$ es un conjunto de oraciones de primer orden que, en conjunto, dicen \comillas{$M$ puede encajarse en mí.} Es
+    $M$ es un conjunto de sentencias de primer orden que, en conjunto, dicen \comillas{$M$ puede encajarse en mí.} Es
     decir, $M$ puede encajarse en cualquier modelo del diagrama de $M$. Del mismo modo, el diagrama elemental de $M$ es un
-    conjunto de oraciones tal que $M$ puede encajarse elementalmente en cualquier modelo. Definimos ahora explícitamente
-    estos conjuntos de oraciones. Recordemos que $\VV(M)$ denota la expansión de $\VV$ obtenida al agregar una constante
+    conjunto de sentencias tal que $M$ puede encajarse elementalmente en cualquier modelo. Definimos ahora explícitamente
+    estos conjuntos de sentencias. Recordemos que $\VV(M)$ denota la expansión de $\VV$ obtenida al agregar una constante
     por cada elemento del conjunto subyacente de $M$, y $M_{C}$ denota la expansión de $M$ a una $\VV(M)$-estructura que
     interpreta estas constantes de la manera natural.
 
     \begin{definicion}[Diagrama]\label{def:diagrama}
         Sea $M$ una $\VV$-estructura.\\
-        El \textit{diagrama elemental} de $M$, denotado $ED(M)$, es el conjunto de todas las $\VV(M)$-oraciones que se
+        El \textit{diagrama elemental} de $M$, denotado $ED(M)$, es el conjunto de todas las $\VV(M)$-sentencias que se
         cumplen en $M_{C}$.\\
         El \textit{diagrama literal} de $M$, denotado $D(M)$, es el conjunto de todos los literales de $ED(M)$. Con
         frecuencia nos referimos al diagrama literal de $M$ simplemente como el diagrama de $M$.
@@ -4043,7 +4046,7 @@
             a=a,\ b=b,\ c=c,\ d=d,\ \neg(b=a),\ \neg(c=a),\dots
         \end{equation*}
         y así sucesivamente. En total, hay 32 literales distintos (aunque redundantes) en $D(G)$. Obsérvese que $G$ puede
-        encajarse en cualquier $\VV_{G}$-estructura que modele todas estas oraciones.
+        encajarse en cualquier $\VV_{G}$-estructura que modele todas estas sentencias.
     \end{ejemplo}
 
     \begin{proposicion}\label{prop:equivalencia-encaje-diagrama}
@@ -4085,25 +4088,25 @@
     \end{proof}
 
     Si $M$ es una estructura finita en un vocabulario finito, entonces $D(M)$ es finito. Se sigue que toda estructura
-    finita queda completamente descrita por una única oración de la lógica de primer orden.
+    finita queda completamente descrita por una única sentencia de la lógica de primer orden.
 
     \begin{proposicion}\label{prop:sentencia-caracteriza-grafo-finito}
-        Sea $\VV$ un vocabulario finito. Para cualquier $\VV$-estructura finita $M$, existe una $\VV$-oración
+        Sea $\VV$ un vocabulario finito. Para cualquier $\VV$-estructura finita $M$, existe una $\VV$-sentencia
         $\varphi_{M}$ tal que, para cualquier $\VV$-estructura $N$, $N\models\varphi_{M}$ si y solo si $N\cong M$.
     \end{proposicion}
     \begin{proof}
         Sea $\{a_{1},a_{2},\dots,a_{n}\}$ el conjunto subyacente de $M$. Sea $\varphi(\bar{a})$ la conjunción de las
-        finitas oraciones de $D(M)$, donde $\bar{a}$ denota la $n$-tupla $(a_{1},a_{2},\dots,a_{n})$. Sea $\varphi(\bar{x})$
+        finitas sentencias de $D(M)$, donde $\bar{a}$ denota la $n$-tupla $(a_{1},a_{2},\dots,a_{n})$. Sea $\varphi(\bar{x})$
         la $\VV$-fórmula obtenida al reemplazar cada $a_{i}$ en $\varphi(\bar{a})$ por la variable $x_{i}$ (que suponemos
-        no ocurre en $\varphi(\bar{a})$). Abreviamos la oración $\exists x_{1}\exists x_{2}\dots\exists x_{n}\varphi(\bar{x})$
+        no ocurre en $\varphi(\bar{a})$). Abreviamos la sentencia $\exists x_{1}\exists x_{2}\dots\exists x_{n}\varphi(\bar{x})$
         simplemente como $\exists\bar{x}\varphi(\bar{x})$.\\
-        Sea $\psi_{n}$ la oración
+        Sea $\psi_{n}$ la sentencia
         \begin{equation*}
             \forall x_{1}\forall x_{2}\dots\forall x_{n+1}\left(\bigvee_{i\neq j}(x_{i}=x_{j})\right)
         \end{equation*}
         que dice que, dados cualesquiera $n+1$ elementos, debe haber dos que sean iguales.\\
-        Sea ahora $\varphi_{M}$ la oración $\psi_{n}\wedge\exists\bar{x}\varphi(\bar{x})$. Debemos verificar que esta
-        oración funciona. Supongamos que $N\models\varphi_{M}$. Entonces, dado que $N\models\exists\bar{x}\varphi(\bar{x})$,
+        Sea ahora $\varphi_{M}$ la sentencia $\psi_{n}\wedge\exists\bar{x}\varphi(\bar{x})$. Debemos verificar que esta
+        sentencia funciona. Supongamos que $N\models\varphi_{M}$. Entonces, dado que $N\models\exists\bar{x}\varphi(\bar{x})$,
         $N$ contiene $n$ elementos $b_{1},\dots,b_{n}$ tales que $N\models\varphi(b_{1},\dots,b_{n})$. Por la Proposición
         \ref{prop:equivalencia-encaje-diagrama}, $M$ puede encajarse en $N$. Sea $f:M\rightarrow N$ un encaje. Dado que
         $N\models\psi_{n}$, $|N|\leq n$. Se sigue que $f$ debe ser sobreyectiva. Por la Proposición
@@ -4124,21 +4127,21 @@
     \section{Teorías y modelos}
 
     La teoría de modelos es la rama de la lógica que se ocupa de la interacción entre las estructuras matemáticas y las
-    oraciones de un lenguaje formal. La lógica de primer orden sirve como lenguaje principal para esta disciplina.
-    Cualquier estructura $M$ determina un conjunto de oraciones de primer orden $\Th(M)$ llamado la \textit{teoría} de
+    sentencias de un lenguaje formal. La lógica de primer orden sirve como lenguaje principal para esta disciplina.
+    Cualquier estructura $M$ determina un conjunto de sentencias de primer orden $\Th(M)$ llamado la \textit{teoría} de
     $M$.
 
     \begin{definicion}[Teoría de una estructura]\label{def:teoria-de-M}
         Para cualquier $\VV$-estructura $M$, la \textit{teoría} de $M$, denotada $\Th(M)$, es el conjunto de todas las
-        $\VV$-oraciones $\varphi$ tales que $M\models\varphi$.
+        $\VV$-sentencias $\varphi$ tales que $M\models\varphi$.
     \end{definicion}
 
-    Recíprocamente, cualquier conjunto de oraciones de primer orden $\Gamma$ determina una clase de estructuras
+    Recíprocamente, cualquier conjunto de sentencias de primer orden $\Gamma$ determina una clase de estructuras
     $\Mod(\Gamma)$.
 
     \begin{definicion}[Modelo]\label{def:modelo-clase}
-        Para cualquier conjunto de $\VV$-oraciones $\Gamma$, un \textit{modelo} de $\Gamma$ es una $\VV$-estructura que
-        modela cada oración de $\Gamma$. La clase de todos los modelos de $\Gamma$ se denota por $\Mod(\Gamma)$.
+        Para cualquier conjunto de $\VV$-sentencias $\Gamma$, un \textit{modelo} de $\Gamma$ es una $\VV$-estructura que
+        modela cada sentencia de $\Gamma$. La clase de todos los modelos de $\Gamma$ se denota por $\Mod(\Gamma)$.
     \end{definicion}
 
     \textbf{Nota:} se usa la palabra \textit{clase} en lugar de \textit{conjunto} para $\Mod(\Gamma)$ debido al siguiente
@@ -4151,8 +4154,8 @@
     completa}, noción que definimos a continuación.
 
     \begin{definicion}[Teoría completa]\label{def:teoria-completa}
-        Sea $\Gamma$ un conjunto de $\VV$-oraciones. Entonces $\Gamma$ es una \textit{$\VV$-teoría completa} si, para
-        cualquier $\VV$-oración $\varphi$, o bien $\varphi$ o bien $\neg\varphi$ está en $\Gamma$, y no es el caso que
+        Sea $\Gamma$ un conjunto de $\VV$-sentencias. Entonces $\Gamma$ es una \textit{$\VV$-teoría completa} si, para
+        cualquier $\VV$-sentencia $\varphi$, o bien $\varphi$ o bien $\neg\varphi$ está en $\Gamma$, y no es el caso que
         tanto $\varphi$ como $\neg\varphi$ estén en $\Gamma$.
     \end{definicion}
 
@@ -4160,7 +4163,7 @@
         Para cualquier $\VV$-estructura $M$, $\Th(M)$ es una $\VV$-teoría completa.
     \end{proposicion}
     \begin{proof}
-        Mostramos que, para cualquier vocabulario $\VV$, cualquier $\VV$-estructura $M$, y cualquier $\VV$-oración
+        Mostramos que, para cualquier vocabulario $\VV$, cualquier $\VV$-estructura $M$, y cualquier $\VV$-sentencia
         $\varphi$:
         \begin{quote}
             $(\dagger)$ o bien $\varphi$ o bien $\neg\varphi$ está en $\Th(M)$, y no es el caso que tanto $\varphi$ como
@@ -4172,14 +4175,14 @@
         $\varphi$.\\
         Si $\varphi$ no contiene ninguna ocurrencia de los símbolos primitivos, entonces $\varphi$ tiene la forma
         $R(t_{1},\dots,t_{n})$ o $t_{1}=t_{2}$ donde $t_{1},\dots,t_{n}$ son $\VV$-términos. Es decir, $\varphi$ es
-        atómica. Dado que $\varphi$ es una oración, cada $t_{i}$ está libre de variables. Dado que $M$ es una
+        atómica. Dado que $\varphi$ es una sentencia, cada $t_{i}$ está libre de variables. Dado que $M$ es una
         $\VV$-estructura y cada $t_{i}$ es un $\VV$-término libre de variables, $M$ interpreta cada $t_{i}$ como un
         elemento $a_{i}$ del universo $U$ de $M$. Por la definición de $\models$, $M\models t_{1}=t_{2}$ si y solo si
         $a_{1}$ y $a_{2}$ son el mismo elemento de $U$, y $M\models R(t_{1},\dots,t_{n})$ si y solo si la tupla
         $(a_{1},\dots,a_{n})$ está en el subconjunto de $U^{n}$ que la interpretación de $M$ asigna a $R$.\\
         En cualquier caso, vemos que $M\models\varphi$ o $M\models\neg\varphi$, y no ambas.\\
         Hemos verificado $(\dagger)$ para cualquier vocabulario $\VV$, cualquier $\VV$-estructura $M$, y cualquier
-        $\VV$-oración atómica $\varphi$. Supongamos ahora que hemos mostrado esto para cualquier $\VV$-oración que
+        $\VV$-sentencia atómica $\varphi$. Supongamos ahora que hemos mostrado esto para cualquier $\VV$-sentencia que
         contenga a lo sumo $m$ ocurrencias totales de $\neg$, $\wedge$ y $\exists$. Esta es nuestra hipótesis de
         inducción.\\
         Supongamos que $\varphi$ tiene la forma $\neg\psi$ o $\psi\wedge\theta$. Por nuestra hipótesis de inducción,
@@ -4188,15 +4191,15 @@
         Por la semántica de $\exists$, $M\models\varphi$ si y solo si $M_{C}\models\psi(c)$ para alguna constante $c$ del
         vocabulario de $M_{C}$. De nuevo por nuestra hipótesis de inducción, el enunciado anterior se cumple para
         $\psi(c)$, y por lo tanto se cumple también para $\varphi$.\\
-        Se sigue por inducción que $(\dagger)$ se cumple para todas las oraciones $\varphi$.
+        Se sigue por inducción que $(\dagger)$ se cumple para todas las sentencias $\varphi$.
     \end{proof}
 
     Esta proposición, aunque bastante elemental, tiene una importancia fundamental. Esta proposición verifica que la
     lógica de primer orden evita las ambigüedades y paradojas que surgen en los lenguajes naturales. En cualquier conjunto
-    de oraciones de primer orden que describa una estructura dada, no hay nada contradictorio.
+    de sentencias de primer orden que describa una estructura dada, no hay nada contradictorio.
 
     \begin{definicion}[Consistente]\label{def:consistente}
-        Se dice que un conjunto de oraciones $\Gamma$ es \textit{consistente} si no puede deducirse ninguna contradicción
+        Se dice que un conjunto de sentencias $\Gamma$ es \textit{consistente} si no puede deducirse ninguna contradicción
         de $\Gamma$.
     \end{definicion}
 
@@ -4204,13 +4207,13 @@
     idea es análoga a la noción de \comillas{deducirse} para la lógica proposicional.
 
     \begin{definicion}[Teoría]\label{def:teoria-clase-elemental}
-        Una \textit{teoría} es un conjunto consistente de oraciones. Si $T$ es una teoría, entonces $\Mod(T)$ se llama
+        Una \textit{teoría} es un conjunto consistente de sentencias. Si $T$ es una teoría, entonces $\Mod(T)$ se llama
         una \textit{clase elemental}.
     \end{definicion}
 
-    Sea $\VV$ un vocabulario. Entonces una \textit{$\VV$-teoría} es un conjunto consistente de $\VV$-oraciones. Una
+    Sea $\VV$ un vocabulario. Entonces una \textit{$\VV$-teoría} es un conjunto consistente de $\VV$-sentencias. Una
     $\VV$-teoría $T$ es una \textit{teoría completa} si es maximal en el siguiente sentido: ningún conjunto de
-    $\VV$-oraciones que contenga a $T$ como subconjunto propio es consistente. Esto concuerda con nuestra definición
+    $\VV$-sentencias que contenga a $T$ como subconjunto propio es consistente. Esto concuerda con nuestra definición
     anterior de \comillas{teoría completa.}\\
     La teoría de modelos estudia las teorías y los modelos, y la interacción entre ellos. Comprender la teoría de una
     estructura brinda información sobre la estructura. La teoría describe la estructura. Por otro lado, comprender los
@@ -4220,7 +4223,7 @@
     la lógica de primer orden que la hacen un lenguaje apropiado para la teoría de modelos. En el Capítulo 5 nos
     enfocamos en las teorías y consideramos algunas propiedades que una teoría puede o no poseer. En el Capítulo 6,
     consideramos modelos individuales de una teoría que tienen propiedades especiales. Antes de esto, en el Capítulo 3,
-    consideramos el problema básico de determinar si una oración dada de la lógica de primer orden es satisfacible.
+    consideramos el problema básico de determinar si una sentencia dada de la lógica de primer orden es satisfacible.
     Con ese fin, desarrollamos las demostraciones formales y la resolución para la lógica de primer orden.
 
     \section*{Ejercicios}
@@ -4242,13 +4245,13 @@
             \item[10.] $\forall x\forall y((x<2)\rightarrow((x+3)=4))$
         \end{enumerate}
         \begin{enumerate}[label=(\alph*)]
-            \item ¿Cuáles de estas 10 fórmulas son oraciones?
+            \item ¿Cuáles de estas 10 fórmulas son sentencias?
             \item ¿Cuáles de estas 10 fórmulas son satisfacibles?
             \item ¿Cuáles de estas 10 fórmulas son tautologías?
             \item Sea $\N_{+}$ la $\VV$-estructura con universo $\N$ que interpreta los símbolos de $\VV$ de la manera
-            usual. ¿Cuáles de las oraciones anteriores modela $\N_{+}$?
+            usual. ¿Cuáles de las sentencias anteriores modela $\N_{+}$?
             \item Sea $\R_{+}$ la $\VV$-estructura con universo $\R$ que interpreta los símbolos de $\VV$ de la manera
-            usual. ¿Cuáles de las oraciones anteriores modela $\R_{+}$?
+            usual. ¿Cuáles de las sentencias anteriores modela $\R_{+}$?
             \item Enumere los términos que ocurren en las fórmulas anteriores.
             \item Para cada una de las diez fórmulas, indique el número de subfórmulas. ¿Cuántas subfórmulas atómicas
             tiene cada fórmula?
@@ -4269,8 +4272,8 @@
     \end{ejercicio}
 
     \begin{ejercicio}
-        El \textit{espectro finito} de una oración de primer orden $\varphi$ es el conjunto de números naturales $n$
-        tales que $\varphi$ tiene un modelo de tamaño $n$. Halle una oración de primer orden $\varphi$ que tenga a $S$
+        El \textit{espectro finito} de una sentencia de primer orden $\varphi$ es el conjunto de números naturales $n$
+        tales que $\varphi$ tiene un modelo de tamaño $n$. Halle una sentencia de primer orden $\varphi$ que tenga a $S$
         como espectro finito para cada uno de los siguientes conjuntos $S$:
         \begin{enumerate}[label=(\alph*)]
             \item $S$ es el conjunto de los números naturales pares.
@@ -4290,26 +4293,26 @@
 
     \begin{ejercicio}
         Sea $\VV_{gp}$ el vocabulario $\{+,0\}$ donde $+$ es una función binaria y $0$ es una constante. Usamos la
-        notación $x+y$ para denotar el término $+(x,y)$. Considere las siguientes $\VV_{gp}$-oraciones.
+        notación $x+y$ para denotar el término $+(x,y)$. Considere las siguientes $\VV_{gp}$-sentencias.
         \begin{gather*}
             \forall x\forall y\forall z(x+(y+z)=(x+y)+z)\\
             \forall x((x+0=x)\wedge(0+x=x))\\
             \forall x(\exists y(x+y=0)\wedge\exists z(z+x=0)),
         \end{gather*}
-        Sea $\gamma$ la conjunción de estas tres oraciones.
+        Sea $\gamma$ la conjunción de estas tres sentencias.
         \begin{enumerate}[label=(\alph*)]
             \item Muestre que $\gamma$ es satisfacible exhibiendo un modelo.
             \item Muestre que $\gamma$ no es una tautología.
-            \item Sea $\alpha$ la oración $\forall x\forall y((x+y)=(y+x))$. Muestre que $\alpha$ no es consecuencia de
+            \item Sea $\alpha$ la sentencia $\forall x\forall y((x+y)=(y+x))$. Muestre que $\alpha$ no es consecuencia de
             $\gamma$.
-            \item Muestre que $\gamma$ no es equivalente a la conjunción de dos cualesquiera de las tres oraciones
+            \item Muestre que $\gamma$ no es equivalente a la conjunción de dos cualesquiera de las tres sentencias
             anteriores.
         \end{enumerate}
     \end{ejercicio}
 
     \begin{ejercicio}\label{ej:satisfacible-formula-abierta}
-        Una fórmula de primer orden $\varphi(x)$ se dice satisfacible si y solo si la oración $\forall x\varphi(x)$ es
-        satisfacible. Demuestre que una fórmula $\varphi(x)$ es una tautología si y solo si la oración $\exists x\varphi(x)$
+        Una fórmula de primer orden $\varphi(x)$ se dice satisfacible si y solo si la sentencia $\forall x\varphi(x)$ es
+        satisfacible. Demuestre que una fórmula $\varphi(x)$ es una tautología si y solo si la sentencia $\exists x\varphi(x)$
         es una tautología.
     \end{ejercicio}
 
@@ -4331,7 +4334,7 @@
     \begin{ejercicio}
         La conjetura de Goldbach afirma que todo entero par mayor que 2 es la suma de dos números primos. No se sabe si
         esto es verdadero o falso; es una pregunta abierta de la teoría de números. Enuncie la conjetura de Goldbach como
-        una $\VV_{ar}$-oración, donde $\VV_{ar}=\{+,\cdot,0,1\}$.
+        una $\VV_{ar}$-sentencia, donde $\VV_{ar}=\{+,\cdot,0,1\}$.
     \end{ejercicio}
 
     \begin{ejercicio}
@@ -4349,7 +4352,7 @@
 
     \begin{ejercicio}
         Sean $\VV_{ar}$ y $R$ como en el ejercicio anterior. Sea $\VV^{+}=\VV_{ar}\cup\{f\}$ la expansión de $\VV_{ar}$
-        obtenida al agregar una función unaria $f$. Defina una $\VV^{+}$-oración $\zeta$ tal que, para cualquier
+        obtenida al agregar una función unaria $f$. Defina una $\VV^{+}$-sentencia $\zeta$ tal que, para cualquier
         expansión $R^{+}$ de $R$ a una $\VV^{+}$-estructura, $R^{+}\models\zeta$ si y solo si $R^{+}$ interpreta $f$ como
         una función continua.
     \end{ejercicio}
@@ -4395,33 +4398,33 @@
 
     \begin{ejercicio}
         \begin{enumerate}[label=(\alph*)]
-            \item Defina una $\VV_{G}$-oración $\varphi$ tal que $\varphi$ tenga modelos finitos arbitrariamente grandes
+            \item Defina una $\VV_{G}$-sentencia $\varphi$ tal que $\varphi$ tenga modelos finitos arbitrariamente grandes
             y, para cualquier modelo $G$, $G$ sea un grafo conexo.
-            \item Halle un grafo conexo que no modele la oración $\varphi$ que halló en la parte (a).
+            \item Halle un grafo conexo que no modele la sentencia $\varphi$ que halló en la parte (a).
         \end{enumerate}
     \end{ejercicio}
 
     \begin{ejercicio}
         \begin{enumerate}[label=(\alph*)]
-            \item Defina una $\VV_{G}$-oración $\varphi$ tal que $\neg\varphi$ tenga modelos finitos arbitrariamente
+            \item Defina una $\VV_{G}$-sentencia $\varphi$ tal que $\neg\varphi$ tenga modelos finitos arbitrariamente
             grandes, y $G\models\varphi$ para todo grafo conexo $G$.
-            \item Halle un grafo que no sea conexo y que modele la oración $\varphi$ de la parte (a).
+            \item Halle un grafo que no sea conexo y que modele la sentencia $\varphi$ de la parte (a).
         \end{enumerate}
     \end{ejercicio}
 
     \begin{ejercicio}
         \begin{enumerate}[label=(\alph*)]
-            \item Defina una $\VV_{G}$-oración $\varphi$ tal que $\varphi$ tenga modelos finitos arbitrariamente
+            \item Defina una $\VV_{G}$-sentencia $\varphi$ tal que $\varphi$ tenga modelos finitos arbitrariamente
             grandes, y para cualquier modelo finito $G$ de $\varphi$, $|G|$ sea par.
-            \item Halle un grafo finito $G$ tal que $|G|$ sea par y $G$ no modele la oración $\varphi$ de la parte (a).
+            \item Halle un grafo finito $G$ tal que $|G|$ sea par y $G$ no modele la sentencia $\varphi$ de la parte (a).
         \end{enumerate}
     \end{ejercicio}
 
     \begin{ejercicio}
         \begin{enumerate}[label=(\alph*)]
-            \item Defina una $\VV_{G}$-oración $\varphi$ tal que $\neg\varphi$ tenga modelos finitos arbitrariamente
+            \item Defina una $\VV_{G}$-sentencia $\varphi$ tal que $\neg\varphi$ tenga modelos finitos arbitrariamente
             grandes, y tal que, para cualquier grafo finito $G$, si $|G|$ es par, entonces $G\models\varphi$.
-            \item Halle un modelo finito $G$ para la oración $\varphi$ de la parte (a) tal que $|G|$ sea impar.
+            \item Halle un modelo finito $G$ para la sentencia $\varphi$ de la parte (a) tal que $|G|$ sea impar.
         \end{enumerate}
     \end{ejercicio}
 
@@ -4436,9 +4439,9 @@
     \end{ejercicio}
 
     \begin{ejercicio}
-        Muestre que las oraciones $\forall x\exists y\forall z(R(x,y)\wedge R(x,z)\wedge R(y,z))$ y
+        Muestre que las sentencias $\forall x\exists y\forall z(R(x,y)\wedge R(x,z)\wedge R(y,z))$ y
         $\exists x\forall y\exists z(R(x,y)\wedge R(x,z)\wedge R(y,z))$ no son equivalentes, exhibiendo un grafo que modele
-        una pero no ambas de estas oraciones.
+        una pero no ambas de estas sentencias.
     \end{ejercicio}
 
     \begin{ejercicio}
@@ -4455,14 +4458,14 @@
         \end{quote}
 
         \begin{enumerate}[label=(\alph*)]
-            \item Usando cuantificadores de conteo, defina una oración $\varphi_{7}$ tal que $M\models\varphi_{7}$ si y
+            \item Usando cuantificadores de conteo, defina una sentencia $\varphi_{7}$ tal que $M\models\varphi_{7}$ si y
             solo si $|M|>7$.
-            \item Usando cuantificadores de conteo, defina una oración $\varphi_{23}$ tal que $M\models\varphi_{23}$ si
+            \item Usando cuantificadores de conteo, defina una sentencia $\varphi_{23}$ tal que $M\models\varphi_{23}$ si
             y solo si $|M|\leq 23$.
-            \item Usando cuantificadores de conteo, defina una oración $\varphi_{45}$ tal que $M\models\varphi_{45}$ si
+            \item Usando cuantificadores de conteo, defina una sentencia $\varphi_{45}$ tal que $M\models\varphi_{45}$ si
             y solo si $|M|=45$.
-            \item Defina una oración de primer orden $\varphi$ (sin usar cuantificadores de conteo) que sea equivalente
-            a la oración $\exists^{\geq n}x(x=x)$.
+            \item Defina una sentencia de primer orden $\varphi$ (sin usar cuantificadores de conteo) que sea equivalente
+            a la sentencia $\exists^{\geq n}x(x=x)$.
             \item Muestre que toda fórmula que usa cuantificadores de conteo es equivalente a una fórmula que no usa
             cuantificadores de conteo. Concluya que la lógica de primer orden con cuantificadores de conteo tiene el mismo
             poder expresivo que la lógica de primer orden.
@@ -4494,8 +4497,8 @@
     \begin{ejercicio}
         Sea $G$ el Grafo 1 de la Sección 2.4.1.
         \begin{enumerate}[label=(\alph*)]
-            \item ¿Cuántas oraciones hay en el diagrama de $G$?
-            \item Halle una oración $\varphi_{G}$ tal que $H\models\varphi_{G}$ si y solo si $H\cong G$.
+            \item ¿Cuántas sentencias hay en el diagrama de $G$?
+            \item Halle una sentencia $\varphi_{G}$ tal que $H\models\varphi_{G}$ si y solo si $H\cong G$.
         \end{enumerate}
     \end{ejercicio}
 
@@ -4594,17 +4597,17 @@
     \end{ejercicio}
 
     \begin{ejercicio}
-        Halle una $\VV_{<}$-oración $\varphi$ tal que los únicos modelos de $\varphi$ interpreten $<$ como un orden
+        Halle una $\VV_{<}$-sentencia $\varphi$ tal que los únicos modelos de $\varphi$ interpreten $<$ como un orden
         lineal denso. Muestre que $\varphi$ solo tiene modelos infinitos.
     \end{ejercicio}
 
     \begin{ejercicio}
-        Sea $\VV_{f}$ el vocabulario que consiste en una única función unaria $f$. Halle una $\VV_{f}$-oración que
+        Sea $\VV_{f}$ el vocabulario que consiste en una única función unaria $f$. Halle una $\VV_{f}$-sentencia que
         tenga solo modelos infinitos.
     \end{ejercicio}
 
     \begin{ejercicio}
-        Halle un conjunto de oraciones que tenga solo modelos no contables.
+        Halle un conjunto de sentencias que tenga solo modelos no contables.
     \end{ejercicio}
 
     \begin{ejercicio}
@@ -4652,3 +4655,4 @@
     \end{ejercicio}
 
 \end{document}
+\message{ !name(main.tex) !offset(-4658) }

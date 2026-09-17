@@ -12,8 +12,8 @@
 \contentsline {section}{\numberline {1.8}Resolución}{38}{section.1.8}%
 \contentsline {subsection}{\numberline {1.8.1}Cláusulas}{39}{subsection.1.8.1}%
 \contentsline {subsection}{\numberline {1.8.2}Resolventes}{40}{subsection.1.8.2}%
-\contentsline {subsection}{\numberline {1.8.3}Completitud de la resolución}{42}{subsection.1.8.3}%
-\contentsline {section}{\numberline {1.9}Completitud y compacidad}{46}{section.1.9}%
+\contentsline {subsection}{\numberline {1.8.3}Completud de la resolución}{42}{subsection.1.8.3}%
+\contentsline {section}{\numberline {1.9}Completud y compacidad}{46}{section.1.9}%
 \contentsline {chapter}{\numberline {2}Estructuras y lógica de primer orden}{55}{chapter.2}%
 \contentsline {section}{\numberline {2.1}El lenguaje de la lógica de primer orden}{55}{section.2.1}%
 \contentsline {section}{\numberline {2.2}La sintaxis de la lógica de primer orden}{56}{section.2.2}%

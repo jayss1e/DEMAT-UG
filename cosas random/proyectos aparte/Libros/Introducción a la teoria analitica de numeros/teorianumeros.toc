@@ -3,3 +3,53 @@
 \contentsline {section}{\numberline {1.1}INTRODUCCIÓN}{3}{section.1.1}%
 \contentsline {section}{\numberline {1.2}DIVISIBILIDAD}{4}{section.1.2}%
 \contentsline {section}{\numberline {1.3}MÁXIMO COMÚN DIVISOR}{5}{section.1.3}%
+\contentsline {section}{\numberline {1.4}NÚMEROS PRIMOS}{6}{section.1.4}%
+\contentsline {section}{\numberline {1.5}EL TEOREMA FUNDAMENTAL DE LA ARITMÉTICA}{8}{section.1.5}%
+\contentsline {section}{\numberline {1.6}LA SERIE DE LOS INVERSOS DE LOS PRIMOS}{9}{section.1.6}%
+\contentsline {section}{\numberline {1.7}EL ALGORITMO DE EUCLIDES}{10}{section.1.7}%
+\contentsline {section}{\numberline {1.8}EL MÁXIMO COMÚN DIVISOR DE MÁS DE DOS NÚMEROS}{11}{section.1.8}%
+\contentsline {chapter}{\numberline {2}Funciones aritméticas y producto de Dirichlet}{15}{chapter.2}%
+\contentsline {section}{\numberline {2.1}INTRODUCCIÓN}{15}{section.2.1}%
+\contentsline {section}{\numberline {2.2}LA FUNCIÓN DE MÖBIUS $\mu (n)$}{15}{section.2.2}%
+\contentsline {section}{\numberline {2.3}LA FUNCIÓN INDICATRIZ DE EULER $\varphi (n)$}{16}{section.2.3}%
+\contentsline {section}{\numberline {2.4}UNA RELACIÓN QUE CONECTA $\varphi $ Y $\mu $}{17}{section.2.4}%
+\contentsline {section}{\numberline {2.5}UNA FÓRMULA PRODUCTO PARA $\varphi (n)$}{18}{section.2.5}%
+\contentsline {section}{\numberline {2.6}EL PRODUCTO DE DIRICHLET DE FUNCIONES ARITMÉTICAS}{20}{section.2.6}%
+\contentsline {section}{\numberline {2.7}INVERSOS DE DIRICHLET Y FÓRMULA DE INVERSIÓN DE MÖBIUS}{22}{section.2.7}%
+\contentsline {section}{\numberline {2.8}LA FUNCIÓN DE MANGOLDT $\Lambda (n)$}{24}{section.2.8}%
+\contentsline {section}{\numberline {2.9}FUNCIONES MULTIPLICATIVAS}{25}{section.2.9}%
+\contentsline {section}{\numberline {2.10}FUNCIONES MULTIPLICATIVAS Y PRODUCTO DE DIRICHLET}{27}{section.2.10}%
+\contentsline {section}{\numberline {2.11}LA INVERSA DE UNA FUNCIÓN COMPLETAMENTE MULTIPLICATIVA}{29}{section.2.11}%
+\contentsline {section}{\numberline {2.12}LA FUNCIÓN $\lambda (n)$ DE LIOUVILLE}{30}{section.2.12}%
+\contentsline {section}{\numberline {2.13}LAS FUNCIONES DIVISOR $\sigma _\alpha (n)$}{31}{section.2.13}%
+\contentsline {section}{\numberline {2.14}CONVOLUCIONES GENERALIZADAS}{32}{section.2.14}%
+\contentsline {section}{\numberline {2.15}SERIES FORMALES DE POTENCIAS}{34}{section.2.15}%
+\contentsline {section}{\numberline {2.16}LA SERIE DE BELL DE UNA FUNCIÓN ARITMÉTICA}{36}{section.2.16}%
+\contentsline {section}{\numberline {2.17}SERIES DE BELL Y PRODUCTO DE DIRICHLET}{37}{section.2.17}%
+\contentsline {section}{\numberline {2.18}DERIVADAS DE FUNCIONES ARITMÉTICAS}{38}{section.2.18}%
+\contentsline {section}{\numberline {2.19}LA IDENTIDAD DE SELBERG}{40}{section.2.19}%
+\contentsline {chapter}{\numberline {3}Medias de funciones aritméticas}{47}{chapter.3}%
+\contentsline {section}{\numberline {3.1}INTRODUCCIÓN}{47}{section.3.1}%
+\contentsline {section}{\numberline {3.2}LA NOTACIÓN $O$ MAYÚSCULA. IGUALDAD ASINTÓTICA DE FUNCIONES}{48}{section.3.2}%
+\contentsline {section}{\numberline {3.3}FÓRMULA DE SUMACIÓN DE EULER}{49}{section.3.3}%
+\contentsline {section}{\numberline {3.4}ALGUNAS FÓRMULAS ASINTÓTICAS ELEMENTALES}{50}{section.3.4}%
+\contentsline {section}{\numberline {3.5}EL ORDEN MEDIO DE $d(n)$}{52}{section.3.5}%
+\contentsline {section}{\numberline {3.6}EL ORDEN MEDIO DE LAS FUNCIONES DIVISOR $\sigma _\alpha (n)$}{54}{section.3.6}%
+\contentsline {section}{\numberline {3.7}EL ORDEN MEDIO DE $\varphi (n)$}{56}{section.3.7}%
+\contentsline {section}{\numberline {3.8}UNA APLICACIÓN A LA DISTRIBUCIÓN DE LOS PUNTOS RETICULARES VISIBLES DESDE EL ORIGEN}{57}{section.3.8}%
+\contentsline {section}{\numberline {3.9}EL ORDEN DE $\mu (n)$ Y EL DE $\Lambda (n)$}{59}{section.3.9}%
+\contentsline {section}{\numberline {3.10}LAS SUMAS PARCIALES DE UN PRODUCTO DE DIRICHLET}{60}{section.3.10}%
+\contentsline {section}{\numberline {3.11}APLICACIONES A $\mu (n)$ Y A $\Lambda (n)$}{61}{section.3.11}%
+\contentsline {section}{\numberline {3.12}OTRA IDENTIDAD PARA LAS SUMAS PARCIALES}{64}{section.3.12}%
+\contentsline {chapter}{\numberline {4}Teoremas elementales sobre los primos}{71}{chapter.4}%
+\contentsline {section}{\numberline {4.1}INTRODUCCIÓN}{71}{section.4.1}%
+\contentsline {section}{\numberline {4.2}LAS FUNCIONES DE CHEBYSHEV $\psi (x)$ Y $\vartheta (x)$}{72}{section.4.2}%
+\contentsline {section}{\numberline {4.3}RELACIONES QUE LIGAN $\vartheta (x)$ Y $\pi (x)$}{73}{section.4.3}%
+\contentsline {section}{\numberline {4.4}CIERTAS FORMAS EQUIVALENTES DEL TEOREMA DEL NÚMERO PRIMO}{76}{section.4.4}%
+\contentsline {section}{\numberline {4.5}DESIGUALDADES RELATIVAS A $\pi (n)$ Y A $p_n$}{78}{section.4.5}%
+\contentsline {section}{\numberline {4.6}TEOREMA TAUBERIANO DE SHAPIRO}{82}{section.4.6}%
+\contentsline {section}{\numberline {4.7}APLICACIONES DEL TEOREMA DE SHAPIRO}{84}{section.4.7}%
+\contentsline {section}{\numberline {4.8}UNA FÓRMULA ASINTÓTICA PARA $\DOTSB \sum@ \slimits@ (1/p)$}{86}{section.4.8}%
+\contentsline {section}{\numberline {4.9}LAS SUMAS PARCIALES DE LA FUNCIÓN DE MÖBIUS}{87}{section.4.9}%
+\contentsline {section}{\numberline {4.10}BREVE ESBOZO DE UNA DEMOSTRACIÓN ELEMENTAL DEL TEOREMA DEL NÚMERO PRIMO}{92}{section.4.10}%
+\contentsline {section}{\numberline {4.11}FÓRMULA ASINTÓTICA DE SELBERG}{93}{section.4.11}%
