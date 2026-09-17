@@ -1,0 +1,83 @@
+\documentclass[12pt,a4paper]{article}
+\raggedbottom
+
+\usepackage{ugmath}
+\usepackage{float}
+\usepackage{placeins}
+\usepackage[labelfont=bf,labelsep=space]{caption}
+\usepackage{pdfpages}
+\usepackage{tikz-cd}
+\usepackage{amsthm}
+\renewcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\llaves}[1]{\{#1\}}
+\newcommand{\parentesis}[1]{\left(#1\right)}
+\newcommand{\corchetes}[1]{\left[#1\right]}
+\newcommand{\llavesgrande}[1]{\big\{#1\big\}}
+\newcommand{\llavesgrandes}[1]{\left\{#1\right\}}
+
+
+\begin{document}
+        
+    \thispagestyle{empty}
+    \includepdf[pages=1]{main.pdf}
+
+    \begin{problema}
+        Si
+        \begin{equation*}
+            \begin{vmatrix}
+                -3a_{11} & -6a_{13} & -3a_{12}\\
+                a_{21} & 2a_{23} & a_{22}\\
+                5a_{31} & 10a_{33} & 5a_{32}
+            \end{vmatrix}
+            =-15.
+        \end{equation*}
+        ¿Cuánto vale
+        \begin{equation*}
+            \begin{vmatrix}
+                a_{11} & a_{12} & a_{13}\\
+                a_{21} & a_{22} & a_{23}\\
+                a_{31} & a_{32} & a_{33}
+            \end{vmatrix}
+            ?
+        \end{equation*}
+    \end{problema}
+
+    \begin{problema}
+        Una matriz $A\in M_{n\times n}(K)$ se llama ortogonal si $A^{-1}=A^{t}$. Demuestra que para $A$ ortogonal entonces $\det(A)=\pm1$.
+    \end{problema}
+
+    \begin{problema}
+        Sea $A\in M_{n\times n}(K)$ una matriz cuya suma de todos los elementos de cada columna es igual a cero, entonces demuestra que $\det(A)=0$.
+    \end{problema}
+
+    \begin{problema}
+        Una matriz cuadrada $B\in M_{n\times n}$ se llama antisimetrica si $B^{t}=B^{-1}$. Demuestra que si $B\in M_{n\times n}$ es antisimétrica y $n$ par, entonces $\det(B)=0$.
+    \end{problema}
+
+    \begin{problema}
+        Encuentra la adjunta clásica de
+        \begin{equation*}
+            A=
+            \begin{pmatrix}
+                a_{11} & a_{12}\\
+                a_{21} & a_{22}
+            \end{pmatrix}
+            \qquad
+            B=
+            \begin{pmatrix}
+                3 & 6 & 7\\
+                0 & 4 & 8\\
+                0 & 0 & 5
+            \end{pmatrix}.
+        \end{equation*}
+    \end{problema}
+
+    \begin{problema}
+        Demuestra que para cualquier $A\in M_{n\times n}(K)$, $\det(\adj(A))=[\det(A)]^{n-1}$.
+    \end{problema}
+
+    \begin{problema}
+        Demuestra que si $A\in M_{n\times n}(K)$ es triangular superior entonces $\adj(A)$ también es triangular superior, concluye de esta forma que $A^{-1}$ es triangular superior.
+    \end{problema}
+
+\end{document}
