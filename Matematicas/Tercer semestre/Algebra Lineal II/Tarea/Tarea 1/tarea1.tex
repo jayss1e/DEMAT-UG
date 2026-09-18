@@ -42,17 +42,119 @@
         \end{equation*}
     \end{problema}
 
+    \begin{solucion}
+        Sea
+        \begin{equation*}
+            A=
+            \begin{pmatrix}
+                a_{11} & a_{12} & a_{13}\\
+                a_{21} & a_{22} & a_{23}\\
+                a_{31} & a_{32} & a_{33}
+            \end{pmatrix}
+        \end{equation*}
+        Primero, observemos que cada fila de la matriz del enunciado es un múltiplo de la fila correspondiente de $A$, la primera fila está multiplicada por -3, la segunda por 1 y la tercera por 5. Además, la columna que contiene a $a_{13}$, $a_{23}$, $a_{33}$ aparece sin modificar en la tercera posición. Es decir, la matriz del enunciado se obtiene de $A$ multiplicando las filas por -3, 1, 5 respectivamente, multiplicando la tercera columna por 2, y luego intercambiando las columnas segunda y tercera. Como multiplicar una fila de una matriz por una constante $c$, multiplica el determinante por $c$, y como intercambiar dos columnas multiplica el determinante por -1, se sigue que
+        \begin{equation*}
+            -15=(-3)(1)(5)\cdot(2)\cdot(-1)\cdot\det(A)=30\det(A).
+        \end{equation*}
+        Despejando,
+        \begin{equation*}
+            \det(A)=-\frac{15}{30}=-\frac{1}{2}.
+        \end{equation*}
+        Así,
+        \begin{equation*}
+            \det(A)=-\frac{1}{2}.
+        \end{equation*}
+    \end{solucion}
+
     \begin{problema}
         Una matriz $A\in M_{n\times n}(K)$ se llama ortogonal si $A^{-1}=A^{t}$. Demuestra que para $A$ ortogonal entonces $\det(A)=\pm1$.
     \end{problema}
+
+    \begin{proof}
+        Si $A^{-1}=A$, entonces multiplicando ambos lados por $A$, obtenemos
+        \begin{equation*}
+            A^{t}A=I.
+        \end{equation*}
+        Tomamos el determinante en ambos lados de esta igualdad
+        \begin{equation*}
+            \det(A^{t}A)=\det(I)=1.
+        \end{equation*}
+        Como el determinante separa producto y como $\det(A)=\det(A^{t})$, se sigue que, 
+        \begin{equation*}
+            \det(A^{t}A)=\det(A^{t})\det(A)=\det(A)\cdot\det(A)=[\det(A)]^{2}.
+        \end{equation*}
+        Por tanto,
+        \begin{equation*}
+            [\det(A)]^{2}=1.
+        \end{equation*}
+        Esta es una ecuación en $K$, cuyas soluciones son
+        \begin{equation*}
+            \det(A)=1\quad\text{ o }\quad\det(A)=-1.
+        \end{equation*}
+        Así, $\det(A)=\pm1$.
+    \end{proof}
 
     \begin{problema}
         Sea $A\in M_{n\times n}(K)$ una matriz cuya suma de todos los elementos de cada columna es igual a cero, entonces demuestra que $\det(A)=0$.
     \end{problema}
 
+    \begin{proof}
+        Denotemos por $F_{1},F_{2},\dots,F_{n}$ las filas de $A$. La hipótesis nos dice que, para cada columna $j$,
+        \begin{equation*}
+            a_{1j}+a_{2j}+\cdots+a_{nj}=0.
+        \end{equation*}
+        Consideremos la suma de todas las fila de $A$
+        \begin{equation*}
+            F_{1}+F_{2}+\cdots+F_{n}.
+        \end{equation*}
+        La entrada en la posición $j$ de este vector suma es precisamente
+        \begin{equation*}
+            a_{1j}+a_{2j}+\cdots+a_{nj},
+        \end{equation*}
+        que por hipótesis vale 0 parea cada $j=1,\dots,n$. Como esto ocurre para todas las columnas, concluimos que
+        \begin{equation*}
+            F_{1}+F_{2}+\cdots+F_{n}=0,
+        \end{equation*}
+        es decir, el vector fila cero. Esto significa que las filas de $A$ son linealmente dependientes. Como un determinante es cero si y solo si las filas de la matriz son linealmente dependientes, concluimos que
+        \begin{equation*}
+            \det(A)=0.
+        \end{equation*}
+    \end{proof}
+
+    \vspace{2cm}
+
     \begin{problema}
-        Una matriz cuadrada $B\in M_{n\times n}$ se llama antisimetrica si $B^{t}=B^{-1}$. Demuestra que si $B\in M_{n\times n}$ es antisimétrica y $n$ par, entonces $\det(B)=0$.
+        Una matriz cuadrada $B\in M_{n\times n}$ se llama antisimetrica si $B^{t}=-B$. Demuestra que si $B\in M_{n\times n}$ es antisimétrica y $n$ par, entonces $\det(B)=0$.
     \end{problema}
+
+    \begin{proof}
+        si $n=2$, tomemos
+        \begin{equation*}
+            B=
+            \begin{pmatrix}
+                0 & 1\\
+                -1 & 0
+            \end{pmatrix}
+        \end{equation*}
+        y tambien
+        \begin{equation*}
+            B^{t}=
+            \begin{pmatrix}
+                0 & -1\\
+                1 & 0
+            \end{pmatrix}
+            \quad\text{ y }\quad
+            B^{-1}=
+            \begin{pmatrix}
+                0 & -1\\
+                1 & 0
+            \end{pmatrix}
+        \end{equation*}
+        Así, $B$ es antisimetrica, pero
+        \begin{equation*}
+            \det(B)=0\cdot0-1\cdot(-1)=1\neq0.
+        \end{equation*}
+    \end{proof}
 
     \begin{problema}
         Encuentra la adjunta clásica de
@@ -71,6 +173,115 @@
             \end{pmatrix}.
         \end{equation*}
     \end{problema}
+
+    \begin{solucion}
+        Sea
+        \begin{equation*}
+            A=
+            \begin{pmatrix}
+                a_{11} & a_{12}\\
+                a_{21} & a_{22}
+            \end{pmatrix}
+        \end{equation*}.
+        Los cofactores son
+        \begin{equation*}
+            C_{11}=a_{22},\qquad C_{12}=-a_{21},\qquad C_{21}=-a_{12},\qquad C_{22}=a_{11}.
+        \end{equation*} 
+        La matriz de cofactores es
+        \begin{equation*}
+            \begin{pmatrix}
+                a_{22} & -a_{21}\\
+                -a_{12} & a_{11}
+            \end{pmatrix},
+        \end{equation*}
+        y al transponerla obtenemos
+        \begin{equation*}
+            \adj(A)=
+            \begin{pmatrix}
+                a_{22} & -a_{12}\\
+                -a_{21} & a_{11}
+            \end{pmatrix}.
+        \end{equation*}
+        Sea
+        \begin{equation*}
+            B=
+            \begin{pmatrix}
+                3 & 6 & 7\\
+                0 & 4 & 8\\
+                0 & 0 & 5
+            \end{pmatrix}.
+        \end{equation*}
+        Calculamos los nueve cofactores.
+        \begin{gather*}
+            C_{11}=
+            \begin{vmatrix}
+                4 & 8\\
+                0 & 5
+            \end{vmatrix}
+            =20, \qquad C_{12}=
+            -\begin{vmatrix}
+                0 & 8\\
+                0 & 5
+            \end{vmatrix}
+            =0,\qquad C_{13}=
+            \begin{vmatrix}
+                0 & 4\\
+                0 & 0
+            \end{vmatrix}
+            =0,
+            \\
+            C_{21}=
+            -\begin{vmatrix}
+                6 & 7\\
+                0 & 5
+            \end{vmatrix}
+            =-30,\qquad C_{22}=
+            \begin{vmatrix}
+                3 & 7\\
+                0 & 5
+            \end{vmatrix}
+            =15,\qquad C_{23}=
+            -\begin{vmatrix}
+                3 & 6\\
+                0 & 0
+            \end{vmatrix}
+            =0,
+            \\
+            C_{31}=
+            \begin{vmatrix}
+                6 & 7\\
+                4 & 8
+            \end{vmatrix}
+            =48-28=20,\qquad C_{32}=
+            -\begin{vmatrix}
+                3 & 7\\
+                0 & 8
+            \end{vmatrix}
+            =-24,\qquad C_{33}=
+            \begin{vmatrix}
+                3 & 6\\
+                0 & 4
+            \end{vmatrix}
+            =12.
+        \end{gather*}
+        La matriz de cofactores es
+        \begin{equation*}
+            \begin{pmatrix}
+                20 & 0 & 0\\
+                -30 & 15 & 0\\
+                20 & -24 & 12
+            \end{pmatrix},
+        \end{equation*}
+        y transponiéndola obtenemos la adjunta clásica
+        \begin{equation*}
+            \adj(B)=
+            \begin{pmatrix}
+                20 & -30 & 20\\
+                0 & 15 & -24\\
+                0 & 0 & 12
+            \end{pmatrix}
+        \end{equation*}
+    \end{solucion}
 
     \begin{problema}
         Demuestra que para cualquier $A\in M_{n\times n}(K)$, $\det(\adj(A))=[\det(A)]^{n-1}$.
