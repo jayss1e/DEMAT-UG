@@ -280,16 +280,24 @@
   \end{mdframed}
 }
 
+% ─── Protección contra encabezados huérfanos ────────────────────────
+% Si no cabe el encabezado más algo de contenido antes del fin de
+% página, se fuerza el salto antes del encabezado (en vez de dejarlo
+% solo al final de la hoja).
+\newcommand{\avoidorphan}[1]{\ifdim\dimexpr\pagegoal-\pagetotal\relax<#1\baselineskip \newpage \fi}
+
 % ─── Contador de ejemplos ──────────────────────────────────────────
 \newcounter{ejemplo}[chapter]
 \renewcommand{\theejemplo}{\thechapter.\arabic{ejemplo}}
 
 % ─── Entorno ejemplo ───────────────────────────────────────────────
 \newenvironment{ejemplo}{%
+  \par
+  \avoidorphan{3}%
   \refstepcounter{ejemplo}%
-  \par\medskip
-  \noindent\textbf{Ejemplo \theejemplo}%
-  \par\smallskip
+  \medskip
+  \noindent\textbf{Ejemplo \theejemplo}\nobreak
+  \par\nobreak\smallskip\nobreak
 }{%
   \hfill$\blacktriangle$\par\medskip
 }
@@ -300,9 +308,11 @@
 
 % ─── Entorno ejercicio ─────────────────────────────────────────────
 \newenvironment{ejercicio}{%
+  \par
+  \avoidorphan{3}%
   \refstepcounter{ejercicio}%
-  \par\medskip
-  \noindent\textbf{Ejercicio \theejercicio}\space\ignorespaces
+  \medskip
+  \noindent\textbf{Ejercicio \theejercicio}\nobreak\space\ignorespaces
 }{%
   \par\medskip
 }

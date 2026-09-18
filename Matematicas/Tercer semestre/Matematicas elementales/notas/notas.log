@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.9.13)  14 SEP 2026 17:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.9.16)  17 SEP 2026 15:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1320,13 +1320,13 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 ))
-<portada-matematicas-elementales.pdf, id=167, 597.50786pt x 845.04686pt>
+<portada-matematicas-elementales.pdf, id=171, 597.50786pt x 845.04686pt>
 File: portada-matematicas-elementales.pdf Graphic file (type pdf)
 <use portada-matematicas-elementales.pdf>
 Package pdftex.def Info: portada-matematicas-elementales.pdf  used on input lin
 e 23.
 (pdftex.def)             Requested size: 597.5064pt x 845.0448pt.
-<portada-matematicas-elementales.pdf, id=169, page=1, 597.50786pt x 845.04686pt
+<portada-matematicas-elementales.pdf, id=173, page=1, 597.50786pt x 845.04686pt
 >
 File: portada-matematicas-elementales.pdf Graphic file (type pdf)
 <use portada-matematicas-elementales.pdf, page 1>
@@ -2248,9 +2248,111 @@ Package mdframed Info: mdframed detected package amsthm
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 1043.
-LaTeX Info: Redefining \. on input line 1045.
-LaTeX Info: Redefining \% on input line 1045.
-[35] (./notas.aux
+
+pdfTeX warning (ext4): destination with the same identifier (name{lema.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1045     \begin{lema}[Transitividad del orden]
+                                                
+Package mdframed Info: mdframed works in twoside mode on input line 1045.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1045.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1048.
+LaTeX Info: Redefining \. on input line 1055.
+LaTeX Info: Redefining \% on input line 1055.
+ [35]
+Package mdframed Info: mdframed works in twoside mode on input line 1058.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1058.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1060.
+Package mdframed Info: mdframed works in twoside mode on input line 1070.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1070.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1072.
+
+pdfTeX warning (ext4): destination with the same identifier (name{teor.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1087     \begin{teorema}[Tricotomía de $\N$]
+                                               
+Package mdframed Info: mdframed works in twoside mode on input line 1087.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1087.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1093.
+LaTeX Info: Redefining \. on input line 1100.
+LaTeX Info: Redefining \% on input line 1100.
+ [36]
+pdfTeX warning (ext4): destination with the same identifier (name{defn.4}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1130     \begin{definicion}[Elemento mínimo]
+                                               
+Package mdframed Info: mdframed works in twoside mode on input line 1130.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1130.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1132.
+Package mdframed Info: mdframed works in twoside mode on input line 1134.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1134.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1137.
+LaTeX Info: Redefining \. on input line 1140.
+LaTeX Info: Redefining \% on input line 1140.
+ [37]
+Package mdframed Info: mdframed works in twoside mode on input line 1142.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1142.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1145.
+Package mdframed Info: mdframed works in twoside mode on input line 1148.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1148.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1150.
+
+pdfTeX warning (ext4): destination with the same identifier (name{teor.2}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1156         \label
+                     {thm:equivalencia-buen-orden-pi}
+Package mdframed Info: mdframed works in twoside mode on input line 1156.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1156.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1158.
+LaTeX Info: Redefining \. on input line 1176.
+LaTeX Info: Redefining \% on input line 1176.
+ [38]
+LaTeX Info: Redefining \. on input line 1178.
+LaTeX Info: Redefining \% on input line 1178.
+ [39] (./notas.aux
 LaTeX Info: Redefining \. on input line 12.
 LaTeX Info: Redefining \% on input line 12.
 )
@@ -2259,13 +2361,13 @@ LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
 Package rerunfilecheck Info: File `notas.out' has not changed.
-(rerunfilecheck)             Checksum: 8F009D7FD82007BE8334D237AC564DA5;6314.
+(rerunfilecheck)             Checksum: AAF60D5CF6F96EC41DC19A1CA3489F83;6429.
  ) 
 Here is how much of TeX's memory you used:
- 41524 strings out of 467525
- 926822 string characters out of 5425861
- 1470157 words of memory out of 5000000
- 69571 multiletter control sequences out of 15000+600000
+ 41575 strings out of 467525
+ 927730 string characters out of 5425861
+ 1471023 words of memory out of 5000000
+ 69612 multiletter control sequences out of 15000+600000
  689593 words of font info for 85 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,17n,108p,747b,1221s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2280,10 +2382,10 @@ fb></usr/share/texmf-dist/fonts/type1/public/lm/lmro12.pfb></usr/share/texmf-di
 st/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/l
 m/lmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.p
 fb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on notas.pdf (37 pages, 379511 bytes).
+Output written on notas.pdf (41 pages, 391215 bytes).
 PDF statistics:
- 551 PDF objects out of 1000 (max. 8388607)
- 457 compressed objects within 5 object streams
- 133 named destinations out of 1000 (max. 500000)
- 396 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 585 PDF objects out of 1000 (max. 8388607)
+ 487 compressed objects within 5 object streams
+ 143 named destinations out of 1000 (max. 500000)
+ 404 words of extra memory for PDF output out of 10000 (max. 10000000)
 

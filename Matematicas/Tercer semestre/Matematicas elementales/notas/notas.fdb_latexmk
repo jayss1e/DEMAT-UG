@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1789430016.28658 "notas.tex" "notas.pdf" "notas" 1789430019.13458 0
+["pdflatex"] 1789682126.33289 "notas.tex" "notas.pdf" "notas" 1789682129.1958 0
   "/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1775415801 2375 baa924870cfb487815765f9094cf3728 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc" 1775415801 3486 c7eadf5dcc57b3b2d11736679f6636ba ""
   "/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1775415801 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
@@ -288,14 +288,14 @@
   "/usr/share/texmf-dist/tex/latex/zref/zref-abspage.sty" 1775415801 2269 2de6c7a5fd634dfef00a960544463a38 ""
   "/usr/share/texmf-dist/tex/latex/zref/zref-base.sty" 1775415801 20785 198a9cb2e04238d92c320d0d9edbd76a ""
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1775415801 43569 fd570f2fa160877d211e859f687312ba ""
-  "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1789335743 5541339 b32eb00eb34cd5c925a7827d916d9dbd ""
-  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1789335618 3765592 285fa6337e88c6a5f5b64d82513205e3 ""
-  "notas.aux" 1789430018.95098 13145 0cbe043ac717292b631f84f51d58c02b "pdflatex"
-  "notas.out" 1789430018.95398 6314 8f009d7fd82007be8334d237ac564da5 "pdflatex"
-  "notas.tex" 1789429986.48424 49836 e99ab3bbf46fdf071ee5037918067ff8 ""
-  "notas.toc" 1789430018.95529 2990 6e54f74d02ef595f5e049b74a26ed022 "pdflatex"
-  "portada-matematicas-elementales.pdf" 1789336550.22146 52314 b2376ed4dad9764389ac4d2113b7e5ea ""
-  "ugmath_notas.sty" 1789336550.22146 13633 bbd73f8b3910b55d4729a1b7487ef18c ""
+  "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1789592106 5541339 b32eb00eb34cd5c925a7827d916d9dbd ""
+  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1789592027 3765588 fd3a81841918e52034f2864e7b1d7d9c ""
+  "notas.aux" 1789682129.02028 14930 e958c72aaf2477e2886887d015b36f7f "pdflatex"
+  "notas.out" 1789682129.02228 6429 aaf60d5cf6f96ec41dc19a1ca3489f83 "pdflatex"
+  "notas.tex" 1789682118.06831 58377 b63e924f9027891523769c3237e1c39a ""
+  "notas.toc" 1789682129.02328 3071 846f39a0538c41ed2320dc3b48543698 "pdflatex"
+  "portada-matematicas-elementales.pdf" 1789584944.21002 52314 b2376ed4dad9764389ac4d2113b7e5ea ""
+  "ugmath_notas.sty" 1789584944.21022 13633 bbd73f8b3910b55d4729a1b7487ef18c ""
   (generated)
   "notas.aux"
   "notas.log"

@@ -1039,7 +1039,140 @@
         \begin{equation*}
             n+k=m.
         \end{equation*}
-        Escribiremos $n \le m$ si $n<m$ o $n=m$.
+        Escribiremos $n \le m$ si $n<m$ o $n=m$. Escribiremos $n>m$ si $m<n$, y $n\ge m$ si $m\le n$.
     \end{definicion}
+
+    \begin{lema}[Transitividad del orden]
+        \label{lem:orden-transitivo}
+        Sean $n,m,l\in\N$ tales que $n<m$ y $m<l$. Entonces $n<l$.
+    \end{lema}
+    \begin{proof}
+        Como $n<m$ y $m<l$, existen $k_1,k_2\in\N$ tales que $n+k_1=m$ y $m+k_2=l$. Entonces
+        \begin{equation*}
+            l = m+k_2 = (n+k_1)+k_2 = n+(k_1+k_2),
+        \end{equation*}
+        así que $n<l$.
+    \end{proof}
+
+    \begin{lema}
+        \label{lem:sucesor-distinto}
+        Para todo $m\in\N$, $m\neq\sigma(m)$.
+    \end{lema}
+    \begin{proof}
+        Sea $S=\{m\in\N : m\neq\sigma(m)\}$. Si $1=\sigma(1)$, esto contradice el axioma (3) de Peano (según el cual $\sigma(n)\neq1$ para todo $n\in\N$); por tanto $1\neq\sigma(1)$, es decir, $1\in S$.
+
+        Supongamos que $m\in S$, es decir, $m\neq\sigma(m)$. Si $\sigma(m)=\sigma(\sigma(m))$, por la inyectividad de $\sigma$ se tendría $m=\sigma(m)$, lo cual contradice que $m\in S$. Por tanto $\sigma(m)\neq\sigma(\sigma(m))$, es decir, $\sigma(m)\in S$.
+
+        Por el principio de inducción, $S=\N$.
+    \end{proof}
+
+    \begin{lema}
+        \label{lem:no-autosuma}
+        Para todos $m,k\in\N$ se tiene que $m\neq m+k$.
+    \end{lema}
+    \begin{proof}
+        Sea $S=\{m\in\N : \forall k\in\N,\ m\neq m+k\}$.
+
+        Veamos que $1\in S$. Probemos primero, por inducción sobre $k$, que $1+k\in\operatorname{Im}(\sigma)$ para todo $k\in\N$: si $k=1$, $1+1=\sigma(1)\in\operatorname{Im}(\sigma)$; si $1+k\in\operatorname{Im}(\sigma)$, entonces $1+\sigma(k)=\sigma(1+k)\in\operatorname{Im}(\sigma)$. Como $\operatorname{Im}(\sigma)=\N\setminus\{1\}$ por el axioma (3), se tiene $1\notin\operatorname{Im}(\sigma)$, y por tanto $1+k\neq1$ para todo $k\in\N$. Así, $1\in S$.
+
+        Supongamos que $m\in S$, es decir, $m\neq m+k$ para todo $k\in\N$; probemos que $\sigma(m)\in S$. Sea $k\in\N$ y supongamos, por contradicción, que $\sigma(m)=\sigma(m)+k$. Por la conmutatividad y la definición de la suma,
+        \begin{equation*}
+            \sigma(m)+k = k+\sigma(m) = \sigma(k+m) = \sigma(m+k),
+        \end{equation*}
+        así que $\sigma(m)=\sigma(m+k)$. Por la inyectividad de $\sigma$, $m=m+k$, lo cual contradice que $m\in S$. Por tanto $\sigma(m)\neq\sigma(m)+k$ para todo $k\in\N$, es decir, $\sigma(m)\in S$.
+
+        Por el principio de inducción, $S=\N$.
+    \end{proof}
+
+    \begin{teorema}[Tricotomía de $\N$]
+        \label{thm:tricotomia}
+        Dados $n,m\in\N$, se cumple una y sólo una de las siguientes condiciones:
+        \begin{equation*}
+            n<m, \qquad n=m, \qquad n>m.
+        \end{equation*}
+    \end{teorema}
+    \begin{proof}
+        Primero probamos que dos cualesquiera de las tres condiciones no pueden darse simultáneamente. Sean $n,m\in\N$.
+
+        Si $n<m$, existe $k\in\N$ tal que $n+k=m$; por el Lema \ref{lem:no-autosuma}, $n\neq m$. Si además $n>m$, existe $l\in\N$ tal que $m+l=n$, y entonces
+        \begin{equation*}
+            n = m+l = (n+k)+l = n+(k+l),
+        \end{equation*}
+        lo cual contradice el Lema \ref{lem:no-autosuma}. Por tanto $n<m$ excluye tanto $n=m$ como $n>m$.
+
+        Si $n=m$, por el Lema \ref{lem:no-autosuma} no puede darse $n<m$ (pues implicaría $n\neq n$) ni $n>m$ (por el mismo motivo).
+
+        Si $n>m$, el argumento es análogo al primer caso.
+
+        Ahora probamos que al menos una de las tres condiciones se cumple. Sea $n\in\N$ y definamos
+        \begin{equation*}
+            S_n = \{m\in\N : n<m \text{ ó } n=m \text{ ó } n>m\}.
+        \end{equation*}
+        Basta probar, por inducción sobre $m$, que $S_n=\N$ para todo $n\in\N$.
+
+        \emph{Base.} Si $n=1$, entonces $1=n$, así que $1\in S_1$. Si $n\neq1$, existe $k\in\N$ tal que $\sigma(k)=n$, es decir, $k+1=n$, así que $1<n$. En cualquier caso, $1\in S_n$.
+
+        \emph{Paso inductivo.} Supongamos que $m\in S_n$, es decir, $n<m$, $n=m$ o $n>m$; probemos que $\sigma(m)\in S_n$.
+        \begin{itemize}
+            \item Si $n<m$, existe $k\in\N$ tal que $n+k=m$. Entonces $n+\sigma(k)=\sigma(n+k)=\sigma(m)$, así que $n<\sigma(m)$.
+            \item Si $n=m$, entonces $n+1=m+1=\sigma(m)$, así que $n<\sigma(m)$.
+            \item Si $n>m$, existe $k\in\N$ tal que $m+k=n$. Si $k=1$, entonces $\sigma(m)=m+1=n$. Si $k\neq1$, existe $l\in\N$ tal que $\sigma(l)=k$, y entonces
+            \begin{equation*}
+                n = m+k = m+\sigma(l) = \sigma(m+l) = \sigma(m)+l,
+            \end{equation*}
+            así que $\sigma(m)<n$, es decir, $n>\sigma(m)$.
+        \end{itemize}
+        En cualquier caso, $\sigma(m)\in S_n$. Por el principio de inducción, $S_n=\N$ para todo $n\in\N$; esto significa que cualesquiera $n,m\in\N$ se pueden comparar.
+    \end{proof}
+
+    \subsection{Buen orden}
+
+    \begin{definicion}[Elemento mínimo]
+        Sea $S\subset\N$. Diremos que $n\in S$ es un \textbf{elemento mínimo} para $S$ si para todo $m\in S$ se tiene $n\le m$.
+    \end{definicion}
+
+    \begin{proposicion}[Unicidad del elemento mínimo]
+        \label{prop:unicidad-minimo}
+        Si $S\subset\N$ tiene algún elemento mínimo, éste es único.
+    \end{proposicion}
+    \begin{proof}
+        Supongamos que $n_1,n_2\in S$ son elementos mínimos para $S$. Como $n_1$ es mínimo y $n_2\in S$, se tiene $n_1\le n_2$; análogamente, como $n_2$ es mínimo y $n_1\in S$, se tiene $n_2\le n_1$. Si fuera $n_1\neq n_2$, entonces $n_1<n_2$ y $n_2<n_1$, lo cual contradice la Tricotomía (Teorema \ref{thm:tricotomia}). Por tanto $n_1=n_2$.
+    \end{proof}
+
+    \begin{proposicion}[Principio del buen orden en $\N$]
+        \label{prop:buen-orden}
+        Si $S$ es un subconjunto no vacío de $\N$, entonces $S$ contiene un elemento mínimo.
+    \end{proposicion}
+
+    \begin{lema}
+        \label{lem:uno-minimo}
+        $1$ es el elemento mínimo de $\N$.
+    \end{lema}
+    \begin{proof}
+        Sea $m\in\N$. Si $m=1$, entonces $1\le m$. Si $m\neq1$, existe $k\in\N$ tal que $\sigma(k)=m$, es decir, $k+1=m$, así que $1<m$; en particular, $1\le m$.
+    \end{proof}
+
+    \begin{teorema}
+        \label{thm:equivalencia-buen-orden-pi}
+        El principio del buen orden en $\N$ es equivalente al principio de inducción en $\N$.
+    \end{teorema}
+    \begin{proof}
+        Supongamos primero que se da el principio de inducción. Queremos probar que todo subconjunto no vacío de $\N$ contiene un elemento mínimo. Sea $S\subset\N$ no vacío, y supongamos, por contradicción, que $S$ no contiene un elemento mínimo. Definimos
+        \begin{equation*}
+            T = \{n\in\N : n<m,\ \forall m\in S\}.
+        \end{equation*}
+
+        Por el Lema \ref{lem:uno-minimo}, $1\le m$ para todo $m\in S$. Como $S$ no tiene elemento mínimo, $1\notin S$, así que $m\neq1$ para todo $m\in S$; junto con $1\le m$, esto da $1<m$ para todo $m\in S$. Por tanto $1\in T$.
+
+        Supongamos que $n\in T$, es decir, $n<m$ para todo $m\in S$; probemos que $\sigma(n)\in T$. Si $\sigma(n)\notin T$, existe $m_0\in S$ tal que no se cumple $\sigma(n)<m_0$, es decir, por la Tricotomía (Teorema \ref{thm:tricotomia}), $m_0\le\sigma(n)$. Como $n\in T$, $n<m_0$; así,
+        \begin{equation*}
+            n<m_0\le\sigma(n).
+        \end{equation*}
+        Existe $k\in\N$ tal que $n+k=m_0\le\sigma(n)=n+1$. Como $1\le k$ (Lema \ref{lem:uno-minimo}) y $n+k\le n+1$, se tiene $k=1$, así que $m_0=n+1=\sigma(n)$. Pero entonces $\sigma(n)\le m$ para todo $m\in S$ (pues $n<m$ implica $m=n+k'$ con $k'\ge1$, y por tanto $m\ge n+1=\sigma(n)$), es decir, $m_0$ es un elemento mínimo de $S$, lo cual contradice que $S$ no tiene elemento mínimo. Por tanto $\sigma(n)\in T$.
+
+        Por el principio de inducción, $T=\N$; esto significa que $n<m$ para todo $n\in\N$ y todo $m\in S$, lo cual es absurdo pues $S\subset\N$ no es vacío. Esta contradicción muestra que $S$ debe contener un elemento mínimo.
+
+        Recíprocamente, supongamos que se da el principio del buen orden. Sea $S\subset\N$ tal que $1\in S$ y tal que $n\in S$ implica $\sigma(n)\in S$; queremos probar que $S=\N$. Supongamos que $A=\N\setminus S$ es no vacío. Por el principio del buen orden, $A$ contiene un elemento mínimo $m_0\in A$. Como $1\in S$, $m_0\neq1$, así que existe $k\in\N$ tal que $\sigma(k)=m_0$. Si $k\in S$, entonces $\sigma(k)=m_0\in S$, lo cual contradice $m_0\in A$. Por tanto $k\notin S$, es decir, $k\in A$; pero $k<\sigma(k)=m_0$, lo cual contradice que $m_0$ sea el elemento mínimo de $A$. Concluimos que $A=\emptyset$, es decir, $S=\N$.
+    \end{proof}
 
 \end{document}
