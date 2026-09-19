@@ -1,0 +1,185 @@
+\chapter{Aplicaciones de la termodinámica}
+
+\section{Diagramas de fase de una sustancia pura de un solo componente}
+
+\subsection{Ecuación de Van der Waals}
+
+A pesar de que muchos gases reales obedecen en cierta medida la ecuación de los gases ideales,
+muchos de ellos se desvían de dicho comportamiento; para tratar de solventar estas desviaciones, en
+$1873$ Johannes Diderik van der Waals postuló una mejora a la ecuación de estado mecánica
+($P/T$) [no a la energética] al considerar dos aspectos importantes:
+\begin{enumerate}[label=\arabic*.,itemsep=2pt]
+  \item Las partículas que forman un gas real \emph{sí} ocupan un espacio, por lo que van der Waals
+    propuso una corrección al gas ideal, la cual resta al volumen total el volumen ocupado por las
+    partículas que forman este gas.
+  \item En un gas real las partículas interactúan entre sí, a través de fuerzas de atracción o
+    repulsión; van der Waals introduce una corrección para la presión, de modo que se tomen en
+    cuenta dichas fuerzas al medir la presión.
+\end{enumerate}
+La \textbf{ecuación de estado mecánica de Van der Waals} es entonces
+\begin{equation*}
+  \boxed{P=\frac{RT}{v-b}-\frac{a}{v^{2}}}
+\end{equation*}
+donde $a$ y $b$ son las constantes empíricas que se introducen para tales correcciones y que son
+características de cada tipo de gas. La constante $b$ corrige el volumen y la constante $a$ corrige
+las fuerzas; $V-Nb$ es el volumen corregido, y el término $a/v^{2}$ indica que la interacción entre
+partículas disminuye la presión de manera proporcional al número de pares de partículas.
+
+El éxito de esta ecuación es, cuantitativamente, modesto, y desde su introducción se han
+desarrollado otras ecuaciones empíricas mucho más exitosas (ecuación de Redlich--Kwong, ecuación de
+Soave--Redlich--Kwong, etc.) para aplicaciones prácticas, que incluyen $5$ o más constantes
+empíricas. Sin embargo, cualitativamente la ecuación de van der Waals es muy exitosa para predecir
+las propiedades de los fluidos reales, incluyendo la llamada \emph{transición de fase
+líquido--vapor} (es decir, el punto en el que el sistema pasa de gas a líquido).
+
+Desde el punto de vista termodinámico no es posible obtener mayor información respecto a esta
+ecuación, por lo que se debe recurrir a la mecánica estadística para obtener una derivación formal
+de esta ecuación.
+
+Para poder cerrar el sistema de ecuaciones de estado, se necesita una ecuación de estado térmica.
+Una forma de hacerlo es a partir de experimentos; sin embargo, también se puede deducir esta
+ecuación partiendo de la idea de obtener la ecuación térmica más simple y razonable que pueda ser
+compatible con la ecuación de estado de van der Waals. No se puede simplemente tomar la ecuación de
+estado del gas ideal, ya que el formalismo termodinámico impone una condición de consistencia entre
+ambas, por lo que se puede esperar que, tal y como la ecuación mecánica tiene pequeñas diferencias
+respecto al caso ideal, es de esperar que la ecuación térmica también tenga que ser ligeramente
+modificada.
+
+Si se escribe la ecuación de van der Waals como
+\begin{equation*}
+  \frac{P}{T}=\frac{R}{v-b}-\frac{a}{v^{2}}\,\frac{1}{T}
+\end{equation*}
+y buscamos una ecuación de estado térmica de la forma $\dfrac{1}{T}=f(u,v)$, ambas ecuaciones se
+pueden integrar en la relación molar del cambio de entropía
+\begin{equation*}
+  \dd s=\frac{1}{T}\,\dd u+\frac{P}{T}\,\dd v
+\end{equation*}
+y obtener la ecuación fundamental $s=s(u,v)$. Sin embargo, esta relación requiere que, para que
+$\dd s$ sea un diferencial perfecto (es decir, no requiere un factor integrante), se debe cumplir que
+las derivadas cruzadas de segundo orden sean iguales, es decir,
+\begin{equation*}
+  \boxed{\frac{\partial^{2}s}{\partial u\,\partial v}=\frac{\partial^{2}s}{\partial v\,\partial u}}\qquad\text{(teorema de Schwarz)}.
+\end{equation*}
+
+El teorema de Schwarz establece las condiciones de exactitud para que un diferencial sea completo o
+exacto.
+
+\begin{teorema}[Schwarz]
+  Sean $M,N$ funciones de clase $C^{1}$ en un dominio $D\subset\R^{2}$ simplemente conexo. Existe
+  una función $f$ (de clase $C^{2}$) tal que
+  \begin{equation*}
+    \dd f=M(x,y)\,\dd x+N(x,y)\,\dd y,\qquad M=\pdv{f}{x},\quad N=\pdv{f}{y},
+  \end{equation*}
+  si y solo si
+  \begin{equation*}
+    \pdv{M}{y}=\pdv{N}{x},\qquad\text{es decir,}\qquad\frac{\partial^{2}f}{\partial x\,\partial y}=\frac{\partial^{2}f}{\partial y\,\partial x}.
+  \end{equation*}
+  Cuando esto ocurre, el diferencial es cerrado y, por lo tanto, exacto en un dominio simplemente
+  conexo.
+\end{teorema}
+% NOTA: el manuscrito enuncia esto para f de clase C^2 con df=M dx+N dy y afirma "se cumple si y solo si dM/dy=dN/dx". Se reformuló con las hipótesis explícitas (M,N de clase C^1, dominio simplemente conexo) para que el enunciado sea correcto; es el mismo resultado.
+
+Regresando a nuestro caso, se debe cumplir entonces que
+\begin{equation*}
+  \frac{\partial^{2}s}{\partial v\,\partial u}=\frac{\partial^{2}s}{\partial u\,\partial v}
+  \qquad\text{o}\qquad
+  \pdv{v}\left(\pdvc{s}{u}{v}\right)_{u}=\pdv{u}\left(\pdvc{s}{v}{u}\right)_{v},
+\end{equation*}
+es decir,
+\begin{equation*}
+  \left[\pdv{v}\left(\frac{1}{T}\right)\right]_{u}=\left[\pdv{u}\left(\frac{P}{T}\right)\right]_{v};
+\end{equation*}
+pero sabemos que $\dfrac{P}{T}=\dfrac{R}{v-b}-\dfrac{a}{v^{2}}\dfrac{1}{T}$; entonces, en este caso,
+solo $\dfrac{1}{T}=\dfrac{1}{T}(u,v)$ depende de $u$, por lo que
+\begin{equation*}
+  \left[\pdv{v}\left(\frac{1}{T}\right)\right]_{u}=\left[\pdv{u}\left(\frac{R}{v-b}-\frac{a}{v^{2}}\frac{1}{T}\right)\right]_{v}
+  =-\frac{a}{v^{2}}\left[\pdv{u}\left(\frac{1}{T}\right)\right]_{v},
+\end{equation*}
+y despejando $v^{2}$,
+\begin{equation*}
+  v^{2}\left[\pdv{v}\left(\frac{1}{T}\right)\right]_{u}=-a\left[\pdv{u}\left(\frac{1}{T}\right)\right]_{v}.
+\end{equation*}
+Si escribimos $\beta=\dfrac{1}{v}$ (es decir, $v=1/\beta$) y $\alpha=\dfrac{u}{a}$ (es decir,
+$u=a\alpha$), aplicamos la regla de la cadena para cada derivada:
+\begin{equation*}
+  \pdv{v}=\pdv{\beta}{v}\pdv{\beta}=-\frac{1}{v^{2}}\pdv{\beta},
+  \qquad
+  \pdv{u}=\pdv{\alpha}{u}\pdv{\alpha}=\frac{1}{a}\pdv{\alpha}.
+\end{equation*}
+Por lo tanto
+\begin{equation*}
+  v^{2}\left[-\frac{1}{v^{2}}\pdv{\beta}\left(\frac{1}{T}\right)\right]_{u}=-a\cdot\frac{1}{a}\left[\pdv{\alpha}\left(\frac{1}{T}\right)\right]_{v}
+  \quad\Longrightarrow\quad
+  \left[\pdv{(1/v)}\left(\frac{1}{T}\right)\right]_{u}=\left[\pdv{(u/a)}\left(\frac{1}{T}\right)\right]_{v}.
+\end{equation*}
+Por lo que $\dfrac{1}{T}$ debe ser función de $1/v$ y $u/a$ de forma tal que ambas derivadas deben
+ser iguales de acuerdo con el teorema de Schwarz; una posible forma es que $1/T$ dependa de la suma
+$\left(\dfrac{1}{v}+\dfrac{u}{a}\right)$. Recordando que para el caso de gas ideal se tiene
+$1/T=cR/u$, el cambio más simple posible es
+\begin{equation*}
+  \boxed{\frac{1}{T}=\frac{cR}{u+a/v}}
+\end{equation*}
+
+\begin{definicion}[Fluido ideal de van der Waals]
+  El sistema caracterizado por las ecuaciones de estado para $P/T$ y para $1/T$,
+  \begin{equation*}
+    \frac{P}{T}=\frac{R}{v-b}-\frac{a}{v^{2}}\frac{1}{T},\qquad\frac{1}{T}=\frac{cR}{u+a/v},
+  \end{equation*}
+  es llamado \textbf{fluido ideal de van der Waals}.
+\end{definicion}
+
+Escribir $\dfrac{P}{T}=\dfrac{R}{v-b}-\dfrac{a}{v^{2}}\dfrac{1}{T}$ no es una forma adecuada de la
+ecuación de estado, ya que $P/T$ depende de $1/T$; sustituyendo la ecuación de estado térmica se
+puede encontrar la ecuación correcta para $P/T$:
+\begin{equation*}
+  \boxed{\frac{P}{T}=\frac{R}{v-b}-\frac{acR}{uv^{2}+av}}
+\end{equation*}
+Con estas ecuaciones es posible encontrar la relación fundamental en la representación entrópica,
+\begin{equation*}
+  \boxed{S=NR\ln\left[(v-b)\left(u+\frac{a}{v}\right)^{c}\right]+Ns_0}
+\end{equation*}
+donde $s_0$ es una constante. Esta relación, como el caso de la ecuación del gas ideal, no cumple
+con el postulado de Nernst y no es válida para temperaturas bajas.
+
+Algunos ejemplos de los valores de las constantes para el fluido ideal de van der Waals:
+\begin{center}
+  \begin{tabular}{lccc}
+    \hline
+    Gas & $a\ \left(\mathrm{Pa\,m^{6}/mol^{2}}\right)$ & $b\ \left(10^{-6}\,\mathrm{m^{3}/mol}\right)$ & $c$\\
+    \hline
+    He & $0.00346$ & $23.7$ & $3/2$\\
+    Ne & $0.0215$ & $17.5$ & $3/2$\\
+    $\mathrm{H_2}$ & $0.0248$ & $26.6$ & $5/2$\\
+    Ar & $0.132$ & $30.2$ & $3/2$\\
+    $\mathrm{N_2}$ & $0.136$ & $38.5$ & $5/2$\\
+    CO & $0.151$ & $39.9$ & $5/2$\\
+    $\mathrm{H_2O}$ & $0.544$ & $30.5$ & $3.1$\\
+    $\mathrm{N_2O}$ & $0.384$ & $44.2$ & $7/2$\\
+    \hline
+  \end{tabular}
+\end{center}
+% NOTA: el manuscrito rotula las unidades de a como "Pa m^6" y de b como "10^{-6} m^3"; con v molar (m^3/mol), las unidades consistentes con P=RT/(v-b)-a/v^2 son Pa m^6/mol^2 y m^3/mol, que son las que se usan aquí. El gas "A" del manuscrito es el argón (Ar). Los valores 0.132 (Ar) y 3.1 (H2O) son los transcritos del manuscrito; verificar.
+
+Estas constantes se obtienen al ajustar empíricamente las isotermas de van der Waals en la vecindad de
+$273\ \mathrm{K}$; no son valores representativos para temperaturas más bajas.
+
+\subsection{Ecuación de Clausius--Clapeyron}
+
+% Pendiente: aún no está en las notas.
+
+\subsection{Regla de fases de Gibbs}
+
+% Pendiente: aún no está en las notas.
+
+\section{Diagrama de fase de una sustancia con propiedades magnéticas. Ley de Curie}
+
+% Pendiente: aún no está en las notas.
+
+\section{Sólidos: ley de Dulong y Petit}
+
+% Pendiente: aún no está en las notas.
+
+\section{Reacciones químicas endotérmicas y exotérmicas}
+
+% Pendiente: aún no está en las notas.
+

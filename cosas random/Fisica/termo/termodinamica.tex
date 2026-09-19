@@ -1,0 +1,55 @@
+\documentclass[12pt,a4paper]{book}
+\raggedbottom
+
+% -------------------------------------------------
+% Diseño de capítulos y secciones (igual que Álgebra Lineal I)
+% -------------------------------------------------
+\usepackage{titlesec}
+\usepackage{xcolor}
+\definecolor{chapterrule}{gray}{0.55}
+\titleformat{\chapter}[hang]
+  {\sffamily\bfseries\Large}{\thechapter}{1em}{}
+  [\vspace{0.5ex}{\color{chapterrule}\titlerule[0.4pt]}]
+\titlespacing*{\chapter}{0pt}{0pt}{2.5ex}
+\titleformat{\section}{\sffamily\bfseries\normalsize}{\thesection}{1em}{}
+\titlespacing*{\section}{0pt}{2.5ex}{1ex}
+\titleformat{\subsection}{\sffamily\bfseries\small}{\thesubsection}{1em}{}
+\titlespacing*{\subsection}{0pt}{2ex}{0.8ex}
+\titleformat{\subsubsection}{\sffamily\itshape\small}{\thesubsubsection}{1em}{}
+\titlespacing*{\subsubsection}{0pt}{1.6ex}{0.6ex}
+
+\usepackage{ugfisica}
+\usepackage{float}
+\usepackage{pdfpages}
+\usepackage{csquotes}
+\usepackage[backend=bibtex,style=numeric,sorting=none,defernumbers=true]{biblatex}
+\addbibresource{bibliografia.bib}
+
+\title{Notas de Termodinámica}
+\author{Ricardo León Martínez}
+\date{2025}
+
+\begin{document}
+
+\frontmatter
+\thispagestyle{empty}
+\includepdf[pages=1]{portada_termodinamica.pdf}
+{\let\cleardoublepage\clearpage\singlespacing\tableofcontents}
+\input{capitulos/informacion_curso}
+
+\mainmatter
+\input{capitulos/cap01_conceptos}
+\input{capitulos/cap02_primera_ley}
+\input{capitulos/cap03_segunda_ley}
+\input{capitulos/cap04_tercera_ley}
+\input{capitulos/cap05_potenciales}
+\input{capitulos/cap06_aplicaciones}
+
+\backmatter
+\chapter*{Bibliografía}
+\addcontentsline{toc}{chapter}{Bibliografía}
+\nocite{*}
+\printbibliography[heading=subbibliography,title={Bibliografía básica},keyword=basica]
+\printbibliography[heading=subbibliography,title={Bibliografía complementaria},keyword=complementaria]
+
+\end{document}

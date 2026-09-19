@@ -1,0 +1,124 @@
+% Portada de las notas de Termodinámica (estilo de las portadas de notas: fondo oscuro,
+% diagrama del tema, título en dos tonos, bloque de autoría y pie con año).
+\documentclass[tikz,border=0pt]{standalone}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+\usepackage[scaled=.92]{helvet}
+\usepackage{microtype}
+\usetikzlibrary{arrows.meta,decorations.markings,decorations.pathmorphing}
+
+% ---- paleta ----
+\definecolor{bg}{HTML}{0A0E17}
+\definecolor{footer}{HTML}{050709}
+\definecolor{sep}{HTML}{1E2438}
+\definecolor{dots}{HTML}{111725}
+\definecolor{ink}{HTML}{F0F0F5}
+\definecolor{sub}{HTML}{8890A8}
+\definecolor{dim}{HTML}{3B4262}
+\definecolor{foot}{HTML}{8189A0}
+\definecolor{hot}{HTML}{FF8A3D}   % acento principal (calor)
+\definecolor{cold}{HTML}{4AA3FF}  % acento secundario (frío)
+\definecolor{gold}{HTML}{F0D060}  % acento terciario
+\definecolor{axis}{HTML}{2E3858}
+\definecolor{iso}{HTML}{18223A}
+
+% ---- geometría del diagrama (ciclo de Carnot en el plano P--V) ----
+\pgfmathsetmacro{\gam}{5/3}
+\pgfmathsetmacro{\Vmin}{0.6}\pgfmathsetmacro{\Pmin}{0.0}
+\pgfmathsetmacro{\Xo}{92}\pgfmathsetmacro{\Yo}{366}   % origen del diagrama en la página (pt)
+\pgfmathsetmacro{\sx}{64}\pgfmathsetmacro{\sy}{92}     % pt por unidad de V y de P
+\pgfmathsetmacro{\ch}{3.0}      % P V = ch   (isoterma caliente)
+\pgfmathsetmacro{\cc}{1.5}      % P V = cc   (isoterma fría)
+\pgfmathsetmacro{\VA}{1.0}\pgfmathsetmacro{\VB}{2.2}
+\pgfmathsetmacro{\kA}{\ch*\VA^\gam}                       % adiabata por A y D
+\pgfmathsetmacro{\kB}{\ch/\VB*\VB^\gam}                   % adiabata por B y C
+\pgfmathsetmacro{\VC}{(\kB/\cc)^(1/(\gam-1))}
+\pgfmathsetmacro{\VD}{(\kA/\cc)^(1/(\gam-1))}
+\newcommand{\X}[1]{(\Xo+\sx*(#1-\Vmin))}
+\newcommand{\Y}[1]{(\Yo+\sy*(#1-\Pmin))}
+\newcommand{\iso}[3]{plot[domain=#2:#3,samples=60,smooth,variable=\x] ({\X{\x}},{\Y{#1/\x}})}
+\newcommand{\adi}[3]{plot[domain=#2:#3,samples=60,smooth,variable=\x] ({\X{\x}},{\Y{#1*exp(-\gam*ln(\x))}})}
+
+\begin{document}
+\begin{tikzpicture}[x=1bp,y=1bp]
+  \useasboundingbox (0,0) rectangle (595.276,841.89);
+  \fill[bg] (0,0) rectangle (595.276,841.89);
+
+  % rejilla de puntos
+  \foreach \i in {1,...,19}{\foreach \j in {6,...,27}{\fill[dots] (\i*30,\j*30) circle (0.7);}}
+
+  % brillo suave tras el diagrama
+  \shade[inner color=hot!20!bg,outer color=bg] (275,548) circle (215);
+
+  % franja lateral y marcas superiores
+  \fill[hot] (0,0) rectangle (5.4,841.89);
+  \fill[hot]  (23.4,804.1) rectangle (90,802.3);
+  \fill[cold] (93.5,804.1) rectangle (135,802.3);
+  \node[anchor=east,font=\sffamily\fontsize{6.5}{7}\selectfont,text=dim] at (570,817) {\textls[220]{NOTAS DE CLASE}};
+
+  % ---------------- diagrama ----------------
+  \begin{scope}
+    \clip ({\X{\Vmin}},{\Y{\Pmin}}) rectangle ({\X{7.1}},{\Y{3.95}});
+    \foreach \c in {0.6,1.0,1.4,2.4,3.8,4.8}{\draw[iso,line width=0.6pt] \iso{\c}{0.45}{8};}
+    \foreach \c in {0.6,1.0,1.4,2.4,3.8,4.8}{\draw[iso,line width=0.6pt,dash pattern=on 1pt off 3pt] \adi{\c*1.7}{0.45}{8};}
+  \end{scope}
+  \draw[->,axis,line width=0.9pt] ({\X{\Vmin}},{\Y{\Pmin}}) -- ({\X{7.15}},{\Y{\Pmin}});
+  \draw[->,axis,line width=0.9pt] ({\X{\Vmin}},{\Y{\Pmin}}) -- ({\X{\Vmin}},{\Y{4.0}});
+  \node[text=dim,font=\itshape\small,anchor=north] at ({\X{7.15}},{\Y{\Pmin}-3}) {$V$};
+  \node[text=dim,font=\itshape\small,anchor=east]  at ({\X{\Vmin}-4},{\Y{4.0}}) {$P$};
+
+  % interior del ciclo
+  \fill[hot,opacity=0.13]
+    plot[domain=\VA:\VB,samples=40,smooth,variable=\x] ({\X{\x}},{\Y{\ch/\x}}) --
+    plot[domain=\VB:\VC,samples=60,smooth,variable=\x] ({\X{\x}},{\Y{\kB*exp(-\gam*ln(\x))}}) --
+    plot[domain=\VC:\VD,samples=60,smooth,variable=\x] ({\X{\x}},{\Y{\cc/\x}}) --
+    plot[domain=\VD:\VA,samples=60,smooth,variable=\x] ({\X{\x}},{\Y{\kA*exp(-\gam*ln(\x))}}) -- cycle;
+
+  % procesos
+  \draw[hot,line width=1.7pt]  plot[domain=\VA:\VB,samples=40,smooth,variable=\x] ({\X{\x}},{\Y{\ch/\x}});
+  \draw[gold,line width=1.7pt] plot[domain=\VB:\VC,samples=60,smooth,variable=\x] ({\X{\x}},{\Y{\kB*exp(-\gam*ln(\x))}});
+  \draw[cold,line width=1.7pt] plot[domain=\VC:\VD,samples=60,smooth,variable=\x] ({\X{\x}},{\Y{\cc/\x}});
+  \draw[gold,line width=1.7pt] plot[domain=\VD:\VA,samples=60,smooth,variable=\x] ({\X{\x}},{\Y{\kA*exp(-\gam*ln(\x))}});
+  % puntas de flecha (sentido del ciclo)
+  \tikzset{punta/.style={-{Stealth[length=8pt,width=7pt]},line width=1.7pt}}
+  \draw[punta,hot]  ({\X{1.55}},{\Y{\ch/1.55}}) -- ({\X{1.57}},{\Y{\ch/1.57}});
+  \draw[punta,gold] ({\X{3.60}},{\Y{\kB*exp(-\gam*ln(3.60))}}) -- ({\X{3.64}},{\Y{\kB*exp(-\gam*ln(3.64))}});
+  \draw[punta,cold] ({\X{4.32}},{\Y{\cc/4.32}}) -- ({\X{4.30}},{\Y{\cc/4.30}});
+  \draw[punta,gold] ({\X{1.92}},{\Y{\kA*exp(-\gam*ln(1.92))}}) -- ({\X{1.90}},{\Y{\kA*exp(-\gam*ln(1.90))}});
+
+  % calor absorbido y cedido
+  \draw[hot,->,line width=1pt,decorate,decoration={snake,amplitude=1.4pt,segment length=7pt,post length=4pt}]
+     ({\X{1.75}},{\Y{3.55}}) -- ({\X{1.75}},{\Y{1.86}});
+  \draw[cold,->,line width=1pt,decorate,decoration={snake,amplitude=1.4pt,segment length=7pt,post length=4pt}]
+     ({\X{4.8}},{\Y{0.26}}) -- ({\X{4.8}},{\Y{0.03}});
+  \node[text=hot,font=\itshape\small,anchor=west]  at ({\X{1.75}+8},{\Y{3.3}}) {$Q_h$};
+  \node[text=cold,font=\itshape\small,anchor=west] at ({\X{4.8}+8},{\Y{0.12}}) {$Q_c$};
+  \node[text=hot,font=\itshape\small]  at ({\X{1.0}-14},{\Y{3.05}}) {$T_h$};
+  \node[text=cold,font=\itshape\small] at ({\X{5.6}},{\Y{0.62}}) {$T_c$};
+  \node[text=gold!85!bg,font=\itshape\large] at ({\X{2.9}},{\Y{0.7}}) {$W$};
+
+  % estados
+  \foreach \p/\v/\pr/\col in {A/\VA/\ch/hot, B/\VB/{\ch/\VB}/hot, C/\VC/{\cc/\VC}/cold, D/\VD/{\cc/\VD}/cold}{
+    \node[circle,draw=\col,fill=\col!22!bg,line width=1pt,inner sep=0pt,minimum size=15pt,text=\col,font=\itshape\small]
+       at ({\X{\v}},{\Y{\pr}}) {$\p$};
+  }
+  \node[text=dim,font=\small] at (297,330) {$\mathrm{d}U = T\,\mathrm{d}S - P\,\mathrm{d}V$};
+
+  % ---------------- bloque de texto ----------------
+  \draw[sep,line width=0.6pt] (23.4,282) -- (570,282);
+  \fill[gold] (23.4,262) rectangle (68.4,260.6);
+  \node[anchor=base west,text=ink,font=\bfseries\fontsize{46}{50}\selectfont] at (21,208) {Termo\textcolor{hot}{dinámica}};
+  \node[anchor=base west,text=sub,font=\itshape\fontsize{10}{12}\selectfont] at (23.4,183) {Notas de clase para un curso de termodinámica};
+  \draw[sep,line width=0.6pt] (23.4,165) -- (570,165);
+  \node[anchor=base west,text=dim,font=\sffamily\fontsize{6.5}{7}\selectfont] at (23.4,151) {\textls[220]{ELABORADAS POR}};
+  \node[anchor=base west,text=ink,font=\fontsize{12}{14}\selectfont] at (23.4,132) {Dr.\ Lenin Francisco Escamilla Herrera};
+
+  % ---------------- pie ----------------
+  \fill[footer] (0,0) rectangle (595.276,51);
+  \fill[hot] (23.4,51) rectangle (72,49.6);
+  \node[anchor=base west,text=foot,font=\sffamily\fontsize{7}{8}\selectfont] at (23.4,30) {Departamento de Física};
+  \node[anchor=base west,text=foot,font=\sffamily\fontsize{7}{8}\selectfont] at (23.4,17) {División de Ciencias e Ingenierías\ \,·\ \,Campus León\ \,·\ \,Universidad de Guanajuato};
+  \node[anchor=base east,text=gold,font=\fontsize{18}{20}\selectfont] at (570,20) {2026};
+\end{tikzpicture}
+\end{document}

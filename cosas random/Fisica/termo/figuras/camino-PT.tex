@@ -1,0 +1,32 @@
+\documentclass[tikz,border=3pt]{standalone}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{libertinus}
+\usepackage{amsmath,amssymb}
+\usetikzlibrary{arrows.meta,calc,patterns,decorations.pathmorphing,decorations.markings,decorations.pathreplacing,bending}
+\definecolor{UGblue}{RGB}{0,51,102}
+\newcommand{\dbar}{\mathchar'26\mkern-12mu d}
+\tikzset{
+  >=Stealth,
+  every node/.style={font=\small},
+  caja/.style={draw,line width=0.9pt},
+  pared/.style={draw,line width=1.6pt},
+  ejes/.style={->,line width=0.8pt},
+  adia/.style={draw,pattern=north east lines,pattern color=black!70,line width=0.5pt},
+  gas/.style={fill=UGblue!8},
+  punto/.style={fill,circle,inner sep=1.3pt},
+  onda/.style={decorate,decoration={snake,amplitude=1.1pt,segment length=5pt,post length=3pt,pre length=0pt}},
+}
+\begin{document}
+\begin{tikzpicture}
+  \draw[ejes] (0,0) -- (5.6,0) node[right] {$T$};
+  \draw[ejes] (0,0) -- (0,3.9) node[above] {$P$};
+  \coordinate (P0) at (1.0,0.9); \coordinate (P1) at (4.6,3.0);
+  \draw[dashed,->,line width=0.8pt] (P0) -- (P1);
+  \draw[dashed,->,line width=0.8pt] (P0) -- (4.6,0.9);
+  \draw[dashed,->,line width=0.8pt] (4.6,0.9) -- (P1);
+  \node[punto] at (P0) {}; \node[punto] at (P1) {};
+  \node[below left] at (P0) {$(T_0,P_0)$};
+  \node[above right] at (P1) {$(T',P')$};
+\end{tikzpicture}
+\end{document}

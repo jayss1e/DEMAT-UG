@@ -1,0 +1,39 @@
+\documentclass[tikz,border=3pt]{standalone}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{libertinus}
+\usepackage{amsmath,amssymb}
+\usetikzlibrary{arrows.meta,calc,patterns,decorations.pathmorphing,decorations.markings,decorations.pathreplacing,bending}
+\definecolor{UGblue}{RGB}{0,51,102}
+\newcommand{\dbar}{\mathchar'26\mkern-12mu d}
+\tikzset{
+  >=Stealth,
+  every node/.style={font=\small},
+  caja/.style={draw,line width=0.9pt},
+  pared/.style={draw,line width=1.6pt},
+  ejes/.style={->,line width=0.8pt},
+  adia/.style={draw,pattern=north east lines,pattern color=black!70,line width=0.5pt},
+  gas/.style={fill=UGblue!8},
+  punto/.style={fill,circle,inner sep=1.3pt},
+  onda/.style={decorate,decoration={snake,amplitude=1.1pt,segment length=5pt,post length=3pt,pre length=0pt}},
+}
+\begin{document}
+\begin{tikzpicture}
+  % izquierda: U = U(S)
+  \draw[ejes] (0,0) -- (3.8,0) node[right] {$S$};
+  \draw[ejes] (0,0) -- (0,3.6) node[above] {$U$};
+  \draw[line width=1pt,domain=0:2.9,samples=40,smooth,variable=\x] plot ({\x},{0.36*\x*\x});
+  \draw[dashed,line width=0.7pt,domain=0:2.2,samples=40,smooth,variable=\x] plot ({\x},{0.75*\x*\x});
+  \draw[dashed,line width=0.7pt,domain=0:3.4,samples=40,smooth,variable=\x] plot ({\x},{0.16*\x*\x});
+  \node at (1.9,-0.7) {$U=U(S)$};
+  % flecha
+  \draw[->,line width=0.9pt] (6.4,1.6) -- (4.9,1.6);
+  % derecha: U vs T
+  \begin{scope}[xshift=7.2cm]
+  \draw[ejes] (0,0) -- (3.8,0) node[right] {$T$};
+  \draw[ejes] (0,0) -- (0,3.6) node[above] {$U$};
+  \draw[line width=1pt,domain=0:2.9,samples=40,smooth,variable=\x] plot ({\x},{0.36*\x*\x});
+  \node at (1.9,-0.7) {$T=\partial U/\partial S$};
+  \end{scope}
+\end{tikzpicture}
+\end{document}

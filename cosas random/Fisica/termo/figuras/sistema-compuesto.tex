@@ -1,0 +1,31 @@
+\documentclass[tikz,border=3pt]{standalone}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{libertinus}
+\usepackage{amsmath,amssymb}
+\usetikzlibrary{arrows.meta,calc,patterns,decorations.pathmorphing,decorations.markings,decorations.pathreplacing,bending}
+\definecolor{UGblue}{RGB}{0,51,102}
+\newcommand{\dbar}{\mathchar'26\mkern-12mu d}
+\tikzset{
+  >=Stealth,
+  every node/.style={font=\small},
+  caja/.style={draw,line width=0.9pt},
+  pared/.style={draw,line width=1.6pt},
+  ejes/.style={->,line width=0.8pt},
+  adia/.style={draw,pattern=north east lines,pattern color=black!70,line width=0.5pt},
+  gas/.style={fill=UGblue!8},
+  punto/.style={fill,circle,inner sep=1.3pt},
+  onda/.style={decorate,decoration={snake,amplitude=1.1pt,segment length=5pt,post length=3pt,pre length=0pt}},
+}
+\begin{document}
+\begin{tikzpicture}
+  \draw[caja] (0,0) rectangle (5.6,2.6);
+  \draw[caja] (2.8,0) -- (2.8,2.6);
+  \node at (1.4,1.9) {\normalsize \textcircled{\small 1}};
+  \node at (4.2,1.9) {\normalsize \textcircled{\small 2}};
+  \node[align=center] at (1.4,1.05) {$U^{(1)}$};
+  \node[align=center] at (4.2,1.05) {$U^{(2)}$};
+  \draw[decorate,decoration={brace,amplitude=6pt,raise=3pt}] (0,2.6) -- (5.6,2.6) node[midway,above=10pt] {sistema compuesto};
+  \draw[->,line width=0.6pt] (2.8,-0.9) node[below] {pared diatérmica} -- (2.8,-0.05);
+\end{tikzpicture}
+\end{document}

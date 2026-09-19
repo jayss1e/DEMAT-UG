@@ -1,0 +1,32 @@
+\documentclass[tikz,border=3pt]{standalone}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{libertinus}
+\usepackage{amsmath,amssymb}
+\usetikzlibrary{arrows.meta,calc,patterns,decorations.pathmorphing,decorations.markings,decorations.pathreplacing,bending}
+\definecolor{UGblue}{RGB}{0,51,102}
+\newcommand{\dbar}{\mathchar'26\mkern-12mu d}
+\tikzset{
+  >=Stealth,
+  every node/.style={font=\small},
+  caja/.style={draw,line width=0.9pt},
+  pared/.style={draw,line width=1.6pt},
+  ejes/.style={->,line width=0.8pt},
+  adia/.style={draw,pattern=north east lines,pattern color=black!70,line width=0.5pt},
+  gas/.style={fill=UGblue!8},
+  punto/.style={fill,circle,inner sep=1.3pt},
+  onda/.style={decorate,decoration={snake,amplitude=1.1pt,segment length=5pt,post length=3pt,pre length=0pt}},
+}
+\begin{document}
+\begin{tikzpicture}
+  \draw[caja] (0,0) rectangle (2.4,1.8);
+  \draw[caja] (2.4,0) rectangle (4.8,1.8);
+  \draw[caja] (4.8,0) rectangle (7.2,1.8);
+  \node at (1.2,0.9) {\normalsize $A$};
+  \node at (3.6,0.9) {\normalsize $B$};
+  \node at (6.0,0.9) {\normalsize $C$};
+  \node at (1.2,-0.45) {$T_A$};
+  \node at (3.6,-0.45) {$T_B$};
+  \node at (6.0,-0.45) {$T_C$};
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,25 @@
+\documentclass[tikz,border=3pt]{standalone}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{libertinus}
+\usepackage{amsmath,amssymb}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{arrows.meta}
+\definecolor{UGblue}{RGB}{0,51,102}
+\begin{document}
+\begin{tikzpicture}
+\begin{axis}[hide axis,view={-42}{22},width=9.5cm,height=8.5cm,xmin=-1.6,xmax=1.6,ymin=-0.3,ymax=1.7,zmin=0,zmax=1.9,z buffer=sort,clip=false,>=Stealth,
+  colormap={s}{color(0cm)=(UGblue!6) color(1cm)=(UGblue!18)}]
+\addplot3[surf,shader=flat,draw=UGblue!40,line width=0.12pt,domain=0:1.2,y domain=-1:1,samples=14,samples y=14,z buffer=sort]
+  ({y},{x},{0.4+0.95*sqrt(x)-0.4*y*y});
+\draw[->,thick] (axis cs:0,0,0) -- (axis cs:1.45,0,0) node[right] {$X_j$};
+\draw[->,thick] (axis cs:0,0,0) -- (axis cs:0,1.55,0) node[above right] {$U$};
+\draw[->,thick] (axis cs:0,0,0) -- (axis cs:0,0,1.8) node[above] {$S$};
+\node[circle,fill,inner sep=1.7pt,label={[font=\small]above:$\text{}$}] at (axis cs:0.3500,0.5500,1.0555) {};
+\node[font=\small,align=left] at (axis cs:-0.2,0.5,1.806) {Estado de\\equilibrio};
+\draw[->,line width=0.5pt] (axis cs:-0.1,0.5,1.606) -- (axis cs:0.35,0.55,1.086);
+\node[font=\small] at (axis cs:-1.4,1.25,1.25) {$S=S(U,\dots,X_j,\dots)$};
+\end{axis}
+\end{tikzpicture}
+\end{document}

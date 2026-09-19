@@ -1,12 +1,51 @@
-*.synctex.gz
+# --- LaTeX: auxiliares de compilación ---
 *.aux
-*.fdb_latexmk
-*.fls
 *.log
 *.out
-*.odt
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex*
+*.dvi
+*.xdv
+*.idx
+*.ilg
+*.ind
+*.glo
+*.gls
+*.glg
+*.nav
+*.snm
+*.vrb
 _minted
 *.listing
-.vscode# Claude Code
+
+# --- Bibliografía (se regenera con bibtex/biber; se conserva el .bib) ---
+*.bbl
+*.blg
+*.bcf
+*.run.xml
+*-blx.bib
+
+# --- Editores ---
+*~
+*.bak
+*.swp
+_region_.*
+.vscode
+.DS_Store
+Thumbs.db
+
+# --- Compilados (tareas de computación) ---
+a.out
+*.o
+*.exe
+
+# --- Otros ---
+*.odt
+
+# Claude Code
 .claude/
 CLAUDE.md

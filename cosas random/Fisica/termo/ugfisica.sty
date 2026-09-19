@@ -1,0 +1,126 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{ugfisica}[2026/09/19 Estilo de notas de física (basado en ugmath)]
+
+% =========================================================
+% Estructura pensada para física:
+%   modelo -> definición -> ley/postulado -> resultado -> ejemplo/problema
+% =========================================================
+
+% ========== CONFIGURACIÓN INICIAL ==========
+\RequirePackage[spanish]{babel}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[T1]{fontenc}
+\RequirePackage{libertinus}
+\RequirePackage{microtype}
+
+\RequirePackage[top=1.5cm,bottom=1.5cm,left=1.5cm,right=1.5cm]{geometry}
+
+% ========== COLORES ==========
+\RequirePackage[dvipsnames]{xcolor}
+\definecolor{UGblue}{RGB}{0,51,102}
+\definecolor{UGgold}{RGB}{212,175,55}
+\definecolor{softgray}{RGB}{100,100,100}
+\definecolor{lightgray}{RGB}{250,250,250}
+\definecolor{elegantpurple}{RGB}{120,100,150}
+\definecolor{lightpurple}{RGB}{245,240,250}
+
+% ========== PAQUETES ==========
+\RequirePackage{setspace}
+\setstretch{1.15}
+\RequirePackage{amsmath,amssymb,amsthm,mathtools}
+\RequirePackage{graphicx}
+\RequirePackage{physics}
+\RequirePackage{enumitem}
+\RequirePackage{caption}
+\RequirePackage[framemethod=TikZ]{mdframed}
+
+% ========== CAJAS ==========
+% \ugfstyle{nombre}{color de borde}{fondo}{fondo del título}{nobreak}
+\newcommand{\ugfstyle}[5]{%
+  \mdfdefinestyle{#1}{%
+    linecolor=#2, linewidth=1pt, backgroundcolor=#3, roundcorner=6pt,
+    frametitlebackgroundcolor=#4, frametitlefont=\bfseries\color{white},
+    frametitlealignment=\raggedright,
+    innertopmargin=8pt, innerbottommargin=8pt,
+    innerleftmargin=12pt, innerrightmargin=12pt,
+    skipabove=12pt, skipbelow=10pt,
+    nobreak=#5, splitbottomskip=6pt, splittopskip=6pt}}
+
+\ugfstyle{ugfdef}   {blue!70!black}    {blue!3}         {blue!50}        {true}
+\ugfstyle{ugfley}   {orange!80!black}  {orange!3}       {orange!60!black}{false}
+\ugfstyle{ugfres}   {softgray}         {lightgray}      {softgray}       {true}
+\ugfstyle{ugfmod}   {green!30!gray!70} {green!2!gray!2} {green!40!gray!40}{false}
+\ugfstyle{ugfprob}  {purple!80!black}  {purple!3}       {purple!50}      {false}
+\ugfstyle{ugfresum} {elegantpurple}    {lightpurple}    {elegantpurple}  {false}
+
+% \ugfnewbox{entorno}{Título}{contador}{estilo}
+% Numeración capítulo.número; título opcional entre corchetes.
+\makeatletter
+\newcommand{\ugfnewbox}[4]{%
+  \newcounter{#3}[chapter]%
+  \@namedef{the#3}{\thechapter.\arabic{#3}}%
+  \newenvironment{#1}[1][]{%
+    \refstepcounter{#3}%
+    \ifx&##1&%
+      \begin{mdframed}[style=#4, frametitle={#2 \csname the#3\endcsname}]%
+    \else
+      \begin{mdframed}[style=#4, frametitle={#2 \csname the#3\endcsname: ##1}]%
+    \fi
+  }{\end{mdframed}}}
+\makeatother
+
+\ugfnewbox{definicion}  {Definición}  {defn} {ugfdef}
+\ugfnewbox{ley}         {Ley}         {leyc} {ugfley}
+\ugfnewbox{postulado}   {Postulado}   {post} {ugfley}
+\ugfnewbox{proposicion} {Proposición} {prop} {ugfres}
+\ugfnewbox{teorema}     {Teorema}     {teor} {ugfres}
+\ugfnewbox{modelo}      {Modelo}      {modl} {ugfmod}
+\ugfnewbox{problema}    {Problema}    {prob} {ugfprob}
+
+% Resumen de fórmulas (al final de cada capítulo), sin numerar
+\newenvironment{resumen}[1][Resumen]{%
+  \begin{mdframed}[style=ugfresum, frametitle={#1}]}{\end{mdframed}}
+
+% ========== TEXTO SIN CAJA ==========
+\newcounter{ejemplo}[chapter]
+\renewcommand{\theejemplo}{\thechapter.\arabic{ejemplo}}
+\newenvironment{ejemplo}{%
+  \refstepcounter{ejemplo}\par\medskip
+  \noindent\textbf{Ejemplo \theejemplo}\par\smallskip
+}{\par\nopagebreak\hfill$\blacktriangle$\par\medskip}
+
+\newcounter{ejercicio}[chapter]
+\renewcommand{\theejercicio}{\thechapter.\arabic{ejercicio}}
+\newenvironment{ejercicio}{%
+  \refstepcounter{ejercicio}\par\medskip
+  \noindent\textbf{Ejercicio \theejercicio}\space\ignorespaces
+}{\par\medskip}
+
+\newenvironment{observacion}[1][]{%
+  \par\smallskip\noindent\textbf{Observación\ifx&#1&\else\ (#1)\fi.}\space\ignorespaces
+}{\par\smallskip}
+
+\newenvironment{solucion}
+  {\par\noindent\textit{Solución. }\ignorespaces}
+  {\hfill$\blacktriangle$\par}
+
+\renewcommand{\qedsymbol}{$\blacksquare$}
+
+% ========== HIPERVÍNCULOS ==========
+\RequirePackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=UGblue, urlcolor=UGgold, citecolor=UGblue}
+
+% ========== NOTACIÓN ==========
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+% diferencial inexacta (calor, trabajo): \dbar Q
+\newcommand{\dbar}{\mathchar'26\mkern-12mu d}
+% derivada parcial con variable(s) fija(s): \pdvc{U}{S}{V} = (dU/dS)_V
+\newcommand{\pdvc}[3]{\left(\frac{\partial #1}{\partial #2}\right)_{#3}}
+
+% ========== PÁRRAFOS ==========
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}

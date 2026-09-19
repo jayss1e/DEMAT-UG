@@ -1,0 +1,28 @@
+\documentclass[tikz,border=3pt]{standalone}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{libertinus}
+\usepackage{amsmath,amssymb}
+\usetikzlibrary{arrows.meta,calc,patterns,decorations.pathmorphing,decorations.markings,decorations.pathreplacing,bending}
+\definecolor{UGblue}{RGB}{0,51,102}
+\newcommand{\dbar}{\mathchar'26\mkern-12mu d}
+\tikzset{
+  >=Stealth,
+  every node/.style={font=\small},
+  caja/.style={draw,line width=0.9pt},
+  pared/.style={draw,line width=1.6pt},
+  ejes/.style={->,line width=0.8pt},
+  adia/.style={draw,pattern=north east lines,pattern color=black!70,line width=0.5pt},
+  gas/.style={fill=UGblue!8},
+  punto/.style={fill,circle,inner sep=1.3pt},
+  onda/.style={decorate,decoration={snake,amplitude=1.1pt,segment length=5pt,post length=3pt,pre length=0pt}},
+}
+\begin{document}
+\begin{tikzpicture}
+  \draw[caja] (0,0) rectangle (2.2,1.6) node[midway] {\normalsize $(V,N_i)$};
+  \node at (2.75,0.8) {\normalsize $+$};
+  \draw[caja] (3.3,0) rectangle (5.5,1.6) node[midway] {\normalsize $(V,N_i)$};
+  \node at (6.05,0.8) {\normalsize $=$};
+  \draw[caja] (6.6,0) rectangle (11.0,1.6) node[midway] {\normalsize $(2V,2N_i)$};
+\end{tikzpicture}
+\end{document}
