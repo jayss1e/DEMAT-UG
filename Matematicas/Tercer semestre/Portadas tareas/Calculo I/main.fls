@@ -1,7 +1,7 @@
-PWD /home/god/DEMAT-UG/Matematicas/Tercer semestre/Portadas tareas/Calculo I
+PWD /home/radojka/DEMAT-UG/Matematicas/Tercer semestre/Portadas tareas/Calculo I
 INPUT /usr/share/texmf-dist/web2c/texmf.cnf
 INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
-INPUT /home/god/DEMAT-UG/Matematicas/Tercer semestre/Portadas tareas/Calculo I/main.tex
+INPUT /home/radojka/DEMAT-UG/Matematicas/Tercer semestre/Portadas tareas/Calculo I/main.tex
 OUTPUT main.log
 INPUT /usr/share/texmf-dist/tex/latex/standalone/standalone.cls
 INPUT /usr/share/texmf-dist/tex/latex/standalone/standalone.cls

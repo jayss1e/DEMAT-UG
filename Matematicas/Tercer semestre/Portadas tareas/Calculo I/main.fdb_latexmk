@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1788876320.44228 "/home/god/DEMAT-UG/Matematicas/Tercer semestre/Portadas tareas/Calculo I/main.tex" "main.pdf" "main" 1788876321.26008 0
-  "/home/god/DEMAT-UG/Matematicas/Tercer semestre/Portadas tareas/Calculo I/main.tex" 1788876320.22401 7646 c650f76a8bc7310f717e7c587ad2b409 ""
+["pdflatex"] 1789795678.15167 "/home/radojka/DEMAT-UG/Matematicas/Tercer semestre/Portadas tareas/Calculo I/main.tex" "main.pdf" "main" 1789795679.31521 0
+  "/home/radojka/DEMAT-UG/Matematicas/Tercer semestre/Portadas tareas/Calculo I/main.tex" 1789795677.88437 7647 4a9475c988d0ac3937add99dc2bea4bb ""
   "/usr/share/texmf-dist/fonts/enc/dvips/ebgaramond/ebg_ljow5q.enc" 1775415801 3064 ad039a5bf6faa075ad3278d742de72a1 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/ebgaramond/ebg_tcdnmr.enc" 1775415801 3038 e164542e716a689948526cfb8c023ec2 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/sourcesanspro/a_5ponh6.enc" 1775415801 3344 37c976a8b2fa4b8f132a488735054f7d ""
@@ -186,10 +186,10 @@
   "/usr/share/texmf-dist/tex/latex/xcolor/xcolor.sty" 1775415801 55384 b454dec21c2d9f45ec0b793f0995b992 ""
   "/usr/share/texmf-dist/tex/latex/xkeyval/xkeyval.sty" 1775415801 5006 d7e899bb5d9717c7f214e9bc0284de7b ""
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1775415801 43569 fd570f2fa160877d211e859f687312ba ""
-  "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1787719457 5541339 b32eb00eb34cd5c925a7827d916d9dbd ""
-  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1787719367 3765600 94f59151c054f6576a9a10425d844c96 ""
-  "main.aux" 1788876321.16941 232 73e76a51b3ab6978a073af3f7982faa6 "pdflatex"
-  "main.tex" 1788876320.22401 7646 c650f76a8bc7310f717e7c587ad2b409 ""
+  "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1789592106 5541339 b32eb00eb34cd5c925a7827d916d9dbd ""
+  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1789592027 3765588 fd3a81841918e52034f2864e7b1d7d9c ""
+  "main.aux" 1789795679.22209 232 73e76a51b3ab6978a073af3f7982faa6 "pdflatex"
+  "main.tex" 1789795677.88437 7647 4a9475c988d0ac3937add99dc2bea4bb ""
   (generated)
   "main.aux"
   "main.log"

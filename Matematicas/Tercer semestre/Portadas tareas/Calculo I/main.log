@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.8.25)  8 SEP 2026 08:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.9.16)  18 SEP 2026 23:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"/home/god/DEMAT-UG/Matematicas/Tercer semestre/Portadas tareas/Calculo I/main.tex"
-(/home/god/DEMAT-UG/Matematicas/Tercer semestre/Portadas tareas/Calculo I/main.tex
+**"/home/radojka/DEMAT-UG/Matematicas/Tercer semestre/Portadas tareas/Calculo I/main.tex"
+(/home/radojka/DEMAT-UG/Matematicas/Tercer semestre/Portadas tareas/Calculo I/main.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
 (/usr/share/texmf-dist/tex/latex/standalone/standalone.cls
@@ -694,14 +694,14 @@ L3 programming layer <2026-01-19>
  ) 
 Here is how much of TeX's memory you used:
  26261 strings out of 467525
- 669780 string characters out of 5425861
- 1249031 words of memory out of 5000000
+ 669792 string characters out of 5425861
+ 1249033 words of memory out of 5000000
  54744 multiletter control sequences out of 15000+600000
  763913 words of font info for 67 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 117i,7n,121p,800b,2034s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 117i,7n,121p,804b,2034s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/ebgaramond/EBGaramond-Italic.pfb></usr/share/texmf-dist/fonts/type1/public/ebgaramond/EBGaramond-Regular.pfb></usr/share/texmf-dist/fonts/type1/adobe/sourcesanspro/SourceSansPro-Bold.pfb></usr/share/texmf-dist/fonts/type1/adobe/sourcesanspro/SourceSansPro-Light.pfb></usr/share/texmf-dist/fonts/type1/adobe/sourcesanspro/SourceSansPro-Regular.pfb>
-Output written on main.pdf (1 page, 213912 bytes).
+Output written on main.pdf (1 page, 214061 bytes).
 PDF statistics:
  43 PDF objects out of 1000 (max. 8388607)
  28 compressed objects within 1 object stream
