@@ -1,5 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1789685061.60447 "Algebra_lineal.tex" "Algebra_lineal.pdf" "Algebra_lineal" 1789685067.00775 0
+["pdflatex"] 1789935121.20517 "/home/radojka/DEMAT-UG/Matematicas/Segundo Semestre/Algebra Lineal/Notas lineal/Algebra_lineal.tex" "Algebra_lineal.pdf" "Algebra_lineal" 1789935127.76994 0
+  "/home/radojka/DEMAT-UG/Matematicas/Segundo Semestre/Algebra Lineal/Notas lineal/Algebra_lineal.tex" 1789935120.86296 201375 5521b67e790aefd13c4ffe427ea4bb5f ""
   "/usr/share/texmf-dist/fonts/enc/dvips/libertinus-type1/lbn1_75t36g.enc" 1775415801 3035 7d37ee7011b797a1b8ca3680e8da3d4d ""
   "/usr/share/texmf-dist/fonts/enc/dvips/libertinus-type1/lbn1_mfadfl.enc" 1775415801 3038 32cc1beec45883b81d6b846e3fff8fa4 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/libertinus-type1/lbn1_sfissr.enc" 1775415801 3029 779a1fead300a8a6914296dbb8c4e4e5 ""
@@ -315,10 +316,10 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1775415801 43569 fd570f2fa160877d211e859f687312ba ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1789592106 5541339 b32eb00eb34cd5c925a7827d916d9dbd ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1789592027 3765588 fd3a81841918e52034f2864e7b1d7d9c ""
-  "Algebra_lineal.aux" 1789685066.72527 29046 e72a2102bcc7c27d0438b982ba7e67a8 "pdflatex"
-  "Algebra_lineal.out" 1789685066.72927 3820 ed7770836488ba0a0c1e0e109b37c34f "pdflatex"
-  "Algebra_lineal.tex" 1789685025.95807 197796 fc51c0007ccc1ec372e822809ddc56a5 ""
-  "Algebra_lineal.toc" 1789685066.72927 1916 0d5f452924f241f1364ce2246a50d29b "pdflatex"
+  "Algebra_lineal.aux" 1789935127.51811 29046 2e5b5d2120a3f220efcc78d6f06c8872 "pdflatex"
+  "Algebra_lineal.out" 1789935127.52311 3820 ed7770836488ba0a0c1e0e109b37c34f "pdflatex"
+  "Algebra_lineal.tex" 1789935120.86296 201375 5521b67e790aefd13c4ffe427ea4bb5f ""
+  "Algebra_lineal.toc" 1789935127.52397 1916 0d5f452924f241f1364ce2246a50d29b "pdflatex"
   "diagramas_conmutativos.pdf" 1789584944.09711 35607 ab9fd48188395b224e76acbfffb6ff86 ""
   "diagramas_conmutativos2.pdf" 1789584944.09724 55557 7240b3c96c82393599d91f5d96c39bba ""
   "diagramas_conmutativos3.pdf" 1789584944.09875 29277 cdd99ae641bba88a2ae46dad280d64c3 ""
