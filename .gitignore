@@ -45,6 +45,8 @@ a.out
 
 # --- Otros ---
 *.odt
+*.py
+*.mp4
 
 # Claude Code
 .claude/

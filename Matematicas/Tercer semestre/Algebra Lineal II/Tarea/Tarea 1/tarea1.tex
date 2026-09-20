@@ -50,11 +50,29 @@
                 a_{11} & a_{12} & a_{13}\\
                 a_{21} & a_{22} & a_{23}\\
                 a_{31} & a_{32} & a_{33}
-            \end{pmatrix}
+            \end{pmatrix}.
         \end{equation*}
-        Primero, observemos que cada fila de la matriz del enunciado es un múltiplo de la fila correspondiente de $A$, la primera fila está multiplicada por -3, la segunda por 1 y la tercera por 5. Además, la columna que contiene a $a_{13}$, $a_{23}$, $a_{33}$ aparece sin modificar en la tercera posición. Es decir, la matriz del enunciado se obtiene de $A$ multiplicando las filas por -3, 1, 5 respectivamente, multiplicando la tercera columna por 2, y luego intercambiando las columnas segunda y tercera. Como multiplicar una fila de una matriz por una constante $c$, multiplica el determinante por $c$, y como intercambiar dos columnas multiplica el determinante por -1, se sigue que
+        Denotemos por $C_{1},C_{2},C_{3}$ las columnas de $A$ y por $M$ la matriz del enunciado. Recordemos que el determinante es una función $n$-lineal y alternante de las filas de una matriz, y también de sus columnas, pues $\det(A^{t})=\det(A)$.
+
+        Las filas de $M$ son
         \begin{equation*}
-            -15=(-3)(1)(5)\cdot(2)\cdot(-1)\cdot\det(A)=30\det(A).
+            (-3)\cdot(a_{11},\,2a_{13},\,a_{12}),\qquad 1\cdot(a_{21},\,2a_{23},\,a_{22}),\qquad 5\cdot(a_{31},\,2a_{33},\,a_{32}).
+        \end{equation*}
+        Sea $B$ la matriz cuyas filas son los vectores entre paréntesis. Por linealidad en cada fila, sacamos los escalares $-3$, $1$ y $5$:
+        \begin{equation*}
+            \det(M)=(-3)(1)(5)\det(B)=-15\det(B).
+        \end{equation*}
+        Las columnas de $B$ son $C_{1}$, $2C_{3}$ y $C_{2}$, en ese orden. Por linealidad en la segunda columna,
+        \begin{equation*}
+            \det(B)=\det(C_{1},2C_{3},C_{2})=2\det(C_{1},C_{3},C_{2}).
+        \end{equation*}
+        Ahora intercambiamos las columnas segunda y tercera. Como el determinante es alternante, cambia de signo al intercambiar dos columnas, así que
+        \begin{equation*}
+            \det(C_{1},C_{3},C_{2})=-\det(C_{1},C_{2},C_{3})=-\det(A).
+        \end{equation*}
+        Juntando todo,
+        \begin{equation*}
+            -15=\det(M)=-15\cdot2\cdot(-1)\cdot\det(A)=30\det(A).
         \end{equation*}
         Despejando,
         \begin{equation*}
@@ -71,15 +89,15 @@
     \end{problema}
 
     \begin{proof}
-        Si $A^{-1}=A$, entonces multiplicando ambos lados por $A$, obtenemos
+        Si $A^{-1}=A^{t}$, entonces multiplicando ambos lados por $A$, obtenemos
         \begin{equation*}
             A^{t}A=I.
         \end{equation*}
-        Tomamos el determinante en ambos lados de esta igualdad
+        Tomamos el determinante en ambos lados de esta igualdad,
         \begin{equation*}
             \det(A^{t}A)=\det(I)=1.
         \end{equation*}
-        Como el determinante separa producto y como $\det(A)=\det(A^{t})$, se sigue que, 
+        Como el determinante separa producto y como $\det(A)=\det(A^{t})$, se sigue que
         \begin{equation*}
             \det(A^{t}A)=\det(A^{t})\det(A)=\det(A)\cdot\det(A)=[\det(A)]^{2}.
         \end{equation*}
@@ -103,7 +121,7 @@
         \begin{equation*}
             a_{1j}+a_{2j}+\cdots+a_{nj}=0.
         \end{equation*}
-        Consideremos la suma de todas las fila de $A$
+        Consideremos la suma de todas las filas de $A$
         \begin{equation*}
             F_{1}+F_{2}+\cdots+F_{n}.
         \end{equation*}
@@ -111,7 +129,7 @@
         \begin{equation*}
             a_{1j}+a_{2j}+\cdots+a_{nj},
         \end{equation*}
-        que por hipótesis vale 0 parea cada $j=1,\dots,n$. Como esto ocurre para todas las columnas, concluimos que
+        que por hipótesis vale 0 para cada $j=1,\dots,n$. Como esto ocurre para todas las columnas, concluimos que
         \begin{equation*}
             F_{1}+F_{2}+\cdots+F_{n}=0,
         \end{equation*}
@@ -124,36 +142,23 @@
     \vspace{2cm}
 
     \begin{problema}
-        Una matriz cuadrada $B\in M_{n\times n}$ se llama antisimetrica si $B^{t}=-B$. Demuestra que si $B\in M_{n\times n}$ es antisimétrica y $n$ par, entonces $\det(B)=0$.
+        Una matriz cuadrada $B\in M_{n\times n}$ se llama antisimétrica si $B^{t}=-B$. Demuestra que si $B\in M_{n\times n}$ es antisimétrica y $n$ impar, entonces $\det(B)=0$.
     \end{problema}
 
     \begin{proof}
-        si $n=2$, tomemos
+        Tomemos el determinante en ambos lados de $B^{t}=-B$,
         \begin{equation*}
-            B=
-            \begin{pmatrix}
-                0 & 1\\
-                -1 & 0
-            \end{pmatrix}
+            \det(B^{t})=\det(-B).
         \end{equation*}
-        y tambien
+        Usamos que $\det(B^{t})=\det(B)$, y que al multiplicar una matriz $n\times n$ por un escalar $c$, el determinante se multiplica por $c^{n}$. En particular, $\det(-B)=\det((-1)B)=(-1)^{n}\det(B)$. Entonces,
         \begin{equation*}
-            B^{t}=
-            \begin{pmatrix}
-                0 & -1\\
-                1 & 0
-            \end{pmatrix}
-            \quad\text{ y }\quad
-            B^{-1}=
-            \begin{pmatrix}
-                0 & -1\\
-                1 & 0
-            \end{pmatrix}
+            \det(B)=(-1)^{n}\det(B).
         \end{equation*}
-        Así, $B$ es antisimetrica, pero
-        \begin{equation*}
-            \det(B)=0\cdot0-1\cdot(-1)=1\neq0.
-        \end{equation*}
+        Como $n$ es impar, $(-1)^{n}=-1$, así que
+        \begin{align*}
+            \det(B)=-\det(B)&\implies 2\det(B)=0\\
+            &\implies\det(B)=0.
+        \end{align*}
     \end{proof}
 
     \begin{problema}
@@ -181,12 +186,12 @@
             \begin{pmatrix}
                 a_{11} & a_{12}\\
                 a_{21} & a_{22}
-            \end{pmatrix}
-        \end{equation*}.
+            \end{pmatrix}.
+        \end{equation*}
         Los cofactores son
         \begin{equation*}
             C_{11}=a_{22},\qquad C_{12}=-a_{21},\qquad C_{21}=-a_{12},\qquad C_{22}=a_{11}.
-        \end{equation*} 
+        \end{equation*}
         La matriz de cofactores es
         \begin{equation*}
             \begin{pmatrix}
@@ -279,7 +284,7 @@
                 20 & -30 & 20\\
                 0 & 15 & -24\\
                 0 & 0 & 12
-            \end{pmatrix}
+            \end{pmatrix}.
         \end{equation*}
     \end{solucion}
 
@@ -287,8 +292,73 @@
         Demuestra que para cualquier $A\in M_{n\times n}(K)$, $\det(\adj(A))=[\det(A)]^{n-1}$.
     \end{problema}
 
+    \begin{proof}
+        Si $n=1$, entonces $\adj(A)=(1)$ y ambos lados de la igualdad valen 1. Supongamos que $n\geq2$. Sabemos que, para toda matriz $A$,
+        \begin{equation*}
+            A\adj(A)=\det(A)I.
+        \end{equation*}
+        Tomamos el determinante en ambos lados de esta igualdad,
+        \begin{equation*}
+            \det(A\adj(A))=\det(\det(A)I).
+        \end{equation*}
+        Como el determinante separa producto, el lado izquierdo es $\det(A)\det(\adj(A))$. Para el lado derecho, sacamos el escalar $\det(A)$ de cada una de las $n$ filas de la matriz $\det(A)I$ por $n$-linealidad, así que
+        \begin{equation*}
+            \det(A)\det(\adj(A))=[\det(A)]^{n}\det(I)=[\det(A)]^{n}.
+        \end{equation*}
+        Ahora hay dos casos. Primer caso, $\det(A)\neq0$. Como $K$ es un campo, podemos dividir ambos lados entre $\det(A)$ y obtenemos
+        \begin{equation*}
+            \det(\adj(A))=[\det(A)]^{n-1}.
+        \end{equation*}
+        Segundo caso, $\det(A)=0$. Como $n-1\geq1$, se tiene $[\det(A)]^{n-1}=0$, así que debemos probar que $\det(\adj(A))=0$. La igualdad anterior solo nos dice que $0=0$, por lo que procederemos por contradicción. Supongamos que $\det(\adj(A))\neq0$. Entonces $\adj(A)$ es invertible, y multiplicando por $\adj(A)^{-1}$ a la derecha en
+        \begin{equation*}
+            A\adj(A)=\det(A)I=0
+        \end{equation*}
+        obtenemos
+        \begin{equation*}
+            A=0.
+        \end{equation*}
+        Pero si $A=0$, cada cofactor de $A$ es, salvo signo, el determinante de una matriz $(n-1)\times(n-1)$ con todas sus entradas iguales a cero, el cual vale 0. Es decir, $\adj(A)=0$, lo cual contradice que $\adj(A)$ sea invertible. Luego $\det(\adj(A))=0$, y
+        \begin{equation*}
+            \det(\adj(A))=0=[\det(A)]^{n-1}.
+        \end{equation*}
+        Así, en ambos casos,
+        \begin{equation*}
+            \det(\adj(A))=[\det(A)]^{n-1}.
+        \end{equation*}
+    \end{proof}
+
     \begin{problema}
         Demuestra que si $A\in M_{n\times n}(K)$ es triangular superior entonces $\adj(A)$ también es triangular superior, concluye de esta forma que $A^{-1}$ es triangular superior.
     \end{problema}
+
+    \begin{proof}
+        Sea $A=(a_{ij})$ triangular superior, es decir, $a_{kl}=0$ siempre que $k>l$. Si $n=1$ no hay nada que probar, así que supongamos que $n\geq2$. Por definición, la entrada $(i,j)$ de la adjunta clásica es
+        \begin{equation*}
+            \adj(A)_{ij}=C_{ji}=(-1)^{i+j}\det(A(j|i)),
+        \end{equation*}
+        donde $A(j|i)$ es la matriz que se obtiene de $A$ al quitar la fila $j$ y la columna $i$. Para probar que $\adj(A)$ es triangular superior debemos ver que $\adj(A)_{ij}=0$ siempre que $i>j$, es decir, que
+        \begin{equation*}
+            \det(A(j|i))=0\qquad\text{ si }j<i.
+        \end{equation*}
+        Sean $j<i$ y consideremos las filas $i,i+1,\dots,n$ de $A$. Como $j<i$, ninguna de ellas es la fila $j$, así que todas aparecen en $A(j|i)$, y son $n-i+1$ filas. Sea $k\geq i$. Como $A$ es triangular superior, la fila $k$ tiene ceros en las columnas $l<k$, en particular en las columnas $l<i$, y su entrada en la columna $i$ desaparece al quitar esa columna (si $k>i$, esa entrada ya era cero). Por tanto, en $A(j|i)$ las entradas no nulas de estas filas están a lo más en las columnas $i+1,\dots,n$ de $A$, que son $n-i$ columnas. Esto significa que las $n-i+1$ filas son vectores de un subespacio de dimensión $n-i$, y por tanto son linealmente dependientes. Como un determinante es cero si y solo si las filas de la matriz son linealmente dependientes, concluimos que
+        \begin{equation*}
+            \det(A(j|i))=0.
+        \end{equation*}
+        Así, $\adj(A)_{ij}=0$ para todo $i>j$, es decir, $\adj(A)$ es triangular superior.
+
+        Supongamos ahora que $A$ es invertible, de manera que $\det(A)\neq0$. Sabemos que
+        \begin{equation*}
+            A\adj(A)=\det(A)I.
+        \end{equation*}
+        Multiplicando por $A^{-1}$ a la izquierda y dividiendo entre $\det(A)$, que es distinto de cero,
+        \begin{equation*}
+            A^{-1}=\frac{1}{\det(A)}\adj(A).
+        \end{equation*}
+        Entonces, para $i>j$,
+        \begin{equation*}
+            (A^{-1})_{ij}=\frac{1}{\det(A)}\adj(A)_{ij}=0.
+        \end{equation*}
+        Por lo tanto, $A^{-1}$ es triangular superior.
+    \end{proof}
 
 \end{document}
