@@ -54,6 +54,9 @@
 \newcommand{\llavesgrande}[1]{\big\{#1\big\}}
 \newcommand{\llavesgrandes}[1]{\left\{#1\right\}}
 \usepackage{booktabs}
+\usepackage{csquotes}
+\usepackage[backend=biber,style=numeric,sorting=none,defernumbers=true]{biblatex}
+\addbibresource{referencias.bib}
 \addto\captionsspanish{%
   \renewcommand{\tablename}{Tabla}
 }
@@ -455,9 +458,9 @@
     pero también que $b!\,e = a(b-1)!\in\mathbb{Z}^+$. Como no existe ningún entero estrictamente entre $0$ y $1$, un entero no puede escribirse como otro entero más una cantidad estrictamente entre $0$ y $1$. Esta contradicción muestra que la suposición inicial es falsa. Por lo tanto, $e$ no puede ser racional.
   \end{proof}
   
-  \begin{problema}
+  \begin{ejemplo}
     Demostrar, con un argumento similar, que $\pi$ es irracional.
-  \end{problema}
+  \end{ejemplo}
   
   % ======================================================
   \section{Representación geométrica e intervalos}
@@ -584,12 +587,12 @@
     \item Si $P(n)$ se cumple para $n=k$, entonces se cumple para $n=k+1$ (\emph{paso inductivo}).
   \end{enumerate}
   
-  \begin{problema}
+  \begin{ejemplo}
     Demostrar por inducción la siguiente fórmula:
     \begin{equation*}
       1^2+2^2+3^2+\cdots+n^2 = \frac{n(n+1)(2n+1)}{6}
     \end{equation*}
-  \end{problema}
+  \end{ejemplo}
   
   % ======================================================
   \section{Propiedades de divisibilidad}
@@ -761,12 +764,12 @@
     lo cual es imposible para un primo. En ambos casos llegamos a una contradicción, así que el conjunto de los primos no puede ser finito.
   \end{proof}
   
-  \begin{problema}
+  \begin{ejemplo}
     Probar el siguiente teorema.
     \begin{enumerate}[label=\roman*)]
       \item Si un número primo $p$ no divide a un número $a$, entonces $(p,a)=1$.
     \end{enumerate}
-  \end{problema}
+  \end{ejemplo}
   
   \begin{proof}
     Sea $d=(p,a)$. Como $d\mid p$ y $p$ es primo, sólo hay dos opciones: $d=1$ ó $d=p$. Si fuera $d=p$, entonces de $d\mid a$ se seguiría $p\mid a$, contradiciendo la hipótesis de que $p\nmid a$. Por lo tanto la única posibilidad es $d=1$, es decir, $(p,a)=1$.
@@ -774,10 +777,10 @@
   
   El resultado siguiente se conoce como el \textbf{primer teorema de Euclides}: si $p$, $a$ y $b$ son números enteros, $p$ divide a $ab$ y $p$ es primo, entonces $p$ divide a $a$ o $p$ divide a $b$.
   
-  \begin{problema}
+  \begin{ejemplo}
     Demostrar el primer teorema de Euclides: si un número primo $p$ divide a un producto $ab$, entonces $p\mid a$ o $p\mid b$. \\
     \emph{(Fecha de entrega: viernes)}
-  \end{problema}
+  \end{ejemplo}
   
   % ======================================================
   \section{Primos de Mersenne}
@@ -900,9 +903,9 @@
   
   Ya vimos en la Sección 1.10 que todo entero $n>1$ es primo o producto de primos; lo que resta por argumentar, usando de nuevo inducción, es que dicha descomposición es \emph{única}. La idea central es que el primer teorema de Euclides (la tarea de la sección anterior) es exactamente la herramienta que permite comparar dos factorizaciones distintas de un mismo número y concluir que, en realidad, deben coincidir.
   
-  \begin{problema}
+  \begin{ejemplo}
     Completar, por inducción sobre $n$, la demostración de la unicidad de la descomposición en primos del teorema fundamental de la aritmética. (Sugerencia: usa el primer teorema de Euclides.)
-  \end{problema}
+  \end{ejemplo}
   
   La unicidad de la factorización en primos es la razón por la que los números primos se consideran los ``átomos'' de los números enteros: todo entero mayor que $1$ se construye, de manera esencialmente única, a partir de ellos. Esta idea se generaliza en álgebra abstracta a estructuras más generales llamadas \textbf{dominios de factorización única}.
 
@@ -1553,5 +1556,11 @@
     \includegraphics{figuras/recta-vertical.pdf}
     \caption{Una relación que no es función (izquierda) y una que sí lo es (derecha).}
   \end{figure}
+
+  % ---------------- BIBLIOGRAFÍA ----------------
+
+  \cleardoublepage
+  \nocite{*}
+  \printbibliography[heading=bibintoc,title={Bibliografía}]
 
 \end{document}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.9.16)  17 SEP 2026 15:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.9.16)  20 SEP 2026 12:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -24,11 +24,8 @@ File: bk12.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
 \belowcaptionskip=\skip50
 \bibindent=\dimen148
 ) (./ugmath_notas.sty
+Package: ugmath_notas 2025/01/01 Estilo matemático personal
 
-LaTeX Warning: You have requested package `ugmath_notas',
-               but the package provides `ugmath'.
-
-Package: ugmath 2025/01/01 Estilo matemático personal
 (/usr/share/texmf-dist/tex/generic/babel/babel.sty
 Package: babel 2026/02/14 v26.3 The multilingual framework for LuaLaTeX, pdfLaT
 eX and XeLaTeX
@@ -1150,7 +1147,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip165
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 390.
+Package hyperref Info: Option `colorlinks' set `true' on input line 404.
 )
 (/usr/share/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
@@ -1511,8 +1508,8 @@ pdfTeX warning (ext4): destination with the same identifier (name{ejemplo.1}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.184     \begin{ejemplo}
-                          [7]
+l.185         \textbf
+                     {Demostración directa.} [7]
 pdfTeX warning (ext4): destination with the same identifier (name{prop.1}) has 
 been already used, duplicate ignored
 <to be read again> 
@@ -1585,8 +1582,9 @@ pdfTeX warning (ext4): destination with the same identifier (name{ejemplo.1}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.280     \begin{ejemplo}
-                          [11]
+l.281         S
+               i $A=\{x\in U : x \text{ satisface } P\}$ y $B=\{x\in U : x \...
+[11]
 pdfTeX warning (ext4): destination with the same identifier (name{defn.3}) has 
 been already used, duplicate ignored
 <to be read again> 
@@ -1714,8 +1712,8 @@ pdfTeX warning (ext4): destination with the same identifier (name{ejemplo.1}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.400     \begin{ejemplo}
-                         
+l.401         S
+               ean $A=\{1,2,3\}$, $B=\{5,6,7\}$. Consideremos
 pdfTeX warning (ext4): destination with the same identifier (name{defn.2}) has 
 been already used, duplicate ignored
 <to be read again> 
@@ -1734,8 +1732,9 @@ pdfTeX warning (ext4): destination with the same identifier (name{ejemplo.2}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.416     \begin{ejemplo}
-                         
+l.417         S
+               ean $A=\{1,2\}$, $B=\{\alpha,\beta\}$, $C=\{e,\pi\}$, $R=\{(1...
+
 pdfTeX warning (ext4): destination with the same identifier (name{prop.1}) has 
 been already used, duplicate ignored
 <to be read again> 
@@ -1768,8 +1767,9 @@ pdfTeX warning (ext4): destination with the same identifier (name{ejemplo.3}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.458     \begin{ejemplo}
-                         
+l.459         $
+               f:\N\to\N$, $n\mapsto n+1$. El dominio y el codominio coincid...
+
 pdfTeX warning (ext4): destination with the same identifier (name{prop.2}) has 
 been already used, duplicate ignored
 <to be read again> 
@@ -1863,8 +1863,8 @@ pdfTeX warning (ext4): destination with the same identifier (name{ejemplo.4}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.521     \begin{ejemplo}
-                         
+l.522         $
+               f:\R\to\R$, $x\mapsto 2x$, es inyectiva: si $f(x_1)=f(x_2)$, ...
 Package mdframed Info: mdframed works in twoside mode on input line 531.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
@@ -1881,7 +1881,7 @@ Package mdframed Info: mdframed detected package amsthm
 (mdframed)              on input line 537.
 LaTeX Info: Redefining \. on input line 558.
 LaTeX Info: Redefining \% on input line 558.
- [20]
+[20]
 Package mdframed Info: mdframed works in twoside mode on input line 558.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
@@ -2004,8 +2004,8 @@ pdfTeX warning (ext4): destination with the same identifier (name{ejemplo.1}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.724     \begin{ejemplo}
-                         
+l.725         P
+               ara todo $n\in\N$ con $n\ge 5$, $2^n > n^2$.
 pdfTeX warning (ext4): destination with the same identifier (name{prop.2}) has 
 been already used, duplicate ignored
 <to be read again> 
@@ -2045,8 +2045,9 @@ pdfTeX warning (ext4): destination with the same identifier (name{ejemplo.1}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.770     \begin{ejemplo}
-                         
+l.771         S
+               ea $A=\N$ y $R_1 = \{(n,m)\in A\times A : n-m \text{ es par}\}$.
+
 pdfTeX warning (ext4): destination with the same identifier (name{defn.2}) has 
 been already used, duplicate ignored
 <to be read again> 
@@ -2067,8 +2068,8 @@ pdfTeX warning (ext4): destination with the same identifier (name{ejemplo.2}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.790     \begin{ejemplo}
-                         
+l.791         \textbf
+                     {Congruencia módulo $n$.}
 pdfTeX warning (ext4): destination with the same identifier (name{defn.3}) has 
 been already used, duplicate ignored
 <to be read again> 
@@ -2141,11 +2142,11 @@ pdfTeX warning (ext4): destination with the same identifier (name{ejemplo.1}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.911     \begin{ejemplo}
-                         
+l.912         C
+               onsideremos la afirmación ``para todo $n \in \N$, $n^2+n+1$ ...
 LaTeX Info: Redefining \. on input line 915.
 LaTeX Info: Redefining \% on input line 915.
- [32]
+[32]
 pdfTeX warning (ext4): destination with the same identifier (name{prop.2}) has 
 been already used, duplicate ignored
 <to be read again> 
@@ -2364,10 +2365,10 @@ Package rerunfilecheck Info: File `notas.out' has not changed.
 (rerunfilecheck)             Checksum: AAF60D5CF6F96EC41DC19A1CA3489F83;6429.
  ) 
 Here is how much of TeX's memory you used:
- 41575 strings out of 467525
- 927730 string characters out of 5425861
- 1471023 words of memory out of 5000000
- 69612 multiletter control sequences out of 15000+600000
+ 41589 strings out of 467525
+ 928070 string characters out of 5425861
+ 1470179 words of memory out of 5000000
+ 69626 multiletter control sequences out of 15000+600000
  689593 words of font info for 85 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,17n,108p,747b,1221s stack positions out of 10000i,1000n,20000p,200000b,200000s

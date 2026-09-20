@@ -340,8 +340,16 @@
 \renewcommand{\theejemplo}{\thechapter.\arabic{ejemplo}}
 
 % ─── Entorno ejemplo ───────────────────────────────────────────────
+% Si el ejemplo termina con una demostración, se omite el $\blacktriangle$
+% y queda sólo el $\blacksquare$ de la demostración. La bandera se activa al
+% cerrar una \texttt{proof} y se apaga en cuanto empieza cualquier párrafo.
+\newif\ifug@tras@proof
+\AddToHook{env/proof/after}{\global\ug@tras@prooftrue}
+\AddToHook{para/begin}{\global\ug@tras@prooffalse}
+
 \newenvironment{ejemplo}[1][]{%
   \refstepcounter{ejemplo}%
+  \global\ug@tras@prooffalse
   \par\medskip
   \noindent\textbf{Ejemplo \theejemplo}%
   \ifx&#1&%
@@ -350,7 +358,9 @@
   \fi
   \par\smallskip
 }{%
-  \hfill$\blacktriangle$\par\medskip
+  \ifug@tras@proof\else\hfill$\blacktriangle$\fi
+  \global\ug@tras@prooffalse
+  \par\medskip
 }
 
 % ─── Contador de ejercicios ────────────────────────────────────────

@@ -340,13 +340,27 @@
 \renewcommand{\theejemplo}{\thechapter.\arabic{ejemplo}}
 
 % ─── Entorno ejemplo ───────────────────────────────────────────────
-\newenvironment{ejemplo}{%
+% Si el ejemplo termina con una demostración, se omite el $\blacktriangle$
+% y queda sólo el $\blacksquare$ de la demostración. La bandera se activa al
+% cerrar una \texttt{proof} y se apaga en cuanto empieza cualquier párrafo.
+\newif\ifug@tras@proof
+\AddToHook{env/proof/after}{\global\ug@tras@prooftrue}
+\AddToHook{para/begin}{\global\ug@tras@prooffalse}
+
+\newenvironment{ejemplo}[1][]{%
   \refstepcounter{ejemplo}%
+  \global\ug@tras@prooffalse
   \par\medskip
   \noindent\textbf{Ejemplo \theejemplo}%
+  \ifx&#1&%
+  \else%
+    \textbf{ (#1)}%
+  \fi
   \par\smallskip
 }{%
-  \hfill$\blacktriangle$\par\medskip
+  \ifug@tras@proof\else\hfill$\blacktriangle$\fi
+  \global\ug@tras@prooffalse
+  \par\medskip
 }
 
 % ─── Contador de ejercicios ────────────────────────────────────────
@@ -403,6 +417,8 @@
 \newcommand{\CC}{\mathcal{C}}
 \newcommand{\TT}{\mathcal{T}}
 \newcommand{\LL}{\mathcal{L}}
+\renewcommand{\AA}{\mathcal{A}}
+\renewcommand{\SS}{\mathcal{S}}
 \newcommand{\pfrac}[2]{\left( \frac{#1}{#2} \right)} %
 \newcommand{\bfrac}[2]{\left[ \frac{#1}{#2} \right]} %corchetes
 \newcommand{\vecpar}[1]{\left( #1 \right)}
@@ -415,7 +431,8 @@
 \DeclareMathOperator{\rg}{rg}      % Rango (álgebra lineal)
 \DeclareMathOperator{\sgn}{sgn}    % Signo (álgebra lineal)
 \DeclareMathOperator{\Var}{Var}    % Varianza (probabilidad)
-\newcommand{\ssi}{\Longleftrightarrow}
+\newcommand{\Ssi}{\Longleftrightarrow}
+\newcommand{\ssi}{\leftrightarrow}
 \newcommand{\gen}[1]{\langle #1 \rangle}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 \let\a\alpha
