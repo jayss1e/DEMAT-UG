@@ -1,0 +1,15 @@
+\documentclass[tikz,border=2pt]{standalone}
+\usetikzlibrary{arrows.meta}
+\begin{document}
+\begin{tikzpicture}[>=Stealth]
+    \draw[->] (-0.5,0) -- (4.2,0) node[right] {$\mathrm{Re}$};
+    \draw[->] (0,-0.5) -- (0,3.4) node[above] {$\mathrm{Im}$};
+    \draw[dashed] (3,0) -- (3,2.4) ;
+    \draw[dashed] (0,2.4) -- (3,2.4);
+    \draw[->,thick] (0,0) -- (3,2.4);
+    \fill (3,2.4) circle (1.5pt) node[above right] {$z=x+iy$};
+    \node[below] at (3,0) {$x$};
+    \node[left] at (0,2.4) {$y$};
+    \node[above left] at (1.5,1.2) {$|z|$};
+\end{tikzpicture}
+\end{document}

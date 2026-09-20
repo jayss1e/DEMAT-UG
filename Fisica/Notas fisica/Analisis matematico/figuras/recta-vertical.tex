@@ -1,0 +1,23 @@
+\documentclass[tikz,border=2pt]{standalone}
+\usetikzlibrary{arrows.meta}
+\begin{document}
+\begin{tikzpicture}[>=Stealth]
+    % Relación que no es función: una circunferencia
+    \begin{scope}
+        \draw[->] (-1.6,0) -- (1.9,0);
+        \draw[->] (0,-1.5) -- (0,1.5);
+        \draw (0,0) circle (1.1);
+        \draw[dashed] (0.6,-1.4) -- (0.6,1.4);
+        \fill (0.6,0.9220) circle (1.3pt);
+        \fill (0.6,-0.9220) circle (1.3pt);
+    \end{scope}
+    % Función: y = x^3 / 2
+    \begin{scope}[xshift=4.5cm]
+        \draw[->] (-1.6,0) -- (1.9,0);
+        \draw[->] (0,-1.5) -- (0,1.5);
+        \draw[domain=-1.45:1.45,samples=60,smooth] plot (\x,{0.45*\x*\x*\x});
+        \draw[dashed] (0.6,-1.4) -- (0.6,1.4);
+        \fill (0.6,{0.45*0.6*0.6*0.6}) circle (1.3pt);
+    \end{scope}
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,123 @@
+% Portada de las notas de Álgebra Lineal Avanzada (mismo estilo que las portadas de notas:
+% fondo oscuro, diagrama del tema, título en dos tonos, bloque de autoría y pie con año).
+% Diagrama: grafo de Cayley de S_3 = <r,s | r^3 = s^2 = e, srs = r^{-1}> inscrito en el
+% círculo que contiene a C_3 (grupo continuo SO(2)), con su tangente en la identidad.
+\documentclass[tikz,border=0pt]{standalone}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+\usepackage[scaled=.92]{helvet}
+\usepackage{microtype}
+\usetikzlibrary{arrows.meta,decorations.markings}
+
+% ---- paleta ----
+\definecolor{bg}{HTML}{0A0E17}
+\definecolor{footer}{HTML}{050709}
+\definecolor{sep}{HTML}{1E2438}
+\definecolor{dots}{HTML}{111725}
+\definecolor{ink}{HTML}{F0F0F5}
+\definecolor{sub}{HTML}{8890A8}
+\definecolor{dim}{HTML}{3B4262}
+\definecolor{foot}{HTML}{8189A0}
+\definecolor{rot}{HTML}{2EC4B6}   % acento principal (rotaciones, generador r)
+\definecolor{ref}{HTML}{B18CFF}   % acento secundario (clase lateral s·<r>)
+\definecolor{gold}{HTML}{F0D060}  % acento terciario (generador s)
+\definecolor{ring}{HTML}{18223A}
+
+% ---- geometría del diagrama ----
+\pgfmathsetmacro{\cx}{297.6}\pgfmathsetmacro{\cy}{552}   % centro en la página (pt)
+\pgfmathsetmacro{\Ro}{138}\pgfmathsetmacro{\Ri}{66}      % radios de los triángulos exterior e interior
+
+% arista dirigida con punta de flecha en el punto medio
+\tikzset{
+  dir/.style={line width=1.3pt,
+    postaction={decorate,decoration={markings,mark=at position 0.53 with {\arrow{Stealth[length=7pt,width=6pt]}}}}},
+  vert/.style={circle,line width=1pt,inner sep=0pt,minimum size=24pt,font=\itshape\small}
+}
+
+\begin{document}
+\begin{tikzpicture}[x=1bp,y=1bp]
+  \useasboundingbox (0,0) rectangle (595.276,841.89);
+  \fill[bg] (0,0) rectangle (595.276,841.89);
+
+  % rejilla de puntos
+  \foreach \i in {1,...,19}{\foreach \j in {6,...,27}{\fill[dots] (\i*30,\j*30) circle (0.7);}}
+
+  % brillo suave tras el diagrama
+  \shade[inner color=rot!16!bg,outer color=bg] (\cx,\cy) circle (215);
+
+  % franja lateral y marcas superiores
+  \fill[rot] (0,0) rectangle (5.4,841.89);
+  \fill[rot] (23.4,804.1) rectangle (90,802.3);
+  \fill[ref] (93.5,804.1) rectangle (135,802.3);
+  \node[anchor=east,font=\sffamily\fontsize{6.5}{7}\selectfont,text=dim] at (570,817) {\textls[220]{NOTAS DE CLASE}};
+
+  % ---------------- diagrama ----------------
+  % círculos de fondo (grupo continuo SO(2)) y ejes
+  \begin{scope}
+    \clip (0,345) rectangle (595.276,841.89);
+    \draw[ring,line width=0.6pt] (\cx,\cy) circle (\Ro+50);
+    \draw[ring,line width=0.6pt,dash pattern=on 1pt off 3pt] (\cx,\cy) circle (\Ro+100);
+    \draw[ring,line width=0.6pt] (\cx-\Ro-115,\cy) -- (\cx+\Ro+115,\cy);
+    \draw[ring,line width=0.6pt] (\cx,\cy-\Ro-115) -- (\cx,\cy+\Ro+115);
+  \end{scope}
+  \draw[dim,line width=0.9pt] (\cx,\cy) circle (\Ro);
+
+  % tangente en la identidad (álgebra de Lie de SO(2))
+  \draw[dim,->,line width=0.9pt,-{Stealth[length=6pt,width=5pt]}] (\cx-70,\cy+\Ro) -- (\cx+95,\cy+\Ro);
+
+  % vértices: exterior e, r, r^2 (arriba, abajo-izq., abajo-der.); interior s, sr^2, sr
+  \coordinate (E)  at ({\cx},{\cy+\Ro});
+  \coordinate (R)  at ({\cx+\Ro*cos(210)},{\cy+\Ro*sin(210)});
+  \coordinate (RR) at ({\cx+\Ro*cos(330)},{\cy+\Ro*sin(330)});
+  \coordinate (S)  at ({\cx},{\cy+\Ri});
+  \coordinate (SRR) at ({\cx+\Ri*cos(210)},{\cy+\Ri*sin(210)});
+  \coordinate (SR)  at ({\cx+\Ri*cos(330)},{\cy+\Ri*sin(330)});
+
+  % nodos (sin dibujar aún, para que las aristas se recorten en su borde)
+  \node[vert] (e)   at (E)   {};
+  \node[vert] (r)   at (R)   {};
+  \node[vert] (rr)  at (RR)  {};
+  \node[vert] (s)   at (S)   {};
+  \node[vert] (srr) at (SRR) {};
+  \node[vert] (sr)  at (SR)  {};
+
+  % multiplicación por s (aristas no dirigidas): g -- gs
+  \draw[gold,line width=1.3pt] (e) -- (s);
+  \draw[gold,line width=1.3pt] (r) -- (srr);
+  \draw[gold,line width=1.3pt] (rr) -- (sr);
+  % multiplicación por r: e -> r -> r^2 -> e y s -> sr -> sr^2 -> s
+  \draw[rot,dir] (e) -- (r);
+  \draw[rot,dir] (r) -- (rr);
+  \draw[rot,dir] (rr) -- (e);
+  \draw[ref,dir] (s) -- (sr);
+  \draw[ref,dir] (sr) -- (srr);
+  \draw[ref,dir] (srr) -- (s);
+
+  % vértices dibujados encima de las aristas
+  \foreach \n/\l/\col in {e/e/rot, r/r/rot, rr/r^2/rot, s/s/ref, sr/sr/ref, srr/sr^2/ref}{
+    \node[vert,draw=\col,fill=\col!22!bg,text=\col] at (\n) {$\l$};
+  }
+  \node[text=dim,font=\small] at (\cx,322) {$S_3=\langle r,s\mid r^3=s^2=e,\ srs=r^{-1}\rangle$};
+
+  % ---------------- bloque de texto ----------------
+  \draw[sep,line width=0.6pt] (23.4,300) -- (570,300);
+  \fill[gold] (23.4,282) rectangle (68.4,280.6);
+  \node[anchor=base west,text=ink,font=\bfseries\fontsize{44}{48}\selectfont] at (21,232) {\'Algebra Lineal};
+  \node[anchor=base west,text=rot,font=\bfseries\fontsize{44}{48}\selectfont] at (21,187) {Avanzada};
+  \node[anchor=base west,text=sub,font=\itshape\fontsize{10}{12}\selectfont] at (23.4,164) {Notas de clase: grupos, espacios vectoriales y teor\'{\i}a de representaciones};
+  \draw[sep,line width=0.6pt] (23.4,148) -- (570,148);
+  \node[anchor=base west,text=dim,font=\sffamily\fontsize{6.5}{7}\selectfont] at (23.4,134) {\textls[220]{ELABORADAS POR}};
+  \node[anchor=base west,text=ink,font=\fontsize{12}{14}\selectfont] at (23.4,116) {Gabriel Toshiaki Todaka Astudillo};
+  \node[anchor=base west,text=ink,font=\fontsize{12}{14}\selectfont] at (23.4,100) {Ricardo Le\'on Mart\'{\i}nez};
+  \node[anchor=base west,text=dim,font=\sffamily\fontsize{6.5}{7}\selectfont] at (330,134) {\textls[220]{PROFESOR}};
+  \node[anchor=base west,text=sub,font=\itshape\fontsize{12}{14}\selectfont] at (330,116) {Azarael Adenay Yebra P\'erez};
+
+  % ---------------- pie ----------------
+  \fill[footer] (0,0) rectangle (595.276,51);
+  \fill[rot] (23.4,51) rectangle (72,49.6);
+  \node[anchor=base west,text=foot,font=\sffamily\fontsize{7}{8}\selectfont] at (23.4,30) {Departamento de F\'{\i}sica};
+  \node[anchor=base west,text=foot,font=\sffamily\fontsize{7}{8}\selectfont] at (23.4,17) {Divisi\'on de Ciencias e Ingenier\'{\i}as\ \,\textperiodcentered\ \,Campus Le\'on\ \,\textperiodcentered\ \,Universidad de Guanajuato};
+  \node[anchor=base east,text=gold,font=\fontsize{18}{20}\selectfont] at (570,20) {2026};
+\end{tikzpicture}
+\end{document}

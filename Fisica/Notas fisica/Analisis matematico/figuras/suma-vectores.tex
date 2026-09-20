@@ -1,0 +1,13 @@
+\documentclass[tikz,border=2pt]{standalone}
+\usetikzlibrary{arrows.meta}
+\begin{document}
+\begin{tikzpicture}[>=Stealth]
+    \draw[->] (-0.4,0) -- (5.2,0) node[right] {$\mathrm{Re}$};
+    \draw[->] (0,-0.4) -- (0,3.8) node[above] {$\mathrm{Im}$};
+    \draw[dashed] (1,2) -- (4.4,2.9);
+    \draw[dashed] (3.4,0.9) -- (4.4,2.9);
+    \draw[->,thick] (0,0) -- (1,2)     node[above left]  {$z_1$};
+    \draw[->,thick] (0,0) -- (3.4,0.9) node[below right] {$z_2$};
+    \draw[->,thick] (0,0) -- (4.4,2.9) node[above right] {$z_1+z_2$};
+\end{tikzpicture}
+\end{document}

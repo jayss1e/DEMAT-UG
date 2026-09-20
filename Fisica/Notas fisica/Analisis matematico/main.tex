@@ -44,6 +44,9 @@
 \usepackage{tikz-cd}
 \usepackage{amsthm}
 \renewcommand{\Tr}{\operatorname{Tr}}
+\DeclareMathOperator{\Real}{Re}
+\DeclareMathOperator{\Imag}{Im}
+\DeclareMathOperator{\Arg}{Arg}
 \newcommand{\comillas}[1]{``#1''}
 \newcommand{\llaves}[1]{\{#1\}}
 \newcommand{\parentesis}[1]{\left(#1\right)}
@@ -97,9 +100,9 @@
   \setcounter{page}{1}
   \tableofcontents
 
-  \chapter{Números Reales}
+  \chapter{El sistema de los números reales y complejos}
  
-  En este capítulo construimos, a partir de un puñado de axiomas, el sistema de los números reales que usaremos durante todo el curso. Empezamos con el lenguaje básico de conjuntos, después presentamos los axiomas de cuerpo, de orden y de completitud que caracterizan a $\mathbb{R}$, y terminamos estudiando a los números enteros: divisibilidad, inducción matemática y números primos.
+  En este capítulo construimos, a partir de un puñado de axiomas, el sistema de los números reales que usaremos durante todo el curso. Empezamos con el lenguaje básico de conjuntos, después presentamos los axiomas de cuerpo, de orden y de completitud que caracterizan a $\mathbb{R}$, y estudiamos a los números enteros: divisibilidad, inducción matemática y números primos. Al final construimos el sistema de los números complejos.
   
   % ======================================================
   \section{Notación básica de conjuntos}
@@ -117,6 +120,8 @@
     Diremos que un conjunto $A$ es \textbf{subconjunto} de un conjunto $B$, lo cual escribiremos $A \subset B$, si todo elemento de $A$ es también elemento de $B$.
   \end{definicion}
   
+  Si $A \subset B$ pero $A \neq B$, decimos que $A$ es un \textbf{subconjunto propio} de $B$ y lo escribimos $A \subsetneq B$.
+
   Siempre que se introduce un objeto matemático hay que decir cuándo dos de esos objetos son iguales. Para conjuntos, el criterio es el siguiente.
   
   \noindent\textbf{Criterio (igualdad de conjuntos).} Dos conjuntos son iguales si y sólo si tienen exactamente los mismos elementos. En consecuencia, para probar que $A=B$ basta mostrar que $A \subset B$ y que $B \subset A$.
@@ -138,7 +143,14 @@
     \{x \in X : P(x)\}
   \end{equation*}
   para denotar al conjunto de los $x \in X$ tales que se cumple $P(x)$. El símbolo ``$:$'' se lee ``tal que'' (o ``tales que''). Cuando se trabaja con un conjunto fijo $X$, en ocasiones escribiremos simplemente $\{x : P(x)\}$, entendiendo que los $x$ en consideración son elementos de $X$.
-  
+
+  \begin{ejemplo}
+    El conjunto de los reales positivos donde el seno se anula es
+    \begin{equation*}
+      S=\{x\in\mathbb{R} : \sin(x)=0 \text{ y } x>0\}=\{x : x=n\pi \text{ con } n\in\mathbb{N}\}=\{\pi,2\pi,3\pi,\dots\}.
+    \end{equation*}
+  \end{ejemplo}
+
   % ======================================================
   \section{Distintas clases de números}
   % ======================================================
@@ -867,7 +879,7 @@
   \section{Teorema fundamental de la aritmética}
   % ======================================================
   
-  Cerramos el capítulo con el resultado que da nombre a esta rama de las matemáticas: todo entero mayor que $1$ se descompone en primos de una única manera.
+  Cerramos el estudio de los enteros con el resultado que da nombre a esta rama de las matemáticas: todo entero mayor que $1$ se descompone en primos de una única manera.
   
   \begin{teorema}[Teorema fundamental de la aritmética]
     Todo entero $n>1$ puede representarse como el producto de factores primos de una sola manera, salvo por el orden en que se escriban los factores.
@@ -893,10 +905,653 @@
   \end{problema}
   
   La unicidad de la factorización en primos es la razón por la que los números primos se consideran los ``átomos'' de los números enteros: todo entero mayor que $1$ se construye, de manera esencialmente única, a partir de ellos. Esta idea se generaliza en álgebra abstracta a estructuras más generales llamadas \textbf{dominios de factorización única}.
-  
+
+  % ======================================================
+  \section{Números complejos: definición y operaciones}
+  % ======================================================
+
+  Para terminar el capítulo extendemos el sistema de los números reales al de los números complejos $\mathbb{C}$: los construimos a partir de los pares ordenados de números reales, estudiamos su álgebra, su interpretación geométrica y su forma polar y exponencial, y terminamos con las raíces $n$-ésimas.
+
+  \begin{definicion}[Números complejos]
+    Un \textbf{número complejo} es un par ordenado $z=(x,y)$ de números reales $x,y\in\mathbb{R}$. Al conjunto de todos ellos lo denotamos por $\mathbb{C}=\mathbb{R}\times\mathbb{R}$ (el producto cartesiano, que se estudia en el capítulo~2). Los representamos como puntos del \textbf{plano complejo}, donde el eje horizontal es el \textbf{eje real} y el eje vertical es el \textbf{eje imaginario}.
+  \end{definicion}
+
+  Si $z=(a,b)\in\mathbb{C}$, escribimos
+  \begin{equation*}
+    \Real\{z\}=a \quad (\text{parte real}), \qquad \Imag\{z\}=b \quad (\text{parte imaginaria}),
+  \end{equation*}
+  de modo que $\Real\{z\},\Imag\{z\}\in\mathbb{R}$. Por el teorema~\ref{teo:igualdad-pares} (capítulo~2), dos números complejos son iguales si y sólo si tienen la misma parte real y la misma parte imaginaria.
+
+  Los números de la forma $(0,y)$ se denominan \textbf{imaginarios puros}. Identificamos a cada real $a$ con el complejo $(a,0)$; con esta identificación $\mathbb{R}\subset\mathbb{C}$, y veremos abajo que las operaciones de $\mathbb{C}$ extienden a las de $\mathbb{R}$.
+
+  \begin{definicion}[Suma, resta y producto]
+    Sean $z_1=(a_1,b_1)$ y $z_2=(a_2,b_2)$ en $\mathbb{C}$. Definimos
+    \begin{align*}
+      z_1\pm z_2 & = (a_1\pm a_2,\ b_1\pm b_2),                        \\
+      z_1z_2     & = (a_1a_2-b_1b_2,\ a_1b_2+a_2b_1).
+    \end{align*}
+  \end{definicion}
+
+  Si $b_1=b_2=0$, entonces $z_1z_2=(a_1a_2,0)$ y $z_1\pm z_2=(a_1\pm a_2,0)$: sobre los reales, las nuevas operaciones coinciden con las de $\mathbb{R}$.
+
+  % ======================================================
+  \section{La unidad imaginaria}
+  % ======================================================
+
+  Sea $z=(a,b)\in\mathbb{C}$. Entonces
+  \begin{align*}
+    z & = (a,b)                                                             \\
+      & = (a,0)+(0,b)                                                       \\
+      & = a\,(1,0)+b\,(0,1) \qquad \text{(pues $(b,0)(0,1)=(0,b)$)} \\
+      & = a+b\,i,
+  \end{align*}
+  donde $1=(1,0)$ y donde
+  \begin{equation*}
+    i=(0,1)
+  \end{equation*}
+  se llama la \textbf{unidad imaginaria}. Ésta es la \textbf{forma binómica} $z=a+bi$ de un número complejo. Calculamos
+  \begin{equation*}
+    i^2=i\cdot i=(0,1)(0,1)=(0\cdot 0-1\cdot 1,\ 0\cdot 1+1\cdot 0)=(-1,0)=-1.
+  \end{equation*}
+  Así, $i^2=-1\in\mathbb{R}$, aunque $i\notin\mathbb{R}$ (ningún número real tiene cuadrado negativo); por eso, informalmente, se escribe $i=\sqrt{-1}$.
+
+  % ======================================================
+  \section{Conjugado y módulo}
+  % ======================================================
+
+  \begin{definicion}[Conjugado]
+    Sea $z=(a,b)=a+ib$. Su \textbf{conjugado} es el número complejo
+    \begin{equation*}
+      \overline{z}=a-ib.
+    \end{equation*}
+    (También se usa la notación $z^*$.) Geométricamente, $\overline{z}$ es el reflejo de $z$ respecto al eje real.
+  \end{definicion}
+
+  Calculemos el producto de un número por su conjugado:
+  \begin{align*}
+    z\overline{z} & = (a+ib)(a-ib)  \\
+                  & = a^2-i^2b^2    \\
+                  & = a^2+b^2.
+  \end{align*}
+  Este número es real y no negativo, lo que permite la siguiente definición.
+
+  \begin{definicion}[Módulo]
+    El \textbf{módulo} de $z=a+ib$ es
+    \begin{equation*}
+      |z|=\sqrt{z\overline{z}}=\sqrt{a^2+b^2}, \qquad\text{es decir,}\qquad |z|^2=z\overline{z}.
+    \end{equation*}
+  \end{definicion}
+
+  Del hecho de que $a^2+b^2$ sea una suma de cuadrados reales se siguen de inmediato las propiedades:
+  \begin{enumerate}[label=\roman*)]
+    \item $|z|\in\mathbb{R}$.
+    \item $|z|\geq 0$, y $|z|=0$ si y sólo si $z=(0,0)$ (pues $a^2+b^2=0$ exige $a=b=0$).
+  \end{enumerate}
+
+  % ======================================================
+  \section{Propiedades algebraicas de los complejos}
+  % ======================================================
+
+  Sean $z_1,z_2,z_3\in\mathbb{C}$. Se cumplen las siguientes propiedades, que se verifican directamente a partir de la definición de las operaciones y de las propiedades de $\mathbb{R}$ (por ejemplo, $z_1z_2=z_2z_1$ pues $(a_1a_2-b_1b_2,\ a_1b_2+a_2b_1)$ es simétrico bajo el intercambio $1\leftrightarrow 2$).
+  \begin{enumerate}[label=\roman*)]
+    \item \textbf{Leyes conmutativas:} $z_1+z_2=z_2+z_1$ y $z_1z_2=z_2z_1$.
+    \item \textbf{Leyes asociativas:} $z_1+(z_2+z_3)=(z_1+z_2)+z_3$ y $z_1(z_2z_3)=(z_1z_2)z_3$.
+    \item \textbf{Ley distributiva:} $z_1(z_2+z_3)=z_1z_2+z_1z_3$.
+    \item \textbf{Identidades para la suma y el producto:} con $0=(0,0)$ y $1=(1,0)$,
+          \begin{equation*}
+            (a,b)+(0,0)=(a,b), \quad\text{es decir, } z+0=z; \qquad (a,b)(1,0)=(a,b), \quad\text{es decir, } z\cdot 1=z.
+          \end{equation*}
+    \item \textbf{Existencia del inverso aditivo:} si $z=a+ib$, su inverso aditivo es $-z=-a-ib$, y satisface $z+(-z)=0$.
+    \item \textbf{Existencia del inverso multiplicativo:} si $z\neq 0$, existe $z^{-1}\in\mathbb{C}$ tal que $z\cdot z^{-1}=1$.
+  \end{enumerate}
+
+  Estas propiedades dicen que $\mathbb{C}$, con la suma y el producto, satisface los mismos axiomas de cuerpo de la sección 1.3. Veamos con detalle la última.
+
+  \begin{proposicion}[Inverso multiplicativo]
+    Si $z=a+ib\neq 0$, entonces existe un único $z^{-1}\in\mathbb{C}$ tal que $z\,z^{-1}=1$, dado por
+    \begin{equation*}
+      z^{-1}=\frac{1}{z}=\frac{a}{a^2+b^2}-\frac{b}{a^2+b^2}\,i=\frac{\overline{z}}{|z|^2}.
+    \end{equation*}
+    En particular, $\Real\{z^{-1}\}=\dfrac{a}{a^2+b^2}$ e $\Imag\{z^{-1}\}=-\dfrac{b}{a^2+b^2}$.
+  \end{proposicion}
+
+  \begin{proof}
+    Buscamos $w=u+iv$ con $zw=1$. Como
+    \begin{equation*}
+      zw=(a+ib)(u+iv)=au+iav+ibu+i^2bv=(au-bv)+i(av+bu),
+    \end{equation*}
+    la condición $zw=1+i0$ equivale al sistema
+    \begin{align*}
+      au-bv & = 1, \\
+      av+bu & = 0.
+    \end{align*}
+    Multiplicando la primera ecuación por $a$, la segunda por $b$ y sumando, obtenemos $(a^2+b^2)u=a$. Multiplicando la primera por $-b$, la segunda por $a$ y sumando, obtenemos $(a^2+b^2)v=-b$. Como $z\neq 0$, se tiene $a^2+b^2>0$ y por lo tanto
+    \begin{equation*}
+      u=\frac{a}{a^2+b^2}, \qquad v=-\frac{b}{a^2+b^2}.
+    \end{equation*}
+    Esto muestra que, si existe, $w$ es necesariamente ese número (unicidad). Recíprocamente, estos valores satisfacen ambas ecuaciones: $au-bv=\dfrac{a^2+b^2}{a^2+b^2}=1$ y $av+bu=\dfrac{-ab+ab}{a^2+b^2}=0$. Finalmente,
+    \begin{equation*}
+      \frac{\overline{z}}{|z|^2}=\frac{a-ib}{a^2+b^2}=\frac{a}{a^2+b^2}-\frac{b}{a^2+b^2}\,i,
+    \end{equation*}
+    que coincide con $w$. (Éste es el mismo resultado que se obtiene multiplicando y dividiendo por el conjugado: $\dfrac{1}{z}=\dfrac{1}{z}\cdot\dfrac{\overline{z}}{\overline{z}}=\dfrac{\overline{z}}{z\overline{z}}=\dfrac{\overline{z}}{|z|^2}$.)
+  \end{proof}
+
+  \begin{definicion}[División de números complejos]
+    Sean $z_1=a_1+ib_1$ y $z_2=a_2+ib_2$ con $z_2\neq 0$ (es decir, $|z_2|\neq 0$). Definimos $\dfrac{z_1}{z_2}=z_1z_2^{-1}$.
+  \end{definicion}
+
+  Usando la proposición anterior,
+  \begin{align*}
+    \frac{z_1}{z_2} & = \frac{z_1}{z_2}\cdot\frac{\overline{z_2}}{\overline{z_2}} = \frac{z_1\overline{z_2}}{|z_2|^2}
+    = \frac{(a_1+ib_1)(a_2-ib_2)}{a_2^2+b_2^2}                                                                       \\
+                    & = \frac{(a_1a_2+b_1b_2)+i\,(a_2b_1-a_1b_2)}{a_2^2+b_2^2}.
+  \end{align*}
+
+  % ======================================================
+  \section{Propiedades del conjugado y del módulo}
+  % ======================================================
+
+  \begin{proposicion}[Propiedades del conjugado]
+    Sean $z,z_1,z_2\in\mathbb{C}$. Entonces:
+    \begin{enumerate}[label=\roman*)]
+      \item $\overline{\overline{z}}=z$.
+      \item $\overline{z_1+z_2}=\overline{z_1}+\overline{z_2}$.
+      \item $\overline{z_1z_2}=\overline{z_1}\,\overline{z_2}$.
+      \item Si $z_2\neq 0$, $\overline{\left(\dfrac{z_1}{z_2}\right)}=\dfrac{\overline{z_1}}{\overline{z_2}}$.
+      \item $z+\overline{z}=2\Real\{z\}$.
+      \item $z-\overline{z}=2i\,\Imag\{z\}$.
+    \end{enumerate}
+  \end{proposicion}
+
+  \begin{proof}
+    Sean $z_1=a_1+ib_1$ y $z_2=a_2+ib_2$.
+
+    i) $\overline{\overline{z_1}}=\overline{a_1-ib_1}=a_1+ib_1=z_1$.
+
+    ii) $\overline{z_1+z_2}=\overline{(a_1+a_2)+i(b_1+b_2)}=(a_1+a_2)-i(b_1+b_2)=(a_1-ib_1)+(a_2-ib_2)=\overline{z_1}+\overline{z_2}$.
+
+    iii) Como $z_1z_2=(a_1a_2-b_1b_2)+i(a_1b_2+a_2b_1)$,
+    \begin{equation*}
+      \overline{z_1z_2}=(a_1a_2-b_1b_2)-i(a_1b_2+a_2b_1)=(a_1-ib_1)(a_2-ib_2)=\overline{z_1}\,\overline{z_2}.
+    \end{equation*}
+
+    iv) Por la sección anterior, $\dfrac{z_1}{z_2}=\dfrac{z_1\overline{z_2}}{|z_2|^2}$, y $|z_2|^2$ es real, de modo que es igual a su conjugado. Por (i)--(iii),
+    \begin{equation*}
+      \overline{\left(\frac{z_1}{z_2}\right)}=\frac{\overline{z_1}\,z_2}{|z_2|^2}=\frac{\overline{z_1}\,z_2}{\overline{z_2}\,z_2}=\frac{\overline{z_1}}{\overline{z_2}}.
+    \end{equation*}
+    (Aquí $\overline{z_2}\neq 0$ pues $z_2\neq 0$.)
+
+    v) $z+\overline{z}=(a+ib)+(a-ib)=2a=2\Real\{z\}$.
+
+    vi) $z-\overline{z}=(a+ib)-(a-ib)=2ib=2i\,\Imag\{z\}$.
+  \end{proof}
+
+  \begin{proposicion}[Propiedades del módulo]
+    Sean $z,z_1,z_2\in\mathbb{C}$. Entonces:
+    \begin{enumerate}[label=\roman*)]
+      \item $|z_1z_2|=|z_1|\,|z_2|$.
+      \item Si $z_2\neq 0$, $\left|\dfrac{z_1}{z_2}\right|=\dfrac{|z_1|}{|z_2|}$.
+      \item $|z|=|\overline{z}|$.
+    \end{enumerate}
+  \end{proposicion}
+
+  \begin{proof}
+    i) Por la propiedad iii) del conjugado,
+    \begin{equation*}
+      |z_1z_2|^2=z_1z_2\,\overline{z_1z_2}=z_1z_2\,\overline{z_1}\,\overline{z_2}=(z_1\overline{z_1})(z_2\overline{z_2})=|z_1|^2|z_2|^2.
+    \end{equation*}
+    Como ambos módulos son no negativos, al extraer raíz cuadrada se obtiene $|z_1z_2|=|z_1||z_2|$.
+
+    ii) Escribiendo $z_1=\dfrac{z_1}{z_2}\,z_2$ y aplicando (i), $|z_1|=\left|\dfrac{z_1}{z_2}\right||z_2|$; como $|z_2|\neq 0$, se obtiene el resultado.
+
+    iii) $|\overline{z}|^2=\overline{z}\,\overline{\overline{z}}=\overline{z}\,z=|z|^2$, y de nuevo se extrae raíz cuadrada.
+  \end{proof}
+
+  % ======================================================
+  \section{Los números complejos como vectores}
+  % ======================================================
+
+  El número $z=x+iy$ se puede identificar con el vector que va del origen al punto $(x,y)$ del plano complejo. El módulo de $z$ es la longitud de ese vector:
+  \begin{equation*}
+    |z|=\sqrt{z\overline{z}}=\sqrt{x^2+y^2}.
+  \end{equation*}
+
+  \begin{figure}[H]
+    \centering
+    \includegraphics{figuras/plano-complejo.pdf}
+    \caption{El número complejo $z=x+iy$ como vector.}
+  \end{figure}
+
+  Si $z_1=a_1+ib_1$ y $z_2=a_2+ib_2$, entonces $z_1+z_2=(a_1+a_2)+i(b_1+b_2)$, que corresponde a la suma de vectores (regla del paralelogramo).
+
+  \begin{figure}[H]
+    \centering
+    \includegraphics{figuras/suma-vectores.pdf}
+    \caption{Suma de números complejos.}
+  \end{figure}
+
+  La distancia entre los puntos $z_1$ y $z_2$ es la longitud del vector $z_1-z_2$:
+  \begin{equation*}
+    |z_1-z_2|=\sqrt{(a_1-a_2)^2+(b_1-b_2)^2}.
+  \end{equation*}
+
+  Del módulo de $z=a+ib$ se sigue que $|z|^2=\Real^2\{z\}+\Imag^2\{z\}$, y de ahí la siguiente desigualdad.
+
+  \begin{proposicion}\label{prop:re-im-modulo}
+    Para todo $z\in\mathbb{C}$ se cumple
+    \begin{equation*}
+      \Real\{z\}\leq|\Real\{z\}|\leq|z|, \qquad \Imag\{z\}\leq|\Imag\{z\}|\leq|z|.
+    \end{equation*}
+  \end{proposicion}
+
+  \begin{proof}
+    Sea $z=a+ib$. La primera desigualdad de cada cadena es $a\leq|a|$ y $b\leq|b|$, válidas para todo real. Para la segunda, $|a|=\sqrt{a^2}\leq\sqrt{a^2+b^2}=|z|$, y análogamente $|b|=\sqrt{b^2}\leq\sqrt{a^2+b^2}=|z|$.
+  \end{proof}
+
+  % ======================================================
+  \section{Desigualdad triangular}
+  % ======================================================
+
+  \begin{teorema}[Desigualdad triangular]
+    Para todos $z_1,z_2\in\mathbb{C}$,
+    \begin{equation*}
+      |z_1+z_2|\leq|z_1|+|z_2|.
+    \end{equation*}
+  \end{teorema}
+
+  \begin{proof}
+    Usando $|w|^2=w\overline{w}$ con $w=z_1+z_2$ y las propiedades del conjugado,
+    \begin{align*}
+      |z_1+z_2|^2 & = (z_1+z_2)\,\overline{(z_1+z_2)}                                                                     \\
+                  & = (z_1+z_2)(\overline{z_1}+\overline{z_2})                                                            \\
+                  & = z_1\overline{z_1}+z_1\overline{z_2}+z_2\overline{z_1}+z_2\overline{z_2}                             \\
+                  & = |z_1|^2+z_1\overline{z_2}+\overline{\left(z_1\overline{z_2}\right)}+|z_2|^2                          \\
+                  & = |z_1|^2+2\Real\{z_1\overline{z_2}\}+|z_2|^2,
+    \end{align*}
+    donde en la cuarta línea usamos que $\overline{z_1\overline{z_2}}=\overline{z_1}\,\overline{\overline{z_2}}=\overline{z_1}\,z_2=z_2\overline{z_1}$, y en la quinta que $w+\overline{w}=2\Real\{w\}$.
+
+    Por la proposición~\ref{prop:re-im-modulo}, aplicada a $w=z_1\overline{z_2}$, y por las propiedades del módulo,
+    \begin{equation*}
+      \Real\{z_1\overline{z_2}\}\leq|\Real\{z_1\overline{z_2}\}|\leq|z_1\overline{z_2}|=|z_1|\,|\overline{z_2}|=|z_1|\,|z_2|.
+    \end{equation*}
+    Multiplicando por $2$ y sumando $|z_1|^2+|z_2|^2$ en ambos lados,
+    \begin{equation*}
+      |z_1+z_2|^2\leq|z_1|^2+2|z_1||z_2|+|z_2|^2=\big(|z_1|+|z_2|\big)^2.
+    \end{equation*}
+    Como $|z_1+z_2|\geq 0$ y $|z_1|+|z_2|\geq 0$, al extraer raíz cuadrada se obtiene $|z_1+z_2|\leq|z_1|+|z_2|$.
+  \end{proof}
+
+  % ======================================================
+  \section{Forma polar y argumento}
+  % ======================================================
+
+  Sea $z=x+iy\neq 0$. Además de las coordenadas rectangulares $(x,y)$, podemos describir al punto $z$ mediante su distancia $r$ al origen y el ángulo $\theta$ que forma el vector con el eje real positivo (medido en sentido antihorario), es decir, mediante las \textbf{coordenadas polares} $z=(r,\theta)$. De la figura,
+  \begin{equation*}
+    x=r\cos\theta, \qquad y=r\sin\theta, \qquad\text{y por lo tanto}\qquad z=r\cos\theta+ir\sin\theta=r(\cos\theta+i\sin\theta).
+  \end{equation*}
+
+  \begin{figure}[H]
+    \centering
+    \includegraphics{figuras/forma-polar.pdf}
+    \caption{Coordenadas polares de $z=x+iy$.}
+  \end{figure}
+
+  Si $r\geq 0$, entonces $r=|z|$. En efecto,
+  \begin{align*}
+    |z|^2=z\overline{z} & = r(\cos\theta+i\sin\theta)\,r(\cos\theta-i\sin\theta) \\
+                        & = r^2\big[\cos^2\theta-i^2\sin^2\theta\big]            \\
+                        & = r^2\big[\cos^2\theta+\sin^2\theta\big]=r^2,
+  \end{align*}
+  y como $r,|z|\geq 0$, resulta $r=|z|$. Así,
+  \begin{equation*}
+    z=|z|(\cos\theta+i\sin\theta).
+  \end{equation*}
+  Para encontrar el ángulo $\theta$ usamos que $\tan\theta=\dfrac{y}{x}$ (si $x\neq 0$); como la tangente sólo determina $\theta$ salvo múltiplos de $\pi$, hay que atender además al cuadrante en el que se encuentra $z$.
+
+  \begin{definicion}[Argumento]
+    Cada valor de $\theta$ tal que $z=|z|(\cos\theta+i\sin\theta)$ se denomina un \textbf{argumento} de $z$, y el conjunto de todos los argumentos se representa por $\arg(z)$. El \textbf{argumento principal} de $z$, denotado por $\Arg(z)$, es el argumento que cumple
+    \begin{equation*}
+      -\pi<\Arg(z)\leq\pi.
+    \end{equation*}
+  \end{definicion}
+
+  Como $(r,\theta)$ y $(r,\theta+2\pi n)$ representan el mismo punto para todo $n\in\mathbb{Z}$, se cumple que
+  \begin{equation*}
+    \arg(z)=\{\Arg(z)+2n\pi : n\in\mathbb{Z}\}.
+  \end{equation*}
+
+  \begin{ejemplo}
+    \textbf{Cálculo de $\Arg(w)$ y $\arg(w)$ para $w=-1-i$.} El punto $w$ está en el tercer cuadrante.
+
+    \begin{figure}[H]
+      \centering
+      \includegraphics{figuras/argumento-w.pdf}
+    \end{figure}
+
+    Tenemos $\arctan\!\left(\dfrac{-1}{-1}\right)=\arctan(1)=\dfrac{\pi}{4}$, pero éste no es un argumento de $w$ (corresponde al primer cuadrante). Un argumento de $w$ es $\dfrac{\pi}{4}-\pi=-\dfrac{3\pi}{4}$, que está en $(-\pi,\pi]$. Como $|w|=\sqrt{2}$, se verifica $\sqrt{2}\cos(-\tfrac{3\pi}{4})=-1$ y $\sqrt{2}\sin(-\tfrac{3\pi}{4})=-1$. Por lo tanto
+    \begin{align*}
+      \Arg(w) & =-\frac{3\pi}{4},                                                                                                              \\
+      \arg(w) & =\Big\{-\frac{3\pi}{4}+2n\pi : n\in\mathbb{Z}\Big\}=\Big\{\frac{(8n-3)\pi}{4} : n\in\mathbb{Z}\Big\}                         \\
+              & =\Big\{\dots,-\frac{19\pi}{4},-\frac{11\pi}{4},-\frac{3\pi}{4},\frac{5\pi}{4},\frac{13\pi}{4},\dots\Big\}.
+    \end{align*}
+  \end{ejemplo}
+
+  % ======================================================
+  \section{Fórmula de Euler}
+  % ======================================================
+
+  Recordemos las series de potencias que definen a la exponencial, el seno y el coseno; convergen absolutamente para todo $z\in\mathbb{C}$:
+  \begin{equation*}
+    e^z=\sum_{n=0}^{\infty}\frac{z^n}{n!}, \qquad \sin(z)=\sum_{n=0}^{\infty}\frac{(-1)^nz^{2n+1}}{(2n+1)!}, \qquad \cos(z)=\sum_{n=0}^{\infty}\frac{(-1)^nz^{2n}}{(2n)!}.
+  \end{equation*}
+  Necesitaremos las potencias de $i$. Como $i^2=-1$, para todo entero $k\geq 0$,
+  \begin{align*}
+    i^{2k}   & =(i^2)^k=(-1)^k,          \\
+    i^{2k+1} & =i^{2k}\cdot i=(-1)^k\,i.
+  \end{align*}
+
+  \begin{teorema}[Fórmula de Euler]
+    Para todo $\theta\in\mathbb{R}$,
+    \begin{equation*}
+      e^{i\theta}=\cos\theta+i\sin\theta.
+    \end{equation*}
+  \end{teorema}
+
+  \begin{proof}
+    Sustituyendo $z=i\theta$ en la serie de la exponencial,
+    \begin{equation*}
+      e^{i\theta}=\sum_{n=0}^{\infty}\frac{(i\theta)^n}{n!}=\sum_{n=0}^{\infty}\frac{i^n\theta^n}{n!}=1+\frac{i\theta}{1!}+\frac{(i\theta)^2}{2!}+\frac{(i\theta)^3}{3!}+\frac{(i\theta)^4}{4!}+\cdots
+    \end{equation*}
+    Como la serie converge absolutamente, podemos separar los términos con $n$ par ($n=2k$) y con $n$ impar ($n=2k+1$):
+    \begin{align*}
+      e^{i\theta} & =\sum_{k=0}^{\infty}\frac{i^{2k}\theta^{2k}}{(2k)!}+\sum_{k=0}^{\infty}\frac{i^{2k+1}\theta^{2k+1}}{(2k+1)!} \\
+                  & =\sum_{k=0}^{\infty}\frac{(-1)^k\theta^{2k}}{(2k)!}+i\sum_{k=0}^{\infty}\frac{(-1)^k\theta^{2k+1}}{(2k+1)!}    \\
+                  & =\cos\theta+i\sin\theta.
+    \end{align*}
+  \end{proof}
+
+  \textbf{Observación.} Evaluando las series de $\sin$ y $\cos$ en $z=i\theta$ y usando $(i\theta)^{2n+1}=(-1)^n\,i\,\theta^{2n+1}$ y $(i\theta)^{2n}=(-1)^n\theta^{2n}$ se obtiene
+  \begin{equation*}
+    \sin(i\theta)=i\sum_{n=0}^{\infty}\frac{\theta^{2n+1}}{(2n+1)!}, \qquad \cos(i\theta)=\sum_{n=0}^{\infty}\frac{\theta^{2n}}{(2n)!},
+  \end{equation*}
+  que no coinciden con $\sin\theta$ ni con $\cos\theta$. La fórmula de Euler surge de sustituir $z=i\theta$ en la serie de la exponencial, no en las del seno y el coseno.
+
+  % ======================================================
+  \section{Forma exponencial y operaciones}
+  % ======================================================
+
+  Sea $z=a+ib$ con $|z|=R$ y sea $\theta$ un argumento de $z$. Entonces $a=|z|\cos\theta$ y $b=|z|\sin\theta$, y por la fórmula de Euler
+  \begin{equation*}
+    z=|z|\cos\theta+i|z|\sin\theta=|z|(\cos\theta+i\sin\theta)=|z|e^{i\theta}.
+  \end{equation*}
+  Ésta es la \textbf{forma exponencial} de $z$: escribimos $z=Re^{i\theta}$ con $R=|z|$.
+
+  Para operar en forma exponencial usaremos la propiedad $e^{u+v}=e^ue^v$ de la exponencial (válida para $u,v\in\mathbb{C}$; se sigue de la serie), en particular $e^{i\alpha}e^{i\beta}=e^{i(\alpha+\beta)}$ y $e^{i\theta}e^{-i\theta}=e^0=1$. Sean $z_1=r_1e^{i\theta_1}$ y $z_2=r_2e^{i\theta_2}$ dos números complejos no nulos.
+
+  \begin{itemize}
+    \item \textbf{Producto:}
+          \begin{equation*}
+            z_1z_2=r_1e^{i\theta_1}\,r_2e^{i\theta_2}=r_1r_2\,e^{i(\theta_1+\theta_2)}.
+          \end{equation*}
+    \item \textbf{Inverso:} $z_2^{-1}=\dfrac{1}{r_2}e^{-i\theta_2}$, pues $\big(r_2e^{i\theta_2}\big)\big(\tfrac{1}{r_2}e^{-i\theta_2}\big)=e^{i\theta_2}e^{-i\theta_2}=1$.
+    \item \textbf{División:}
+          \begin{equation*}
+            \frac{z_1}{z_2}=z_1z_2^{-1}=\frac{r_1e^{i\theta_1}}{r_2e^{i\theta_2}}=\frac{r_1}{r_2}\,e^{i(\theta_1-\theta_2)}.
+          \end{equation*}
+    \item \textbf{Potencia:} si $z=re^{i\theta}\neq 0$ y $n\in\mathbb{Z}$, entonces
+          \begin{equation*}
+            z^n=r^ne^{in\theta}.
+          \end{equation*}
+  \end{itemize}
+
+  \begin{proof}[Demostración de la fórmula de la potencia]
+    Primero probamos, por inducción sobre $n$, el caso $n\geq 0$.
+
+    \textbf{Base inductiva.} Para $n=0$, $z^0=1=r^0e^{0}$; para $n=1$, $z^1=re^{i\theta}$; y para $n=2$, $z^2=zz=re^{i\theta}\,re^{i\theta}=r^2e^{i2\theta}$.
+
+    \textbf{Hipótesis inductiva.} $z^k=r^ke^{ik\theta}$ para algún $k\geq 0$.
+
+    \textbf{Paso inductivo.}
+    \begin{equation*}
+      z^{k+1}=z^kz=r^ke^{ik\theta}\,re^{i\theta}=r^{k+1}e^{i(k\theta+\theta)}=r^{k+1}e^{i(k+1)\theta}.
+    \end{equation*}
+    Para $n<0$, escribimos $n=-m$ con $m>0$. Como $z^{-1}=\frac{1}{r}e^{i(-\theta)}$, el caso ya probado aplicado a $z^{-1}$ da
+    \begin{equation*}
+      z^n=(z^{-1})^m=\Big(\frac{1}{r}\Big)^m e^{i(-\theta)m}=r^{-m}e^{-im\theta}=r^ne^{in\theta}.\qedhere
+    \end{equation*}
+  \end{proof}
+
+  % ======================================================
+  \section{Fórmula de De Moivre}
+  % ======================================================
+
+  Si en la fórmula de la potencia tomamos $r=1$, entonces $z=e^{i\theta}$ y $z^n=e^{in\theta}$, es decir, $e^{in\theta}=(e^{i\theta})^n$. Aplicando la fórmula de Euler a ambos lados obtenemos:
+
+  \begin{teorema}[Fórmula de De Moivre]
+    Para todo $\theta\in\mathbb{R}$ y todo $n\in\mathbb{Z}$,
+    \begin{equation*}
+      (\cos\theta+i\sin\theta)^n=\cos(n\theta)+i\sin(n\theta).
+    \end{equation*}
+  \end{teorema}
+
+  \begin{ejercicio}
+    Expresar $\cos(2\theta)$ y $\sin(2\theta)$ en términos de $\cos\theta$ y $\sin\theta$.
+  \end{ejercicio}
+
+  \begin{solucion}
+    Por la fórmula de Euler y el desarrollo del cuadrado,
+    \begin{equation*}
+      e^{i2\theta}=(e^{i\theta})^2=(\cos\theta+i\sin\theta)^2=\cos^2\theta+2i\cos\theta\sin\theta-\sin^2\theta.
+    \end{equation*}
+    Por otro lado, $e^{i2\theta}=\cos(2\theta)+i\sin(2\theta)$. Igualando partes real e imaginaria,
+    \begin{equation*}
+      \cos(2\theta)=\cos^2\theta-\sin^2\theta, \qquad \sin(2\theta)=2\cos\theta\sin\theta.
+    \end{equation*}
+  \end{solucion}
+
+  \begin{ejercicio}
+    Encontrar una expresión para $\cos(\alpha+\beta)$ y $\sin(\alpha+\beta)$.
+  \end{ejercicio}
+
+  \begin{solucion}
+    Por un lado, $e^{i\alpha}e^{i\beta}=e^{i(\alpha+\beta)}=\cos(\alpha+\beta)+i\sin(\alpha+\beta)$. Por otro,
+    \begin{align*}
+      e^{i\alpha}e^{i\beta} & =(\cos\alpha+i\sin\alpha)(\cos\beta+i\sin\beta)                                                         \\
+                            & =\cos\alpha\cos\beta+i\cos\alpha\sin\beta+i\sin\alpha\cos\beta-\sin\alpha\sin\beta                      \\
+                            & =\big[\cos\alpha\cos\beta-\sin\alpha\sin\beta\big]+i\big[\cos\alpha\sin\beta+\sin\alpha\cos\beta\big].
+    \end{align*}
+    Igualando partes real e imaginaria,
+    \begin{align*}
+      \cos(\alpha+\beta) & =\cos\alpha\cos\beta-\sin\alpha\sin\beta, \\
+      \sin(\alpha+\beta) & =\cos\alpha\sin\beta+\sin\alpha\cos\beta.
+    \end{align*}
+  \end{solucion}
+
+  Para obtener expresiones de $\cos(n\theta)$ y $\sin(n\theta)$ para un $n\in\mathbb{N}$ cualquiera, combinamos la fórmula de De Moivre con el teorema del binomio.
+
+  \begin{teorema}[Teorema del binomio]
+    Para $a,b\in\mathbb{C}$ y $n\in\mathbb{N}$,
+    \begin{equation*}
+      (a+b)^n=\sum_{k=0}^{n}\binom{n}{k}a^{n-k}b^k, \qquad \binom{n}{k}=\frac{n!}{k!\,(n-k)!}.
+    \end{equation*}
+  \end{teorema}
+
+  Separando los sumandos con $k$ par ($k=2k'$) y con $k$ impar ($k=2k'+1$), y escribiendo de nuevo $k$ en vez de $k'$:
+  \begin{equation*}
+    (a+b)^n=\sum_{k=0}^{\lfloor n/2\rfloor}\binom{n}{2k}a^{n-2k}b^{2k}+\sum_{k=0}^{\lfloor (n-1)/2\rfloor}\binom{n}{2k+1}a^{n-2k-1}b^{2k+1}.
+  \end{equation*}
+  Tomemos $a=\cos\theta$ y $b=i\sin\theta$. Como $b^{2k}=i^{2k}\sin^{2k}\theta=(-1)^k\sin^{2k}\theta$ y $b^{2k+1}=(-1)^k\,i\,\sin^{2k+1}\theta$,
+  \begin{equation*}
+    (\cos\theta+i\sin\theta)^n=\sum_{k=0}^{\lfloor n/2\rfloor}(-1)^k\binom{n}{2k}\cos^{n-2k}\theta\sin^{2k}\theta+i\sum_{k=0}^{\lfloor (n-1)/2\rfloor}(-1)^k\binom{n}{2k+1}\cos^{n-2k-1}\theta\sin^{2k+1}\theta.
+  \end{equation*}
+  Ambas sumas son reales, así que, comparando con la fórmula de De Moivre, obtenemos:
+  \begin{align*}
+    \cos(n\theta) & =\sum_{k=0}^{\lfloor n/2\rfloor}(-1)^k\binom{n}{2k}\cos^{n-2k}\theta\sin^{2k}\theta,         \\
+    \sin(n\theta) & =\sum_{k=0}^{\lfloor (n-1)/2\rfloor}(-1)^k\binom{n}{2k+1}\cos^{n-2k-1}\theta\sin^{2k+1}\theta.
+  \end{align*}
+  Por ejemplo, para $n=3$: $\cos(3\theta)=\cos^3\theta-3\cos\theta\sin^2\theta$ y $\sin(3\theta)=3\cos^2\theta\sin\theta-\sin^3\theta$.
+
+  % ======================================================
+  \section{Raíces de números complejos}
+  % ======================================================
+
+  Sean $z_1=r_1e^{i\theta_1}$ y $z_2=r_2e^{i\theta_2}$ dos números complejos no nulos (con $r_1,r_2>0$). Entonces
+  \begin{equation*}
+    z_1=z_2 \iff r_1=r_2 \ \text{ y } \ \theta_1=\theta_2+2k\pi \text{ para algún } k\in\mathbb{Z}.
+  \end{equation*}
+  En efecto, si $z_1=z_2$, al tomar módulos $r_1=r_2$; dividiendo entre $r_1$ queda $e^{i\theta_1}=e^{i\theta_2}$, es decir, $\cos\theta_1=\cos\theta_2$ y $\sin\theta_1=\sin\theta_2$, lo que ocurre si y sólo si $\theta_1-\theta_2$ es un múltiplo entero de $2\pi$. El recíproco es inmediato.
+
+  \begin{definicion}[Raíz $n$-ésima]
+    Sean $n\in\mathbb{N}$ y $z_0\in\mathbb{C}$. Un número $z\in\mathbb{C}$ es una \textbf{raíz $n$-ésima} de $z_0$ si $z^n=z_0$; es decir, $z$ multiplicado por sí mismo $n$ veces da $z_0$.
+  \end{definicion}
+
+  \begin{teorema}[Raíces $n$-ésimas]
+    Sea $z_0=r_0e^{i\theta_0}\neq 0$ y $n\in\mathbb{N}$. La ecuación $z^n=z_0$ tiene exactamente $n$ soluciones distintas, dadas por
+    \begin{equation*}
+      w_k=r_0^{1/n}\,e^{i\left(\frac{\theta_0}{n}+\frac{2\pi k}{n}\right)}, \qquad k=0,1,\dots,n-1.
+    \end{equation*}
+  \end{teorema}
+
+  \begin{proof}
+    Como $z_0\neq 0$, toda solución es no nula; escribamos $z=re^{i\theta}$ con $r>0$. Entonces $z^n=z_0$ equivale a $r^ne^{in\theta}=r_0e^{i\theta_0}$, y por el criterio de igualdad,
+    \begin{equation*}
+      r^n=r_0 \quad\text{y}\quad n\theta=\theta_0+2\pi k\ \text{ para algún } k\in\mathbb{Z}.
+    \end{equation*}
+    La primera condición da $r=\sqrt[n]{r_0}=r_0^{1/n}$ (la única raíz positiva), y la segunda da $\theta=\dfrac{\theta_0}{n}+\dfrac{2\pi k}{n}$. Así, toda solución es de la forma $w_k$ con $k\in\mathbb{Z}$, y recíprocamente cada $w_k$ es solución.
+
+    Falta ver cuáles de ellas son distintas. Por el criterio de igualdad, $w_k=w_{k'}$ si y sólo si $\dfrac{2\pi(k-k')}{n}$ es múltiplo entero de $2\pi$, es decir, si y sólo si $n\mid k-k'$. Por lo tanto, cada $k\in\mathbb{Z}$ da la misma raíz que un único $k\in\{0,\dots,n-1\}$, y estas $n$ raíces son distintas entre sí.
+  \end{proof}
+
+  Geométricamente, las $n$ raíces están sobre la circunferencia de radio $r_0^{1/n}$ centrada en el origen, y son los vértices de un polígono regular de $n$ lados.
+
+  \begin{ejemplo}
+    \textbf{Raíces cúbicas de $z_0=3+3i$.} Calculamos
+    \begin{equation*}
+      r_0=\sqrt{3^2+3^2}=\sqrt{2\cdot 9}=3\sqrt{2}, \qquad \theta_0=\arctan\!\Big(\frac{3}{3}\Big)=\arctan(1)=\frac{\pi}{4},
+    \end{equation*}
+    (el punto está en el primer cuadrante), de modo que $z_0=3\sqrt{2}\,e^{i\pi/4}$. Para $n=3$,
+    \begin{equation*}
+      r=\sqrt[3]{3\sqrt{2}}=3^{1/3}2^{1/6}, \qquad \theta=\frac{\theta_0}{n}+\frac{2k\pi}{n}=\frac{\pi}{4\cdot 3}+\frac{2k\pi}{3}=\frac{\pi}{12}+\frac{2k}{3}\pi.
+    \end{equation*}
+    Con $r=3^{1/3}2^{1/6}$, las tres raíces son
+    \begin{align*}
+      w_0 & =r\,e^{i\pi/12},                                                    \\
+      w_1 & =r\,e^{i\left(\frac{\pi}{12}+\frac{2\pi}{3}\right)}=r\,e^{i3\pi/4},  \\
+      w_2 & =r\,e^{i\left(\frac{\pi}{12}+\frac{4\pi}{3}\right)}=r\,e^{i17\pi/12}.
+    \end{align*}
+    Están sobre la circunferencia $|z|=r$ y forman un triángulo equilátero.
+
+    \begin{figure}[H]
+      \centering
+      \includegraphics{figuras/raices-cubicas.pdf}
+    \end{figure}
+  \end{ejemplo}
+
   \subsection*{Resumen del capítulo}
   
-  A lo largo de este capítulo construimos $\mathbb{R}$ a partir de tres tipos de axiomas: los \textbf{axiomas de cuerpo} (que rigen la suma y el producto), los \textbf{axiomas de orden} (que nos permiten comparar números), y el \textbf{axioma de completitud} (que garantiza la existencia de supremos e ínfimos, y es lo que distingue a $\mathbb{R}$ de $\mathbb{Q}$). A partir de ahí, usando la noción de conjunto inductivo, definimos a los enteros $\mathbb{Z}$ y estudiamos el principio de inducción matemática, una de las herramientas de demostración más importantes del curso. Terminamos con divisibilidad y números primos: el máximo común divisor, el lema y el primer teorema de Euclides, la infinitud de los primos, los primos de Mersenne y de Fermat, y el teorema fundamental de la aritmética. Todas estas ideas —los axiomas de $\mathbb{R}$, la inducción, y la aritmética de los enteros— reaparecerán constantemente en el resto del curso.
+  A lo largo de este capítulo construimos $\mathbb{R}$ a partir de tres tipos de axiomas: los \textbf{axiomas de cuerpo} (que rigen la suma y el producto), los \textbf{axiomas de orden} (que nos permiten comparar números), y el \textbf{axioma de completitud} (que garantiza la existencia de supremos e ínfimos, y es lo que distingue a $\mathbb{R}$ de $\mathbb{Q}$). A partir de ahí, usando la noción de conjunto inductivo, definimos a los enteros $\mathbb{Z}$ y estudiamos el principio de inducción matemática, una de las herramientas de demostración más importantes del curso. Terminamos con divisibilidad y números primos: el máximo común divisor, el lema y el primer teorema de Euclides, la infinitud de los primos, los primos de Mersenne y de Fermat, y el teorema fundamental de la aritmética. Por último, extendimos $\mathbb{R}$ al sistema $\mathbb{C}$ de los números complejos: los definimos como pares ordenados de reales y estudiamos su álgebra, el conjugado y el módulo, la desigualdad triangular, la forma polar y exponencial (fórmula de Euler), la fórmula de De Moivre y las raíces $n$-ésimas. Todas estas ideas —los axiomas de $\mathbb{R}$, la inducción, y la aritmética de los enteros— reaparecerán constantemente en el resto del curso.
 
-      
+  % ======================================================
+  \chapter{Teoría de conjuntos}
+  % ======================================================
+
+  En este capítulo ampliamos el lenguaje básico de conjuntos de la sección 1.1 y formalizamos las nociones de par ordenado, producto cartesiano, relación y función.
+
+  % ======================================================
+  \section{Pares ordenados y producto cartesiano}
+  % ======================================================
+
+  Un conjunto no distingue el orden de sus elementos: $\{a,b\}=\{b,a\}$. Para poder hablar de un ``primer'' y un ``segundo'' elemento necesitamos un objeto nuevo.
+
+  \begin{definicion}[Par ordenado]
+    Dados dos objetos $a$ y $b$, el \textbf{par ordenado} $(a,b)$ es el conjunto
+    \begin{equation*}
+      (a,b)=\big\{\{a\},\{a,b\}\big\}.
+    \end{equation*}
+  \end{definicion}
+
+  Los elementos de $(a,b)$ son los conjuntos $\{a\}$ y $\{a,b\}$ (que coinciden cuando $a=b$). Por ejemplo,
+  \begin{equation*}
+    (a,b)=\big\{\{a\},\{a,b\}\big\}, \qquad (b,a)=\big\{\{b\},\{a,b\}\big\}.
+  \end{equation*}
+  El siguiente teorema muestra que esta definición captura justamente lo que esperamos de un par ordenado.
+
+  \begin{teorema}[Igualdad de pares ordenados]\label{teo:igualdad-pares}
+    $(a,b)=(c,d)$ si y sólo si $a=c$ y $b=d$.
+  \end{teorema}
+
+  \begin{proof}
+    ($\Leftarrow$) Si $a=c$ y $b=d$, los conjuntos $(a,b)$ y $(c,d)$ son literalmente el mismo.
+
+    ($\Rightarrow$) Supongamos que $\big\{\{a\},\{a,b\}\big\}=\big\{\{c\},\{c,d\}\big\}$ y distingamos dos casos.
+
+    \textit{Caso 1: $a=b$.} Entonces $\{a\}=\{a,b\}$, así que el conjunto de la izquierda es $\{\{a\}\}$ y tiene un único elemento. Por lo tanto $\{c\}=\{a\}$ y $\{c,d\}=\{a\}$. De la primera igualdad, $c=a$; de la segunda, $d=a$. Así, $a=c$ y $b=a=d$.
+
+    \textit{Caso 2: $a\neq b$.} Entonces $\{a\}\neq\{a,b\}$ (pues $b\in\{a,b\}$ pero $b\notin\{a\}$), de modo que el conjunto de la izquierda tiene dos elementos. Como $\{a\}$ pertenece al conjunto de la izquierda, también pertenece al de la derecha: $\{a\}=\{c\}$ o $\{a\}=\{c,d\}$. Si fuera $\{a\}=\{c,d\}$, tendríamos $c=d=a$ y el conjunto de la derecha sería $\{\{a\}\}$, con un solo elemento, lo cual es imposible. Luego $\{a\}=\{c\}$, es decir, $a=c$. Ahora bien, $\{a,b\}$ pertenece al conjunto de la derecha y $\{a,b\}\neq\{a\}=\{c\}$, así que $\{a,b\}=\{c,d\}=\{a,d\}$. Como $b\in\{a,d\}$ y $b\neq a$, concluimos que $b=d$.
+  \end{proof}
+
+  En particular, $(a,b)=(b,a)$ si y sólo si $a=b$; es decir, en general $(a,b)\neq(b,a)$.
+
+  \begin{definicion}[Producto cartesiano]
+    Dados dos conjuntos $A$ y $B$, el \textbf{producto cartesiano} de $A$ y $B$, denotado por $A\times B$, es el conjunto de todos los pares ordenados $(a,b)$ tales que $a\in A$ y $b\in B$:
+    \begin{equation*}
+      A\times B=\{(a,b) : a\in A \text{ y } b\in B\}.
+    \end{equation*}
+  \end{definicion}
+
+  Los elementos de $A\times B$ son los pares $(a,b)$, y no los elementos $a$ y $b$ por separado.
+
+  \begin{ejemplo}
+    $\mathbb{R}^2=\mathbb{R}\times\mathbb{R}$ y $\mathbb{R}^3=\mathbb{R}\times\mathbb{R}\times\mathbb{R}$. Notemos que $\mathbb{R}^2\not\subset\mathbb{R}^3$: los elementos de $\mathbb{R}^2$ son pares y los de $\mathbb{R}^3$ son ternas.
+  \end{ejemplo}
+
+  % ======================================================
+  \section{Relaciones y funciones}
+  % ======================================================
+
+  Sean $x,y\in\mathbb{R}$. Identificamos el par ordenado $(x,y)\in\mathbb{R}\times\mathbb{R}$ con el punto del plano cuyas coordenadas rectangulares son $x$ y $y$. Con esta identificación, condiciones como $x^2+y^2\leq 1$ o $x^2+y^2=1$ determinan subconjuntos del plano:
+  \begin{align*}
+    S_1 & = \{(x,y) : x^2+y^2\leq 1\}, \\
+    S_2 & = \{(x,y) : x^2+y^2=1\},
+  \end{align*}
+  y se cumple que $S_1\subset\mathbb{R}\times\mathbb{R}$ y $S_2\subset\mathbb{R}\times\mathbb{R}$.
+
+  \begin{figure}[H]
+    \centering
+    \includegraphics{figuras/relaciones-disco-circulo.pdf}
+    \caption{El disco $S_1$ y la circunferencia $S_2$.}
+  \end{figure}
+
+  \begin{definicion}[Relación]
+    Se llama \textbf{relación} a todo conjunto de pares ordenados.
+  \end{definicion}
+
+  Sea $S=\{(a_1,b_1),(a_2,b_2),(a_3,b_3),\dots\}$ una relación. El conjunto formado por todos los primeros elementos de los pares de $S$ se denomina el \textbf{dominio} de $S$ y se representa por
+  \begin{equation*}
+    \operatorname{dom}S=\{a_1,a_2,a_3,\dots\}.
+  \end{equation*}
+  El conjunto formado por todos los segundos elementos de los pares de $S$ se llama \textbf{recorrido} de $S$ (también, en estas notas, \textbf{contradominio} o \textbf{codominio}; en otros textos, el codominio es cualquier conjunto que contiene al recorrido).
+
+  \begin{definicion}[Gráfica de una relación]
+    La \textbf{gráfica} de una relación es el conjunto de puntos del plano que corresponden a los pares ordenados de la relación.
+  \end{definicion}
+
+  Por ejemplo, el par $(2,3)$ corresponde al punto del plano de abscisa $2$ y ordenada $3$.
+
+  \begin{definicion}[Función]
+    Una \textbf{función} $F$ es un conjunto de pares ordenados $(x,y)$ ninguno de los cuales tiene el mismo primer elemento que otro. Es decir, si $(x,y)\in F$ y $(x,z)\in F$, entonces $y=z$.
+  \end{definicion}
+
+  En otras palabras, una función es una relación en la que cada elemento del dominio aparece como primer elemento de exactamente un par. Geométricamente, la gráfica de una relación es la de una función si y sólo si toda recta vertical la interseca a lo más en un punto.
+
+  \begin{ejemplo}
+    La circunferencia $S_2$ no es una función: $(0,1)\in S_2$ y $(0,-1)\in S_2$ tienen el mismo primer elemento, pero $1\neq -1$. Lo mismo ocurre con el disco $S_1$. En cambio, $F=\{(x,x^3) : x\in\mathbb{R}\}$ sí es una función: si $(x,y)\in F$ y $(x,z)\in F$, entonces $y=x^3=z$.
+  \end{ejemplo}
+
+  \begin{figure}[H]
+    \centering
+    \includegraphics{figuras/recta-vertical.pdf}
+    \caption{Una relación que no es función (izquierda) y una que sí lo es (derecha).}
+  \end{figure}
+
 \end{document}

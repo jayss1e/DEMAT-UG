@@ -1,0 +1,19 @@
+\documentclass[tikz,border=2pt]{standalone}
+\usetikzlibrary{arrows.meta,angles,quotes,decorations.pathreplacing}
+\begin{document}
+\begin{tikzpicture}[>=Stealth]
+    \coordinate (O) at (0,0);
+    \coordinate (X) at (3.2,0);
+    \coordinate (Z) at (3.2,2.4);
+    \draw[->] (-0.5,0) -- (4.6,0) node[right] {$\mathrm{Re}$};
+    \draw[->] (0,-0.5) -- (0,3.4) node[above] {$\mathrm{Im}$};
+    \draw[dashed] (0,2.4) -- (Z) -- (X);
+    \draw[->,thick] (O) -- (Z);
+    \fill (Z) circle (1.5pt) node[above right] {$z=x+iy$};
+    \pic[draw,->,angle radius=0.8cm,"$\theta$" shift={(2pt,0)}] {angle=X--O--Z};
+    \node[above left] at (1.6,1.2) {$r$};
+    \node[left] at (0,2.4) {$y=r\sin\theta$};
+    \draw[decorate,decoration={brace,mirror,amplitude=4pt}] (0,-0.15) -- (3.2,-0.15)
+        node[midway,below=5pt] {$x=r\cos\theta$};
+\end{tikzpicture}
+\end{document}
