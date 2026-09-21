@@ -1,5 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1789800125.86276 "teorianumeros.tex" "teorianumeros.pdf" "teorianumeros" 1789800130.86347 0
+["pdflatex"] 1789959387.53708 "/home/radojka/DEMAT-UG/cosas random/proyectos aparte/Libros/Introducción a la teoria analitica de numeros/teorianumeros.tex" "teorianumeros.pdf" "teorianumeros" 1789959392.11605 0
+  "/home/radojka/DEMAT-UG/cosas random/proyectos aparte/Libros/Introducción a la teoria analitica de numeros/teorianumeros.tex" 1789959253.2387 214293 ccc7801e2a0cc0614f5186a142506970 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1775415801 2375 baa924870cfb487815765f9094cf3728 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc" 1775415801 3486 c7eadf5dcc57b3b2d11736679f6636ba ""
   "/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1775415801 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
@@ -47,12 +48,10 @@
   "/usr/share/texmf-dist/fonts/tfm/public/stmaryrd/stmary5.tfm" 1775415801 848 e1bc58a31b9ed9c3729ffea165acfaac ""
   "/usr/share/texmf-dist/fonts/tfm/public/stmaryrd/stmary6.tfm" 1775415801 848 068dd119e13b75777e62821af7d4f2a6 ""
   "/usr/share/texmf-dist/fonts/tfm/public/stmaryrd/stmary8.tfm" 1775415801 848 6125cdd3627e68d3db8013b98e587508 ""
-  "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1775415801 32080 340ef9bf63678554ee606688e7b5339d ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1775415801 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb" 1775415801 36281 c355509802a035cadc5f15869451dcee ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb" 1775415801 32762 224316ccc9ad3ca0423a14971cfa7fc1 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb" 1775415801 32716 08e384dc442464e7285e891af9f45947 ""
-  "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb" 1775415801 35660 fb24af7afbadb71801619f1415838111 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb" 1775415801 30457 bc0868ebece724ed7c3d37e3d9bff7bd ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb" 1775415801 31764 459c573c03a4949a528c2cc7f557e217 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1775415801 34694 ad62b13721ee8eda1dcc8993c8bd7041 ""
@@ -309,11 +308,10 @@
   "figuras/figura3-2.pdf" 1789618663.11763 48162 61b79c45a36c32179c1fb9d03650a75a ""
   "figuras/figura3-3.pdf" 1789618637.31984 27633 81dac3c3ee17ca12309a8be8837a5f27 ""
   "figuras/figura3-4.pdf" 1789618637.90783 29185 1dd086eb72b9b551dfec3593573337cb ""
-  "portada_apostol.pdf" 1789584944.21905 25392 75431441fc8361355df353c30a6bf412 ""
-  "teorianumeros.aux" 1789800130.59916 21911 1a562215eab95abfbe11f6cbf58c1417 "pdflatex"
-  "teorianumeros.out" 1789800130.60316 13116 c443a8baa35c19739572a7e2486c9791 "pdflatex"
-  "teorianumeros.tex" 1789800106.76346 213820 21224afcb9cf5727e120bfd5af49d66c ""
-  "teorianumeros.toc" 1789800130.60399 5432 b920ee6a9ee174a5dd422afee65821f5 "pdflatex"
+  "teorianumeros.aux" 1789959391.92385 21905 86898777f614b68a32175291a69d3dab "pdflatex"
+  "teorianumeros.out" 1789959391.92685 13292 51522140eb1567e5116f762a184cfc6d "pdflatex"
+  "teorianumeros.tex" 1789959253.2387 214293 ccc7801e2a0cc0614f5186a142506970 ""
+  "teorianumeros.toc" 1789959391.92787 5432 b920ee6a9ee174a5dd422afee65821f5 "pdflatex"
   "ugmath.sty" 1789798189.17401 10453 8d52ad08e892199d3945ebb11cc20386 ""
   (generated)
   "teorianumeros.aux"

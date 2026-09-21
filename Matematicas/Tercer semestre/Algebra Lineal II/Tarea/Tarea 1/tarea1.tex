@@ -309,7 +309,7 @@
         \begin{equation*}
             \det(\adj(A))=[\det(A)]^{n-1}.
         \end{equation*}
-        Segundo caso, $\det(A)=0$. Como $n-1\geq1$, se tiene $[\det(A)]^{n-1}=0$, así que debemos probar que $\det(\adj(A))=0$. La igualdad anterior solo nos dice que $0=0$, por lo que procederemos por contradicción. Supongamos que $\det(\adj(A))\neq0$. Entonces $\adj(A)$ es invertible, y multiplicando por $\adj(A)^{-1}$ a la derecha en
+        Segundo caso, $\det(A)=0$. Como $n-1\geq1$, se tiene $[\det(A)]^{n-1}=0$, así que debemos probar que $\det(\adj(A))=0$. Procederemos por contradicción. Supongamos que $\det(\adj(A))\neq0$. Entonces $\adj(A)$ es invertible, y multiplicando por $\adj(A)^{-1}$ a la derecha en
         \begin{equation*}
             A\adj(A)=\det(A)I=0
         \end{equation*}
@@ -325,40 +325,6 @@
         \begin{equation*}
             \det(\adj(A))=[\det(A)]^{n-1}.
         \end{equation*}
-    \end{proof}
-
-    \begin{problema}
-        Demuestra que si $A\in M_{n\times n}(K)$ es triangular superior entonces $\adj(A)$ también es triangular superior, concluye de esta forma que $A^{-1}$ es triangular superior.
-    \end{problema}
-
-    \begin{proof}
-        Sea $A=(a_{ij})$ triangular superior, es decir, $a_{kl}=0$ siempre que $k>l$. Si $n=1$ no hay nada que probar, así que supongamos que $n\geq2$. Por definición, la entrada $(i,j)$ de la adjunta clásica es
-        \begin{equation*}
-            \adj(A)_{ij}=C_{ji}=(-1)^{i+j}\det(A(j|i)),
-        \end{equation*}
-        donde $A(j|i)$ es la matriz que se obtiene de $A$ al quitar la fila $j$ y la columna $i$. Para probar que $\adj(A)$ es triangular superior debemos ver que $\adj(A)_{ij}=0$ siempre que $i>j$, es decir, que
-        \begin{equation*}
-            \det(A(j|i))=0\qquad\text{ si }j<i.
-        \end{equation*}
-        Sean $j<i$ y consideremos las filas $i,i+1,\dots,n$ de $A$. Como $j<i$, ninguna de ellas es la fila $j$, así que todas aparecen en $A(j|i)$, y son $n-i+1$ filas. Sea $k\geq i$. Como $A$ es triangular superior, la fila $k$ tiene ceros en las columnas $l<k$, en particular en las columnas $l<i$, y su entrada en la columna $i$ desaparece al quitar esa columna (si $k>i$, esa entrada ya era cero). Por tanto, en $A(j|i)$ las entradas no nulas de estas filas están a lo más en las columnas $i+1,\dots,n$ de $A$, que son $n-i$ columnas. Esto significa que las $n-i+1$ filas son vectores de un subespacio de dimensión $n-i$, y por tanto son linealmente dependientes. Como un determinante es cero si y solo si las filas de la matriz son linealmente dependientes, concluimos que
-        \begin{equation*}
-            \det(A(j|i))=0.
-        \end{equation*}
-        Así, $\adj(A)_{ij}=0$ para todo $i>j$, es decir, $\adj(A)$ es triangular superior.
-
-        Supongamos ahora que $A$ es invertible, de manera que $\det(A)\neq0$. Sabemos que
-        \begin{equation*}
-            A\adj(A)=\det(A)I.
-        \end{equation*}
-        Multiplicando por $A^{-1}$ a la izquierda y dividiendo entre $\det(A)$, que es distinto de cero,
-        \begin{equation*}
-            A^{-1}=\frac{1}{\det(A)}\adj(A).
-        \end{equation*}
-        Entonces, para $i>j$,
-        \begin{equation*}
-            (A^{-1})_{ij}=\frac{1}{\det(A)}\adj(A)_{ij}=0.
-        \end{equation*}
-        Por lo tanto, $A^{-1}$ es triangular superior.
     \end{proof}
 
 \end{document}
