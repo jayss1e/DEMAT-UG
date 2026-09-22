@@ -1,0 +1,79 @@
+\documentclass[tikz,border=3pt]{standalone}
+\usetikzlibrary{calc}
+\begin{document}
+\begin{tikzpicture}[
+    line/.style={line width=0.6pt},
+    dot/.style={circle,fill,inner sep=1.3pt},
+    lbl/.style={font=\small},
+    caso/.style={font=\small, anchor=west}
+  ]
+
+  % cada fila: origen (x0,y0), dirección del segmento, y las posiciones
+  % relativas (parámetro t a lo largo de la recta) de 0, y, T(y).
+  \def\rowsep{2.2}
+  \def\linelen{6.2}
+  \def\ang{6}
+
+  % ---------- Caso 1: lambda > 1 ----------
+  \begin{scope}[shift={(0,4*\rowsep)}, rotate=\ang]
+    \draw[line] (-0.4,0) -- (\linelen,0);
+    \coordinate (o) at (0.6,0);
+    \coordinate (y) at (2.4,0);
+    \coordinate (ty) at (4.6,0);
+    \node[dot] at (o) {}; \node[dot] at (y) {}; \node[dot] at (ty) {};
+    \node[lbl, below=2pt] at (o) {$0$};
+    \node[lbl, above=2pt] at (y) {$y$};
+    \node[lbl, above=2pt] at (ty) {$\mathsf{T}(y)$};
+  \end{scope}
+  \node[caso] at (\linelen+0.5,4*\rowsep) {Caso 1: $\lambda > 1$};
+
+  % ---------- Caso 2: lambda = 1 ----------
+  \begin{scope}[shift={(0,3*\rowsep)}, rotate=\ang]
+    \draw[line] (-0.4,0) -- (\linelen,0);
+    \coordinate (o) at (0.6,0);
+    \coordinate (y) at (3.2,0);
+    \node[dot] at (o) {}; \node[dot] at (y) {};
+    \node[lbl, below=2pt] at (o) {$0$};
+    \node[lbl, above=2pt] at (y) {$y = \mathsf{T}(y)$};
+  \end{scope}
+  \node[caso] at (\linelen+0.5,3*\rowsep) {Caso 2: $\lambda = 1$};
+
+  % ---------- Caso 3: 0 < lambda < 1 ----------
+  \begin{scope}[shift={(0,2*\rowsep)}, rotate=\ang]
+    \draw[line] (-0.4,0) -- (\linelen,0);
+    \coordinate (o) at (0.6,0);
+    \coordinate (ty) at (2.0,0);
+    \coordinate (y) at (4.6,0);
+    \node[dot] at (o) {}; \node[dot] at (ty) {}; \node[dot] at (y) {};
+    \node[lbl, below=2pt] at (o) {$0$};
+    \node[lbl, above=2pt] at (ty) {$\mathsf{T}(y)$};
+    \node[lbl, above=2pt] at (y) {$y$};
+  \end{scope}
+  \node[caso] at (\linelen+0.5,2*\rowsep) {Caso 3: $0 < \lambda < 1$};
+
+  % ---------- Caso 4: lambda = 0 ----------
+  \begin{scope}[shift={(0,1*\rowsep)}, rotate=\ang]
+    \draw[line] (-0.4,0) -- (\linelen,0);
+    \coordinate (o) at (0.6,0);
+    \coordinate (y) at (4.2,0);
+    \node[dot] at (o) {}; \node[dot] at (y) {};
+    \node[lbl, below=2pt] at (o) {$0 = \mathsf{T}(y)$};
+    \node[lbl, above=2pt] at (y) {$y$};
+  \end{scope}
+  \node[caso] at (\linelen+0.5,1*\rowsep) {Caso 4: $\lambda = 0$};
+
+  % ---------- Caso 5: lambda < 0 ----------
+  \begin{scope}[shift={(0,0)}, rotate=\ang]
+    \draw[line] (-1.6,0) -- (\linelen,0);
+    \coordinate (ty) at (-0.8,0);
+    \coordinate (o) at (1.4,0);
+    \coordinate (y) at (4.2,0);
+    \node[dot] at (ty) {}; \node[dot] at (o) {}; \node[dot] at (y) {};
+    \node[lbl, above=2pt] at (ty) {$\mathsf{T}(y)$};
+    \node[lbl, below=2pt] at (o) {$0$};
+    \node[lbl, above=2pt] at (y) {$y$};
+  \end{scope}
+  \node[caso] at (\linelen+0.5,0) {Caso 5: $\lambda < 0$};
+
+\end{tikzpicture}
+\end{document}
