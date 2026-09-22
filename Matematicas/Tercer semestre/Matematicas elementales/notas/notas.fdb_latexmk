@@ -1,5 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1789928825.63498 "notas.tex" "notas.pdf" "notas" 1789928828.51661 0
+["pdflatex"] 1790060296.58879 "/home/radojka/DEMAT-UG/Matematicas/Tercer semestre/Matematicas elementales/notas/notas.tex" "notas.pdf" "notas" 1790060300.06659 0
+  "/home/radojka/DEMAT-UG/Matematicas/Tercer semestre/Matematicas elementales/notas/notas.tex" 1790060292.90987 62690 36938da93208fa755ad473fd06699e94 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc" 1775415801 2375 baa924870cfb487815765f9094cf3728 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc" 1775415801 3486 c7eadf5dcc57b3b2d11736679f6636ba ""
   "/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1775415801 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
@@ -290,10 +291,10 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1775415801 43569 fd570f2fa160877d211e859f687312ba ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1789592106 5541339 b32eb00eb34cd5c925a7827d916d9dbd ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1789592027 3765588 fd3a81841918e52034f2864e7b1d7d9c ""
-  "notas.aux" 1789928828.34133 14930 e958c72aaf2477e2886887d015b36f7f "pdflatex"
-  "notas.out" 1789928828.34333 6429 aaf60d5cf6f96ec41dc19a1ca3489f83 "pdflatex"
-  "notas.tex" 1789682118.06831 58377 b63e924f9027891523769c3237e1c39a ""
-  "notas.toc" 1789928828.34441 3071 846f39a0538c41ed2320dc3b48543698 "pdflatex"
+  "notas.aux" 1790060299.88357 16191 5915e2f4c85262904055f104095a7c13 "pdflatex"
+  "notas.out" 1790060299.88757 6653 5d16f7723973272270a26946966ad3cb "pdflatex"
+  "notas.tex" 1790060292.90987 62690 36938da93208fa755ad473fd06699e94 ""
+  "notas.toc" 1790060299.88851 3173 83f7e472d05a55877701e6460412868a "pdflatex"
   "portada-matematicas-elementales.pdf" 1789584944.21002 52314 b2376ed4dad9764389ac4d2113b7e5ea ""
   "ugmath_notas.sty" 1789928815.2197 14237 df2b8e14b3cab361e37974edd7cd4f8a ""
   (generated)

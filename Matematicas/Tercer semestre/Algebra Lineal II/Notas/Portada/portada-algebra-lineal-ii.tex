@@ -1,0 +1,142 @@
+% portada-algebra-lineal-ii.tex ────────────────────────────────────────────
+% Portada — Notas de clase, Álgebra Lineal II — Universidad de Guanajuato
+% Estilo: mismo lenguaje visual que portada-matematicas-elementales.pdf
+%   (fondo oscuro, retícula de puntos, bloque de título apilado, cifra
+%   gigante translúcida de fondo).
+%
+% Gráfica: teorema espectral en R^2 — un operador simétrico A manda la
+% circunferencia unitaria (dominio) a una elipse cuyos semiejes son las
+% direcciones propias de A, con longitudes |λ_1|, |λ_2|. Es una lectura
+% geométrica propia de un segundo curso (diagonalización ortogonal,
+% formas cuadráticas), más allá del cálculo puntual de Av = λv.
+% ────────────────────────────────────────────────────────────────────────────
+
+\documentclass[tikz, border=0pt]{standalone}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{ebgaramond}
+\usepackage[default]{sourcesanspro}
+\usepackage{amsmath}
+\usepackage{xcolor}
+\usetikzlibrary{calc,arrows.meta}
+
+% ── Paleta (misma familia tonal que las demás portadas de "notas de clase") ──
+\definecolor{bg}{HTML}{0B0E1A}
+\definecolor{panel}{HTML}{141A2E}
+\definecolor{grid}{HTML}{FFFFFF}
+\definecolor{teal}{HTML}{2DD4BF}
+\definecolor{purple}{HTML}{8B7CF6}
+\definecolor{gold}{HTML}{F2C14E}
+\definecolor{ink}{HTML}{F4F4F5}
+\definecolor{muted}{HTML}{8B93A6}
+
+\begin{document}
+\begin{tikzpicture}[font=\sffamily]
+
+  \useasboundingbox (0,0) rectangle (210mm,297mm);
+
+  %% ── Fondo ──────────────────────────────────────────────────────────────
+  \fill[bg] (0,0) rectangle (210mm,297mm);
+
+  %% ── Resplandor ambiental detrás del diagrama ──────────────────────────
+  \foreach \r/\op in {70/0.05, 52/0.06, 34/0.05} {
+    \fill[teal, opacity=\op] (98mm,205mm) circle (\r mm);
+  }
+  \foreach \r/\op in {55/0.04, 36/0.05} {
+    \fill[purple, opacity=\op] (128mm,190mm) circle (\r mm);
+  }
+
+  %% ── Retícula de puntos ─────────────────────────────────────────────────
+  \foreach \x in {8,15,...,203} {
+    \foreach \y in {8,15,...,290} {
+      \fill[grid, opacity=0.05] (\x mm,\y mm) circle (0.18mm);
+    }
+  }
+
+  %% ── Cifra de volumen, gigante y translúcida ────────────────────────────
+  \node[font=\fontsize{260}{260}\selectfont\rmfamily\bfseries,
+        color=panel, anchor=east] at (200mm,88mm) {II};
+
+  %% ── Barra de identificación superior ────────────────────────────────────
+  \fill[purple] (14mm,278mm) rectangle (26mm,279mm);
+  \fill[teal]   (27mm,278mm) rectangle (35mm,279mm);
+
+  \node[anchor=east, font=\fontsize{8}{8}\selectfont\sffamily,
+        color=muted] at (196mm,278.5mm) {NOTAS DE CLASE~\textperiodcentered~VOL.~II};
+
+  %% ── Diagrama: teorema espectral en R^2 ─────────────────────────────────
+  \coordinate (C) at (105mm,198mm);
+
+  % retícula polar tenue
+  \foreach \r in {14,28,42} {
+    \draw[grid, opacity=0.09, line width=0.3pt] (C) circle (\r mm);
+  }
+  % ejes tenues
+  \draw[grid, opacity=0.12, line width=0.3pt] ($(C)+(-58mm,0)$) -- ($(C)+(58mm,0)$);
+  \draw[grid, opacity=0.12, line width=0.3pt] ($(C)+(0,-58mm)$) -- ($(C)+(0,58mm)$);
+  \draw[grid, opacity=0.07, line width=0.3pt, dashed] ($(C)+(-41mm,-41mm)$) -- ($(C)+(41mm,41mm)$);
+  \draw[grid, opacity=0.07, line width=0.3pt, dashed] ($(C)+(-41mm,41mm)$) -- ($(C)+(41mm,-41mm)$);
+
+  % ecuación
+  \node[font=\fontsize{15}{15}\selectfont, color=muted]
+    at ($(C)+(0,68mm)$) {$A\mathbf{v} = \lambda\mathbf{v}$};
+
+  % circunferencia unitaria (dominio) — discontinua
+  \draw[muted, opacity=0.55, line width=0.6pt, dashed] (C) circle (28mm);
+
+  % elipse imagen, ejes principales rotados 28°
+  \draw[teal, line width=1pt, rotate around={28:(C)}]
+    ($(C)$) ellipse (44mm and 19mm);
+
+  % direcciones propias (semiejes)
+  \draw[gold, line width=1pt, -{Latex[length=2.2mm,width=1.6mm]},
+        rotate around={28:(C)}] (C) -- ($(C)+(44mm,0)$)
+    node[pos=1, right=1.5mm, font=\fontsize{11}{11}\selectfont, color=gold]
+    {$\lambda_1$};
+  \draw[purple, line width=1pt, -{Latex[length=2.2mm,width=1.6mm]},
+        rotate around={28:(C)}] (C) -- ($(C)+(0,19mm)$)
+    node[pos=1, above=1mm, font=\fontsize{11}{11}\selectfont, color=purple]
+    {$\lambda_2$};
+
+  \fill[ink] (C) circle (0.6mm);
+
+  %% ── Bloque de título ─────────────────────────────────────────────────
+  \fill[gold] (20mm,125mm) rectangle (32mm,126mm);
+
+  \node[anchor=west, font=\fontsize{40}{44}\selectfont\rmfamily\bfseries,
+        color=ink] at (19.3mm,109mm) {\'Algebra};
+  \node[anchor=west, font=\fontsize{40}{44}\selectfont\rmfamily\bfseries,
+        color=teal] at (19.3mm,90mm) {Lineal};
+
+  \node[anchor=west, font=\fontsize{11}{11}\selectfont\rmfamily\itshape,
+        color=muted] at (20mm,80mm) {Notas de clase para un segundo curso};
+
+  \draw[grid, opacity=0.12, line width=0.3pt] (20mm,70mm) -- (190mm,70mm);
+
+  \node[anchor=west, font=\fontsize{7.5}{7.5}\selectfont, color=muted]
+    at (20mm,63.5mm) {ELABORADAS POR};
+  \node[anchor=west, font=\fontsize{13}{13}\selectfont\rmfamily,
+        color=ink] at (20mm,56mm) {Ricardo Le\'on Mart\'inez};
+
+  \draw[grid, opacity=0.09, line width=0.3pt] (20mm,48mm) -- (190mm,48mm);
+
+  \node[anchor=west, font=\fontsize{7.5}{7.5}\selectfont, color=muted]
+    at (20mm,41.5mm) {PROFESOR};
+  \node[anchor=west, font=\fontsize{13}{13}\selectfont\rmfamily\itshape,
+        color=ink] at (20mm,34mm) {Herbert Kanarek Blando};
+
+  %% ── Pie de página ────────────────────────────────────────────────────
+  \fill[teal] (0,0) rectangle (2.4mm,18mm);
+
+  \node[anchor=west, font=\fontsize{7.5}{9}\selectfont, color=muted]
+    at (9mm,11mm) {Departamento de Matem\'aticas};
+  \node[anchor=west, font=\fontsize{7.5}{9}\selectfont, color=muted]
+    at (9mm,7mm) {Divisi\'on de Ciencias Naturales y Exactas~\textperiodcentered~Universidad de Guanajuato};
+
+  \node[anchor=east, font=\fontsize{15}{15}\selectfont\rmfamily,
+        color=gold] at (196mm,8.5mm) {2026};
+
+\end{tikzpicture}
+\end{document}

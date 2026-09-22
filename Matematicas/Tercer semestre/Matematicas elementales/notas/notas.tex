@@ -1059,7 +1059,11 @@
         Para todo $m\in\N$, $m\neq\sigma(m)$.
     \end{lema}
     \begin{proof}
-        Sea $S=\{m\in\N : m\neq\sigma(m)\}$. Si $1=\sigma(1)$, esto contradice el axioma (3) de Peano (según el cual $\sigma(n)\neq1$ para todo $n\in\N$); por tanto $1\neq\sigma(1)$, es decir, $1\in S$.
+        Sea
+        \begin{equation*}
+            S=\{m\in\N : m\neq\sigma(m)\}
+        \end{equation*}
+        Si $1=\sigma(1)$, esto contradice el axioma (3) de Peano (según el cual $\sigma(n)\neq1$ para todo $n\in\N$); por tanto $1\neq\sigma(1)$, es decir, $1\in S$.
 
         Supongamos que $m\in S$, es decir, $m\neq\sigma(m)$. Si $\sigma(m)=\sigma(\sigma(m))$, por la inyectividad de $\sigma$ se tendría $m=\sigma(m)$, lo cual contradice que $m\in S$. Por tanto $\sigma(m)\neq\sigma(\sigma(m))$, es decir, $\sigma(m)\in S$.
 
@@ -1173,6 +1177,74 @@
         Por el principio de inducción, $T=\N$; esto significa que $n<m$ para todo $n\in\N$ y todo $m\in S$, lo cual es absurdo pues $S\subset\N$ no es vacío. Esta contradicción muestra que $S$ debe contener un elemento mínimo.
 
         Recíprocamente, supongamos que se da el principio del buen orden. Sea $S\subset\N$ tal que $1\in S$ y tal que $n\in S$ implica $\sigma(n)\in S$; queremos probar que $S=\N$. Supongamos que $A=\N\setminus S$ es no vacío. Por el principio del buen orden, $A$ contiene un elemento mínimo $m_0\in A$. Como $1\in S$, $m_0\neq1$, así que existe $k\in\N$ tal que $\sigma(k)=m_0$. Si $k\in S$, entonces $\sigma(k)=m_0\in S$, lo cual contradice $m_0\in A$. Por tanto $k\notin S$, es decir, $k\in A$; pero $k<\sigma(k)=m_0$, lo cual contradice que $m_0$ sea el elemento mínimo de $A$. Concluimos que $A=\emptyset$, es decir, $S=\N$.
+    \end{proof}
+
+    \begin{proposicion}[Forma alternativa de inducción]
+        \label{prop:induccion-orden}
+        Sea $P(n)$ una proposición matemática, y supongamos que:
+        \begin{enumerate}[label=(\arabic*)]
+            \item $P(1)$ es verdadera;
+            \item para todo $n\in\N$ con $n>1$, si $P(k)$ es verdadera para todo $k<n$, entonces $P(n)$ es verdadera.
+        \end{enumerate}
+        Entonces $P(n)$ es verdadera para todo $n\in\N$.
+    \end{proposicion}
+    \begin{proof}
+        Sea $S=\{n\in\N : P(n) \text{ es falsa}\}$. Queremos probar que $S=\emptyset$. Supongamos que $S\neq\emptyset$. Por el principio del buen orden (Proposición \ref{prop:buen-orden}), $S$ tiene un elemento mínimo $m\in S$. Por (1), $P(1)$ es verdadera, así que $m\neq1$; como $1$ es el elemento mínimo de $\N$ (Lema \ref{lem:uno-minimo}), esto implica $m>1$.
+
+        Sea $k\in\N$ tal que $k<m$. Como $m$ es el elemento mínimo de $S$, si $k\in S$ se tendría $m\le k$, contradiciendo $k<m$; por tanto $k\notin S$, es decir, $P(k)$ es verdadera. Como esto vale para todo $k<m$, por (2) se tiene que $P(m)$ es verdadera, lo cual contradice que $m\in S$. Concluimos que $S=\emptyset$, es decir, $P(n)$ es verdadera para todo $n\in\N$.
+    \end{proof}
+
+    \subsection{Divisibilidad y números primos}
+
+    \begin{proposicion}[Cancelación del producto]
+        \label{prop:cancelacion-producto}
+        Sean $n,m,l\in\N$ tales que $n\cdot l=m\cdot l$. Entonces $n=m$.
+    \end{proposicion}
+    \begin{proof}
+        Supongamos que $n>m$; existe $k\in\N$ tal que $n=m+k$. Entonces
+        \begin{equation*}
+            m\cdot l = n\cdot l = (m+k)\cdot l = m\cdot l+k\cdot l,
+        \end{equation*}
+        lo cual contradice el Lema \ref{lem:no-autosuma} (pues $k\cdot l\in\N$). Por tanto no puede darse $n>m$. Si $n<m$, un argumento análogo (intercambiando los papeles de $n$ y $m$) lleva a una contradicción. Por la Tricotomía (Teorema \ref{thm:tricotomia}), $n=m$.
+    \end{proof}
+
+    \begin{corolario}
+        \label{coro:producto-uno}
+        Sean $n,m\in\N$. Si $n\cdot m=n$, entonces $m=1$.
+    \end{corolario}
+    \begin{proof}
+        Como $n\cdot m=n=n\cdot1$, por la conmutatividad del producto se tiene $m\cdot n=1\cdot n$, y por la Proposición \ref{prop:cancelacion-producto} (cancelando $n$) se concluye que $m=1$.
+    \end{proof}
+
+    \begin{definicion}[Divisor y múltiplo]
+        Sean $n,m\in\N$. Diremos que $n$ es un \textbf{divisor} de $m$ (o que $m$ es \textbf{múltiplo} de $n$) si existe $k\in\N$ tal que
+        \begin{equation*}
+            m = n\cdot k.
+        \end{equation*}
+    \end{definicion}
+
+    \begin{definicion}[Número primo]
+        Un número natural $n$ distinto de $1$ se llama \textbf{primo} si sus únicos divisores son $1$ y el mismo $n$.
+    \end{definicion}
+
+    \begin{teorema}[Existencia de factorización en primos]
+        \label{thm:factorizacion-primos}
+        Todo número natural $n$ distinto de $1$ es producto de primos.
+    \end{teorema}
+    \begin{proof}
+        Sea
+        \begin{equation*}
+            C = \{n\in\N\setminus\{1\} : n \text{ no es producto de primos}\}.
+        \end{equation*}
+        Queremos probar que $C=\emptyset$. Supongamos que $C\neq\emptyset$. Por el principio del buen orden (Proposición \ref{prop:buen-orden}), $C$ tiene un elemento mínimo $m\in C$.
+
+        Por definición, $m\neq1$ y $m$ no es primo (si $m$ fuera primo, sería trivialmente un producto de primos, contradiciendo $m\in C$). Así que $m$ tiene un divisor $n$ distinto de $1$ y de $m$; existe $k\in\N$ tal que $n\cdot k=m$. Como $m\neq n$, se tiene $k\neq1$ (pues $k=1$ daría $n\cdot k=n=m$), así que existe $l\in\N$ tal que $\sigma(l)=k$. Entonces
+        \begin{equation*}
+            m = n\cdot k = n\cdot\sigma(l) = n\cdot l+n,
+        \end{equation*}
+        así que $n<m$. Análogamente, usando que $n\cdot k=k\cdot n$ (conmutatividad del producto), se obtiene $k<m$.
+
+        Como $m$ es el elemento mínimo de $C$ y $n,k<m$, se tiene $n\notin C$ y $k\notin C$; como además $n,k\neq1$, esto significa que $n$ y $k$ son ambos producto de primos. Por tanto $m=n\cdot k$ también es producto de primos, lo cual contradice que $m\in C$. Concluimos que $C=\emptyset$.
     \end{proof}
 
 \end{document}
