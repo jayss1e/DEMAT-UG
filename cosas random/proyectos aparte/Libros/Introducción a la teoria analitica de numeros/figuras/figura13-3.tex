@@ -1,0 +1,28 @@
+\documentclass[border=4pt]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,decorations.markings}
+
+\begin{document}
+\begin{tikzpicture}[>=Latex]
+    \tikzset{mid/.style={postaction={decorate,decoration={markings,
+        mark=at position 0.5 with {\arrow{Latex}}}}}}
+
+    \draw[->] (-0.6,0) -- (4.8,0) node[right] {\small $\sigma$};
+    \draw[->] (0,-3.0) -- (0,3.0) node[above] {\small $t$};
+
+    % rectangle 1-iT, c-iT, c+iT, 1+iT (counterclockwise)
+    \draw[mid] (1,-2.4) -- (3.8,-2.4);
+    \draw[mid] (3.8,-2.4) -- (3.8,2.4);
+    \draw[mid] (3.8,2.4) -- (1,2.4);
+    \draw[mid] (1,2.4) -- (1,-2.4);
+
+    \node[above left] at (1,2.4) {\small $1+iT$};
+    \node[above right] at (3.8,2.4) {\small $c+iT$};
+    \node[below left] at (1,-2.4) {\small $1-iT$};
+    \node[below right] at (3.8,-2.4) {\small $c-iT$};
+    \node[below left] at (0,0) {\small $0$};
+    \node[below right] at (1,0) {\small $1$};
+    \node[below right] at (3.8,0) {\small $c$};
+    \node at (2.4,-1.2) {\small $R$};
+\end{tikzpicture}
+\end{document}

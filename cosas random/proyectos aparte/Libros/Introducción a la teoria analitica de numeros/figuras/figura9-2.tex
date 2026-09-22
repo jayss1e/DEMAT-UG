@@ -1,0 +1,43 @@
+\documentclass[border=4pt]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,decorations.markings}
+
+\begin{document}
+\begin{tikzpicture}[>=Latex, scale=1.5]
+
+    % alpha = Re^{i pi/4} = (\c,\c)
+    \def\c{1.3}
+    \coordinate (A)  at (-0.5-\c,-\c);
+    \coordinate (B)  at (-0.5+\c,\c);
+    \coordinate (al) at (\c,\c);
+    \coordinate (ma) at (-\c,-\c);
+    \coordinate (O)  at (0,0);
+
+    % axes
+    \draw (-2.4,0) -- (2.4,0);
+    \draw (0,-1.9) -- (0,1.9);
+
+    % oriented parallelogram: A -> B -> alpha -> -alpha -> A
+    \draw[thick,
+        postaction={decorate,decoration={markings,
+            mark=at position 0.5 with {\arrow{Latex}}}}] (A) -- (B);
+    \draw[thick,
+        postaction={decorate,decoration={markings,
+            mark=at position 0.5 with {\arrow{Latex}}}}] (B) -- (al);
+    \draw[thick,
+        postaction={decorate,decoration={markings,
+            mark=at position 0.25 with {\arrow{Latex}},
+            mark=at position 0.75 with {\arrow{Latex}}}}] (al) -- (ma);
+    \draw[thick,
+        postaction={decorate,decoration={markings,
+            mark=at position 0.5 with {\arrow{Latex}}}}] (ma) -- (A);
+
+    % labels
+    \node[below left]  at (A)  {\small $A$};
+    \node[below right] at (ma) {\small $-\alpha$};
+    \node[above left]  at (B)  {\small $B$};
+    \node[above right] at (al) {\small $\alpha$};
+    \node[below right] at (O)  {\small $0$};
+
+\end{tikzpicture}
+\end{document}

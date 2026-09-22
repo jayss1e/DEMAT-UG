@@ -1,0 +1,137 @@
+\chapter{Particiones}
+
+    \section{INTRODUCCIÓN}
+
+    Hasta ahora este libro ha tratado principalmente de la \textit{teoría multiplicativa de
+    números}, un estudio de las funciones aritméticas relacionadas con la descomposición de
+    enteros en factores primos. Ahora se vuelve hacia otra rama de la Teoría de números llamada
+    \textit{teoría aditiva de números}. Un problema básico en este contexto consiste en
+    expresar un entero positivo dado $n$ como suma de los enteros de un cierto conjunto $A$,
+    dado de antemano,
+    \begin{equation*}
+        A=\{a_1,a_2,\dots\},
+    \end{equation*}
+    en donde los elementos $a_i$ son números especiales tales como primos, cuadrados, cubos,
+    números triangulares, etc. Cada representación de $n$ como suma de elementos de $A$ se
+    llama \textit{partición} de $n$ y nos interesa la función $A(n)$ que cuenta el número de
+    particiones de $n$ en sumandos de $A$. Ilustraremos el problema con algunos ejemplos
+    famosos.
+
+    \textbf{Conjetura de Goldbach.} \textit{Todo número par $n>4$ es suma de dos primos
+    impares.}
+
+    En este ejemplo $A(n)$ es el número de soluciones de la ecuación
+    \begin{equation}\label{eq:14-1}
+        n=p_1+p_2,
+    \end{equation}
+    en donde los $p_i$ son primos impares. La afirmación de Goldbach es que $A(n)\geq1$ para
+    todo par $n>4$. Esta conjetura data de 1742 y, en esta fecha, quedó sin decidir. En 1937 el
+    matemático ruso Vinogradov probó que cada entero par suficientemente grande es la suma de
+    tres primos impares. En 1966 el matemático chino Chen Jing-run demostró que cada número par
+    suficientemente grande es la suma de un primo más un número que no posee más de dos
+    divisores primos. (Ver \cite{chen1966}.)
+
+    \textbf{Representación por cuadrados.} \textit{Para un entero dado $k\geq2$ consideramos la
+    función de partición $r_k(n)$ que cuenta el número de soluciones de la ecuación}
+    \begin{equation}\label{eq:14-2}
+        n=x_1^2+\cdots+x_k^2,
+    \end{equation}
+    \textit{en donde los $x_i$ pueden ser positivos, negativos o nulos, y el orden de los
+    sumandos se toma de acuerdo con el orden creciente de su valor.}
+
+    Para $k=2,4,6$ ó $8$, Jacobi \cite{jacobi1829} expresó $r_k(n)$ en términos de las funciones
+    divisor. Por ejemplo, demostró que
+    \begin{equation*}
+        r_2(n)=4\{d_1(n)-d_3(n)\},
+    \end{equation*}
+    en donde $d_1(n)$ y $d_3(n)$ son el número de divisores de $n$ congruentes con 1 y 3 mód 4,
+    respectivamente. Entonces, $r_2(5)=8$ puesto que ambos divisores, 1 y 5, son congruentes
+    con 1 mód 4. De hecho existen cuatro representaciones dadas por
+    \begin{equation*}
+        5=2^2+1^2=(-2)^2+1^2=(-2)^2+(-1)^2=2^2+(-1)^2,
+    \end{equation*}
+    y otras cuatro con el orden de los sumandos invertido.
+
+    Para $k=4$ Jacobi probó que
+    \begin{align*}
+        r_4(n)&=8\sum_{d\mid n}d=8\sigma(n)&&\text{si }n\text{ es impar,}\\
+        &=24\sum_{\substack{d\mid n\\d\text{ impar}}}d&&\text{si }n\text{ es par.}
+    \end{align*}
+    Las fórmulas para $r_6(n)$ y $r_8(n)$ son algo más complicadas pero del mismo tipo general.
+    (Ver \cite{dickson1930}.)
+
+    Se han obtenido hasta el momento fórmulas exactas para $k=3$, $5$, ó $7$; contienen la
+    extensión de Jacobi del símbolo de Legendre para restos cuadráticos. Por ejemplo, si $n$ es
+    impar sabemos que
+    \begin{align*}
+        r_3(n)&=24\sum_{m\leq n/4}(m\,|\,n)&&\text{si }n\equiv1\pmod{4}\\
+        &=8\sum_{m\leq n/2}(m\,|\,n)&&\text{si }n\equiv3\pmod{4},
+    \end{align*}
+    en donde ahora los números $x_1$, $x_2$, $x_3$ de \eqref{eq:14-2} se han tomado primos entre
+    sí.
+
+    Para valores grandes de $k$, el análisis de $r_k(n)$ es considerablemente más complicado.
+    Existe mucha literatura sobre este tema con contribuciones de Mordell, Hardy, Littlewood,
+    Ramanujan, y muchos otros. Para $k\geq5$ sabemos que $r_k(n)$ se puede expresar mediante
+    una fórmula asintótica de la forma
+    \begin{equation}\label{eq:14-3}
+        r_k(n)=\rho_k(n)+R_k(n),
+    \end{equation}
+    en donde $\rho_k(n)$ es el término principal, dado por la serie infinita
+    \begin{equation*}
+        \rho_k(n)=\frac{\pi^{k/2}n^{k/2-1}}{\Gamma\left(\dfrac{k}{2}\right)}\sum_{q=1}^{\infty}\sum_{\substack{h=1\\(h,q)=1}}^{q}\left(\frac{G(h;q)}{q}\right)^ke^{-2\pi inh/q},
+    \end{equation*}
+    y $R_k(n)$ es un resto de orden menor. La serie de $\rho_k(n)$ se llama \textit{serie
+    singular} y los números $G(h;q)$ son las sumas cuadráticas de Gauss,
+    \begin{equation*}
+        G(h;q)=\sum_{r=1}^{q}e^{2\pi ihr^2/q}.
+    \end{equation*}
+    En 1917, Mordell observó que $r_k(n)$ es el coeficiente de $x^n$ en el desarrollo en serie
+    de la $k$-ésima potencia de la serie
+    \begin{equation*}
+        \vartheta=1+2\sum_{n=1}^{\infty}x^{n^2}.
+    \end{equation*}
+    La función $\vartheta$ se halla relacionada con las funciones modulares elípticas que juegan
+    un papel realmente importante en la obtención de \eqref{eq:14-3}.
+
+    \textbf{Problema de Waring.} \textit{Determinar si para un entero positivo dado $k$, existe
+    un entero $s$ (que dependa sólo de $k$) tal que la ecuación}
+    \begin{equation}\label{eq:14-4}
+        n=x_1^k+x_2^k+\cdots+x_s^k
+    \end{equation}
+    \textit{tenga soluciones para cada $n\geq1$.}
+
+    El problema se conoce con el nombre del matemático inglés E. Waring que estableció en 1770
+    (sin demostración y con limitada evidencia numérica) que cada $n$ es la suma de 4
+    cuadrados, de 9 cubos, de 19 cuartas potencias, etc. En este ejemplo la función de partición
+    $A(n)$ es el número de soluciones de \eqref{eq:14-4}, y el problema consiste en decidir si
+    existe un número $s$ tal que $A(n)\geq1$ para todo $n$.
+
+    Si $s$ existe para un $k$ dado entonces existe un mínimo valor de $s$ y éste se designa
+    $g(k)$. Lagrange probó la existencia de $g(2)$ en 1770 y, en los 139 años siguientes, se
+    probó la existencia de $g(k)$ para $k=3,4,5,6,7,8$ y $10$. En 1909, Hilbert demostró la
+    existencia de $g(k)$ para todo $k$ mediante un argumento inductivo pero no determinó su
+    valor numérico para cualquier $k$. Actualmente se conoce el valor exacto de $g(k)$ para
+    cada $k$ excepto para $k=4$. Hardy y Littlewood hallaron una fórmula asintótica para el
+    número de soluciones de \eqref{eq:14-4} en términos de una serie singular análoga a la de
+    \eqref{eq:14-3}. Para una reseña histórica del problema de Waring, ver W. J. Ellison
+    \cite{ellison1971}.
+
+    \textbf{Particiones no restrictivas.} Uno de los problemas fundamentales en la teoría
+    aditiva de números es el de las particiones no restrictivas. El conjunto de los sumandos
+    consta de todos los enteros positivos, y la función de partición que se estudia es el número
+    de formas en que podemos descomponer $n$ como suma de enteros positivos $\leq n$, esto es,
+    el número de soluciones de
+    \begin{equation}\label{eq:14-5}
+        n=a_{i_1}+a_{i_2}+\cdots
+    \end{equation}
+    El número de sumandos no se halla sometido a ninguna restricción, se permite repetir
+    sumandos, y el orden de los sumandos no se toma en cuenta. La función de partición
+    correspondiente se designa $p(n)$ y se llama \textit{función de partición no restrictiva},
+    o simplemente \textit{función de partición}. Los sumandos se llaman \textit{partes}. Por
+    ejemplo, existen exactamente cinco particiones de 4, dadas por
+    \begin{equation*}
+        4=4=3+1=2+2=2+1+1=1+1+1+1,
+    \end{equation*}
+    luego $p(4)=5$.
+

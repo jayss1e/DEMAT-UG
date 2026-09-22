@@ -1,0 +1,25 @@
+\documentclass[border=4pt]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+
+\begin{document}
+\begin{tikzpicture}[>=Latex]
+
+    % circle of radius > 1 centred at a = 1+c
+    \def\cx{0}
+    \def\r{2.2}
+    \draw (\cx,0) circle (\r);
+
+    % real axis
+    \draw (-3,0) -- (3,0);
+
+    % points c-eps, c, a=1+c  (unit = 1)
+    \fill (-1.55,0) circle (1.5pt);
+    \fill (-1.05,0) circle (1.5pt);
+    \fill (0,0) circle (1.5pt);
+    \node[below] at (-1.55,-0.05) {\small $c-\varepsilon$};
+    \node[below] at (-0.95,-0.05) {\small $c$};
+    \node[below] at (0.3,-0.05) {\small $a=1+c$};
+
+\end{tikzpicture}
+\end{document}

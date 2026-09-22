@@ -1,0 +1,420 @@
+    \section{REPRESENTACIÓN GEOMÉTRICA DE LAS PARTICIONES}
+
+    Existe un método simple para representar particiones geométricamente utilizando una
+    disposición de puntos reticulares que llamaremos \textit{grafo}. Por ejemplo, la partición
+    de 15 dada por
+    \begin{equation*}
+        6+3+3+2+1
+    \end{equation*}
+    se puede representar por medio de 15 puntos colocados en cinco filas tal como sigue:
+    \begin{equation*}
+        \begin{array}{cccccc}
+            \bullet&\bullet&\bullet&\bullet&\bullet&\bullet\\
+            \bullet&\bullet&\bullet&&&\\
+            \bullet&\bullet&\bullet&&&\\
+            \bullet&\bullet&&&&\\
+            \bullet&&&&&
+        \end{array}
+    \end{equation*}
+    Si leemos este grafo verticalmente obtenemos otra partición de 15,
+    \begin{equation*}
+        5+4+3+1+1+1.
+    \end{equation*}
+    Estas dos particiones son \textit{conjugadas}. Nótese que la parte \textit{más larga} de una
+    de ellas es igual al \textit{número de partes} de la otra. Entonces tenemos el teorema que
+    sigue.
+
+    \begin{teorema}\label{teo:14-1}
+        El número de particiones de $n$ en $m$ partes es igual al número de particiones de $n$
+        en partes tales que la mayor sea $m$.
+    \end{teorema}
+
+    Se pueden demostrar muchos teoremas combinando simplemente argumentos que involucren
+    grafos, y más adelante daremos una ilustración muy bonita de este método. Sin embargo, los
+    resultados profundos de la teoría de las particiones requieren un tratamiento analítico más
+    profundo, al que ahora vamos a dedicarnos.
+
+    \section{FUNCIONES GENERADORAS DE PARTICIONES}
+
+    Una función $F(s)$ definida por una serie de Dirichlet $F(s)=\sum f(n)n^{-s}$ se llama
+    \textit{función generadora} de los coeficientes $f(n)$. Las series de Dirichlet son útiles
+    para generar funciones en la teoría multiplicativa de números en virtud de la relación
+    \begin{equation*}
+        n^{-s}m^{-s}=(nm)^{-s}.
+    \end{equation*}
+    En la teoría aditiva de números es más conveniente generar funciones utilizando su
+    representación en serie de potencias,
+    \begin{equation*}
+        F(x)=\sum f(n)x^n
+    \end{equation*}
+    ya que $x^nx^m=x^{n+m}$. El teorema que sigue pone de manifiesto una función generadora de
+    la función de partición $p(n)$.
+
+    \begin{teorema}[Euler]\label{teo:14-2}
+        Para $\abs{x}<1$ tenemos
+        \begin{equation*}
+            \prod_{m=1}^{\infty}\frac{1}{1-x^m}=\sum_{n=0}^{\infty}p(n)x^n,
+        \end{equation*}
+        en donde $p(0)=1$.
+    \end{teorema}
+
+    \begin{proof}
+        En primer lugar damos una deducción formal de esta identidad, ignorando las cuestiones
+        de convergencia, y después damos una demostración más rigurosa.
+
+        Si cada factor del producto lo desarrollamos en serie de potencias (una serie
+        geométrica) obtenemos
+        \begin{equation*}
+            \prod_{n=1}^{\infty}\frac{1}{1-x^n}=(1+x+x^2+\cdots)(1+x^2+x^4+\cdots)(1+x^3+x^6+\cdots)\cdots
+        \end{equation*}
+        Ahora multiplicamos las series de la derecha, tratándolas como si fuesen polinomios y
+        agrupándolas según las potencias de $x$ a fin de obtener una serie de potencias de la
+        forma
+        \begin{equation*}
+            1+\sum_{k=1}^{\infty}a(k)x^k.
+        \end{equation*}
+        Queremos demostrar que $a(k)=p(k)$. Suponemos que hemos tomado el término $x^{k_1}$ de
+        la primera serie, el término $x^{2k_2}$ de la segunda, el término $x^{3k_3}$ de la
+        tercera, \dots, y el término $x^{mk_m}$ de la $m$-ésima, en donde cada $k_i\geq0$. Su
+        producto es
+        \begin{equation*}
+            x^{k_1}x^{2k_2}x^{3k_3}\cdots x^{mk_m}=x^k,
+        \end{equation*}
+        en donde
+        \begin{equation*}
+            k=k_1+2k_2+3k_3+\cdots+mk_m.
+        \end{equation*}
+        Este resultado se puede escribir también como sigue:
+        \begin{equation*}
+            k=(1+1+\cdots+1)+(2+2+\cdots+2)+\cdots+(m+m+\cdots+m),
+        \end{equation*}
+        en donde el primer paréntesis contiene $k_1$ unos, el segundo $k_2$ doses, y así
+        sucesivamente. Esta es una partición de $k$ en sumandos positivos. Entonces, cada
+        partición de $k$ producirá uno de los términos $x^k$ y, recíprocamente, cada término
+        $x^k$ procede de una partición conveniente de $k$. Por consiguiente $a(k)$, el
+        coeficiente de $x^k$, es igual a $p(k)$, el número de particiones de $k$.
+
+        El razonamiento anterior no constituye una demostración rigurosa ya que se han ignorado
+        las cuestiones de convergencia y además hemos multiplicado conjuntamente una infinidad
+        de series geométricas, tratándolas como si fuesen polinomios. Sin embargo no es difícil
+        transformar las ideas anteriores en una demostración rigurosa.
+
+        A este fin imponemos que $x$ pertenezca al intervalo $0\leq x<1$ e introducimos dos
+        funciones,
+        \begin{equation*}
+            F_m(x)=\prod_{k=1}^{m}\frac{1}{1-x^k},\qquad\text{y}\qquad F(x)=\prod_{k=1}^{\infty}\frac{1}{1-x^k}=\lim_{m\to\infty}F_m(x).
+        \end{equation*}
+        El producto que define $F(x)$ converge absolutamente si $0\leq x<1$, puesto que su
+        inverso $\prod(1-x^k)$ converge absolutamente (ya que la serie $\sum x^k$ converge
+        absolutamente). Obsérvese además que, para cada $x$ fijo, la sucesión $\{F_m(x)\}$ es
+        creciente puesto que
+        \begin{equation*}
+            F_{m+1}(x)=\frac{1}{1-x^{m+1}}F_m(x)\geq F_m(x).
+        \end{equation*}
+        Luego $F_m(x)\leq F(x)$ para cada $x$ fijo, $0\leq x<1$, y cada $m$. Pero $F_m(x)$ es
+        el producto de un número finito de series absolutamente convergentes. Por consiguiente
+        también ella será una serie absolutamente convergente que podemos escribir en la forma
+        \begin{equation*}
+            F_m(x)=1+\sum_{k=1}^{\infty}p_m(k)x^k.
+        \end{equation*}
+        Aquí $p_m(k)$ es el número de soluciones de la ecuación
+        \begin{equation*}
+            k=k_1+2k_2+\cdots+mk_m.
+        \end{equation*}
+        Con otras palabras, $p_m(k)$ es el número de particiones de $k$ en partes que no exceden
+        $m$. Si $m\geq k$, entonces $p_m(k)=p(k)$. Por consiguiente, en todos los casos,
+        tenemos
+        \begin{equation*}
+            p_m(k)\leq p(k)
+        \end{equation*}
+        con igualdad cuando $m\geq k$. Con otras palabras, tenemos
+        \begin{equation*}
+            \lim_{m\to\infty}p_m(k)=p(k).
+        \end{equation*}
+        Ahora descomponemos las series relativas a $F_m(x)$ en dos partes,
+        \begin{align*}
+            F_m(x)&=\sum_{k=0}^{m}p_m(k)x^k+\sum_{k=m+1}^{\infty}p_m(k)x^k\\
+            &=\sum_{k=0}^{m}p(k)x^k+\sum_{k=m+1}^{\infty}p_m(k)x^k.
+        \end{align*}
+        Puesto que $x\geq0$ tenemos
+        \begin{equation*}
+            \sum_{k=0}^{m}p(k)x^k\leq F_m(x)\leq F(x).
+        \end{equation*}
+        Ello demuestra que la serie $\sum_{k=0}^{\infty}p(k)x^k$ converge. Sin embargo, puesto
+        que $p_m(k)\leq p(k)$, tenemos
+        \begin{equation*}
+            \sum_{k=0}^{\infty}p_m(k)x^k\leq\sum_{k=0}^{\infty}p(k)x^k\leq F(x)
+        \end{equation*}
+        luego, para cada $x$ fijo, la serie $\sum p_m(k)x^k$ converge uniformemente en $m$. Si
+        hacemos que $m\to\infty$ obtenemos
+        \begin{equation*}
+            F(x)=\lim_{m\to\infty}F_m(x)=\lim_{m\to\infty}\sum_{k=0}^{\infty}p_m(k)x^k=\sum_{k=0}^{\infty}\lim_{m\to\infty}p_m(k)x^k=\sum_{k=0}^{\infty}p(k)x^k,
+        \end{equation*}
+        que demuestra la identidad de Euler para $0\leq x<1$. Por prolongación analítica la
+        extendemos al disco unidad $\abs{x}<1$.
+    \end{proof}
+
+    \begin{table}[H]
+        \centering
+        \caption{Funciones generadoras}
+        \begin{tabular}{@{}lp{5.5cm}@{}}
+            \hline
+            Función generadora&El número de particiones de $n$ en partes que son\\\hline
+            $\displaystyle\prod_{m=1}^{\infty}\frac{1}{1-x^{2m-1}}$&impares\\[2.5ex]
+            $\displaystyle\prod_{m=1}^{\infty}\frac{1}{1-x^{2m}}$&pares\\[2.5ex]
+            $\displaystyle\prod_{m=1}^{\infty}\frac{1}{1-x^{m^2}}$&cuadrados\\[2.5ex]
+            $\displaystyle\prod_p\frac{1}{1-x^p}$&primos\\[2.5ex]
+            $\displaystyle\prod_{m=1}^{\infty}(1+x^m)$&desiguales\\[2.5ex]
+            $\displaystyle\prod_{m=1}^{\infty}(1+x^{2m-1})$&impares y desiguales\\[2.5ex]
+            $\displaystyle\prod_{m=1}^{\infty}(1+x^{2m})$&pares y desiguales\\[2.5ex]
+            $\displaystyle\prod_{m=1}^{\infty}(1+x^{m^2})$&cuadrados diferentes\\[2.5ex]
+            $\displaystyle\prod_p(1+x^p)$&primos diferentes\\\hline
+        \end{tabular}
+    \end{table}
+
+    Mediante razonamientos análogos podemos obtener funciones generadoras de muchas otras
+    funciones de partición. En la tabla 14.1 mencionamos sólo algunos ejemplos.
+
+    \section{EL TEOREMA DE EULER DE LOS NÚMEROS PENTAGONALES}
+
+    A continuación consideramos la función de partición generada por el producto
+    $\prod(1-x^m)$, inversa de la función generadora de $p(n)$. Escribimos
+    \begin{equation*}
+        \prod_{m=1}^{\infty}(1-x^m)=1+\sum_{n=1}^{\infty}a(n)x^n.
+    \end{equation*}
+    Para expresar $a(n)$ como una función de partición observamos que cada partición de $n$ en
+    partes desiguales produce un término $x^n$ en el segundo miembro con coeficiente $+1$ ó
+    $-1$. El coeficiente es $+1$ si $x^n$ es el producto de un número par de términos, y $-1$
+    en los demás casos. Por consiguiente,
+    \begin{equation*}
+        a(n)=p_e(n)-p_o(n),
+    \end{equation*}
+    en donde $p_e(n)$ es el número de particiones de $n$ en un número \textit{par} de partes
+    desiguales, y $p_o(n)$ es el número de particiones en un número \textit{impar} de partes
+    desiguales. Euler demostró que $p_e(n)=p_o(n)$ para todo $n$ excepto para los que
+    pertenecen a un conjunto especial llamado de los \textit{números pentagonales}.
+
+    Los números pentagonales $1,5,12,22,\dots$ ya fueron mencionados en la introducción
+    histórica. Están relacionados con los pentágonos dibujados en la figura 14.1.
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics{figuras/figura14-1.pdf}
+        \caption{}
+    \end{figure}
+
+    Estos números son también las sumas parciales de los términos de la progresión aritmética
+    \begin{equation*}
+        1,4,7,10,13,\dots,3n+1,\dots
+    \end{equation*}
+    Si $\omega(n)$ designa la suma de los $n$ primeros términos de esta progresión entonces
+    \begin{equation*}
+        \omega(n)=\sum_{k=0}^{n-1}(3k+1)=\frac{3n(n-1)}{2}+n=\frac{3n^2-n}{2}.
+    \end{equation*}
+    Los números $\omega(n)$ y $\omega(-n)=(3n^2+n)/2$ se llaman \textit{números pentagonales}.
+
+    \begin{teorema}[Teorema de los números pentagonales de Euler]\label{teo:14-3}
+        Si $\abs{x}<1$ tenemos
+        \begin{align*}
+            \prod_{m=1}^{\infty}(1-x^m)&=1-x-x^2+x^5+x^7-x^{12}-x^{15}+\cdots\\
+            &=1+\sum_{n=1}^{\infty}(-1)^n\left\{x^{\omega(n)}+x^{\omega(-n)}\right\}=\sum_{n=-\infty}^{\infty}(-1)^nx^{\omega(n)}.
+        \end{align*}
+    \end{teorema}
+
+    \begin{proof}
+        Primero probaremos el resultado para $0<x<1$ y después lo extenderemos al disco
+        $\abs{x}<1$ por prolongación analítica. Definimos $P_0=S_0=1$ y, para $n\geq1$,
+        consideramos
+        \begin{equation*}
+            P_n=\prod_{r=1}^{n}(1-x^r)\qquad\text{y}\qquad S_n=1+\sum_{r=1}^{n}(-1)^r\left\{x^{\omega(r)}+x^{\omega(-r)}\right\}.
+        \end{equation*}
+        El producto infinito $\prod(1-x^m)$ converge, luego $P_n\to\prod(1-x^m)$ cuando
+        $n\to\infty$. Probaremos (utilizando el método de Shanks \cite{shanks1951}) que
+        \begin{equation}\label{eq:14-6}
+            \abs{S_n-P_n}\leq nx^{n+1}.
+        \end{equation}
+        Puesto que $nx^{n+1}\to0$ cuando $n\to\infty$ esto prueba la identidad de Euler para
+        $0\leq x<1$.
+
+        Para probar \eqref{eq:14-6} consideramos $g(r)=r(r+1)/2$ e introducimos las sumas
+        \begin{equation*}
+            F_n=\sum_{r=0}^{n}(-1)^r\frac{P_n}{P_r}\,x^{rn+g(r)}.
+        \end{equation*}
+        En primer lugar probaremos que $F_n$ es una forma disfrazada de $S_n$. Es fácil
+        comprobar que $F_1=S_1=1-x-x^2$. Por consiguiente, si vemos que
+        \begin{equation*}
+            F_n-F_{n-1}=S_n-S_{n-1},\qquad\text{o que}\qquad F_n-S_n=F_{n-1}-S_{n-1},
+        \end{equation*}
+        habremos demostrado que, para todo $n\geq1$, $F_n=S_n$. Ahora bien
+        \begin{equation*}
+            F_n-F_{n-1}=\sum_{r=0}^{n}(-1)^r\frac{P_n}{P_r}\,x^{rn+g(r)}-\sum_{r=0}^{n-1}(-1)^r\frac{P_{n-1}}{P_r}\,x^{r(n-1)+g(r)}.
+        \end{equation*}
+        En la primera suma escribimos $P_n=(1-x^n)P_{n-1}$ y separamos el término con $r=n$.
+        Entonces distribuimos la diferencia $1-x^n$ y obtenemos
+        \begin{align*}
+            F_n-F_{n-1}&=(-1)^nx^{n^2+g(n)}+\sum_{r=0}^{n-1}(-1)^r\frac{P_{n-1}}{P_r}\,x^{rn+g(r)}\\
+            &\quad-\sum_{r=0}^{n-1}(-1)^r\frac{P_{n-1}}{P_r}\,x^{(r+1)n+g(r)}-\sum_{r=0}^{n-1}(-1)^r\frac{P_{n-1}}{P_r}\,x^{r(n-1)+g(r)}.
+        \end{align*}
+        Ahora combinamos la primera y la tercera suma y observamos que el término con $r=0$ se
+        anula. En el segundo sumando desplazamos los índices y obtenemos
+        \begin{align*}
+            F_n-F_{n-1}&=(-1)^nx^{n^2+g(n)}+\sum_{r=1}^{n-1}(-1)^r\frac{P_{n-1}}{P_r}\,x^{r(n-1)+g(r)}(x^r-1)\\
+            &\quad-\sum_{r=1}^{n}(-1)^{r-1}\frac{P_{n-1}}{P_{r-1}}\,x^{rn+g(r-1)}.
+        \end{align*}
+        Pero $(x^r-1)/P_r=-1/P_{r-1}$ y $r(n-1)+g(r)=rn+g(r-1)$ luego los dos últimos sumandos
+        se anulan término a término excepto para el término con $r=n$ de la segunda suma. Así,
+        obtenemos
+        \begin{equation*}
+            F_n-F_{n-1}=(-1)^nx^{n^2+g(n)}+(-1)^nx^{n^2+g(n-1)}.
+        \end{equation*}
+        Pero
+        \begin{equation*}
+            n^2+g(n)=n^2+\frac{n(n+1)}{2}=\omega(-n)\qquad\text{y}\qquad n^2+g(n-1)=\omega(n),
+        \end{equation*}
+        luego
+        \begin{equation*}
+            F_n-F_{n-1}=(-1)^n\left\{x^{\omega(n)}+x^{\omega(-n)}\right\}=S_n-S_{n-1},
+        \end{equation*}
+        y entonces $F_n=S_n$ para todo $n\geq1$. En la suma que define $F_n$ el primer término
+        es $P_n$ luego
+        \begin{equation}\label{eq:14-7}
+            F_n=P_n+\sum_{r=1}^{n}(-1)^r\frac{P_n}{P_r}\,x^{rn+g(r)}.
+        \end{equation}
+        Obsérvese que $0<P_n/P_r\leq1$ ya que $0\leq x<1$. Además, cada factor
+        $x^{rn+g(r)}\leq x^{n+1}$, luego la suma de la derecha de \eqref{eq:14-7} está acotada
+        superiormente por $nx^{n+1}$. Por consiguiente $\abs{F_n-P_n}\leq nx^{n+1}$ y, dado que
+        $F_n=S_n$, esto demuestra \eqref{eq:14-6} y termina la demostración de la identidad de
+        Euler.
+    \end{proof}
+
+    \section{DEMOSTRACIÓN COMBINATORIA DEL TEOREMA DE LOS NÚMEROS PENTAGONALES DE EULER}
+
+    Euler demostró su teorema de los números pentagonales por inducción en 1750. Más tarde
+    Legendre en 1830 y Jacobi en 1846 obtuvieron otras demostraciones. Esta sección describe
+    una demostración combinatoria realmente notable dada por F. Franklin \cite{franklin1881} en
+    1881.
+
+    Ya hemos observado que
+    \begin{equation*}
+        \prod_{m=1}^{\infty}(1-x^m)=1+\sum_{n=1}^{\infty}\left\{p_e(n)-p_o(n)\right\}x^n,
+    \end{equation*}
+    en donde $p_e(n)$ es el número de particiones de $n$ en un número \textit{par} de partes
+    desiguales, y $p_o(n)$ es el número de particiones de $n$ en un número \textit{impar} de
+    partes desiguales. Franklin utilizó la representación gráfica de las particiones mediante
+    puntos reticulares para demostrar que existe una correspondencia uno a uno entre las
+    particiones de $n$ en un número par de partes desiguales y las particiones de $n$ en un
+    número impar de partes desiguales, de modo que $p_e(n)=p_o(n)$, excepto cuando $n$ es un
+    número pentagonal.
+
+    Consideremos el grafo de una partición de $n$ partes desiguales. Decimos que el grafo se
+    halla en \textit{forma estándar} si las partes se colocan en orden decreciente, tal como
+    ilustra el ejemplo de la figura 14.2. La longitud del segmento rectilíneo que contiene los
+    puntos de la última fila se llama la \textit{base} del grafo, y el número de puntos
+    reticulares de la base se designará por $b$. Luego, $b\geq1$. El segmento rectilíneo más
+    largo de $45^{\circ}$ de inclinación que une el último punto de la primera fila con otros
+    puntos del grafo se denomina \textit{rampa} del grafo, y el número de puntos reticulares que
+    se hallan sobre la rampa se designa por $s$. Luego $s\geq1$. En la figura 14.2 tenemos
+    $b=2$ y $s=4$.
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics{figuras/figura14-2.pdf}
+        \caption{}
+    \end{figure}
+
+    Ahora definimos dos operaciones $A$ y $B$ en este grafo. La operación $A$ mueve los puntos
+    de la base de forma que pertenezcan a una recta paralela a la rampa, tal como se indica en
+    la figura 14.3(a). La operación $B$ mueve los puntos de la rampa de forma que pertenezcan a
+    una recta paralela a la base, tal como se indica en la figura 14.3(b). Decimos que una
+    operación es \textit{permisible} si preserva la forma estándar del grafo, es decir, si el
+    nuevo grafo tiene también las partes desiguales colocadas en orden decreciente.
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics{figuras/figura14-3.pdf}
+        \caption{}
+    \end{figure}
+
+    Si $A$ es permisible obtenemos una nueva partición de $n$ en partes desiguales, pero el
+    número de partes es una unidad menor que antes de efectuar la operación $A$. Si $B$ es
+    permisible obtenemos una nueva partición en partes desiguales, pero el número de partes de
+    $n$ es una unidad mayor que antes. Por consiguiente, si para cada partición de $n$
+    exactamente una de las operaciones $A$ o $B$ es permisible, existe una correspondencia uno a
+    uno entre particiones de $n$ en partes desiguales en número par e impar, es decir
+    $p_e(n)=p_o(n)$ para dicho $n$.
+
+    Para determinar cuándo $A$ y $B$ son permisibles consideramos tres casos: (1) $b<s$;
+    (2) $b=s$; (3) $b>s$.
+
+    \textit{Caso 1:} Si $b<s$, entonces $b\leq s-1$, luego la operación $A$ es permisible, pero
+    la $B$ no porque destruye la forma estándar. (Ver figura 14.3.)
+
+    \textit{Caso 2:} Si $b=s$, la operación $B$ no es permisible ya que el grafo que resulta no
+    se halla en forma estándar. La operación $A$ es permisible excepto cuando la base y la
+    rampa se intersecan como muestra la figura 14.4(a), en cuyo caso el nuevo grafo no se halla
+    en forma estándar.
+
+    \textit{Caso 3:} Si $b>s$, la operación $A$ no es permisible, mientras que la $B$ es
+    permisible excepto si $b=s+1$ y la base y la rampa se intersecan, como muestra la figura
+    14.4(b). En este caso el nuevo grafo tiene dos partes iguales.
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics{figuras/figura14-4.pdf}
+        \caption{Ni $A$ ni $B$ son permisibles}
+    \end{figure}
+
+    Por consiguiente, exactamente una de las operaciones $A$ o $B$ es permisible, con las dos
+    excepciones arriba indicadas. Consideremos en primer lugar el caso excepcional indicado en
+    la figura 14.4(a) y supongamos que el grafo posee $k$ filas. Entonces también $b=k$, luego
+    el número $n$ se obtiene por
+    \begin{equation*}
+        n=k+(k+1)+\cdots+(2k-1)=\frac{3k^2-k}{2}=\omega(k).
+    \end{equation*}
+    Para esta partición de $n$ tenemos una partición extra en partes pares si $k$ es par, y una
+    partición extra en partes impares si $k$ es impar, es decir
+    \begin{equation*}
+        p_e(n)-p_o(n)=(-1)^k.
+    \end{equation*}
+    En el otro caso excepcional, indicado en la figura 14.4(b), existe un punto reticular
+    adicional en cada fila o sea
+    \begin{equation*}
+        n=\frac{3k^2-k}{2}+k=\frac{3k^2+k}{2}=\omega(-k)
+    \end{equation*}
+    y de nuevo $p_e(n)-p_o(n)=(-1)^k$. Esto termina la demostración de Franklin de la identidad
+    de Euler.
+
+    \section[FÓRMULA RECURSIVA DE EULER PARA $p(n)$]{FÓRMULA RECURSIVA DE EULER PARA \texorpdfstring{$p(n)$}{p(n)}}
+
+    \begin{teorema}\label{teo:14-4}
+        Sea $p(0)=1$ y definamos $p(n)$ igual a 0 si $n<0$. Entonces, para $n\geq1$, tenemos
+        \begin{equation}\label{eq:14-8}
+            p(n)-p(n-1)-p(n-2)+p(n-5)+p(n-7)+\cdots=0,
+        \end{equation}
+        o bien, lo que es lo mismo,
+        \begin{equation*}
+            p(n)=\sum_{k=1}^{\infty}(-1)^{k+1}\left\{p(n-\omega(k))+p(n-\omega(-k))\right\}.
+        \end{equation*}
+    \end{teorema}
+
+    \begin{proof}
+        Los teoremas \ref{teo:14-2} y \ref{teo:14-3} nos dan la identidad
+        \begin{equation*}
+            \left(1+\sum_{k=1}^{\infty}(-1)^k\left\{x^{\omega(k)}+x^{\omega(-k)}\right\}\right)\left(\sum_{m=0}^{\infty}p(m)x^m\right)=1.
+        \end{equation*}
+        Si $n\geq1$, el coeficiente de $x^n$ de la derecha es 0, luego inmediatamente
+        obtenemos \eqref{eq:14-8} igualando coeficientes.
+    \end{proof}
+
+    MacMahon utilizó esta fórmula recursiva para calcular $p(n)$ hasta $n=200$. Damos algunos
+    valores muestra de esta tabla:
+    \begin{center}
+        \begin{tabular}{@{}l@{}}
+            $p(1)=1$\\
+            $p(5)=7$\\
+            $p(10)=42$\\
+            $p(15)=176$\\
+            $p(20)=627$
+        \end{tabular}
+    \end{center}
+

@@ -1,0 +1,520 @@
+\chapter{Demostración analítica del teorema del número primo}
+
+    \section{EL PLAN DE LA DEMOSTRACIÓN}
+
+    El teorema del número primo es equivalente a la afirmación
+    \begin{equation}\label{eq:13-1}
+        \psi(x)\sim x\qquad\text{cuando }x\to\infty,
+    \end{equation}
+    en donde $\psi(x)$ es la función de Chebyshev,
+    \begin{equation*}
+        \psi(x)=\sum_{n\leq x}\Lambda(n).
+    \end{equation*}
+    Este capítulo proporciona una demostración analítica de \eqref{eq:13-1} basada en las
+    propiedades de la función zeta de Riemann. La demostración analítica es más breve que la
+    demostración elemental efectuada en el capítulo 4 y sus ideas principales se comprenden
+    con mayor facilidad. Esta sección describe los hechos más sobresalientes de la
+    demostración.
+
+    La función $\psi$ es una función escalonada y resulta más conveniente tratar con su
+    integral que designamos $\psi_1$. Por lo tanto, sea
+    \begin{equation*}
+        \psi_1(x)=\int_1^x\psi(t)\,dt.
+    \end{equation*}
+    La integral $\psi_1$ es una función continua lineal a trozos. Ante todo veremos que la
+    relación asintótica
+    \begin{equation}\label{eq:13-2}
+        \psi_1(x)\sim\frac{1}{2}x^2\qquad\text{cuando }x\to\infty
+    \end{equation}
+    implica \eqref{eq:13-1} y por tanto, para demostrar \eqref{eq:13-1}, basta demostrar \eqref{eq:13-2}. A este fin expresamos
+    $\psi_1(x)/x^2$ en términos de la función zeta de Riemann mediante la integral de
+    contorno,
+    \begin{equation*}
+        \frac{\psi_1(x)}{x^2}=\frac{1}{2\pi i}\int_{c-\infty i}^{c+\infty i}\frac{x^{s-1}}{s(s+1)}\left(-\frac{\zeta'(s)}{\zeta(s)}\right)ds,\qquad\text{en donde }c>1.
+    \end{equation*}
+    El cociente $-\zeta'(s)/\zeta(s)$ posee un polo de primer orden en $s=1$ con residuo 1. Si
+    quitamos este polo obtenemos la fórmula
+    \begin{equation*}
+        \frac{\psi_1(x)}{x^2}-\frac{1}{2}\left(1-\frac{1}{x}\right)^2=\frac{1}{2\pi i}\int_{c-\infty i}^{c+\infty i}\frac{x^{s-1}}{s(s+1)}\left(-\frac{\zeta'(s)}{\zeta(s)}-\frac{1}{s-1}\right)ds,\qquad\text{para }c>1.
+    \end{equation*}
+    Sea
+    \begin{equation*}
+        h(s)=\frac{1}{s(s+1)}\left(-\frac{\zeta'(s)}{\zeta(s)}-\frac{1}{s-1}\right)
+    \end{equation*}
+    y escribamos de nuevo la última ecuación en la forma
+    \begin{align}
+        \frac{\psi_1(x)}{x^2}-\frac{1}{2}\left(1-\frac{1}{x}\right)^2&=\frac{1}{2\pi i}\int_{c-\infty i}^{c+\infty i}x^{s-1}h(s)\,ds\notag\\
+        &=\frac{x^{c-1}}{2\pi}\int_{-\infty}^{+\infty}h(c+it)e^{it\log x}\,dt.\label{eq:13-3}
+    \end{align}
+    Para completar la demostración debemos probar que
+    \begin{equation}\label{eq:13-4}
+        \lim_{x\to\infty}\frac{x^{c-1}}{2\pi}\int_{-\infty}^{+\infty}h(c+it)e^{it\log x}\,dt=0.
+    \end{equation}
+    Entonces el lema de Riemann-Lebesgue de la teoría de las series de Fourier establece que
+    \begin{equation*}
+        \lim_{x\to\infty}\int_{-\infty}^{+\infty}f(t)e^{itx}\,dt=0
+    \end{equation*}
+    si la integral $\int_{-\infty}^{+\infty}\abs{f(t)}\,dt$ converge. La integral en
+    \eqref{eq:13-4} es de este tipo con $\log x$ reemplazando a $x$, y es fácil demostrar que
+    la integral $\int_{-\infty}^{+\infty}\abs{h(c+it)}\,dt$ converge si $c>1$, por lo que la
+    integral de \eqref{eq:13-4} tiende a 0 cuando $x\to\infty$. Sin embargo, el factor
+    $x^{c-1}$, que se halla fuera de la integral, tiende a $\infty$ cuando $x\to\infty$ si $c>1$,
+    por lo que nos enfrentamos con una indeterminación del tipo $\infty\cdot0$. La ecuación
+    \eqref{eq:13-3} se verifica para todo $c>1$. Si hacemos $c=1$ en \eqref{eq:13-3} el
+    factor inoportuno $x^{c-1}$ desaparece. Pero entonces $h(c+it)$ se transforma en
+    $h(1+it)$ y el integrando contiene a $\zeta'(s)/\zeta(s)$ sobre la recta $\sigma=1$. En
+    este caso resulta más difícil demostrar que la integral
+    $\int_{-\infty}^{+\infty}\abs{h(1+it)}\,dt$ converge, y este hecho debe ser demostrado
+    antes de poder aplicar el lema de Riemann-Lebesgue. La última y más difícil parte de la
+    demostración consiste en demostrar que \textit{es} posible substituir $c$ por 1 en
+    \eqref{eq:13-3} y que la integral $\int_{-\infty}^{+\infty}\abs{h(1+it)}\,dt$ converge.
+    Requiere un estudio más detallado de la función zeta de Riemann en las proximidades de la
+    recta $\sigma=1$.
+
+    Ahora procederemos a llevar a término el plan ahora esbozado. Empezaremos con unos lemas.
+
+    \section{LEMAS}
+
+    \begin{lema}\label{lem:13-1}
+        Para toda función aritmética $a(n)$, sea
+        \begin{equation*}
+            A(x)=\sum_{n\leq x}a(n),
+        \end{equation*}
+        en donde $A(x)=0$ si $x<1$. Entonces
+        \begin{equation}\label{eq:13-5}
+            \sum_{n\leq x}(x-n)a(n)=\int_1^xA(t)\,dt.
+        \end{equation}
+    \end{lema}
+
+    \begin{proof}
+        Aplicamos la identidad de Abel (teorema 4.2) que establece que
+        \begin{equation}\label{eq:13-6}
+            \sum_{n\leq x}a(n)f(n)=A(x)f(x)-\int_1^xA(t)f'(t)\,dt
+        \end{equation}
+        si $f$ posee derivada continua en $[1,x]$. Hacemos $f(t)=t$ y obtenemos
+        \begin{equation*}
+            \sum_{n\leq x}a(n)f(n)=\sum_{n\leq x}na(n)\qquad\text{y}\qquad A(x)f(x)=x\sum_{n\leq x}a(n),
+        \end{equation*}
+        por lo que \eqref{eq:13-6} se reduce a \eqref{eq:13-5}.
+    \end{proof}
+
+    El lema que sigue constituye una forma de la regla de l'Hôpital para funciones crecientes
+    lineales a trozos.
+
+    \begin{lema}\label{lem:13-2}
+        Sea $A(x)=\sum_{n\leq x}a(n)$ y sea $A_1(x)=\int_1^xA(t)\,dt$. Además suponemos que
+        $a(n)\geq0$ para todo $n$. Si tenemos la fórmula asintótica
+        \begin{equation}\label{eq:13-7}
+            A_1(x)\sim Lx^c\qquad\text{cuando }x\to\infty
+        \end{equation}
+        para un $c>0$ y un $L>0$, entonces también tenemos
+        \begin{equation}\label{eq:13-8}
+            A(x)\sim cLx^{c-1}\qquad\text{cuando }x\to\infty.
+        \end{equation}
+    \end{lema}
+
+    Con otras palabras, la diferenciación formal de \eqref{eq:13-7} nos proporciona un
+    resultado correcto.
+
+    \begin{proof}
+        La función $A(x)$ es creciente puesto que los $a(n)$ son no negativos. Elegimos un
+        $\beta>1$ y consideramos la diferencia $A_1(\beta x)-A_1(x)$. Tenemos
+        \begin{align*}
+            A_1(\beta x)-A_1(x)&=\int_x^{\beta x}A(u)\,du\geq\int_x^{\beta x}A(x)\,du=A(x)(\beta x-x)\\
+            &=x(\beta-1)A(x).
+        \end{align*}
+        Esto nos da
+        \begin{equation*}
+            xA(x)\leq\frac{1}{\beta-1}\left\{A_1(\beta x)-A_1(x)\right\}
+        \end{equation*}
+        luego
+        \begin{equation*}
+            \frac{A(x)}{x^{c-1}}\leq\frac{1}{\beta-1}\left\{\frac{A_1(\beta x)}{(\beta x)^c}\beta^c-\frac{A_1(x)}{x^c}\right\}.
+        \end{equation*}
+        Fijamos $\beta$ y hacemos que $x\to\infty$ en la desigualdad anterior. Obtenemos
+        \begin{equation*}
+            \limsup_{x\to\infty}\frac{A(x)}{x^{c-1}}\leq\frac{1}{\beta-1}(L\beta^c-L)=L\,\frac{\beta^c-1}{\beta-1}.
+        \end{equation*}
+        Ahora hacemos que $\beta\to1+$. El cociente de la derecha es el cociente incremental
+        relativo a la derivada de $x^c$ en $x=1$ y tiene límite $c$. Por consiguiente
+        \begin{equation}\label{eq:13-9}
+            \limsup_{x\to\infty}\frac{A(x)}{x^{c-1}}\leq cL.
+        \end{equation}
+        Ahora consideramos un $\alpha$ con $0<\alpha<1$ y consideramos la diferencia
+        $A_1(x)-A_1(\alpha x)$. Un razonamiento análogo al anterior demuestra que
+        \begin{equation*}
+            \liminf_{x\to\infty}\frac{A(x)}{x^{c-1}}\geq L\,\frac{1-\alpha^c}{1-\alpha}.
+        \end{equation*}
+        Cuando $\alpha\to1-$ el segundo miembro tiende a $cL$. Esto, junto con
+        \eqref{eq:13-9}, prueba que $A(x)/x^{c-1}$ tiende al límite $cL$ cuando
+        $x\to\infty$.
+    \end{proof}
+
+    Cuando $a(n)=\Lambda(n)$ tenemos $A(x)=\psi(x)$, $A_1(x)=\psi_1(x)$, y $a(n)\geq0$. Por
+    consiguiente podemos aplicar los lemas \ref{lem:13-1} y \ref{lem:13-2} y obtenemos
+    inmediatamente:
+
+    \begin{teorema}\label{teo:13-1}
+        Tenemos
+        \begin{equation}\label{eq:13-10}
+            \psi_1(x)=\sum_{n\leq x}(x-n)\Lambda(n).
+        \end{equation}
+        Además, la relación asintótica $\psi_1(x)\sim x^2/2$ implica $\psi(x)\sim x$ cuando
+        $x\to\infty$.
+    \end{teorema}
+
+    Nuestra próxima labor consiste en expresar $\psi_1(x)/x^2$ como una integral de contorno
+    que involucre a la función zeta. Para ello precisamos de los casos especiales $k=1$ y
+    $k=2$ del siguiente lema sobre integrales de contorno. (Compárese con el lema 4 del
+    capítulo 11.)
+
+    \begin{lema}\label{lem:13-3}
+        Si $c>0$ y $u>0$, entonces para cada entero $k\geq1$ tenemos
+        \begin{equation*}
+            \frac{1}{2\pi i}\int_{c-\infty i}^{c+\infty i}\frac{u^{-z}}{z(z+1)\cdots(z+k)}\,dz=
+            \begin{cases}
+                \dfrac{1}{k!}(1-u)^k&\text{si }0<u\leq1,\\[1.5ex]
+                0&\text{si }u>1,
+            \end{cases}
+        \end{equation*}
+        y la integral es absolutamente convergente.
+    \end{lema}
+
+    \begin{proof}
+        En primer lugar observamos que el integrando es igual a
+        $u^{-z}\Gamma(z)/\Gamma(z+k+1)$. Este resultado se obtiene utilizando repetidamente la
+        ecuación funcional $\Gamma(z+1)=z\Gamma(z)$. Para probar el lema aplicamos el teorema
+        del residuo de Cauchy a la integral
+        \begin{equation*}
+            \frac{1}{2\pi i}\int_{C(R)}\frac{u^{-z}\Gamma(z)}{\Gamma(z+k+1)}\,dz,
+        \end{equation*}
+        en donde $C(R)$ es el contorno dibujado en la figura 13.1(a) si $0<u\leq1$, y el de la
+        figura 13.1(b) si $u>1$. El radio $R$ del círculo es mayor que $2k+c$ por lo que todos
+        los polos en $z=0,-1,\dots,-k$ se hallan en el interior del círculo.
+
+        \begin{figure}[H]
+            \centering
+            \includegraphics{figuras/figura13-1.pdf}
+            \caption{}
+        \end{figure}
+
+        Ahora vemos que el integrando a lo largo de cada uno de los arcos circulares tiende a 0
+        cuando $R\to\infty$. Si $z=x+iy$ y $\abs{z}=R$, el integrando se halla dominado por
+        \begin{equation*}
+            \abs{\frac{u^{-z}}{z(z+1)\cdots(z+k)}}=\frac{u^{-x}}{\abs{z}\abs{z+1}\cdots\abs{z+k}}\leq\frac{u^{-c}}{R\abs{z+1}\cdots\abs{z+k}}.
+        \end{equation*}
+        La desigualdad $u^{-x}\leq u^{-c}$ se sigue del hecho de que $u^{-x}$ es una función
+        creciente de $x$ si $0<u\leq1$ y decreciente si $u>1$. Ahora, si $1\leq n\leq k$,
+        tenemos
+        \begin{equation*}
+            \abs{z+n}\geq\abs{z}-n=R-n\geq R-k\geq R/2
+        \end{equation*}
+        puesto que $R>2k$. Por consiguiente la integral a lo largo de cada arco circular se
+        halla acotada por
+        \begin{equation*}
+            \frac{2\pi Ru^{-c}}{R(\tfrac{1}{2}R)^k}=O(R^{-k})
+        \end{equation*}
+        y ésta $\to0$ cuando $R\to\infty$ ya que $k\geq1$.
+
+        Si $u>1$, el integrando es analítico en el interior de $C(R)$, luego
+        $\int_{C(R)}=0$. Si ahora $R\to\infty$ el lema queda establecido en este caso.
+
+        Si $0<u\leq1$, calculamos la integral a lo largo de $C(R)$ por el teorema del residuo
+        de Cauchy. El integrando posee polos en los puntos enteros $n=0,-1,\dots,-k$, luego
+        \begin{align*}
+            \frac{1}{2\pi i}\int_{C(R)}\frac{u^{-z}\Gamma(z)}{\Gamma(z+k+1)}\,dz&=\sum_{n=0}^{k}\operatorname*{Res}_{z=-n}\frac{u^{-z}\Gamma(z)}{\Gamma(z+k+1)}\\
+            &=\sum_{n=0}^{k}\frac{u^n}{\Gamma(k+1-n)}\operatorname*{Res}_{z=-n}\Gamma(z)=\sum_{n=0}^{k}\frac{u^n(-1)^n}{(k-n)!\,n!}\\
+            &=\frac{1}{k!}\sum_{n=0}^{k}\binom{k}{n}(-u)^n=\frac{(1-u)^k}{k!}.
+        \end{align*}
+        Si $R\to\infty$ obtenemos el lema.
+    \end{proof}
+
+    \section[UNA REPRESENTACIÓN DE $\psi_1(x)/x^2$ COMO INTEGRAL DE CONTORNO]{UNA REPRESENTACIÓN DE \texorpdfstring{$\psi_1(x)/x^2$}{ψ₁(x)/x²} COMO INTEGRAL DE CONTORNO}
+
+    \begin{teorema}\label{teo:13-2}
+        Si $c>1$ y $x\geq1$ tenemos
+        \begin{equation}\label{eq:13-11}
+            \frac{\psi_1(x)}{x^2}=\frac{1}{2\pi i}\int_{c-\infty i}^{c+\infty i}\frac{x^{s-1}}{s(s+1)}\left(-\frac{\zeta'(s)}{\zeta(s)}\right)ds.
+        \end{equation}
+    \end{teorema}
+
+    \begin{proof}
+        De la ecuación \eqref{eq:13-10} tenemos $\psi_1(x)/x=\sum_{n\leq x}(1-n/x)\Lambda(n)$.
+        Ahora usamos el lema \ref{lem:13-3} con $k=1$ y $u=n/x$. Si $n\leq x$ obtenemos
+        \begin{equation*}
+            1-\frac{n}{x}=\frac{1}{2\pi i}\int_{c-\infty i}^{c+\infty i}\frac{(x/n)^s}{s(s+1)}\,ds.
+        \end{equation*}
+        Multiplicamos esta relación por $\Lambda(n)$ y sumamos para todos los $n\leq x$ y
+        obtenemos
+        \begin{equation*}
+            \frac{\psi_1(x)}{x}=\sum_{n\leq x}\frac{1}{2\pi i}\int_{c-\infty i}^{c+\infty i}\frac{\Lambda(n)(x/n)^s}{s(s+1)}\,ds=\sum_{n=1}^{\infty}\frac{1}{2\pi i}\int_{c-\infty i}^{c+\infty i}\frac{\Lambda(n)(x/n)^s}{s(s+1)}\,ds
+        \end{equation*}
+        ya que la integral se anula si $n>x$. Podemos escribirla
+        \begin{equation}\label{eq:13-12}
+            \frac{\psi_1(x)}{x}=\sum_{n=1}^{\infty}\int_{c-\infty i}^{c+\infty i}f_n(s)\,ds,
+        \end{equation}
+        en donde $2\pi if_n(s)=\Lambda(n)(x/n)^s/(s^2+s)$. Ahora, en \eqref{eq:13-12}, queremos
+        intercambiar la suma y la integral. Para ello es suficiente probar que la serie
+        \begin{equation}\label{eq:13-13}
+            \sum_{n=1}^{\infty}\int_{c-\infty i}^{c+\infty i}\abs{f_n(s)}\,ds
+        \end{equation}
+        es convergente. (Ver teorema 10.26 de \cite{apostol1976}.) Las sumas parciales de esta
+        serie satisfacen la desigualdad
+        \begin{equation*}
+            \sum_{n=1}^{N}\int_{c-\infty i}^{c+\infty i}\frac{\Lambda(n)(x/n)^c}{\abs{s}\abs{s+1}}\,ds=\sum_{n=1}^{N}\frac{\Lambda(n)}{n^c}\int_{c-\infty i}^{c+\infty i}\frac{x^c}{\abs{s}\abs{s+1}}\,ds\leq A\sum_{n=1}^{\infty}\frac{\Lambda(n)}{n^c},
+        \end{equation*}
+        en donde $A$ es constante, luego \eqref{eq:13-13} converge. Por tanto podemos
+        intercambiar la suma y la integral en \eqref{eq:13-12} y obtenemos
+        \begin{align*}
+            \frac{\psi_1(x)}{x}&=\int_{c-\infty i}^{c+\infty i}\sum_{n=1}^{\infty}f_n(s)\,ds=\frac{1}{2\pi i}\int_{c-\infty i}^{c+\infty i}\frac{x^s}{s(s+1)}\sum_{n=1}^{\infty}\frac{\Lambda(n)}{n^s}\,ds\\
+            &=\frac{1}{2\pi i}\int_{c-\infty i}^{c+\infty i}\frac{x^s}{s(s+1)}\left(-\frac{\zeta'(s)}{\zeta(s)}\right)ds.
+        \end{align*}
+        Ahora, para obtener \eqref{eq:13-11}, basta dividir por $x$.
+    \end{proof}
+
+    \begin{teorema}\label{teo:13-3}
+        Si $c>1$ y $x\geq1$ tenemos
+        \begin{equation}\label{eq:13-14}
+            \frac{\psi_1(x)}{x^2}-\frac{1}{2}\left(1-\frac{1}{x}\right)^2=\frac{1}{2\pi i}\int_{c-\infty i}^{c+\infty i}x^{s-1}h(s)\,ds,
+        \end{equation}
+        en donde
+        \begin{equation}\label{eq:13-15}
+            h(s)=\frac{1}{s(s+1)}\left(-\frac{\zeta'(s)}{\zeta(s)}-\frac{1}{s-1}\right).
+        \end{equation}
+    \end{teorema}
+
+    \begin{proof}
+        Esta vez utilizaremos el lema \ref{lem:13-3} con $k=2$ para obtener
+        \begin{equation*}
+            \frac{1}{2}\left(1-\frac{1}{x}\right)^2=\frac{1}{2\pi i}\int_{c-\infty i}^{c+\infty i}\frac{x^s}{s(s+1)(s+2)}\,ds,
+        \end{equation*}
+        en donde $c>0$. Substituimos $s$ por $s-1$ en la integral (haciendo $c>1$) y restamos
+        este resultado de \eqref{eq:13-11} para obtener el teorema \ref{teo:13-3}.
+    \end{proof}
+
+    Si parametrizamos el arco de integración haciendo $s=c+it$, obtenemos
+    $x^{s-1}=x^{c-1}x^{it}=x^{c-1}e^{it\log x}$ y la ecuación \eqref{eq:13-14} se transforma
+    en
+    \begin{equation}\label{eq:13-16}
+        \frac{\psi_1(x)}{x^2}-\frac{1}{2}\left(1-\frac{1}{x}\right)^2=\frac{x^{c-1}}{2\pi}\int_{-\infty}^{+\infty}h(c+it)e^{it\log x}\,dt.
+    \end{equation}
+
+    Nuestra próxima labor consiste en demostrar que el segundo miembro de
+    \eqref{eq:13-16} tiende a 0 cuando $x\to\infty$. Como ya hemos indicado anteriormente,
+    primero probaremos que podemos hacer $c=1$ en \eqref{eq:13-16}. A este fin necesitamos
+    estudiar $\zeta(s)$ en las proximidades de la recta $\sigma=1$.
+
+    \section[COTAS SUPERIORES PARA $\abs{\zeta(s)}$ Y PARA $\abs{\zeta'(s)}$ EN LAS PROXIMIDADES DE LA RECTA $\sigma=1$]{COTAS SUPERIORES PARA \texorpdfstring{$\abs{\zeta(s)}$}{|ζ(s)|} Y PARA \texorpdfstring{$\abs{\zeta'(s)}$}{|ζ'(s)|} EN LAS PROXIMIDADES DE LA RECTA \texorpdfstring{$\sigma=1$}{σ=1}}
+
+    Para estudiar $\zeta(s)$ en las proximidades de la recta $\sigma=1$ utilizamos la
+    representación que se obtiene por el teorema 12.21 y que es válida para $\sigma>0$,
+    \begin{equation}\label{eq:13-17}
+        \zeta(s)=\sum_{n=1}^{N}\frac{1}{n^s}-s\int_N^{\infty}\frac{x-[x]}{x^{s+1}}\,dx+\frac{N^{1-s}}{s-1}.
+    \end{equation}
+    Utilizamos además la fórmula correspondiente a $\zeta'(s)$ que se obtiene derivando cada
+    uno de los miembros de \eqref{eq:13-17},
+    \begin{multline}\label{eq:13-18}
+        \zeta'(s)=-\sum_{n=1}^{N}\frac{\log n}{n^s}+s\int_N^{\infty}\frac{(x-[x])\log x}{x^{s+1}}\,dx-\int_N^{\infty}\frac{x-[x]}{x^{s+1}}\,dx\\
+        -\frac{N^{1-s}\log N}{s-1}-\frac{N^{1-s}}{(s-1)^2}.
+    \end{multline}
+    El teorema que sigue utiliza estas relaciones para obtener cotas superiores de
+    $\abs{\zeta(s)}$ y de $\abs{\zeta'(s)}$.
+
+    \begin{teorema}\label{teo:13-4}
+        Para cada $A>0$, existe una constante $M$ (que depende de $A$) tal que
+        \begin{equation}\label{eq:13-19}
+            \abs{\zeta(s)}\leq M\log t\qquad\text{y}\qquad\abs{\zeta'(s)}\leq M\log^2t
+        \end{equation}
+        para todo $s$ con $\sigma\geq1/2$ que además verifica
+        \begin{equation}\label{eq:13-20}
+            \sigma>1-\frac{A}{\log t}\qquad\text{y}\qquad t\geq e.
+        \end{equation}
+    \end{teorema}
+
+    Nota. Las desigualdades de \eqref{eq:13-20} describen una región del tipo representado en
+    la figura 13.2.
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics{figuras/figura13-2.pdf}
+        \caption{}
+    \end{figure}
+
+    \begin{proof}
+        Si $\sigma\geq2$, tenemos $\abs{\zeta(s)}\leq\zeta(2)$, $\abs{\zeta'(s)}\leq\abs{\zeta'(2)}$
+        y las desigualdades de \eqref{eq:13-19} se verifican trivialmente. Por consiguiente
+        podemos suponer que $\sigma<2$ y $t\geq e$. Entonces tenemos
+        \begin{equation*}
+            \abs{s}\leq\sigma+t\leq2+t<2t\qquad\text{y}\qquad\abs{s-1}\geq t
+        \end{equation*}
+        luego $1/\abs{s-1}\leq1/t$. Si acotamos $\abs{\zeta(s)}$ utilizando \eqref{eq:13-17}
+        obtenemos
+        \begin{equation*}
+            \abs{\zeta(s)}\leq\sum_{n=1}^{N}\frac{1}{n^{\sigma}}+2t\int_N^{\infty}\frac{1}{x^{\sigma+1}}\,dx+\frac{N^{1-\sigma}}{t}=\sum_{n=1}^{N}\frac{1}{n^{\sigma}}+\frac{2t}{\sigma N^{\sigma}}+\frac{N^{1-\sigma}}{t}.
+        \end{equation*}
+        Ahora hacemos que $N$ dependa de $t$ tomando $N=[t]$. Entonces $N\leq t<N+1$ y
+        $\log n\leq\log t$ si $n<N$. La desigualdad de \eqref{eq:13-20} implica
+        $1-\sigma<A/\log t$ por lo tanto
+        \begin{equation*}
+            \frac{1}{n^{\sigma}}=\frac{n^{1-\sigma}}{n}=\frac{1}{n}e^{(1-\sigma)\log n}<\frac{1}{n}e^{A\log n/\log t}\leq\frac{1}{n}e^A=O\left(\frac{1}{n}\right).
+        \end{equation*}
+        Por consiguiente
+        \begin{equation*}
+            \frac{2t}{\sigma N^{\sigma}}\leq\frac{N+1}{N}=O(1)\qquad\text{y}\qquad\frac{N^{1-\sigma}}{t}=\frac{N}{t}\,\frac{1}{N^{\sigma}}=O\left(\frac{1}{N}\right)=O(1),
+        \end{equation*}
+        luego
+        \begin{equation*}
+            \abs{\zeta(s)}=O\left(\sum_{n=1}^{N}\frac{1}{n}\right)+O(1)=O(\log N)+O(1)=O(\log t).
+        \end{equation*}
+        Esto demuestra la desigualdad relativa a $\abs{\zeta(s)}$ dada en \eqref{eq:13-19}. Para
+        obtener la desigualdad relativa a $\abs{\zeta'(s)}$ aplicamos el mismo tipo de
+        razonamiento a \eqref{eq:13-18}. La única diferencia esencial es que en el miembro de
+        la derecha aparece el factor extra $\log N$. Pero $\log N=O(\log t)$ por lo que en la
+        región especificada tenemos $\abs{\zeta'(s)}=O(\log^2t)$.
+    \end{proof}
+
+    \section{LA NO ANULACIÓN DE \texorpdfstring{$\zeta(s)$}{ζ(s)} EN LA RECTA \texorpdfstring{$\sigma=1$}{σ=1}}
+
+    En esta sección vemos que $\zeta(1+it)\neq0$ para cada $t$ real. La demostración se basa
+    en una desigualdad que también necesitaremos en la sección siguiente.
+
+    \begin{teorema}\label{teo:13-5}
+        Si $\sigma>1$ tenemos
+        \begin{equation}\label{eq:13-21}
+            \zeta^3(\sigma)\abs{\zeta(\sigma+it)}^4\abs{\zeta(\sigma+2it)}\geq1.
+        \end{equation}
+    \end{teorema}
+
+    \begin{proof}
+        Recordamos la identidad $\zeta(s)=e^{G(s)}$ demostrada en la sección 11.9, ejemplo 1,
+        en donde
+        \begin{equation*}
+            G(s)=\sum_{n=2}^{\infty}\frac{\Lambda(n)}{\log n}n^{-s}=\sum_p\sum_{m=1}^{\infty}\frac{1}{mp^{ms}}\qquad(\sigma>1)
+        \end{equation*}
+        se puede escribir
+        \begin{equation*}
+            \zeta(s)=\exp\left\{\sum_p\sum_{m=1}^{\infty}\frac{1}{mp^{ms}}\right\}=\exp\left\{\sum_p\sum_{m=1}^{\infty}\frac{e^{-imt\log p}}{mp^{m\sigma}}\right\},
+        \end{equation*}
+        de donde obtenemos
+        \begin{equation*}
+            \abs{\zeta(s)}=\exp\left\{\sum_p\sum_{m=1}^{\infty}\frac{\cos(mt\log p)}{mp^{m\sigma}}\right\}.
+        \end{equation*}
+        Aplicamos esta fórmula repetidamente con $s=\sigma$, $s=\sigma+it$ y $s=\sigma+2it$, y se
+        obtiene
+        \begin{multline*}
+            \zeta^3(\sigma)\abs{\zeta(\sigma+it)}^4\abs{\zeta(\sigma+2it)}\\
+            =\exp\left\{\sum_p\sum_{m=1}^{\infty}\frac{3+4\cos(mt\log p)+\cos(2mt\log p)}{mp^{m\sigma}}\right\}.
+        \end{multline*}
+        Ahora bien, disponemos de la desigualdad trigonométrica
+        \begin{equation*}
+            3+4\cos\theta+\cos2\theta\geq0
+        \end{equation*}
+        que se obtiene a partir de la identidad
+        \begin{equation*}
+            3+4\cos\theta+\cos2\theta=3+4\cos\theta+2\cos^2\theta-1=2(1+\cos\theta)^2.
+        \end{equation*}
+        Por consiguiente cada término de la última serie infinita es no negativo y obtenemos
+        \eqref{eq:13-21}.
+    \end{proof}
+
+    \begin{teorema}\label{teo:13-6}
+        Tenemos $\zeta(1+it)\neq0$ para cada $t$ real.
+    \end{teorema}
+
+    \begin{proof}
+        Únicamente debemos considerar $t\neq0$. Se puede escribir \eqref{eq:13-21} en la forma
+        \begin{equation}\label{eq:13-22}
+            \left\{(\sigma-1)\zeta(\sigma)\right\}^3\abs{\frac{\zeta(\sigma+it)}{\sigma-1}}^4\abs{\zeta(\sigma+2it)}\geq\frac{1}{\sigma-1}.
+        \end{equation}
+        Esto es válido si $\sigma>1$. Ahora hacemos que $\sigma\to1+$ en \eqref{eq:13-22}. El
+        primer factor tiende a 1 puesto que $\zeta(s)$ tiene residuo 1 en el polo $s=1$. El
+        tercer factor tiende a $\abs{\zeta(1+2it)}$. Si $\zeta(1+it)$ fuese cero, el segundo
+        factor podríamos escribirlo
+        \begin{equation*}
+            \abs{\frac{\zeta(\sigma+it)-\zeta(1+it)}{\sigma-1}}^4\to\abs{\zeta'(1+it)}^4\qquad\text{cuando }\sigma\to1+.
+        \end{equation*}
+        Por consiguiente, si para algún $t\neq0$ tuviésemos $\zeta(1+it)=0$, el primer miembro
+        de \eqref{eq:13-22} se aproximaría al límite $\abs{\zeta'(1+it)}^4\abs{\zeta(1+2it)}$
+        cuando $\sigma\to1+$. Pero el segundo miembro tiende a $\infty$ cuando $\sigma\to1+$ y
+        ello no es posible.
+    \end{proof}
+
+    \section[DESIGUALDADES PARA $\abs{1/\zeta(s)}$ Y $\abs{\zeta'(s)/\zeta(s)}$]{DESIGUALDADES PARA \texorpdfstring{$\abs{1/\zeta(s)}$}{|1/ζ(s)|} Y \texorpdfstring{$\abs{\zeta'(s)/\zeta(s)}$}{|ζ'(s)/ζ(s)|}}
+
+    Aplicamos ahora una vez más el teorema \ref{teo:13-5} y obtenemos las siguientes
+    desigualdades para $\abs{1/\zeta(s)}$ y $\abs{\zeta'(s)/\zeta(s)}$.
+
+    \begin{teorema}\label{teo:13-7}
+        Existe una constante $M>0$ tal que
+        \begin{equation*}
+            \abs{\frac{1}{\zeta(s)}}<M\log^7t\qquad\text{y}\qquad\abs{\frac{\zeta'(s)}{\zeta(s)}}<M\log^9t
+        \end{equation*}
+        si $\sigma\geq1$ y $t\geq e$.
+    \end{teorema}
+
+    \begin{proof}
+        Para $\sigma\geq2$ tenemos
+        \begin{equation*}
+            \abs{\frac{1}{\zeta(s)}}=\abs{\sum_{n=1}^{\infty}\frac{\mu(n)}{n^s}}\leq\sum_{n=1}^{\infty}\frac{1}{n^2}\leq\zeta(2)
+        \end{equation*}
+        y
+        \begin{equation*}
+            \abs{\frac{\zeta'(s)}{\zeta(s)}}\leq\sum_{n=1}^{\infty}\frac{\Lambda(n)}{n^2},
+        \end{equation*}
+        luego las desigualdades se verifican trivialmente si $\sigma\geq2$. Suponemos, entonces,
+        que $1\leq\sigma<2$ y que $t\geq e$. Escribimos de nuevo las desigualdades de
+        \eqref{eq:13-21} como sigue:
+        \begin{equation*}
+            \frac{1}{\abs{\zeta(\sigma+it)}}\leq\zeta(\sigma)^{3/4}\abs{\zeta(\sigma+2it)}^{1/4}.
+        \end{equation*}
+        Ahora, como $(\sigma-1)\zeta(\sigma)$ está acotado en el intervalo $1\leq\sigma<2$, o
+        sea que $(\sigma-1)\zeta(\sigma)\leq M$, en donde $M$ es una constante, tenemos
+        \begin{equation*}
+            \zeta(\sigma)\leq\frac{M}{\sigma-1}\qquad\text{si }1<\sigma\leq2.
+        \end{equation*}
+        Además, $\zeta(\sigma+2it)=O(\log t)$ si $1\leq\sigma\leq2$ (por el teorema
+        \ref{teo:13-4}), luego para $1<\sigma\leq2$ tenemos
+        \begin{equation*}
+            \frac{1}{\abs{\zeta(\sigma+it)}}\leq\frac{M^{3/4}(\log t)^{1/4}}{(\sigma-1)^{3/4}}=\frac{A(\log t)^{1/4}}{(\sigma-1)^{3/4}},
+        \end{equation*}
+        en donde $A$ es una constante absoluta. Por consiguiente, para una constante $B>0$,
+        tenemos
+        \begin{equation}\label{eq:13-23}
+            \abs{\zeta(\sigma+it)}>\frac{B(\sigma-1)^{3/4}}{(\log t)^{1/4}},\qquad\text{si }1<\sigma\leq2,\text{ y }t\geq e.
+        \end{equation}
+        Esto también se verifica trivialmente para $\sigma=1$. Sea $\alpha$ un número cualquiera
+        que verifique $1<\alpha<2$. Entonces, si $1\leq\sigma\leq\alpha$, $t\geq e$, podemos
+        utilizar el teorema \ref{teo:13-4} para escribir
+        \begin{align*}
+            \abs{\zeta(\sigma+it)-\zeta(\alpha+it)}&\leq\int_{\sigma}^{\alpha}\abs{\zeta'(u+it)}\,du\leq(\alpha-\sigma)M\log^2t\\
+            &\leq(\alpha-1)M\log^2t.
+        \end{align*}
+        Luego, por la desigualdad triangular,
+        \begin{align*}
+            \abs{\zeta(\sigma+it)}&\geq\abs{\zeta(\alpha+it)}-\abs{\zeta(\sigma+it)-\zeta(\alpha+it)}\\
+            &\geq\abs{\zeta(\alpha+it)}-(\alpha-1)M\log^2t\geq\frac{B(\alpha-1)^{3/4}}{(\log t)^{1/4}}-(\alpha-1)M\log^2t.
+        \end{align*}
+        Este resultado se verifica, si $1<\sigma<\alpha$, y por \eqref{eq:13-23} también se
+        verifica para $\alpha\leq\sigma\leq2$ puesto que $(\sigma-1)^{3/4}\geq(\alpha-1)^{3/4}$.
+        Con otras palabras, si $1\leq\sigma\leq2$ y $t\geq e$ tenemos la desigualdad
+        \begin{equation*}
+            \abs{\zeta(\sigma+it)}\geq\frac{B(\alpha-1)^{3/4}}{(\log t)^{1/4}}-(\alpha-1)M\log^2t
+        \end{equation*}
+        para todo $\alpha$ que satisfaga $1<\alpha<2$. Ahora $\alpha$ lo hacemos depender de $t$
+        eligiendo $\alpha$ de forma que el primer término de la derecha sea igual a dos veces el
+        segundo. Esto requiere que
+        \begin{equation*}
+            \alpha=1+\left(\frac{B}{2M}\right)^4\frac{1}{(\log t)^9}.
+        \end{equation*}
+        Es obvio que $\alpha>1$ y también que $\alpha<2$ si $t\geq t_0$ para cierto $t_0$. Así
+        pues, si $t>t_0$ y $1\leq\sigma<2$ tenemos
+        \begin{equation*}
+            \abs{\zeta(\sigma+it)}\geq(\alpha-1)M\log^2t=\frac{C}{(\log t)^7}.
+        \end{equation*}
+        Esta desigualdad se verifica asimismo con (quizás) una $C$ diferente si $e\leq t\leq t_0$.
+        Todo ello demuestra que $\abs{\zeta(s)}\geq C\log^{-7}t$ para todo $\sigma\geq1$,
+        $t\geq e$, y, lo que nos proporciona es una cota superior de $\abs{1/\zeta(s)}$. A fin de
+        obtener la desigualdad relativa a $\abs{\zeta'(s)/\zeta(s)}$ aplicamos el teorema
+        \ref{teo:13-4} y obtenemos un factor extra $\log^2t$.
+    \end{proof}
+

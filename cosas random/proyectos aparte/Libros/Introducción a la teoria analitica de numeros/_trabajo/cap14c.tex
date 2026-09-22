@@ -1,0 +1,123 @@
+    \begin{center}
+        \begin{tabular}{@{}l@{}}
+            $p(25)=1\,958$\\
+            $p(30)=5\,604$\\
+            $p(40)=37\,338$\\
+            $p(50)=204\,226$\\
+            $p(100)=190\,569\,292$\\
+            $p(200)=3\,972\,999\,029\,388$
+        \end{tabular}
+    \end{center}
+
+    Estos ejemplos indican que $p(n)$ crece muy rápidamente con $n$. El mayor valor de $p(n)$
+    calculado es $p(14\,031)$, y es un número con 127 dígitos. D. H. Lehmer
+    \cite{lehmer1936} calculó este número para comprobar una conjetura de Ramanujan que afirma
+    que $p(14\,031)\equiv0\pmod{11^4}$. Esta afirmación resultó correcta. Es obvio que para
+    calcular este valor de $p(n)$ no se utilizó la fórmula dada en \eqref{eq:14-8}. En su lugar,
+    Lehmer utilizó una fórmula asintótica de Rademacher \cite{rademacher1937} que implica
+    \begin{equation*}
+        p(n)\sim\frac{e^{K\sqrt{n}}}{4n\sqrt{3}}\qquad\text{cuando }n\to\infty,
+    \end{equation*}
+    en donde $K=\pi(2/3)^{1/2}$. Para $n=200$ la cantidad de la derecha es aproximadamente
+    $4\times10^{12}$ que es notablemente próxima al valor de $p(200)$ dado en la tabla de
+    MacMahon.
+
+    En la continuación de este volumen daremos una deducción de la fórmula asintótica de
+    Rademacher de $p(n)$. La demostración requiere una preparación considerable en la teoría de
+    las funciones modulares elípticas. En la sección siguiente se da una cota superior de $p(n)$
+    que involucra la exponencial $e^{K\sqrt{n}}$ y que se puede obtener con un esfuerzo
+    relativamente pequeño.
+
+    \section[UNA COTA SUPERIOR PARA $p(n)$]{UNA COTA SUPERIOR PARA \texorpdfstring{$p(n)$}{p(n)}}
+
+    \begin{teorema}\label{teo:14-5}
+        Si $n\geq1$, tenemos $p(n)<e^{K\sqrt{n}}$, en donde $K=\pi(2/3)^{1/2}$.
+    \end{teorema}
+
+    \begin{proof}
+        Sea
+        \begin{equation*}
+            F(x)=\prod_{n=1}^{\infty}(1-x^n)^{-1}=1+\sum_{k=1}^{\infty}p(k)x^k,
+        \end{equation*}
+        y restringimos $x$ al intervalo $0<x<1$. Entonces tenemos $p(n)x^n<F(x)$, de donde
+        obtenemos $\log p(n)+n\log x<\log F(x)$, luego
+        \begin{equation}\label{eq:14-9}
+            \log p(n)<\log F(x)+n\log\frac{1}{x}.
+        \end{equation}
+        Determinamos mayorantes de los términos $\log F(x)$ y de $n\log(1/x)$ separadamente.
+        Primero escribimos
+        \begin{align*}
+            \log F(x)&=-\log\prod_{n=1}^{\infty}(1-x^n)=-\sum_{n=1}^{\infty}\log(1-x^n)=\sum_{n=1}^{\infty}\sum_{m=1}^{\infty}\frac{x^{mn}}{m}\\
+            &=\sum_{m=1}^{\infty}\frac{1}{m}\sum_{n=1}^{\infty}(x^m)^n=\sum_{m=1}^{\infty}\frac{1}{m}\,\frac{x^m}{1-x^m}.
+        \end{align*}
+        Dado que tenemos
+        \begin{equation*}
+            \frac{1-x^m}{1-x}=1+x+x^2+\cdots+x^{m-1},
+        \end{equation*}
+        y que $0<x<1$, podemos escribir
+        \begin{equation*}
+            mx^{m-1}<\frac{1-x^m}{1-x}<m,
+        \end{equation*}
+        y por tanto
+        \begin{equation*}
+            \frac{m(1-x)}{x}<\frac{1-x^m}{x^m}<\frac{m(1-x)}{x^m}.
+        \end{equation*}
+        Si invertimos y dividimos por $m$ obtenemos
+        \begin{equation*}
+            \frac{1}{m^2}\,\frac{x^m}{1-x}\leq\frac{1}{m}\,\frac{x^m}{1-x^m}\leq\frac{1}{m^2}\,\frac{x}{1-x}.
+        \end{equation*}
+        Sumando respecto de $m$ obtenemos
+        \begin{equation*}
+            \log F(x)=\sum_{m=1}^{\infty}\frac{1}{m}\,\frac{x^m}{1-x^m}\leq\frac{x}{1-x}\sum_{m=1}^{\infty}\frac{1}{m^2}=\frac{\pi^2}{6}\,\frac{x}{1-x}=\frac{\pi^2}{6t},
+        \end{equation*}
+        en donde
+        \begin{equation*}
+            t=\frac{1-x}{x}.
+        \end{equation*}
+        Obsérvese que $t$ varía de $\infty$ a 0 positivamente cuando $x$ varía de 0 a 1.
+
+        Ahora mayoramos el término $n\log(1/x)$. Para $t>0$ tenemos $\log(1+t)<t$. Pero
+        \begin{equation*}
+            1+t=1+\frac{1-x}{x}=\frac{1}{x},\qquad\text{luego}\qquad\log\frac{1}{x}<t.
+        \end{equation*}
+        Ahora bien
+        \begin{equation}\label{eq:14-10}
+            \log p(n)<\log F(x)+n\log\frac{1}{x}<\frac{\pi^2}{6t}+nt.
+        \end{equation}
+        El mínimo de $(\pi^2/6t)+nt$ se obtiene cuando ambos términos son iguales, esto es,
+        cuando $\pi^2/(6t)=nt$, o bien $t=\pi/\sqrt{6n}$. Para este valor de $t$ tenemos
+        \begin{equation*}
+            \log p(n)<2nt=2n\pi/\sqrt{6n}=K\sqrt{n}
+        \end{equation*}
+        luego $p(n)<e^{K\sqrt{n}}$, como asegurábamos.
+    \end{proof}
+
+    Nota. J. H. van Lint \cite{vanlint1974} demostró que con un poco más de esfuerzo podemos
+    obtener la desigualdad más precisa
+    \begin{equation}\label{eq:14-11}
+        p(n)<\frac{\pi e^{K\sqrt{n}}}{\sqrt{6(n-1)}}\qquad\text{para }n>1.
+    \end{equation}
+    Como $p(k)\geq p(n)$ si $k\geq n$, tenemos, si $n>1$,
+    \begin{equation*}
+        F(x)>\sum_{k=n}^{\infty}p(k)x^k\geq p(n)\sum_{k=n}^{\infty}x^k=\frac{p(n)x^n}{1-x}.
+    \end{equation*}
+    Tomando logaritmos obtenemos, en vez de \eqref{eq:14-9}, la desigualdad
+    \begin{equation*}
+        \log p(n)<\log F(x)+n\log\frac{1}{x}+\log(1-x).
+    \end{equation*}
+    Pero, al ser $1-x=tx$, tenemos $\log(1-x)=\log t-\log(1/x)$, luego \eqref{eq:14-10} se puede
+    substituir por
+    \begin{equation}\label{eq:14-12}
+        \log p(n)<\frac{\pi^2}{6t}+(n-1)t+\log t.
+    \end{equation}
+    Un cálculo fácil con derivadas prueba que la función
+    \begin{equation*}
+        f(t)=\frac{\pi^2}{6t}+(n-1)t+\log t
+    \end{equation*}
+    tiene un mínimo en
+    \begin{equation*}
+        t=\frac{-1+\sqrt{1+[4(n-1)\pi^2/6]}}{2(n-1)}.
+    \end{equation*}
+    Utilizando este valor de $t$ en \eqref{eq:14-12} y despreciando términos insignificantes
+    obtenemos \eqref{eq:14-11}.
+

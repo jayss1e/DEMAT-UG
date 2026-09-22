@@ -1,55 +1,185 @@
 \babel@toc {spanish}{}\relax 
-\contentsline {chapter}{\numberline {1}El teorema fundamental de la Aritmética}{3}{chapter.1}%
-\contentsline {section}{\numberline {1.1}INTRODUCCIÓN}{3}{section.1.1}%
-\contentsline {section}{\numberline {1.2}DIVISIBILIDAD}{4}{section.1.2}%
-\contentsline {section}{\numberline {1.3}MÁXIMO COMÚN DIVISOR}{5}{section.1.3}%
-\contentsline {section}{\numberline {1.4}NÚMEROS PRIMOS}{6}{section.1.4}%
-\contentsline {section}{\numberline {1.5}EL TEOREMA FUNDAMENTAL DE LA ARITMÉTICA}{8}{section.1.5}%
-\contentsline {section}{\numberline {1.6}LA SERIE DE LOS INVERSOS DE LOS PRIMOS}{9}{section.1.6}%
-\contentsline {section}{\numberline {1.7}EL ALGORITMO DE EUCLIDES}{10}{section.1.7}%
-\contentsline {section}{\numberline {1.8}EL MÁXIMO COMÚN DIVISOR DE MÁS DE DOS NÚMEROS}{11}{section.1.8}%
-\contentsline {chapter}{\numberline {2}Funciones aritméticas y producto de Dirichlet}{15}{chapter.2}%
-\contentsline {section}{\numberline {2.1}INTRODUCCIÓN}{15}{section.2.1}%
-\contentsline {section}{\numberline {2.2}LA FUNCIÓN DE MÖBIUS $\mu (n)$}{15}{section.2.2}%
-\contentsline {section}{\numberline {2.3}LA FUNCIÓN INDICATRIZ DE EULER $\varphi (n)$}{16}{section.2.3}%
-\contentsline {section}{\numberline {2.4}UNA RELACIÓN QUE CONECTA $\varphi $ Y $\mu $}{17}{section.2.4}%
-\contentsline {section}{\numberline {2.5}UNA FÓRMULA PRODUCTO PARA $\varphi (n)$}{18}{section.2.5}%
-\contentsline {section}{\numberline {2.6}EL PRODUCTO DE DIRICHLET DE FUNCIONES ARITMÉTICAS}{20}{section.2.6}%
-\contentsline {section}{\numberline {2.7}INVERSOS DE DIRICHLET Y FÓRMULA DE INVERSIÓN DE MÖBIUS}{22}{section.2.7}%
-\contentsline {section}{\numberline {2.8}LA FUNCIÓN DE MANGOLDT $\Lambda (n)$}{24}{section.2.8}%
-\contentsline {section}{\numberline {2.9}FUNCIONES MULTIPLICATIVAS}{25}{section.2.9}%
-\contentsline {section}{\numberline {2.10}FUNCIONES MULTIPLICATIVAS Y PRODUCTO DE DIRICHLET}{27}{section.2.10}%
-\contentsline {section}{\numberline {2.11}LA INVERSA DE UNA FUNCIÓN COMPLETAMENTE MULTIPLICATIVA}{29}{section.2.11}%
-\contentsline {section}{\numberline {2.12}LA FUNCIÓN $\lambda (n)$ DE LIOUVILLE}{30}{section.2.12}%
-\contentsline {section}{\numberline {2.13}LAS FUNCIONES DIVISOR $\sigma _\alpha (n)$}{31}{section.2.13}%
-\contentsline {section}{\numberline {2.14}CONVOLUCIONES GENERALIZADAS}{32}{section.2.14}%
-\contentsline {section}{\numberline {2.15}SERIES FORMALES DE POTENCIAS}{34}{section.2.15}%
-\contentsline {section}{\numberline {2.16}LA SERIE DE BELL DE UNA FUNCIÓN ARITMÉTICA}{36}{section.2.16}%
-\contentsline {section}{\numberline {2.17}SERIES DE BELL Y PRODUCTO DE DIRICHLET}{37}{section.2.17}%
-\contentsline {section}{\numberline {2.18}DERIVADAS DE FUNCIONES ARITMÉTICAS}{38}{section.2.18}%
-\contentsline {section}{\numberline {2.19}LA IDENTIDAD DE SELBERG}{40}{section.2.19}%
-\contentsline {chapter}{\numberline {3}Medias de funciones aritméticas}{47}{chapter.3}%
-\contentsline {section}{\numberline {3.1}INTRODUCCIÓN}{47}{section.3.1}%
-\contentsline {section}{\numberline {3.2}LA NOTACIÓN $O$ MAYÚSCULA. IGUALDAD ASINTÓTICA DE FUNCIONES}{48}{section.3.2}%
-\contentsline {section}{\numberline {3.3}FÓRMULA DE SUMACIÓN DE EULER}{49}{section.3.3}%
-\contentsline {section}{\numberline {3.4}ALGUNAS FÓRMULAS ASINTÓTICAS ELEMENTALES}{50}{section.3.4}%
-\contentsline {section}{\numberline {3.5}EL ORDEN MEDIO DE $d(n)$}{52}{section.3.5}%
-\contentsline {section}{\numberline {3.6}EL ORDEN MEDIO DE LAS FUNCIONES DIVISOR $\sigma _\alpha (n)$}{54}{section.3.6}%
-\contentsline {section}{\numberline {3.7}EL ORDEN MEDIO DE $\varphi (n)$}{56}{section.3.7}%
-\contentsline {section}{\numberline {3.8}UNA APLICACIÓN A LA DISTRIBUCIÓN DE LOS PUNTOS RETICULARES VISIBLES DESDE EL ORIGEN}{57}{section.3.8}%
-\contentsline {section}{\numberline {3.9}EL ORDEN DE $\mu (n)$ Y EL DE $\Lambda (n)$}{59}{section.3.9}%
-\contentsline {section}{\numberline {3.10}LAS SUMAS PARCIALES DE UN PRODUCTO DE DIRICHLET}{60}{section.3.10}%
-\contentsline {section}{\numberline {3.11}APLICACIONES A $\mu (n)$ Y A $\Lambda (n)$}{61}{section.3.11}%
-\contentsline {section}{\numberline {3.12}OTRA IDENTIDAD PARA LAS SUMAS PARCIALES}{64}{section.3.12}%
-\contentsline {chapter}{\numberline {4}Teoremas elementales sobre los primos}{71}{chapter.4}%
-\contentsline {section}{\numberline {4.1}INTRODUCCIÓN}{71}{section.4.1}%
-\contentsline {section}{\numberline {4.2}LAS FUNCIONES DE CHEBYSHEV $\psi (x)$ Y $\vartheta (x)$}{72}{section.4.2}%
-\contentsline {section}{\numberline {4.3}RELACIONES QUE LIGAN $\vartheta (x)$ Y $\pi (x)$}{73}{section.4.3}%
-\contentsline {section}{\numberline {4.4}CIERTAS FORMAS EQUIVALENTES DEL TEOREMA DEL NÚMERO PRIMO}{76}{section.4.4}%
-\contentsline {section}{\numberline {4.5}DESIGUALDADES RELATIVAS A $\pi (n)$ Y A $p_n$}{78}{section.4.5}%
-\contentsline {section}{\numberline {4.6}TEOREMA TAUBERIANO DE SHAPIRO}{82}{section.4.6}%
-\contentsline {section}{\numberline {4.7}APLICACIONES DEL TEOREMA DE SHAPIRO}{84}{section.4.7}%
-\contentsline {section}{\numberline {4.8}UNA FÓRMULA ASINTÓTICA PARA $\DOTSB \sum@ \slimits@ (1/p)$}{86}{section.4.8}%
-\contentsline {section}{\numberline {4.9}LAS SUMAS PARCIALES DE LA FUNCIÓN DE MÖBIUS}{87}{section.4.9}%
-\contentsline {section}{\numberline {4.10}BREVE ESBOZO DE UNA DEMOSTRACIÓN ELEMENTAL DEL TEOREMA DEL NÚMERO PRIMO}{92}{section.4.10}%
-\contentsline {section}{\numberline {4.11}FÓRMULA ASINTÓTICA DE SELBERG}{93}{section.4.11}%
+\contentsline {chapter}{\numberline {1}El teorema fundamental de la Aritmética}{7}{chapter.1}%
+\contentsline {section}{\numberline {1.1}INTRODUCCIÓN}{7}{section.1.1}%
+\contentsline {section}{\numberline {1.2}DIVISIBILIDAD}{8}{section.1.2}%
+\contentsline {section}{\numberline {1.3}MÁXIMO COMÚN DIVISOR}{8}{section.1.3}%
+\contentsline {section}{\numberline {1.4}NÚMEROS PRIMOS}{10}{section.1.4}%
+\contentsline {section}{\numberline {1.5}EL TEOREMA FUNDAMENTAL DE LA ARITMÉTICA}{12}{section.1.5}%
+\contentsline {section}{\numberline {1.6}LA SERIE DE LOS INVERSOS DE LOS PRIMOS}{13}{section.1.6}%
+\contentsline {section}{\numberline {1.7}EL ALGORITMO DE EUCLIDES}{14}{section.1.7}%
+\contentsline {section}{\numberline {1.8}EL MÁXIMO COMÚN DIVISOR DE MÁS DE DOS NÚMEROS}{15}{section.1.8}%
+\contentsline {chapter}{\numberline {2}Funciones aritméticas y producto de Dirichlet}{19}{chapter.2}%
+\contentsline {section}{\numberline {2.1}INTRODUCCIÓN}{19}{section.2.1}%
+\contentsline {section}{\numberline {2.2}LA FUNCIÓN DE MÖBIUS $\mu (n)$}{19}{section.2.2}%
+\contentsline {section}{\numberline {2.3}LA FUNCIÓN INDICATRIZ DE EULER $\varphi (n)$}{20}{section.2.3}%
+\contentsline {section}{\numberline {2.4}UNA RELACIÓN QUE CONECTA $\varphi $ Y $\mu $}{21}{section.2.4}%
+\contentsline {section}{\numberline {2.5}UNA FÓRMULA PRODUCTO PARA $\varphi (n)$}{22}{section.2.5}%
+\contentsline {section}{\numberline {2.6}EL PRODUCTO DE DIRICHLET DE FUNCIONES ARITMÉTICAS}{24}{section.2.6}%
+\contentsline {section}{\numberline {2.7}INVERSOS DE DIRICHLET Y FÓRMULA DE INVERSIÓN DE MÖBIUS}{26}{section.2.7}%
+\contentsline {section}{\numberline {2.8}LA FUNCIÓN DE MANGOLDT $\Lambda (n)$}{28}{section.2.8}%
+\contentsline {section}{\numberline {2.9}FUNCIONES MULTIPLICATIVAS}{29}{section.2.9}%
+\contentsline {section}{\numberline {2.10}FUNCIONES MULTIPLICATIVAS Y PRODUCTO DE DIRICHLET}{31}{section.2.10}%
+\contentsline {section}{\numberline {2.11}LA INVERSA DE UNA FUNCIÓN COMPLETAMENTE MULTIPLICATIVA}{33}{section.2.11}%
+\contentsline {section}{\numberline {2.12}LA FUNCIÓN $\lambda (n)$ DE LIOUVILLE}{34}{section.2.12}%
+\contentsline {section}{\numberline {2.13}LAS FUNCIONES DIVISOR $\sigma _{\alpha }(n)$}{35}{section.2.13}%
+\contentsline {section}{\numberline {2.14}CONVOLUCIONES GENERALIZADAS}{36}{section.2.14}%
+\contentsline {section}{\numberline {2.15}SERIES FORMALES DE POTENCIAS}{38}{section.2.15}%
+\contentsline {section}{\numberline {2.16}LA SERIE DE BELL DE UNA FUNCIÓN ARITMÉTICA}{40}{section.2.16}%
+\contentsline {section}{\numberline {2.17}SERIES DE BELL Y PRODUCTO DE DIRICHLET}{41}{section.2.17}%
+\contentsline {section}{\numberline {2.18}DERIVADAS DE FUNCIONES ARITMÉTICAS}{42}{section.2.18}%
+\contentsline {section}{\numberline {2.19}LA IDENTIDAD DE SELBERG}{44}{section.2.19}%
+\contentsline {chapter}{\numberline {3}Medias de funciones aritméticas}{51}{chapter.3}%
+\contentsline {section}{\numberline {3.1}INTRODUCCIÓN}{51}{section.3.1}%
+\contentsline {section}{\numberline {3.2}LA NOTACIÓN $O$ MAYÚSCULA. IGUALDAD ASINTÓTICA DE FUNCIONES}{52}{section.3.2}%
+\contentsline {section}{\numberline {3.3}FÓRMULA DE SUMACIÓN DE EULER}{53}{section.3.3}%
+\contentsline {section}{\numberline {3.4}ALGUNAS FÓRMULAS ASINTÓTICAS ELEMENTALES}{54}{section.3.4}%
+\contentsline {section}{\numberline {3.5}EL ORDEN MEDIO DE $d(n)$}{56}{section.3.5}%
+\contentsline {section}{\numberline {3.6}EL ORDEN MEDIO DE LAS FUNCIONES DIVISOR $\sigma _{\alpha }(n)$}{58}{section.3.6}%
+\contentsline {section}{\numberline {3.7}EL ORDEN MEDIO DE $\varphi (n)$}{60}{section.3.7}%
+\contentsline {section}{\numberline {3.8}UNA APLICACIÓN A LA DISTRIBUCIÓN DE LOS PUNTOS RETICULARES VISIBLES DESDE EL ORIGEN}{61}{section.3.8}%
+\contentsline {section}{\numberline {3.9}EL ORDEN DE $\mu (n)$ Y EL DE $\Lambda (n)$}{63}{section.3.9}%
+\contentsline {section}{\numberline {3.10}LAS SUMAS PARCIALES DE UN PRODUCTO DE DIRICHLET}{64}{section.3.10}%
+\contentsline {section}{\numberline {3.11}APLICACIONES A $\mu (n)$ Y A $\Lambda (n)$}{65}{section.3.11}%
+\contentsline {section}{\numberline {3.12}OTRA IDENTIDAD PARA LAS SUMAS PARCIALES}{68}{section.3.12}%
+\contentsline {chapter}{\numberline {4}Teoremas elementales sobre los primos}{75}{chapter.4}%
+\contentsline {section}{\numberline {4.1}INTRODUCCIÓN}{75}{section.4.1}%
+\contentsline {section}{\numberline {4.2}LAS FUNCIONES DE CHEBYSHEV $\psi (x)$ Y $\vartheta (x)$}{76}{section.4.2}%
+\contentsline {section}{\numberline {4.3}RELACIONES QUE LIGAN $\vartheta (x)$ Y $\pi (x)$}{77}{section.4.3}%
+\contentsline {section}{\numberline {4.4}CIERTAS FORMAS EQUIVALENTES DEL TEOREMA DEL NÚMERO PRIMO}{80}{section.4.4}%
+\contentsline {section}{\numberline {4.5}DESIGUALDADES RELATIVAS A $\pi (n)$ Y A $p_{n}$}{82}{section.4.5}%
+\contentsline {section}{\numberline {4.6}TEOREMA TAUBERIANO DE SHAPIRO}{86}{section.4.6}%
+\contentsline {section}{\numberline {4.7}APLICACIONES DEL TEOREMA DE SHAPIRO}{88}{section.4.7}%
+\contentsline {section}{\numberline {4.8}UNA FÓRMULA ASINTÓTICA PARA $\DOTSB \sum@ \slimits@ (1/p)$}{90}{section.4.8}%
+\contentsline {section}{\numberline {4.9}LAS SUMAS PARCIALES DE LA FUNCIÓN DE MÖBIUS}{91}{section.4.9}%
+\contentsline {section}{\numberline {4.10}BREVE ESBOZO DE UNA DEMOSTRACIÓN ELEMENTAL DEL TEOREMA DEL NÚMERO PRIMO}{96}{section.4.10}%
+\contentsline {section}{\numberline {4.11}FÓRMULA ASINTÓTICA DE SELBERG}{97}{section.4.11}%
+\contentsline {chapter}{\numberline {5}Congruencias}{105}{chapter.5}%
+\contentsline {section}{\numberline {5.1}DEFINICIÓN Y PROPIEDADES BÁSICAS DE LAS CONGRUENCIAS}{105}{section.5.1}%
+\contentsline {section}{\numberline {5.2}CLASES DE RESTOS Y SISTEMAS COMPLETOS DE RESTOS}{109}{section.5.2}%
+\contentsline {section}{\numberline {5.3}CONGRUENCIAS LINEALES}{111}{section.5.3}%
+\contentsline {section}{\numberline {5.4}SISTEMAS RESIDUALES REDUCIDOS Y EL TEOREMA DE EULER-FERMAT}{113}{section.5.4}%
+\contentsline {section}{\numberline {5.5}CONGRUENCIAS POLINÓMICAS MÓDULO $p$. TEOREMA DE LAGRANGE}{115}{section.5.5}%
+\contentsline {section}{\numberline {5.6}APLICACIONES DEL TEOREMA DE LAGRANGE}{116}{section.5.6}%
+\contentsline {section}{\numberline {5.7}CONGRUENCIAS LINEALES SIMULTÁNEAS. EL TEOREMA DEL RESTO CHINO}{119}{section.5.7}%
+\contentsline {section}{\numberline {5.8}APLICACIONES DEL TEOREMA DEL RESTO CHINO}{120}{section.5.8}%
+\contentsline {section}{\numberline {5.9}CONGRUENCIAS POLINÓMICAS RELATIVAS A POTENCIAS DE PRIMOS}{122}{section.5.9}%
+\contentsline {section}{\numberline {5.10}EL PRINCIPIO DE LA CLASIFICACIÓN CRUZADA}{125}{section.5.10}%
+\contentsline {section}{\numberline {5.11}UNA PROPIEDAD DE DESCOMPOSICIÓN DE LOS SISTEMAS RESIDUALES REDUCIDOS}{127}{section.5.11}%
+\contentsline {chapter}{\numberline {6}Grupos abelianos finitos y sus caracteres}{133}{chapter.6}%
+\contentsline {section}{\numberline {6.1}DEFINICIONES}{133}{section.6.1}%
+\contentsline {section}{\numberline {6.2}EJEMPLOS DE GRUPOS Y SUBGRUPOS}{134}{section.6.2}%
+\contentsline {section}{\numberline {6.3}PROPIEDADES ELEMENTALES DE LOS GRUPOS}{135}{section.6.3}%
+\contentsline {section}{\numberline {6.4}CONSTRUCCIÓN DE SUBGRUPOS}{136}{section.6.4}%
+\contentsline {section}{\numberline {6.5}CARACTERES DE GRUPOS ABELIANOS FINITOS}{138}{section.6.5}%
+\contentsline {section}{\numberline {6.6}EL GRUPO DE LOS CARACTERES}{141}{section.6.6}%
+\contentsline {section}{\numberline {6.7}RELACIONES DE ORTOGONALIDAD PARA CARACTERES}{141}{section.6.7}%
+\contentsline {section}{\numberline {6.8}CARACTERES DE DIRICHLET}{143}{section.6.8}%
+\contentsline {section}{\numberline {6.9}SUMAS QUE CONTIENEN CARACTERES DE DIRICHLET}{146}{section.6.9}%
+\contentsline {section}{\numberline {6.10}LA NO ANULACIÓN DE $L(1,\chi )$ PARA $\chi $ NO PRINCIPAL REAL}{147}{section.6.10}%
+\contentsline {chapter}{\numberline {7}Teorema de Dirichlet sobre primos en progresiones aritméticas}{153}{chapter.7}%
+\contentsline {section}{\numberline {7.1}INTRODUCCIÓN}{153}{section.7.1}%
+\contentsline {section}{\numberline {7.2}TEOREMA DE DIRICHLET PARA PRIMOS DE LA FORMA $4n-1$ Y $4n+1$}{154}{section.7.2}%
+\contentsline {section}{\numberline {7.3}PLAN DE LA DEMOSTRACIÓN DEL TEOREMA DE DIRICHLET}{155}{section.7.3}%
+\contentsline {section}{\numberline {7.4}DEMOSTRACIÓN DEL LEMA \ref {lem:7-4}}{157}{section.7.4}%
+\contentsline {section}{\numberline {7.5}DEMOSTRACIÓN DEL LEMA \ref {lem:7-5}}{158}{section.7.5}%
+\contentsline {section}{\numberline {7.6}DEMOSTRACIÓN DEL LEMA \ref {lem:7-6}}{160}{section.7.6}%
+\contentsline {section}{\numberline {7.7}DEMOSTRACIÓN DEL LEMA \ref {lem:7-8}}{160}{section.7.7}%
+\contentsline {section}{\numberline {7.8}DEMOSTRACIÓN DEL LEMA \ref {lem:7-7}}{161}{section.7.8}%
+\contentsline {section}{\numberline {7.9}DISTRIBUCIÓN DE PRIMOS EN PROGRESIONES ARITMÉTICAS}{162}{section.7.9}%
+\contentsline {chapter}{\numberline {8}Funciones aritméticas periódicas y sumas de Gauss}{165}{chapter.8}%
+\contentsline {section}{\numberline {8.1}FUNCIONES PERIÓDICAS MÓDULO $k$}{165}{section.8.1}%
+\contentsline {section}{\numberline {8.2}EXISTENCIA DE SERIES FINITAS DE FOURIER PARA FUNCIONES ARITMÉTICAS PERIÓDICAS}{166}{section.8.2}%
+\contentsline {section}{\numberline {8.3}SUMA DE RAMANUJAN Y GENERALIZACIONES}{168}{section.8.3}%
+\contentsline {section}{\numberline {8.4}PROPIEDADES MULTIPLICATIVAS DE LAS SUMAS $s_{k}(n)$}{170}{section.8.4}%
+\contentsline {section}{\numberline {8.5}SUMAS DE GAUSS ASOCIADAS A CARACTERES DE DIRICHLET}{173}{section.8.5}%
+\contentsline {section}{\numberline {8.6}CARACTERES DE DIRICHLET CON SUMAS DE GAUSS NO NULAS}{175}{section.8.6}%
+\contentsline {section}{\numberline {8.7}MÓDULOS INDUCIDOS Y CARACTERES PRIMITIVOS}{176}{section.8.7}%
+\contentsline {section}{\numberline {8.8}OTRAS PROPIEDADES DE LOS MÓDULOS INDUCIDOS}{177}{section.8.8}%
+\contentsline {section}{\numberline {8.9}EL CONDUCTOR DE UN CARÁCTER}{179}{section.8.9}%
+\contentsline {section}{\numberline {8.10}CARACTERES PRIMITIVOS Y SUMAS DE GAUSS SEPARABLES}{180}{section.8.10}%
+\contentsline {section}{\numberline {8.11}LA SERIE FINITA DE FOURIER DE LOS CARACTERES DE DIRICHLET}{181}{section.8.11}%
+\contentsline {section}{\numberline {8.12}DESIGUALDAD DE PÓLYA PARA SUMAS PARCIALES DE CARACTERES PRIMITIVOS}{182}{section.8.12}%
+\contentsline {chapter}{\numberline {9}Restos cuadráticos y ley de reciprocidad cuadrática}{189}{chapter.9}%
+\contentsline {section}{\numberline {9.1}RESTOS CUADRÁTICOS}{189}{section.9.1}%
+\contentsline {section}{\numberline {9.2}EL SÍMBOLO DE LEGENDRE Y SUS PROPIEDADES}{190}{section.9.2}%
+\contentsline {section}{\numberline {9.3}CÁLCULO DE $(-1\,|\,p)$ Y $(2\,|\,p)$}{192}{section.9.3}%
+\contentsline {section}{\numberline {9.4}LEMA DE GAUSS}{193}{section.9.4}%
+\contentsline {section}{\numberline {9.5}LA LEY DE RECIPROCIDAD CUADRÁTICA}{196}{section.9.5}%
+\contentsline {section}{\numberline {9.6}APLICACIONES DE LA LEY DE RECIPROCIDAD}{198}{section.9.6}%
+\contentsline {section}{\numberline {9.7}EL SÍMBOLO DE JACOBI}{199}{section.9.7}%
+\contentsline {section}{\numberline {9.8}APLICACIONES A LAS ECUACIONES DIOFÁNTICAS}{203}{section.9.8}%
+\contentsline {section}{\numberline {9.9}SUMAS DE GAUSS Y LEY DE RECIPROCIDAD CUADRÁTICA}{204}{section.9.9}%
+\contentsline {section}{\numberline {9.10}LEY DE RECIPROCIDAD PARA SUMAS CUADRÁTICAS DE GAUSS}{208}{section.9.10}%
+\contentsline {section}{\numberline {9.11}OTRA DEMOSTRACIÓN DE LA LEY DE RECIPROCIDAD CUADRÁTICA}{213}{section.9.11}%
+\contentsline {chapter}{\numberline {10}Raíces primitivas}{217}{chapter.10}%
+\contentsline {section}{\numberline {10.1}EL EXPONENTE DE UN NÚMERO MÓD $m$. RAÍCES PRIMITIVAS}{217}{section.10.1}%
+\contentsline {section}{\numberline {10.2}RAÍCES PRIMITIVAS Y SISTEMAS RESIDUALES REDUCIDOS}{218}{section.10.2}%
+\contentsline {section}{\numberline {10.3}LA NO EXISTENCIA DE RAÍCES PRIMITIVAS MÓD $2^{\alpha }$ PARA $\alpha \geq 3$}{219}{section.10.3}%
+\contentsline {section}{\numberline {10.4}LA EXISTENCIA DE RAÍCES PRIMITIVAS MÓD $p$ PARA PRIMOS IMPARES $p$}{219}{section.10.4}%
+\contentsline {section}{\numberline {10.5}RAÍCES PRIMITIVAS Y RESTOS CUADRÁTICOS}{221}{section.10.5}%
+\contentsline {section}{\numberline {10.6}LA EXISTENCIA DE RAÍCES PRIMITIVAS MÓD $p^{\alpha }$}{222}{section.10.6}%
+\contentsline {section}{\numberline {10.7}LA EXISTENCIA DE RAÍCES PRIMITIVAS MÓD $2p^{\alpha }$}{224}{section.10.7}%
+\contentsline {section}{\numberline {10.8}LA NO EXISTENCIA DE RAÍCES PRIMITIVAS EN LOS RESTANTES CASOS}{225}{section.10.8}%
+\contentsline {section}{\numberline {10.9}EL NÚMERO DE RAÍCES PRIMITIVAS MÓD $m$}{226}{section.10.9}%
+\contentsline {section}{\numberline {10.10}CÁLCULO DE ÍNDICES}{228}{section.10.10}%
+\contentsline {section}{\numberline {10.11}RAÍCES PRIMITIVAS Y CARACTERES DE DIRICHLET}{232}{section.10.11}%
+\contentsline {section}{\numberline {10.12}CARACTERES DE DIRICHLET MÓD $p^{\alpha }$ CON VALORES REALES}{234}{section.10.12}%
+\contentsline {section}{\numberline {10.13}CARACTERES DE DIRICHLET PRIMITIVOS MÓD $p^{\alpha }$}{235}{section.10.13}%
+\contentsline {chapter}{\numberline {11}Series de Dirichlet y productos de Euler}{241}{chapter.11}%
+\contentsline {section}{\numberline {11.1}INTRODUCCIÓN}{241}{section.11.1}%
+\contentsline {section}{\numberline {11.2}EL SEMIPLANO DE CONVERGENCIA ABSOLUTA DE UNA SERIE DE DIRICHLET}{242}{section.11.2}%
+\contentsline {section}{\numberline {11.3}LA FUNCIÓN DEFINIDA POR UNA SERIE DE DIRICHLET}{243}{section.11.3}%
+\contentsline {section}{\numberline {11.4}MULTIPLICACIÓN DE SERIES DE DIRICHLET}{245}{section.11.4}%
+\contentsline {section}{\numberline {11.5}PRODUCTOS DE EULER}{247}{section.11.5}%
+\contentsline {section}{\numberline {11.6}EL SEMIPLANO DE CONVERGENCIA DE UNA SERIE DE DIRICHLET}{250}{section.11.6}%
+\contentsline {section}{\numberline {11.7}PROPIEDADES ANALÍTICAS DE LAS SERIES DE DIRICHLET}{252}{section.11.7}%
+\contentsline {section}{\numberline {11.8}SERIES DE DIRICHLET CON COEFICIENTES NO NEGATIVOS}{255}{section.11.8}%
+\contentsline {section}{\numberline {11.9}SERIES DE DIRICHLET EXPRESADAS COMO EXPONENCIALES DE SERIES DE DIRICHLET}{256}{section.11.9}%
+\contentsline {section}{\numberline {11.10}FÓRMULAS DE VALOR MEDIO PARA SERIES DE DIRICHLET}{258}{section.11.10}%
+\contentsline {section}{\numberline {11.11}UNA FÓRMULA INTEGRAL PARA LOS COEFICIENTES DE UNA SERIE DE DIRICHLET}{260}{section.11.11}%
+\contentsline {section}{\numberline {11.12}UNA FÓRMULA INTEGRAL PARA LAS SUMAS PARCIALES DE UNA SERIE DE DIRICHLET}{261}{section.11.12}%
+\contentsline {chapter}{\numberline {12}Las funciones $\zeta (s)$ y $L(s,\chi )$}{269}{chapter.12}%
+\contentsline {section}{\numberline {12.1}INTRODUCCIÓN}{269}{section.12.1}%
+\contentsline {section}{\numberline {12.2}PROPIEDADES DE LA FUNCIÓN GAMMA}{270}{section.12.2}%
+\contentsline {section}{\numberline {12.3}REPRESENTACIÓN INTEGRAL PARA LA FUNCIÓN ZETA DE HURWITZ}{271}{section.12.3}%
+\contentsline {section}{\numberline {12.4}UNA REPRESENTACIÓN DE LA FUNCIÓN ZETA DE HURWITZ MEDIANTE UNA INTEGRAL DE CONTORNO}{273}{section.12.4}%
+\contentsline {section}{\numberline {12.5}LA PROLONGACIÓN ANALÍTICA DE LA FUNCIÓN ZETA DE HURWITZ}{275}{section.12.5}%
+\contentsline {section}{\numberline {12.6}PROLONGACIÓN ANALÍTICA DE $\zeta (s)$ Y $L(s,\chi )$}{276}{section.12.6}%
+\contentsline {section}{\numberline {12.7}LA FÓRMULA DE HURWITZ PARA $\zeta (s,a)$}{276}{section.12.7}%
+\contentsline {section}{\numberline {12.8}LA ECUACIÓN FUNCIONAL PARA LA FUNCIÓN ZETA DE RIEMANN}{279}{section.12.8}%
+\contentsline {section}{\numberline {12.9}UNA ECUACIÓN FUNCIONAL PARA LA FUNCIÓN ZETA DE HURWITZ}{281}{section.12.9}%
+\contentsline {section}{\numberline {12.10}LA ECUACIÓN FUNCIONAL PARA $L$-FUNCIONES}{282}{section.12.10}%
+\contentsline {section}{\numberline {12.11}CÁLCULO DE $\zeta (-n,a)$}{284}{section.12.11}%
+\contentsline {section}{\numberline {12.12}PROPIEDADES DE LOS NÚMEROS DE BERNOULLI Y DE LOS POLINOMIOS DE BERNOULLI}{285}{section.12.12}%
+\contentsline {section}{\numberline {12.13}FÓRMULAS PARA $L(0,\chi )$}{289}{section.12.13}%
+\contentsline {section}{\numberline {12.14}APROXIMACIÓN DE $\zeta (s,a)$ POR MEDIO DE SUMAS FINITAS}{289}{section.12.14}%
+\contentsline {section}{\numberline {12.15}DESIGUALDADES PARA $\abs {\zeta (s,a)}$}{291}{section.12.15}%
+\contentsline {section}{\numberline {12.16}DESIGUALDADES PARA $\abs {\zeta (s)}$ Y PARA $\abs {L(s,\chi )}$}{293}{section.12.16}%
+\contentsline {chapter}{\numberline {13}Demostración analítica del teorema del número primo}{301}{chapter.13}%
+\contentsline {section}{\numberline {13.1}EL PLAN DE LA DEMOSTRACIÓN}{301}{section.13.1}%
+\contentsline {section}{\numberline {13.2}LEMAS}{302}{section.13.2}%
+\contentsline {section}{\numberline {13.3}UNA REPRESENTACIÓN DE $\psi _{1}(x)/x^{2}$ COMO INTEGRAL DE CONTORNO}{306}{section.13.3}%
+\contentsline {section}{\numberline {13.4}COTAS SUPERIORES PARA $\abs {\zeta (s)}$ Y PARA $\abs {\zeta '(s)}$ EN LAS PROXIMIDADES DE LA RECTA $\sigma =1$}{308}{section.13.4}%
+\contentsline {section}{\numberline {13.5}LA NO ANULACIÓN DE $\zeta (s)$ EN LA RECTA $\sigma =1$}{310}{section.13.5}%
+\contentsline {section}{\numberline {13.6}DESIGUALDADES PARA $\abs {1/\zeta (s)}$ Y $\abs {\zeta '(s)/\zeta (s)}$}{311}{section.13.6}%
+\contentsline {section}{\numberline {13.7}TERMINACIÓN DE LA DEMOSTRACIÓN DEL TEOREMA DEL NÚMERO PRIMO}{313}{section.13.7}%
+\contentsline {section}{\numberline {13.8}REGIONES CARENTES DE CEROS DE $\zeta (s)$}{315}{section.13.8}%
+\contentsline {section}{\numberline {13.9}LA HIPÓTESIS DE RIEMANN}{317}{section.13.9}%
+\contentsline {section}{\numberline {13.10}APLICACIÓN A LA FUNCIÓN DIVISOR}{318}{section.13.10}%
+\contentsline {section}{\numberline {13.11}APLICACIÓN A LA INDICATRIZ DE EULER}{321}{section.13.11}%
+\contentsline {section}{\numberline {13.12}EXTENSIÓN DE LA DESIGUALDAD DE PÓLYA PARA SUMAS DE CARACTERES}{323}{section.13.12}%
+\contentsline {chapter}{\numberline {14}Particiones}{329}{chapter.14}%
+\contentsline {section}{\numberline {14.1}INTRODUCCIÓN}{329}{section.14.1}%
+\contentsline {section}{\numberline {14.2}REPRESENTACIÓN GEOMÉTRICA DE LAS PARTICIONES}{332}{section.14.2}%
+\contentsline {section}{\numberline {14.3}FUNCIONES GENERADORAS DE PARTICIONES}{332}{section.14.3}%
+\contentsline {section}{\numberline {14.4}EL TEOREMA DE EULER DE LOS NÚMEROS PENTAGONALES}{335}{section.14.4}%
+\contentsline {section}{\numberline {14.5}DEMOSTRACIÓN COMBINATORIA DEL TEOREMA DE LOS NÚMEROS PENTAGONALES DE EULER}{338}{section.14.5}%
+\contentsline {section}{\numberline {14.6}FÓRMULA RECURSIVA DE EULER PARA $p(n)$}{340}{section.14.6}%
+\contentsline {section}{\numberline {14.7}UNA COTA SUPERIOR PARA $p(n)$}{341}{section.14.7}%
+\contentsline {section}{\numberline {14.8}IDENTIDAD DEL TRIPLE PRODUCTO DE JACOBI}{343}{section.14.8}%
+\contentsline {section}{\numberline {14.9}CONSECUENCIAS DE LA IDENTIDAD DE JACOBI}{345}{section.14.9}%
+\contentsline {section}{\numberline {14.10}DIFERENCIACIÓN LOGARÍTMICA DE FUNCIONES GENERADORAS}{346}{section.14.10}%
+\contentsline {section}{\numberline {14.11}LAS IDENTIDADES DE PARTICIÓN DE RAMANUJAN}{349}{section.14.11}%
+\contentsline {chapter}{Bibliograf\'{\i }a}{355}{chapter*.41}%
+\contentsline {chapter}{Índice de símbolos especiales}{361}{chapter*.42}%
+\contentsline {chapter}{Índice alfabético}{363}{table.14.2}%

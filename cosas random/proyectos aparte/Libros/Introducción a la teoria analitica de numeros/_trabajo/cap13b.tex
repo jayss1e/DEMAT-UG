@@ -1,0 +1,572 @@
+    \section{TERMINACIÓN DE LA DEMOSTRACIÓN DEL TEOREMA DEL NÚMERO PRIMO}
+
+    Estamos a punto de terminar la demostración del teorema del número primo. Necesitamos un
+    resultado más de la teoría de funciones complejas que estableceremos en forma de lema.
+
+    \begin{lema}\label{lem:13-4}
+        Si $f(s)$ tiene un polo de orden $k$ en $s=\alpha$, entonces el cociente $f'(s)/f(s)$
+        tiene un polo de primer orden en $s=\alpha$ con residuo $-k$.
+    \end{lema}
+
+    \begin{proof}
+        Tenemos $f(s)=g(s)/(s-\alpha)^k$, en donde $g$ es analítica en $\alpha$ y
+        $g(\alpha)\neq0$. Luego, para todo $s$ de un cierto entorno de $\alpha$, tenemos
+        \begin{equation*}
+            f'(s)=\frac{g'(s)}{(s-\alpha)^k}-\frac{kg(s)}{(s-\alpha)^{k+1}}=\frac{g(s)}{(s-\alpha)^k}\left\{\frac{-k}{s-\alpha}+\frac{g'(s)}{g(s)}\right\}.
+        \end{equation*}
+        Por lo tanto
+        \begin{equation*}
+            \frac{f'(s)}{f(s)}=\frac{-k}{s-\alpha}+\frac{g'(s)}{g(s)}.
+        \end{equation*}
+        Esto demuestra el lema ya que $g'(s)/g(s)$ es analítica en $\alpha$.
+    \end{proof}
+
+    \begin{teorema}\label{teo:13-8}
+        La función
+        \begin{equation*}
+            F(s)=-\frac{\zeta'(s)}{\zeta(s)}-\frac{1}{s-1}
+        \end{equation*}
+        es analítica en $s=1$.
+    \end{teorema}
+
+    \begin{proof}
+        Por el lema \ref{lem:13-4}, $-\zeta'(s)/\zeta(s)$ tiene un polo de primer orden en 1 con
+        residuo 1, así como $1/(s-1)$. Luego su diferencia es analítica en $s=1$.
+    \end{proof}
+
+    \begin{teorema}\label{teo:13-9}
+        Para $x\geq1$ tenemos
+        \begin{equation*}
+            \frac{\psi_1(x)}{x^2}-\frac{1}{2}\left(1-\frac{1}{x}\right)^2=\frac{1}{2\pi}\int_{-\infty}^{\infty}h(1+it)e^{it\log x}\,dt,
+        \end{equation*}
+        en donde la integral $\int_{-\infty}^{\infty}\abs{h(1+it)}\,dt$ converge. Por
+        consiguiente, por el lema de Riemann-Lebesgue, tenemos
+        \begin{equation}\label{eq:13-24}
+            \psi_1(x)\sim x^2/2
+        \end{equation}
+        y por lo tanto
+        \begin{equation*}
+            \psi(x)\sim x\qquad\text{cuando }x\to\infty.
+        \end{equation*}
+    \end{teorema}
+
+    \begin{proof}
+        En el teorema \ref{teo:13-3} hemos demostrado que, si $c>1$ y $x\geq1$, tenemos
+        \begin{equation*}
+            \frac{\psi_1(x)}{x^2}-\frac{1}{2}\left(1-\frac{1}{x}\right)^2=\frac{1}{2\pi i}\int_{c-\infty i}^{c+\infty i}x^{s-1}h(s)\,ds,
+        \end{equation*}
+        en donde
+        \begin{equation*}
+            h(s)=\frac{1}{s(s+1)}\left(-\frac{\zeta'(s)}{\zeta(s)}-\frac{1}{s-1}\right).
+        \end{equation*}
+        La primera tarea que se nos plantea consiste en demostrar que podemos trasladar el
+        camino de integración a la recta $\sigma=1$. Para ello aplicamos el teorema de Cauchy
+        al rectángulo dibujado en la figura 13.3. La integral de $x^{s-1}h(s)$ a lo largo de
+        $R$ es 0 puesto que el integrando es analítico en el interior y sobre $R$. Ahora
+        demostraremos que las integrales a lo largo de los segmentos horizontales tienden a 0
+        cuando $T\to\infty$. Dado que el integrando tiene el mismo valor absoluto en puntos
+        conjugados, bastará considerar únicamente el segmento superior, $t=T$. En este segmento
+        tenemos las acotaciones
+
+        \begin{figure}[H]
+            \centering
+            \includegraphics{figuras/figura13-3.pdf}
+            \caption{}
+        \end{figure}
+
+        \begin{equation*}
+            \abs{\frac{1}{s(s+1)}}\leq\frac{1}{T^2}\qquad\text{y}\qquad\abs{\frac{1}{s(s+1)(s-1)}}\leq\frac{1}{T^3}\leq\frac{1}{T^2}.
+        \end{equation*}
+        Además existe una constante $M$ tal que $\abs{\zeta'(s)/\zeta(s)}\leq M\log^9t$ si
+        $\sigma>1$ y $t\geq e$. Luego, si $T\geq e$, tenemos
+        \begin{equation*}
+            \abs{h(s)}\leq\frac{M\log^9T}{T^2}
+        \end{equation*}
+        o sea que
+        \begin{equation*}
+            \abs{\int_1^cx^{s-1}h(s)\,ds}\leq\int_1^cx^{\sigma-1}\,\frac{M\log^9T}{T^2}\,d\sigma=Mx^{c-1}\,\frac{\log^9T}{T^2}\,(c-1).
+        \end{equation*}
+        Por consiguiente las integrales a lo largo de los segmentos horizontales tienden a 0
+        cuando $T\to\infty$, y por ello tenemos
+        \begin{equation*}
+            \int_{c-\infty i}^{c+\infty i}x^{s-1}h(s)\,ds=\int_{1-\infty i}^{1+\infty i}x^{s-1}h(s)\,ds.
+        \end{equation*}
+        Sobre la recta $\sigma=1$ escribimos $s=1+it$ y obtenemos
+        \begin{equation*}
+            \frac{1}{2\pi i}\int_{1-\infty i}^{1+\infty i}x^{s-1}h(s)\,ds=\frac{1}{2\pi}\int_{-\infty}^{\infty}h(1+it)e^{it\log x}\,dt.
+        \end{equation*}
+        Ahora observamos que
+        \begin{equation*}
+            \int_{-\infty}^{\infty}\abs{h(1+it)}\,dt=\int_{-\infty}^{-e}+\int_{-e}^{e}+\int_e^{\infty}.
+        \end{equation*}
+        En la integral de $e$ a $\infty$ tenemos
+        \begin{equation*}
+            \abs{h(1+it)}\leq\frac{M\log^9t}{t^2}
+        \end{equation*}
+        luego $\int_e^{\infty}\abs{h(1+it)}\,dt$ converge. Análogamente, $\int_{-\infty}^{-e}$
+        converge, luego $\int_{-\infty}^{\infty}\abs{h(1+it)}\,dt$ converge. Entonces podemos
+        aplicar el lema de Riemann-Lebesgue para obtener $\psi_1(x)\sim x^2/2$. Por el teorema
+        \ref{teo:13-1} esto implica $\psi(x)\sim x$ cuando $x\to\infty$, lo que termina la
+        demostración del teorema del número primo.
+    \end{proof}
+
+    \section[REGIONES CARENTES DE CEROS DE $\zeta(s)$]{REGIONES CARENTES DE CEROS DE \texorpdfstring{$\zeta(s)$}{ζ(s)}}
+
+    La desigualdad $\abs{1/\zeta(s)}<M\log^7t$ que se ha demostrado en el teorema
+    \ref{teo:13-7} para $\sigma\geq1$ y $t\geq e$ se puede extender a la izquierda de la recta
+    $\sigma=1$. La acotación no se obtiene en una región vertical sino en una región semejante
+    a la de la figura 13.2, en la que el borde izquierdo de la curva se aproxima a la recta
+    $\sigma=1$ asintóticamente cuando $t\to\infty$. La desigualdad implica la no anulación de
+    $\zeta(s)$ en esta región. Con mayor precisión, tenemos:
+
+    \begin{teorema}\label{teo:13-10}
+        Suponemos $\sigma\geq1/2$. Entonces existen constantes $A>0$ y $C>0$ tales que
+        \begin{equation*}
+            \abs{\zeta(\sigma+it)}>\frac{C}{\log^7t}
+        \end{equation*}
+        siempre que
+        \begin{equation}\label{eq:13-25}
+            1-\frac{A}{\log^9t}<\sigma\leq1\qquad\text{y}\qquad t\geq e.
+        \end{equation}
+        Esto implica que $\zeta(\sigma+it)\neq0$ si $\sigma$ y $t$ satisfacen \eqref{eq:13-25}.
+    \end{teorema}
+
+    \begin{proof}
+        La desigualdad triangular, junto con el teorema \ref{teo:13-7}, nos da, para un cierto
+        $B>0$
+        \begin{align}
+            \abs{\zeta(\sigma+it)}&\geq\abs{\zeta(1+it)}-\abs{\zeta(1+it)-\zeta(\sigma+it)}\notag\\
+            &>\frac{B}{\log^7t}-\abs{\zeta(1+it)-\zeta(\sigma+it)}.\label{eq:13-26}
+        \end{align}
+        Para acotar el último término escribimos
+        \begin{equation*}
+            \abs{\zeta(1+it)-\zeta(\sigma+it)}=\abs{\int_{\sigma}^1\zeta'(u+it)\,du}\leq\int_{\sigma}^1\abs{\zeta'(u+it)}\,du.
+        \end{equation*}
+        Como $t>e$, tenemos $\log^9t\geq\log t$, luego $1-(A/\log^9t)\geq1-(A/\log t)$. Así
+        pues, si $\sigma$ satisface \eqref{eq:13-25} para todo $A>0$, podemos aplicar el teorema
+        \ref{teo:13-4} para acotar $\abs{\zeta'(u+it)}$, obteniendo
+        \begin{equation*}
+            \abs{\zeta(1+it)-\zeta(\sigma+it)}\leq M(1-\sigma)\log^2t<M\log^2t\,\frac{A}{\log^9t}=\frac{MA}{\log^7t}.
+        \end{equation*}
+        Utilizando este resultado en \eqref{eq:13-26} obtenemos
+        \begin{equation*}
+            \abs{\zeta(\sigma+it)}>\frac{B-MA}{\log^7t}.
+        \end{equation*}
+        Esta desigualdad se verifica para un cierto $B>0$, todo $A>0$ y un cierto $M>0$ que
+        depende de $A$. Un valor de $M$ que sirva para un $A$ sirve también para todo $A$ más
+        pequeño. Por consiguiente podemos elegir $A$ ínfimo entre los que verifican
+        $B-MA>0$. Si en la última desigualdad hacemos $C=B-MA$ obtenemos
+        $\abs{\zeta(\sigma+it)}>C\log^{-7}t$ que prueba el teorema para todo $\sigma$ y todo
+        $t$ que satisfagan
+        \begin{equation*}
+            1-\frac{A}{\log^9t}<\sigma<1,\qquad\text{y }t\geq e.
+        \end{equation*}
+        Pero el resultado es válido también para $\sigma=1$ por el teorema \ref{teo:13-7} con
+        lo que se termina la demostración.
+    \end{proof}
+
+    Sabemos que $\zeta(s)\neq0$ si $\sigma\geq1$, y la ecuación funcional
+    \begin{equation*}
+        \zeta(s)=2(2\pi)^{s-1}\Gamma(1-s)\operatorname{sen}\left(\frac{\pi s}{2}\right)\zeta(1-s)
+    \end{equation*}
+    prueba que $\zeta(s)\neq0$ si $\sigma\leq0$ excepto en los ceros $s=-2,-4,-6,\dots$ que se
+    obtienen de la anulación de $\operatorname{sen}(\pi s/2)$. Son los llamados ceros
+    <<triviales>> de $\zeta(s)$. El teorema que sigue prueba que, fuera de los ceros
+    triviales, $\zeta(s)$ no posee sobre el eje real ningún otro cero.
+
+    \begin{teorema}\label{teo:13-11}
+        Si $\sigma>0$ tenemos
+        \begin{equation}\label{eq:13-27}
+            (1-2^{1-s})\zeta(s)=\sum_{n=1}^{\infty}\frac{(-1)^{n-1}}{n^s}.
+        \end{equation}
+        Esto implica que $\zeta(s)<0$ si $s$ es real y $0<s<1$.
+    \end{teorema}
+
+    \begin{proof}
+        Primero suponemos que $\sigma>1$. Entonces tenemos
+        \begin{align*}
+            (1-2^{1-s})\zeta(s)&=\sum_{n=1}^{\infty}\frac{1}{n^s}-2\sum_{n=1}^{\infty}\frac{1}{(2n)^s}\\
+            &=(1+2^{-s}+3^{-s}+\cdots)-2(2^{-s}+4^{-s}+6^{-s}+\cdots)\\
+            &=1-2^{-s}+3^{-s}-4^{-s}+5^{-s}-6^{-s}+\cdots,
+        \end{align*}
+        que prueba \eqref{eq:13-27} para $\sigma>1$. Sin embargo, si $\sigma>0$, la serie de la
+        derecha converge, luego \eqref{eq:13-27} también se verifica para $\sigma>0$ por
+        prolongación analítica.
+
+        Cuando $s$ es real, la serie de \eqref{eq:13-27} es una serie alternada que tiene suma
+        positiva. Si $0<s<1$, el factor $(1-2^{1-s})$ es negativo, luego $\zeta(s)$ también es
+        negativo.
+    \end{proof}
+
+    \section{LA HIPÓTESIS DE RIEMANN}
+
+    En su famosa memoria de 8 páginas acerca de $\pi(x)$, publicada en 1859, Riemann
+    \cite{riemann1859} afirma que parece plausible que los ceros no triviales de $\zeta(s)$
+    pertenecen todos a la recta $\sigma=1/2$, si bien no ha podido demostrarlo. La afirmación
+    de que todos los ceros no triviales tienen parte real $1/2$ se conoce actualmente como
+    \textit{hipótesis de Riemann}. En 1900 Hilbert colocó el problema de demostrar o
+    contradecir esta hipótesis en la lista de los problemas más importantes con que deberían
+    enfrentarse los matemáticos del siglo veinte. Todavía hoy no ha sido resuelto.
+
+    La hipótesis de Riemann atrajo la atención de muchos de los matemáticos eminentes y se ha
+    descubierto gran cantidad de resultados acerca de la distribución de los ceros de
+    $\zeta(s)$. La ecuación funcional prueba que todos los ceros no triviales (si existe
+    alguno) deben hallarse en la banda $0<\sigma<1$, llamada <<banda crítica>>. Es fácil
+    demostrar que los ceros se hallan distribuidos simétricamente respecto del eje real y de
+    la <<recta crítica>> $\sigma=1/2$.
+
+    En 1915, Hardy probó que hay una infinidad de ceros situados en la recta crítica. En 1921
+    Hardy y Littlewood demostraron que el número de ceros que hay en el segmento rectilíneo
+    que une $1/2$ con $1/2+iT$ es por lo menos $AT$ para una cierta constante positiva $A$,
+    si $T$ es suficientemente grande. En 1942 Selberg lo perfeccionó probando que el número es
+    por lo menos $AT\log T$ para un cierto $A>0$. También se sabe que el número en la banda
+    crítica con $0<t<T$ es asintótico a $T\log T/2\pi$ cuando $T\to\infty$, o sea que el
+    resultado de Selberg prueba que una fracción positiva de los ceros está en la recta
+    crítica. Recientemente (1974) Levinson ha demostrado que esta fracción es por lo menos
+    $7/10$. Es decir, que la constante del teorema de Selberg satisface $A>7/20\pi$.
+
+    Extensos cálculos de Gram, Backlund, Lehmer, Haselgrove, Rosser, Yohe, Schoenfeld, y otros
+    han demostrado que los tres primeros millones y medio de ceros por encima del eje real se
+    hallan en la recta crítica. A despecho de que todo ello constituye una evidencia a favor de
+    la hipótesis de Riemann, los cálculos han revelado también ciertos fenómenos que sugieren
+    que es muy posible que existan contraejemplos de la hipótesis de Riemann. Para una
+    narración fascinante de la historia de los cálculos a gran escala concernientes a
+    $\zeta(s)$, el lector puede consultar \cite{edwards1974}.
+
+    \section{APLICACIÓN A LA FUNCIÓN DIVISOR}
+
+    El teorema del número primo, a veces, es útil para estimar el orden de magnitud de
+    funciones aritméticas multiplicativas. En esta sección lo utilizaremos para demostrar
+    desigualdades para $d(n)$, número de divisores de $n$.
+
+    En el capítulo 3 hemos demostrado que el orden medio de $d(n)$ es $\log n$. Cuando $n$ es
+    primo tenemos $d(n)=2$, por lo que el tamaño de $d(n)$ es tanto mayor cuantos más divisores
+    tenga $n$. Suponemos que $n$ es el producto de todos los números primos $\leq x$,
+    \begin{equation}\label{eq:13-28}
+        n=2\cdot3\cdot5\cdots p_{\pi(x)}.
+    \end{equation}
+    Puesto que $d(n)$ es multiplicativa tenemos
+    \begin{equation*}
+        d(n)=d(2)d(3)\cdots d(p_{\pi(x)})=2^{\pi(x)}.
+    \end{equation*}
+    Para $x$ grande, $\pi(x)$ es aproximadamente $x/\log x$ y \eqref{eq:13-28} implica
+    \begin{equation*}
+        \log n=\sum_{p\leq x}\log p=\vartheta(x)\sim x
+    \end{equation*}
+    luego $2^{\pi(x)}$ es aproximadamente $2^{\log n/\log\log n}$. Ahora bien
+    \begin{equation*}
+        2^{a\log n}=e^{a\log n\log2}=n^{a\log2}
+    \end{equation*}
+    luego $2^{\log n/\log\log n}=n^{\log2/\log\log n}$. Con otras palabras, cuando $n$ es de la
+    forma \eqref{eq:13-28} entonces $d(n)$ es aproximadamente
+    $2^{\log n/\log\log n}=n^{\log2/\log\log n}$.
+
+    Siguiendo esta idea un poco más cuidadosamente obtenemos las siguientes desigualdades para
+    $d(n)$.
+
+    \begin{teorema}\label{teo:13-12}
+        Sea $\varepsilon>0$. Entonces tenemos:
+        \begin{enumerate}
+            \item[(a)] Existe un entero $N(\varepsilon)$ tal que $n\geq N(\varepsilon)$
+            implica
+            \begin{equation*}
+                d(n)<2^{(1+\varepsilon)\log n/\log\log n}=n^{(1+\varepsilon)\log2/\log\log n}.
+            \end{equation*}
+            \item[(b)] Para una infinidad de $n$ tenemos
+            \begin{equation*}
+                d(n)>2^{(1-\varepsilon)\log n/\log\log n}=n^{(1-\varepsilon)\log2/\log\log n}.
+            \end{equation*}
+        \end{enumerate}
+    \end{teorema}
+
+    Nota. Estas desigualdades equivalen a la relación
+    \begin{equation*}
+        \limsup_{n\to\infty}\frac{\log d(n)\log\log n}{\log n}=\log2.
+    \end{equation*}
+
+    \begin{proof}
+        Escribimos $n=p_1^{a_1}\cdots p_k^{a_k}$, así que $d(n)=\prod_{i=1}^{k}(a_i+1)$.
+        Dividimos el producto en dos partes, separando los divisores primos $<f(n)$ de los
+        $\geq f(n)$, en donde $f(n)$ se especificará más adelante. Entonces
+        $d(n)=P_1(n)P_2(n)$ en donde
+        \begin{equation*}
+            P_1(n)=\prod_{p_i<f(n)}(a_i+1)\qquad\text{y}\qquad P_2(n)=\prod_{p_i\geq f(n)}(a_i+1).
+        \end{equation*}
+        En el producto $P_2(n)$ utilizamos la desigualdad $(a+1)\leq2^a$ y obtenemos
+        $P_2(n)\leq2^{S(n)}$ en donde
+        \begin{equation*}
+            S(n)=\sum_{\substack{i=1\\p_i\geq f(n)}}^{k}a_i.
+        \end{equation*}
+        Ahora bien
+        \begin{equation*}
+            n=\prod_{i=1}^{k}p_i^{a_i}\geq\prod_{p_i\geq f(n)}p_i^{a_i}\geq\prod_{p_i\geq f(n)}f(n)^{a_i}=f(n)^{S(n)},
+        \end{equation*}
+        por lo tanto
+        \begin{equation*}
+            \log n\geq S(n)\log f(n),\qquad\text{luego}\qquad S(n)\leq\frac{\log n}{\log f(n)}.
+        \end{equation*}
+        Esto nos da
+        \begin{equation}\label{eq:13-29}
+            P_2(n)\leq2^{\log n/\log f(n)}.
+        \end{equation}
+        Para estimar $P_1(n)$ escribimos
+        \begin{equation*}
+            P_1(n)=\exp\left\{\sum_{p_i<f(n)}\log(a_i+1)\right\}
+        \end{equation*}
+        y probamos que $\log(a_i+1)<2\log\log n$ si $n$ es suficientemente grande. De hecho
+        tenemos
+        \begin{equation*}
+            n\geq p_i^{a_i}\geq2^{a_i}
+        \end{equation*}
+        por lo tanto
+        \begin{equation*}
+            \log n\geq a_i\log2,\qquad\text{luego}\qquad a_i\leq\log n/\log2.
+        \end{equation*}
+        Por consiguiente
+        \begin{equation*}
+            1+a_i\leq1+\frac{\log n}{\log2}<(\log n)^2\qquad\text{si }n>n_1
+        \end{equation*}
+        para un cierto $n_1$. Entonces $n\geq n_1$ implica
+        $\log(1+a_i)<\log(\log n)^2=2\log\log n$. Esto nos da
+        \begin{equation*}
+            P_1(n)<\exp\left\{2\log\log n\sum_{p_i<f(n)}1\right\}\leq\exp\{2\log\log n\,\pi(f(n))\}.
+        \end{equation*}
+        Utilizando la desigualdad $\pi(x)<6x/\log x$ (ver teorema 4.6) obtenemos
+        \begin{equation}\label{eq:13-30}
+            P_1(n)<\exp\left\{\frac{12f(n)\log\log n}{\log f(n)}\right\}=2^{cf(n)\log\log n/\log f(n)},
+        \end{equation}
+        en donde $c=12/\log2$. Combinando \eqref{eq:13-29} y \eqref{eq:13-30} obtenemos
+        $d(n)=P_1(n)P_2(n)<2^{g(n)}$ en donde
+        \begin{equation*}
+            g(n)=\frac{\log n+cf(n)\log\log n}{\log f(n)}=\frac{\log n}{\log\log n}\;\frac{1+c\,\dfrac{f(n)\log\log n}{\log n}}{\dfrac{\log f(n)}{\log\log n}}.
+        \end{equation*}
+        Ahora elegimos $f(n)$ de forma que $f(n)\log\log n/\log n\to0$ y además hacemos que
+        $\log f(n)/\log\log n\to1$ cuando $n\to\infty$. Para ello es suficiente tomar
+        \begin{equation*}
+            f(n)=\frac{\log n}{(\log\log n)^2}.
+        \end{equation*}
+        Entonces
+        \begin{equation*}
+            g(n)=\frac{\log n}{\log\log n}\;\frac{1+o(1)}{1+o(1)}=\frac{\log n}{\log\log n}(1+o(1))<(1+\varepsilon)\frac{\log n}{\log\log n}
+        \end{equation*}
+        si $n\geq N(\varepsilon)$ para un cierto $N(\varepsilon)$. Esto prueba la parte (a).
+
+        Para demostrar la parte (b) tomamos un conjunto de enteros $n$ que posean gran número de
+        factores primos. Efectivamente, tomamos $n$ igual al producto de todos los factores
+        primos $\leq x$. Entonces $n\to\infty$ si, y sólo si, $x\to\infty$. Para ese $n$ tenemos,
+        por el teorema del número primo,
+        \begin{equation*}
+            d(n)=2^{\pi(x)}=2^{(1+o(1))x/\log x}.
+        \end{equation*}
+        También, para este $n$, tenemos
+        \begin{equation*}
+            \log n=\sum_{p\leq x}\log p=\vartheta(x)=x(1+o(1))
+        \end{equation*}
+        luego
+        \begin{equation*}
+            x=\frac{\log n}{1+o(1)}=(1+o(1))\log n
+        \end{equation*}
+        por lo tanto
+        \begin{align*}
+            \log x&=\log\log n+\log(1+o(1))=\log\log n\left(1+\frac{\log(1+o(1))}{\log\log n}\right)\\
+            &=(1+o(1))\log\log n.
+        \end{align*}
+        Por consiguiente $x/\log x=(1+o(1))\log n/\log\log n$ y
+        \begin{equation*}
+            d(n)=2^{(1+o(1))\log n/\log\log n}
+        \end{equation*}
+        para tal $n$. Pero $1+o(1)>1-\varepsilon$ si $n\geq N(\varepsilon)$ para un cierto
+        $N(\varepsilon)$ y esto prueba (b).
+    \end{proof}
+
+    Nota. Como corolario del teorema \ref{teo:13-12} obtenemos la relación
+    \begin{equation}\label{eq:13-31}
+        d(n)=o(n^{\delta})
+    \end{equation}
+    para cada $\delta>0$. Este resultado se puede obtener también sin necesidad de utilizar el
+    teorema del número primo. (Ver ejercicio 13.13.)
+
+    \section{APLICACIÓN A LA INDICATRIZ DE EULER}
+
+    El tipo de razonamiento utilizado en la sección precedente se puede utilizar también para
+    obtener desigualdades para $\varphi(n)$. Cuando $n$ es primo tenemos $\varphi(n)=n-1$.
+    Cuando $n$ posee gran número de factores primos, $\varphi(n)$ será mucho menor. Realmente si
+    $n$ es el producto de todos los primos $\leq x$ tenemos
+    \begin{equation*}
+        \varphi(n)=n\prod_{p\leq x}\left(1-\frac{1}{p}\right).
+    \end{equation*}
+    El teorema que sigue da el comportamiento asintótico de este producto cuando $x$ es grande.
+
+    \begin{teorema}\label{teo:13-13}
+        Existe una constante positiva $c$ tal que, para $x\geq2$,
+        \begin{equation}\label{eq:13-32}
+            \prod_{p\leq x}\left(1-\frac{1}{p}\right)=\frac{c}{\log x}+O\left(\frac{1}{\log^2x}\right).
+        \end{equation}
+    \end{teorema}
+
+    Nota. Es posible demostrar que $c=e^{-C}$, en donde $C$ es la constante de Euler (ver
+    \cite{hardywright1960}).
+
+    \begin{proof}
+        Si $P(x)$ designa el producto de \eqref{eq:13-32}, entonces
+        $\log P(x)=-\sum_{p\leq x}\log(1-1/p)$. Para estimar esta suma utilizamos el desarrollo
+        en serie de potencias
+        \begin{equation*}
+            -\log(1-t)=t+\frac{t^2}{2}+\frac{t^3}{3}+\cdots+\frac{t^n}{n}+\cdots\qquad(\abs{t}<1)
+        \end{equation*}
+        con $t=1/p$. Si pasamos un término al otro miembro obtenemos, si
+        $a_p=-\log(1-1/p)-1/p$,
+        \begin{equation*}
+            0<a_p=\frac{1}{2p^2}+\frac{1}{3p^3}+\cdots<\frac{1}{2}\left(\frac{1}{p^2}+\frac{1}{p^3}+\cdots\right)=\frac{1}{2p(p-1)}.
+        \end{equation*}
+        Esta desigualdad prueba que la serie infinita
+        \begin{equation}\label{eq:13-33}
+            \sum_pa_p=\sum_p\left\{-\log\left(1-\frac{1}{p}\right)-\frac{1}{p}\right\}
+        \end{equation}
+        converge, ya que está dominada por $\sum_{n=2}^{\infty}1/n(n-1)$. Si $B$ designa la suma
+        de la serie dada en \eqref{eq:13-33} tenemos
+        \begin{equation*}
+            0<B-\sum_{p\leq x}a_p=\sum_{p>x}a_p\leq\sum_{n\geq x}\frac{1}{n(n-1)}=\sum_{n\geq x}\left(\frac{1}{n-1}-\frac{1}{n}\right)=O\left(\frac{1}{x}\right).
+        \end{equation*}
+        Luego
+        \begin{equation*}
+            \sum_{p\leq x}a_p=B+O\left(\frac{1}{x}\right),
+        \end{equation*}
+        por lo tanto
+        \begin{equation*}
+            -\log P(x)=\sum_{p\leq x}\frac{1}{p}+B+O\left(\frac{1}{x}\right).
+        \end{equation*}
+        Pero, por el teorema 4.12, la suma de la derecha es $\log\log x+A+O(1/\log x)$
+        así que
+        \begin{equation*}
+            \log P(x)=-\log\log x-B-A+O\left(\frac{1}{\log x}\right).
+        \end{equation*}
+        Por consiguiente
+        \begin{equation*}
+            P(x)=\exp\{\log P(x)\}=e^{-B-A}e^{-\log\log x}e^{O(1/\log x)}.
+        \end{equation*}
+        Sea ahora $c=e^{-B-A}$ y utilizando la desigualdad $e^u=1+O(u)$ para $0<u<1$ obtenemos
+        \begin{equation*}
+            P(x)=\frac{c}{\log x}\left\{1+O\left(\frac{1}{\log x}\right)\right\}=\frac{c}{\log x}+O\left(\frac{1}{\log^2x}\right).
+        \end{equation*}
+        Esto termina la demostración.
+    \end{proof}
+
+    \begin{teorema}\label{teo:13-14}
+        Sea $c$ la constante del teorema \ref{teo:13-13}, y sea $\varepsilon>0$.
+        \begin{enumerate}
+            \item[(a)] Existe un $N(\varepsilon)$ tal que
+            \begin{equation*}
+                \varphi(n)\geq(1-\varepsilon)\frac{cn}{\log\log n}\qquad\text{para todo }n>N(\varepsilon).
+            \end{equation*}
+            \item[(b)] Para una infinidad de $n$ tenemos
+            \begin{equation*}
+                \varphi(n)\leq(1+\varepsilon)\frac{cn}{\log\log n}.
+            \end{equation*}
+        \end{enumerate}
+        Con otras palabras,
+        \begin{equation*}
+            \liminf_{n\to\infty}\frac{\varphi(n)\log\log n}{n}=c.
+        \end{equation*}
+    \end{teorema}
+
+    \begin{proof}
+        Primeramente probaremos (b). Tomamos $n=\prod_{p\leq x}p$. Entonces
+        \begin{equation*}
+            \frac{\varphi(n)}{n}=\prod_{p\leq x}\left(1-\frac{1}{p}\right)=\frac{c}{\log x}+O\left(\frac{1}{\log^2x}\right).
+        \end{equation*}
+        Pero $\log n=\vartheta(x)=(1+o(1))x$, luego $\log\log n=(1+o(1))\log x$, por lo tanto
+        \begin{equation*}
+            \frac{\varphi(n)}{n}=\frac{c(1+o(1))}{\log\log n}+O\left(\frac{1}{(\log\log n)^2}\right)=\frac{c(1+o(1))}{\log\log n}\leq(1+\varepsilon)\frac{c}{\log\log n}
+        \end{equation*}
+        si $n\geq N(\varepsilon)$ para un $N(\varepsilon)$. Esto demuestra (b).
+
+        Para demostrar (a) tomamos $n>1$ y escribimos
+        \begin{equation*}
+            \frac{\varphi(n)}{n}=\prod_{p\mid n}\left(1-\frac{1}{p}\right)=P_1(n)P_2(n)
+        \end{equation*}
+        en donde
+        \begin{equation*}
+            P_1(n)=\prod_{\substack{p\mid n\\p\leq\log n}}\left(1-\frac{1}{p}\right),\qquad\text{y}\qquad P_2(n)=\prod_{\substack{p\mid n\\p>\log n}}\left(1-\frac{1}{p}\right).
+        \end{equation*}
+        Entonces
+        \begin{equation}\label{eq:13-34}
+            P_2(n)>\prod_{\substack{p\mid n\\p>\log n}}\left(1-\frac{1}{\log n}\right)=\left(1-\frac{1}{\log n}\right)^{f(n)}
+        \end{equation}
+        en donde $f(n)$ es el número de primos que dividen a $n$ y exceden a $\log n$. Como
+        \begin{equation*}
+            n\geq\prod_{p\mid n}p>\prod_{\substack{p\mid n\\p>\log n}}p\geq(\log n)^{f(n)}
+        \end{equation*}
+        obtenemos $\log n>f(n)\log\log n$, por lo tanto $f(n)<\log n/\log\log n$. Pero al ser
+        $1-(1/\log n)<1$, la desigualdad \eqref{eq:13-34} nos da
+        \begin{equation}\label{eq:13-35}
+            P_2(n)>\left(1-\frac{1}{\log n}\right)^{\log n/\log\log n}=\left\{\left(1-\frac{1}{\log n}\right)^{\log n}\right\}^{1/\log\log n}.
+        \end{equation}
+        Ahora bien $(1-(1/u))^u\to e^{-1}$ cuando $u\to\infty$ luego el último miembro de
+        \eqref{eq:13-35} tiende a 1 cuando $n\to\infty$. Por lo tanto \eqref{eq:13-35} nos da
+        \begin{equation*}
+            P_2(n)>1+o(1)\qquad\text{cuando }n\to\infty.
+        \end{equation*}
+        Por consiguiente
+        \begin{align*}
+            \frac{\varphi(n)}{n}=P_1(n)P_2(n)&>(1+o(1))\prod_{\substack{p\mid n\\p\leq\log n}}\left(1-\frac{1}{p}\right)\geq(1+o(1))\prod_{p\leq\log n}\left(1-\frac{1}{p}\right)\\
+            &=(1+o(1))\frac{c}{\log\log n}(1+o(1))\geq(1-\varepsilon)\frac{c}{\log\log n}
+        \end{align*}
+        si $n\geq N(\varepsilon)$. Esto demuestra la parte (a).
+    \end{proof}
+
+    \section{EXTENSIÓN DE LA DESIGUALDAD DE PÓLYA PARA SUMAS DE CARACTERES}
+
+    Terminamos este capítulo extendiendo la desigualdad de Pólya (teorema 8.21) a caracteres no
+    principales arbitrarios. La demostración utiliza la estimación de la función divisor
+    \begin{equation*}
+        d(n)=O(n^{\delta})
+    \end{equation*}
+    obtenida en \eqref{eq:13-31}.
+
+    \begin{teorema}\label{teo:13-15}
+        Si $\chi$ es un carácter no principal mód $k$ entonces, para todo $x\geq2$, tenemos
+        \begin{equation*}
+            \sum_{m\leq x}\chi(m)=O(\sqrt{k}\log k).
+        \end{equation*}
+    \end{teorema}
+
+    \begin{proof}
+        Si $\chi$ es primitivo, el teorema 8.21 demuestra que
+        \begin{equation*}
+            \abs{\sum_{m\leq x}\chi(m)}<\sqrt{k}\log k.
+        \end{equation*}
+        Sea ahora $\chi$ un carácter no principal arbitrario mód $k$ y sea $c$ el conductor de
+        $\chi$. Entonces $c\mid k$, $c<k$, y podemos escribir
+        \begin{equation*}
+            \chi(m)=\psi(m)\chi_1(m)
+        \end{equation*}
+        en donde $\chi_1$ es el carácter principal mód $k$ y $\psi$ es un carácter primitivo
+        mód $c$. Entonces
+        \begin{align*}
+            \sum_{m\leq x}\chi(m)&=\sum_{\substack{m\leq x\\(m,k)=1}}\psi(m)=\sum_{m\leq x}\psi(m)\sum_{d\mid(m,k)}\mu(d)=\sum_{m\leq x}\sum_{\substack{d\mid k\\d\mid m}}\mu(d)\psi(m)\\
+            &=\sum_{d\mid k}\mu(d)\sum_{q\leq x/d}\psi(qd)=\sum_{d\mid k}\mu(d)\psi(d)\sum_{q\leq x/d}\psi(q).
+        \end{align*}
+        Luego
+        \begin{equation}\label{eq:13-36}
+            \abs{\sum_{m\leq x}\chi(m)}\leq\sum_{d\mid k}\abs{\mu(d)\psi(d)}\abs{\sum_{q\leq x/d}\psi(q)}<\sqrt{c}\log c\sum_{d\mid k}\abs{\mu(d)\psi(d)}
+        \end{equation}
+        ya que $\psi$ es primitivo mód $c$. En esta última suma cada factor
+        $\abs{\mu(d)\psi(d)}$ vale 0 ó 1. Si $\abs{\mu(d)\psi(d)}=1$ entonces $\abs{\mu(d)}=1$,
+        luego $d$ es un divisor de $k$ sin factores cuadrados, es decir
+        \begin{equation*}
+            d=p_1p_2\cdots p_r.
+        \end{equation*}
+        Además, $\abs{\psi(d)}=1$, luego $(d,c)=1$, lo que significa que ningún factor primo
+        $p_i$ divide a $c$. Luego cada $p_i$ divide a $k/c$, por lo tanto $d$ divide a $k/c$. Con
+        otras palabras
+        \begin{equation*}
+            \sum_{d\mid k}\abs{\mu(d)\psi(d)}\leq\sum_{d\mid k/c}1=d\left(\frac{k}{c}\right)=O\left(\left(\frac{k}{c}\right)^{\delta}\right)
+        \end{equation*}
+        para cada $\delta>0$. En particular, $d(k/c)=O(\sqrt{k/c})$, luego \eqref{eq:13-36}
+        implica
+        \begin{equation*}
+            \sum_{m\leq x}\chi(m)=O\left(\sqrt{\frac{k}{c}}\sqrt{c}\log c\right)=O(\sqrt{k}\log c)=O(\sqrt{k}\log k).\qedhere
+        \end{equation*}
+    \end{proof}
+

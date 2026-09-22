@@ -1,0 +1,388 @@
+    \begin{equation*}
+        F_A(x)=\prod_{n\in A}(1-x^n)^{-f(n)/n}
+    \end{equation*}
+    y la serie
+    \begin{equation*}
+        G_A(x)=\sum_{n\in A}\frac{f(n)}{n}\,x^n
+    \end{equation*}
+    convergen absolutamente para $\abs{x}<1$ y representan funciones analíticas en el disco
+    unidad $\abs{x}<1$. El logaritmo del producto viene expresado por
+    \begin{equation*}
+        \log F_A(x)=-\sum_{n\in A}\frac{f(n)}{n}\log(1-x^n)=\sum_{n\in A}\frac{f(n)}{n}\sum_{m=1}^{\infty}\frac{x^{mn}}{m}=\sum_{m=1}^{\infty}\frac{1}{m}\,G_A(x^m).
+    \end{equation*}
+    Diferenciando y multiplicando por $x$ obtenemos
+    \begin{equation*}
+        x\,\frac{F_A'(x)}{F_A(x)}=\sum_{m=1}^{\infty}G_A'(x^m)x^m=\sum_{m=1}^{\infty}\sum_{n\in A}f(n)x^{mn}=\sum_{m=1}^{\infty}\sum_{n=1}^{\infty}\chi_A(n)f(n)x^{mn},
+    \end{equation*}
+    en donde $\chi_A$ es la función característica del conjunto $A$,
+    \begin{equation*}
+        \chi_A(n)=
+        \begin{cases}
+            1&\text{si }n\in A,\\
+            0&\text{si }n\notin A.
+        \end{cases}
+    \end{equation*}
+    Agrupando los términos con $mn=k$ obtenemos
+    \begin{equation*}
+        \sum_{m=1}^{\infty}\sum_{n=1}^{\infty}\chi_A(n)f(n)x^{mn}=\sum_{k=1}^{\infty}f_A(k)x^k,
+    \end{equation*}
+    en donde
+    \begin{equation*}
+        f_A(k)=\sum_{d\mid k}\chi_A(d)f(d)=\sum_{\substack{d\mid k\\d\in A}}f(d).
+    \end{equation*}
+    Por consiguiente tenemos la siguiente identidad,
+    \begin{equation}\label{eq:14-22}
+        xF_A'(x)=F_A(x)\sum_{k=1}^{\infty}f_A(k)x^k.
+    \end{equation}
+    Ahora escribimos el producto $F_A(x)$ como una serie de potencias
+    \begin{equation*}
+        F_A(x)=\sum_{n=0}^{\infty}p_{A,f}(n)x^n,\qquad\text{en donde }p_{A,f}(0)=1,
+    \end{equation*}
+    e igualamos los coeficientes de $x^n$ de \eqref{eq:14-22} para obtener la fórmula recursiva
+    \eqref{eq:14-24} en el teorema siguiente.
+
+    \begin{teorema}\label{teo:14-8}
+        Para un conjunto dado $A$ y una función aritmética $f$, los números $p_{A,f}(n)$
+        definidos por la ecuación
+        \begin{equation}\label{eq:14-23}
+            \prod_{n\in A}(1-x^n)^{-f(n)/n}=1+\sum_{n=1}^{\infty}p_{A,f}(n)x^n
+        \end{equation}
+        satisfacen la fórmula recursiva
+        \begin{equation}\label{eq:14-24}
+            np_{A,f}(n)=\sum_{k=1}^{n}f_A(k)p_{A,f}(n-k),
+        \end{equation}
+        en donde $p_{A,f}(0)=1$ y
+        \begin{equation*}
+            f_A(k)=\sum_{\substack{d\mid k\\d\in A}}f(d).
+        \end{equation*}
+    \end{teorema}
+
+    \begin{ejemplo}
+        Sea $A$ el conjunto de todos los enteros positivos. Si $f(n)=n$, entonces
+        $p_{A,f}(n)=p(n)$, que es la función de partición no restringida, y
+        $f_A(k)=\sigma(k)$, que es la suma de los divisores de $k$. La ecuación
+        \eqref{eq:14-24} da
+        \begin{equation*}
+            np(n)=\sum_{k=1}^{n}\sigma(k)p(n-k),
+        \end{equation*}
+        que es una relación notable que conecta una función de la teoría multiplicativa de
+        números con una de la teoría aditiva de números.
+    \end{ejemplo}
+
+    \begin{ejemplo}
+        Tomamos $A$ igual al del ejemplo 1, pero $f(n)=-n$. Entonces los coeficientes de
+        \eqref{eq:14-23} se hallan determinados por el teorema de los números pentagonales de
+        Euler y la fórmula recursiva \eqref{eq:14-24} da
+        \begin{equation}\label{eq:14-25}
+            np_{A,f}(n)=-\sum_{k=1}^{n}\sigma(k)p_{A,f}(n-k)=-\sigma(n)-\sum_{k=1}^{n-1}p_{A,f}(k)\sigma(n-k),
+        \end{equation}
+        en donde
+        \begin{equation*}
+            p_{A,f}(n)=
+            \begin{cases}
+                (-1)^m&\text{si }n\text{ es un número pentagonal }\omega(m)\text{ o }\omega(-m),\\
+                0&\text{si }n\text{ no es un número pentagonal.}
+            \end{cases}
+        \end{equation*}
+        La ecuación \eqref{eq:14-25} también se puede escribir como sigue:
+        \begin{align*}
+            \sigma(n)-\sigma(n-1)-\sigma(n-2)+\sigma(n-5)+\sigma(n-7)-\cdots
+            &=
+            \begin{cases}
+                (-1)^{m-1}\omega(m)&\text{si }n=\omega(m),\\
+                (-1)^{m-1}\omega(-m)&\text{si }n=\omega(-m),\\
+                0&\text{en otro caso.}
+            \end{cases}
+        \end{align*}
+        La suma de la izquierda termina cuando el término $\sigma(k)$ tiene $k\leq1$. Para
+        ilustrarlo, cuando $n=6$ y $n=7$, esto nos da las relaciones
+        \begin{align*}
+            \sigma(6)&=\sigma(5)+\sigma(4)-\sigma(1),\\
+            \sigma(7)&=\sigma(6)+\sigma(5)-\sigma(2)-7.
+        \end{align*}
+    \end{ejemplo}
+
+    \section{LAS IDENTIDADES DE PARTICIÓN DE RAMANUJAN}
+
+    Examinando la tabla de MacMahon de la función de partición, Ramanujan llegó a descubrir
+    ciertas propiedades de divisibilidad sorprendentes de $p(n)$. Por ejemplo, probó que
+    \begin{align}
+        p(5m+4)&\equiv0\pmod{5},\label{eq:14-26}\\
+        p(7m+5)&\equiv0\pmod{7},\label{eq:14-27}\\
+        p(11m+6)&\equiv0\pmod{11}.\label{eq:14-28}
+    \end{align}
+    En relación con estos descubrimientos estableció también sin demostración dos identidades
+    notables
+    \begin{align}
+        \sum_{m=0}^{\infty}p(5m+4)x^m&=5\,\frac{\varphi(x^5)^5}{\varphi(x)^6},\label{eq:14-29}\\
+        \sum_{m=0}^{\infty}p(7m+5)x^m&=7\,\frac{\varphi(x^7)^3}{\varphi(x)^4}+49x\,\frac{\varphi(x^7)^7}{\varphi(x)^8},\label{eq:14-30}
+    \end{align}
+    en donde
+    \begin{equation*}
+        \varphi(x)=\prod_{n=1}^{\infty}(1-x^n).
+    \end{equation*}
+    Dado que las funciones de la derecha de \eqref{eq:14-29} y \eqref{eq:14-30} admiten
+    desarrollos en serie de potencias con coeficientes enteros, las identidades de Ramanujan
+    implican de forma inmediata las congruencias \eqref{eq:14-26} y \eqref{eq:14-27}.
+
+    Las demostraciones de \eqref{eq:14-29} y \eqref{eq:14-30}, basadas en la teoría de las
+    funciones modulares, fueron establecidas por Darling, Mordell, Rademacher, Zuckerman, y
+    otros. Demostraciones posteriores, independientes de la teoría de las funciones modulares,
+    fueron establecidas por Kruyswijk \cite{kruyswijk1950} y posteriormente por Kolberg. El
+    método de Kolberg no sólo da las identidades de Ramanujan sino muchas otras. La
+    demostración de Kruyswijk de \eqref{eq:14-29} se establece en los ejercicios 11--15.
+
+    \section*{Ejercicios del capítulo 14}
+
+    \begin{ejercicio}
+        Sea $A$ un conjunto no vacío de números positivos.
+        \begin{enumerate}
+            \item[(a)] Probar que el producto
+            \begin{equation*}
+                \prod_{m\in A}(1-x^m)^{-1}
+            \end{equation*}
+            es la función generadora del número de particiones de $n$ en partes pertenecientes
+            al conjunto $A$.
+            \item[(b)] Describir la función de partición generada por el producto
+            \begin{equation*}
+                \prod_{m\in A}(1+x^m).
+            \end{equation*}
+            En particular, describir la función de partición generada por el producto finito
+            $\prod_{m=1}^{k}(1+x^m)$.
+        \end{enumerate}
+    \end{ejercicio}
+
+    \begin{ejercicio}
+        Si $\abs{x}<1$, probar que
+        \begin{equation*}
+            \prod_{m=1}^{\infty}(1+x^m)=\prod_{m=1}^{\infty}(1-x^{2m-1})^{-1},
+        \end{equation*}
+        y deducir que el número de particiones de $n$ en partes desiguales es igual al número
+        de particiones de $n$ en partes impares.
+    \end{ejercicio}
+
+    \begin{ejercicio}
+        Para complejos $x$ y $z$ con $\abs{x}<1$, consideramos
+        \begin{equation*}
+            f(x,z)=\prod_{m=1}^{\infty}(1-x^mz).
+        \end{equation*}
+        \begin{enumerate}
+            \item[(a)] Probar que, para cada $z$ fijo, el producto es una función analítica de
+            $x$ en el disco $\abs{x}<1$, y que, para cada $x$ fijo con $\abs{x}<1$, el
+            producto es una función entera de $z$.
+            \item[(b)] Definimos los números $a_n(x)$ por la ecuación
+            \begin{equation*}
+                f(x,z)=\sum_{n=0}^{\infty}a_n(x)z^n.
+            \end{equation*}
+            Probar que $f(x,z)=(1-zx)f(x,zx)$ y utilizarlo para demostrar que los coeficientes
+            satisfacen la fórmula recursiva
+            \begin{equation*}
+                a_n(x)=a_n(x)x^n-a_{n-1}(x)x^n.
+            \end{equation*}
+            \item[(c)] De la parte (b) deducir que $a_n(x)=(-1)^nx^{n(n+1)/2}/P_n(x)$, en donde
+            \begin{equation*}
+                P_n(x)=\prod_{r=1}^{n}(1-x^r).
+            \end{equation*}
+        \end{enumerate}
+        Este resultado prueba la siguiente identidad para $\abs{x}<1$ y $z$ arbitrario:
+        \begin{equation*}
+            \prod_{m=1}^{\infty}(1-x^mz)=\sum_{n=0}^{\infty}\frac{(-1)^n}{P_n(x)}\,x^{n(n+1)/2}z^n.
+        \end{equation*}
+    \end{ejercicio}
+
+    \begin{ejercicio}
+        Utilizar un procedimiento análogo al del ejercicio 3 para demostrar que, si $\abs{x}<1$
+        y $\abs{z}<1$ tenemos
+        \begin{equation*}
+            \prod_{m=1}^{\infty}(1-x^mz)^{-1}=\sum_{n=0}^{\infty}\frac{z^n}{P_n(x)}
+        \end{equation*}
+        en donde $P_n(x)=\prod_{r=1}^{n}(1-x^r)$.
+    \end{ejercicio}
+
+    \begin{ejercicio}
+        Si $x\neq1$, sea $Q_0(x)=1$ y, para $n\geq1$, definamos
+        \begin{equation*}
+            Q_n(x)=\prod_{r=1}^{n}\frac{1-x^{2r}}{1-x^{2r-1}}.
+        \end{equation*}
+        \begin{enumerate}
+            \item[(a)] Deducir las siguientes identidades finitas de Shanks:
+            \begin{align*}
+                \sum_{m=1}^{2n}x^{m(m-1)/2}&=\sum_{s=0}^{n-1}\frac{Q_n(x)}{Q_s(x)}\,x^{s(2n+1)},\\
+                \sum_{m=1}^{2n+1}x^{m(m-1)/2}&=\sum_{s=0}^{n}\frac{Q_n(x)}{Q_s(x)}\,x^{s(2n+1)}.
+            \end{align*}
+            \item[(b)] Utilizar las identidades de Shanks para deducir el teorema de los
+            números triangulares de Gauss:
+            \begin{equation*}
+                \sum_{m=1}^{\infty}x^{m(m-1)/2}=\prod_{n=1}^{\infty}\frac{1-x^{2n}}{1-x^{2n-1}}\qquad\text{para }\abs{x}<1.
+            \end{equation*}
+        \end{enumerate}
+    \end{ejercicio}
+
+    \begin{ejercicio}
+        La identidad que sigue es válida para $\abs{x}<1$:
+        \begin{equation*}
+            \sum_{m=-\infty}^{\infty}x^{m(m+1)/2}=\prod_{n=1}^{\infty}(1+x^{n-1})(1-x^{2n}).
+        \end{equation*}
+        \begin{enumerate}
+            \item[(a)] Deducirla de las identidades de los ejercicios 2 y 5(b).
+            \item[(b)] Deducirla de la identidad del triple producto de Jacobi.
+        \end{enumerate}
+    \end{ejercicio}
+
+    \begin{ejercicio}
+        Probar que las siguientes identidades, válidas para $\abs{x}<1$, son consecuencias de la
+        identidad del triple producto de Jacobi:
+        \begin{enumerate}
+            \item[(a)] $\displaystyle\prod_{n=1}^{\infty}(1-x^{5n})(1-x^{5n-1})(1-x^{5n-4})=\sum_{m=-\infty}^{\infty}(-1)^mx^{m(5m+3)/2}$.
+            \item[(b)] $\displaystyle\prod_{n=1}^{\infty}(1-x^{5n})(1-x^{5n-2})(1-x^{5n-3})=\sum_{m=-\infty}^{\infty}(-1)^mx^{m(5m+1)/2}$.
+        \end{enumerate}
+    \end{ejercicio}
+
+    \begin{ejercicio}
+        Probar que la fórmula recursiva
+        \begin{equation*}
+            np(n)=\sum_{k=1}^{n}\sigma(k)p(n-k),
+        \end{equation*}
+        obtenida en la sección 14.10 se puede poner en la forma
+        \begin{equation*}
+            np(n)=\sum_{m=1}^{n}\sum_{k\leq n/m}mp(n-km).
+        \end{equation*}
+    \end{ejercicio}
+
+    \begin{ejercicio}
+        Suponemos que cada entero positivo $k$ se escribe en $g(k)$ colores distintos, en donde
+        $g(k)$ es un entero positivo. Sea $p_g(n)$ el número de particiones de $n$ en las que
+        cada parte $k$ aparece a lo sumo en $g(k)$ colores diferentes. Cuando $g(k)=1$ para todo
+        $k$, obtenemos la función de partición no restringida $p(n)$. Buscar un producto
+        infinito que genere $p_g(n)$ y probar que existe una función aritmética $f$ (que depende
+        de $g$) tal que
+        \begin{equation*}
+            np_g(n)=\sum_{k=1}^{n}f(k)p_g(n-k).
+        \end{equation*}
+    \end{ejercicio}
+
+    \begin{ejercicio}
+        La notación es la referente a la sección 14.10. Resolviendo la ecuación diferencial de
+        primer orden en \eqref{eq:14-22} probar que, si $\abs{x}<1$, tenemos
+        \begin{equation*}
+            \prod_{n\in A}(1-x^n)^{-f(n)/n}=\exp\left\{\int_0^x\frac{H(t)}{t}\,dt\right\},
+        \end{equation*}
+        en donde
+        \begin{equation*}
+            H(x)=\sum_{k=1}^{\infty}f_A(k)x^k\qquad\text{y}\qquad f_A(k)=\sum_{\substack{d\mid k\\d\in A}}f(d).
+        \end{equation*}
+        Deducir que
+        \begin{equation*}
+            \prod_{n=1}^{\infty}(1-x^n)^{\mu(n)/n}=e^{-x}\qquad\text{para }\abs{x}<1,
+        \end{equation*}
+        en donde $\mu(n)$ es la función de Möbius.
+    \end{ejercicio}
+
+    Los ejercicios que siguen proporcionan una demostración de la identidad de partición de
+    Ramanujan
+    \begin{equation*}
+        \sum_{m=0}^{\infty}p(5m+4)x^m=5\,\frac{\varphi(x^5)^5}{\varphi(x)^6},\qquad\text{en donde }\varphi(x)=\prod_{n=1}^{\infty}(1-x^n),
+    \end{equation*}
+    por un método de Kruyswijk que no requiere la teoría de las funciones modulares.
+
+    \begin{ejercicio}
+        \begin{enumerate}
+            \item[(a)] Sea $\varepsilon=e^{2\pi i/k}$, en donde $k>1$, probar que, para todo
+            $x$, tenemos
+            \begin{equation*}
+                \prod_{h=1}^{k}(1-x\varepsilon^h)=1-x^k.
+            \end{equation*}
+            \item[(b)] En general, si $(n,k)=d$, probar que
+            \begin{equation*}
+                \prod_{h=1}^{k}(1-x\varepsilon^{nh})=(1-x^{k/d})^d,
+            \end{equation*}
+            y deducir que
+            \begin{equation*}
+                \prod_{h=1}^{k}(1-x^ne^{2\pi inh/k})=
+                \begin{cases}
+                    1-x^{nk}&\text{si }(n,k)=1,\\
+                    (1-x^n)^k&\text{si }k\mid n.
+                \end{cases}
+            \end{equation*}
+        \end{enumerate}
+    \end{ejercicio}
+
+    \begin{ejercicio}
+        \begin{enumerate}
+            \item[(a)] Utilizar el ejercicio 11(b) para probar que, para $q$ primo y
+            $\abs{x}<1$, tenemos
+            \begin{equation*}
+                \prod_{n=1}^{\infty}\prod_{h=1}^{q}(1-x^ne^{2\pi inh/q})=\frac{\varphi(x^q)^{q+1}}{\varphi(x^{q^2})}.
+            \end{equation*}
+            \item[(b)] Deducir la identidad
+            \begin{equation*}
+                \sum_{m=0}^{\infty}p(m)x^m=\frac{\varphi(x^{25})}{\varphi(x^5)^6}\prod_{h=1}^{4}\prod_{n=1}^{\infty}(1-x^ne^{2\pi inh/5}).
+            \end{equation*}
+        \end{enumerate}
+    \end{ejercicio}
+
+    \begin{ejercicio}
+        Se dice que una serie de potencias de la forma
+        \begin{equation*}
+            \sum_{n=0}^{\infty}a(n)x^{qn+r}
+        \end{equation*}
+        es de \textit{tipo} $r$ mód $q$, si $q$ es primo y si $0\leq r<q$.
+        \begin{enumerate}
+            \item[(a)] Utilizar el teorema de los números pentagonales de Euler para demostrar
+            que $\varphi(x)$ es una suma de tres series de potencias,
+            \begin{equation*}
+                \varphi(x)=\prod_{n=1}^{\infty}(1-x^n)=I_0+I_1+I_2,
+            \end{equation*}
+            en donde $I_k$ designa una serie de potencias de tipo $k$ mód 5.
+            \item[(b)] Sea $\alpha=e^{2\pi i/5}$ y pruébese que
+            \begin{equation*}
+                \prod_{h=1}^{4}\prod_{n=1}^{\infty}(1-x^n\alpha^{nh})=\prod_{h=1}^{4}(I_0+I_1\alpha^h+I_2\alpha^{2h}).
+            \end{equation*}
+            \item[(c)] Utilizar el ejercicio 12(b) para probar que
+            \begin{equation*}
+                \sum_{m=0}^{\infty}p(5m+4)x^{5m+4}=V_4\,\frac{\varphi(x^{25})}{\varphi(x^5)^6},
+            \end{equation*}
+            en donde $V_4$ es la serie de potencias de tipo 4 mód 5 obtenida del producto de la
+            parte (b).
+        \end{enumerate}
+    \end{ejercicio}
+
+    \begin{ejercicio}
+        \begin{enumerate}
+            \item[(a)] Utilizar el teorema \ref{teo:14-7} para probar que el cubo del producto
+            de Euler es la suma de tres series de potencias,
+            \begin{equation*}
+                \varphi(x)^3=W_0+W_1+W_3,
+            \end{equation*}
+            en donde $W_k$ indica una serie de potencias de tipo $k$ mód 5.
+            \item[(b)] Utilizar la identidad $W_0+W_1+W_3=(I_0+I_1+I_2)^3$ para probar que la
+            serie de potencias del ejercicio 13(a) satisface la relación
+            \begin{equation*}
+                I_0I_2=-I_1^2.
+            \end{equation*}
+            \item[(c)] Probar que $I_1=-x\varphi(x^{25})$.
+        \end{enumerate}
+    \end{ejercicio}
+
+    \begin{ejercicio}
+        Observar que el producto $\prod_{h=1}^{4}(I_0+I_1\alpha^h+I_2\alpha^{2h})$ es un
+        polinomio homogéneo en $I_0$, $I_1$, $I_2$ de grado 4, por lo que los términos que
+        contribuyen a la serie de tipo 4 mód 5 provienen de los términos $I_1^4$, $I_0I_1^2I_2$
+        e $I_0^2I_2^2$.
+        \begin{enumerate}
+            \item[(a)] Utilizar el ejercicio 14(c) para demostrar que existe una constante $c$
+            tal que
+            \begin{equation*}
+                V_4=cI_1^4,
+            \end{equation*}
+            en donde $V_4$ es la serie de potencias del ejercicio 13(c), y deducir que
+            \begin{equation*}
+                \sum_{m=0}^{\infty}p(5m+4)x^{5m+4}=cx^4\,\frac{\varphi(x^{25})^5}{\varphi(x^5)^6}.
+            \end{equation*}
+            \item[(b)] Probar que $c=5$ y deducir la identidad de Ramanujan
+            \begin{equation*}
+                \sum_{m=0}^{\infty}p(5m+4)x^m=5\,\frac{\varphi(x^5)^5}{\varphi(x)^6}.
+            \end{equation*}
+        \end{enumerate}
+    \end{ejercicio}
+
