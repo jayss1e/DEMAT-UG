@@ -1,0 +1,33 @@
+\documentclass[border=4pt]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,decorations.markings}
+
+\definecolor{orangeText}{HTML}{E3A063}
+\definecolor{orangeDim}{HTML}{A87A4E}
+\begin{document}
+\begin{tikzpicture}[color=orangeText, >=Latex, x=1cm, y=1cm]
+
+    \tikzset{mid/.style={postaction={decorate,decoration={markings,
+        mark=at position 0.5 with {\arrow{Latex}}}}}}
+
+    % real axis
+    \draw (-3.6,0) -- (3.6,0);
+
+    % contour R (counterclockwise): c-iT -> c+iT -> -b+iT -> -b-iT -> c-iT
+    \draw[mid] (2,-1.7) -- (2,1.7);
+    \draw[mid] (2,1.7) -- (-2.8,1.7);
+    \draw[mid] (-2.8,1.7) -- (-2.8,-1.7);
+    \draw[mid] (-2.8,-1.7) -- (2,-1.7);
+
+    \node[above right] at (2,1.7) {\small $c+iT$};
+    \node[above left] at (-2.8,1.7) {\small $-b+iT$};
+    \node[below right] at (2,-1.7) {\small $c-iT$};
+    \node[below left] at (-2.8,-1.7) {\small $-b-iT$};
+
+    \fill (0,0) circle (1.2pt);
+    \node[below right] at (0,0) {\small $0$};
+    \node[below right] at (2,0) {\small $c$};
+    \node[below left] at (-2.8,0) {\small $-b$};
+
+\end{tikzpicture}
+\end{document}

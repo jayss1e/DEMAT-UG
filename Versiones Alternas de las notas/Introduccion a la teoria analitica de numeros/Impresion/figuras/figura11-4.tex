@@ -1,0 +1,32 @@
+\documentclass[border=4pt]{standalone}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,decorations.markings}
+
+\begin{document}
+\begin{tikzpicture}[>=Latex, x=1cm, y=1cm]
+
+    \tikzset{mid/.style={postaction={decorate,decoration={markings,
+        mark=at position 0.5 with {\arrow{Latex}}}}}}
+
+    % real axis
+    \draw (-1,0) -- (5.6,0);
+
+    % contour R (clockwise): c-iT -> c+iT -> b+iT -> b-iT -> c-iT
+    \draw[mid] (1,-1.7) -- (1,1.7);
+    \draw[mid] (1,1.7) -- (4.5,1.7);
+    \draw[mid] (4.5,1.7) -- (4.5,-1.7);
+    \draw[mid] (4.5,-1.7) -- (1,-1.7);
+
+    \node[above left] at (1,1.7) {\small $c+iT$};
+    \node[above right] at (4.5,1.7) {\small $b+iT$};
+    \node[below left] at (1,-1.7) {\small $c-iT$};
+    \node[below right] at (4.5,-1.7) {\small $b-iT$};
+
+    \node[below left] at (0,0) {\small $0$};
+    \node[below left] at (1,0) {\small $c$};
+    \node[below right] at (4.5,0) {\small $b$};
+    \fill (0,0) circle (1.2pt);
+    \node at (2.75,-1.25) {\small $R$};
+
+\end{tikzpicture}
+\end{document}

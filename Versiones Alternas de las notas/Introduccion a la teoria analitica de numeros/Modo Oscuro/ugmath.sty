@@ -1,0 +1,381 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{ugmath}[2025/01/01 Estilo matemático personal (modo oscuro)]
+% Variante "Modo Oscuro": hoja negra, texto en naranja suave, cajas
+% recoloreadas a tonos oscuros de la misma familia naranja/ámbar.
+% Copia independiente de ugmath.sty; los cambios aquí no afectan a la
+% versión de impresión ni a las notas originales.
+
+% ========== CONFIGURACIÓN INICIAL ==========
+\RequirePackage[spanish]{babel}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[T1]{fontenc}
+\RequirePackage{lmodern}
+
+% ========== GEOMETRÍA (MÁRGENES) ==========
+% ¡IMPORTANTE! Esto debe ir ANTES de otros paquetes que usen geometry
+\RequirePackage[%
+    top=1.5cm,      % Margen superior
+    bottom=1.5cm,   % Margen inferior
+    left=1.5cm,     % Margen izquierdo
+    right=1.5cm,    % Margen derecho
+    marginparwidth=2.0cm,  % Ancho del margen para notas
+    marginparsep=10pt      % Separación del texto principal
+]{geometry}
+
+% ========== COLORES (modo oscuro) ==========
+\RequirePackage[dvipsnames]{xcolor}
+
+% Hoja y texto
+\definecolor{darkpage}{HTML}{000000}     % la hoja: negro
+\definecolor{orangeText}{HTML}{E3A063}   % texto: naranja suave, legible, no chillón
+\definecolor{orangeDim}{HTML}{A87A4E}    % naranja apagado, para texto secundario/reglas
+\definecolor{orangeLink}{HTML}{F2C14E}   % acento más claro, para enlaces (se distingue del texto)
+
+% Cajas: fondos casi negros con distintos bordes naranja/ámbar
+\definecolor{boxbg}{HTML}{140F0A}        % fondo de caja, negro con tinte cálido
+\definecolor{boxborderDef}{HTML}{E08A3E} % borde: definición (naranja vivo)
+\definecolor{boxborderThm}{HTML}{B98A55} % borde: teorema/proposición/lema/corolario (ámbar)
+\definecolor{boxborderNote}{HTML}{8C5A2B}% borde: nota/errata (naranja quemado)
+\definecolor{boxtitletext}{HTML}{140F0A} % texto del título de caja (oscuro, sobre barra clara)
+
+% Se conservan estos nombres (usados en \mdfdefinestyle más abajo) para
+% minimizar el diff frente a la versión original.
+\definecolor{UGblue}{HTML}{E08A3E}
+\definecolor{UGgold}{HTML}{F2C14E}
+\definecolor{mutedyellow}{HTML}{B98A55}
+\definecolor{myblue}{HTML}{E08A3E}
+\definecolor{softgray}{HTML}{B98A55}
+\definecolor{lightgray}{HTML}{140F0A}
+\definecolor{elegantpurple}{HTML}{B98A55}
+\definecolor{lightpurple}{HTML}{140F0A}
+\definecolor{darkred}{HTML}{8C5A2B}
+\definecolor{lightred}{HTML}{140F0A}
+
+% La hoja negra y el color de texto por omisión (\pagecolor lo da xcolor)
+\AtBeginDocument{%
+  \pagecolor{darkpage}%
+  \color{orangeText}%
+}
+
+% ========== PAQUETES ==========
+\RequirePackage{setspace}
+\setstretch{1.2}
+
+\RequirePackage{amsmath,amssymb,amsthm,mathtools}
+\RequirePackage{graphicx}
+\RequirePackage{tikz}
+\usetikzlibrary{calc,decorations.pathreplacing,angles,quotes,shadows,shadows.blur,arrows}
+\RequirePackage{pgfplots}
+\pgfplotsset{compat=newest}
+\pgfplotsset{compat=1.18}
+\RequirePackage{caption}
+\RequirePackage{thmtools}
+\RequirePackage{mathrsfs}
+\RequirePackage{stmaryrd}
+\RequirePackage{physics}
+\RequirePackage{enumitem}
+\RequirePackage{csquotes}
+\RequirePackage{multicol}
+\RequirePackage{tocloft}
+\RequirePackage{tikz-3dplot}
+
+% ========== MDFRAMED ==========
+\RequirePackage[framemethod=TikZ]{mdframed}
+
+\mdfdefinestyle{mdpinkbox}{
+    linecolor=boxborderNote,
+    linewidth=1.5pt,
+    backgroundcolor=boxbg,
+    roundcorner=8pt,
+    frametitlebackgroundcolor=boxborderNote,
+    frametitlefont=\bfseries\color{boxtitletext},
+    frametitlealignment=\raggedright, %\raggedleft o \centering
+    innertopmargin=12pt,
+    innerbottommargin=12pt,
+    innerleftmargin=15pt,
+    innerrightmargin=15pt,
+    skipabove=20pt,     % Espacio antes de la caja
+    skipbelow=15pt,     % Espacio después de la caja
+    nobreak=true,      % Permite que se rompa en páginas
+    splitbottomskip=10pt,
+    splittopskip=10pt
+}
+
+\mdfdefinestyle{mdbluebox}{
+    linecolor=boxborderDef,         % Borde: naranja vivo (antes azul)
+    linewidth=1.5pt,
+    backgroundcolor=boxbg,          % Fondo: casi negro
+    roundcorner=8pt,
+    frametitlebackgroundcolor=boxborderDef, % Barra de título: naranja vivo
+    frametitlefont=\bfseries\color{boxtitletext},
+    frametitlealignment=\raggedright,
+    innertopmargin=12pt,
+    innerbottommargin=12pt,
+    innerleftmargin=15pt,
+    innerrightmargin=15pt,
+    skipabove=20pt,
+    skipbelow=15pt,
+    nobreak=true,
+    splitbottomskip=10pt,
+    splittopskip=10pt
+}
+
+\mdfdefinestyle{mdorangebox}{
+    linecolor=orangeLink,
+    linewidth=1.5pt,
+    backgroundcolor=boxbg,
+    roundcorner=8pt,
+    frametitlebackgroundcolor=orangeLink,
+    frametitlefont=\bfseries\color{boxtitletext},
+    frametitlealignment=\raggedright,
+    innertopmargin=12pt,
+    innerbottommargin=12pt,
+    innerleftmargin=15pt,
+    innerrightmargin=15pt,
+    skipabove=20pt,
+    skipbelow=15pt,
+    nobreak=false,
+    splitbottomskip=10pt,
+    splittopskip=10pt
+}
+
+\mdfdefinestyle{mdgreenbox}{
+    linecolor=boxborderNote,        % Borde: naranja quemado (antes verde)
+    linewidth=1.5pt,
+    backgroundcolor=boxbg,
+    roundcorner=8pt,
+    frametitlebackgroundcolor=boxborderNote,
+    frametitlefont=\bfseries\color{boxtitletext},
+    frametitlealignment=\raggedright,
+    innertopmargin=12pt,
+    innerbottommargin=12pt,
+    innerleftmargin=15pt,
+    innerrightmargin=15pt,
+    skipabove=20pt,
+    skipbelow=15pt,
+    nobreak=false,
+    splitbottomskip=10pt,
+    splittopskip=10pt
+}
+
+\mdfdefinestyle{mdgraybox}{
+    linecolor=softgray,             % = boxborderThm (ámbar), redefinido arriba
+    linewidth=1.5pt,
+    backgroundcolor=lightgray,      % = boxbg, redefinido arriba
+    roundcorner=8pt,
+    frametitlebackgroundcolor=softgray,
+    frametitlefont=\bfseries\color{boxtitletext},
+    frametitlealignment=\raggedright,
+    innertopmargin=12pt,
+    innerbottommargin=12pt,
+    innerleftmargin=15pt,
+    innerrightmargin=15pt,
+    skipabove=20pt,
+    skipbelow=15pt,
+    nobreak=true,
+    splitbottomskip=10pt,
+    splittopskip=10pt
+}
+
+\mdfdefinestyle{mdpurplebox}{
+    linecolor=elegantpurple,        % = boxborderThm (ámbar), redefinido arriba
+    linewidth=1.5pt,
+    backgroundcolor=lightpurple,    % = boxbg, redefinido arriba
+    roundcorner=8pt,
+    frametitlebackgroundcolor=elegantpurple,
+    frametitlefont=\bfseries\color{boxtitletext},
+    frametitlealignment=\raggedright,
+    innertopmargin=12pt,
+    innerbottommargin=12pt,
+    innerleftmargin=15pt,
+    innerrightmargin=15pt,
+    skipabove=20pt,
+    skipbelow=15pt,
+    nobreak=false,
+    splitbottomskip=10pt,
+    splittopskip=10pt
+}
+
+\mdfdefinestyle{mdredbox}{
+    linecolor=darkred,              % = boxborderNote, redefinido arriba
+    linewidth=1.5pt,
+    backgroundcolor=lightred,       % = boxbg, redefinido arriba
+    roundcorner=8pt,
+    frametitlebackgroundcolor=darkred,
+    frametitlefont=\bfseries\color{boxtitletext},
+    frametitlealignment=\raggedright,
+    innertopmargin=12pt,
+    innerbottommargin=12pt,
+    innerleftmargin=15pt,
+    innerrightmargin=15pt,
+    skipabove=20pt,
+    skipbelow=15pt,
+    nobreak=false,
+    splitbottomskip=10pt,
+    splittopskip=10pt
+}
+
+% =========================================================
+% ENTORNOS MATEMÁTICOS CON MDFRAMED
+% =========================================================
+
+% ─── Contadores ────────────────────────────────────────────────────
+\newcounter{defn}[chapter]
+\newcounter{teor}[chapter]
+\newcounter{prop}[chapter]
+\newcounter{lema}[chapter]
+\newcounter{coro}[chapter]
+
+% Formato: 1.1, 1.2, 2.1 … (capítulo.número)
+\renewcommand{\thedefn}{\thechapter.\arabic{defn}}
+\renewcommand{\theteor}{\thechapter.\arabic{teor}}
+\renewcommand{\theprop}{\thechapter.\arabic{prop}}
+\renewcommand{\thelema}{\thechapter.\arabic{lema}}
+\renewcommand{\thecoro}{\thechapter.\arabic{coro}}
+
+% ─── Entornos ──────────────────────────────────────────────────────
+
+% DEFINICIÓN — caja azul
+\newenvironment{definicion}[1][]{%
+  \refstepcounter{defn}%
+  \ifx&#1&%                      % si no hay título opcional
+    \begin{mdframed}[style=mdbluebox,
+      frametitle={Definición \thedefn}]%
+  \else%                         % si hay título opcional
+    \begin{mdframed}[style=mdbluebox,
+      frametitle={Definición \thedefn: #1}]%
+  \fi
+  \color{orangeText}%
+}{%
+  \end{mdframed}
+}
+
+% TEOREMA — caja gris
+\newenvironment{teorema}[1][]{%
+  \refstepcounter{teor}%
+  \ifx&#1&%
+    \begin{mdframed}[style=mdgraybox,
+      frametitle={Teorema \theteor}]%
+  \else%
+    \begin{mdframed}[style=mdgraybox,
+      frametitle={Teorema \theteor: #1}]%
+  \fi
+  \color{orangeText}%
+}{%
+  \end{mdframed}
+}
+
+% PROPOSICIÓN — caja gris
+\newenvironment{proposicion}[1][]{%
+  \refstepcounter{prop}%
+  \ifx&#1&%
+    \begin{mdframed}[style=mdgraybox,
+      frametitle={Proposición \theprop}]%
+  \else%
+    \begin{mdframed}[style=mdgraybox,
+      frametitle={Proposición \theprop: #1}]%
+  \fi
+  \color{orangeText}%
+}{%
+  \end{mdframed}
+}
+
+% LEMA — caja gris
+\newenvironment{lema}[1][]{%
+  \refstepcounter{lema}%
+  \ifx&#1&%
+    \begin{mdframed}[style=mdgraybox,
+      frametitle={Lema \thelema}]%
+  \else%
+    \begin{mdframed}[style=mdgraybox,
+      frametitle={Lema \thelema: #1}]%
+  \fi
+  \color{orangeText}%
+}{%
+  \end{mdframed}
+}
+
+% COROLARIO — caja gris
+\newenvironment{corolario}[1][]{%
+  \refstepcounter{coro}%
+  \ifx&#1&%
+    \begin{mdframed}[style=mdgraybox,
+      frametitle={Corolario \thecoro}]%
+  \else%
+    \begin{mdframed}[style=mdgraybox,
+      frametitle={Corolario \thecoro: #1}]%
+  \fi
+  \color{orangeText}%
+}{%
+  \end{mdframed}
+}
+
+% ─── Contador de ejemplos ──────────────────────────────────────────
+\newcounter{ejemplo}[chapter]
+\renewcommand{\theejemplo}{\thechapter.\arabic{ejemplo}}
+
+% ─── Entorno ejemplo ───────────────────────────────────────────────
+\newenvironment{ejemplo}{%
+  \refstepcounter{ejemplo}%
+  \par\medskip
+  \noindent\textbf{Ejemplo \theejemplo}%
+  \par\smallskip
+}{%
+  \hfill$\blacktriangle$\par\medskip
+}
+
+% ─── Contador de ejercicios ────────────────────────────────────────
+\newcounter{ejercicio}[chapter]
+\renewcommand{\theejercicio}{\thechapter.\arabic{ejercicio}}
+
+% ─── Entorno ejercicio ─────────────────────────────────────────────
+\newenvironment{ejercicio}{%
+  \refstepcounter{ejercicio}%
+  \par\medskip
+  \noindent\textbf{Ejercicio \theejercicio}\space\ignorespaces
+}{%
+  \par\medskip
+}
+
+% ========== HIPERVÍNCULOS ==========
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=UGblue,
+    urlcolor=UGgold,
+    citecolor=UGblue,
+    pdftitle={Documento},
+    pdfauthor={Autor}
+}
+
+% ========== COMANDOS MATEMÁTICOS ==========
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\FF}{\mathcal{F}}
+\newcommand{\BB}{\mathcal{B}}
+\newcommand{\PP}{\mathcal{P}}
+\newcommand{\pfrac}[2]{\left( \frac{#1}{#2} \right)} %
+\newcommand{\bfrac}[2]{\left[ \frac{#1}{#2} \right]} %corchetes
+\newcommand{\vecpar}[1]{\left( #1 \right)}
+\newcommand{\point}[2]{\left( #1, #2 \right)}
+\newcommand{\pointfrac}[4]{\left( \frac{#1}{#2}, \frac{#3}{#4} \right)}
+\newcommand{\pointmix}[4]{\left( #1, \frac{#3}{#4} \right)}
+\newcommand{\gt}{\ensuremath{>}}
+\newcommand{\lt}{\ensuremath{<}}
+\DeclareMathOperator{\nul}{nul}
+\newcommand{\gen}[1]{\langle #1 \rangle}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\let\a\alpha
+\renewcommand{\qedsymbol}{$\blacksquare$}
+% ========== CONFIGURACIÓN DE PÁRRAFOS ==========
+\setlength{\parindent}{0pt}      % Sin sangría
+\setlength{\parskip}{6pt}        % Espacio entre párrafos
+
+% ========== ENTORNOS ==========
+\newenvironment{solucion}
+  {\par\noindent\textit{Solución. }\ignorespaces}
+  {\hfill$\blacktriangle$\par}
