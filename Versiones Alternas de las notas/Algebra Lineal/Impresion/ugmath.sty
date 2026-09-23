@@ -1,0 +1,213 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{ugmath}[2025/01/01 Estilo matemático personal (impresión)]
+% Variante "Impresión": sin cajas de ningún tipo. Definición, Teorema,
+% Proposición, Lema y Corolario se tipografían como encabezado en negritas
+% seguido del texto en la misma línea (estilo clásico de libro impreso),
+% sin bordes, sin relleno de color y sin fuente coloreada.
+% Copia independiente de ugmath.sty; los cambios aquí no afectan a la
+% versión de modo oscuro ni a las notas originales.
+
+% ========== CONFIGURACIÓN INICIAL ==========
+\RequirePackage[spanish]{babel}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[T1]{fontenc}
+\RequirePackage{libertinus}
+\RequirePackage{microtype}
+
+% ========== GEOMETRÍA (MÁRGENES) ==========
+% ¡IMPORTANTE! Esto debe ir ANTES de otros paquetes que usen geometry
+\RequirePackage[%
+    top=1.5cm,      % Margen superior
+    bottom=1.5cm,   % Margen inferior
+    left=1.5cm,     % Margen izquierdo
+    right=1.5cm,    % Margen derecho
+    marginparwidth=2.0cm,  % Ancho del margen para notas
+    marginparsep=10pt      % Separación del texto principal
+]{geometry}
+
+% ========== COLORES ==========
+% Sin cajas de color: solo se conserva xcolor por si algún paquete lo
+% requiere como dependencia (p. ej. tikz), y el gris del filete de
+% capítulo, que es seguro en blanco y negro.
+\RequirePackage[dvipsnames]{xcolor}
+
+% ========== PAQUETES ==========
+\RequirePackage{setspace}
+\setstretch{1.2}
+
+\RequirePackage{amsmath,amssymb,amsthm,mathtools}
+\RequirePackage{graphicx}
+\RequirePackage{tikz}
+\usetikzlibrary{calc,decorations.pathreplacing,angles,quotes,shadows,shadows.blur,arrows}
+\RequirePackage{pgfplots}
+\pgfplotsset{compat=newest}
+\pgfplotsset{compat=1.18}
+\RequirePackage{caption}
+\RequirePackage{thmtools}
+\RequirePackage{mathrsfs}
+\RequirePackage{stmaryrd}
+\RequirePackage{physics}
+\RequirePackage{enumitem}
+\RequirePackage{csquotes}
+\RequirePackage{multicol}
+\RequirePackage{tocloft}
+\RequirePackage{tikz-3dplot}
+
+% =========================================================
+% ENTORNOS MATEMÁTICOS SIN CAJA (estilo de libro impreso)
+% =========================================================
+
+% ─── Contadores ────────────────────────────────────────────────────
+\newcounter{defn}[chapter]
+\newcounter{teor}[chapter]
+\newcounter{prop}[chapter]
+\newcounter{lema}[chapter]
+\newcounter{coro}[chapter]
+
+% Formato: 1.1, 1.2, 2.1 … (capítulo.número)
+\renewcommand{\thedefn}{\thechapter.\arabic{defn}}
+\renewcommand{\theteor}{\thechapter.\arabic{teor}}
+\renewcommand{\theprop}{\thechapter.\arabic{prop}}
+\renewcommand{\thelema}{\thechapter.\arabic{lema}}
+\renewcommand{\thecoro}{\thechapter.\arabic{coro}}
+
+% ─── Encabezado genérico (negritas + numeración + título opcional entre
+%     paréntesis), en su propio renglón, y salto de línea antes del
+%     texto — sin caja, sin color ────────────────────────────────────
+\newcommand{\@ugmathrunin}[3]{%
+  % #1 = etiqueta ("Definición", "Teorema", ...), #2 = número, #3 = título opcional
+  \textbf{#1~#2}%
+  \ifx&#3&\else\space(#3)\fi
+  \textbf{.}\par\nobreak\ignorespaces
+}
+
+% ─── Entornos ──────────────────────────────────────────────────────
+
+% DEFINICIÓN — sin caja
+\newenvironment{definicion}[1][]{%
+  \par\addvspace{10pt}\noindent
+  \refstepcounter{defn}%
+  \@ugmathrunin{Definición}{\thedefn}{#1}%
+}{%
+  \par\addvspace{8pt}
+}
+
+% TEOREMA — sin caja
+\newenvironment{teorema}[1][]{%
+  \par\addvspace{10pt}\noindent
+  \refstepcounter{teor}%
+  \@ugmathrunin{Teorema}{\theteor}{#1}%
+}{%
+  \par\addvspace{8pt}
+}
+
+% PROPOSICIÓN — sin caja
+\newenvironment{proposicion}[1][]{%
+  \par\addvspace{10pt}\noindent
+  \refstepcounter{prop}%
+  \@ugmathrunin{Proposición}{\theprop}{#1}%
+}{%
+  \par\addvspace{8pt}
+}
+
+% LEMA — sin caja
+\newenvironment{lema}[1][]{%
+  \par\addvspace{10pt}\noindent
+  \refstepcounter{lema}%
+  \@ugmathrunin{Lema}{\thelema}{#1}%
+}{%
+  \par\addvspace{8pt}
+}
+
+% COROLARIO — sin caja
+\newenvironment{corolario}[1][]{%
+  \par\addvspace{10pt}\noindent
+  \refstepcounter{coro}%
+  \@ugmathrunin{Corolario}{\thecoro}{#1}%
+}{%
+  \par\addvspace{8pt}
+}
+
+% ─── Protección contra encabezados huérfanos ────────────────────────
+% Si no cabe el encabezado más algo de contenido antes del fin de
+% página, se fuerza el salto antes del encabezado (en vez de dejarlo
+% solo al final de la hoja).
+\newcommand{\avoidorphan}[1]{\ifdim\dimexpr\pagegoal-\pagetotal\relax<#1\baselineskip \newpage \fi}
+
+% ─── Contador de ejemplos ──────────────────────────────────────────
+\newcounter{ejemplo}[chapter]
+\renewcommand{\theejemplo}{\thechapter.\arabic{ejemplo}}
+
+% ─── Entorno ejemplo ───────────────────────────────────────────────
+\newenvironment{ejemplo}{%
+  \par
+  \avoidorphan{3}%
+  \refstepcounter{ejemplo}%
+  \medskip
+  \noindent\textbf{Ejemplo \theejemplo}\nobreak
+  \par\nobreak\smallskip\nobreak
+}{%
+  \hfill$\blacktriangle$\par\medskip
+}
+
+% ─── Contador de ejercicios ────────────────────────────────────────
+\newcounter{ejercicio}[chapter]
+\renewcommand{\theejercicio}{\thechapter.\arabic{ejercicio}}
+
+% ─── Entorno ejercicio ─────────────────────────────────────────────
+\newenvironment{ejercicio}{%
+  \par
+  \avoidorphan{3}%
+  \refstepcounter{ejercicio}%
+  \medskip
+  \noindent\textbf{Ejercicio \theejercicio}\nobreak\space\ignorespaces
+}{%
+  \par\medskip
+}
+
+% ========== HIPERVÍNCULOS ==========
+% Impresión: enlaces en negro (sin color, sin recuadro) — no aportan
+% nada en papel y así no interrumpen la lectura en blanco y negro.
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=black,
+    citecolor=black,
+    pdftitle={Documento},
+    pdfauthor={Autor}
+}
+
+% ========== COMANDOS MATEMÁTICOS ==========
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\FF}{\mathcal{F}}
+\newcommand{\BB}{\mathcal{B}}
+\newcommand{\PP}{\mathcal{P}}
+\newcommand{\pfrac}[2]{\left( \frac{#1}{#2} \right)} %
+\newcommand{\bfrac}[2]{\left[ \frac{#1}{#2} \right]} %corchetes
+\newcommand{\vecpar}[1]{\left( #1 \right)}
+\newcommand{\point}[2]{\left( #1, #2 \right)}
+\newcommand{\pointfrac}[4]{\left( \frac{#1}{#2}, \frac{#3}{#4} \right)}
+\newcommand{\pointmix}[4]{\left( #1, \frac{#3}{#4} \right)}
+\newcommand{\gt}{\ensuremath{>}}
+\newcommand{\lt}{\ensuremath{<}}
+\DeclareMathOperator{\nul}{nul}
+\newcommand{\gen}[1]{\langle #1 \rangle}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\let\a\alpha
+
+% ========== CONFIGURACIÓN DE PÁRRAFOS ==========
+\setlength{\parindent}{0pt}      % Sin sangría
+\setlength{\parskip}{6pt}        % Espacio entre párrafos
+
+% ========== ENTORNOS ==========
+\newenvironment{solucion}
+  {\par\noindent\textit{Solución. }\ignorespaces}
+  {\hfill$\blacktriangle$\par}
+
+  \renewcommand{\qedsymbol}{$\blacksquare$}
