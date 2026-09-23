@@ -1,0 +1,9 @@
+\documentclass[tikz,border=2pt]{standalone}
+\usepackage{amsmath,amssymb}
+\usepackage{tikz-cd}
+\begin{document}
+\begin{tikzcd}[column sep=4em, row sep=3.2em]
+    T : V \longrightarrow W \arrow[d, "{\mathcal{B}_V, \, \mathcal{B}_W}"] & & T^{*} : W^{*} \longrightarrow V^{*} \arrow[d, "{\mathcal{B}_W^{*}, \, \mathcal{B}_V^{*}}"] \\
+    A = [T]_{\mathcal{B}_V, \mathcal{B}_W} & & A^{t} = [T^{*}]_{\mathcal{B}_W^{*}, \mathcal{B}_V^{*}}
+\end{tikzcd}
+\end{document}
