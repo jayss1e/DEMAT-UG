@@ -1,0 +1,17 @@
+\documentclass[tikz,border=3pt]{standalone}
+\usetikzlibrary{arrows.meta}
+\begin{document}
+\begin{tikzpicture}[>=Latex, font=\small]
+  \def\ang{26.57}
+  % ejes originales x,y
+  \draw[->] (-4.6,0) -- (4.6,0) node[right] {$x$};
+  \draw[->] (0,-3.4) -- (0,3.4) node[above] {$y$};
+
+  % ejes rotados x',y' (discontinuos)
+  \draw[dashed, rotate=\ang] (-4.4,0) -- (4.4,0) node[pos=1,anchor=south west] {$x'$};
+  \draw[dashed, rotate=\ang] (0,-2.2) -- (0,2.2) node[pos=1,anchor=south east] {$y'$};
+
+  % elipse: semieje 3 a lo largo de x', semieje 1.3 a lo largo de y' (escalado para que quepa)
+  \draw[rotate=\ang] (0,0) ellipse (3 and 1.3);
+\end{tikzpicture}
+\end{document}

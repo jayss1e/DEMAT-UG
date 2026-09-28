@@ -1,0 +1,22 @@
+\documentclass[tikz,border=3pt]{standalone}
+\begin{document}
+\begin{tikzpicture}[>=Latex, font=\small]
+  \draw[->] (-0.5,0) -- (7.2,0) node[right] {$t$};
+  \draw[->] (0,-0.5) -- (0,4.3) node[above] {$y$};
+
+  % recta y = 0.55 t + 0.6
+  \draw[thick] (0.2,0.71) -- (6.8,4.34) node[right] {$y=ct+d$};
+
+  % puntos y proyecciones verticales
+  \foreach \x/\y in {1/1.2, 2.3/1.6, 4/2.9, 5.2/3.9} {
+    \pgfmathsetmacro{\yy}{0.55*\x+0.6}
+    \draw[dashed] (\x,\y) -- (\x,\yy);
+    \filldraw (\x,\y) circle (1.3pt);
+    \filldraw (\x,\yy) circle (1.3pt);
+  }
+
+  \node[left] at (1,1.2) {$(t_1,y_1)$};
+  \node[below right] at (4,2.7) {$(t_i,y_i)$};
+  \node[above right] at (4,3.4) {$(t_i,ct_i+d)$};
+\end{tikzpicture}
+\end{document}

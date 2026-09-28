@@ -246,8 +246,12 @@
 }
 
 % =========================================================
-% ENTORNOS MATEMÁTICOS CON MDFRAMED
+% ENTORNOS MATEMÁTICOS SIN CAJA (estilo de libro impreso)
 % =========================================================
+% Mismo patrón usado en las variantes "Impresión" del resto del
+% repositorio (Álgebra Lineal, Introducción a la teoría analítica de
+% números): encabezado en negritas seguido del texto en el mismo
+% párrafo, sin mdframed, sin color de fondo ni de borde.
 
 % ─── Contadores ────────────────────────────────────────────────────
 \newcounter{defn}[chapter]
@@ -263,76 +267,60 @@
 \renewcommand{\thelema}{\thechapter.\arabic{lema}}
 \renewcommand{\thecoro}{\thechapter.\arabic{coro}}
 
+% ─── Encabezado genérico (negritas + numeración + título opcional entre
+%     paréntesis), sin caja, sin color ──────────────────────────────
+\newcommand{\@ugmathrunin}[3]{%
+  % #1 = etiqueta ("Definición", "Teorema", ...), #2 = número, #3 = título opcional
+  \textbf{#1~#2}%
+  \ifx&#3&\else\space(#3)\fi
+  \textbf{.}\par\nobreak\ignorespaces
+}
+
 % ─── Entornos ──────────────────────────────────────────────────────
 
-% DEFINICIÓN — caja azul
+% DEFINICIÓN — sin caja
 \newenvironment{definicion}[1][]{%
+  \par\addvspace{10pt}\noindent
   \refstepcounter{defn}%
-  \ifx&#1&%                      % si no hay título opcional
-    \begin{mdframed}[style=mdbluebox,
-      frametitle={Definición \thedefn}]%
-  \else%                         % si hay título opcional
-    \begin{mdframed}[style=mdbluebox,
-      frametitle={Definición \thedefn: #1}]%
-  \fi
+  \@ugmathrunin{Definición}{\thedefn}{#1}%
 }{%
-  \end{mdframed}
+  \par\addvspace{8pt}
 }
 
-% TEOREMA — caja gris
+% TEOREMA — sin caja
 \newenvironment{teorema}[1][]{%
+  \par\addvspace{10pt}\noindent
   \refstepcounter{teor}%
-  \ifx&#1&%
-    \begin{mdframed}[style=mdgraybox,
-      frametitle={Teorema \theteor}]%
-  \else%
-    \begin{mdframed}[style=mdgraybox,
-      frametitle={Teorema \theteor: #1}]%
-  \fi
+  \@ugmathrunin{Teorema}{\theteor}{#1}%
 }{%
-  \end{mdframed}
+  \par\addvspace{8pt}
 }
 
-% PROPOSICIÓN — caja gris
+% PROPOSICIÓN — sin caja
 \newenvironment{proposicion}[1][]{%
+  \par\addvspace{10pt}\noindent
   \refstepcounter{prop}%
-  \ifx&#1&%
-    \begin{mdframed}[style=mdgraybox,
-      frametitle={Proposición \theprop}]%
-  \else%
-    \begin{mdframed}[style=mdgraybox,
-      frametitle={Proposición \theprop: #1}]%
-  \fi
+  \@ugmathrunin{Proposición}{\theprop}{#1}%
 }{%
-  \end{mdframed}
+  \par\addvspace{8pt}
 }
 
-% LEMA — caja gris
+% LEMA — sin caja
 \newenvironment{lema}[1][]{%
+  \par\addvspace{10pt}\noindent
   \refstepcounter{lema}%
-  \ifx&#1&%
-    \begin{mdframed}[style=mdgraybox,
-      frametitle={Lema \thelema}]%
-  \else%
-    \begin{mdframed}[style=mdgraybox,
-      frametitle={Lema \thelema: #1}]%
-  \fi
+  \@ugmathrunin{Lema}{\thelema}{#1}%
 }{%
-  \end{mdframed}
+  \par\addvspace{8pt}
 }
 
-% COROLARIO — caja gris
+% COROLARIO — sin caja
 \newenvironment{corolario}[1][]{%
+  \par\addvspace{10pt}\noindent
   \refstepcounter{coro}%
-  \ifx&#1&%
-    \begin{mdframed}[style=mdgraybox,
-      frametitle={Corolario \thecoro}]%
-  \else%
-    \begin{mdframed}[style=mdgraybox,
-      frametitle={Corolario \thecoro: #1}]%
-  \fi
+  \@ugmathrunin{Corolario}{\thecoro}{#1}%
 }{%
-  \end{mdframed}
+  \par\addvspace{8pt}
 }
 
 % ─── Contador de ejemplos ──────────────────────────────────────────
@@ -434,6 +422,7 @@
 \newcommand{\Ssi}{\Longleftrightarrow}
 \newcommand{\ssi}{\leftrightarrow}
 \newcommand{\gen}[1]{\langle #1 \rangle}
+\newcommand{\iprod}[2]{\langle #1, #2 \rangle} % producto interno (physics ya define \ip para bra-ket)
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 \let\a\alpha
 \let\e\varepsilon

@@ -1,0 +1,37 @@
+\documentclass[border=4pt]{standalone}
+\usepackage{graficas}
+
+\begin{document}
+\pgfplotsset{trig/.style={grafica, xmin=-7, xmax=7, ymin=-3, ymax=3, trig format plots=rad}}
+\begin{tikzpicture}
+    % (a) seno y (b) coseno
+    \begin{axis}[trig, panel=(a)]
+        \addplot[domain=-7:7] {sin(x)};
+    \end{axis}
+    \begin{axis}[trig, panel=(b), at={(7.2cm,0)}]
+        \addplot[domain=-7:7] {cos(x)};
+    \end{axis}
+    % (c) tangente y (d) cotangente
+    \begin{axis}[trig, panel=(c), at={(0,-5.7cm)}]
+        \pgfplotsinvokeforeach{-3,...,2}{
+            \addplot[domain={(#1+0.5)*pi+0.3}:{(#1+1.5)*pi-0.3}, samples=100] {tan(x)};
+        }
+    \end{axis}
+    \begin{axis}[trig, panel=(d), at={(7.2cm,-5.7cm)}]
+        \pgfplotsinvokeforeach{-3,...,2}{
+            \addplot[domain={#1*pi+0.3}:{(#1+1)*pi-0.3}, samples=100] {cot(x)};
+        }
+    \end{axis}
+    % (e) secante y (f) cosecante
+    \begin{axis}[trig, panel=(e), at={(0,-11.4cm)}]
+        \pgfplotsinvokeforeach{-3,...,2}{
+            \addplot[domain={(#1+0.5)*pi+0.35}:{(#1+1.5)*pi-0.35}, samples=100] {sec(x)};
+        }
+    \end{axis}
+    \begin{axis}[trig, panel=(f), at={(7.2cm,-11.4cm)}]
+        \pgfplotsinvokeforeach{-3,...,2}{
+            \addplot[domain={#1*pi+0.35}:{(#1+1)*pi-0.35}, samples=100] {cosec(x)};
+        }
+    \end{axis}
+\end{tikzpicture}
+\end{document}

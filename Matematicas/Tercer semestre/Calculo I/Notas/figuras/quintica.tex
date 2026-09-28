@@ -1,0 +1,10 @@
+\documentclass[border=4pt]{standalone}
+\usepackage{graficas}
+
+\begin{document}
+\begin{tikzpicture}
+    \begin{axis}[grafica, xmin=-4.5, xmax=4.5, ymin=-6, ymax=6]
+        \addplot[domain=-2.75:2.75, samples=200] {x^5/5-4*x^3/3};
+    \end{axis}
+\end{tikzpicture}
+\end{document}

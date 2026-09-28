@@ -1,0 +1,10 @@
+\documentclass[border=4pt]{standalone}
+\usepackage{graficas}
+
+\begin{document}
+\begin{tikzpicture}
+    \begin{axis}[grafica, xmin=-3, xmax=3, ymin=-2.3, ymax=2.3, trig format plots=rad]
+        \addplot[domain=-2.3:2.3, samples=200] ({0.7*sin(3.2*x)}, {x});
+    \end{axis}
+\end{tikzpicture}
+\end{document}

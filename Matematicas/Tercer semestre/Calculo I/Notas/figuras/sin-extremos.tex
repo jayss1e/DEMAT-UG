@@ -1,0 +1,16 @@
+\documentclass[border=4pt]{standalone}
+\usepackage{graficas}
+
+\begin{document}
+\begin{tikzpicture}
+    \begin{axis}[grafica, panel=(a), xmin=-3, xmax=3, ymin=-2, ymax=4]
+        \addplot[domain=-2.2:2.2] {x^2};
+    \end{axis}
+    \begin{axis}[grafica, panel=(b), at={(7.2cm,0)}, xmin=-3, xmax=3, ymin=-4, ymax=2]
+        \addplot[domain=-2.2:2.2] {-x^2};
+    \end{axis}
+    \begin{axis}[grafica, panel=(c), at={(3.6cm,-5.7cm)}, xmin=-3, xmax=3, ymin=-3, ymax=3]
+        \addplot[domain=-1.6:1.6] {x^3};
+    \end{axis}
+\end{tikzpicture}
+\end{document}

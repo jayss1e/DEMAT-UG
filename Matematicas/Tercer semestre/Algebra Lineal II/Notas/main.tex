@@ -1001,6 +1001,699 @@
         Se verifica fácilmente que $T$ es diagonalizable, con valores propios $\lambda_1=1$, $\lambda_2=2$ y $\lambda_3=3$. Más aún, los subespacios propios correspondientes coinciden con los subespacios $W_1,W_2,W_3$ de un ejemplo anterior. Así, el teorema anterior nos da otra prueba de que $\R^4=W_1\oplus W_2\oplus W_3$.
     \end{ejemplo}
 
+    \section{Límites de matrices y cadenas de Markov}
+
+    En esta sección aplicamos lo que hemos aprendido en este capítulo para estudiar el \textit{límite} de una sucesión de potencias $A,A^2,\dots,A^n,\dots$, donde $A$ es una matriz cuadrada con entradas complejas. Estas sucesiones, y sus límites, tienen aplicaciones prácticas en las ciencias naturales y sociales.
+
+    Suponemos familiaridad con los límites de sucesiones de números reales. El límite de una sucesión de números complejos $\{z_m:m=1,2,\dots\}$ puede definirse en términos de los límites de las sucesiones de sus partes real e imaginaria: si $z_m=r_m+is_m$, donde $r_m$ y $s_m$ son números reales, e $i$ es el número imaginario tal que $i^2=-1$, entonces
+    \begin{equation*}
+        \lim_{m\to\infty} z_m=\lim_{m\to\infty}r_m+i\lim_{m\to\infty}s_m,
+    \end{equation*}
+    siempre que $\lim_{m\to\infty}r_m$ y $\lim_{m\to\infty}s_m$ existan.
+
+    \begin{definicion}[Límite de una sucesión de matrices]
+        Sean $L,A_1,A_2,\dots$ matrices de tamaño $n\times p$ con entradas complejas. Se dice que la sucesión $A_1,A_2,\dots$ \textbf{converge} a la matriz $L$, llamada el \textbf{límite} de la sucesión, si
+        \begin{equation*}
+            \lim_{m\to\infty}(A_m)_{ij}=L_{ij}
+        \end{equation*}
+        para todo $1\leq i\leq n$ y $1\leq j\leq p$. Para indicar que $L$ es el límite de la sucesión, escribimos
+        \begin{equation*}
+            \lim_{m\to\infty}A_m=L.
+        \end{equation*}
+    \end{definicion}
+
+    \begin{ejemplo}
+        Si
+        \begin{equation*}
+            A_m=\begin{pmatrix}
+                1-\dfrac1m & \left(-\dfrac34\right)^{m} & \dfrac{3m^2}{m^2+1}+i\left(\dfrac{2m+1}{m-1}\right) \\[2ex]
+                \left(\dfrac{i}{2}\right)^{m} & 2 & \left(1+\dfrac1m\right)^{m}
+            \end{pmatrix},
+        \end{equation*}
+        entonces
+        \begin{equation*}
+            \lim_{m\to\infty}A_m=\begin{pmatrix}1&0&3+2i\\0&2&e\end{pmatrix},
+        \end{equation*}
+        donde $e$ es la base del logaritmo natural.
+    \end{ejemplo}
+
+    Una propiedad sencilla, pero importante, de los límites de matrices está contenida en el siguiente teorema. Obsérvese la analogía con la propiedad familiar de los límites de sucesiones de números reales que afirma que, si $\lim_{m\to\infty}a_m$ existe, entonces $\lim_{m\to\infty}ca_m=c\left(\lim_{m\to\infty}a_m\right)$.
+
+    \begin{teorema}
+        Sea $A_1,A_2,\dots$ una sucesión de matrices $n\times p$ con entradas complejas que converge a la matriz $L$. Entonces, para cualesquiera $P\in M_{r\times n}(\C)$ y $Q\in M_{p\times s}(\C)$,
+        \begin{equation*}
+            \lim_{m\to\infty}PA_m=PL \qquad\text{y}\qquad \lim_{m\to\infty}A_mQ=LQ.
+        \end{equation*}
+    \end{teorema}
+
+    \begin{proof}
+        Para cualesquiera $i$ ($1\leq i\leq r$) y $j$ ($1\leq j\leq p$),
+        \begin{align*}
+            \lim_{m\to\infty}(PA_m)_{ij}&=\lim_{m\to\infty}\sum_{k=1}^{n}P_{ik}(A_m)_{kj}
+            =\sum_{k=1}^{n}P_{ik}\cdot\lim_{m\to\infty}(A_m)_{kj}=\sum_{k=1}^{n}P_{ik}L_{kj}=(PL)_{ij}.
+        \end{align*}
+        Por tanto $\lim_{m\to\infty}PA_m=PL$. La demostración de que $\lim_{m\to\infty}A_mQ=LQ$ es análoga.
+    \end{proof}
+
+    \begin{corolario}
+        Sea $A\in M_{n\times n}(\C)$ tal que $\lim_{m\to\infty}A^m=L$. Entonces, para cualquier matriz invertible $Q\in M_{n\times n}(\C)$,
+        \begin{equation*}
+            \lim_{m\to\infty}(QAQ^{-1})^m=QLQ^{-1}.
+        \end{equation*}
+    \end{corolario}
+
+    \begin{proof}
+        Como
+        \begin{equation*}
+            (QAQ^{-1})^m=(QAQ^{-1})(QAQ^{-1})\cdots(QAQ^{-1})=QA^mQ^{-1},
+        \end{equation*}
+        tenemos, por el teorema anterior (aplicado dos veces),
+        \begin{equation*}
+            \lim_{m\to\infty}(QAQ^{-1})^m=\lim_{m\to\infty}QA^mQ^{-1}=Q\left(\lim_{m\to\infty}A^m\right)Q^{-1}=QLQ^{-1}.
+        \end{equation*}
+    \end{proof}
+
+    En la discusión que sigue, encontraremos con frecuencia el conjunto
+    \begin{equation*}
+        S=\{\lambda\in\C: |\lambda|<1 \text{ o } \lambda=1\}.
+    \end{equation*}
+    Geométricamente, este conjunto consiste del número complejo $1$ y del interior del disco unitario (el disco de radio $1$ centrado en el origen). Este conjunto es de interés porque, si $\lambda$ es un número complejo, entonces $\lim_{m\to\infty}\lambda^m$ existe si y solo si $\lambda\in S$. Este hecho, obviamente cierto si $\lambda$ es real, también puede probarse para números complejos.
+
+    El siguiente resultado importante da condiciones necesarias y suficientes para la existencia del tipo de límite bajo consideración.
+
+    \begin{teorema}
+        Sea $A$ una matriz cuadrada con entradas complejas. Entonces $\lim_{m\to\infty}A^m$ existe si y solo si se cumplen ambas condiciones siguientes:
+        \begin{enumerate}[label=(\alph*)]
+            \item Todo valor propio de $A$ está contenido en $S$.
+            \item Si $1$ es valor propio de $A$, entonces la dimensión del subespacio propio correspondiente a $1$ es igual a la multiplicidad de $1$ como valor propio de $A$.
+        \end{enumerate}
+    \end{teorema}
+
+    \begin{proof}
+        La necesidad de la condición (a) se justifica fácilmente. Supongamos que $\lambda$ es un valor propio de $A$ tal que $\lambda\notin S$, y sea $v$ un vector propio de $A$ correspondiente a $\lambda$. Viendo a $v$ como una matriz $n\times 1$, tenemos, por el Teorema~1.12,
+        \begin{equation*}
+            \lim_{m\to\infty}(A^mv)=\left(\lim_{m\to\infty}A^m\right)v=Lv,
+        \end{equation*}
+        donde $L=\lim_{m\to\infty}A^m$. Pero $\lim_{m\to\infty}(A^mv)=\lim_{m\to\infty}(\lambda^mv)$ diverge, porque $\lim_{m\to\infty}\lambda^m$ no existe al no estar $\lambda$ en $S$. Por tanto, si $\lim_{m\to\infty}A^m$ existe, debe cumplirse la condición (a).
+
+        La necesidad de la condición (b) no la demostramos aquí. Para apreciar por qué falla si se omite esta condición, consideremos la matriz
+        \begin{equation*}
+            B=\begin{pmatrix}1&1\\0&1\end{pmatrix},
+        \end{equation*}
+        cuyo polinomio característico es $(t-1)^2$; así, $B$ tiene al $1$ como valor propio con multiplicidad $2$. Se verifica fácilmente que $\dim(E_1)=1$ para $B$, de modo que la condición (b) falla. Por inducción sobre $m$ se muestra que
+        \begin{equation*}
+            B^m=\begin{pmatrix}1&m\\0&1\end{pmatrix}
+        \end{equation*}
+        para todo entero $m\geq 1$ (en efecto, $B^1=B$ coincide con la fórmula, y si $B^m=\left(\begin{smallmatrix}1&m\\0&1\end{smallmatrix}\right)$, entonces $B^{m+1}=B^mB=\left(\begin{smallmatrix}1&m\\0&1\end{smallmatrix}\right)\left(\begin{smallmatrix}1&1\\0&1\end{smallmatrix}\right)=\left(\begin{smallmatrix}1&m+1\\0&1\end{smallmatrix}\right)$). Por tanto $\lim_{m\to\infty}B^m$ no existe. La demostración completa de la necesidad de la condición (b), así como la de la suficiencia de ambas condiciones, requiere la teoría de la forma canónica de Jordan, que se estudiará en un curso posterior y queda fuera del alcance de este capítulo.
+    \end{proof}
+
+    En la mayoría de las aplicaciones que involucran límites de matrices, la matriz es diagonalizable, con lo que la condición (b) del teorema anterior se satisface automáticamente. En este caso, dicho teorema se reduce al siguiente, que puede probarse con los resultados que ya tenemos disponibles.
+
+    \begin{teorema}
+        Sea $A\in M_{n\times n}(\C)$ que satisface las siguientes dos condiciones:
+        \begin{enumerate}[label=(\roman*)]
+            \item Todo valor propio de $A$ está contenido en $S$.
+            \item $A$ es diagonalizable.
+        \end{enumerate}
+        Entonces $\lim_{m\to\infty}A^m$ existe.
+    \end{teorema}
+
+    \begin{proof}
+        Como $A$ es diagonalizable, existe una matriz invertible $Q$ tal que $Q^{-1}AQ=D$ es una matriz diagonal. Supongamos
+        \begin{equation*}
+            D=\begin{pmatrix}\lambda_1&0&\cdots&0\\0&\lambda_2&\cdots&0\\\vdots&&&\vdots\\0&0&\cdots&\lambda_n\end{pmatrix}.
+        \end{equation*}
+        Como $\lambda_1,\dots,\lambda_n$ son los valores propios de $A$, la condición (i) exige que, para cada $i$, $\lambda_i=1$ o $|\lambda_i|<1$. Así,
+        \begin{equation*}
+            \lim_{m\to\infty}\lambda_i^m=\begin{cases}1&\text{si }\lambda_i=1\\0&\text{en otro caso.}\end{cases}
+        \end{equation*}
+        Pero como
+        \begin{equation*}
+            D^m=\begin{pmatrix}\lambda_1^m&0&\cdots&0\\0&\lambda_2^m&\cdots&0\\\vdots&&&\vdots\\0&0&\cdots&\lambda_n^m\end{pmatrix},
+        \end{equation*}
+        la sucesión $D,D^2,\dots$ converge a un límite $L$. Por tanto,
+        \begin{equation*}
+            \lim_{m\to\infty}A^m=\lim_{m\to\infty}(QDQ^{-1})^m=QLQ^{-1}
+        \end{equation*}
+        por el Corolario~1.2.
+    \end{proof}
+
+    La técnica empleada para calcular $\lim_{m\to\infty}A^m$ en la demostración del teorema anterior puede emplearse en cálculos reales, como ilustramos a continuación. Sea
+    \begin{equation*}
+        A=\begin{pmatrix}\frac74&-\frac94&-\frac{15}4\\[0.3ex]\frac34&\frac74&\frac34\\[0.3ex]\frac34&-\frac94&-\frac{11}4\end{pmatrix}.
+    \end{equation*}
+    Usando los métodos de las Secciones~1.1 y 1.2, obtenemos
+    \begin{equation*}
+        Q=\begin{pmatrix}1&3&-1\\-3&-2&1\\2&3&-1\end{pmatrix} \qquad\text{y}\qquad D=\begin{pmatrix}1&0&0\\0&-\frac12&0\\0&0&\frac14\end{pmatrix}
+    \end{equation*}
+    tales que $Q^{-1}AQ=D$. Por tanto
+    \begin{align*}
+        \lim_{m\to\infty}A^m&=\lim_{m\to\infty}(QD^mQ^{-1})=Q\left(\lim_{m\to\infty}D^m\right)Q^{-1}\\
+        &=\begin{pmatrix}1&3&-1\\-3&-2&1\\2&3&-1\end{pmatrix}\begin{pmatrix}1&0&0\\0&0&0\\0&0&0\end{pmatrix}\begin{pmatrix}-1&0&1\\-1&1&2\\-5&3&7\end{pmatrix}
+        =\begin{pmatrix}-1&0&1\\3&0&-3\\-2&0&2\end{pmatrix}.
+    \end{align*}
+
+    A continuación consideramos una aplicación que usa el límite de las potencias de una matriz. Supongamos que la población de cierta área metropolitana permanece constante, pero hay un movimiento continuo de personas entre la ciudad y los suburbios. Específicamente, sean las entradas de la siguiente matriz $A$ las probabilidades de que alguien que vive en la ciudad o en los suburbios el 1 de enero viva en cada región el 1 de enero del año siguiente.
+    \begin{equation*}
+        \begin{array}{ccc}
+            & \text{Actualmente en la ciudad} & \text{Actualmente en los suburbios} \\
+            \text{El próximo año en la ciudad} & 0.90 & 0.02 \\
+            \text{El próximo año en los suburbios} & 0.10 & 0.98
+        \end{array}=A.
+    \end{equation*}
+    Por ejemplo, la probabilidad de que alguien que vive en la ciudad (el 1 de enero) viva en los suburbios el año siguiente es $0.10$. Como las entradas de $A$ son probabilidades, son no negativas; y como suponemos que la población del área metropolitana es constante, la suma de las entradas de cada columna de $A$ debe ser $1$.
+
+    \begin{definicion}[Matriz de transición]
+        Una matriz cuadrada se llama \textbf{matriz de transición} o \textbf{matriz estocástica} si sus entradas son no negativas y las entradas de cada columna suman $1$. Para una matriz de transición $M$ de tamaño $n\times n$, los renglones y las columnas corresponden a $n$ \textbf{estados}, y la entrada $M_{ij}$ representa la probabilidad de pasar del estado $j$ al estado $i$ en una \textbf{etapa}.
+    \end{definicion}
+
+    En nuestro ejemplo hay dos estados (residir en la ciudad y residir en los suburbios). Así, por ejemplo, $A_{21}$ es la probabilidad de pasar de la ciudad a los suburbios en una etapa, es decir, en un año. Determinamos ahora la probabilidad de que un residente de la ciudad viva en los suburbios después de $2$ años. Hay dos formas distintas en que puede ocurrir tal cambio: permanecer en la ciudad durante $1$ año y luego mudarse a los suburbios, o mudarse a los suburbios durante el primer año y permanecer ahí el segundo año. (Véase la siguiente figura.)
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.55\textwidth]{figuras/cadena-ciudad-suburbios.pdf}
+    \end{figure}
+
+    La probabilidad de que un habitante de la ciudad permanezca en la ciudad durante el primer año es $0.90$, mientras que la probabilidad de que se mude a los suburbios durante el primer año es $0.10$. Por tanto, la probabilidad de que un habitante de la ciudad permanezca en la ciudad el primer año y luego se mude a los suburbios el segundo año es el producto $(0.90)(0.10)$. Análogamente, la probabilidad de que un habitante de la ciudad se mude a los suburbios el primer año y permanezca ahí el segundo año es el producto $(0.10)(0.98)$. Así, la probabilidad de que un habitante de la ciudad viva en los suburbios después de $2$ años es la suma de estos productos, $(0.90)(0.10)+(0.10)(0.98)=0.188$. Observemos que este número se obtiene mediante el mismo cálculo que produce $(A^2)_{21}$, y por tanto $(A^2)_{21}$ representa la probabilidad de que un habitante de la ciudad viva en los suburbios después de $2$ años. En general, para cualquier matriz de transición $M$, la entrada $(M^m)_{ij}$ representa la probabilidad de pasar del estado $j$ al estado $i$ en $m$ etapas.
+
+    Supongamos además que el $70\%$ de la población de 2000 del área metropolitana vivía en la ciudad y el $30\%$ vivía en los suburbios. Registramos estos datos como un vector columna:
+    \begin{equation*}
+        \begin{array}{c}
+            \text{Proporción de habitantes de la ciudad}\\
+            \text{Proporción de residentes de los suburbios}
+        \end{array}\qquad
+        \begin{pmatrix}0.70\\0.30\end{pmatrix}=P.
+    \end{equation*}
+    Los renglones del vector $P$ corresponden a los estados de residir en la ciudad y residir en los suburbios, respectivamente, en el mismo orden que en la matriz de transición $A$. Observemos también que el vector columna $P$ tiene entradas no negativas que suman $1$.
+
+    \begin{definicion}[Vector de probabilidad]
+        Un vector columna con entradas no negativas cuya suma es $1$ se llama \textbf{vector de probabilidad}.
+    \end{definicion}
+
+    En el vector $AP$, la primera coordenada es la suma $(0.90)(0.70)+(0.02)(0.30)$. El primer término de esta suma, $(0.90)(0.70)$, representa la proporción de la población de 2000 que permaneció en la ciudad durante el año siguiente, y el segundo término, $(0.02)(0.30)$, representa la proporción que se mudó a la ciudad durante el año siguiente. Por tanto, la primera coordenada de $AP$ representa la proporción de la población metropolitana que vivía en la ciudad en 2001. Análogamente, la segunda coordenada de
+    \begin{equation*}
+        AP=\begin{pmatrix}0.636\\0.364\end{pmatrix}
+    \end{equation*}
+    representa la proporción de la población metropolitana que vivía en los suburbios en 2001. Este argumento puede extenderse fácilmente para mostrar que las coordenadas de
+    \begin{equation*}
+        A^2P=A(AP)=\begin{pmatrix}0.57968\\0.42032\end{pmatrix}
+    \end{equation*}
+    representan las proporciones de la población metropolitana que vivían en cada región en 2002. En general, las coordenadas de $A^mP$ representan la proporción de la población metropolitana que vivirá en la ciudad y en los suburbios, respectivamente, después de $m$ etapas ($m$ años después de 2000).
+
+    ¿Se despoblará eventualmente la ciudad si esta tendencia continúa? Es natural definir la proporción eventual de habitantes de la ciudad y de los suburbios, respectivamente, como las coordenadas de $\lim_{m\to\infty}A^mP$. Calculamos ahora este límite. Es fácil ver que $A$ es diagonalizable, y que existen una matriz invertible $Q$ y una matriz diagonal $D$ tales que $Q^{-1}AQ=D$. De hecho,
+    \begin{equation*}
+        Q=\begin{pmatrix}\frac16&-\frac16\\\frac56&\frac16\end{pmatrix} \qquad\text{y}\qquad D=\begin{pmatrix}1&0\\0&0.88\end{pmatrix}.
+    \end{equation*}
+    Por tanto
+    \begin{equation*}
+        L=\lim_{m\to\infty}A^m=\lim_{m\to\infty}QD^mQ^{-1}=Q\begin{pmatrix}1&0\\0&0\end{pmatrix}Q^{-1}=\begin{pmatrix}\frac16&\frac16\\\frac56&\frac56\end{pmatrix}.
+    \end{equation*}
+    En consecuencia,
+    \begin{equation*}
+        \lim_{m\to\infty}A^mP=LP=\begin{pmatrix}\frac16\\\frac56\end{pmatrix}.
+    \end{equation*}
+    Así, eventualmente, $\frac16$ de la población vivirá en la ciudad y $\frac56$ vivirá en los suburbios cada año. Observemos que el vector $LP$ satisface $A(LP)=LP$. Por tanto, $LP$ es a la vez un vector de probabilidad y un vector propio de $A$ correspondiente al valor propio $1$. Como el subespacio propio de $A$ correspondiente al valor propio $1$ tiene dimensión uno, este es el único vector propio de esta forma, y por tanto es independiente de la elección inicial del vector de probabilidad $P$. (De hecho, si la población de 2000 del área metropolitana hubiera consistido enteramente de habitantes de la ciudad, el resultado límite habría sido el mismo.)
+
+    En el análisis del problema ciudad-suburbios, dimos interpretaciones probabilísticas de $A^2$ y $AP$, mostrando que $A^2$ es una matriz de transición y que $AP$ es un vector de probabilidad. De hecho, el producto de dos matrices de transición cualesquiera es una matriz de transición, y el producto de cualquier matriz de transición con un vector de probabilidad es un vector de probabilidad. Estos hechos son un corolario sencillo del siguiente teorema, que caracteriza a las matrices de transición y a los vectores de probabilidad.
+
+    \begin{teorema}
+        Sea $M$ una matriz $n\times n$ con entradas reales no negativas, sea $v$ un vector columna en $\R^n$ con coordenadas no negativas, y sea $u\in\R^n$ el vector columna cuya coordenada es $1$ en cada entrada. Entonces:
+        \begin{enumerate}[label=(\alph*)]
+            \item $M$ es una matriz de transición si y solo si $M^tu=u$.
+            \item $v$ es un vector de probabilidad si y solo si $u^tv=(1)$.
+        \end{enumerate}
+    \end{teorema}
+
+    \begin{proof}
+        (a) Para cada $j$ ($1\leq j\leq n$),
+        \begin{equation*}
+            (M^tu)_j=\sum_{i=1}^{n}(M^t)_{ji}u_i=\sum_{i=1}^{n}M_{ij}\cdot 1=\sum_{i=1}^{n}M_{ij},
+        \end{equation*}
+        que es precisamente la suma de la columna $j$ de $M$. Como las entradas de $M$ son no negativas por hipótesis, $M$ es una matriz de transición (es decir, la suma de cada columna es $1$) si y solo si $(M^tu)_j=u_j=1$ para todo $j$, es decir, si y solo si $M^tu=u$.
+
+        (b) $u^tv=\sum_{i=1}^{n}v_i$, la suma de las entradas de $v$. Como $v$ tiene coordenadas no negativas por hipótesis, $v$ es un vector de probabilidad (es decir, la suma de sus entradas es $1$) si y solo si $u^tv=(1)$.
+    \end{proof}
+
+    \begin{corolario}\leavevmode
+        \begin{enumerate}[label=(\alph*)]
+            \item El producto de dos matrices de transición $n\times n$ es una matriz de transición $n\times n$. En particular, cualquier potencia de una matriz de transición es una matriz de transición.
+            \item El producto de una matriz de transición y un vector de probabilidad es un vector de probabilidad.
+        \end{enumerate}
+    \end{corolario}
+
+    \begin{proof}
+        (a) Sean $M,N$ matrices de transición $n\times n$. Como $M$ y $N$ tienen entradas no negativas, también las tiene $MN$. Además, usando el teorema anterior,
+        \begin{equation*}
+            (MN)^tu=N^tM^tu=N^tu=u,
+        \end{equation*}
+        así que $MN$ es una matriz de transición por el teorema anterior. Para las potencias, basta aplicar este resultado repetidamente: $M^2=MM$ es una matriz de transición, y por inducción, $M^{k}=M^{k-1}M$ es una matriz de transición para todo $k\geq 1$.
+
+        (b) Sea $M$ una matriz de transición $n\times n$ y $v$ un vector de probabilidad en $\R^n$. Como $M$ y $v$ tienen entradas no negativas, también las tiene $Mv$. Además, usando que $u^tM=(M^tu)^t=u^t$ por el teorema anterior, y que $u^tv=(1)$,
+        \begin{equation*}
+            u^t(Mv)=(u^tM)v=u^tv=(1),
+        \end{equation*}
+        así que $Mv$ es un vector de probabilidad por el teorema anterior.
+    \end{proof}
+
+    El problema ciudad-suburbios es un ejemplo de un proceso en el cual los elementos de un conjunto se clasifican en uno de varios estados fijos, y cambian de estado con el tiempo. En general, un proceso de este tipo se llama \textbf{proceso estocástico}. El cambio a un estado particular se describe mediante una probabilidad, y en general esta probabilidad depende de factores como el estado en cuestión, el tiempo en cuestión, algunos o todos los estados previos en los que ha estado el objeto (incluyendo el estado actual), y los estados en los que se encuentran o han estado otros objetos.
+
+    Si, sin embargo, la probabilidad de que un objeto en un estado cambie a un estado diferente en un intervalo fijo de tiempo depende únicamente de los dos estados (y no del tiempo, de estados anteriores, ni de otros factores), entonces el proceso estocástico se llama \textbf{proceso de Markov}. Si, además, el número de estados posibles es finito, entonces el proceso de Markov se llama \textbf{cadena de Markov}. El problema ciudad-suburbios es una cadena de Markov de dos estados. Por supuesto, un proceso de Markov suele ser solo una idealización de la realidad, pues las probabilidades involucradas casi nunca son constantes.
+
+    Con esto en mente, consideramos otra cadena de Markov. Cierta universidad comunitaria desearía obtener información sobre la probabilidad de que los estudiantes en distintas categorías se gradúen. La escuela clasifica a un estudiante como de segundo año o de primer año dependiendo del número de créditos que ha obtenido. Los datos de la escuela indican que, de un semestre de otoño al siguiente, el $40\%$ de los estudiantes de segundo año se graduará, el $30\%$ permanecerá como estudiante de segundo año, y el $30\%$ abandonará permanentemente. Para los estudiantes de primer año, los datos muestran que el $10\%$ se graduará al siguiente otoño, el $50\%$ pasará a segundo año, el $20\%$ permanecerá como estudiante de primer año, y el $20\%$ abandonará permanentemente. Durante el año en curso, el $50\%$ de los estudiantes de la escuela son de segundo año y el $50\%$ son de primer año. Suponiendo que la tendencia indicada por los datos continúa indefinidamente, la escuela desearía saber:
+    \begin{enumerate}
+        \item el porcentaje de los estudiantes actuales que se graduará, el porcentaje que será de segundo año, el porcentaje que será de primer año, y el porcentaje que abandonará permanentemente para el próximo otoño;
+        \item los mismos porcentajes del inciso~1 para el semestre de otoño dos años después; y
+        \item la probabilidad de que uno de los estudiantes actuales eventualmente se gradúe.
+    \end{enumerate}
+
+    El párrafo anterior describe una cadena de Markov de cuatro estados con los siguientes estados: 1. haberse graduado; 2. ser estudiante de segundo año; 3. ser estudiante de primer año; 4. haber abandonado permanentemente. Los datos dados nos proporcionan la matriz de transición
+    \begin{equation*}
+        A=\begin{pmatrix}1&0.4&0.1&0\\0&0.3&0.5&0\\0&0&0.2&0\\0&0.3&0.2&1\end{pmatrix}
+    \end{equation*}
+    de la cadena de Markov. (Nótese que se supone que los estudiantes que se han graduado o han abandonado permanecen indefinidamente en esos respectivos estados.) Además, se nos dice que la distribución actual de estudiantes es la mitad en cada uno de los estados 2 y 3, y ninguno en los estados 1 y 4. El vector
+    \begin{equation*}
+        P=\begin{pmatrix}0\\0.5\\0.5\\0\end{pmatrix}
+    \end{equation*}
+    que describe la probabilidad inicial de estar en cada estado se llama el \textbf{vector de probabilidad inicial} de la cadena de Markov.
+
+    Para responder la pregunta 1, debemos determinar las probabilidades de que un estudiante actual esté en cada estado para el próximo otoño. Como hemos visto, estas probabilidades son las coordenadas del vector
+    \begin{equation*}
+        AP=\begin{pmatrix}1&0.4&0.1&0\\0&0.3&0.5&0\\0&0&0.2&0\\0&0.3&0.2&1\end{pmatrix}\begin{pmatrix}0\\0.5\\0.5\\0\end{pmatrix}=\begin{pmatrix}0.25\\0.40\\0.10\\0.25\end{pmatrix}.
+    \end{equation*}
+    Así, para el próximo otoño, el $25\%$ de los estudiantes actuales se graduará, el $40\%$ será de segundo año, el $10\%$ será de primer año, y el $25\%$ abandonará la escuela permanentemente. Análogamente,
+    \begin{equation*}
+        A^2P=A(AP)=\begin{pmatrix}1&0.4&0.1&0\\0&0.3&0.5&0\\0&0&0.2&0\\0&0.3&0.2&1\end{pmatrix}\begin{pmatrix}0.25\\0.40\\0.10\\0.25\end{pmatrix}=\begin{pmatrix}0.42\\0.17\\0.02\\0.39\end{pmatrix}
+    \end{equation*}
+    proporciona la información necesaria para responder la pregunta 2: dentro de dos años, el $42\%$ de los estudiantes actuales se graduará, el $17\%$ será de segundo año, el $2\%$ será de primer año, y el $39\%$ abandonará la escuela.
+
+    Finalmente, la respuesta a la pregunta 3 la proporciona el vector $LP$, donde $L=\lim_{m\to\infty}A^m$. Para las matrices
+    \begin{equation*}
+        Q=\begin{pmatrix}1&4&19&0\\0&-7&-40&0\\0&0&8&0\\0&3&13&1\end{pmatrix} \qquad\text{y}\qquad D=\begin{pmatrix}1&0&0&0\\0&0.3&0&0\\0&0&0.2&0\\0&0&0&1\end{pmatrix},
+    \end{equation*}
+    tenemos $Q^{-1}AQ=D$. Así,
+    \begin{equation*}
+        L=\lim_{m\to\infty}A^m=Q\left(\lim_{m\to\infty}D^m\right)Q^{-1}=\begin{pmatrix}1&\frac47&\frac{27}{56}&0\\0&0&0&0\\0&0&0&0\\0&\frac37&\frac{29}{56}&1\end{pmatrix}.
+    \end{equation*}
+    Así,
+    \begin{equation*}
+        LP=\begin{pmatrix}1&\frac47&\frac{27}{56}&0\\0&0&0&0\\0&0&0&0\\0&\frac37&\frac{29}{56}&1\end{pmatrix}\begin{pmatrix}0\\0.5\\0.5\\0\end{pmatrix}=\begin{pmatrix}\frac{59}{112}\\0\\0\\\frac{53}{112}\end{pmatrix},
+    \end{equation*}
+    de donde la probabilidad de que uno de los estudiantes actuales se gradúe es $\frac{59}{112}$.
+
+    En los dos ejemplos anteriores, vimos que $\lim_{m\to\infty}A^mP$, donde $A$ es la matriz de transición y $P$ es el vector de probabilidad inicial de la cadena de Markov, da las proporciones eventuales en cada estado. En general, sin embargo, el límite de las potencias de una matriz de transición no necesita existir. Por ejemplo, si
+    \begin{equation*}
+        M=\begin{pmatrix}0&1\\1&0\end{pmatrix},
+    \end{equation*}
+    entonces $\lim_{m\to\infty}M^m$ no existe, porque las potencias impares de $M$ son iguales a $M$ y las potencias pares son iguales a $I$. La razón por la que el límite no existe es que la condición (a) del Teorema~1.13 no se cumple para $M$ ($-1$ es valor propio). De hecho, se puede mostrar (aunque no lo hacemos aquí, pues su demostración requiere de nuevo la teoría de la forma canónica de Jordan) que las únicas matrices de transición $A$ tales que $\lim_{m\to\infty}A^m$ no existe son precisamente aquellas para las cuales falla la condición (a) del Teorema~1.13.
+
+    Pero incluso si el límite de las potencias de la matriz de transición existe, el cálculo del límite puede ser bastante difícil. Afortunadamente, existe una clase amplia e importante de matrices de transición para las cuales este límite existe y es fácil de calcular: la clase de las matrices de transición \textit{regulares}.
+
+    \begin{definicion}[Matriz de transición regular]
+        Una matriz de transición se llama \textbf{regular} si alguna potencia de ella contiene únicamente entradas positivas.
+    \end{definicion}
+
+    \begin{ejemplo}
+        La matriz de transición
+        \begin{equation*}
+            \begin{pmatrix}0.90&0.02\\0.10&0.98\end{pmatrix}
+        \end{equation*}
+        de la cadena de Markov usada en el problema ciudad-suburbios es claramente regular porque cada entrada es positiva. Por otro lado, la matriz de transición
+        \begin{equation*}
+            A=\begin{pmatrix}1&0.4&0.1&0\\0&0.3&0.5&0\\0&0&0.2&0\\0&0.3&0.2&1\end{pmatrix}
+        \end{equation*}
+        de la cadena de Markov que describe las matrículas de la universidad comunitaria no es regular, pues la primera columna de $A^m$ es
+        \begin{equation*}
+            \begin{pmatrix}1\\0\\0\\0\end{pmatrix}
+        \end{equation*}
+        para cualquier potencia $m$. Observemos que una matriz de transición regular puede contener entradas nulas. Por ejemplo,
+        \begin{equation*}
+            M=\begin{pmatrix}0.9&0.5&0\\0&0.5&0.4\\0.1&0&0.6\end{pmatrix}
+        \end{equation*}
+        es regular porque cada entrada de $M^2$ es positiva.
+    \end{ejemplo}
+
+    El resto de esta sección se dedica a probar que, para una matriz de transición regular $A$, el límite de la sucesión de potencias de $A$ existe y tiene columnas idénticas. A partir de este hecho, es fácil calcular dicho límite. En el curso de la demostración de este resultado, obtenemos algunas cotas interesantes para las magnitudes de los valores propios de cualquier matriz cuadrada. Estas cotas se expresan en términos de la suma de los valores absolutos de los renglones y columnas de la matriz. La terminología necesaria se introduce en las siguientes definiciones.
+
+    \begin{definicion}[Suma de renglón y suma de columna]
+        Sea $A\in M_{n\times n}(\C)$. Para $1\leq i,j\leq n$, se define $\rho_i(A)$ como la suma de los valores absolutos de las entradas del renglón $i$ de $A$, y se define $\nu_j(A)$ como la suma de los valores absolutos de las entradas de la columna $j$ de $A$. Así,
+        \begin{equation*}
+            \rho_i(A)=\sum_{j=1}^{n}|A_{ij}| \quad\text{para } i=1,2,\dots,n
+        \end{equation*}
+        y
+        \begin{equation*}
+            \nu_j(A)=\sum_{i=1}^{n}|A_{ij}| \quad\text{para } j=1,2,\dots,n.
+        \end{equation*}
+        La \textbf{suma de renglón} de $A$, denotada $\rho(A)$, y la \textbf{suma de columna} de $A$, denotada $\nu(A)$, se definen como
+        \begin{equation*}
+            \rho(A)=\max\{\rho_i(A):1\leq i\leq n\} \qquad\text{y}\qquad \nu(A)=\max\{\nu_j(A):1\leq j\leq n\}.
+        \end{equation*}
+    \end{definicion}
+
+    \begin{ejemplo}
+        Para la matriz
+        \begin{equation*}
+            A=\begin{pmatrix}1&-i&3-4i\\-2+i&0&6\\3&2&i\end{pmatrix},
+        \end{equation*}
+        tenemos $\rho_1(A)=7$, $\rho_2(A)=6+\sqrt5$, $\rho_3(A)=6$, $\nu_1(A)=4+\sqrt5$, $\nu_2(A)=3$, y $\nu_3(A)=12$. Por tanto $\rho(A)=6+\sqrt5$ y $\nu(A)=12$.
+    \end{ejemplo}
+
+    Nuestros próximos resultados muestran que la menor de $\rho(A)$ y $\nu(A)$ es una cota para los valores absolutos de los valores propios de $A$. En el ejemplo anterior, por ejemplo, $A$ no tiene ningún valor propio con valor absoluto mayor que $6+\sqrt5$. Para obtener una visión geométrica del siguiente teorema, introducimos algo de terminología: para una matriz $A\in M_{n\times n}(\C)$, se define el $i$-ésimo \textbf{disco de Gerschgorin} $C_i$ como el disco en el plano complejo con centro $A_{ii}$ y radio $r_i=\rho_i(A)-|A_{ii}|$; es decir,
+    \begin{equation*}
+        C_i=\{z\in\C:|z-A_{ii}|<r_i\}.
+    \end{equation*}
+
+    \begin{definicion}[Disco de Gerschgorin]
+        Sea $A\in M_{n\times n}(\C)$. Para cada $i$ ($1\leq i\leq n$), el \textbf{$i$-ésimo disco de Gerschgorin} $C_i$ de $A$ es el disco en el plano complejo con centro $A_{ii}$ y radio $r_i=\rho_i(A)-|A_{ii}|$, es decir,
+        \begin{equation*}
+            C_i=\{z\in\C:|z-A_{ii}|<r_i\}.
+        \end{equation*}
+    \end{definicion}
+
+    Por ejemplo, consideremos la matriz
+    \begin{equation*}
+        A=\begin{pmatrix}1+2i&1\\2i&-3\end{pmatrix}.
+    \end{equation*}
+    Para esta matriz, $C_1$ es el disco con centro $1+2i$ y radio $1$, y $C_2$ es el disco con centro $-3$ y radio $2$. (Véase la siguiente figura.)
+
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.6\textwidth]{figuras/discos-gerschgorin.pdf}
+    \end{figure}
+
+    El teorema del disco de Gerschgorin, enunciado a continuación, nos dice que todos los valores propios de $A$ están ubicados dentro de estos dos discos.
+
+    \begin{teorema}[Disco de Gerschgorin]
+        Sea $A\in M_{n\times n}(\C)$. Entonces todo valor propio de $A$ está contenido en algún disco de Gerschgorin de $A$.
+    \end{teorema}
+
+    \begin{proof}
+        Sea $\lambda$ un valor propio de $A$ con vector propio correspondiente
+        \begin{equation*}
+            v=\begin{pmatrix}v_1\\v_2\\\vdots\\v_n\end{pmatrix}.
+        \end{equation*}
+        Entonces $v$ satisface la ecuación matricial $Av=\lambda v$, que puede escribirse
+        \begin{equation*}
+            \sum_{j=1}^{n}A_{ij}v_j=\lambda v_i \qquad (i=1,2,\dots,n). \tag{$*$}
+        \end{equation*}
+        Supongamos que $v_k$ es la coordenada de $v$ que tiene el mayor valor absoluto; notemos que $v_k\neq 0$ porque $v$ es un vector propio. Mostramos que $\lambda$ está en $C_k$, es decir, que $|\lambda-A_{kk}|\leq r_k$. Para $i=k$, se sigue de ($*$) que
+        \begin{align*}
+            |\lambda v_k-A_{kk}v_k|=\left|\sum_{j=1}^{n}A_{kj}v_j-A_{kk}v_k\right|=\left|\sum_{j\neq k}A_{kj}v_j\right|
+            &\leq\sum_{j\neq k}|A_{kj}||v_j|\leq\sum_{j\neq k}|A_{kj}||v_k|\\
+            &=|v_k|\sum_{j\neq k}|A_{kj}|=|v_k|r_k.
+        \end{align*}
+        Así,
+        \begin{equation*}
+            |v_k||\lambda-A_{kk}|\leq|v_k|r_k;
+        \end{equation*}
+        por lo cual $|\lambda-A_{kk}|\leq r_k$, ya que $|v_k|>0$.
+    \end{proof}
+
+    \begin{corolario}
+        Sea $\lambda$ cualquier valor propio de $A\in M_{n\times n}(\C)$. Entonces $|\lambda|\leq\rho(A)$.
+    \end{corolario}
+
+    \begin{proof}
+        Por el teorema del disco de Gerschgorin, $|\lambda-A_{kk}|\leq r_k$ para algún $k$. Por tanto
+        \begin{equation*}
+            |\lambda|=|(\lambda-A_{kk})+A_{kk}|\leq|\lambda-A_{kk}|+|A_{kk}|\leq r_k+|A_{kk}|=\rho_k(A)\leq\rho(A).
+        \end{equation*}
+    \end{proof}
+
+    \begin{corolario}
+        Sea $\lambda$ cualquier valor propio de $A\in M_{n\times n}(\C)$. Entonces
+        \begin{equation*}
+            |\lambda|\leq\min\{\rho(A),\nu(A)\}.
+        \end{equation*}
+    \end{corolario}
+
+    \begin{proof}
+        Por el corolario anterior, $|\lambda|\leq\rho(A)$; basta entonces mostrar que $|\lambda|\leq\nu(A)$. Como $\lambda$ es también valor propio de $A^t$ (pues $A$ y $A^t$ tienen el mismo polinomio característico), el corolario anterior aplicado a $A^t$ da $|\lambda|\leq\rho(A^t)$. Pero los renglones de $A^t$ son las columnas de $A$; en consecuencia $\rho(A^t)=\nu(A)$. Por tanto $|\lambda|\leq\nu(A)$.
+    \end{proof}
+
+    \begin{corolario}
+        Si $\lambda$ es un valor propio de una matriz de transición, entonces $|\lambda|\leq 1$.
+    \end{corolario}
+
+    \begin{proof}
+        Si $A$ es una matriz de transición, entonces cada columna de $A$ suma exactamente $1$, así que $\nu(A)=1$. Por el corolario anterior, $|\lambda|\leq\nu(A)=1$.
+    \end{proof}
+
+    Supongamos que $A$ es una matriz de transición para la cual algún vector propio correspondiente al valor propio $1$ tiene solo coordenadas no negativas. Entonces algún múltiplo de este vector es un vector de probabilidad $P$ y, a la vez, un vector propio de $A$ correspondiente al valor propio $1$. Es interesante observar que, si $P$ es el vector de probabilidad inicial de una cadena de Markov cuya matriz de transición es $A$, entonces $A^mP=P$ para todo entero positivo $m$; de aquí que la probabilidad de estar en cada estado nunca cambia. (Recordemos el problema ciudad-suburbios con $P=\left(\begin{smallmatrix}\frac16\\\frac56\end{smallmatrix}\right)$.)
+
+    \begin{teorema}
+        Sea $A\in M_{n\times n}(\C)$ una matriz en la que cada entrada es positiva, y sea $\lambda$ un valor propio de $A$ tal que $|\lambda|=\rho(A)$. Entonces $\lambda=\rho(A)$, y $\{u\}$ es una base de $E_\lambda$, donde $u\in\C^n$ es el vector columna en el que cada coordenada es igual a $1$.
+    \end{teorema}
+
+    \begin{proof}
+        Sea $v$ un vector propio de $A$ correspondiente a $\lambda$, con coordenadas $v_1,v_2,\dots,v_n$. Supongamos que $v_k$ es la coordenada de $v$ con mayor valor absoluto, y sea $b=|v_k|$. Entonces
+        \begin{align*}
+            |\lambda|b=|\lambda||v_k|=|\lambda v_k|=\left|\sum_{j=1}^{n}A_{kj}v_j\right|
+            &\leq\sum_{j=1}^{n}|A_{kj}v_j|\\
+            &=\sum_{j=1}^{n}|A_{kj}||v_j|\leq\sum_{j=1}^{n}|A_{kj}|b=\rho_k(A)b\leq\rho(A)b. \tag{3}
+        \end{align*}
+        Como $|\lambda|=\rho(A)$, las tres desigualdades en (3) son en realidad igualdades; es decir,
+        \begin{enumerate}
+            \item[(a)] $\left|\sum_{j=1}^{n}A_{kj}v_j\right|=\sum_{j=1}^{n}|A_{kj}v_j|$,
+            \item[(b)] $\sum_{j=1}^{n}|A_{kj}||v_j|=\sum_{j=1}^{n}|A_{kj}|b$, y
+            \item[(c)] $\rho_k(A)=\rho(A)$.
+        \end{enumerate}
+        La igualdad (a) obliga a que todos los términos $A_{kj}v_j$ ($j=1,2,\dots,n$) sean múltiplos no negativos de algún número complejo no nulo $z$ (pues, en general, la igualdad $|\sum_j w_j|=\sum_j|w_j|$ para números complejos $w_j$ se da si y solo si todos los $w_j$ apuntan en la misma dirección, es decir, son múltiplos no negativos de un mismo $z$ con $|z|=1$, que podemos suponer sin pérdida de generalidad). Así, existen números reales no negativos $c_1,c_2,\dots,c_n$ tales que
+        \begin{equation*}
+            A_{kj}v_j=c_jz \qquad\text{para } j=1,2,\dots,n. \tag{4}
+        \end{equation*}
+        Por (b), y como $A_{kj}\neq 0$ para todo $k$ y $j$ (pues $A$ tiene entradas positivas),
+        \begin{equation*}
+            |v_j|=b \qquad\text{para } j=1,2,\dots,n. \tag{5}
+        \end{equation*}
+        Combinando (4) y (5), obtenemos
+        \begin{equation*}
+            b=|v_j|=\left|\frac{c_j}{A_{kj}}z\right|=\frac{c_j}{A_{kj}} \qquad\text{para } j=1,2,\dots,n,
+        \end{equation*}
+        y por tanto, por (4), $v_j=bz$ para todo $j$. Así,
+        \begin{equation*}
+            v=\begin{pmatrix}v_1\\v_2\\\vdots\\v_n\end{pmatrix}=\begin{pmatrix}bz\\bz\\\vdots\\bz\end{pmatrix}=bzu,
+        \end{equation*}
+        y por tanto $\{u\}$ es una base de $E_\lambda$.
+
+        Finalmente, observemos que todas las entradas de $Au$ son positivas, pues lo son las de $A$ y las de $u$. Pero $Au=\lambda u$, y por tanto $\lambda>0$. En consecuencia, $\lambda=|\lambda|=\rho(A)$.
+    \end{proof}
+
+    \begin{corolario}
+        Sea $A\in M_{n\times n}(\C)$ una matriz en la que cada entrada es positiva, y sea $\lambda$ un valor propio de $A$ tal que $|\lambda|=\nu(A)$. Entonces $\lambda=\nu(A)$, y $\dim(E_\lambda)=1$.
+    \end{corolario}
+
+    \begin{proof}
+        Como $A$ tiene entradas positivas, también las tiene $A^t$. Además, $\lambda$ es también un valor propio de $A^t$ (pues $A$ y $A^t$ tienen el mismo polinomio característico), y $|\lambda|=\nu(A)=\rho(A^t)$ (ya que los renglones de $A^t$ son las columnas de $A$). Aplicando el teorema anterior a $A^t$, obtenemos $\lambda=\rho(A^t)=\nu(A)$, y que $\{u\}$ es una base del subespacio propio $\ker(A^t-\lambda I)$; en particular, $\dim\ker(A^t-\lambda I)=1$.
+
+        Finalmente, para cualquier matriz cuadrada $B$, se tiene $\dim\ker(B)=\dim\ker(B^t)$, pues $\rg(B)=\rg(B^t)$ y, por el teorema de la dimensión, $\dim\ker(B)=n-\rg(B)=n-\rg(B^t)=\dim\ker(B^t)$. Aplicando esto a $B=A-\lambda I$ (de modo que $B^t=A^t-\lambda I$),
+        \begin{equation*}
+            \dim(E_\lambda)=\dim\ker(A-\lambda I)=\dim\ker(A^t-\lambda I)=1.
+        \end{equation*}
+    \end{proof}
+
+    \begin{corolario}
+        Sea $A\in M_{n\times n}(\C)$ una matriz de transición en la que cada entrada es positiva, y sea $\lambda$ cualquier valor propio de $A$ distinto de $1$. Entonces $|\lambda|<1$. Más aún, el subespacio propio correspondiente al valor propio $1$ tiene dimensión $1$.
+    \end{corolario}
+
+    \begin{proof}
+        Como $A$ es una matriz de transición, $\nu(A)=1$. Supongamos que $\lambda$ es un valor propio de $A$ con $|\lambda|=\nu(A)=1$. Por el corolario anterior, $\lambda=\nu(A)=1$. Así, ningún valor propio distinto de $1$ puede tener $|\lambda|=1$; combinando esto con el Corolario anterior a este (el que afirma $|\lambda|\leq 1$ para toda matriz de transición), concluimos que todo valor propio $\lambda\neq 1$ satisface $|\lambda|<1$.
+
+        Finalmente, como $\lambda=1$ sí satisface $|\lambda|=\nu(A)=1$, el corolario anterior (aplicado con $\lambda=1$) da $\dim(E_1)=1$.
+    \end{proof}
+
+    El siguiente resultado extiende el corolario anterior a las matrices de transición regulares, y así muestra que las matrices de transición regulares satisfacen la condición (a) de los Teoremas~1.13 y 1.14.
+
+    \begin{teorema}
+        Sea $A$ una matriz de transición regular, y sea $\lambda$ un valor propio de $A$. Entonces:
+        \begin{enumerate}[label=(\alph*)]
+            \item $|\lambda|\leq 1$.
+            \item Si $|\lambda|=1$, entonces $\lambda=1$, y $\dim(E_\lambda)=1$.
+        \end{enumerate}
+    \end{teorema}
+
+    \begin{proof}
+        El inciso (a) ya fue probado (es el corolario al teorema del disco de Gerschgorin sobre matrices de transición).
+
+        (b) Como $A$ es regular, existe un entero positivo $s$ tal que $A^s$ tiene solo entradas positivas. Como $A$ es una matriz de transición, las entradas de $A^{s+1}=A^s(A)$ también son positivas (por el corolario al Teorema~1.15, $A^{s+1}$ es una matriz de transición cuyas entradas, al ser producto de entradas no negativas de matrices con la estructura adecuada, resultan positivas al serlo las de $A^s$ y ser $A$ de transición con al menos una entrada positiva por columna). Supongamos que $|\lambda|=1$. Entonces $\lambda^s$ y $\lambda^{s+1}$ son valores propios de $A^s$ y $A^{s+1}$, respectivamente, ambos con valor absoluto $1$. Así, por el corolario anterior aplicado a $A^s$ y a $A^{s+1}$ (ambas con entradas positivas), $\lambda^s=1=\lambda^{s+1}$. Por tanto $\lambda=1$.
+
+        Sean $E_\lambda$ y $E_\lambda'$ los subespacios propios de $A$ y de $A^s$, respectivamente, correspondientes a $\lambda=1$. Entonces $E_\lambda\subseteq E_\lambda'$ (pues si $Av=v$ entonces $A^sv=v$), y, por el corolario anterior aplicado a $A^s$, $\dim(E_\lambda')=1$. Como $\dim(E_\lambda)\geq 1$ (pues $1$ es valor propio de $A$, por lo probado anteriormente para matrices de transición con entradas positivas aplicado a $A^s$, y por la inclusión $E_\lambda \subseteq E_\lambda'$), concluimos $\dim(E_\lambda)=1$.
+    \end{proof}
+
+    \begin{corolario}
+        Sea $A$ una matriz de transición regular que además es diagonalizable. Entonces $\lim_{m\to\infty}A^m$ existe.
+    \end{corolario}
+
+    \begin{proof}
+        Por el teorema anterior, todo valor propio $\lambda$ de $A$ satisface $|\lambda|\leq 1$, con $\lambda=1$ siempre que $|\lambda|=1$; es decir, todo valor propio de $A$ está en $S$. Como además $A$ es diagonalizable por hipótesis, se cumplen las dos condiciones del Teorema~1.14, y por tanto $\lim_{m\to\infty}A^m$ existe.
+    \end{proof}
+
+    El corolario anterior, que se sigue inmediatamente del teorema anterior y del Teorema~1.14, no es el mejor resultado posible. De hecho, puede mostrarse (aunque, de nuevo, ello requiere la teoría de la forma canónica de Jordan) que si $A$ es una matriz de transición regular, entonces la multiplicidad de $1$ como valor propio de $A$ es $1$; así, por el Teorema~1.13, $\lim_{m\to\infty}A^m$ existe sin importar si $A$ es o no diagonalizable. Sin importar la diagonalizabilidad de $A$, deducimos aquí más hechos sobre $\lim_{m\to\infty}A^m$ cuando $A$ es una matriz de transición regular, dando por cierto (sin demostrarlo, pues su prueba pertenece a un curso posterior) el hecho de que la multiplicidad de $1$ es siempre $1$ para una matriz de transición regular.
+
+    \begin{teorema}
+        Sea $A$ una matriz de transición regular de tamaño $n\times n$. Entonces:
+        \begin{enumerate}[label=(\alph*)]
+            \item La multiplicidad de $1$ como valor propio de $A$ es $1$.
+            \item $\lim_{m\to\infty}A^m$ existe.
+            \item $L=\lim_{m\to\infty}A^m$ es una matriz de transición.
+            \item $AL=LA=L$.
+            \item Las columnas de $L$ son idénticas. De hecho, cada columna de $L$ es igual al único vector de probabilidad $v$ que es también un vector propio de $A$ correspondiente al valor propio $1$.
+            \item Para cualquier vector de probabilidad $w$, $\lim_{m\to\infty}(A^mw)=v$.
+        \end{enumerate}
+    \end{teorema}
+
+    \begin{proof}
+        El inciso (a) requiere la teoría de la forma canónica de Jordan y no se demuestra en este curso.
+
+        (b) Por (a) y los Teoremas~1.18 y 1.13, todo valor propio de $A$ está en $S$ (por el teorema anterior a este) y la multiplicidad de $1$ coincide con $\dim(E_1)$ (por (a), ambas son $1$). Así, se cumplen las condiciones (a) y (b) del Teorema~1.13, y por tanto $\lim_{m\to\infty}A^m$ existe.
+
+        (c) Por el Teorema~1.15, basta mostrar que $u^tL=u^t$. Como $A^m$ es una matriz de transición por el corolario al Teorema~1.15,
+        \begin{equation*}
+            u^tL=u^t\lim_{m\to\infty}A^m=\lim_{m\to\infty}u^tA^m=\lim_{m\to\infty}u^t=u^t,
+        \end{equation*}
+        de donde se sigue que $L$ es una matriz de transición.
+
+        (d) Por el Teorema~1.12,
+        \begin{equation*}
+            AL=A\lim_{m\to\infty}A^m=\lim_{m\to\infty}AA^m=\lim_{m\to\infty}A^{m+1}=L.
+        \end{equation*}
+        Análogamente, $LA=L$.
+
+        (e) Como $AL=L$ por (d), cada columna de $L$ es un vector propio de $A$ correspondiente al valor propio $1$. Más aún, por (c), cada columna de $L$ es un vector de probabilidad. Así, por (a), cada columna de $L$ es igual al único vector de probabilidad $v$ correspondiente al valor propio $1$ de $A$.
+
+        (f) Sea $w$ cualquier vector de probabilidad, y sea $y=\lim_{m\to\infty}A^mw=Lw$. Entonces $y$ es un vector de probabilidad por el corolario al Teorema~1.15, y también es un vector propio correspondiente al valor propio $1$ de $A$, pues $Ay=ALw=Lw=y$ por (d). Así $y=v$ por (e).
+    \end{proof}
+
+    \begin{definicion}[Vector de probabilidad fijo]
+        Al vector $v$ del inciso (e) del teorema anterior se le llama \textbf{vector de probabilidad fijo} o \textbf{vector estacionario} de la matriz de transición regular $A$.
+    \end{definicion}
+
+    El teorema anterior puede usarse para deducir información sobre la distribución eventual en cada estado de una cadena de Markov cuya matriz de transición es regular.
+
+    \begin{ejemplo}
+        Una encuesta en Persia mostró que, en cierto día, el $50\%$ de los persas prefería una hogaza de pan, el $30\%$ prefería una jarra de vino, y el $20\%$ prefería \textquotedblleft aquello a mi lado en el desierto\textquotedblright. Una encuesta subsecuente, un mes después, arrojó los siguientes datos: de quienes preferían una hogaza de pan en la primera encuesta, el $40\%$ siguió prefiriendo una hogaza de pan, el $10\%$ ahora prefería una jarra de vino, y el $50\%$ prefería \textquotedblleft aquello\textquotedblright; de quienes preferían una jarra de vino en la primera encuesta, el $20\%$ ahora prefería una hogaza de pan, el $70\%$ seguía prefiriendo la jarra de vino, y el $10\%$ ahora prefería \textquotedblleft aquello\textquotedblright; de quienes preferían \textquotedblleft aquello\textquotedblright\ en la primera encuesta, el $20\%$ prefería ahora una hogaza de pan, el $20\%$ prefería una jarra de vino, y el $60\%$ seguía prefiriendo \textquotedblleft aquello\textquotedblright.
+
+        Suponiendo que esta tendencia continúa, la situación descrita en el párrafo anterior es una cadena de Markov de tres estados en la cual los estados son las tres preferencias posibles. Podemos predecir el porcentaje de persas en cada estado para cada mes siguiente a la encuesta original. Denotando el primer, segundo y tercer estado como las preferencias por pan, vino y \textquotedblleft aquello\textquotedblright, respectivamente, vemos que el vector de probabilidad que da la probabilidad inicial de estar en cada estado es
+        \begin{equation*}
+            P=\begin{pmatrix}0.50\\0.30\\0.20\end{pmatrix},
+        \end{equation*}
+        y que la matriz de transición es
+        \begin{equation*}
+            A=\begin{pmatrix}0.40&0.20&0.20\\0.10&0.70&0.20\\0.50&0.10&0.60\end{pmatrix}.
+        \end{equation*}
+        Las probabilidades de estar en cada estado $m$ meses después de la encuesta original son las coordenadas del vector $A^mP$. Se puede verificar que
+        \begin{equation*}
+            AP=\begin{pmatrix}0.30\\0.30\\0.40\end{pmatrix}, \quad A^2P=\begin{pmatrix}0.26\\0.32\\0.42\end{pmatrix}, \quad A^3P=\begin{pmatrix}0.252\\0.334\\0.414\end{pmatrix}, \quad\text{y}\quad A^4P=\begin{pmatrix}0.2504\\0.3418\\0.4078\end{pmatrix}.
+        \end{equation*}
+        Observemos la aparente convergencia de $A^mP$.
+
+        Como $A$ es regular, la predicción a largo plazo sobre las preferencias de los persas puede encontrarse calculando el vector de probabilidad fijo para $A$. Este vector es el único vector de probabilidad $v$ tal que $(A-I)v=0$. Escribiendo
+        \begin{equation*}
+            v=\begin{pmatrix}v_1\\v_2\\v_3\end{pmatrix},
+        \end{equation*}
+        vemos que la ecuación matricial $(A-I)v=0$ produce el siguiente sistema de ecuaciones lineales:
+        \begin{align*}
+            -0.60v_1+0.20v_2+0.20v_3&=0\\
+            0.10v_1-0.30v_2+0.20v_3&=0\\
+            0.50v_1+0.10v_2-0.40v_3&=0.
+        \end{align*}
+        Se muestra fácilmente que
+        \begin{equation*}
+            \begin{pmatrix}5\\7\\8\end{pmatrix}
+        \end{equation*}
+        es una base del espacio solución de este sistema. Por tanto, el único vector de probabilidad fijo de $A$ es
+        \begin{equation*}
+            \begin{pmatrix}\frac{5}{5+7+8}\\[0.5ex]\frac{7}{5+7+8}\\[0.5ex]\frac{8}{5+7+8}\end{pmatrix}=\begin{pmatrix}0.25\\0.35\\0.40\end{pmatrix}.
+        \end{equation*}
+        Así, a largo plazo, el $25\%$ de los persas preferirá una hogaza de pan, el $35\%$ preferirá una jarra de vino, y el $40\%$ preferirá \textquotedblleft aquello a mi lado en el desierto\textquotedblright.
+    \end{ejemplo}
+
+    En esta sección nos hemos concentrado principalmente en la teoría de las matrices de transición regulares. Existe otra clase interesante de matrices de transición que puede representarse en la forma
+    \begin{equation*}
+        \begin{pmatrix}I&B\\O&C\end{pmatrix},
+    \end{equation*}
+    donde $I$ es una matriz identidad y $O$ es una matriz cero. (Tales matrices de transición no son regulares, pues el bloque inferior izquierdo permanece igual a $O$ en cualquier potencia de la matriz.)
+
+    \begin{definicion}[Estados absorbentes]
+        Los estados correspondientes a la submatriz identidad de una matriz de transición de la forma anterior se llaman \textbf{estados absorbentes}, pues tal estado nunca se abandona una vez que se entra en él. Una cadena de Markov se llama \textbf{cadena de Markov absorbente} si es posible pasar de cualquier estado a algún estado absorbente en un número finito de etapas.
+    \end{definicion}
+
+    Observemos que la cadena de Markov que describe el patrón de matrícula de la universidad comunitaria es una cadena de Markov absorbente, con los estados 1 y 4 como sus estados absorbentes.
+
+    \subsection*{Una aplicación}
+
+    En las especies que se reproducen sexualmente, las características de un descendiente respecto a un rasgo genético particular están determinadas por un par de genes, uno heredado de cada progenitor. Los genes para un rasgo particular son de dos tipos, denotados G y g. El gen G representa la característica dominante, y g representa la característica recesiva. Los descendientes con genotipo GG o Gg exhiben la característica dominante, mientras que los descendientes con genotipo gg exhiben la característica recesiva. Por ejemplo, en los humanos, los ojos cafés son una característica dominante y los ojos azules son la característica recesiva correspondiente; así, los descendientes con genotipo GG o Gg tienen ojos cafés, mientras que aquellos de tipo gg tienen ojos azules.
+
+    Consideremos la probabilidad de que un descendiente tenga cada genotipo, para un progenitor masculino de genotipo Gg. (Suponemos que la población bajo consideración es grande, que el apareamiento es aleatorio respecto al genotipo, y que la distribución de cada genotipo dentro de la población es independiente del sexo y de la esperanza de vida.) Sea
+    \begin{equation*}
+        P=\begin{pmatrix}p\\q\\r\end{pmatrix}
+    \end{equation*}
+    la proporción de la población adulta con genotipos GG, Gg y gg, respectivamente, al inicio del experimento. Este experimento describe una cadena de Markov de tres estados con la siguiente matriz de transición:
+    \begin{equation*}
+        \begin{array}{ccccc}
+            & & \text{Genotipo del progenitor femenino} & & \\
+            & \text{GG} & \text{Gg} & \text{gg} & \\
+        \end{array}
+    \end{equation*}
+    \begin{equation*}
+        \begin{array}{c}
+            \text{Genotipo}\\ \text{del}\\ \text{descendiente}
+        \end{array}
+        \begin{array}{c}\text{GG}\\\text{Gg}\\\text{gg}\end{array}
+        \begin{pmatrix}
+            \frac12&\frac14&0\\
+            \frac12&\frac12&\frac12\\
+            0&\frac14&\frac12
+        \end{pmatrix}=B.
+    \end{equation*}
+    Se comprueba fácilmente que $B^2$ contiene solo entradas positivas; así, $B$ es regular. Por tanto, permitiendo que se reproduzcan solo los machos de genotipo Gg, la proporción de descendientes en la población que tenga un genotipo determinado se estabilizará en el vector de probabilidad fijo para $B$, el cual es
+    \begin{equation*}
+        \begin{pmatrix}\frac14\\\frac12\\\frac14\end{pmatrix}.
+    \end{equation*}
+
+    Supongamos ahora que se realizan experimentos similares con machos de genotipos GG y gg. Como ya se mencionó, estos experimentos son cadenas de Markov de tres estados con matrices de transición
+    \begin{equation*}
+        A=\begin{pmatrix}1&\frac12&0\\0&\frac12&1\\0&0&0\end{pmatrix} \qquad\text{y}\qquad C=\begin{pmatrix}0&0&0\\1&\frac12&0\\0&\frac12&1\end{pmatrix},
+    \end{equation*}
+    respectivamente. Para considerar el caso en el que se permite reproducirse a todos los genotipos masculinos, debemos formar la matriz de transición $M=pA+qB+rC$, que es la combinación lineal de $A$, $B$ y $C$ ponderada por la proporción de machos de cada genotipo. Así,
+    \begin{equation*}
+        M=\begin{pmatrix}
+            p+\frac12q & \frac12p+\frac14q & 0\\[0.5ex]
+            \frac12q+r & \frac12p+\frac12q+\frac12r & p+\frac12q\\[0.5ex]
+            0 & \frac14q+\frac12r & \frac12q+r
+        \end{pmatrix}.
+    \end{equation*}
+    Para simplificar la notación, sea $a=p+\frac12q$ y $b=\frac12q+r$. (Los números $a$ y $b$ representan las proporciones de genes G y g, respectivamente, en la población.) Entonces
+    \begin{equation*}
+        M=\begin{pmatrix}a&\frac12a&0\\b&\frac12&a\\0&\frac12b&b\end{pmatrix},
+    \end{equation*}
+    donde $a+b=p+q+r=1$.
+
+    Sean $p'$, $q'$ y $r'$ las proporciones de los descendientes de primera generación con genotipos GG, Gg y gg, respectivamente. Entonces
+    \begin{equation*}
+        \begin{pmatrix}p'\\q'\\r'\end{pmatrix}=MP=\begin{pmatrix}ap+\frac12aq\\bp+\frac12q+ar\\\frac12bq+br\end{pmatrix}=\begin{pmatrix}a^2\\2ab\\b^2\end{pmatrix}.
+    \end{equation*}
+
+    Para considerar los efectos de apareamientos sin restricción entre los descendientes de primera generación, debe determinarse una nueva matriz de transición $\widetilde M$ con base en la distribución de genotipos de primera generación. Como antes, encontramos que
+    \begin{equation*}
+        \widetilde M=\begin{pmatrix}
+            p'+\frac12q' & \frac12p'+\frac14q' & 0\\
+            \frac12q'+r' & \frac12p'+\frac12q'+\frac12r' & p'+\frac12q'\\
+            0 & \frac14q'+\frac12r' & \frac12q'+r'
+        \end{pmatrix}=\begin{pmatrix}a'&\frac12a'&0\\b'&\frac12&a'\\0&\frac12b'&b'\end{pmatrix},
+    \end{equation*}
+    donde $a'=p'+\frac12q'$ y $b'=\frac12q'+r'$. Sin embargo,
+    \begin{equation*}
+        a'=a^2+\frac12(2ab)=a(a+b)=a \qquad\text{y}\qquad b'=\frac12(2ab)+b^2=b(a+b)=b.
+    \end{equation*}
+    Así $\widetilde M=M$; de modo que la distribución de descendientes de segunda generación entre los tres genotipos es
+    \begin{equation*}
+        \widetilde M(MP)=M^2P=\begin{pmatrix}a^3+a^2b\\a^2b+ab+ab^2\\ab^2+b^3\end{pmatrix}=\begin{pmatrix}a^2(a+b)\\ab(a+1+b)\\b^2(a+b)\end{pmatrix}=\begin{pmatrix}a^2\\2ab\\b^2\end{pmatrix}=MP,
+    \end{equation*}
+    la misma que la de los descendientes de primera generación. En otras palabras, $MP$ es el vector de probabilidad fijo para $M$, y el equilibrio genético se alcanza en la población después de una sola generación. (A este resultado se le llama la \textit{ley de Hardy--Weinberg}.) Notemos que, en el caso especial e importante en que $a=b$ (o, equivalentemente, $p=r$), la distribución en el equilibrio es
+    \begin{equation*}
+        MP=\begin{pmatrix}a^2\\2ab\\b^2\end{pmatrix}=\begin{pmatrix}\frac14\\\frac12\\\frac14\end{pmatrix}.
+    \end{equation*}
+
     \section{Subespacios invariantes y el teorema de Cayley--Hamilton}
 
     En la Sección~1.1 observamos que, si $v$ es un vector propio de un operador lineal $T$, entonces $T$ manda al subespacio generado por $\{v\}$ en sí mismo. Los subespacios que son enviados en sí mismos por un operador tienen gran importancia en el estudio de los operadores lineales.
@@ -1208,7 +1901,7 @@
         \begin{equation*}
             g(T)(v)=(-1)^k\left(a_0I+a_1T+\cdots+a_{k-1}T^{k-1}+T^k\right)(v)=0.
         \end{equation*}
-        Por el Teorema~1.12, $g(t)$ divide a $f(t)$; por tanto existe un polinomio $q(t)$ tal que $f(t)=q(t)g(t)$. Así,
+        Por el Teorema~1.20, $g(t)$ divide a $f(t)$; por tanto existe un polinomio $q(t)$ tal que $f(t)=q(t)g(t)$. Así,
         \begin{equation*}
             f(T)(v)=q(T)g(T)(v)=q(T)\big(g(T)(v)\big)=q(T)(0)=0.
         \end{equation*}
@@ -1257,7 +1950,7 @@
         \begin{equation*}
             f(t)=\det(A-tI)=\det(B_1-tI)\cdot\det(B_2-tI)=f_1(t)\cdot f_2(t),
         \end{equation*}
-        como en la prueba del Teorema~1.12, lo cual prueba el resultado para $k=2$.
+        como en la prueba del Teorema~1.20, lo cual prueba el resultado para $k=2$.
 
         Supongamos ahora que el teorema es válido para $k-1$ sumandos, con $k-1\geq 2$, y supongamos que $V$ es la suma directa de $k$ subespacios,
         \begin{equation*}
@@ -1351,5 +2044,266 @@
         \end{equation*}
         por la definición recursiva de la suma directa de matrices. Esto completa la inducción.
     \end{proof}
+
+    \chapter{Espacios con producto interno}
+
+    La mayoría de las aplicaciones de las matemáticas involucran el concepto de medida y, por tanto, la magnitud o el tamaño relativo de diversas cantidades. Así, no es de sorprender que los campos de los números reales y complejos, que tienen una noción incorporada de distancia, deban desempeñar un papel especial. Salvo en la Sección~2.8, supondremos en todo este capítulo que los espacios vectoriales están sobre el campo $F$, donde $F$ denota a $\R$ o a $\C$.
+
+    Introducimos la idea de distancia o longitud en los espacios vectoriales por medio de una estructura mucho más rica, la llamada estructura de \textit{espacio con producto interno}. Esta estructura adicional provee aplicaciones a la geometría (Secciones~2.5 y 2.11), a la física (Sección~2.9), al condicionamiento en sistemas de ecuaciones lineales (Sección~2.10), a mínimos cuadrados (Sección~2.3), y a las formas cuadráticas (Sección~2.8).
+
+    \section{Productos internos y normas}
+
+    Muchas nociones geométricas como el ángulo, la longitud y la perpendicularidad en $\R^2$ y $\R^3$ pueden extenderse a espacios vectoriales reales y complejos más generales. Todas estas ideas están relacionadas con el concepto de producto interno.
+
+    \begin{definicion}[Producto interno]
+        Sea $V$ un espacio vectorial sobre $F$. Un \textbf{producto interno} en $V$ es una función que asigna, a cada par ordenado de vectores $x$ y $y$ en $V$, un escalar en $F$, denotado $\iprod{x}{y}$, tal que para todos $x,y,z\in V$ y todo $c\in F$ se cumple:
+        \begin{enumerate}[label=(\alph*)]
+            \item $\iprod{x+z}{y}=\iprod{x}{y}+\iprod{z}{y}$.
+            \item $\iprod{cx}{y}=c\iprod{x}{y}$.
+            \item $\overline{\iprod{x}{y}}=\iprod{y}{x}$, donde la barra denota conjugación compleja.
+            \item $\iprod{x}{x}>0$ si $x\neq 0$.
+        \end{enumerate}
+    \end{definicion}
+
+    Notemos que la condición (c) se reduce a $\iprod{x}{y}=\iprod{y}{x}$ si $F=\R$. Las condiciones (a) y (b) simplemente exigen que el producto interno sea lineal en la primera componente.
+
+    Se muestra fácilmente que si $a_1,\dots,a_n\in F$ y $y,v_1,\dots,v_n\in V$, entonces
+    \begin{equation*}
+        \iprod{\sum_{i=1}^{n}a_iv_i}{y}=\sum_{i=1}^{n}a_i\iprod{v_i}{y}.
+    \end{equation*}
+    En efecto, esto se sigue de (a) y (b) por inducción sobre $n$: el caso $n=1$ es (b), y si el resultado vale para $n-1$ sumandos, entonces
+    \begin{equation*}
+        \iprod{\sum_{i=1}^{n}a_iv_i}{y}=\iprod{\sum_{i=1}^{n-1}a_iv_i}{y}+\iprod{a_nv_n}{y}=\sum_{i=1}^{n-1}a_i\iprod{v_i}{y}+a_n\iprod{v_n}{y}=\sum_{i=1}^{n}a_i\iprod{v_i}{y},
+    \end{equation*}
+    usando (a) en el primer paso y (b) junto con la hipótesis de inducción en el segundo.
+
+    \begin{ejemplo}
+        Para $x=(a_1,\dots,a_n)$ y $y=(b_1,\dots,b_n)$ en $F^n$, definamos
+        \begin{equation*}
+            \iprod{x}{y}=\sum_{i=1}^{n}a_i\overline{b_i}.
+        \end{equation*}
+        La verificación de que $\iprod{\cdot}{\cdot}$ satisface las condiciones (a) a (d) es sencilla. Por ejemplo, si $z=(c_1,\dots,c_n)$, tenemos, para (a),
+        \begin{align*}
+            \iprod{x+z}{y}=\sum_{i=1}^{n}(a_i+c_i)\overline{b_i}=\sum_{i=1}^{n}a_i\overline{b_i}+\sum_{i=1}^{n}c_i\overline{b_i}=\iprod{x}{y}+\iprod{z}{y}.
+        \end{align*}
+        Así, para $x=(1+i,4)$ y $y=(2-3i,4+5i)$ en $\C^2$,
+        \begin{equation*}
+            \iprod{x}{y}=(1+i)(2+3i)+4(4-5i)=15-15i.
+        \end{equation*}
+    \end{ejemplo}
+
+    Al producto interno del ejemplo anterior se le llama el \textbf{producto interno estándar} en $F^n$. Cuando $F=\R$, las conjugaciones no son necesarias, y en cursos elementales a este producto interno estándar se le suele llamar \textit{producto punto}, denotado $x\cdot y$ en vez de $\iprod{x}{y}$.
+
+    \begin{ejemplo}
+        Si $\iprod{x}{y}$ es cualquier producto interno en un espacio vectorial $V$ y $r>0$, podemos definir otro producto interno mediante la regla $\iprod{x}{y}'=r\iprod{x}{y}$. Si $r\leq 0$, entonces (d) no se cumpliría.
+    \end{ejemplo}
+
+    \begin{ejemplo}
+        Sea $V=C([0,1])$, el espacio vectorial de las funciones continuas de valores reales en $[0,1]$. Para $f,g\in V$, definamos $\iprod{f}{g}=\int_0^1 f(t)g(t)\,dt$. Como la integral anterior es lineal en $f$, (a) y (b) son inmediatas, y (c) es trivial. Si $f\neq 0$, entonces $f^2$ está acotada lejos de cero en algún subintervalo de $[0,1]$ (aquí se usa la continuidad), y por tanto $\iprod{f}{f}=\int_0^1[f(t)]^2\,dt>0$.
+    \end{ejemplo}
+
+    \begin{definicion}[Matriz adjunta]
+        Sea $A\in M_{m\times n}(F)$. Se define la \textbf{transpuesta conjugada} o \textbf{adjunta} de $A$ como la matriz $A^*\in M_{n\times m}(F)$ tal que $(A^*)_{ij}=\overline{A_{ji}}$ para todos $i,j$.
+    \end{definicion}
+
+    \begin{ejemplo}
+        Sea
+        \begin{equation*}
+            A=\begin{pmatrix}i&1+2i\\2&3+4i\end{pmatrix}.
+        \end{equation*}
+        Entonces
+        \begin{equation*}
+            A^*=\begin{pmatrix}-i&2\\1-2i&3-4i\end{pmatrix}.
+        \end{equation*}
+    \end{ejemplo}
+
+    Notemos que si $x$ y $y$ se ven como vectores columna en $F^n$, entonces $\iprod{x}{y}=y^*x$. La matriz adjunta desempeña un papel muy importante en el resto de este capítulo. En el caso en que $A$ tiene entradas reales, $A^*$ es simplemente la transpuesta de $A$.
+
+    \begin{ejemplo}
+        Sea $V=M_{n\times n}(F)$, y definamos $\iprod{A}{B}=\Tr(B^*A)$ para $A,B\in V$. (Recordemos que la traza de una matriz $A$ se define como $\Tr(A)=\sum_{i=1}^{n}A_{ii}$.) Verificamos (a) y (d) de la definición de producto interno, y dejamos (b) y (c) para el lector. Para esto, sean $A,B,C\in V$. Entonces (usando que la traza es lineal, pues es una suma de entradas)
+        \begin{align*}
+            \iprod{A+B}{C}=\Tr(C^*(A+B))=\Tr(C^*A+C^*B)=\Tr(C^*A)+\Tr(C^*B)=\iprod{A}{C}+\iprod{B}{C}.
+        \end{align*}
+        También,
+        \begin{align*}
+            \iprod{A}{A}=\Tr(A^*A)=\sum_{i=1}^{n}(A^*A)_{ii}=\sum_{i=1}^{n}\sum_{k=1}^{n}(A^*)_{ik}A_{ki}
+            =\sum_{i=1}^{n}\sum_{k=1}^{n}\overline{A_{ki}}A_{ki}=\sum_{i=1}^{n}\sum_{k=1}^{n}|A_{ki}|^2.
+        \end{align*}
+        Ahora bien, si $A\neq O$, entonces $A_{ki}\neq 0$ para algún $k$ e $i$. Así $\iprod{A}{A}>0$.
+
+        Para completar la verificación, probamos también (b) y (c). Para (b), como la traza y el producto de matrices son lineales entrada a entrada,
+        \begin{equation*}
+            \iprod{cA}{B}=\Tr(B^*(cA))=c\,\Tr(B^*A)=c\iprod{A}{B}.
+        \end{equation*}
+        Para (c), usamos que, para cualquier matriz cuadrada $X$, $\Tr(X^*)=\overline{\Tr(X)}$ (pues las entradas diagonales de $X^*$ son los conjugados de las de $X$) y que $(B^*A)^*=A^*B^{**}=A^*B$ (pues $B^{**}=B$). Así,
+        \begin{equation*}
+            \overline{\iprod{A}{B}}=\overline{\Tr(B^*A)}=\Tr((B^*A)^*)=\Tr(A^*B)=\iprod{B}{A}.
+        \end{equation*}
+    \end{ejemplo}
+
+    Al producto interno en $M_{n\times n}(F)$ del ejemplo anterior se le llama el \textbf{producto interno de Frobenius}.
+
+    Un espacio vectorial $V$ sobre $F$, dotado de un producto interno específico, se llama \textbf{espacio con producto interno}. Si $F=\C$, decimos que $V$ es un \textbf{espacio complejo con producto interno}, y si $F=\R$, decimos que $V$ es un \textbf{espacio real con producto interno}.
+
+    Es claro que si $V$ tiene un producto interno $\iprod{x}{y}$ y $W$ es un subespacio de $V$, entonces $W$ también es un espacio con producto interno cuando se restringe la misma función $\iprod{x}{y}$ a los vectores $x,y\in W$.
+
+    Así, los ejemplos anteriores también proveen ejemplos de espacios con producto interno. En lo que resta de este capítulo, $F^n$ denota al espacio con producto interno con el producto interno estándar definido antes. Análogamente, $M_{n\times n}(F)$ denota al espacio con producto interno con el producto interno de Frobenius definido antes. Se advierte al lector que dos productos internos distintos en un mismo espacio vectorial dan lugar a dos espacios con producto interno distintos. Por ejemplo, puede mostrarse que tanto
+    \begin{equation*}
+        \iprod{f(x)}{g(x)}_1=\int_0^1 f(t)g(t)\,dt \qquad\text{como}\qquad \iprod{f(x)}{g(x)}_2=\int_{-1}^{1}f(t)g(t)\,dt
+    \end{equation*}
+    son productos internos en el espacio vectorial $P(\R)$. Aunque el espacio vectorial subyacente es el mismo, estos dos productos internos dan lugar a dos espacios con producto interno distintos. Por ejemplo, los polinomios $f(x)=x$ y $g(x)=x^2$ son ortogonales en el segundo espacio con producto interno, pero no en el primero.
+
+    Un espacio con producto interno particularmente importante, que se asemeja a $C([0,1])$, es el espacio $H$ de las funciones continuas de valores complejos definidas en el intervalo $[0,2\pi]$, con el producto interno
+    \begin{equation*}
+        \iprod{f}{g}=\frac{1}{2\pi}\int_0^{2\pi}f(t)\overline{g(t)}\,dt.
+    \end{equation*}
+    La razón de la constante $1/2\pi$ se hará evidente más adelante. Este espacio con producto interno, que surge con frecuencia en el contexto de situaciones físicas, se examinará más de cerca en secciones posteriores.
+
+    En este punto, mencionamos algunos hechos sobre la integración de funciones de valores complejos. Primero, el número imaginario $i$ puede tratarse como una constante bajo el signo de integración. Segundo, toda función de valores complejos $f$ puede escribirse como $f=f_1+if_2$, donde $f_1$ y $f_2$ son funciones de valores reales. Así,
+    \begin{equation*}
+        \int f=\int f_1+i\int f_2 \qquad\text{y}\qquad \overline{\int f}=\int \overline{f}.
+    \end{equation*}
+    De estas propiedades, junto con la hipótesis de continuidad, se sigue que $H$ es un espacio con producto interno.
+
+    Algunas propiedades que se siguen fácilmente de la definición de producto interno están contenidas en el siguiente teorema.
+
+    \begin{teorema}
+        Sea $V$ un espacio con producto interno. Entonces, para $x,y,z\in V$ y $c\in F$, se cumple lo siguiente:
+        \begin{enumerate}[label=(\alph*)]
+            \item $\iprod{x}{y+z}=\iprod{x}{y}+\iprod{x}{z}$.
+            \item $\iprod{x}{cy}=\overline{c}\iprod{x}{y}$.
+            \item $\iprod{x}{0}=\iprod{0}{x}=0$.
+            \item $\iprod{x}{x}=0$ si y solo si $x=0$.
+            \item Si $\iprod{x}{y}=\iprod{x}{z}$ para todo $x\in V$, entonces $y=z$.
+        \end{enumerate}
+    \end{teorema}
+
+    \begin{proof}
+        (a) Tenemos
+        \begin{equation*}
+            \iprod{x}{y+z}=\overline{\iprod{y+z}{x}}=\overline{\iprod{y}{x}+\iprod{z}{x}}=\overline{\iprod{y}{x}}+\overline{\iprod{z}{x}}=\iprod{x}{y}+\iprod{x}{z}.
+        \end{equation*}
+
+        (b) Análogamente,
+        \begin{equation*}
+            \iprod{x}{cy}=\overline{\iprod{cy}{x}}=\overline{c\iprod{y}{x}}=\overline{c}\,\overline{\iprod{y}{x}}=\overline{c}\iprod{x}{y}.
+        \end{equation*}
+
+        (c) Como $0=0\cdot x$ para cualquier $x\in V$, por la linealidad en la primera componente,
+        \begin{equation*}
+            \iprod{0}{x}=\iprod{0\cdot x}{x}=0\cdot\iprod{x}{x}=0.
+        \end{equation*}
+        Y por (a) aplicado con $y=0$ y $z=0$ (o directamente por conjugación), $\iprod{x}{0}=\overline{\iprod{0}{x}}=\overline{0}=0$.
+
+        (d) Si $x=0$, entonces $\iprod{x}{x}=0$ por (c). Recíprocamente, si $\iprod{x}{x}=0$, entonces $x=0$, pues en caso contrario tendríamos $\iprod{x}{x}>0$ por la definición de producto interno, lo cual contradice $\iprod{x}{x}=0$.
+
+        (e) Supongamos que $\iprod{x}{y}=\iprod{x}{z}$ para todo $x\in V$. Entonces, por (a) y (b) (aplicados a $\iprod{x}{y-z}=\iprod{x}{y}-\iprod{x}{z}$, que se sigue de la linealidad en la primera componente del producto $\iprod{\cdot}{x}$ tras conjugar, o directamente de la definición), $\iprod{x}{y-z}=0$ para todo $x\in V$. En particular, tomando $x=y-z$, obtenemos $\iprod{y-z}{y-z}=0$ (usando (c) para pasar de $\iprod{x}{y-z}$ a la forma requerida por (d), vía la conjugación de (a)). Por (d), $y-z=0$, es decir, $y=z$.
+    \end{proof}
+
+    El lector debe observar que los incisos (a) y (b) del teorema anterior muestran que el producto interno es \textbf{conjugado lineal} en la segunda componente.
+
+    Para generalizar la noción de longitud de $\R^3$ a espacios con producto interno arbitrarios, basta observar que la longitud de $x=(a,b,c)\in\R^3$ es $\sqrt{a^2+b^2+c^2}=\sqrt{\iprod{x}{x}}$. Esto motiva la siguiente definición.
+
+    \begin{definicion}[Norma]
+        Sea $V$ un espacio con producto interno. Para $x\in V$, se define la \textbf{norma} o \textbf{longitud} de $x$ por $\norm{x}=\sqrt{\iprod{x}{x}}$.
+    \end{definicion}
+
+    \begin{ejemplo}
+        Sea $V=F^n$. Si $x=(a_1,a_2,\dots,a_n)$, entonces
+        \begin{equation*}
+            \norm{x}=\norm{(a_1,a_2,\dots,a_n)}=\left[\sum_{i=1}^{n}|a_i|^2\right]^{1/2}
+        \end{equation*}
+        es la definición euclidiana de longitud. Notemos que si $n=1$, entonces $\norm{a}=|a|$.
+    \end{ejemplo}
+
+    Como cabría esperar, las conocidas propiedades de la longitud euclidiana en $\R^3$ se cumplen en general, como se muestra a continuación.
+
+    \begin{teorema}
+        Sea $V$ un espacio con producto interno sobre $F$. Entonces, para todos $x,y\in V$ y $c\in F$, se cumple lo siguiente:
+        \begin{enumerate}[label=(\alph*)]
+            \item $\norm{cx}=|c|\cdot\norm{x}$.
+            \item $\norm{x}=0$ si y solo si $x=0$. En cualquier caso, $\norm{x}\geq 0$.
+            \item (Desigualdad de Cauchy--Schwarz) $|\iprod{x}{y}|\leq\norm{x}\cdot\norm{y}$.
+            \item (Desigualdad del triángulo) $\norm{x+y}\leq\norm{x}+\norm{y}$.
+        \end{enumerate}
+    \end{teorema}
+
+    \begin{proof}
+        (a) Usando que $\iprod{cx}{cx}=c\overline{c}\iprod{x}{x}=|c|^2\iprod{x}{x}$ (por la linealidad en la primera componente y el inciso (b) del teorema anterior en la segunda),
+        \begin{equation*}
+            \norm{cx}=\sqrt{\iprod{cx}{cx}}=\sqrt{|c|^2\iprod{x}{x}}=|c|\sqrt{\iprod{x}{x}}=|c|\cdot\norm{x}.
+        \end{equation*}
+
+        (b) Por definición, $\norm{x}=\sqrt{\iprod{x}{x}}\geq 0$ siempre, pues $\iprod{x}{x}\geq 0$ (de hecho $\iprod{x}{x}>0$ si $x\neq 0$, y $\iprod{x}{x}=0$ si $x=0$, por la definición de producto interno y el teorema anterior). Así, $\norm{x}=0$ si y solo si $\iprod{x}{x}=0$, si y solo si $x=0$.
+
+        (c) Si $y=0$, el resultado es inmediato, pues ambos lados son $0$. Supongamos entonces que $y\neq 0$. Para cualquier $c\in F$, tenemos
+        \begin{align*}
+            0\leq\norm{x-cy}^2=\iprod{x-cy}{x-cy}=\iprod{x}{x-cy}-c\iprod{y}{x-cy}=\iprod{x}{x}-\overline{c}\iprod{x}{y}-c\iprod{y}{x}+c\overline{c}\iprod{y}{y}.
+        \end{align*}
+        En particular, si tomamos
+        \begin{equation*}
+            c=\frac{\iprod{x}{y}}{\iprod{y}{y}},
+        \end{equation*}
+        la desigualdad se convierte en
+        \begin{equation*}
+            0\leq\iprod{x}{x}-\frac{|\iprod{x}{y}|^2}{\iprod{y}{y}}=\norm{x}^2-\frac{|\iprod{x}{y}|^2}{\norm{y}^2},
+        \end{equation*}
+        de donde se sigue (c).
+
+        (d) Tenemos
+        \begin{align*}
+            \norm{x+y}^2&=\iprod{x+y}{x+y}=\iprod{x}{x}+\iprod{y}{x}+\iprod{x}{y}+\iprod{y}{y}\\
+            &=\norm{x}^2+2\Re\iprod{x}{y}+\norm{y}^2\\
+            &\leq\norm{x}^2+2|\iprod{x}{y}|+\norm{y}^2\\
+            &\leq\norm{x}^2+2\norm{x}\cdot\norm{y}+\norm{y}^2=(\norm{x}+\norm{y})^2,
+        \end{align*}
+        donde $\Re\iprod{x}{y}$ denota la parte real del número complejo $\iprod{x}{y}$, y usamos (c) para obtener la penúltima desigualdad. El resultado se sigue al tomar raíz cuadrada.
+    \end{proof}
+
+    El caso en que se da la igualdad en (c) y en (d) se estudia más adelante.
+
+    \begin{ejemplo}
+        Para el producto interno estándar en $F^n$, podemos aplicar (c) y (d) del teorema anterior para obtener las siguientes desigualdades bien conocidas:
+        \begin{equation*}
+            \left|\sum_{i=1}^{n}a_i\overline{b_i}\right|\leq\left[\sum_{i=1}^{n}|a_i|^2\right]^{1/2}\left[\sum_{i=1}^{n}|b_i|^2\right]^{1/2}
+        \end{equation*}
+        y
+        \begin{equation*}
+            \left[\sum_{i=1}^{n}|a_i+b_i|^2\right]^{1/2}\leq\left[\sum_{i=1}^{n}|a_i|^2\right]^{1/2}+\left[\sum_{i=1}^{n}|b_i|^2\right]^{1/2}.
+        \end{equation*}
+    \end{ejemplo}
+
+    El lector recordará de cursos anteriores que, para $x$ y $y$ en $\R^3$ o $\R^2$, se tiene $\iprod{x}{y}=\norm{x}\cdot\norm{y}\cos\theta$, donde $\theta$ ($0\leq\theta\leq\pi$) denota el ángulo entre $x$ y $y$. Esta ecuación implica de inmediato (c), pues $|\cos\theta|\leq 1$. Notemos también que dos vectores no nulos $x$ y $y$ son perpendiculares si y solo si $\cos\theta=0$, es decir, si y solo si $\iprod{x}{y}=0$.
+
+    Estamos ahora en condiciones de generalizar la noción de perpendicularidad a espacios con producto interno arbitrarios.
+
+    \begin{definicion}[Ortogonalidad]
+        Sea $V$ un espacio con producto interno. Los vectores $x$ y $y$ en $V$ son \textbf{ortogonales} (o \textbf{perpendiculares}) si $\iprod{x}{y}=0$. Un subconjunto $S$ de $V$ es \textbf{ortogonal} si cualesquiera dos vectores distintos de $S$ son ortogonales. Un vector $x$ en $V$ es un \textbf{vector unitario} si $\norm{x}=1$. Finalmente, un subconjunto $S$ de $V$ es \textbf{ortonormal} si $S$ es ortogonal y consiste enteramente de vectores unitarios.
+    \end{definicion}
+
+    Notemos que, si $S=\{v_1,v_2,\dots\}$, entonces $S$ es ortonormal si y solo si $\iprod{v_i}{v_j}=\delta_{ij}$, donde $\delta_{ij}$ denota la delta de Kronecker. También observemos que multiplicar vectores por escalares no nulos no afecta su ortogonalidad, y que si $x$ es cualquier vector no nulo, entonces $(1/\norm{x})x$ es un vector unitario. Al proceso de multiplicar un vector no nulo por el recíproco de su longitud se le llama \textbf{normalizar}.
+
+    \begin{ejemplo}
+        En $F^3$, $\{(1,1,0),(1,-1,1),(-1,1,2)\}$ es un conjunto ortogonal de vectores no nulos, pero no es ortonormal; sin embargo, si normalizamos los vectores del conjunto, obtenemos el conjunto ortonormal
+        \begin{equation*}
+            \left\{\frac{1}{\sqrt2}(1,1,0),\ \frac{1}{\sqrt3}(1,-1,1),\ \frac{1}{\sqrt6}(-1,1,2)\right\}.
+        \end{equation*}
+    \end{ejemplo}
+
+    Nuestro siguiente ejemplo es de un conjunto ortonormal infinito que es importante en el análisis. Este conjunto se usa en ejemplos posteriores de este capítulo.
+
+    \begin{ejemplo}
+        Recordemos el espacio con producto interno $H$ definido anteriormente. Introducimos un subconjunto ortonormal importante $S$ de $H$. Para lo que sigue, $i$ es el número imaginario tal que $i^2=-1$. Para cada entero $n$, sea $f_n(t)=e^{int}$, donde $0\leq t\leq 2\pi$. (Recordemos que $e^{int}=\cos(nt)+i\sin(nt)$.) Ahora definamos $S=\{f_n: n\text{ es un entero}\}$.
+
+        Claramente $S$ es un subconjunto de $H$. Usando que $\overline{e^{it}}=e^{-it}$ para todo número real $t$, tenemos, para $m\neq n$,
+        \begin{align*}
+            \iprod{f_m}{f_n}=\frac{1}{2\pi}\int_0^{2\pi}e^{imt}\overline{e^{int}}\,dt=\frac{1}{2\pi}\int_0^{2\pi}e^{i(m-n)t}\,dt=\frac{1}{2\pi(m-n)}e^{i(m-n)t}\Big|_0^{2\pi}=0.
+        \end{align*}
+        También,
+        \begin{equation*}
+            \iprod{f_n}{f_n}=\frac{1}{2\pi}\int_0^{2\pi}e^{i(n-n)t}\,dt=\frac{1}{2\pi}\int_0^{2\pi}1\,dt=1.
+        \end{equation*}
+        En otras palabras, $\iprod{f_m}{f_n}=\delta_{mn}$.
+    \end{ejemplo}
 
 \end{document}

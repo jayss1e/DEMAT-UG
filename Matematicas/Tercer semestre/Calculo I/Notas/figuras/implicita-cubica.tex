@@ -1,0 +1,11 @@
+\documentclass[border=4pt]{standalone}
+\usepackage{graficas}
+
+\begin{document}
+\begin{tikzpicture}
+    % y^3 + 3y - 2x = 0, parametrizada por y: x = (y^3 + 3y)/2
+    \begin{axis}[grafica, xmin=-7, xmax=7, ymin=-2.5, ymax=2.5]
+        \addplot[domain=-1.75:1.75, samples=200, variable=t] ({(t^3+3*t)/2}, {t});
+    \end{axis}
+\end{tikzpicture}
+\end{document}

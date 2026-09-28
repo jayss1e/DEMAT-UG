@@ -1,0 +1,23 @@
+\documentclass[border=4pt]{standalone}
+\usepackage{graficas}
+
+\begin{document}
+\begin{tikzpicture}
+    \begin{axis}[grafica, width=9cm, height=5.5cm, xmin=-6.5, xmax=6.5, ymin=-3.2, ymax=3.2, trig format plots=rad]
+        \addplot[black!60, dashed, line width=0.6pt] coordinates {(-pi/2,-3.2) (-pi/2,3.2)};
+        \addplot[black!60, dashed, line width=0.6pt] coordinates {(pi/2,-3.2) (pi/2,3.2)};
+        \pgfplotsinvokeforeach{-2,...,1}{
+            \addplot[domain={(#1+0.5)*pi+0.3}:{(#1+1.5)*pi-0.3}, samples=100] {tan(x)};
+        }
+        \addplot[domain=-6.5:-4.9, samples=50] {tan(x)};
+        \addplot[domain=4.9:6.5, samples=50] {tan(x)};
+        \addplot[red!80, domain=-6.5:6.5] {sin(x)};
+        \addplot[blue!75, domain=-3.2:3.2, samples=2] {x};
+        \node[font=\scriptsize] at (axis cs:0.9,2.6) {$\tan(x)$};
+        \node[font=\scriptsize] at (axis cs:3.1,2.6) {$f(x)=x$};
+        \node[font=\scriptsize] at (axis cs:3.1,1.2) {$\sin(x)$};
+        \node[anchor=north east, font=\scriptsize] at (axis cs:-pi/2,0) {$-\pi/2$};
+        \node[anchor=north west, font=\scriptsize] at (axis cs:pi/2,0) {$\pi/2$};
+    \end{axis}
+\end{tikzpicture}
+\end{document}

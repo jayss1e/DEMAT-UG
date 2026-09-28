@@ -1,0 +1,15 @@
+\documentclass[border=4pt]{standalone}
+\usepackage{graficas}
+
+\begin{document}
+\begin{tikzpicture}
+    \begin{axis}[grafica, xmin=-3, xmax=3, ymin=-2, ymax=2.2]
+        \addplot[domain=0:3] {1};
+        \addplot[domain=-3:0] {-1};
+        \node[punto] at (axis cs:0,1) {};
+        \node[puntovacio] at (axis cs:0,-1) {};
+        \node[anchor=east, font=\scriptsize] at (axis cs:-0.1,1) {$1$};
+        \node[anchor=west, font=\scriptsize] at (axis cs:0.15,-1) {$-1$};
+    \end{axis}
+\end{tikzpicture}
+\end{document}

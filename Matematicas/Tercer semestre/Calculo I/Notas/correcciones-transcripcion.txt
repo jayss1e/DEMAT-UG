@@ -1,0 +1,53 @@
+- Prop. 4 (a), dem.: último paso decía y = z - y; corregido a y = z - x.
+- Prop. 14: decía «Si ε < 0 ... ínf(A) − ε > x ≥ ínf(A)»; corregido a «Si ε > 0 ... ínf(A) + ε > x ≥ ínf(A)».
+- Ejercicio 26: decía «Prueba los incisos (b) y (c) de la proposición 10»; la demostración de la prop. 10 deja (c) y (d) al lector, corregido a (c) y (d).
+- Ejercicio 36: título decía «en (0,∞]»; corregido a «en [0,∞)» (el inciso (a) es para x, y ≥ 0).
+- Ejercicio 36, sugerencia: faltaba un «+» en «⋯ xy^{n-2}»; corregido a «+ ⋯ + xy^{n-2}».
+- Ejercicio 72: faltaba un «+» en «⋯ a_1 10^1»; corregido.
+- Ejercicio 73: decía «el negativo de la expansión decimal del número −x»; corregido a «expansión binaria».
+- Prop. 19, dem.: en las cadenas de desigualdades los signos de la expansión de (α−ε)^n estaban mal escritos (aparecía «+ ⋯ + binom(n,n)ε^n» y luego «binom(n,n)αε^n»); se reescribieron con los signos correctos, y los pasos que pueden ser igualdad (n = 1) se pusieron con ≤ / ≥.
+- Figura 3.21: los paneles inferiores estaban rotulados (d) y (d); corregido a (c) y (d).
+- Sección 3.7: decía que ⁿ√x es «decreciente en todo ℝ si n es impar»; corregido a «creciente» (ejercicio 60). También «en en intervalo» → «en el intervalo».
+- Def. 24 (d): se añadió «para toda x, y ∈ I», como en los demás incisos.
+- Ejercicio 120 (a): «Si f impar» → «Si f es impar».
+- Ejemplo 48: decía «por el inciso 1 de la proposición 36»; corregido a «inciso (a)».
+- Texto tras la prop. 41: decía «en el inciso (b) de la proposición 41», pero la proposición no tiene incisos; se quitó «el inciso (b) de».
+- Ejercicio 172: había dos incisos (c); el último pasa a ser (d).
+- Nota al pie del ejercicio 170 (j): decía «ve el séptimo párrafo después de la definición 32»; se cambió por la referencia exacta «véase el punto 10 de la observación 15».
+- Prop. 53, fórmula (4.39): decía «o si a_n/b_n > 0»; corregido a «a_n/b_m».
+- Prop. 53, dem.: decía «Por el inciso (b) sabemos que lím r(x)/Q(x) = 0»; es el inciso (a) (grado de r menor que el de Q). Corregido; también el límite se escribió con x → ±∞, que es como se usa después.
+- Ejemplo 67: la división decía x² − (3x²+3)/(x³+1); lo correcto es x² − (3x²−3)/(x³+1). Corregido.
+- Ejemplo 68: la división decía (x/3 − 5/9) − 25/(27x+45); el signo correcto es «+». Corregido. (El ejemplo remite a la figura 4.11, que corresponde a otra función; se dejó la referencia como en el original.)
+- Ejercicios 187 y 189: los incisos estaban rotulados (a), (b), (b); corregido a (a), (b), (c).
+- Ejercicio 188 (b): faltaba un operador en «−2x³10x²−9x−2»; se puso «−2x³+10x²−9x−2».
+- Teorema 4, dem.: «Sin pérdida de generalidad generalidad» → «Sin pérdida de generalidad».
+- Prop. 58, dem.: decía «lím_{x→p⁻} f(p) = L₁» y «lím_{x→p⁺} f(p) = L₂»; corregido a f(x).
+- Lema 2, dem.: «con lo cual demostraremos el teorema» → «el lema».
+- Nota al pie de la def. 44: citaba «los ejercicios 233 y ??» (referencia rota en el original); se dejó solo el ejercicio 233.
+- Prop. 61 (regla de la cadena), dem.: la desigualdad (5.13) estaba enunciada solo para 0 < |h| < δ₂ con «<», pero después se aplica con h = r_h, que puede valer 0 (justo el caso problemático que motiva la prueba). Se enunció para |h| < δ₂ con «≤», que sí vale en h = 0, y los pasos intermedios pasan a «≤»; la conclusión estricta «< ε|h|» se mantiene porque h ≠ 0.
+- Prop. 62, dem., (5.16): el denominador decía f(y + r) − f(y); corregido a f(y + r_h) − f(y).
+- Ejemplo 77: la derivada general del polinomio decía «a₁ + 2a₂x + 3a² + ⋯»; corregido a «3a₃x²».
+- Ejemplo 78: «Por la la regla» → «Por la regla».
+- Ejemplo 82: el enunciado decía ln(x+3x²) + 3√(1+x²) pero toda la solución usa 5√(1+x²); se cambió el enunciado a 5.
+- Numeración de cuadros: en el capítulo 5 solo el cuadro de derivadas comunes lleva número (Cuadro 5.1; en el PDF aparecía como 5.3 porque se contaban los recuadros de interpretación).
+- Ejemplo 85: con s(t) = 40 sen(πt/2 + π/2) se obtiene a(t) = v'(t) = −10π² sen(πt/2 + π/2) (no −5π²), a(0) = −10π² cm/s² (no −15π²) y v(3) = 20π cos(2π) = 20π cm/s (no −20π). Corregido.
+- Ejemplo 86: el tiempo está en horas, así que la unidad de T'(2) es °C/h (decía °C/s).
+- Texto tras el ejercicio 255 (MRUA): decía s(t) = −½αt² + v₀t + s₀; con aceleración constante α la fórmula es s(t) = ½αt² + v₀t + s₀ (con α = −g se recupera −(98/20)t² de los ejercicios). Corregido.
+- Ejercicio 268: decía «si p = a o p = p»; corregido a «p = a o p = b».
+- Texto antes del ejemplo 89: decía «el cual usamos en el ejercicio 53»; las desigualdades se usan en el ejemplo 53 (lím sen(x)/x). Corregido a «ejemplo».
+- Ejemplo 94: decía que el máximo global es f(5/2) = 65/2; f(5/2) = 125/8 − 15/2 = 65/8 (como en el pie de la figura 5.25). Corregido.
+- Pie de la figura 5.26: tenía intercambiados mínimo y máximo global (el mínimo es f(2) = −8/3 y el máximo f(0) = 0). Corregido.
+- Ejemplo 95: «El el mínimo global» → «El mínimo global».
+- Ejemplo 96, paso 5: «cóncava hacia arriba o cóncava hacia arriba» → «… o cóncava hacia abajo»; paso 9: «asóntotas» → «asíntotas», y «lím f(x) − l» → «lím f(x) − l(x)».
+- Ejemplo 98: la conclusión decía «Así, R es un rectángulo»; lo que se prueba es que R es un cuadrado. Corregido.
+- Pie de la figura 5.29: «circunscrito en una circunferencia» → «inscrito en una circunferencia».
+- Texto tras el ejemplo 97: «perdida» → «pérdida».
+- Ejercicio 275: «los incisos 3 y 4 del ejemplo 89» → «los incisos (c) y (d)».
+- Ejercicio 281: «deribable» → «derivable».
+- Texto al inicio de la sección 5.9: decía «si f es derivable en p, entonces f'(p) está dada por lím (f(x+h) − f(x))/h»; corregido a f(p+h) − f(p).
+- Ejercicio 311: la pregunta terminaba sin signo de cierre; se añadió «?».
+- Prop. 68, dem.: la cota «≤ ε/2 + L» debe ser «≤ ε/2 + |L|»; y en el caso L = ∞ la desigualdad (5.45) debe pedir f'/g' > 2(M + 1) (no 2M + 1) para que al final quede f/g > 2(M+1)·½ − 1 = M. Corregido.
+- Sección 5.9, ejercicios: la primera lista «Calcula los límites siguientes» aparece sin número de ejercicio en el original; se dejó sin número para conservar la numeración 315–322.
+- Ejemplo 107: «numero» → «número»; «e ∼ P» → «e ≈ P».
+- Prop. 71: la nota al pie y el último párrafo decían «corolario 71»; es la proposición 71.
+- Sección 5.10: el índice alfabético del PDF tenía como entrada la frase «En [9] estudiaremos otras formas del resto, después de que hayamos visto la integral.» (evidentemente una nota al pie indexada por error); se puso como nota al pie junto a «forma de Lagrange del resto» y no en el índice.

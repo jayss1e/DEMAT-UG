@@ -1,0 +1,12 @@
+\documentclass[border=4pt]{standalone}
+\usepackage{graficas}
+
+\begin{document}
+\begin{tikzpicture}
+    \begin{axis}[grafica, xmin=-5, xmax=5, ymin=-2, ymax=6]
+        \addplot[domain=-5:2, samples=200] {exp(x)};
+        \node[punto] at (axis cs:0,1) {};
+        \node[anchor=south east, font=\scriptsize] at (axis cs:0,1) {$1$};
+    \end{axis}
+\end{tikzpicture}
+\end{document}

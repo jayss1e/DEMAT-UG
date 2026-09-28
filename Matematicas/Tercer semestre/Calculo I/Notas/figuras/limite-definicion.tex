@@ -1,0 +1,38 @@
+\documentclass[border=4pt]{standalone}
+\usepackage{graficas}
+
+\begin{document}
+\begin{tikzpicture}
+    \begin{axis}[grafica, width=8cm, height=5.5cm, xmin=-2.2, xmax=6.5, ymin=-1.6, ymax=4.8]
+        % f(x) = e^{x/1.2}/5 aprox.; p = 3, L = f(3)
+        \pgfmathsetmacro{\p}{3}
+        \pgfmathsetmacro{\d}{0.5}
+        \pgfmathsetmacro{\L}{0.08*exp(0.85*\p)}
+        \pgfmathsetmacro{\Lmas}{0.08*exp(0.85*(\p+\d))}
+        \pgfmathsetmacro{\Lmenos}{\L-(\Lmas-\L)}
+        \addplot[domain=-2.2:4.8, samples=200] {0.08*exp(0.85*x)};
+        \node[font=\small] at (axis cs:4.3,3.6) {$f$};
+        % líneas punteadas
+        \draw[red!70, dashed, line width=0.5pt] (axis cs:0,\Lmas) -- (axis cs:\p+\d,\Lmas);
+        \draw[red!70, dashed, line width=0.5pt] (axis cs:0,\L) -- (axis cs:\p,\L);
+        \draw[red!70, dashed, line width=0.5pt] (axis cs:0,\Lmenos) -- (axis cs:{ln(\Lmenos/0.08)/0.85},\Lmenos);
+        \draw[blue!70, dashed, line width=0.5pt] (axis cs:\p-\d,0) -- (axis cs:\p-\d,{0.08*exp(0.85*(\p-\d))});
+        \draw[blue!70, dashed, line width=0.5pt] (axis cs:\p,0) -- (axis cs:\p,\L);
+        \draw[blue!70, dashed, line width=0.5pt] (axis cs:\p+\d,0) -- (axis cs:\p+\d,\Lmas);
+        % intervalos U (rojo) y V (azul)
+        \draw[red, line width=1.4pt] (axis cs:0,\Lmenos) -- (axis cs:0,\Lmas);
+        \draw[blue, line width=1.4pt] (axis cs:\p-\d,0) -- (axis cs:\p+\d,0);
+        \node[puntovacio] at (axis cs:0,\Lmenos) {};
+        \node[puntovacio] at (axis cs:0,\Lmas) {};
+        \node[puntovacio] at (axis cs:\p-\d,0) {};
+        \node[puntovacio] at (axis cs:\p+\d,0) {};
+        \draw[gray] (axis cs:-0.08,\L) -- (axis cs:0.08,\L);
+        \node[anchor=east, font=\scriptsize] at (axis cs:-0.12,\Lmas) {$L+\epsilon$};
+        \node[anchor=east, font=\scriptsize] at (axis cs:-0.12,\L) {$L$};
+        \node[anchor=east, font=\scriptsize] at (axis cs:-0.12,\Lmenos) {$L-\epsilon$};
+        \node[anchor=north, font=\scriptsize] at (axis cs:\p-\d-0.2,-0.12) {$p-\delta$};
+        \node[anchor=north, font=\scriptsize] at (axis cs:\p,-0.12) {$p$};
+        \node[anchor=north, font=\scriptsize] at (axis cs:\p+\d+0.25,-0.12) {$p+\delta$};
+    \end{axis}
+\end{tikzpicture}
+\end{document}

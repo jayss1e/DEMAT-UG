@@ -1,0 +1,21 @@
+\documentclass[border=4pt]{standalone}
+\usepackage{graficas}
+
+\begin{document}
+\begin{tikzpicture}
+    \begin{axis}[grafica, width=6cm, height=6cm, xmin=-3, xmax=4.5, ymin=-3, ymax=9]
+        \addplot[domain=-2.05:2.65, samples=200] {x^3-3*x};
+        \addplot[red!85, line width=1.1pt, domain={-sqrt(3)}:2.5, samples=2] {0};
+        \draw[red!80, dashed, line width=0.8pt] (axis cs:0,65/8) -- (axis cs:2.5,65/8) -- (axis cs:2.5,0);
+        \draw[red!80, dashed, line width=0.8pt] (axis cs:1,0) -- (axis cs:1,-2) -- (axis cs:0,-2);
+        \node[punto, inner sep=1pt] at (axis cs:2.5,65/8) {};
+        \node[punto, inner sep=1pt] at (axis cs:1,-2) {};
+        \node[anchor=east, font=\scriptsize] at (axis cs:-0.05,65/8) {$\frac{65}{8}$};
+        \node[anchor=east, font=\scriptsize] at (axis cs:-0.05,-2) {$-2$};
+        \node[anchor=south east, font=\scriptsize] at (axis cs:{-sqrt(3)},0) {$-\sqrt{3}$};
+        \node[anchor=south, font=\scriptsize] at (axis cs:1,0.05) {$1$};
+        \node[anchor=north west, font=\scriptsize] at (axis cs:2.5,-0.05) {$\frac{5}{2}$};
+        \node[font=\small] at (axis cs:-1.5,3) {$f$};
+    \end{axis}
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,12 @@
+\documentclass[border=4pt]{standalone}
+\usepackage{graficas}
+
+\begin{document}
+\begin{tikzpicture}
+    \begin{axis}[grafica, xmin=-3, xmax=3, ymin=-3, ymax=3]
+        \addplot[domain=-1.55:1.55] {x^3};
+        \node[punto, inner sep=1pt] at (axis cs:0,0) {};
+        \node[anchor=south, font=\scriptsize] at (axis cs:-0.2,0.1) {$(0,0)$};
+    \end{axis}
+\end{tikzpicture}
+\end{document}

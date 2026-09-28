@@ -1,0 +1,10 @@
+\documentclass[border=4pt]{standalone}
+\usepackage{graficas}
+
+\begin{document}
+\begin{tikzpicture}
+    \begin{axis}[grafica, xmin=-3, xmax=3, ymin=-1, ymax=3]
+        \addplot[domain=-3:3, samples=3, smooth=false, sharp plot] {abs(x)};
+    \end{axis}
+\end{tikzpicture}
+\end{document}

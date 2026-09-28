@@ -1,0 +1,14 @@
+\documentclass[border=4pt]{standalone}
+\usepackage{graficas}
+
+\begin{document}
+\begin{tikzpicture}
+    \begin{axis}[grafica, xmin=-4, xmax=4, ymin=-2.5, ymax=2.5]
+        \addplot[domain=-4:4] {x/2+1};
+        \node[punto] at (axis cs:0,1) {};
+        \node[punto] at (axis cs:-2,0) {};
+        \node[anchor=south east, font=\scriptsize] at (axis cs:0,1) {$1$};
+        \node[anchor=north, font=\scriptsize] at (axis cs:-2,-0.1) {$-2$};
+    \end{axis}
+\end{tikzpicture}
+\end{document}

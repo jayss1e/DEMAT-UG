@@ -1,0 +1,14 @@
+\documentclass[border=4pt]{standalone}
+\usepackage{graficas}
+
+\begin{document}
+\begin{tikzpicture}
+    \begin{axis}[grafica, xmin=-0.45, xmax=0.45, ymin=-0.1, ymax=0.1, trig format plots=rad]
+        \addplot[red!70, dashed, line width=0.4pt, domain=-0.45:0.45, samples=100] {x^2};
+        \addplot[red!70, dashed, line width=0.4pt, domain=-0.45:0.45, samples=100] {-x^2};
+        % x = 1/t, muestreando en t para resolver las oscilaciones cerca de 0
+        \addplot[domain=2.2:150, samples=3000, variable=t] ({1/t}, {sin(t)/t^2});
+        \addplot[domain=2.2:150, samples=3000, variable=t] ({-1/t}, {-sin(t)/t^2});
+    \end{axis}
+\end{tikzpicture}
+\end{document}

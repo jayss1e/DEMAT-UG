@@ -1,0 +1,15 @@
+\documentclass[border=4pt]{standalone}
+\usepackage{graficas}
+
+\begin{document}
+\begin{tikzpicture}
+    \begin{axis}[grafica, panel=(a), xmin=-5, xmax=5, ymin=-3, ymax=3]
+        \addplot[domain=0.1:5, samples=300] {1/x};
+        \addplot[domain=-5:-0.1, samples=300] {1/x};
+    \end{axis}
+    \begin{axis}[grafica, panel=(b), at={(7.2cm,0)}, xmin=-5, xmax=5, ymin=-3, ymax=3]
+        \addplot[domain=0.25:5, samples=300] {1/x^2};
+        \addplot[domain=-5:-0.25, samples=300] {1/x^2};
+    \end{axis}
+\end{tikzpicture}
+\end{document}

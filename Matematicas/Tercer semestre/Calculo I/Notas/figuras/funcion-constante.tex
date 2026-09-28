@@ -1,0 +1,17 @@
+\documentclass[border=4pt]{standalone}
+\usepackage{graficas}
+
+\begin{document}
+\begin{tikzpicture}
+    \begin{axis}[grafica, panel=(a), xmin=-3, xmax=3, ymin=-2, ymax=2]
+        \addplot[domain=-3:3] {1};
+        \node[anchor=south east, font=\scriptsize] at (axis cs:0,1) {$1$};
+        \node[anchor=north east, font=\scriptsize] at (axis cs:0,0) {$0$};
+    \end{axis}
+    \begin{axis}[grafica, panel=(b), at={(7.2cm,0)}, xmin=-3, xmax=3, ymin=-2, ymax=2]
+        \addplot[domain=-3:3] {-1};
+        \node[anchor=north east, font=\scriptsize] at (axis cs:0,-1) {$-1$};
+        \node[anchor=south east, font=\scriptsize] at (axis cs:0,0) {$0$};
+    \end{axis}
+\end{tikzpicture}
+\end{document}

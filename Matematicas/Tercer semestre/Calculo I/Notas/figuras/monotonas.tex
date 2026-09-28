@@ -1,0 +1,25 @@
+\documentclass[border=4pt]{standalone}
+\usepackage{graficas}
+
+\begin{document}
+\begin{tikzpicture}
+    % (a) creciente, (b) decreciente
+    \begin{axis}[grafica, axis lines=none, panel=(a), xmin=-2, xmax=2, ymin=-2.2, ymax=2.2]
+        \addplot[domain=-1.35:1.35] {x^3};
+    \end{axis}
+    \begin{axis}[grafica, axis lines=none, panel=(b), at={(7.2cm,0)}, xmin=-2, xmax=2, ymin=-2.2, ymax=2.2]
+        \addplot[domain=-1.35:1.35] {-x^3};
+    \end{axis}
+    % (c) monótona creciente, (d) monótona decreciente
+    \begin{axis}[grafica, axis lines=none, panel=(c), at={(0,-5.7cm)}, xmin=-2, xmax=2, ymin=-2.2, ymax=2.2]
+        \addplot[domain=-1.95:-0.7] {(x+0.7)^3};
+        \addplot[domain=-0.7:0.7] {0};
+        \addplot[domain=0.7:1.95] {(x-0.7)^3};
+    \end{axis}
+    \begin{axis}[grafica, axis lines=none, panel=(d), at={(7.2cm,-5.7cm)}, xmin=-2, xmax=2, ymin=-2.2, ymax=2.2]
+        \addplot[domain=-1.95:-0.7] {-(x+0.7)^3};
+        \addplot[domain=-0.7:0.7] {0};
+        \addplot[domain=0.7:1.95] {-(x-0.7)^3};
+    \end{axis}
+\end{tikzpicture}
+\end{document}

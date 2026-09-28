@@ -1,0 +1,174 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{ugmath}[2025/01/01 Estilo matemático personal (notas de Cálculo I)]
+% Copia propia de ugmath.sty para las notas de Cálculo I.
+% A diferencia de las demás notas, aquí los entornos de Definición,
+% Proposición, Teorema, etc. NO van en cajas: se tipografían como en el
+% PDF original, con el encabezado en negritas seguido del texto en el
+% mismo párrafo, numeración continua a lo largo de todo el libro y
+% párrafos con sangría.
+
+% ========== CONFIGURACIÓN INICIAL ==========
+\RequirePackage[spanish]{babel}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[T1]{fontenc}
+\RequirePackage{lmodern}
+\RequirePackage{microtype}
+
+% ========== GEOMETRÍA (MÁRGENES) ==========
+% ¡IMPORTANTE! Esto debe ir ANTES de otros paquetes que usen geometry
+\RequirePackage[%
+    top=1.5cm,      % Margen superior
+    bottom=1.5cm,   % Margen inferior
+    left=1.5cm,     % Margen izquierdo
+    right=1.5cm,    % Margen derecho
+    marginparwidth=2.0cm,  % Ancho del margen para notas
+    marginparsep=10pt      % Separación del texto principal
+]{geometry}
+
+% ========== COLORES ==========
+\RequirePackage[dvipsnames]{xcolor}
+\definecolor{UGblue}{RGB}{0,51,102}
+\definecolor{UGgold}{RGB}{212,175,55}
+
+% ========== PAQUETES ==========
+\RequirePackage{setspace}
+\setstretch{1.2}
+
+\RequirePackage{amsmath,amssymb,amsthm,mathtools}
+\RequirePackage{graphicx}
+\RequirePackage{tikz}
+\usetikzlibrary{calc,decorations.pathreplacing,angles,quotes,arrows}
+\RequirePackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\RequirePackage{caption}
+\RequirePackage{mathrsfs}
+\RequirePackage{stmaryrd}
+\RequirePackage{physics}
+\RequirePackage{enumitem}
+\RequirePackage{csquotes}
+\RequirePackage{multicol}
+\RequirePackage{tocloft}
+
+% =========================================================
+% ENTORNOS MATEMÁTICOS SIN CAJA (como en el PDF original)
+% =========================================================
+
+% ─── Contadores (numeración continua en todo el libro) ─────────────
+\newcounter{defn}
+\newcounter{teor}
+\newcounter{prop}
+\newcounter{lema}
+\newcounter{coro}
+\newcounter{obs}
+\newcounter{crit}
+\newcounter{ejemplo}
+\newcounter{ejercicio}
+
+% ─── Protección contra encabezados huérfanos ────────────────────────
+\newcommand{\avoidorphan}[1]{\ifdim\dimexpr\pagegoal-\pagetotal\relax<#1\baselineskip \newpage \fi}
+
+% ─── Encabezado corrido ─────────────────────────────────────────────
+% #1 = etiqueta, #2 = número, #3 = título opcional (va entre paréntesis,
+% en negritas y en la forma de letra del cuerpo del entorno).
+\newcommand{\@ugmathrunin}[3]{%
+  \par\addvspace{\medskipamount}\noindent
+  {\upshape\bfseries #1~#2}%
+  \ifx&#3&\else\space{\bfseries\boldmath(#3)}\fi
+  \enspace\ignorespaces
+}
+
+% Entornos con cuerpo recto
+\newcommand{\@ugmathplain}[3]{%
+  \newenvironment{#1}[1][]{%
+    \refstepcounter{#3}\normalfont
+    \@ugmathrunin{#2}{\csname the#3\endcsname}{##1}%
+  }{%
+    \par\addvspace{\medskipamount}%
+  }%
+}
+% Entornos con cuerpo en cursiva
+\newcommand{\@ugmathital}[3]{%
+  \newenvironment{#1}[1][]{%
+    \refstepcounter{#3}\normalfont\itshape
+    \@ugmathrunin{#2}{\csname the#3\endcsname}{##1}%
+  }{%
+    \par\addvspace{\medskipamount}%
+  }%
+}
+
+\@ugmathplain{definicion}{Definición}{defn}
+\@ugmathplain{observacion}{Observación}{obs}
+\@ugmathplain{criterio}{Criterio}{crit}
+\@ugmathital{teorema}{Teorema}{teor}
+\@ugmathital{proposicion}{Proposición}{prop}
+\@ugmathital{lema}{Lema}{lema}
+\@ugmathital{corolario}{Corolario}{coro}
+
+% ─── Ejemplo: termina con ▲ al final del último renglón ────────────
+% Si el ejemplo termina con una fórmula desplegada, se escribe \finej
+% al final de la fórmula para poner ahí el ▲ (como en el PDF original).
+\newif\ifejfin
+\newcommand{\finej}{\ensuremath{\quad\blacktriangle}\global\ejfintrue}
+\newenvironment{ejemplo}[1][]{%
+  \par\avoidorphan{3}%
+  \refstepcounter{ejemplo}\normalfont\global\ejfinfalse
+  \@ugmathrunin{Ejemplo}{\theejemplo}{#1}%
+}{%
+  \ifejfin\else
+    \ifhmode\unskip\nobreak\enspace\fi$\blacktriangle$%
+  \fi
+  \par\addvspace{\medskipamount}%
+}
+
+% ─── Ejercicio ─────────────────────────────────────────────────────
+\newenvironment{ejercicio}[1][]{%
+  \par\avoidorphan{3}%
+  \refstepcounter{ejercicio}\normalfont
+  \@ugmathrunin{Ejercicio}{\theejercicio}{#1}%
+}{%
+  \par\addvspace{\medskipamount}%
+}
+
+% ─── Demostración: «Demostración.» en cursiva y ■ al final del texto ─
+\renewcommand{\qedsymbol}{$\blacksquare$}
+\renewcommand{\qed}{\leavevmode\unskip\nobreak\enspace\hbox{\qedsymbol}}
+\renewenvironment{proof}[1][\proofname]{%
+  \par\pushQED{\qed}\normalfont\addvspace{\medskipamount}\noindent
+  {\itshape #1.}\enspace\ignorespaces
+}{%
+  \popQED\par\addvspace{\medskipamount}%
+}
+
+% ─── Sugerencia dentro de los ejercicios ───────────────────────────
+\newcommand{\sugerencia}{\noindent\textbf{Sugerencia:}\space}
+
+% ========== HIPERVÍNCULOS ==========
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=UGblue,
+    urlcolor=UGgold,
+    citecolor=UGblue,
+    pdftitle={Cálculo I},
+    pdfauthor={}
+}
+
+% ========== COMANDOS MATEMÁTICOS ==========
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\gt}{\ensuremath{>}}
+\newcommand{\lt}{\ensuremath{<}}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+
+% ========== CONFIGURACIÓN DE PÁRRAFOS ==========
+% Como en el PDF original: párrafos con sangría y sin espacio extra.
+\setlength{\parindent}{1.5em}
+\setlength{\parskip}{0pt}
+
+% ========== ENTORNOS ==========
+\newenvironment{solucion}
+  {\par\noindent\textit{Solución. }\ignorespaces}
+  {\hfill$\blacktriangle$\par}

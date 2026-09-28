@@ -1,0 +1,28 @@
+\documentclass[border=4pt]{standalone}
+\usepackage{graficas}
+
+\begin{document}
+\begin{tikzpicture}
+    \pgfmathdeclarefunction{fun}{1}{\pgfmathparse{6*(#1)^5-10*(#1)^3}}
+    \begin{axis}[grafica, width=9cm, height=6cm, xmin=-2.2, xmax=2.8, ymin=-6, ymax=6]
+        \addplot[domain=-1.42:1.42, samples=300] {fun(x)};
+        \pgfmathsetmacro{\r}{sqrt(5/3)}
+        \pgfmathsetmacro{\s}{1/sqrt(2)}
+        \pgfmathsetmacro{\fs}{7/(2*sqrt(2))}
+        \node[punto] at (axis cs:-1,4) {};
+        \node[punto] at (axis cs:1,-4) {};
+        \node[punto] at (axis cs:0,0) {};
+        \node[punto] at (axis cs:-\r,0) {};
+        \node[punto] at (axis cs:\r,0) {};
+        \node[punto] at (axis cs:-\s,\fs) {};
+        \node[punto] at (axis cs:\s,-\fs) {};
+        \node[anchor=east, font=\scriptsize] at (axis cs:-1.08,4.2) {$(-1,4)$};
+        \node[anchor=west, font=\scriptsize] at (axis cs:1.08,-4.2) {$(1,-4)$};
+        \node[anchor=south west, font=\scriptsize] at (axis cs:0.02,0.1) {$(0,0)$};
+        \node[anchor=south east, font=\scriptsize] at (axis cs:-\r-0.02,0.1) {$(-\sqrt{5}/\sqrt{3},0)$};
+        \node[anchor=south west, font=\scriptsize] at (axis cs:\r+0.02,0.1) {$(\sqrt{5}/\sqrt{3},0)$};
+        \node[anchor=west, font=\scriptsize] at (axis cs:-\s+0.1,\fs) {$(-1/\sqrt{2},7/2\sqrt{2})$};
+        \node[anchor=east, font=\scriptsize] at (axis cs:\s-0.1,-\fs) {$(1/\sqrt{2},-7/2\sqrt{2})$};
+    \end{axis}
+\end{tikzpicture}
+\end{document}

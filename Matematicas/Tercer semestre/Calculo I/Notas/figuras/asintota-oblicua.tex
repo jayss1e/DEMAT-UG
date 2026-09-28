@@ -1,0 +1,14 @@
+\documentclass[border=4pt]{standalone}
+\usepackage{graficas}
+
+\begin{document}
+\begin{tikzpicture}
+    \begin{axis}[grafica, width=8cm, height=5cm, xmin=-6, xmax=6, ymin=-6, ymax=6]
+        \addplot[red!80, dashed, line width=0.9pt, domain=-6:6, samples=2] {x/2+5/4};
+        \addplot[domain=-0.28:6, samples=300] {(x^2+3*x+4)/(2*x+1)};
+        \addplot[domain=-6:-0.72, samples=300] {(x^2+3*x+4)/(2*x+1)};
+        \node[font=\small] at (axis cs:-3.3,4.3) {$f(x)=\dfrac{x^{2}+3x+4}{2x+1}$};
+        \node[font=\small] at (axis cs:3.5,1.4) {$y=\dfrac{x}{2}+\dfrac{5}{4}$};
+    \end{axis}
+\end{tikzpicture}
+\end{document}

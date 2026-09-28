@@ -1,0 +1,24 @@
+\documentclass[border=4pt]{standalone}
+\usepackage{tikz}
+
+\begin{document}
+\begin{tikzpicture}[x=1cm, y=1cm, font=\small]
+
+    % ejes
+    \draw (-1.2,0) -- (4.8,0);
+    \draw (0,-0.9) -- (0,2.8);
+    \node at (4.5,-0.3) {$X$};
+    \node at (-0.3,2.6) {$Y$};
+    \node at (-0.25,-0.25) {$0$};
+
+    % punto P y sus proyecciones
+    \draw[red, dashed, thick] (0,1.5) -- (2.8,1.5) -- (2.8,0);
+    \draw[thick] (2.8,-0.08) -- (2.8,0.08);
+    \draw[thick] (-0.08,1.5) -- (0.08,1.5);
+    \fill (2.8,1.5) circle (1.8pt);
+    \node[above right] at (2.8,1.5) {$P=(x,y)$};
+    \node[below] at (2.8,-0.1) {$x$};
+    \node[left] at (-0.1,1.5) {$y$};
+
+\end{tikzpicture}
+\end{document}

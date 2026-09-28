@@ -1,0 +1,12 @@
+\documentclass[border=4pt]{standalone}
+\usepackage{graficas}
+
+\begin{document}
+\begin{tikzpicture}
+    \begin{axis}[grafica, xmin=-2, xmax=7, ymin=-3, ymax=2.5]
+        \addplot[domain=0.05:7, samples=300] {ln(x)};
+        \node[punto] at (axis cs:1,0) {};
+        \node[anchor=north, font=\scriptsize] at (axis cs:1.1,-0.05) {$1$};
+    \end{axis}
+\end{tikzpicture}
+\end{document}

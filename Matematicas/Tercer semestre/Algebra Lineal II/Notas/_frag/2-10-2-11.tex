@@ -1,0 +1,415 @@
+\section{Condicionamiento y el cociente de Rayleigh}
+
+En la Sección~1.3 estudiamos técnicas específicas que permiten resolver sistemas de ecuaciones lineales de la forma $Ax=b$, donde $A$ es una matriz $m\times n$ y $b$ es un vector $m\times 1$. Tales sistemas surgen con frecuencia en aplicaciones al mundo real. Los coeficientes del sistema suelen obtenerse a partir de datos experimentales y, en muchos casos, tanto $m$ como $n$ son tan grandes que debe usarse una computadora en el cálculo de la solución. Así, deben considerarse dos tipos de errores. Primero, surgen errores experimentales en la recolección de datos, pues ningún instrumento puede proporcionar mediciones completamente exactas. Segundo, las computadoras introducen errores de redondeo. Uno podría sentir intuitivamente que pequeños cambios relativos en los coeficientes del sistema provocan pequeños errores relativos en la solución. Un sistema que tiene esta propiedad se llama \textbf{bien condicionado}; en caso contrario, se llama \textbf{mal condicionado}.
+
+Consideramos ahora varios ejemplos de estos tipos de errores, concentrándonos principalmente en cambios en $b$ en lugar de en las entradas de $A$. Además, suponemos que $A$ es una matriz cuadrada, compleja (o real) e invertible, pues es el caso que se encuentra con más frecuencia en las aplicaciones.
+
+\begin{ejemplo}
+    Consideremos el sistema
+    \begin{align*}
+        x_1+x_2&=5\\
+        x_1-x_2&=1.
+    \end{align*}
+    La solución de este sistema es
+    \begin{equation*}
+        \begin{pmatrix}3\\2\end{pmatrix}.
+    \end{equation*}
+    Supongamos ahora que modificamos un poco el sistema y consideramos el nuevo sistema
+    \begin{align*}
+        x_1+x_2&=5\\
+        x_1-x_2&=1.0001.
+    \end{align*}
+    Este sistema modificado tiene la solución
+    \begin{equation*}
+        \begin{pmatrix}3.00005\\1.99995\end{pmatrix}.
+    \end{equation*}
+    Vemos que un cambio de $10^{-4}$ en un coeficiente ha provocado un cambio menor a $10^{-4}$ en cada coordenada de la nueva solución. Más generalmente, el sistema
+    \begin{align*}
+        x_1+x_2&=5\\
+        x_1-x_2&=1+\delta
+    \end{align*}
+    tiene la solución
+    \begin{equation*}
+        \begin{pmatrix}3+\delta/2\\2-\delta/2\end{pmatrix}.
+    \end{equation*}
+    Así, pequeños cambios en $b$ introducen pequeños cambios en la solución. Por supuesto, en realidad nos interesan los \textit{cambios relativos}, pues un cambio en la solución de, digamos, $10$ se considera grande si la solución original es del orden $10^{-2}$, pero pequeño si la solución original es del orden $10^{6}$.
+
+    Usamos la notación $\delta b$ para denotar el vector $b'-b$, donde $b$ es el vector del sistema original y $b'$ es el vector del sistema modificado. Así, en este caso,
+    \begin{equation*}
+        \delta b=\begin{pmatrix}5\\1+h\end{pmatrix}-\begin{pmatrix}5\\1\end{pmatrix}=\begin{pmatrix}0\\h\end{pmatrix}.
+    \end{equation*}
+    Definimos ahora el \textbf{cambio relativo} en $b$ como el escalar $\norm{\delta b}/\norm{b}$, donde $\norm{\cdot}$ denota la norma usual en $\C^n$ (o en $\R^n$); es decir, $\norm{b}=\sqrt{\ip{b}{b}}$. La mayor parte de lo que sigue, sin embargo, es válido para cualquier norma. Definiciones análogas valen para el \textbf{cambio relativo} en $x$. En este ejemplo,
+    \begin{equation*}
+        \frac{\norm{\delta b}}{\norm{b}}=\frac{|h|}{\sqrt{26}}
+        \qquad\text{y}\qquad
+        \frac{\norm{\delta x}}{\norm{x}}=\frac{\left\lVert\left(\begin{smallmatrix}3+(h/2)\\2-(h/2)\end{smallmatrix}\right)-\left(\begin{smallmatrix}3\\2\end{smallmatrix}\right)\right\rVert}{\left\lVert\left(\begin{smallmatrix}3\\2\end{smallmatrix}\right)\right\rVert}=\frac{|h|}{\sqrt{26}}.
+    \end{equation*}
+    Así, el cambio relativo en $x$ es igual, coincidentemente, al cambio relativo en $b$; de modo que el sistema está bien condicionado.
+\end{ejemplo}
+
+\begin{ejemplo}
+    Consideremos el sistema
+    \begin{align*}
+        x_1+x_2&=3\\
+        x_1+1.00001x_2&=3.00001,
+    \end{align*}
+    que tiene como solución
+    \begin{equation*}
+        \begin{pmatrix}2\\1\end{pmatrix}.
+    \end{equation*}
+    La solución del sistema relacionado
+    \begin{align*}
+        x_1+x_2&=3\\
+        x_1+1.00001x_2&=3.00001+\delta
+    \end{align*}
+    es
+    \begin{equation*}
+        \begin{pmatrix}2-(10^5)h\\1+(10^5)h\end{pmatrix}.
+    \end{equation*}
+    Por tanto,
+    \begin{equation*}
+        \frac{\norm{\delta x}}{\norm{x}}=10^5\sqrt{2/5}\,|h|\geq 10^4|h|,
+    \end{equation*}
+    mientras que
+    \begin{equation*}
+        \frac{\norm{\delta b}}{\norm{b}}\approx\frac{|h|}{3\sqrt2}.
+    \end{equation*}
+    Así, el cambio relativo en $x$ es al menos $10^4$ veces el cambio relativo en $b$. Este sistema está muy mal condicionado. Observemos que las rectas definidas por las dos ecuaciones son casi coincidentes; así, un pequeño cambio en cualquiera de las dos rectas podría alterar considerablemente el punto de intersección, es decir, la solución del sistema.
+\end{ejemplo}
+
+Para aplicar toda la fuerza de la teoría de las matrices autoadjuntas al estudio del condicionamiento, necesitamos la noción de la norma de una matriz.
+
+\begin{definicion}[Norma euclidiana de una matriz]
+    Sea $A$ una matriz $n\times n$ compleja (o real). Se define la \textbf{norma (euclidiana)} de $A$ por
+    \begin{equation*}
+        \norm{A}=\max_{x\neq 0}\frac{\norm{Ax}}{\norm{x}},
+    \end{equation*}
+    donde $x\in\C^n$ o $x\in\R^n$.
+\end{definicion}
+
+Intuitivamente, $\norm{A}$ representa la máxima \textit{amplificación} de un vector por la matriz $A$. La pregunta de si este máximo existe o no, así como el problema de cómo calcularlo, puede responderse mediante el llamado cociente de Rayleigh.
+
+\begin{definicion}[Cociente de Rayleigh]
+    Sea $B$ una matriz autoadjunta $n\times n$. El \textbf{cociente de Rayleigh} para $x\neq 0$ se define como el escalar $R(x)=\ip{Bx}{x}/\norm{x}^2$.
+\end{definicion}
+
+El siguiente resultado caracteriza los valores extremos del cociente de Rayleigh de una matriz autoadjunta.
+
+\begin{teorema}
+    Para una matriz autoadjunta $B\in M_{n\times n}(F)$, se tiene que $\max_{x\neq 0}R(x)$ es el mayor valor propio de $B$, y $\min_{x\neq 0}R(x)$ es el menor valor propio de $B$.
+\end{teorema}
+
+\begin{proof}
+    Por el teorema espectral y el lema correspondiente ya establecidos para operadores autoadjuntos, podemos elegir una base ortonormal $\{v_1,v_2,\dots,v_n\}$ de vectores propios de $B$, tal que $Bv_i=\lambda_iv_i$ ($1\leq i\leq n$), con $\lambda_1\geq\lambda_2\geq\cdots\geq\lambda_n$ (recordemos que los valores propios de una matriz autoadjunta son reales). Ahora, para $x\in F^n$, existen escalares $a_1,a_2,\dots,a_n$ tales que
+    \begin{equation*}
+        x=\sum_{i=1}^{n}a_iv_i.
+    \end{equation*}
+    Por tanto,
+    \begin{align*}
+        R(x)&=\frac{\ip{Bx}{x}}{\norm{x}^2}=\frac{\ip*{\sum_{i=1}^{n}a_i\lambda_iv_i}{\sum_{j=1}^{n}a_jv_j}}{\norm{x}^2}\\
+        &=\frac{\sum_{i=1}^{n}\lambda_i|a_i|^2}{\norm{x}^2}\leq\frac{\lambda_1\sum_{i=1}^{n}|a_i|^2}{\norm{x}^2}=\frac{\lambda_1\norm{x}^2}{\norm{x}^2}=\lambda_1.
+    \end{align*}
+    Es fácil ver que $R(v_1)=\lambda_1$, así que hemos demostrado la primera mitad del teorema. La segunda mitad se prueba de manera análoga (acotando por $\lambda_n$ en vez de $\lambda_1$, y verificando que $R(v_n)=\lambda_n$).
+\end{proof}
+
+\begin{corolario}
+    Para cualquier matriz cuadrada $A$, $\norm{A}$ es finita y, de hecho, es igual a $\sqrt\lambda$, donde $\lambda$ es el mayor valor propio de $A^*A$.
+\end{corolario}
+
+\begin{proof}
+    Sea $B$ la matriz autoadjunta $A^*A$, y sea $\lambda$ el mayor valor propio de $B$. Como, para $x\neq 0$,
+    \begin{equation*}
+        0\leq\frac{\norm{Ax}^2}{\norm{x}^2}=\frac{\ip{Ax}{Ax}}{\norm{x}^2}=\frac{\ip{A^*Ax}{x}}{\norm{x}^2}=\frac{\ip{Bx}{x}}{\norm{x}^2}=R(x),
+    \end{equation*}
+    se sigue del teorema anterior que $\norm{A}^2=\lambda$.
+\end{proof}
+
+Observemos que la demostración del corolario anterior muestra que todos los valores propios de $A^*A$ son no negativos. Para nuestro siguiente resultado, necesitamos el siguiente lema.
+
+\begin{lema}
+    Para cualquier matriz cuadrada $A$, $\lambda$ es valor propio de $A^*A$ si y solo si $\lambda$ es valor propio de $AA^*$.
+\end{lema}
+
+\begin{proof}
+    Sea $\lambda$ un valor propio de $A^*A$. Si $\lambda=0$, entonces $A^*A$ no es invertible; por tanto $A$ y $A^*$ tampoco lo son (pues si $A$ fuera invertible, $A^*$ también lo sería —ya que $\det(A^*)=\overline{\det(A)}\neq 0$— y su producto $A^*A$ sería invertible), de modo que $\lambda=0$ también es valor propio de $AA^*$.
+
+    Supongamos ahora que $\lambda\neq 0$. Entonces existe $x\neq 0$ tal que $A^*Ax=\lambda x$. Apliquemos $A$ a ambos lados para obtener $(AA^*)(Ax)=\lambda(Ax)$. Como $Ax\neq 0$ (de lo contrario $\lambda x=A^*Ax=A^*0=0$, contradiciendo que $\lambda\neq0$ y $x\neq0$), se sigue que $\lambda$ es valor propio de $AA^*$.
+
+    Para el recíproco, basta aplicar lo ya probado a la matriz $A^*$ en lugar de $A$: como $(A^*)^*=A$, lo anterior (aplicado a $A^*$) dice que si $\lambda$ es valor propio de $(A^*)^*A^*=AA^*$, entonces $\lambda$ es valor propio de $A^*(A^*)^*=A^*A$, que es precisamente el recíproco.
+\end{proof}
+
+\begin{corolario}
+    Sea $A$ una matriz invertible. Entonces $\norm{A^{-1}}=1/\sqrt\lambda$, donde $\lambda$ es el menor valor propio de $A^*A$.
+\end{corolario}
+
+\begin{proof}
+    Recordemos que $\lambda$ es valor propio de una matriz invertible si y solo si $\lambda^{-1}$ es valor propio de su inversa.
+
+    Sean $\lambda_1\geq\lambda_2\geq\cdots\geq\lambda_n$ los valores propios de $A^*A$, los cuales, por el lema anterior, son los valores propios de $AA^*$. Entonces $\norm{A^{-1}}^2$ es igual al mayor valor propio de $(A^{-1})^*A^{-1}=(AA^*)^{-1}$, el cual es igual a $1/\lambda_n$.
+\end{proof}
+
+Para muchas aplicaciones, solo interesan el mayor y el menor de estos valores propios. Por ejemplo, en el caso de problemas de vibración, el menor valor propio representa la frecuencia más baja a la cual pueden ocurrir vibraciones.
+
+\begin{ejemplo}
+    Sea
+    \begin{equation*}
+        A=\begin{pmatrix}1&0&1\\-1&1&0\\0&1&1\end{pmatrix}.
+    \end{equation*}
+    Entonces
+    \begin{equation*}
+        B=A^*A=\begin{pmatrix}2&-1&1\\-1&2&1\\1&1&2\end{pmatrix}.
+    \end{equation*}
+    Los valores propios de $B$ son $3,3$ y $0$. Por tanto, $\norm{A}=\sqrt3$. Para cualquier
+    \begin{equation*}
+        x=\begin{pmatrix}a\\b\\c\end{pmatrix}\neq 0,
+    \end{equation*}
+    podemos calcular $R(x)$ para la matriz $B$ como
+    \begin{equation*}
+        3\geq R(x)=\frac{\ip{Bx}{x}}{\norm{x}^2}=\frac{2(a^2+b^2+c^2-ab+ac+bc)}{a^2+b^2+c^2}.
+    \end{equation*}
+\end{ejemplo}
+
+Ahora que sabemos que $\norm{A}$ existe para toda matriz cuadrada $A$, podemos hacer uso de la desigualdad $\norm{Ax}\leq\norm{A}\cdot\norm{x}$, válida para todo $x$ (pues $\norm{A}$ es, por definición, una cota superior de $\norm{Ax}/\norm{x}$ para $x\neq0$).
+
+Supongamos en lo que sigue que $A$ es invertible, $b\neq 0$, y $Ax=b$. Para un $\delta b$ dado, sea $\delta x$ el vector tal que $A(x+\delta x)=b+\delta b$. Entonces $A(\delta x)=\delta b$, y por tanto $\delta x=A^{-1}(\delta b)$. Así,
+\begin{equation*}
+    \norm{b}=\norm{Ax}\leq\norm{A}\cdot\norm{x}
+    \qquad\text{y}\qquad
+    \norm{\delta x}=\norm{A^{-1}(\delta b)}\leq\norm{A^{-1}}\cdot\norm{\delta b}.
+\end{equation*}
+Por tanto,
+\begin{equation*}
+    \frac{\norm{\delta x}}{\norm{x}}\leq\frac{\norm{A^{-1}}\cdot\norm{\delta b}\cdot\norm{A}}{\norm{b}}=\norm{A}\cdot\norm{A^{-1}}\cdot\left(\frac{\norm{\delta b}}{\norm{b}}\right).
+\end{equation*}
+Análogamente, como $\delta b=A(\delta x)$ y $x=A^{-1}b$, tenemos $\norm{\delta b}\leq\norm{A}\cdot\norm{\delta x}$ y $\norm{x}\leq\norm{A^{-1}}\cdot\norm{b}$; combinando estas dos desigualdades,
+\begin{equation*}
+    \frac{1}{\norm{A}\cdot\norm{A^{-1}}}\left(\frac{\norm{\delta b}}{\norm{b}}\right)\leq\frac{\norm{\delta x}}{\norm{x}}.
+\end{equation*}
+
+El número $\norm{A}\cdot\norm{A^{-1}}$ se llama el \textbf{número de condición} de $A$, y se denota $\mathrm{cond}(A)$. Debe notarse que la definición de $\mathrm{cond}(A)$ depende de cómo se defina la norma de $A$. Existen muchas formas razonables de definir la norma de una matriz; de hecho, la única propiedad necesaria para establecer las desigualdades anteriores es que $\norm{Ax}\leq\norm{A}\cdot\norm{x}$ para todo $x$. Resumimos estos resultados en el siguiente teorema.
+
+\begin{teorema}
+    Para el sistema $Ax=b$, donde $A$ es invertible y $b\neq 0$, se cumplen las siguientes afirmaciones.
+    \begin{enumerate}[label=(\alph*)]
+        \item Para cualquier norma $\norm{\cdot}$,
+        \begin{equation*}
+            \frac{1}{\mathrm{cond}(A)}\left(\frac{\norm{\delta b}}{\norm{b}}\right)\leq\frac{\norm{\delta x}}{\norm{x}}\leq\mathrm{cond}(A)\left(\frac{\norm{\delta b}}{\norm{b}}\right).
+        \end{equation*}
+        \item Si $\norm{\cdot}$ es la norma euclidiana, entonces $\mathrm{cond}(A)=\sqrt{\lambda_1/\lambda_n}$, donde $\lambda_1$ y $\lambda_n$ son, respectivamente, el mayor y el menor valores propios de $A^*A$.
+    \end{enumerate}
+\end{teorema}
+
+\begin{proof}
+    El inciso (a) se sigue de las dos desigualdades obtenidas justo antes de este teorema. El inciso (b) se sigue de los dos corolarios anteriores: $\mathrm{cond}(A)=\norm{A}\cdot\norm{A^{-1}}=\sqrt{\lambda_1}\cdot\dfrac{1}{\sqrt{\lambda_n}}=\sqrt{\lambda_1/\lambda_n}$.
+\end{proof}
+
+Es claro, del teorema anterior, que $\mathrm{cond}(A)\geq 1$. Puede probarse, sin mucha dificultad, que $\mathrm{cond}(A)=1$ si y solo si $A$ es un múltiplo escalar de una matriz unitaria u ortogonal. Más aún, puede mostrarse que la igualdad se alcanza en (a) mediante una elección apropiada de $b$ y $\delta b$.
+
+Vemos inmediatamente, de (a), que si $\mathrm{cond}(A)$ es cercano a $1$, un pequeño error relativo en $b$ obliga a un pequeño error relativo en $x$. Si $\mathrm{cond}(A)$ es grande, sin embargo, el error relativo en $x$ puede ser pequeño aunque el error relativo en $b$ sea grande, o el error relativo en $x$ puede ser grande aunque el error relativo en $b$ sea pequeño. En resumen, $\mathrm{cond}(A)$ solo indica el \textit{potencial} de errores relativos grandes.
+
+Hasta ahora solo hemos considerado errores en el vector $b$. Si hay un error $\delta A$ en la matriz de coeficientes, la situación es más complicada. Por ejemplo, $A+\delta A$ podría no ser invertible. Pero, bajo las hipótesis apropiadas, puede mostrarse que una cota para el error relativo en $x$ puede darse en términos de $\mathrm{cond}(A)$: si $A+\delta A$ es invertible, entonces
+\begin{equation*}
+    \frac{\norm{\delta x}}{\norm{x+\delta x}}\leq\mathrm{cond}(A)\frac{\norm{\delta A}}{\norm{A}}.
+\end{equation*}
+
+Debe mencionarse que, en la práctica, nunca se calcula $\mathrm{cond}(A)$ a partir de su definición, pues sería un desperdicio innecesario de tiempo calcular $A^{-1}$ únicamente para hallar su norma. De hecho, si se usa una computadora para encontrar $A^{-1}$, la inversa calculada probablemente solo aproxime a $A^{-1}$, y el error en la inversa calculada está afectado por el tamaño de $\mathrm{cond}(A)$. ¡Así que quedamos atrapados en un círculo vicioso! Existen, sin embargo, algunas situaciones en las que puede hallarse una aproximación utilizable de $\mathrm{cond}(A)$. Así, en la mayoría de los casos, la estimación del error relativo en $x$ se basa en una estimación de $\mathrm{cond}(A)$.
+
+\section{La geometría de los operadores ortogonales}
+
+Todo movimiento rígido sobre un espacio con producto interno real de dimensión finita es la composición de un operador ortogonal y una traslación (este hecho se estableció al estudiar los operadores ortogonales). Así, para entender a fondo la geometría de los movimientos rígidos, debemos analizar la estructura de los operadores ortogonales. Tal es el objetivo de esta sección. Mostramos que todo operador ortogonal sobre un espacio con producto interno real de dimensión finita es la composición de rotaciones y reflexiones.
+
+Este material supone familiaridad con los resultados sobre sumas directas desarrollados al final de la Sección~1.2, y con la definición y propiedades elementales del determinante de un operador lineal.
+
+\begin{definicion}[Rotación]
+    Sea $T$ un operador lineal sobre un espacio con producto interno real de dimensión finita $V$. El operador $T$ se llama \textbf{rotación} si $T$ es la identidad sobre $V$, o si existe un subespacio de dimensión dos $W$ de $V$, una base ortonormal $\{x_1,x_2\}$ de $W$, y un número real $\theta$ tales que
+    \begin{equation*}
+        T(x_1)=(\cos\theta)x_1+(\sin\theta)x_2, \qquad T(x_2)=-(\sin\theta)x_1+(\cos\theta)x_2,
+    \end{equation*}
+    y $T(y)=y$ para todo $y\in W^\perp$. En este contexto, $T$ se llama una \textbf{rotación de $W$ alrededor de $W^\perp$}. Al subespacio $W^\perp$ se le llama el \textbf{eje de rotación}.
+\end{definicion}
+
+\begin{definicion}[Reflexión]
+    Sea $T$ un operador lineal sobre un espacio con producto interno real de dimensión finita $V$. El operador $T$ se llama \textbf{reflexión} si existe un subespacio de dimensión uno $W$ de $V$ tal que $T(x)=-x$ para todo $x\in W$ y $T(y)=y$ para todo $y\in W^\perp$. En este contexto, $T$ se llama una \textbf{reflexión de $V$ alrededor de $W^\perp$}.
+\end{definicion}
+
+Debe notarse que las rotaciones y las reflexiones (o composiciones de estas) son operadores ortogonales. El objetivo principal de esta sección es establecer que el recíproco también es cierto, es decir, que todo operador ortogonal sobre un espacio con producto interno real de dimensión finita es la composición de rotaciones y reflexiones.
+
+\begin{ejemplo}[Caracterización de los operadores ortogonales sobre un espacio con producto interno real de dimensión uno]
+    Sea $T$ un operador ortogonal sobre un espacio con producto interno $V$ de dimensión uno. Elijamos un vector no nulo $x$ en $V$. Entonces $V=\gen{\{x\}}$, y por tanto $T(x)=\lambda x$ para algún $\lambda\in\R$. Como $T$ es ortogonal, $\lambda$ es valor propio de $T$, así que $\lambda=\pm 1$. Si $\lambda=1$, entonces $T$ es la identidad sobre $V$, y por tanto $T$ es una rotación. Si $\lambda=-1$, entonces $T(x)=-x$ para todo $x\in V$; así $T$ es una reflexión de $V$ alrededor de $W^\perp=\{0\}$. Notemos que, en el primer caso, $\det(T)=1$, y en el segundo, $\det(T)=-1$.
+\end{ejemplo}
+
+\begin{ejemplo}[Algunas reflexiones típicas]
+    (a) Sea $T:\R^2\to\R^2$ dado por $T(a,b)=(-a,b)$, y sea $W=\gen{\{e_1\}}$. Entonces $T(x)=-x$ para todo $x\in W$, y $T(y)=y$ para todo $y\in W^\perp$. Así, $T$ es una reflexión de $\R^2$ alrededor de $W^\perp=\gen{\{e_2\}}$, el eje $y$.
+
+    (b) Sea $T:\R^3\to\R^3$ dado por $T(a,b,c)=(a,b,-c)$, y sea $W=\gen{\{e_3\}}$. Entonces $T(x)=-x$ para todo $x\in W$, y $T(y)=y$ para todo $y\in W^\perp$. Así, $T$ es una reflexión de $\R^3$ alrededor de $W^\perp=\gen{\{e_1,e_2\}}$, el plano $xy$.
+\end{ejemplo}
+
+El ejemplo anterior caracteriza a todos los operadores ortogonales sobre un espacio con producto interno real de dimensión uno. El siguiente teorema caracteriza a todos los operadores ortogonales sobre un espacio con producto interno real de dimensión dos.
+
+\begin{teorema}
+    Sea $T$ un operador ortogonal sobre un espacio con producto interno real de dimensión dos $V$. Entonces $T$ es una rotación o una reflexión. Más aún, $T$ es una rotación si y solo si $\det(T)=1$, y $T$ es una reflexión si y solo si $\det(T)=-1$.
+\end{teorema}
+
+\begin{proof}
+    Sea $\BB=\{x_1,x_2\}$ una base ortonormal de $V$, y sea $A=[T]_{\BB}$. Como $T$ es ortogonal, las columnas de $A$ forman un conjunto ortonormal de $\R^2$. La primera columna es un vector unitario, así que existe $\theta\in\R$ tal que dicha columna es $(\cos\theta,\sin\theta)$. La segunda columna es un vector unitario ortogonal al primero, así que es igual a $(-\sin\theta,\cos\theta)$ o a $(\sin\theta,-\cos\theta)$.
+
+    \textbf{Caso 1: la segunda columna es $(-\sin\theta,\cos\theta)$.} Entonces
+    \begin{equation*}
+        A=\begin{pmatrix}\cos\theta&-\sin\theta\\\sin\theta&\cos\theta\end{pmatrix},
+    \end{equation*}
+    es decir, $T(x_1)=(\cos\theta)x_1+(\sin\theta)x_2$ y $T(x_2)=-(\sin\theta)x_1+(\cos\theta)x_2$. Como $V=W:=\gen{\BB}$ y $W^\perp=\{0\}$ (de modo que la condición sobre $W^\perp$ se cumple trivialmente), $T$ es, por definición, una rotación de $V$. Además, $\det(A)=\cos^2\theta+\sin^2\theta=1$.
+
+    \textbf{Caso 2: la segunda columna es $(\sin\theta,-\cos\theta)$.} Entonces
+    \begin{equation*}
+        A=\begin{pmatrix}\cos\theta&\sin\theta\\\sin\theta&-\cos\theta\end{pmatrix},
+    \end{equation*}
+    y $\det(A)=-\cos^2\theta-\sin^2\theta=-1$. El polinomio característico de $A$ es
+    \begin{equation*}
+        \det(A-tI)=(\cos\theta-t)(-\cos\theta-t)-\sin^2\theta=t^2-\cos^2\theta-\sin^2\theta=t^2-1,
+    \end{equation*}
+    así que los valores propios de $T$ son exactamente $1$ y $-1$. Además, $A$ es simétrica (autoadjunta), así que, por el teorema espectral, los subespacios propios $E_1$ y $E_{-1}$ son ortogonales entre sí; como ambos tienen dimensión uno (pues cada valor propio tiene multiplicidad uno) y $\dim(E_1)+\dim(E_{-1})=2=\dim(V)$, se sigue que $E_{-1}=E_1^\perp$. Sea $W=E_{-1}$. Entonces $T(x)=-x$ para todo $x\in W$ y $T(y)=y$ para todo $y\in W^\perp=E_1$; así, $T$ es, por definición, una reflexión de $V$ alrededor de $W^\perp$.
+
+    Esto muestra que $T$ es una rotación o una reflexión, con $\det(T)=1$ en el primer caso y $\det(T)=-1$ en el segundo. En particular, como estos dos valores del determinante son distintos, $T$ no puede ser simultáneamente una rotación y una reflexión, y el signo de $\det(T)$ determina cuál de los dos casos ocurre.
+\end{proof}
+
+\begin{corolario}
+    Sea $V$ un espacio con producto interno real de dimensión dos. La composición de una reflexión y una rotación sobre $V$ es una reflexión sobre $V$.
+\end{corolario}
+
+\begin{proof}
+    Si $T_1$ es una reflexión sobre $V$ y $T_2$ es una rotación sobre $V$, entonces, por el teorema anterior, $\det(T_1)=1$ y $\det(T_2)=-1$... \emph{(nota: aquí se intercambian los papeles según cuál factor es la reflexión y cuál la rotación)}. Sea $T=T_2T_1$ la composición. Como $T_2$ y $T_1$ son ortogonales, también lo es $T$. Más aún, $\det(T)=\det(T_2)\cdot\det(T_1)=(-1)\cdot(1)=-1$. Así, por el teorema anterior, $T$ es una reflexión. La demostración para $T_1T_2$ es análoga.
+\end{proof}
+
+Estudiamos ahora los operadores ortogonales sobre espacios de dimensión mayor.
+
+\begin{lema}
+    Si $T$ es un operador lineal sobre un espacio vectorial real de dimensión finita y no nulo $V$, entonces existe un subespacio $T$-invariante $W$ de $V$ tal que $1\leq\dim(W)\leq 2$.
+\end{lema}
+
+\begin{proof}
+    Fijemos una base ordenada $\BB=\{y_1,y_2,\dots,y_n\}$ de $V$, y sea $A=[T]_{\BB}$. Sea $\phi_{\BB}:V\to\R^n$ el isomorfismo de coordenadas relativo a $\BB$. Como vimos en la Sección~1.1, $\phi_{\BB}$ satisface $L_A\phi_{\BB}=\phi_{\BB}T$; en consecuencia, si $Z$ es un subespacio $L_A$-invariante de $\R^n$ con $1\leq\dim(Z)\leq 2$, entonces $W:=\phi_{\BB}^{-1}(Z)$ es un subespacio $T$-invariante de $V$ (pues, para $w\in W$, $\phi_{\BB}(T(w))=L_A(\phi_{\BB}(w))\in Z$ ya que $Z$ es $L_A$-invariante, y por tanto $T(w)=\phi_{\BB}^{-1}(L_A(\phi_{\BB}(w)))\in W$) con $\dim(W)=\dim(Z)$ (pues $\phi_{\BB}$ es un isomorfismo). Basta entonces mostrar que existe tal subespacio $Z$.
+
+    La matriz $A$ puede considerarse como una matriz $n\times n$ sobre $\C$, y como tal puede usarse para definir un operador lineal $U$ sobre $\C^n$ mediante $U(v)=Av$. Como $U$ es un operador lineal sobre un espacio vectorial de dimensión finita sobre $\C$, tiene un valor propio $\lambda\in\C$. Sea $x\in\C^n$ un vector propio correspondiente a $\lambda$. Podemos escribir $\lambda=\lambda_1+i\lambda_2$, donde $\lambda_1$ y $\lambda_2$ son reales, y
+    \begin{equation*}
+        x=\begin{pmatrix}a_1+ib_1\\a_2+ib_2\\\vdots\\a_n+ib_n\end{pmatrix},
+    \end{equation*}
+    donde las $a_i$ y $b_i$ son reales. Así, poniendo
+    \begin{equation*}
+        x_1=\begin{pmatrix}a_1\\a_2\\\vdots\\a_n\end{pmatrix} \qquad\text{y}\qquad x_2=\begin{pmatrix}b_1\\b_2\\\vdots\\b_n\end{pmatrix},
+    \end{equation*}
+    tenemos $x=x_1+ix_2$, donde $x_1$ y $x_2$ tienen entradas reales. Notemos que al menos uno de $x_1$ o $x_2$ es no nulo, pues $x\neq 0$. Entonces
+    \begin{equation*}
+        U(x)=\lambda x=(\lambda_1+i\lambda_2)(x_1+ix_2)=(\lambda_1x_1-\lambda_2x_2)+i(\lambda_1x_2+\lambda_2x_1).
+    \end{equation*}
+    Análogamente,
+    \begin{equation*}
+        U(x)=A(x_1+ix_2)=Ax_1+iAx_2.
+    \end{equation*}
+    Comparando las partes real e imaginaria de estas dos expresiones para $U(x)$, concluimos que
+    \begin{equation*}
+        Ax_1=\lambda_1x_1-\lambda_2x_2 \qquad\text{y}\qquad Ax_2=\lambda_1x_2+\lambda_2x_1.
+    \end{equation*}
+    Finalmente, sea $Z=\gen{\{x_1,x_2\}}$, tomando el generado como subespacio de $\R^n$. Como $x_1\neq0$ o $x_2\neq0$, $Z$ es un subespacio no nulo. Así, $1\leq\dim(Z)\leq 2$, y las dos ecuaciones anteriores muestran que $Z$ es $L_A$-invariante.
+\end{proof}
+
+\begin{teorema}
+    Sea $T$ un operador ortogonal sobre un espacio con producto interno real de dimensión finita y no nulo $V$. Entonces existe una colección de subespacios $T$-invariantes, pareja a pareja ortogonales, $\{W_1,W_2,\dots,W_m\}$ de $V$ tales que:
+    \begin{enumerate}[label=(\alph*)]
+        \item $1\leq\dim(W_i)\leq 2$ para $i=1,2,\dots,m$.
+        \item $V=W_1\oplus W_2\oplus\cdots\oplus W_m$.
+    \end{enumerate}
+\end{teorema}
+
+\begin{proof}
+    Procedemos por inducción sobre $\dim(V)$. Si $\dim(V)=1$, el resultado es evidente. Supongamos entonces que el resultado es válido siempre que $\dim(V)<n$ para algún entero fijo $n>1$, y supongamos $\dim(V)=n$.
+
+    Por el lema anterior, existe un subespacio $T$-invariante $W_1$ de $V$ tal que $1\leq\dim(W_1)\leq 2$. Si $W_1=V$, el resultado queda establecido. En caso contrario, mostramos que $W_1^\perp$ es $T$-invariante: sea $y\in W_1^\perp$; como $T$ es invertible (por ser ortogonal) y $T(W_1)\subseteq W_1$ con $\dim(W_1)$ finita, se tiene $T(W_1)=W_1$, así que todo $w\in W_1$ es de la forma $w=T(w')$ para algún $w'\in W_1$; luego, como $T$ preserva el producto interno,
+    \begin{equation*}
+        \ip{T(y)}{w}=\ip{T(y)}{T(w')}=\ip{y}{w'}=0
+    \end{equation*}
+    para todo $w\in W_1$, de donde $T(y)\in W_1^\perp$. Así $W_1^\perp\neq\{0\}$ es $T$-invariante, y la restricción de $T$ a $W_1^\perp$ es ortogonal. Como $\dim(W_1^\perp)<n$, podemos aplicar la hipótesis de inducción a $T_{W_1^\perp}$ y concluir que existe una colección de subespacios $T$-invariantes, pareja a pareja ortogonales, $\{W_2,W_3,\dots,W_m\}$ de $W_1^\perp$ tales que $1\leq\dim(W_i)\leq 2$ para $i=2,3,\dots,m$ y $W_1^\perp=W_2\oplus W_3\oplus\cdots\oplus W_m$. Así, $\{W_1,W_2,\dots,W_m\}$ es pareja a pareja ortogonal, y, usando que $V=W_1\oplus W_1^\perp$,
+    \begin{equation*}
+        V=W_1\oplus W_1^\perp=W_1\oplus W_2\oplus\cdots\oplus W_m.
+    \end{equation*}
+\end{proof}
+
+Aplicando el ejemplo de dimensión uno y el teorema de dimensión dos al contexto del teorema anterior, concluimos que la restricción de $T$ a $W_i$ es una rotación o una reflexión, para cada $i=1,2,\dots,m$. Así, en cierto sentido, $T$ es una composición de rotaciones y reflexiones. Desafortunadamente, poco puede decirse sobre la unicidad de la descomposición de $V$ en el teorema anterior. Por ejemplo, ni los $W_i$, ni el número $m$, ni el número de $W_i$'s para los cuales $T_{W_i}$ es una reflexión son únicos. Aunque el número de $W_i$'s para los cuales $T_{W_i}$ es una reflexión no es único, si dicho número es par o impar sí es una propiedad intrínseca de $T$. Además, siempre podemos descomponer $V$ de modo que el número de $W_i$'s para los cuales $T_{W_i}$ es una reflexión sea cero o uno. Estos hechos se establecen en el siguiente resultado.
+
+\begin{teorema}
+    Sean $T,V,W_1,\dots,W_m$ como en el teorema anterior.
+    \begin{enumerate}[label=(\alph*)]
+        \item El número de $W_i$'s para los cuales $T_{W_i}$ es una reflexión es par o impar según que $\det(T)=1$ o $\det(T)=-1$.
+        \item Siempre es posible descomponer a $V$ como en el teorema anterior de modo que el número de $W_i$'s para los cuales $T_{W_i}$ es una reflexión sea cero o uno, según que $\det(T)=1$ o $\det(T)=-1$. Más aún, si $T_{W_i}$ es una reflexión, entonces $\dim(W_i)=1$.
+    \end{enumerate}
+\end{teorema}
+
+\begin{proof}
+    (a) Sea $r$ el número de $W_i$'s para los cuales $T_{W_i}$ es una reflexión. Entonces, como el determinante de $T$ es el producto de los determinantes de las restricciones a los sumandos de una descomposición en subespacios $T$-invariantes,
+    \begin{equation*}
+        \det(T)=\det(T_{W_1})\cdot\det(T_{W_2})\cdots\det(T_{W_m})=(-1)^r,
+    \end{equation*}
+    lo cual prueba (a).
+
+    (b) Sea $E=\{x\in V: T(x)=-x\}$; entonces $E$ es un subespacio $T$-invariante de $V$ (pues si $T(x)=-x$ entonces $T(T(x))=T(-x)=-T(x)=x=-(-x)$... más simplemente, $E$ es el subespacio propio de $T$ correspondiente al valor propio $-1$, claramente $T$-invariante). Sea $W=E^\perp$; entonces, por el mismo argumento usado en la demostración del teorema anterior, $W$ es $T$-invariante. Aplicando el teorema anterior a $T_W$, obtenemos una colección de subespacios $T$-invariantes, pareja a pareja ortogonales, $\{W_1,W_2,\dots,W_k\}$ de $W$ tales que $1\leq\dim(W_i)\leq 2$ para $1\leq i\leq k$ y $W=W_1\oplus W_2\oplus\cdots\oplus W_k$. Observemos que, para cada $i=1,2,\dots,k$, $T_{W_i}$ es una rotación. En efecto, si $T_{W_i}$ fuera una reflexión, existiría un vector no nulo $x\in W_i$ con $T(x)=-x$; pero entonces $x\in W_i\cap E\subseteq W\cap E=E^\perp\cap E=\{0\}$, una contradicción.
+
+    Si $E=\{0\}$, el resultado queda establecido tomando la descomposición $\{W_1,\dots,W_k\}$ (con cero reflexiones, y $\det(T)=1$ por (a)). En caso contrario, elijamos una base ortonormal $\beta$ de $E$ que contenga $p$ vectores ($p>0$). Es posible descomponer $\beta$ en una unión disjunta pareja a pareja $\beta=\beta_1\cup\beta_2\cup\cdots\cup\beta_r$ tal que cada $\beta_i$ contiene exactamente dos vectores para $i<r$, y $\beta_r$ contiene dos vectores si $p$ es par y un vector si $p$ es impar. Para cada $i=1,2,\dots,r$, sea $W_{k+i}=\gen{\beta_i}$. Entonces, claramente, $\{W_1,W_2,\dots,W_k,\dots,W_{k+r}\}$ es pareja a pareja ortogonal, y
+    \begin{equation*}
+        V=W_1\oplus W_2\oplus\cdots\oplus W_k\oplus\cdots\oplus W_{k+r}.
+    \end{equation*}
+    Más aún, si algún $\beta_i$ ($i<r$) contiene dos vectores, entonces
+    \begin{equation*}
+        \det(T_{W_{k+i}})=\det([T_{W_{k+i}}]_{\beta_i})=\det\begin{pmatrix}-1&0\\0&-1\end{pmatrix}=1,
+    \end{equation*}
+    así que $T_{W_{k+i}}$ es una rotación, y por tanto $T_{W_j}$ es una rotación para $j<k+r$. Si $\beta_r$ consiste de un solo vector, entonces $\dim(W_{k+r})=1$ y
+    \begin{equation*}
+        \det(T_{W_{k+r}})=\det([T_{W_{k+r}}]_{\beta_r})=\det(-1)=-1,
+    \end{equation*}
+    así que, por el teorema de dimensión uno, $T_{W_{k+r}}$ es una reflexión. Así, la descomposición obtenida tiene, según el caso, cero o una $W_i$ para la cual $T_{W_i}$ es una reflexión, satisfaciendo la condición de (b) (y, por (a), el número de reflexiones en cualquier descomposición debe coincidir en paridad con el que aquí obtuvimos, así que es cero exactamente cuando $\det(T)=1$, y uno exactamente cuando $\det(T)=-1$).
+\end{proof}
+
+Como consecuencia del teorema anterior, un operador ortogonal puede factorizarse como un producto de rotaciones y reflexiones.
+
+\begin{corolario}
+    Sea $T$ un operador ortogonal sobre un espacio con producto interno real de dimensión finita $V$. Entonces existe una colección $\{T_1,T_2,\dots,T_m\}$ de operadores ortogonales sobre $V$ tales que se cumplen las siguientes afirmaciones:
+    \begin{enumerate}[label=(\alph*)]
+        \item Para cada $i$, $T_i$ es una reflexión o una rotación.
+        \item Para a lo más un $i$, $T_i$ es una reflexión.
+        \item $T_iT_j=T_jT_i$ para todos $i,j$.
+        \item $T=T_1T_2\cdots T_m$.
+        \item $\det(T)=\begin{cases}1&\text{si }T_i\text{ es una rotación para todo }i\\-1&\text{en otro caso.}\end{cases}$
+    \end{enumerate}
+\end{corolario}
+
+\begin{proof}
+    Como en la demostración del inciso (b) del teorema anterior, podemos escribir
+    \begin{equation*}
+        V=W_1\oplus W_2\oplus\cdots\oplus W_m,
+    \end{equation*}
+    donde $T_{W_i}$ es una rotación para $i<m$, y $T_{W_m}$ es una rotación o una reflexión. Para cada $i=1,2,\dots,m$, definamos $T_i:V\to V$ por
+    \begin{equation*}
+        T_i(x_1+x_2+\cdots+x_m)=x_1+x_2+\cdots+x_{i-1}+T(x_i)+x_{i+1}+\cdots+x_m,
+    \end{equation*}
+    donde $x_j\in W_j$ para todo $j$. Se verifica fácilmente que cada $T_i$ es un operador ortogonal sobre $V$ (pues, para $x=\sum_jx_j$, $\norm{T_i(x)}^2=\sum_{j\neq i}\norm{x_j}^2+\norm{T(x_i)}^2=\sum_{j\neq i}\norm{x_j}^2+\norm{x_i}^2=\norm{x}^2$, usando que $T$ preserva la norma sobre $W_i$ y que los $W_j$ son pareja a pareja ortogonales). De hecho, $T_i$ es una rotación o una reflexión según lo sea $T_{W_i}$, lo cual establece (a) y (b).
+
+    Para (c), notemos que, para $i\neq j$ y $x=\sum_kx_k$, tanto $T_iT_j$ como $T_jT_i$ envían $x$ al vector que se obtiene de $x$ reemplazando $x_i$ por $T(x_i)$ y $x_j$ por $T(x_j)$, dejando las demás componentes sin cambio; así $T_iT_j=T_jT_i$. El caso $i=j$ es trivial.
+
+    Para (d), sea $x=\sum_{k=1}^{m}x_k\in V$. Aplicando $T_1,T_2,\dots,T_m$ sucesivamente (en cualquier orden, por (c)), cada componente $x_k$ se reemplaza, uno a la vez, por $T(x_k)$, y las demás permanecen sin cambio en cada paso; así,
+    \begin{equation*}
+        (T_1T_2\cdots T_m)(x)=\sum_{k=1}^{m}T(x_k)=T\left(\sum_{k=1}^{m}x_k\right)=T(x),
+    \end{equation*}
+    usando la linealidad de $T$. Por tanto $T=T_1T_2\cdots T_m$.
+
+    Para (e), como el determinante de una composición de operadores es el producto de sus determinantes, $\det(T)=\det(T_1)\cdot\det(T_2)\cdots\det(T_m)$ por (d). Por (a) y (b), cada factor es $1$ (si $T_i$ es rotación) o $-1$ (si $T_i$ es la única reflexión, si existe). Así, el producto es $1$ si todos los $T_i$ son rotaciones, y $-1$ si exactamente uno de ellos es una reflexión, lo cual prueba (e).
+\end{proof}
+
+\begin{ejemplo}[Operadores ortogonales sobre un espacio con producto interno real de dimensión tres]
+    Sea $T$ un operador ortogonal sobre un espacio con producto interno real de dimensión tres $V$. Mostramos que $T$ puede descomponerse como la composición de una rotación y, a lo más, una reflexión. Sea
+    \begin{equation*}
+        V=W_1\oplus W_2\oplus\cdots\oplus W_m
+    \end{equation*}
+    una descomposición como en el inciso (b) del teorema anterior. Claramente $m=2$ o $m=3$.
+
+    Si $m=2$, entonces $V=W_1\oplus W_2$. Sin pérdida de generalidad, supongamos que $\dim(W_1)=1$ y $\dim(W_2)=2$. Así, $T_{W_1}$ es una reflexión o la identidad sobre $W_1$, y $T_{W_2}$ es una rotación. Definiendo $T_1$ y $T_2$ como en la demostración del corolario anterior, tenemos que $T=T_1T_2$ es la composición de una rotación y, a lo más, una reflexión. (Notemos que, si $T_{W_1}$ no es una reflexión, entonces $T_1$ es la identidad sobre $V$ y $T=T_2$.)
+
+    Si $m=3$, entonces $V=W_1\oplus W_2\oplus W_3$ y $\dim(W_i)=1$ para todo $i$. Para cada $i$, sea $T_i$ como en la demostración del corolario anterior. Si $T_{W_i}$ no es una reflexión, entonces $T_i$ es la identidad sobre $W_i$. Como $T_{W_i}$ es una reflexión para a lo más un $i$, concluimos que $T$ es, o bien una sola reflexión, o bien la identidad (una rotación).
+\end{ejemplo}

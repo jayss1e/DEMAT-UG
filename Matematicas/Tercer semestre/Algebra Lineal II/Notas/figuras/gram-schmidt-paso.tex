@@ -1,0 +1,19 @@
+\documentclass[tikz,border=3pt]{standalone}
+\usetikzlibrary{arrows.meta}
+\begin{document}
+\begin{tikzpicture}[>=Latex, font=\small]
+  \coordinate (O) at (0,0);
+  \coordinate (F) at (1.3,0);   % pie de la perpendicular = punta de c w1
+  \coordinate (W1) at (4.2,0);  % punta de w1 = v1
+  \coordinate (W2) at (1.3,2.2); % punta de w2
+
+  \draw[-{Latex[length=2.5mm]}] (O) -- (W1) node[right] {$w_1=v_1$};
+  \draw[-{Latex[length=2.5mm]}] (O) -- (W2) node[above left] {$w_2$};
+  \draw[-{Latex[length=2.5mm]}] (F) -- (W2) node[midway, left] {$v_2$};
+  \draw (W2) -- (W1);
+
+  \draw (F) ++(-0.18,0) -- ++(0,0.18) -- ++(0.18,0);
+
+  \node[below] at (F) {$cw_1$};
+\end{tikzpicture}
+\end{document}

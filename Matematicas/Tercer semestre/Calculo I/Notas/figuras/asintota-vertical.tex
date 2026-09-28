@@ -1,0 +1,14 @@
+\documentclass[border=4pt]{standalone}
+\usepackage{graficas}
+
+\begin{document}
+\begin{tikzpicture}
+    \begin{axis}[grafica, width=8cm, height=5cm, xmin=-4, xmax=8, ymin=-2.5, ymax=4.8]
+        \addplot[red!80, dashed, line width=0.9pt] coordinates {(2,-2.5) (2,4.8)};
+        \addplot[domain=2.17:8, samples=300] {1/(x-2)+1};
+        \addplot[domain=-4:1.72, samples=300] {1/(x-2)+1};
+        \node[font=\small] at (axis cs:4.3,3.3) {$f(x)=\dfrac{1}{x-2}+1$};
+        \node[font=\small] at (axis cs:3,-1.2) {$x=2$};
+    \end{axis}
+\end{tikzpicture}
+\end{document}

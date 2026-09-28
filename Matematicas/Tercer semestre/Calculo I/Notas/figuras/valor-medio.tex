@@ -1,0 +1,35 @@
+\documentclass[border=4pt]{standalone}
+\usepackage{graficas}
+
+\begin{document}
+\begin{tikzpicture}
+    % f(x) = 3 - (x-2.8)^2/2 en [1,4]; c = 2.5 da la pendiente de la cuerda
+    \pgfmathdeclarefunction{fun}{1}{\pgfmathparse{3-(#1-2.8)^2/2}}
+    \begin{axis}[grafica, width=8cm, height=5cm, xmin=-0.5, xmax=5.5, ymin=-0.6, ymax=4.2]
+        \pgfmathsetmacro{\fa}{fun(1)}
+        \pgfmathsetmacro{\fb}{fun(4)}
+        \pgfmathsetmacro{\m}{(\fb-\fa)/3}
+        \pgfmathsetmacro{\c}{2.8-\m}
+        \pgfmathsetmacro{\fc}{fun(\c)}
+        \addplot[domain=1:4, samples=100] {fun(x)};
+        \addplot[red!80, line width=1pt, domain=1:4, samples=2] {\fa+\m*(x-1)};
+        \addplot[red!80, line width=1pt, domain=-0.5:5.5, samples=2] {\fc+\m*(x-\c)};
+        \draw[red!80, dashed, line width=0.9pt] (axis cs:1,0) -- (axis cs:1,\fa);
+        \draw[red!80, dashed, line width=0.9pt] (axis cs:4,0) -- (axis cs:4,\fb);
+        \node[punto, inner sep=1pt] at (axis cs:1,\fa) {};
+        \node[punto, inner sep=1pt] at (axis cs:4,\fb) {};
+        \node[punto, inner sep=1pt] at (axis cs:\c,\fc) {};
+        \node[punto, inner sep=1pt] at (axis cs:1,0) {};
+        \node[punto, inner sep=1pt] at (axis cs:4,0) {};
+        \node[punto, inner sep=1pt] at (axis cs:\c,0) {};
+        \node[anchor=north, font=\scriptsize] at (axis cs:1,-0.1) {$a$};
+        \node[anchor=north, font=\scriptsize] at (axis cs:\c,-0.1) {$c$};
+        \node[anchor=north, font=\scriptsize] at (axis cs:4,-0.1) {$b$};
+        \node[anchor=south east, font=\scriptsize] at (axis cs:1,\fa) {$(a,f(a))$};
+        \node[anchor=west, font=\scriptsize] at (axis cs:4.05,\fb) {$(b,f(b))$};
+        \node[anchor=south, font=\scriptsize] at (axis cs:\c,\fc+0.1) {$(c,f(c))$};
+        \node[font=\small] at (axis cs:0.2,3.1) {$T$};
+        \node[font=\small] at (axis cs:3.6,3.3) {$f$};
+    \end{axis}
+\end{tikzpicture}
+\end{document}

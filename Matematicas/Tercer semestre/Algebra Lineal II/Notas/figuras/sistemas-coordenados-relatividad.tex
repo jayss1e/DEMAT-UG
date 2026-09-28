@@ -1,0 +1,27 @@
+\documentclass[tikz,border=3pt]{standalone}
+\usetikzlibrary{arrows.meta,calc}
+\begin{document}
+\begin{tikzpicture}[>=Latex, font=\small]
+
+  \foreach \dx/\lab/\clab/\slab in {0/{}/C/S, 6.5/'/C'/S'} {
+    \begin{scope}[shift={(\dx,0)}]
+      % ejes
+      \draw[->] (0,0) -- (0,3.0) node[above] {$z\lab$};
+      \draw[->] (0,0) -- (2.3,0) node[right] {$x\lab$};
+      \draw[->] (0,0) -- (1.3,1.55) node[below right] {$y\lab$};
+
+      % carita de reloj
+      \draw (1.55,2.35) circle (0.55);
+      \foreach \ang in {0,30,...,330} {
+        \draw[line width=0.4pt] ($(1.55,2.35)+(\ang:0.5)$) -- ($(1.55,2.35)+(\ang:0.55)$);
+      }
+      \draw[line width=0.7pt] (1.55,2.35) -- ++(70:0.35);
+      \draw[line width=0.7pt] (1.55,2.35) -- ++(160:0.22);
+      \node at (2.2,2.6) {\clab};
+
+      \node[below] at (0,-0.15) {\slab};
+    \end{scope}
+  }
+
+\end{tikzpicture}
+\end{document}

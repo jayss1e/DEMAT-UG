@@ -1,0 +1,32 @@
+\documentclass[border=4pt]{standalone}
+\usepackage{graficas}
+
+\begin{document}
+\begin{tikzpicture}
+    \pgfplotsset{t/.style={grafica, xmin=-6, xmax=6, ymin=-3.5, ymax=3.5, width=5.8cm, height=3.4cm}}
+    \begin{axis}[t, panel=(a)]
+        \addplot[domain=0:6, samples=200] {sqrt(x)};
+        \node[font=\scriptsize] at (axis cs:2.2,2.3) {$\sqrt{x}$};
+    \end{axis}
+    \begin{axis}[t, panel=(b), at={(6.6cm,0)}]
+        \addplot[domain=-6:0, samples=200] {sqrt(-x)};
+        \node[font=\scriptsize] at (axis cs:-2.2,2.3) {$\sqrt{-x}$};
+    \end{axis}
+    \begin{axis}[t, panel=(c), at={(0,-4.6cm)}]
+        \addplot[domain=-6:3, samples=200] {sqrt(3-x)};
+        \node[font=\scriptsize] at (axis cs:-3,3.1) {$\sqrt{3-x}$};
+        \node[anchor=north, font=\scriptsize] at (axis cs:3,-0.1) {$3$};
+    \end{axis}
+    \begin{axis}[t, panel=(d), at={(6.6cm,-4.6cm)}]
+        \addplot[domain=-6:3, samples=200] {-sqrt(3-x)};
+        \node[font=\scriptsize] at (axis cs:1.2,-2.7) {$-\sqrt{3-x}$};
+        \node[anchor=south, font=\scriptsize] at (axis cs:3,0.1) {$3$};
+    \end{axis}
+    \begin{axis}[t, panel=(e), at={(3.3cm,-9.2cm)}, ymin=-3, ymax=6.5]
+        \addplot[domain=-6:3, samples=200] {5-sqrt(3-x)};
+        \draw[gray] (axis cs:-0.12,5) -- (axis cs:0.12,5);
+        \node[anchor=east, font=\scriptsize] at (axis cs:-0.1,5) {$5$};
+        \node[font=\scriptsize] at (axis cs:-4,4.5) {$5-\sqrt{3-x}$};
+    \end{axis}
+\end{tikzpicture}
+\end{document}

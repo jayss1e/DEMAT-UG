@@ -1,0 +1,35 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{graficas}[2026/09/27 Estilo común de las gráficas de las notas de Cálculo I]
+% Estilo compartido por las figuras de funciones (figuras/*.tex).
+% Ejes delgados en gris, sin marcas ni flechas, y la curva en gris oscuro,
+% como en las figuras del PDF original.
+\RequirePackage{amsmath,amssymb}
+\RequirePackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{arrows.meta}
+
+\pgfplotsset{
+    grafica/.style={
+        axis lines=middle,
+        axis line style={gray!70, line width=0.4pt, -},
+        xtick=\empty, ytick=\empty,
+        width=6.2cm, height=4.4cm,
+        scale only axis,
+        clip=true,
+        samples=200,
+        every axis plot/.append style={line width=1.1pt, color=black!75, smooth},
+        tick label style={font=\scriptsize},
+        label style={font=\small},
+    },
+    % panel con etiqueta (a), (b), ... centrada debajo de la gráfica
+    panel/.style={
+        after end axis/.append code={
+            \node[anchor=north, font=\small, yshift=-2pt] at (rel axis cs:0.5,0) {#1};
+        },
+    },
+}
+% punto relleno y punto vacío
+\tikzset{
+    punto/.style={circle, fill=black, inner sep=1.3pt},
+    puntovacio/.style={circle, draw=black, fill=white, inner sep=1.3pt},
+}

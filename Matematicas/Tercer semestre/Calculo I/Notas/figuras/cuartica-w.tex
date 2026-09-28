@@ -1,0 +1,10 @@
+\documentclass[border=4pt]{standalone}
+\usepackage{graficas}
+
+\begin{document}
+\begin{tikzpicture}
+    \begin{axis}[grafica, xmin=-3, xmax=3, ymin=-1, ymax=4]
+        \addplot[domain=-1.65:1.65, samples=200] {x^4-2*x^2+1};
+    \end{axis}
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,18 @@
+\documentclass[border=4pt]{standalone}
+\usepackage{graficas}
+
+\begin{document}
+\begin{tikzpicture}
+    \begin{axis}[grafica, width=8cm, height=5cm, xmin=-6.5, xmax=6.5, ymin=-2.6, ymax=2.6, trig format plots=rad]
+        \addplot[domain=-6.5:6.5] {sin(x)};
+        \draw[red!80, dashed, line width=0.9pt] (axis cs:0,1) -- (axis cs:pi/2,1) -- (axis cs:pi/2,0);
+        \draw[red!80, dashed, line width=0.9pt] (axis cs:0,-1) -- (axis cs:-pi/2,-1) -- (axis cs:-pi/2,0);
+        \node[punto] at (axis cs:pi/2,1) {};
+        \node[punto] at (axis cs:-pi/2,-1) {};
+        \node[anchor=east, font=\scriptsize] at (axis cs:-0.1,1) {$1$};
+        \node[anchor=west, font=\scriptsize] at (axis cs:0.15,-1) {$-1$};
+        \node[anchor=north, font=\scriptsize] at (axis cs:pi/2,-0.1) {$\frac{\pi}{2}$};
+        \node[anchor=south, font=\scriptsize] at (axis cs:-pi/2,0.1) {$-\frac{\pi}{2}$};
+    \end{axis}
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,31 @@
+\documentclass[border=4pt]{standalone}
+\usepackage{graficas}
+
+\begin{document}
+\begin{tikzpicture}
+    % f(t) = 0.1 e^{1.1 t}; x = 1.2, x + h = 2.4
+    \pgfmathdeclarefunction{fun}{1}{\pgfmathparse{0.25*exp(1.1*#1)}}
+    \begin{axis}[grafica, width=8cm, height=5cm, xmin=-1, xmax=4.2, ymin=-1.2, ymax=4.3]
+        \pgfmathsetmacro{\xa}{1.2}
+        \pgfmathsetmacro{\xb}{2.4}
+        \pgfmathsetmacro{\ya}{fun(\xa)}
+        \pgfmathsetmacro{\yb}{fun(\xb)}
+        \pgfmathsetmacro{\m}{1.1*\ya}
+        \pgfmathsetmacro{\mh}{(\yb-\ya)/(\xb-\xa)}
+        \addplot[domain=-1:2.95, samples=200] {fun(x)};
+        \addplot[red!75, line width=1pt, domain=-1:4.2, samples=2] {\ya+\m*(x-\xa)};
+        \addplot[blue!75, line width=1pt, domain=0.3:3, samples=2] {\ya+\mh*(x-\xa)};
+        \node[punto] at (axis cs:\xa,\ya) {};
+        \node[punto] at (axis cs:\xb,\yb) {};
+        \draw (axis cs:\xa,-0.07) -- (axis cs:\xa,0.07);
+        \draw (axis cs:\xb,-0.07) -- (axis cs:\xb,0.07);
+        \node[anchor=north, font=\scriptsize] at (axis cs:\xa,-0.1) {$x$};
+        \node[anchor=north, font=\scriptsize] at (axis cs:\xb,-0.1) {$x+h$};
+        \node[anchor=south east, font=\scriptsize] at (axis cs:\xa,\ya) {$(x,f(x))$};
+        \node[anchor=south east, font=\scriptsize] at (axis cs:\xb,\yb) {$(x+h,f(x+h))$};
+        \node[font=\small] at (axis cs:1.55,2.1) {$l_{h}$};
+        \node[font=\small] at (axis cs:3.1,1.05) {$T$};
+        \node[font=\small] at (axis cs:-0.6,0.35) {$f$};
+    \end{axis}
+\end{tikzpicture}
+\end{document}

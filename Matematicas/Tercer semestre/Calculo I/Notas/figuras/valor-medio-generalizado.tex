@@ -1,0 +1,25 @@
+\documentclass[border=4pt]{standalone}
+\usepackage{graficas}
+
+\begin{document}
+\begin{tikzpicture}
+    % sigma(t) = (t^3 - 3t, 0.45 t^2 + 0.25 t), t en [-1.7, 2.3];
+    % en t = -0.7902 la tangente es paralela a la cuerda sigma(a)sigma(b)
+    \pgfmathsetmacro{\ax}{0.187}\pgfmathsetmacro{\ay}{0.8755}
+    \pgfmathsetmacro{\bx}{5.267}\pgfmathsetmacro{\by}{2.9555}
+    \pgfmathsetmacro{\cx}{1.87719}\pgfmathsetmacro{\cy}{0.08344}
+    \pgfmathsetmacro{\m}{0.40945}
+    \begin{axis}[grafica, axis lines=none, axis equal image, width=8cm, xmin=-2.5, xmax=6.5, ymin=-1.2, ymax=3.4]
+        \addplot[domain=-1.7:2.3, samples=400, variable=t] ({t^3-3*t}, {0.45*t^2+0.25*t});
+        \addplot[red!80, line width=1pt] coordinates {(\ax,\ay) (\bx,\by)};
+        \addplot[red!80, line width=1pt, domain=-0.5:6.5, samples=2] {\cy+\m*(x-\cx)};
+        \node[punto, inner sep=1pt] at (axis cs:\ax,\ay) {};
+        \node[punto, inner sep=1pt] at (axis cs:\bx,\by) {};
+        \node[punto, inner sep=1pt] at (axis cs:\cx,\cy) {};
+        \node[anchor=east, font=\scriptsize] at (axis cs:\ax,\ay) {$\sigma(a)$};
+        \node[anchor=south, font=\scriptsize] at (axis cs:\bx,\by) {$\sigma(b)$};
+        \node[anchor=north west, font=\scriptsize] at (axis cs:\cx,\cy) {$\sigma(c)$};
+        \node[font=\small] at (axis cs:5.6,1.4) {$T$};
+    \end{axis}
+\end{tikzpicture}
+\end{document}

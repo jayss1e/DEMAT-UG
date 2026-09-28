@@ -1,0 +1,11 @@
+\documentclass[border=4pt]{standalone}
+\usepackage{graficas}
+
+\begin{document}
+\begin{tikzpicture}
+    \begin{axis}[grafica, axis equal image, xmin=-2.5, xmax=2.5, ymin=-2, ymax=2]
+        \addplot[domain=0:360, samples=200, smooth] ({cos(x)}, {sin(x)});
+        \node[anchor=north west, font=\scriptsize] at (axis cs:1,0) {$1$};
+    \end{axis}
+\end{tikzpicture}
+\end{document}

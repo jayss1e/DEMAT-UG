@@ -1,0 +1,13 @@
+\documentclass[border=4pt]{standalone}
+\usepackage{graficas}
+
+\begin{document}
+\begin{tikzpicture}
+    \begin{axis}[grafica, panel=(a), xmin=-3, xmax=3, ymin=-2, ymax=4]
+        \addplot[domain=-2.2:2.2] {x^2};
+    \end{axis}
+    \begin{axis}[grafica, panel=(b), at={(7.2cm,0)}, xmin=-7, xmax=7, ymin=-3, ymax=3, trig format plots=rad]
+        \addplot[domain=-7:7] {cos(x)};
+    \end{axis}
+\end{tikzpicture}
+\end{document}

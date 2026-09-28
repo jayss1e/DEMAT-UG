@@ -1,0 +1,15 @@
+\documentclass[border=4pt]{standalone}
+\usepackage{graficas}
+
+\begin{document}
+\begin{tikzpicture}
+    \begin{axis}[grafica, panel=(a), xmin=-3, xmax=3, ymin=-0.5, ymax=5]
+        \addplot[domain=-2.1:2.1] {x^2+1};
+        \node[font=\small] at (axis cs:1.4,2.8) {$f$};
+    \end{axis}
+    \begin{axis}[grafica, panel=(b), at={(7.2cm,0)}, xmin=-3, xmax=3, ymin=-0.5, ymax=5]
+        \addplot[domain=0:2.1] {x^2+1};
+        \node[font=\small] at (axis cs:2.2,2.8) {$f|_{[0,\infty)}$};
+    \end{axis}
+\end{tikzpicture}
+\end{document}

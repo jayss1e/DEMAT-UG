@@ -1,0 +1,16 @@
+\documentclass[border=4pt]{standalone}
+\usepackage{graficas}
+
+\begin{document}
+\begin{tikzpicture}
+    \begin{axis}[grafica, height=3.8cm, xmin=-7, xmax=7, ymin=-2.2, ymax=2.2, trig format plots=rad, axis on top]
+        \fill[gray!45] (axis cs:-7,-1) rectangle (axis cs:7,1);
+        \draw[black!60, line width=0.4pt] (axis cs:-7,1) -- (axis cs:7,1);
+        \draw[black!60, line width=0.4pt] (axis cs:-7,-1) -- (axis cs:7,-1);
+        \addplot[domain=-7:7] {0.55*sin(x)};
+        \node[anchor=south east, font=\scriptsize] at (axis cs:0,1) {$M$};
+        \node[anchor=north east, font=\scriptsize] at (axis cs:0,-1) {$-M$};
+        \node[font=\small] at (axis cs:2.3,0.8) {$f$};
+    \end{axis}
+\end{tikzpicture}
+\end{document}

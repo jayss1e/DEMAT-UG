@@ -1,0 +1,15 @@
+\documentclass[border=4pt]{standalone}
+\usepackage{graficas}
+
+\begin{document}
+\begin{tikzpicture}
+    \begin{axis}[grafica, panel=(a), axis equal image, xmin=-2.5, xmax=2.5, ymin=-2, ymax=2]
+        \addplot[domain=0:180, samples=100] ({cos(x)}, {sin(x)});
+        \node[font=\small] at (axis cs:1.05,1.05) {$y_{1}$};
+    \end{axis}
+    \begin{axis}[grafica, panel=(b), at={(7.2cm,0)}, axis equal image, xmin=-2.5, xmax=2.5, ymin=-2, ymax=2]
+        \addplot[domain=180:360, samples=100] ({cos(x)}, {sin(x)});
+        \node[font=\small] at (axis cs:1.05,-1.05) {$y_{2}$};
+    \end{axis}
+\end{tikzpicture}
+\end{document}

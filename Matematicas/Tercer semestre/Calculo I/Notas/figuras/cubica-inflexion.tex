@@ -1,0 +1,13 @@
+\documentclass[border=4pt]{standalone}
+\usepackage{graficas}
+
+\begin{document}
+\begin{tikzpicture}
+    \begin{axis}[grafica, width=8cm, height=5cm, xmin=-5, xmax=5, ymin=-5, ymax=9]
+        \addplot[domain=-4.2:1.35, samples=200] {x^3+4*x^2-3};
+        \node[punto, inner sep=1pt] (P) at (axis cs:-4/3,47/27) {};
+        \draw[-{Latex[length=4pt]}, black!70] (axis cs:1.8,6.2) -- (axis cs:-1.05,2.1);
+        \node[anchor=west, font=\scriptsize] at (axis cs:1.8,6.5) {$(-4/3,f(-4/3))$};
+    \end{axis}
+\end{tikzpicture}
+\end{document}
