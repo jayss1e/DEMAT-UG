@@ -1,0 +1,13 @@
+\documentclass[tikz,border=3pt]{standalone}
+\usetikzlibrary{arrows.meta}
+\begin{document}
+\begin{tikzpicture}[>=Latex, font=\small]
+  \draw[->] (-2.4,0) -- (2.4,0) node[right] {$x$};
+  \draw[->] (0,-1.8) -- (0,1.8) node[above] {$y$};
+  \begin{scope}[rotate=26.565]
+    \draw[->, dashed] (-2.2,0) -- (2.2,0) node[right] {$x'$};
+    \draw[->, dashed] (0,-1.2) -- (0,1.2) node[above] {$y'$};
+    \draw[thick] (0,0) ellipse (2.0 and 0.9);
+  \end{scope}
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,16 @@
+\documentclass[tikz,border=3pt]{standalone}
+\usetikzlibrary{arrows.meta,calc}
+\begin{document}
+\begin{tikzpicture}[>=Latex, font=\small]
+  \draw[->, thick] (0,0) -- (1.1,1.6);
+  \draw[->, thick] (0,0) -- (1.9,0.5);
+
+  \begin{scope}[xshift=4.2cm]
+    \draw[->] (-0.3,0) -- (2.3,0) node[right] {$x$};
+    \draw[->] (0,-0.3) -- (0,2.1) node[above] {$y$};
+    \draw[->, thick] (0,0) -- (1.6,1.4);
+    \draw (0.55,0) arc (0:41.2:0.55);
+    \node at (0.85,0.22) {$\theta$};
+  \end{scope}
+\end{tikzpicture}
+\end{document}

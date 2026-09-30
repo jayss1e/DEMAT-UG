@@ -1,0 +1,12 @@
+\documentclass[tikz,border=3pt]{standalone}
+\usetikzlibrary{arrows.meta,decorations.pathmorphing}
+\begin{document}
+\begin{tikzpicture}[>=Latex, font=\small]
+  \draw[->] (-1.6,0) -- (1.6,0) node[right] {$x$};
+  \draw[->] (0,-0.3) -- (0,3.6) node[above] {$y$};
+  \draw[decorate, decoration={coil, aspect=0.6, segment length=4pt, amplitude=4pt}, thick]
+    (0,3.4) -- (0,1.1);
+  \draw[thick] (-0.45,0.4) rectangle (0.45,1.1);
+  \fill (0,3.4) circle (1.5pt);
+\end{tikzpicture}
+\end{document}

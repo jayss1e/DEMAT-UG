@@ -267,6 +267,16 @@
 \renewcommand{\thelema}{\thechapter.\arabic{lema}}
 \renewcommand{\thecoro}{\thechapter.\arabic{coro}}
 
+% Nombres de ancla únicos para hyperref (estos contadores se definieron
+% antes de \usepackage{hyperref}, así que hyperref no generó \theH*
+% automáticamente; sin esto, dos capítulos con, p. ej., el mismo número
+% de teorema local producen anclas duplicadas).
+\providecommand{\theHdefn}{\thechapter.\arabic{defn}}
+\providecommand{\theHteor}{\thechapter.\arabic{teor}}
+\providecommand{\theHprop}{\thechapter.\arabic{prop}}
+\providecommand{\theHlema}{\thechapter.\arabic{lema}}
+\providecommand{\theHcoro}{\thechapter.\arabic{coro}}
+
 % ─── Encabezado genérico (negritas + numeración + título opcional entre
 %     paréntesis), sin caja, sin color ──────────────────────────────
 \newcommand{\@ugmathrunin}[3]{%
@@ -326,6 +336,7 @@
 % ─── Contador de ejemplos ──────────────────────────────────────────
 \newcounter{ejemplo}[chapter]
 \renewcommand{\theejemplo}{\thechapter.\arabic{ejemplo}}
+\providecommand{\theHejemplo}{\thechapter.\arabic{ejemplo}}
 
 % ─── Entorno ejemplo ───────────────────────────────────────────────
 % Si el ejemplo termina con una demostración, se omite el $\blacktriangle$
@@ -354,6 +365,7 @@
 % ─── Contador de ejercicios ────────────────────────────────────────
 \newcounter{ejercicio}[chapter]
 \renewcommand{\theejercicio}{\thechapter.\arabic{ejercicio}}
+\providecommand{\theHejercicio}{\thechapter.\arabic{ejercicio}}
 
 % ─── Entorno ejercicio ─────────────────────────────────────────────
 \newenvironment{ejercicio}{%
@@ -368,6 +380,7 @@
 % Uso: \begin{problema}  o  \begin{problema}[título]
 \newcounter{problema}[chapter]
 \renewcommand{\theproblema}{\thechapter.\arabic{problema}}
+\providecommand{\theHproblema}{\thechapter.\arabic{problema}}
 
 \newenvironment{problema}[1][]{%
   \refstepcounter{problema}%
@@ -418,11 +431,12 @@
 \DeclareMathOperator{\nul}{nul}
 \DeclareMathOperator{\rg}{rg}      % Rango (álgebra lineal)
 \DeclareMathOperator{\sgn}{sgn}    % Signo (álgebra lineal)
+\DeclareMathOperator{\adj}{adj}    % Adjunta clásica de una matriz (Capítulo 4)
 \DeclareMathOperator{\Var}{Var}    % Varianza (probabilidad)
 \newcommand{\Ssi}{\Longleftrightarrow}
 \newcommand{\ssi}{\leftrightarrow}
 \newcommand{\gen}[1]{\langle #1 \rangle}
-\newcommand{\iprod}[2]{\langle #1, #2 \rangle} % producto interno (physics ya define \ip para bra-ket)
+\newcommand{\iprod}[2]{\left\langle #1, #2 \right\rangle} % producto interno (physics ya define \ip para bra-ket)
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 \let\a\alpha
 \let\e\varepsilon
