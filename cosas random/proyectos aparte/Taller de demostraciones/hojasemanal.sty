@@ -1,0 +1,115 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{hojasemanal}[2026/10/01 Formato de hojas semanales de demostraciones]
+
+\RequirePackage{ugmath}
+\RequirePackage{array}
+
+% ========== DATOS DE LA HOJA ==========
+% Uso en el preámbulo:
+%   \tema{Lógica proposicional}   título de la hoja
+%   \fecha{dd/mm/aaaa}            opcional; si se omite no aparece
+\newcommand{\@tema}{}
+\newcommand{\@fecha}{}
+\newcommand{\tema}[1]{\renewcommand{\@tema}{#1}}
+\newcommand{\fecha}[1]{\renewcommand{\@fecha}{#1}}
+
+\newcommand{\@autora}{Yessica León Martínez}
+\newcommand{\@escuela}{Universidad de Guanajuato}
+\newcommand{\@departamento}{Departamento de Matemáticas}
+
+\hypersetup{pdfauthor={Yessica León Martínez}}
+\pagestyle{plain}
+
+% ========== ENCABEZADO ==========
+% Izquierda: escuela, tema, nombre y fecha. Derecha: cuadro de calificación.
+\newcommand{\encabezado}{%
+  \begingroup
+  \setlength{\parskip}{0pt}%
+  \noindent
+  \begin{minipage}[b]{0.72\textwidth}
+    {\small\sffamily\color{softgray}\MakeUppercase{\@escuela~·~\@departamento}\par}
+    \vspace{4pt}
+    {\LARGE\bfseries\color{UGblue}\@tema\par}
+    \vspace{6pt}
+    \@autora\ifx\@fecha\@empty\else\hfill\@fecha\fi
+  \end{minipage}\hfill
+  \begin{minipage}[b]{2.6cm}
+    \centering
+    {\footnotesize\sffamily\color{softgray}CALIFICACIÓN\par}
+    \vspace{3pt}
+    {\color{UGblue}\setlength{\fboxrule}{0.6pt}\setlength{\fboxsep}{0pt}%
+     \fbox{\rule{0pt}{1.4cm}\hspace{2.4cm}}}
+  \end{minipage}\par
+  \vspace{6pt}
+  {\color{UGblue}\rule{\textwidth}{0.8pt}\par}
+  \endgroup
+  \vspace{4pt}
+}
+
+% ========== BLOQUES DE TEXTO ==========
+% Objetivos de la semana (lista compacta)
+\newenvironment{objetivos}
+  {\par\noindent\textbf{Objetivos.}\begin{itemize}[nosep,leftmargin=*]}
+  {\end{itemize}}
+
+% Indicaciones generales
+\newenvironment{indicaciones}
+  {\par\noindent\textbf{Indicaciones.}\begin{itemize}[nosep,leftmargin=*]}
+  {\end{itemize}}
+
+% Recordatorio: definiciones o técnicas que se usan en la hoja
+\newenvironment{recordatorio}
+  {\par\noindent\textbf{Recordatorio.}\ \ignorespaces}
+  {\par}
+
+% Separador de partes dentro de la hoja
+\newcommand{\parte}[1]{\subsection*{\color{UGblue}#1}}
+
+% ========== EJERCICIOS ==========
+% Uso: \begin{ejercicio}        sin dificultad
+%      \begin{ejercicio}[2]     dificultad 1, 2 o 3 (estrellas)
+\newcounter{ejercicio}
+\newcommand{\@estrellas}[1]{%
+  {\color{softgray}\ifcase#1\or$\star$\or$\star\star$\or$\star\star\star$\fi}}
+
+\newenvironment{ejercicio}[1][0]
+  {\par\addvspace{6pt}\refstepcounter{ejercicio}%
+   \noindent\textbf{Ejercicio \theejercicio.}%
+   \ifnum#1>0\ \@estrellas{#1}\fi\ \ignorespaces}
+  {\par}
+
+% Incisos (a), (b), ... dentro de un ejercicio
+\newenvironment{incisos}
+  {\begin{enumerate}[label=(\alph*),nosep,leftmargin=2em]}
+  {\end{enumerate}}
+
+% Espacio en blanco para responder a mano (opcional)
+\newcommand{\espacio}[1][3cm]{\par\vspace*{#1}}
+
+% ========== BITÁCORA ==========
+% Tabla final con una fila por ejercicio; se llena al entregar.
+% Va en página aparte para poder imprimirla y llenarla a mano.
+\newcommand{\@filasbitacora}{}
+\newcommand{\bitacora}{%
+  \clearpage
+  \parte{Bitácora}
+  \noindent Llénala al terminar (en la segunda columna pon sí, parcial o no). Sirve para saber dónde hay que trabajar más, no para calificar.
+  \par\smallskip
+  \renewcommand{\@filasbitacora}{}%
+  \@tempcnta=\z@
+  \loop\ifnum\@tempcnta<\value{ejercicio}
+    \advance\@tempcnta\@ne
+    \edef\@filasbitacora{\unexpanded\expandafter{\@filasbitacora}%
+      \the\@tempcnta & & & \noexpand\\ \noexpand\hline}%
+  \repeat
+  \begin{center}
+  \renewcommand{\arraystretch}{1.6}%
+  \begin{tabular}{|c|>{\centering\arraybackslash}p{2.8cm}|>{\centering\arraybackslash}p{1.8cm}|p{8.0cm}|}
+    \hline
+    \textbf{Ej.} & \textbf{¿Terminado?} & \textbf{Tiempo} & \textbf{¿Dónde me atoré?} \\ \hline
+    \@filasbitacora
+  \end{tabular}
+  \end{center}
+  \noindent\textbf{Preguntas para la próxima sesión:}
+  \par\vspace*{2.5cm}
+}
