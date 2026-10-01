@@ -1247,4 +1247,119 @@
         Como $m$ es el elemento mínimo de $C$ y $n,k<m$, se tiene $n\notin C$ y $k\notin C$; como además $n,k\neq1$, esto significa que $n$ y $k$ son ambos producto de primos. Por tanto $m=n\cdot k$ también es producto de primos, lo cual contradice que $m\in C$. Concluimos que $C=\emptyset$.
     \end{proof}
 
+    \section{Enteros}
+    
+    Relación en $\N\times\N=A$
+    \begin{equation*}
+        \mathcal{R}=\{((a,b),(b,c))\in A\times A:a+d=b+c\}
+    \end{equation*}
+    es una relación de equivalencia. La clase de equivalencia $(a,b)\in A$ es $[(a,b)]=\{(c,d)\in A:a+d=b+c\}$. Definimos
+    \begin{equation*}
+        \Z=\{[(a,b)]:(a,b)\in A\}
+    \end{equation*}
+    Se llama conjunto de números enteros. Definimos la suma en $\Z$ mediante la operación binaria:
+    \begin{align*}
+        +:\Z\times\Z&\to\Z\\
+        ([(a,b)],[(c,d)])&\mapsto[(a+c,b+d)].
+    \end{align*}
+    Tenemos que demostrar que estos esta definido, no depende de los representatntes tomados en las clases. Supongamos, $(a_{1},b_{1})\in[(a,b)]$ y $(c_{1},d_{1})\in[(c,d)]$. Tenemos que probar que
+    \begin{equation*}
+        [(a_{1},b_{1})]+_{\Z}[(c_{1},d_{1})]=[(a,b)]+_{\Z}[(c,d)].
+    \end{equation*}
+    Por hipótesis,
+    \begin{gather}
+        a_{1}+b=b_{1}+a\\
+        c_{1}+d=d_{1}+c.
+    \end{gather}
+    Queremos probar
+    \begin{equation*}
+        (a_{1}+c_{1})+(b+d)=(b_{1}+d_{1})+(a+c).
+    \end{equation*}
+    Sumando (7.1) y (7.2) obtenemos
+    \begin{equation*}
+        (a_{1}+b)+(c_{1}+d)=(b_{1}+a)+(d_{1}+c)-
+    \end{equation*}
+    Usando la conmutatividad, asociatividad de la suma en $\N$ tenemos
+    \begin{equation*}
+        (a_{1},c_{1})+(b+d)=(b_{1},d_{1})+(a+c).
+    \end{equation*}
+
+    \begin{definicion}
+        La clase $[(1,1)]\in\Z$ se llama cero de $\Z$y se denota
+        \begin{equation*}
+            0:=[(1,1)].
+        \end{equation*}
+    \end{definicion}
+
+    \begin{proposicion}
+        La suma en $\Z$ es
+        \begin{enumerate}
+            \item[(1)] Asociativa, es decir si $[(a_{1},b_{1})],[(a_{2},b_{2})],[(a_{3},b_{3})]\in\Z$ entonces
+            \begin{gather}
+                [(a_{1},b_{1})]+_{\Z}([a_{2},b_{2}])+_{\Z}[(a_{3},b_{3})]\\
+                =([(a_{1},b_{1})]+_{\Z}[(a_{2},b_{2})])+[(a_{3},b_{3})]
+            \end{gather}
+            \item[(2)] Conmutativa, es decir si $[(a_{1},b_{1})],[(a_{2},b_{2})]\in\Z$, entonces
+            \begin{equation*}
+                [(a_{1},b_{1})]+_{\Z}[(a_{2},b_{2})]=[(a_{2},b_{2})]+_{\Z}[(a_{1},b_{1})].
+            \end{equation*}
+            \item[(3)] Para todo $[(a,b)]\in\Z$ se tiene que
+            \begin{equation*}
+                [(a,b)]+_{\Z}0=[(a,b)]
+            \end{equation*}
+            \item[(4)] Si $[(a+b)]\in\Z$, existe $[(c,d)]\in\Z$ tal que
+            \begin{equation*}
+                [(a,b)]+_{\Z}[(c,d)]=0.
+            \end{equation*}
+        \end{enumerate}
+    \end{proposicion}
+
+    %las demostraciones las intente copiar pero esta feo copiarlas desde el pizarron te lo dejo a cargo cuando leas esto de terminar la demostracion y mejorarlas
+
+    \begin{proof}
+        (7.3) es igual a
+        \begin{equation*}
+            [(a_{1},b_{1})]+_{\Z}([a_{2}+a_{3},b_{2}+b_{3}])=[(a_{1}+(a_{2}+a_{3}),b_{1}+(b_{2}+b_{3}))].
+        \end{equation*}
+        Como la suma en $\N$ es asociativa esto es igual a
+        \begin{equation*}
+            [((a_{1}+a_{2})+a_{3}.(b_{1}+b_{2})+b_{3})]=[(a_{1}+a_{2},b_{1}+b_{2})]+_{\Z}[(a_{3},b_{3})]
+        \end{equation*}
+        y esto es igual a (7.4).
+    \end{proof}
+
+    \begin{definicion}
+        Un conjunto $\mathcal{G}$ con una operación binaria
+        \begin{equation*}
+            +:\mathcal{G}\times\mathcal{G}\to\mathcal{G}
+        \end{equation*}
+        que es asociativa, conmutativa, con neutro aditivo y tal que todo elemento de $\mathcal{G}$ tiene inverso aditivo, se llama \textbf{grupo abeliano}.
+    \end{definicion}
+
+    \begin{ejemplo}
+        $\Z$ con $+_{\Z}$ es un grupo abeliano.
+    \end{ejemplo}
+
+    Definimos el producto en $\Z$ mediante la operación binaria
+    \begin{align*}
+        \cdot_{\Z}:\Z\times\Z&\to\Z\\
+        ([a,b],[(c,d)])&\mapsto[(ac+bd,bc+ad)]
+    \end{align*}
+
+    %dejo demostrar que el producto en Z esta bien definido pero esa demostracion te la encargo a ti, igual todas las que sean de este estilo que dejan de tarea pero para efecto de las notas tu tienes que demostrarlas ponles un indicador para yo revisarlas y quitarlas cuando yo le de el visto bueno.
+
+    \begin{proposicion}
+        El prodcuto $\cdot_{\Z}$ en $\Z$ es
+        \begin{enumerate}
+            \item[(1)] Asociativa. Si $[(a_{1},b_{1})],[(a_{2},b_{2})],[(a_{3},b_{3})]\in\Z$ entonces
+            \begin{equation*}
+                \big([(a_{1},b_{1})]\cdot_{\Z}[(a_{2},b_{2})]\big)\cdot_{\Z}[(a_{3},b_{3})]=[(a_{1},b_{1})]\cdot_{\Z}\big([(a_{2},b_{2})]\cdot_{\Z}[(a_{3},b_{3})]\big)
+            \end{equation*}
+            \item[(2)] Conmutativa. Para todo $[(a_{1},b_{1})],[(a_{2},b_{2})]\in\Z$ entonces
+            \begin{equation*}
+                [(a_{1},b_{1})]\cdot_{\Z}[(a_{2},b_{2})]=[(a_{2},b_{2})]\cdot_{\Z}[(a_{1},b_{1})].
+            \end{equation*}
+        \end{enumerate}
+    \end{proposicion}
+
 \end{document}

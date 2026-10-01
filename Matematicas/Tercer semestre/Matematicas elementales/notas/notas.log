@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.9.16)  22 SEP 2026 00:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.8.25)  1 OCT 2026 12:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"/home/radojka/DEMAT-UG/Matematicas/Tercer semestre/Matematicas elementales/notas/notas.tex"
-(/home/radojka/DEMAT-UG/Matematicas/Tercer semestre/Matematicas elementales/notas/notas.tex
+**"/home/god/DEMAT-UG/Matematicas/Tercer semestre/Matematicas elementales/notas/notas.tex"
+(/home/god/DEMAT-UG/Matematicas/Tercer semestre/Matematicas elementales/notas/notas.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
 (/usr/share/texmf-dist/tex/latex/base/book.cls
@@ -1062,12 +1062,12 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 ))
-<portada-matematicas-elementales.pdf, id=175, 597.50786pt x 845.04686pt>
+<portada-matematicas-elementales.pdf, id=179, 597.50786pt x 845.04686pt>
 File: portada-matematicas-elementales.pdf Graphic file (type pdf)
 <use portada-matematicas-elementales.pdf>
 Package pdftex.def Info: portada-matematicas-elementales.pdf  used on input line 23.
 (pdftex.def)             Requested size: 597.5064pt x 845.0448pt.
-<portada-matematicas-elementales.pdf, id=177, page=1, 597.50786pt x 845.04686pt>
+<portada-matematicas-elementales.pdf, id=181, page=1, 597.50786pt x 845.04686pt>
 File: portada-matematicas-elementales.pdf Graphic file (type pdf)
 <use portada-matematicas-elementales.pdf, page 1>
 Package pdftex.def Info: portada-matematicas-elementales.pdf , page1 used on input line 23.
@@ -2077,9 +2077,62 @@ Package mdframed Info: mdframed detected package amsthm
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 1233.
-LaTeX Info: Redefining \. on input line 1250.
-LaTeX Info: Redefining \% on input line 1250.
- [40] (./notas.aux
+LaTeX Info: Redefining \. on input line 1255.
+LaTeX Info: Redefining \% on input line 1255.
+ [40]
+pdfTeX warning (ext4): destination with the same identifier (name{defn.7}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1288         L
+                a clase $[(1,1)]\in\Z$ se llama cero de $\Z$y se denota
+Package mdframed Info: mdframed works in twoside mode on input line 1288.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1288.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1292.
+Package mdframed Info: mdframed works in twoside mode on input line 1295.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1295.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1315.
+LaTeX Info: Redefining \. on input line 1315.
+LaTeX Info: Redefining \% on input line 1315.
+ [41]
+pdfTeX warning (ext4): destination with the same identifier (name{defn.8}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1332         U
+                n conjunto $\mathcal{G}$ con una operación binaria
+Package mdframed Info: mdframed works in twoside mode on input line 1332.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1332.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1337.
+
+pdfTeX warning (ext4): destination with the same identifier (name{ejemplo.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1340         $
+                \Z$ con $+_{\Z}$ es un grupo abeliano.
+LaTeX Info: Redefining \. on input line 1347.
+LaTeX Info: Redefining \% on input line 1347.
+ [42]
+Package mdframed Info: mdframed works in twoside mode on input line 1352.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1352.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1363.
+LaTeX Info: Redefining \. on input line 1365.
+LaTeX Info: Redefining \% on input line 1365.
+ [43] (./notas.aux
 LaTeX Info: Redefining \. on input line 12.
 LaTeX Info: Redefining \% on input line 12.
 )
@@ -2088,21 +2141,21 @@ LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
 Package rerunfilecheck Info: File `notas.out' has not changed.
-(rerunfilecheck)             Checksum: 5D16F7723973272270A26946966AD3CB;6653.
+(rerunfilecheck)             Checksum: DF8357BF6F55E74299C427BCDB8254E6;6743.
  ) 
 Here is how much of TeX's memory you used:
- 41621 strings out of 467525
- 928874 string characters out of 5425861
- 1471796 words of memory out of 5000000
- 69650 multiletter control sequences out of 15000+600000
+ 41647 strings out of 467525
+ 929282 string characters out of 5425861
+ 1472075 words of memory out of 5000000
+ 69666 multiletter control sequences out of 15000+600000
  689593 words of font info for 85 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,17n,108p,830b,1221s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,17n,108p,826b,1222s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmro12.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on notas.pdf (42 pages, 397208 bytes).
+Output written on notas.pdf (45 pages, 403232 bytes).
 PDF statistics:
- 608 PDF objects out of 1000 (max. 8388607)
- 508 compressed objects within 6 object streams
- 150 named destinations out of 1000 (max. 500000)
- 412 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 634 PDF objects out of 1000 (max. 8388607)
+ 531 compressed objects within 6 object streams
+ 160 named destinations out of 1000 (max. 500000)
+ 420 words of extra memory for PDF output out of 10000 (max. 10000000)
 
