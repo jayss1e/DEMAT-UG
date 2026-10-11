@@ -1,0 +1,2 @@
+# Busca hojasemanal.sty y ugmath.sty en la carpeta de maquetación.
+ensure_path('TEXINPUTS', '../maquetacion//');

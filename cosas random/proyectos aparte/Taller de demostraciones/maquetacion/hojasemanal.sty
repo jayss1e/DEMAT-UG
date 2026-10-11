@@ -1,0 +1,166 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{hojasemanal}[2026/10/01 Formato de hojas semanales de demostraciones]
+
+\RequirePackage{ugmath}
+\RequirePackage{array}
+
+% ========== DATOS DE LA HOJA ==========
+% Uso en el preámbulo:
+%   \frase{¡Tú puedes!}           opcional; va al final de los ejercicios
+\newcommand{\@frase}{}
+\newcommand{\frase}[1]{\renewcommand{\@frase}{#1}}
+
+\newcommand{\@autora}{Yessica León Martínez}
+\newcommand{\@alumna}{Kaori}
+\newcommand{\@escuela}{Universidad de Guanajuato}
+\newcommand{\@departamento}{Departamento de Matemáticas}
+
+% ========== COLORES Y FUENTES ==========
+\RequirePackage{colortbl}
+\RequirePackage{fontawesome5}   % íconos: \faHeart, \faStar, ...
+\RequirePackage{miama}          % letra manuscrita: \fmmfamily
+
+\definecolor{principal}{RGB}{110,60,150}   % morado
+\definecolor{acento}{RGB}{214,92,150}      % rosa
+\definecolor{dorado}{RGB}{226,170,40}      % estrellas
+\colorlet{lila}{principal!9}               % fondos suaves
+\colorlet{lilamedio}{principal!35}         % líneas suaves
+
+\newcommand{\manuscrita}{\fmmfamily}
+
+\hypersetup{pdfauthor={Yessica León Martínez},linkcolor=principal,citecolor=principal}
+\pagestyle{plain}
+
+% ========== ENCABEZADO ==========
+% Banda morada: escuela y departamento, quién elaboró la hoja y el nombre de
+% Kaori; a la derecha, el cuadro
+% de calificación.
+\newcommand{\encabezado}{%
+  \par\noindent
+  \begin{tikzpicture}
+    \node[fill=principal, rounded corners=10pt, minimum width=\linewidth,
+          minimum height=3.1cm, inner sep=0pt, outer sep=0pt] (banda) {};
+    % burbujas decorativas
+    \begin{scope}
+      \clip[rounded corners=10pt] (banda.south west) rectangle (banda.north east);
+      \fill[white, opacity=0.07] ([xshift=-2.2cm, yshift=0.3cm]banda.north east) circle (2.1cm);
+      \fill[white, opacity=0.07] ([xshift=-6.2cm, yshift=-0.2cm]banda.south east) circle (1.1cm);
+      \fill[white, opacity=0.05] ([xshift=1cm, yshift=-0.4cm]banda.south west) circle (1.3cm);
+    \end{scope}
+    \node[text=white, opacity=0.55, font=\small]  at ([xshift=-5.0cm, yshift=-0.75cm]banda.north east) {\faStar};
+    \node[text=white, opacity=0.35, font=\tiny]   at ([xshift=-4.4cm, yshift=-1.25cm]banda.north east) {\faStar};
+    \node[text=acento!60, font=\footnotesize]     at ([xshift=-5.5cm, yshift=-1.6cm]banda.north east) {\faHeart};
+    % datos
+    \node[anchor=north west, text=white, align=left, inner sep=0pt]
+      at ([xshift=0.55cm, yshift=-0.5cm]banda.north west)
+      {{\scriptsize\sffamily\MakeUppercase{\@escuela~·~\@departamento}}\\[3pt]
+       {\scriptsize\sffamily Elaborado por \@autora}\\[9pt]
+       {\LARGE\bfseries Para \@alumna}};
+    % calificación
+    \node[anchor=east, fill=white, rounded corners=7pt, minimum width=2.7cm,
+          minimum height=1.7cm] (calif) at ([xshift=-0.5cm, yshift=-0.25cm]banda.east) {};
+    \node[anchor=south, text=white, font=\scriptsize\sffamily, inner sep=3pt]
+      at (calif.north) {CALIFICACIÓN};
+  \end{tikzpicture}\par
+  \vspace{8pt}
+}
+
+% ========== BLOQUES DE TEXTO ==========
+% Indicaciones generales
+\newenvironment{indicaciones}
+  {\par\noindent{\color{principal}\faListUl\ \ \textbf{\sffamily Indicaciones}}%
+   \begin{itemize}[nosep,leftmargin=1.6em,label={\color{acento}\scriptsize\faHeart}]}
+  {\end{itemize}}
+
+% Mensaje de la semana: tarjeta lila
+\mdfdefinestyle{mensaje}{%
+  hidealllines=true, roundcorner=10pt, backgroundcolor=lila,
+  innertopmargin=10pt, innerbottommargin=10pt,
+  innerleftmargin=14pt, innerrightmargin=14pt,
+  skipabove=10pt, skipbelow=4pt}
+\newenvironment{mensaje}
+  {\begin{mdframed}[style=mensaje]\ignorespaces}
+  {\unskip\ {\color{acento}\faHeart}\end{mdframed}}
+
+% Separador de partes: etiqueta morada y una línea suave hasta el margen
+\newcommand{\parte}[1]{%
+  \par
+  \vspace{0pt plus 5\baselineskip}\penalty-200\vspace{0pt plus -5\baselineskip}%
+  \addvspace{14pt}%
+  \noindent
+  \begin{tikzpicture}[baseline=(p.base)]
+    \node[anchor=west, fill=principal, text=white, rounded corners=7pt,
+          inner xsep=10pt, inner ysep=4.5pt, font=\sffamily\bfseries] (p) at (0,0) {#1};
+    \draw[lilamedio, line width=1.2pt, line cap=round]
+      ([xshift=8pt]p.east) -- (\linewidth-1pt,0);
+  \end{tikzpicture}\par
+  \nobreak\vspace{4pt}\@afterheading}
+
+% ========== EJERCICIOS ==========
+% Uso: \begin{ejercicio}        sin dificultad
+%      \begin{ejercicio}[2]     dificultad 1, 2 o 3 (estrellas)
+\newcounter{ejercicio}
+\newcommand{\@estrellas}[1]{%
+  {\footnotesize\color{dorado}%
+   \@tempcnta=\z@
+   \loop\ifnum\@tempcnta<3
+     \advance\@tempcnta\@ne
+     \ifnum\@tempcnta>#1\faStar[regular]\else\faStar\fi
+   \repeat}}
+
+\newenvironment{ejercicio}[1][0]
+  {\par\addvspace{8pt}\refstepcounter{ejercicio}%
+   \noindent
+   \tikz[baseline=(e.base)]\node[fill=lila, text=principal, rounded corners=4pt,
+         inner xsep=6pt, inner ysep=3pt, minimum width=2.5cm,
+         font=\sffamily\bfseries\small] (e)
+         {Ejercicio \theejercicio};%
+   \ifnum#1>0\ \@estrellas{#1}\fi\ \ \ignorespaces}
+  {\par}
+
+% Incisos (a), (b), ... dentro de un ejercicio
+\newenvironment{incisos}
+  {\begin{enumerate}[label={\color{principal}\bfseries(\alph*)},nosep,leftmargin=2em]}
+  {\end{enumerate}}
+
+% Espacio en blanco para responder a mano (opcional)
+\newcommand{\espacio}[1][3cm]{\par\vspace*{#1}}
+
+% ========== BITÁCORA ==========
+% Antes de la bitácora va la frase de la semana (si hay).
+% La tabla tiene una fila por ejercicio y va en página aparte para poder
+% imprimirla y llenarla a mano.
+\newcommand{\@filasbitacora}{}
+\newcommand{\@encab}[1]{\textcolor{white}{\sffamily\bfseries #1}}
+\newcommand{\bitacora}{%
+  \ifx\@frase\@empty\else
+    \par\vspace{1.2cm}
+    \begin{center}
+      {\color{acento}\faHeart}\quad
+      {\manuscrita\Huge\color{principal}\@frase}%
+      \quad{\color{acento}\faHeart}
+    \end{center}
+  \fi
+  \clearpage
+  \parte{Bitácora}
+  \noindent Llénala al terminar (en la segunda columna pon sí, parcial o no). Sirve para saber dónde hay que trabajar más, no para calificar.
+  \par\smallskip
+  \renewcommand{\@filasbitacora}{}%
+  \@tempcnta=\z@
+  \loop\ifnum\@tempcnta<\value{ejercicio}
+    \advance\@tempcnta\@ne
+    \edef\@filasbitacora{\unexpanded\expandafter{\@filasbitacora}%
+      \noexpand\textcolor{principal}{\noexpand\sffamily\noexpand\bfseries\the\@tempcnta}
+      & & & \noexpand\\ \noexpand\hline}%
+  \repeat
+  \begin{center}
+  \renewcommand{\arraystretch}{1.55}%
+  \arrayrulecolor{lilamedio}%
+  \begin{tabular}{|c|>{\centering\arraybackslash}p{2.8cm}|>{\centering\arraybackslash}p{1.8cm}|p{8.0cm}|}
+    \hline
+    \rowcolor{principal}
+    \@encab{Ej.} & \@encab{¿Terminado?} & \@encab{Tiempo} & \@encab{¿Dónde me atoré?} \\ \hline
+    \@filasbitacora
+  \end{tabular}
+  \end{center}
+}

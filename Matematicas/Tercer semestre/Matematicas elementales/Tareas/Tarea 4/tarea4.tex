@@ -1,0 +1,272 @@
+\documentclass[12pt,a4paper]{article}
+\raggedbottom
+
+\usepackage{ugmath}
+\usepackage{float}
+\usepackage{placeins}
+\usepackage[labelfont=bf,labelsep=space]{caption}
+\usepackage{pdfpages}
+\usepackage{tikz-cd}
+\usepackage{amsthm}
+\renewcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\llaves}[1]{\{#1\}}
+\newcommand{\parentesis}[1]{\left(#1\right)}
+\newcommand{\corchetes}[1]{\left[#1\right]}
+\newcommand{\llavesgrande}[1]{\big\{#1\big\}}
+\newcommand{\llavesgrandes}[1]{\left\{#1\right\}}
+
+
+\begin{document}
+
+    \thispagestyle{empty}
+    \includepdf[pages=1]{portada.pdf}
+
+    \textbf{Convenciones.} En toda la tarea usamos únicamente los axiomas de Peano, la definición de suma
+    ($n+1=\sigma(n)$, $n+\sigma(m)=\sigma(n+m)$), la definición de producto ($n\cdot1=n$, $n\cdot\sigma(m)=n\cdot m+n$),
+    la definición de $<$ y los resultados demostrados en las notas: asociatividad, conmutatividad y cancelación de la suma,
+    $1\cdot n=n$, la distributividad $n\cdot(m+l)=n\cdot m+n\cdot l$, la transitividad de $<$, la Tricotomía y el
+    hecho de que $1$ es el elemento mínimo de $\N$. Escribimos
+    \begin{equation*}
+        2:=1+1,\qquad 3:=2+1,\qquad 4:=3+1,\qquad 5:=4+1,
+    \end{equation*}
+    y, como es usual, el producto se efectúa antes que la suma.
+
+    \begin{problema}
+        Demuestra que para todos $n,m,r\in\N$ se satisface lo siguiente:
+        \begin{enumerate}[label=\alph*)]
+            \item $n\cdot(m\cdot r)=(n\cdot m)\cdot r$,
+            \item $n\cdot m=m\cdot n$.
+        \end{enumerate}
+    \end{problema}
+
+    \begin{proof}
+        \begin{enumerate}
+            \item[a)] Sea
+            \begin{equation*}
+                S=\{r\in\N : \forall n,m\in\N,\ n\cdot(m\cdot r)=(n\cdot m)\cdot r\}.
+            \end{equation*}
+            Veamos que $1\in S$. Sean $n,m\in\N$; por la definición del producto,
+            \begin{equation*}
+                n\cdot(m\cdot1)=n\cdot m=(n\cdot m)\cdot1.
+            \end{equation*}
+            Supongamos ahora que $r\in S$ y sean $n,m\in\N$. Usando la definición del producto, la distributividad
+            y la hipótesis de inducción,
+            \begin{align*}
+                n\cdot(m\cdot\sigma(r)) &= n\cdot(m\cdot r+m) \\
+                &= n\cdot(m\cdot r)+n\cdot m \\
+                &= (n\cdot m)\cdot r+n\cdot m \\
+                &= (n\cdot m)\cdot\sigma(r).
+            \end{align*}
+            Así que $\sigma(r)\in S$. Por el principio de inducción, $S=\N$.
+
+            \item[b)] Primero probamos que para todos $n,m\in\N$,
+            \begin{equation}\label{eq:sucesor-izq}
+                (n+1)\cdot m=n\cdot m+m.
+            \end{equation}
+            Sea $n\in\N$ fijo y $T=\{m\in\N : (n+1)\cdot m=n\cdot m+m\}$. Se tiene $1\in T$, pues
+            $(n+1)\cdot1=n+1=n\cdot1+1$. Supongamos que $m\in T$. Usando la definición del producto, la hipótesis
+            de inducción y la asociatividad y conmutatividad de la suma,
+            \begin{align*}
+                (n+1)\cdot\sigma(m) &= (n+1)\cdot m+(n+1) = (n\cdot m+m)+(n+1) \\
+                &= n\cdot m+\big(m+(n+1)\big) = n\cdot m+\big((m+n)+1\big) \\
+                &= n\cdot m+\big((n+m)+1\big) = n\cdot m+\big(n+(m+1)\big) \\
+                &= (n\cdot m+n)+\sigma(m) = n\cdot\sigma(m)+\sigma(m).
+            \end{align*}
+            Así que $\sigma(m)\in T$, y por inducción $T=\N$. Como $n$ era arbitrario, \eqref{eq:sucesor-izq} vale
+            para todos $n,m\in\N$.
+
+            Ahora sea
+            \begin{equation*}
+                S=\{n\in\N : \forall m\in\N,\ n\cdot m=m\cdot n\}.
+            \end{equation*}
+            Por la proposición de las notas, $1\cdot m=m=m\cdot1$ para todo $m\in\N$, así que $1\in S$. Supongamos que
+            $n\in S$ y sea $m\in\N$. Por \eqref{eq:sucesor-izq}, la hipótesis de inducción y la definición del producto,
+            \begin{equation*}
+                \sigma(n)\cdot m=(n+1)\cdot m=n\cdot m+m=m\cdot n+m=m\cdot\sigma(n).
+            \end{equation*}
+            Así que $\sigma(n)\in S$. Por el principio de inducción, $S=\N$. \qedhere
+        \end{enumerate}
+    \end{proof}
+
+    \begin{problema}
+        Demuestra que para todos $n,k\in\N$ se satisface $n+k\neq n$.
+    \end{problema}
+
+    \begin{proof}
+        Sea
+        \begin{equation*}
+            S=\{n\in\N : \forall k\in\N,\ n+k\neq n\}.
+        \end{equation*}
+        Veamos que $1\in S$. Sea $k\in\N$; por la conmutatividad de la suma, $1+k=k+1=\sigma(k)$. Por el axioma (3)
+        de Peano, $\sigma(k)\neq1$, es decir, $1+k\neq1$. Así que $1\in S$.
+
+        Supongamos que $n\in S$ y sea $k\in\N$. Por la conmutatividad y la definición de la suma,
+        \begin{equation*}
+            \sigma(n)+k=k+\sigma(n)=\sigma(k+n)=\sigma(n+k).
+        \end{equation*}
+        Si se tuviera $\sigma(n)+k=\sigma(n)$, entonces $\sigma(n+k)=\sigma(n)$ y, por la inyectividad de $\sigma$,
+        $n+k=n$, lo cual contradice que $n\in S$. Por lo tanto $\sigma(n)+k\neq\sigma(n)$ para todo $k\in\N$, es decir,
+        $\sigma(n)\in S$. Por el principio de inducción, $S=\N$.
+    \end{proof}
+
+    \begin{problema}
+        Demuestra lo siguiente usando el principio de inducción y la definición de suma y producto definidos en $\N$:
+        \begin{equation*}
+            \text{Si } n\in\N, \text{ entonces } 2\cdot\left(\sum_{j=1}^{n} j\right)=(n+1)\cdot n.
+        \end{equation*}
+    \end{problema}
+
+    \begin{proof}
+        Recordemos que la suma $\sum_{j=1}^n j$ está definida recursivamente por
+        \begin{equation*}
+            \sum_{j=1}^{1} j=1, \qquad \sum_{j=1}^{n+1} j=\left(\sum_{j=1}^{n} j\right)+(n+1).
+        \end{equation*}
+        Sea
+        \begin{equation*}
+            S=\left\{n\in\N : 2\cdot\left(\sum_{j=1}^{n} j\right)=(n+1)\cdot n\right\}.
+        \end{equation*}
+
+        \emph{Base.} Por la definición del producto, $2\cdot\left(\sum_{j=1}^{1} j\right)=2\cdot1=2=1+1=(1+1)\cdot1$.
+        Así que $1\in S$.
+
+        \emph{Paso inductivo.} Supongamos que $n\in S$. Por la distributividad, la hipótesis de inducción y la
+        conmutatividad del producto (Ejercicio 1 b)),
+        \begin{align*}
+            2\cdot\left(\sum_{j=1}^{n+1} j\right) &= 2\cdot\left(\left(\sum_{j=1}^{n} j\right)+(n+1)\right)
+            = 2\cdot\left(\sum_{j=1}^{n} j\right)+2\cdot(n+1) \\
+            &= (n+1)\cdot n+(n+1)\cdot2 = (n+1)\cdot(n+2).
+        \end{align*}
+        Como $n+2=n+(1+1)=(n+1)+1$, usando otra vez la conmutatividad del producto,
+        \begin{equation*}
+            2\cdot\left(\sum_{j=1}^{n+1} j\right)=(n+1)\cdot\big((n+1)+1\big)=\big((n+1)+1\big)\cdot(n+1),
+        \end{equation*}
+        es decir, $n+1\in S$. Por el principio de inducción, $S=\N$.
+    \end{proof}
+
+    \begin{problema}
+        Sea $n\in\N$. Demuestra, usando los axiomas de Peano y la definición de $<$, que no existe $k\in\N$ tal que
+        $n<k<n+1$.
+    \end{problema}
+
+    \begin{proof}
+        Supongamos, por contradicción, que existe $k\in\N$ con $n<k$ y $k<n+1$. Por la definición de $<$, existen
+        $a,b\in\N$ tales que
+        \begin{equation*}
+            n+a=k \qquad\text{y}\qquad k+b=n+1.
+        \end{equation*}
+        Entonces $n+(a+b)=(n+a)+b=k+b=n+1$, y por la conmutatividad, $(a+b)+n=1+n$. Por la cancelación de la suma,
+        \begin{equation*}
+            a+b=1.
+        \end{equation*}
+        Ahora bien, si $b=1$, entonces $a+b=a+1=\sigma(a)$; si $b\neq1$, por el axioma (3) existe $c\in\N$ con
+        $b=\sigma(c)$, y entonces $a+b=a+\sigma(c)=\sigma(a+c)$. En cualquier caso $a+b\in\operatorname{Im}(\sigma)$,
+        y por el axioma (3), $a+b\neq1$. Esto es una contradicción. Por lo tanto no existe $k\in\N$ tal que $n<k<n+1$.
+    \end{proof}
+
+    \begin{problema}
+        Sean $m,n\in\N$ tales que $4n+5<3m+4$. Demuestra que necesariamente $n<m$.
+    \end{problema}
+
+    \begin{proof}
+        Primero observemos que para todo $a\in\N$,
+        \begin{equation}\label{eq:cuatro}
+            4\cdot a=3\cdot a+a,
+        \end{equation}
+        pues, por la conmutatividad del producto (Ejercicio 1 b)), la distributividad y la definición del producto,
+        $4\cdot a=a\cdot(3+1)=a\cdot3+a\cdot1=3\cdot a+a$.
+
+        Supongamos, por contradicción, que no se cumple $n<m$. Por la Tricotomía, $n=m$ o $m<n$. Veamos que en ambos
+        casos $3m+4<4n+5$.
+        \begin{itemize}
+            \item Si $n=m$, por \eqref{eq:cuatro}, $5=4+1$ y la asociatividad y conmutatividad de la suma,
+            \begin{equation*}
+                4n+5=4m+5=(3m+m)+(4+1)=(3m+4)+(m+1),
+            \end{equation*}
+            así que $3m+4<4n+5$.
+            \item Si $m<n$, existe $k\in\N$ tal que $n=m+k$. Por la distributividad, \eqref{eq:cuatro}, $5=4+1$ y la
+            asociatividad y conmutatividad de la suma,
+            \begin{align*}
+                4n+5 &= 4(m+k)+5=(4m+4k)+5=(3m+m+4k)+(4+1) \\
+                &= (3m+4)+(m+4k+1),
+            \end{align*}
+            así que $3m+4<4n+5$.
+        \end{itemize}
+        Entonces tendríamos simultáneamente $4n+5<3m+4$ (por hipótesis) y $4n+5>3m+4$, lo cual contradice la
+        Tricotomía. Por lo tanto, necesariamente $n<m$.
+    \end{proof}
+
+    \begin{problema}
+        Demuestra que para todos $n,m,r\in\N$ se satisface lo siguiente:
+        \begin{enumerate}[label=\alph*)]
+            \item $n\le m$ y $m<r$, implica que $n<r$.
+            \item $n<m$ y $m\le r$, implica que $n<r$.
+            \item $n\le m$ y $m\le r$, implica que $n\le r$.
+        \end{enumerate}
+    \end{problema}
+
+    \begin{proof}
+        Usaremos la transitividad de $<$: si $n<m$ y $m<r$, existen $k_1,k_2\in\N$ con $n+k_1=m$ y $m+k_2=r$, así que
+        \begin{equation*}
+            r=m+k_2=(n+k_1)+k_2=n+(k_1+k_2),
+        \end{equation*}
+        es decir, $n<r$.
+        \begin{enumerate}
+            \item[a)] Como $n\le m$, se tiene $n<m$ o $n=m$. Si $n=m$, la hipótesis $m<r$ es justamente $n<r$. Si $n<m$,
+            como $m<r$, por la transitividad $n<r$.
+            \item[b)] Como $m\le r$, se tiene $m<r$ o $m=r$. Si $m=r$, la hipótesis $n<m$ es justamente $n<r$. Si $m<r$,
+            como $n<m$, por la transitividad $n<r$.
+            \item[c)] Como $m\le r$, se tiene $m<r$ o $m=r$. Si $m<r$, como $n\le m$, por el inciso a) se tiene $n<r$,
+            y en particular $n\le r$. Si $m=r$, la hipótesis $n\le m$ es justamente $n\le r$. \qedhere
+        \end{enumerate}
+    \end{proof}
+
+    \begin{problema}
+        Demuestra que el principio del buen orden es equivalente al principio de inducción.
+    \end{problema}
+
+    \begin{proof}
+        Recordemos los enunciados:
+        \begin{itemize}
+            \item \textbf{Principio de inducción (PI).} Si $S\subseteq\N$ es tal que $1\in S$ y $n\in S$ implica
+            $\sigma(n)\in S$, entonces $S=\N$.
+            \item \textbf{Principio del buen orden (PBO).} Todo subconjunto no vacío de $\N$ tiene un elemento mínimo.
+        \end{itemize}
+
+        \textbf{(PI $\Rightarrow$ PBO).} Supongamos que se cumple el principio de inducción y sea $S\subseteq\N$ no
+        vacío. Supongamos, por contradicción, que $S$ no tiene elemento mínimo, y definamos
+        \begin{equation*}
+            T=\{n\in\N : n<m \text{ para todo } m\in S\}.
+        \end{equation*}
+
+        \emph{$1\in T$.} Como $1$ es el elemento mínimo de $\N$, $1\le m$ para todo $m\in S$. Si $1\in S$, entonces $1$
+        sería elemento mínimo de $S$, lo cual no puede ser; así que $1\notin S$, y por tanto $m\neq1$ para todo $m\in S$.
+        Luego $1<m$ para todo $m\in S$, es decir, $1\in T$.
+
+        \emph{Si $n\in T$, entonces $\sigma(n)\in T$.} Supongamos que $n\in T$. Primero veamos que para cada
+        $m'\in S$ se cumple $\sigma(n)=m'$ o $\sigma(n)<m'$. En efecto, como $n<m'$, existe $k'\in\N$ con $n+k'=m'$.
+        Si $k'=1$, entonces $m'=n+1=\sigma(n)$. Si $k'\neq1$, por el axioma (3) existe $c\in\N$ con $k'=\sigma(c)$, y
+        \begin{equation*}
+            m'=n+\sigma(c)=n+(c+1)=n+(1+c)=(n+1)+c=\sigma(n)+c,
+        \end{equation*}
+        así que $\sigma(n)<m'$. Es decir, $\sigma(n)\le m'$ para todo $m'\in S$.
+
+        Ahora, si fuera $\sigma(n)\in S$, entonces por lo anterior $\sigma(n)$ sería elemento mínimo de $S$, lo cual
+        contradice nuestra suposición. Así que $\sigma(n)\notin S$, y entonces $\sigma(n)\neq m'$ para todo $m'\in S$.
+        Luego $\sigma(n)<m'$ para todo $m'\in S$, es decir, $\sigma(n)\in T$.
+
+        Por el principio de inducción, $T=\N$. Como $S\neq\emptyset$, tomemos $m\in S$; como $m\in\N=T$, se tiene
+        $m<m$, lo cual contradice la Tricotomía (pues $m=m$). Por lo tanto $S$ tiene un elemento mínimo.
+
+        \textbf{(PBO $\Rightarrow$ PI).} Supongamos que se cumple el principio del buen orden y sea $S\subseteq\N$ tal
+        que $1\in S$ y $n\in S$ implica $\sigma(n)\in S$. Supongamos, por contradicción, que $S\neq\N$, es decir, que
+        $A=\N\setminus S$ es no vacío. Por el principio del buen orden, $A$ tiene un elemento mínimo $m_0$.
+
+        Como $1\in S$, $m_0\neq1$, así que por el axioma (3) existe $k\in\N$ con $\sigma(k)=m_0$. Si $k\in S$, entonces
+        $m_0=\sigma(k)\in S$, lo cual contradice que $m_0\in A$. Por tanto $k\in A$, y como $m_0$ es el elemento mínimo
+        de $A$, se tiene $m_0\le k$. Pero $k+1=\sigma(k)=m_0$, es decir, $k<m_0$. Tener $k<m_0$ junto con $m_0=k$ o
+        $m_0<k$ contradice la Tricotomía. Por lo tanto $A=\emptyset$, es decir, $S=\N$.
+
+        Concluimos que ambos principios son equivalentes.
+    \end{proof}
+
+\end{document}

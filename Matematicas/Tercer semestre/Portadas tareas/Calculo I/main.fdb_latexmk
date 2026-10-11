@@ -1,6 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1790570660.87364 "/home/radojka/DEMAT-UG/Matematicas/Tercer semestre/Portadas tareas/Calculo I/main.tex" "main.pdf" "main" 1790570662.03945 0
-  "/home/radojka/DEMAT-UG/Matematicas/Tercer semestre/Portadas tareas/Calculo I/main.tex" 1790570660.61126 7647 0b0bebb1720fe7b6bd61fc9910a429a4 ""
+["pdflatex"] 1791233833.13557 "main.tex" "main.pdf" "main" 1791233834.1599 0
   "/usr/share/texmf-dist/fonts/enc/dvips/ebgaramond/ebg_ljow5q.enc" 1775415801 3064 ad039a5bf6faa075ad3278d742de72a1 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/ebgaramond/ebg_tcdnmr.enc" 1775415801 3038 e164542e716a689948526cfb8c023ec2 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/sourcesanspro/a_5ponh6.enc" 1775415801 3344 37c976a8b2fa4b8f132a488735054f7d ""
@@ -188,8 +187,8 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1775415801 43569 fd570f2fa160877d211e859f687312ba ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1789592106 5541339 b32eb00eb34cd5c925a7827d916d9dbd ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1789592027 3765588 fd3a81841918e52034f2864e7b1d7d9c ""
-  "main.aux" 1790570661.93699 232 73e76a51b3ab6978a073af3f7982faa6 "pdflatex"
-  "main.tex" 1790570660.61126 7647 0b0bebb1720fe7b6bd61fc9910a429a4 ""
+  "main.aux" 1791233834.05492 232 73e76a51b3ab6978a073af3f7982faa6 "pdflatex"
+  "main.tex" 1791233833.03906 7647 26b7ce7013b92c30570ddb63bbe6903b ""
   (generated)
   "main.aux"
   "main.log"
