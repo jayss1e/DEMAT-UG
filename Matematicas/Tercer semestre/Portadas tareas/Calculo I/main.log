@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.9.16)  5 OCT 2026 14:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.9.16)  16 OCT 2026 14:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -894,7 +894,7 @@ usr/share/texmf-dist/fonts/type1/public/ebgaramond/EBGaramond-Regular.pfb></usr
 /share/texmf-dist/fonts/type1/adobe/sourcesanspro/SourceSansPro-Bold.pfb></usr/
 share/texmf-dist/fonts/type1/adobe/sourcesanspro/SourceSansPro-Light.pfb></usr/
 share/texmf-dist/fonts/type1/adobe/sourcesanspro/SourceSansPro-Regular.pfb>
-Output written on main.pdf (1 page, 213785 bytes).
+Output written on main.pdf (1 page, 213659 bytes).
 PDF statistics:
  43 PDF objects out of 1000 (max. 8388607)
  28 compressed objects within 1 object stream

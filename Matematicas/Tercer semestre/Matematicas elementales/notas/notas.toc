@@ -34,5 +34,10 @@
 \contentsline {subsection}{\numberline {7.1.3}El producto}{34}{subsection.7.1.3}%
 \contentsline {subsection}{\numberline {7.1.4}Orden}{35}{subsection.7.1.4}%
 \contentsline {subsection}{\numberline {7.1.5}Buen orden}{37}{subsection.7.1.5}%
-\contentsline {subsection}{\numberline {7.1.6}Divisibilidad y números primos}{39}{subsection.7.1.6}%
+\contentsline {subsection}{\numberline {7.1.6}Divisibilidad y números primos}{40}{subsection.7.1.6}%
 \contentsline {section}{\numberline {7.2}Enteros}{41}{section.7.2}%
+\contentsline {subsection}{\numberline {7.2.1}Más propiedades del producto}{46}{subsection.7.2.1}%
+\contentsline {subsection}{\numberline {7.2.2}Orden}{49}{subsection.7.2.2}%
+\contentsline {subsection}{\numberline {7.2.3}Valor absoluto}{53}{subsection.7.2.3}%
+\contentsline {subsection}{\numberline {7.2.4}El algoritmo de la división}{54}{subsection.7.2.4}%
+\contentsline {subsection}{\numberline {7.2.5}Divisibilidad y máximo común divisor}{55}{subsection.7.2.5}%

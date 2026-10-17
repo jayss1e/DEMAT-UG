@@ -816,6 +816,7 @@
     Como $R$ es reflexiva, $\forall a\in A$, $a\in[a]_R$ (pues $(a,a)\in R$); en particular, ninguna clase de equivalencia es vacía.
 
     \begin{proposicion}
+        \label{prop:particion}
         Sea $A$ un conjunto y $R$ una relación de equivalencia en $A$. Entonces las clases de equivalencia satisfacen:
         \begin{enumerate}[label=(\arabic*)]
             \item Dados $a_1,a_2\in A$, o bien $[a_1]_R\cap[a_2]_R=\emptyset$, o bien $[a_1]_R=[a_2]_R$.
@@ -1194,6 +1195,28 @@
         Sea $k\in\N$ tal que $k<m$. Como $m$ es el elemento mínimo de $S$, si $k\in S$ se tendría $m\le k$, contradiciendo $k<m$; por tanto $k\notin S$, es decir, $P(k)$ es verdadera. Como esto vale para todo $k<m$, por (2) se tiene que $P(m)$ es verdadera, lo cual contradice que $m\in S$. Concluimos que $S=\emptyset$, es decir, $P(n)$ es verdadera para todo $n\in\N$.
     \end{proof}
 
+    \begin{ejemplo}
+        Definimos una sucesión $(a_n)_{n\in\N}$ de la siguiente manera: $a_1=1$, $a_2=\sigma(1)$, y para $n\ge3$, si $k,l\in\N$ son tales que $\sigma(k)=n$ y $\sigma(l)=k$ (es decir, $k$ es el predecesor de $n$ y $l$ es el predecesor de $k$), definimos
+        \begin{equation*}
+            a_n = a_k+a_l.
+        \end{equation*}
+        Probemos que para todo $n\in\N$,
+        \begin{equation*}
+            a_n < 2^n.
+        \end{equation*}
+
+        Usamos la forma alternativa de inducción (Proposición \ref{prop:induccion-orden}). Como $a_2=\sigma(1)=1+1=2$,
+        \begin{equation*}
+            a_1=1<2^1=2, \qquad a_2=2<2^2=2\cdot2.
+        \end{equation*}
+
+        Sea $n\ge3$ (los casos $n=1,2$ ya se verificaron) y supongamos que $a_k<2^k$ para todo $k<n$. Como $n\ge3$, $n\neq1$, así que existe $k\in\N$ con $\sigma(k)=n$; además $k\neq1$ (si $k=1$, entonces $n=\sigma(1)=2$, contradiciendo $n\ge3$), así que existe $l\in\N$ con $\sigma(l)=k$. Por definición, $a_n=a_k+a_l$. Como $k=\sigma(l)=l+1$ y $n=\sigma(k)=k+1$, se tiene $l<k<n$ (Lema \ref{lem:orden-transitivo}), así que la hipótesis de inducción da $a_k<2^k$ y $a_l<2^l$. Además $n=k+1=(l+1)+1=l+2$. Entonces
+        \begin{equation*}
+            a_n = a_k+a_l < 2^k+2^l = 2^{l+1}+2^l = 2^l(2+1) \le 2^l\cdot2^2 = 2^{l+2} = 2^n.
+        \end{equation*}
+        Por la forma alternativa de inducción, $a_n<2^n$ para todo $n\in\N$.
+    \end{ejemplo}
+
     \subsection{Divisibilidad y números primos}
 
     \begin{proposicion}[Cancelación del producto]
@@ -1248,118 +1271,670 @@
     \end{proof}
 
     \section{Enteros}
-    
-    Relación en $\N\times\N=A$
-    \begin{equation*}
-        \mathcal{R}=\{((a,b),(b,c))\in A\times A:a+d=b+c\}
-    \end{equation*}
-    es una relación de equivalencia. La clase de equivalencia $(a,b)\in A$ es $[(a,b)]=\{(c,d)\in A:a+d=b+c\}$. Definimos
-    \begin{equation*}
-        \Z=\{[(a,b)]:(a,b)\in A\}
-    \end{equation*}
-    Se llama conjunto de números enteros. Definimos la suma en $\Z$ mediante la operación binaria:
-    \begin{align*}
-        +:\Z\times\Z&\to\Z\\
-        ([(a,b)],[(c,d)])&\mapsto[(a+c,b+d)].
-    \end{align*}
-    Tenemos que demostrar que estos esta definido, no depende de los representatntes tomados en las clases. Supongamos, $(a_{1},b_{1})\in[(a,b)]$ y $(c_{1},d_{1})\in[(c,d)]$. Tenemos que probar que
-    \begin{equation*}
-        [(a_{1},b_{1})]+_{\Z}[(c_{1},d_{1})]=[(a,b)]+_{\Z}[(c,d)].
-    \end{equation*}
-    Por hipótesis,
-    \begin{gather}
-        a_{1}+b=b_{1}+a\\
-        c_{1}+d=d_{1}+c.
-    \end{gather}
-    Queremos probar
-    \begin{equation*}
-        (a_{1}+c_{1})+(b+d)=(b_{1}+d_{1})+(a+c).
-    \end{equation*}
-    Sumando (7.1) y (7.2) obtenemos
-    \begin{equation*}
-        (a_{1}+b)+(c_{1}+d)=(b_{1}+a)+(d_{1}+c)-
-    \end{equation*}
-    Usando la conmutatividad, asociatividad de la suma en $\N$ tenemos
-    \begin{equation*}
-        (a_{1},c_{1})+(b+d)=(b_{1},d_{1})+(a+c).
-    \end{equation*}
 
-    \begin{definicion}
-        La clase $[(1,1)]\in\Z$ se llama cero de $\Z$y se denota
+    \begin{definicion}[Relación en $\N\times\N$]
+        \label{def:relacion-Z}
+        Sea $A=\N\times\N$. Definimos en $A$ la relación
         \begin{equation*}
-            0:=[(1,1)].
+            \mathcal{R} = \big\{\big((a,b),(c,d)\big)\in A\times A : a+d=b+c\big\}.
         \end{equation*}
     \end{definicion}
 
     \begin{proposicion}
-        La suma en $\Z$ es
+        \label{prop:R-equivalencia}
+        $\mathcal{R}$ es una relación de equivalencia en $A$.
+    \end{proposicion}
+    % [Pendiente de revisión: demostración añadida por Claude — quitar este aviso cuando esté aprobada]
+    \begin{proof}
+        \textbf{Reflexividad.} Para todo $(a,b)\in A$, $\big((a,b),(a,b)\big)\in\mathcal{R}$, pues $a+b=b+a$ por la conmutatividad de la suma en $\N$.
+
+        \textbf{Simetría.} Si $\big((a,b),(c,d)\big)\in\mathcal{R}$, es decir $a+d=b+c$, entonces por la conmutatividad de la suma, $c+b=d+a$, es decir, $\big((c,d),(a,b)\big)\in\mathcal{R}$.
+
+        \textbf{Transitividad.} Supongamos que $\big((a,b),(c,d)\big)\in\mathcal{R}$ y $\big((c,d),(e,f)\big)\in\mathcal{R}$, es decir, $a+d=b+c$ y $c+f=d+e$. Sumando ambas igualdades,
+        \begin{equation*}
+            (a+d)+(c+f) = (b+c)+(d+e).
+        \end{equation*}
+        Usando la conmutatividad y la asociatividad de la suma en $\N$, esto equivale a
+        \begin{equation*}
+            (a+f)+(c+d) = (b+e)+(c+d),
+        \end{equation*}
+        y por la ley de cancelación de la suma en $\N$, $a+f=b+e$, es decir, $\big((a,b),(e,f)\big)\in\mathcal{R}$.
+    \end{proof}
+
+    Por la Proposición \ref{prop:particion}, las clases de equivalencia de $\mathcal{R}$ forman una partición de $A$.
+
+    \begin{definicion}[Números enteros]
+        \label{def:enteros}
+        Para $(a,b)\in A$, denotamos por
+        \begin{equation*}
+            [(a,b)] = \{(c,d)\in A : \big((a,b),(c,d)\big)\in\mathcal{R}\} = \{(c,d)\in A : a+d=b+c\}
+        \end{equation*}
+        la clase de equivalencia de $(a,b)$ respecto a $\mathcal{R}$ (Definición \ref{def:relacion-Z}). Definimos el conjunto de los \textbf{números enteros} como
+        \begin{equation*}
+            \Z = \{[(a,b)] : (a,b)\in A\}.
+        \end{equation*}
+    \end{definicion}
+
+    \begin{definicion}[Suma en $\Z$]
+        \label{def:suma-Z}
+        Definimos la suma en $\Z$ mediante la operación binaria
+        \begin{align*}
+            +_{\Z}\colon\Z\times\Z&\to\Z,\\
+            \big([(a,b)],[(c,d)]\big)&\mapsto[(a+c,b+d)].
+        \end{align*}
+    \end{definicion}
+
+    \begin{proposicion}[Buena definición de la suma en $\Z$]
+        \label{prop:suma-Z-bien-definida}
+        La suma en $\Z$ no depende de los representantes elegidos: si $(a,b),(a_{1},b_{1}),(c,d),(c_{1},d_{1})\in A$ son tales que $[(a,b)]=[(a_{1},b_{1})]$ y $[(c,d)]=[(c_{1},d_{1})]$, entonces
+        \begin{equation*}
+            [(a+c,b+d)] = [(a_{1}+c_{1},b_{1}+d_{1})].
+        \end{equation*}
+    \end{proposicion}
+    \begin{proof}
+        Como $[(a,b)]=[(a_{1},b_{1})]$, se tiene $a+b_{1}=b+a_{1}$. Como $[(c,d)]=[(c_{1},d_{1})]$, se tiene $c+d_{1}=d+c_{1}$. Sumando ambas igualdades,
+        \begin{equation*}
+            (a+b_{1})+(c+d_{1}) = (b+a_{1})+(d+c_{1}).
+        \end{equation*}
+        Usando la conmutatividad y la asociatividad de la suma en $\N$, el lado izquierdo es igual a $(a+c)+(b_{1}+d_{1})$ y el lado derecho es igual a $(b+d)+(a_{1}+c_{1})$, así que
+        \begin{equation*}
+            (a+c)+(b_{1}+d_{1}) = (b+d)+(a_{1}+c_{1}),
+        \end{equation*}
+        es decir, $[(a+c,b+d)]=[(a_{1}+c_{1},b_{1}+d_{1})]$.
+    \end{proof}
+
+    \begin{definicion}[Cero de $\Z$]
+        \label{def:cero-Z}
+        La clase $[(1,1)]\in\Z$ se llama \textbf{cero} de $\Z$ y se denota
+        \begin{equation*}
+            0 := [(1,1)].
+        \end{equation*}
+        Notemos que $[(1,1)]=[(c,c)]$ para todo $c\in\N$, pues $\big((1,1),(c,c)\big)\in\mathcal{R}$ (ya que $1+c=1+c$).
+    \end{definicion}
+
+    \begin{proposicion}[$\Z$ con la suma es un grupo abeliano]
+        \label{prop:suma-Z-grupo}
+        La suma en $\Z$ es:
         \begin{enumerate}
-            \item[(1)] Asociativa, es decir si $[(a_{1},b_{1})],[(a_{2},b_{2})],[(a_{3},b_{3})]\in\Z$ entonces
-            \begin{gather}
-                [(a_{1},b_{1})]+_{\Z}([a_{2},b_{2}])+_{\Z}[(a_{3},b_{3})]\\
-                =([(a_{1},b_{1})]+_{\Z}[(a_{2},b_{2})])+[(a_{3},b_{3})]
-            \end{gather}
-            \item[(2)] Conmutativa, es decir si $[(a_{1},b_{1})],[(a_{2},b_{2})]\in\Z$, entonces
+            \item[(1)] Asociativa, es decir, si $[(a_{1},b_{1})],[(a_{2},b_{2})],[(a_{3},b_{3})]\in\Z$ entonces
+            \begin{equation*}
+                \big([(a_{1},b_{1})]+_{\Z}[(a_{2},b_{2})]\big)+_{\Z}[(a_{3},b_{3})] = [(a_{1},b_{1})]+_{\Z}\big([(a_{2},b_{2})]+_{\Z}[(a_{3},b_{3})]\big).
+            \end{equation*}
+            \item[(2)] Conmutativa, es decir, si $[(a_{1},b_{1})],[(a_{2},b_{2})]\in\Z$, entonces
             \begin{equation*}
                 [(a_{1},b_{1})]+_{\Z}[(a_{2},b_{2})]=[(a_{2},b_{2})]+_{\Z}[(a_{1},b_{1})].
             \end{equation*}
-            \item[(3)] Para todo $[(a,b)]\in\Z$ se tiene que
+            \item[(3)] Tal que para todo $[(a,b)]\in\Z$ se tiene que
             \begin{equation*}
-                [(a,b)]+_{\Z}0=[(a,b)]
+                [(a,b)]+_{\Z}0=[(a,b)].
             \end{equation*}
-            \item[(4)] Si $[(a+b)]\in\Z$, existe $[(c,d)]\in\Z$ tal que
+            \item[(4)] Tal que para todo $[(a,b)]\in\Z$ existe $[(c,d)]\in\Z$ tal que
             \begin{equation*}
                 [(a,b)]+_{\Z}[(c,d)]=0.
             \end{equation*}
         \end{enumerate}
     \end{proposicion}
-
-    %las demostraciones las intente copiar pero esta feo copiarlas desde el pizarron te lo dejo a cargo cuando leas esto de terminar la demostracion y mejorarlas
-
+    % [Pendiente de revisión: demostración completada por Claude — quitar este aviso cuando esté aprobada]
     \begin{proof}
-        (7.3) es igual a
+        (1) Por un lado,
         \begin{equation*}
-            [(a_{1},b_{1})]+_{\Z}([a_{2}+a_{3},b_{2}+b_{3}])=[(a_{1}+(a_{2}+a_{3}),b_{1}+(b_{2}+b_{3}))].
+            \big([(a_{1},b_{1})]+_{\Z}[(a_{2},b_{2})]\big)+_{\Z}[(a_{3},b_{3})] = [(a_{1}+a_{2},b_{1}+b_{2})]+_{\Z}[(a_{3},b_{3})] = \big[\big((a_{1}+a_{2})+a_{3},\,(b_{1}+b_{2})+b_{3}\big)\big].
         \end{equation*}
-        Como la suma en $\N$ es asociativa esto es igual a
+        Por otro lado,
         \begin{equation*}
-            [((a_{1}+a_{2})+a_{3}.(b_{1}+b_{2})+b_{3})]=[(a_{1}+a_{2},b_{1}+b_{2})]+_{\Z}[(a_{3},b_{3})]
+            [(a_{1},b_{1})]+_{\Z}\big([(a_{2},b_{2})]+_{\Z}[(a_{3},b_{3})]\big) = [(a_{1},b_{1})]+_{\Z}[(a_{2}+a_{3},b_{2}+b_{3})] = \big[\big(a_{1}+(a_{2}+a_{3}),\,b_{1}+(b_{2}+b_{3})\big)\big].
         \end{equation*}
-        y esto es igual a (7.4).
+        Como la suma en $\N$ es asociativa, $(a_{1}+a_{2})+a_{3}=a_{1}+(a_{2}+a_{3})$ y $(b_{1}+b_{2})+b_{3}=b_{1}+(b_{2}+b_{3})$, así que ambas expresiones son iguales.
+
+        (2) Como la suma en $\N$ es conmutativa,
+        \begin{equation*}
+            [(a_{1},b_{1})]+_{\Z}[(a_{2},b_{2})] = [(a_{1}+a_{2},b_{1}+b_{2})] = [(a_{2}+a_{1},b_{2}+b_{1})] = [(a_{2},b_{2})]+_{\Z}[(a_{1},b_{1})].
+        \end{equation*}
+
+        (3) Sea $[(a,b)]\in\Z$. Entonces
+        \begin{equation*}
+            [(a,b)]+_{\Z}0 = [(a,b)]+_{\Z}[(1,1)] = [(a+1,b+1)].
+        \end{equation*}
+        Veamos que $[(a+1,b+1)]=[(a,b)]$: necesitamos que $(a+1)+b=(b+1)+a$, lo cual se sigue de la conmutatividad y asociatividad de la suma en $\N$ (ambos lados son iguales a $a+b+1$). Por tanto $[(a,b)]+_{\Z}0=[(a,b)]$.
+
+        (4) Sea $[(a,b)]\in\Z$ y tomemos $[(b,a)]\in\Z$. Entonces
+        \begin{equation*}
+            [(a,b)]+_{\Z}[(b,a)] = [(a+b,b+a)].
+        \end{equation*}
+        Veamos que $[(a+b,b+a)]=[(1,1)]=0$: necesitamos que $(a+b)+1=(b+a)+1$, lo cual es inmediato por la conmutatividad de la suma en $\N$. Por tanto $[(a,b)]+_{\Z}[(b,a)]=0$, es decir, $[(b,a)]$ es un inverso aditivo de $[(a,b)]$.
     \end{proof}
 
-    \begin{definicion}
+    \begin{definicion}[Grupo abeliano]
+        \label{def:grupo-abeliano}
         Un conjunto $\mathcal{G}$ con una operación binaria
         \begin{equation*}
-            +:\mathcal{G}\times\mathcal{G}\to\mathcal{G}
+            +\colon\mathcal{G}\times\mathcal{G}\to\mathcal{G}
         \end{equation*}
         que es asociativa, conmutativa, con neutro aditivo y tal que todo elemento de $\mathcal{G}$ tiene inverso aditivo, se llama \textbf{grupo abeliano}.
     \end{definicion}
 
     \begin{ejemplo}
-        $\Z$ con $+_{\Z}$ es un grupo abeliano.
+        Por la Proposición \ref{prop:suma-Z-grupo}, $\Z$ con $+_{\Z}$ es un grupo abeliano.
     \end{ejemplo}
 
-    Definimos el producto en $\Z$ mediante la operación binaria
-    \begin{align*}
-        \cdot_{\Z}:\Z\times\Z&\to\Z\\
-        ([a,b],[(c,d)])&\mapsto[(ac+bd,bc+ad)]
-    \end{align*}
+    \begin{definicion}[Producto en $\Z$]
+        \label{def:producto-Z}
+        Definimos el producto en $\Z$ mediante la operación binaria
+        \begin{align*}
+            \cdot_{\Z}\colon\Z\times\Z&\to\Z,\\
+            \big([(a,b)],[(c,d)]\big)&\mapsto[(ac+bd,bc+ad)].
+        \end{align*}
+    \end{definicion}
 
-    %dejo demostrar que el producto en Z esta bien definido pero esa demostracion te la encargo a ti, igual todas las que sean de este estilo que dejan de tarea pero para efecto de las notas tu tienes que demostrarlas ponles un indicador para yo revisarlas y quitarlas cuando yo le de el visto bueno.
+    \begin{proposicion}[Buena definición del producto en $\Z$]
+        \label{prop:producto-Z-bien-definido}
+        El producto en $\Z$ no depende de los representantes elegidos: si $(a,b),(a_{1},b_{1}),(c,d),(c_{1},d_{1})\in A$ son tales que $[(a,b)]=[(a_{1},b_{1})]$ y $[(c,d)]=[(c_{1},d_{1})]$, entonces
+        \begin{equation*}
+            [(ac+bd,bc+ad)] = [(a_{1}c_{1}+b_{1}d_{1},b_{1}c_{1}+a_{1}d_{1})].
+        \end{equation*}
+    \end{proposicion}
+    % [Pendiente de revisión: demostración añadida por Claude — quitar este aviso cuando esté aprobada]
+    \begin{proof}
+        Por hipótesis, $a+b_{1}=b+a_{1}$ y $c+d_{1}=d+c_{1}$.
 
-    \begin{proposicion}
-        El prodcuto $\cdot_{\Z}$ en $\Z$ es
+        \emph{Paso 1.} Veamos que $[(ac+bd,bc+ad)]=[(a_{1}c+b_{1}d,b_{1}c+a_{1}d)]$, es decir, que el resultado no cambia al sustituir $(a,b)$ por $(a_{1},b_{1})$. Por la distributividad del producto sobre la suma en $\N$,
+        \begin{equation*}
+            (ac+bd)+(b_{1}c+a_{1}d) = c(a+b_{1})+d(b+a_{1}), \qquad (bc+ad)+(a_{1}c+b_{1}d) = c(b+a_{1})+d(a+b_{1}).
+        \end{equation*}
+        Como $a+b_{1}=b+a_{1}$, los lados derechos de ambas igualdades coinciden, así que
+        \begin{equation*}
+            (ac+bd)+(b_{1}c+a_{1}d) = (bc+ad)+(a_{1}c+b_{1}d),
+        \end{equation*}
+        es decir, $\big((ac+bd,bc+ad),(a_{1}c+b_{1}d,b_{1}c+a_{1}d)\big)\in\mathcal{R}$.
+
+        \emph{Paso 2.} Análogamente, usando que $c+d_{1}=d+c_{1}$, se prueba que
+        \begin{equation*}
+            [(a_{1}c+b_{1}d,b_{1}c+a_{1}d)] = [(a_{1}c_{1}+b_{1}d_{1},b_{1}c_{1}+a_{1}d_{1})],
+        \end{equation*}
+        es decir, que el resultado no cambia al sustituir $(c,d)$ por $(c_{1},d_{1})$.
+
+        Por la transitividad de $\mathcal{R}$ (Proposición \ref{prop:R-equivalencia}), de los Pasos 1 y 2 se sigue que
+        \begin{equation*}
+            [(ac+bd,bc+ad)] = [(a_{1}c_{1}+b_{1}d_{1},b_{1}c_{1}+a_{1}d_{1})].
+        \end{equation*}
+    \end{proof}
+
+    \begin{proposicion}[Propiedades del producto en $\Z$]
+        \label{prop:producto-Z-propiedades}
+        El producto $\cdot_{\Z}$ en $\Z$ es:
         \begin{enumerate}
-            \item[(1)] Asociativa. Si $[(a_{1},b_{1})],[(a_{2},b_{2})],[(a_{3},b_{3})]\in\Z$ entonces
+            \item[(1)] Asociativo, es decir, si $[(a_{1},b_{1})],[(a_{2},b_{2})],[(a_{3},b_{3})]\in\Z$ entonces
             \begin{equation*}
-                \big([(a_{1},b_{1})]\cdot_{\Z}[(a_{2},b_{2})]\big)\cdot_{\Z}[(a_{3},b_{3})]=[(a_{1},b_{1})]\cdot_{\Z}\big([(a_{2},b_{2})]\cdot_{\Z}[(a_{3},b_{3})]\big)
+                \big([(a_{1},b_{1})]\cdot_{\Z}[(a_{2},b_{2})]\big)\cdot_{\Z}[(a_{3},b_{3})] = [(a_{1},b_{1})]\cdot_{\Z}\big([(a_{2},b_{2})]\cdot_{\Z}[(a_{3},b_{3})]\big).
             \end{equation*}
-            \item[(2)] Conmutativa. Para todo $[(a_{1},b_{1})],[(a_{2},b_{2})]\in\Z$ entonces
+            \item[(2)] Conmutativo, es decir, si $[(a_{1},b_{1})],[(a_{2},b_{2})]\in\Z$ entonces
             \begin{equation*}
                 [(a_{1},b_{1})]\cdot_{\Z}[(a_{2},b_{2})]=[(a_{2},b_{2})]\cdot_{\Z}[(a_{1},b_{1})].
             \end{equation*}
         \end{enumerate}
     \end{proposicion}
+    % [Pendiente de revisión: demostración añadida por Claude — quitar este aviso cuando esté aprobada]
+    \begin{proof}
+        (1) Por un lado,
+        \begin{equation*}
+            \big([(a_{1},b_{1})]\cdot_{\Z}[(a_{2},b_{2})]\big)\cdot_{\Z}[(a_{3},b_{3})] = [(a_{1}a_{2}+b_{1}b_{2},\,b_{1}a_{2}+a_{1}b_{2})]\cdot_{\Z}[(a_{3},b_{3})] = [(p_{1},q_{1})],
+        \end{equation*}
+        donde
+        \begin{align*}
+            p_{1} &= a_{1}a_{2}a_{3}+a_{1}b_{2}b_{3}+a_{2}b_{1}b_{3}+a_{3}b_{1}b_{2},\\
+            q_{1} &= a_{2}a_{3}b_{1}+a_{1}a_{3}b_{2}+a_{1}a_{2}b_{3}+b_{1}b_{2}b_{3}.
+        \end{align*}
+        Por otro lado,
+        \begin{equation*}
+            [(a_{1},b_{1})]\cdot_{\Z}\big([(a_{2},b_{2})]\cdot_{\Z}[(a_{3},b_{3})]\big) = [(a_{1},b_{1})]\cdot_{\Z}[(a_{2}a_{3}+b_{2}b_{3},\,b_{2}a_{3}+a_{2}b_{3})] = [(p_{2},q_{2})],
+        \end{equation*}
+        donde
+        \begin{align*}
+            p_{2} &= a_{1}a_{2}a_{3}+a_{1}b_{2}b_{3}+a_{3}b_{1}b_{2}+a_{2}b_{1}b_{3},\\
+            q_{2} &= a_{2}a_{3}b_{1}+b_{1}b_{2}b_{3}+a_{1}a_{3}b_{2}+a_{1}a_{2}b_{3}.
+        \end{align*}
+        Usando la conmutatividad y la asociatividad de la suma y el producto en $\N$, se tiene $p_{1}=p_{2}$ y $q_{1}=q_{2}$ (ambos son sumas de los mismos cuatro términos), así que las dos expresiones son iguales.
+
+        (2) Usando la conmutatividad de la suma y el producto en $\N$,
+        \begin{equation*}
+            [(a_{1},b_{1})]\cdot_{\Z}[(a_{2},b_{2})] = [(a_{1}a_{2}+b_{1}b_{2},\,b_{1}a_{2}+a_{1}b_{2})] = [(a_{2}a_{1}+b_{2}b_{1},\,b_{2}a_{1}+a_{2}b_{1})] = [(a_{2},b_{2})]\cdot_{\Z}[(a_{1},b_{1})].
+        \end{equation*}
+    \end{proof}
+
+    \subsection{Más propiedades del producto}
+
+    \begin{proposicion}[Distributividad del producto sobre la suma en $\Z$]
+        \label{prop:distributividad-Z}
+        Si $[(a,b)],[(c,d)],[(e,f)]\in\Z$, entonces
+        \begin{equation*}
+            [(a,b)]\cdot_{\Z}\big([(c,d)]+_{\Z}[(e,f)]\big) = [(a,b)]\cdot_{\Z}[(c,d)] +_{\Z} [(a,b)]\cdot_{\Z}[(e,f)].
+        \end{equation*}
+    \end{proposicion}
+    % [Pendiente de revisión: demostración añadida por Claude — quitar este aviso cuando esté aprobada]
+    \begin{proof}
+        Por un lado,
+        \begin{align*}
+            [(a,b)]\cdot_{\Z}\big([(c,d)]+_{\Z}[(e,f)]\big) &= [(a,b)]\cdot_{\Z}[(c+e,d+f)] \\
+            &= \big[\big(a(c+e)+b(d+f),\,b(c+e)+a(d+f)\big)\big].
+        \end{align*}
+        Por otro lado,
+        \begin{align*}
+            [(a,b)]\cdot_{\Z}[(c,d)] +_{\Z} [(a,b)]\cdot_{\Z}[(e,f)] &= [(ac+bd,bc+ad)] +_{\Z} [(ae+bf,be+af)] \\
+            &= \big[\big((ac+bd)+(ae+bf),\,(bc+ad)+(be+af)\big)\big].
+        \end{align*}
+        Usando la distributividad, la conmutatividad y la asociatividad del producto y la suma en $\N$, ambas primeras coordenadas son iguales a $ac+ae+bd+bf$ y ambas segundas coordenadas son iguales a $bc+be+ad+af$, así que las dos expresiones son iguales.
+    \end{proof}
+
+    \begin{definicion}[Inverso aditivo y resta]
+        \label{def:resta-Z}
+        El inverso aditivo de $x\in\Z$ (cuya existencia da la Proposición \ref{prop:suma-Z-grupo}(4)) es único: si $u,w\in\Z$ satisfacen $x+_{\Z}u=0=x+_{\Z}w$, entonces
+        \begin{equation*}
+            u = u+_{\Z}0 = u+_{\Z}(x+_{\Z}w) = (u+_{\Z}x)+_{\Z}w = 0+_{\Z}w = w.
+        \end{equation*}
+        Denotamos por $-x$ al inverso aditivo de $x$. Para $x,y\in\Z$, escribimos
+        \begin{equation*}
+            x-y := x+_{\Z}(-y).
+        \end{equation*}
+    \end{definicion}
+
+    \begin{lema}[Regla de signos]
+        \label{lem:regla-signos-Z}
+        Para $x,y\in\Z$,
+        \begin{equation*}
+            (-x)\cdot_{\Z}y = -(x\cdot_{\Z}y) = x\cdot_{\Z}(-y).
+        \end{equation*}
+    \end{lema}
+    % [Pendiente de revisión: demostración añadida por Claude — quitar este aviso cuando esté aprobada]
+    \begin{proof}
+        Para $z=[(p,q)]\in\Z$, $z\cdot_{\Z}0=[(p,q)]\cdot_{\Z}[(1,1)]=[(p+q,q+p)]=0$.
+
+        Por la distributividad (Proposición \ref{prop:distributividad-Z}),
+        \begin{equation*}
+            x\cdot_{\Z}y+_{\Z}x\cdot_{\Z}(-y) = x\cdot_{\Z}\big(y+_{\Z}(-y)\big) = x\cdot_{\Z}0 = 0,
+        \end{equation*}
+        así que $x\cdot_{\Z}(-y)$ es un inverso aditivo de $x\cdot_{\Z}y$; por la unicidad del inverso aditivo (Definición \ref{def:resta-Z}), $x\cdot_{\Z}(-y)=-(x\cdot_{\Z}y)$.
+
+        Por la conmutatividad del producto, $(-x)\cdot_{\Z}y=y\cdot_{\Z}(-x)=-(y\cdot_{\Z}x)=-(x\cdot_{\Z}y)$, donde la segunda igualdad es la ya probada (intercambiando los papeles de $x,y$).
+    \end{proof}
+
+    \begin{proposicion}[$\Z$ no tiene divisores de cero]
+        \label{prop:sin-divisores-cero-Z}
+        Sean $[(a,b)],[(c,d)]\in\Z$ tales que $[(a,b)]\cdot_{\Z}[(c,d)]=0$. Entonces $[(a,b)]=0$ o $[(c,d)]=0$.
+    \end{proposicion}
+    % [Pendiente de revisión: demostración añadida por Claude — quitar este aviso cuando esté aprobada]
+    \begin{proof}
+        Como $0=[(1,1)]$, se tiene
+        \begin{align*}
+            [(a,b)]\cdot_{\Z}[(c,d)]=0 &\iff [(ac+bd,bc+ad)]=[(1,1)] \\
+            &\iff (ac+bd)+1=(bc+ad)+1 \\
+            &\iff ac+bd=ad+bc,
+        \end{align*}
+        donde la última equivalencia se sigue de la cancelación de la suma en $\N$. Basta entonces probar el contrarrecíproco: si $a\neq b$ y $c\neq d$, entonces $ac+bd\neq ad+bc$.
+
+        Por la Tricotomía en $\N$ (Teorema \ref{thm:tricotomia}), $a>b$ o $b>a$; análogamente, $c>d$ o $d>c$.
+
+        Si $a>b$ y $c>d$: existen $p,q\in\N$ tales que $a=b+p$ y $c=d+q$. Entonces
+        \begin{equation*}
+            ac+bd = (b+p)(d+q)+bd = 2bd+bq+pd+pq, \qquad ad+bc = (b+p)d+b(d+q) = 2bd+bq+pd,
+        \end{equation*}
+        así que $ac+bd=(ad+bc)+pq$; como $pq\in\N$, el Lema \ref{lem:no-autosuma} da $ac+bd\neq ad+bc$.
+
+        Si $a>b$ y $d>c$: existen $p,q\in\N$ tales que $a=b+p$ y $d=c+q$. Un cálculo análogo da
+        \begin{equation*}
+            ad+bc = (b+p)(c+q)+bc = 2bc+bq+pc+pq, \qquad ac+bd = (b+p)c+b(c+q) = 2bc+bq+pc,
+        \end{equation*}
+        así que $ad+bc=(ac+bd)+pq$, y de nuevo $ac+bd\neq ad+bc$ por el Lema \ref{lem:no-autosuma}.
+
+        Los casos restantes ($b>a$ con $c>d$, y $b>a$ con $d>c$) son análogos, intercambiando los papeles de $a$ y $b$. En todos los casos, $ac+bd\neq ad+bc$.
+    \end{proof}
+
+    \begin{proposicion}[Cancelación del producto en $\Z$]
+        \label{prop:cancelacion-Z}
+        Sean $[(a,b)],[(c,d)],[(e,f)]\in\Z$ con $[(a,b)]\neq0$. Si
+        \begin{equation*}
+            [(a,b)]\cdot_{\Z}[(c,d)] = [(a,b)]\cdot_{\Z}[(e,f)],
+        \end{equation*}
+        entonces $[(c,d)]=[(e,f)]$.
+    \end{proposicion}
+    % [Pendiente de revisión: demostración añadida por Claude — quitar este aviso cuando esté aprobada]
+    \begin{proof}
+        Sumando $[(a,b)]\cdot_{\Z}(-[(e,f)])=-\big([(a,b)]\cdot_{\Z}[(e,f)]\big)$ (Lema \ref{lem:regla-signos-Z}) a ambos lados de la hipótesis y usando la distributividad (Proposición \ref{prop:distributividad-Z}),
+        \begin{align*}
+            [(a,b)]\cdot_{\Z}\big([(c,d)]+_{\Z}(-[(e,f)])\big) &= [(a,b)]\cdot_{\Z}[(c,d)] +_{\Z} [(a,b)]\cdot_{\Z}(-[(e,f)]) \\
+            &= [(a,b)]\cdot_{\Z}[(e,f)] +_{\Z} [(a,b)]\cdot_{\Z}(-[(e,f)]) = 0.
+        \end{align*}
+        Como $[(a,b)]\neq0$, por la Proposición \ref{prop:sin-divisores-cero-Z} se tiene $[(c,d)]+_{\Z}(-[(e,f)])=0$, es decir $[(c,d)]-[(e,f)]=0$. Sumando $[(e,f)]$ a ambos lados,
+        \begin{equation*}
+            [(c,d)] = [(c,d)]+_{\Z}0 = [(c,d)]+_{\Z}\big((-[(e,f)])+_{\Z}[(e,f)]\big) = \big([(c,d)]-[(e,f)]\big)+_{\Z}[(e,f)] = [(e,f)].
+        \end{equation*}
+    \end{proof}
+
+    \begin{definicion}[Uno de $\Z$]
+        \label{def:uno-Z}
+        La clase $[(2,1)]\in\Z$ se llama \textbf{uno} de $\Z$ y se denota
+        \begin{equation*}
+            1 := [(2,1)].
+        \end{equation*}
+        Notemos que $[(2,1)]=[(\sigma(n),n)]$ para todo $n\in\N$, pues $\sigma(n)+1=(n+1)+1=n+2$, que es exactamente la condición $\big((\sigma(n),n),(2,1)\big)\in\mathcal{R}$.
+    \end{definicion}
+
+    \begin{proposicion}[El uno es neutro para el producto]
+        \label{prop:uno-neutro-Z}
+        Para todo $[(a,b)]\in\Z$, $[(a,b)]\cdot_{\Z}1 = [(a,b)]$.
+    \end{proposicion}
+    \begin{proof}
+        Usando el representante $1=[(2,1)]$ (Definición \ref{def:uno-Z}),
+        \begin{equation*}
+            [(a,b)]\cdot_{\Z}1 = [(a,b)]\cdot_{\Z}[(2,1)] = [(2a+b,a+2b)].
+        \end{equation*}
+        Veamos que $[(2a+b,a+2b)]=[(a,b)]$: necesitamos que $(2a+b)+b=(a+2b)+a$, lo cual se sigue de la conmutatividad y asociatividad de la suma en $\N$ (ambos lados son iguales a $2a+2b$). Por tanto $[(a,b)]\cdot_{\Z}1=[(a,b)]$.
+    \end{proof}
+
+    \begin{corolario}[Unicidad del uno]
+        \label{coro:uno-unico-Z}
+        Sean $[(a,b)],[(c,d)]\in\Z$ con $[(a,b)]\neq0$. Si $[(a,b)]\cdot_{\Z}[(c,d)]=[(a,b)]$, entonces $[(c,d)]=1$.
+    \end{corolario}
+    % [Pendiente de revisión: demostración añadida por Claude — quitar este aviso cuando esté aprobada]
+    \begin{proof}
+        Por la Proposición \ref{prop:uno-neutro-Z}, $[(a,b)]\cdot_{\Z}1=[(a,b)]$, así que $[(a,b)]\cdot_{\Z}[(c,d)] = [(a,b)]\cdot_{\Z}1$. Como $[(a,b)]\neq0$, por la cancelación del producto (Proposición \ref{prop:cancelacion-Z}) se concluye que $[(c,d)]=1$.
+    \end{proof}
+
+    \subsection{Orden}
+
+    \begin{definicion}[Orden en $\Z$]
+        \label{def:orden-Z}
+        Sean $[(a,b)],[(c,d)]\in\Z$. Diremos que $[(a,b)]$ es \textbf{menor} que $[(c,d)]$, y escribiremos $[(a,b)]<_{\Z}[(c,d)]$, si
+        \begin{equation*}
+            a+d < b+c
+        \end{equation*}
+        (donde $<$ es el orden en $\N$). Escribiremos $[(a,b)]\le_{\Z}[(c,d)]$ si $[(a,b)]<_{\Z}[(c,d)]$ o $[(a,b)]=[(c,d)]$. Escribiremos $[(a,b)]>_{\Z}[(c,d)]$ si $[(c,d)]<_{\Z}[(a,b)]$, y $[(a,b)]\ge_{\Z}[(c,d)]$ si $[(c,d)]\le_{\Z}[(a,b)]$.
+    \end{definicion}
+
+    \begin{proposicion}[Buena definición del orden en $\Z$]
+        \label{prop:orden-Z-bien-definido}
+        El orden $<_{\Z}$ no depende de los representantes elegidos: si $(a,b),(a_{1},b_{1}),(c,d),(c_{1},d_{1})\in A$ son tales que $[(a,b)]=[(a_{1},b_{1})]$, $[(c,d)]=[(c_{1},d_{1})]$ y $[(a,b)]<_{\Z}[(c,d)]$, entonces $[(a_{1},b_{1})]<_{\Z}[(c_{1},d_{1})]$.
+    \end{proposicion}
+    \begin{proof}
+        Por hipótesis, $a_{1}+b=b_{1}+a$, $c+d_{1}=d+c_{1}$, y existe $k\in\N$ tal que $a+d+k=b+c$. Sumando las tres igualdades anteriores,
+        \begin{equation*}
+            (a_{1}+b)+(c+d_{1})+(a+d+k) = (b_{1}+a)+(d+c_{1})+(b+c).
+        \end{equation*}
+        Cancelando $a+b+c+d$ de ambos lados (ley de cancelación de la suma en $\N$), se obtiene
+        \begin{equation*}
+            a_{1}+d_{1}+k = b_{1}+c_{1},
+        \end{equation*}
+        es decir, $a_{1}+d_{1}<b_{1}+c_{1}$, así que $[(a_{1},b_{1})]<_{\Z}[(c_{1},d_{1})]$.
+    \end{proof}
+
+    \begin{definicion}[Entero positivo y negativo]
+        \label{def:positivo-negativo-Z}
+        Sea $[(a,b)]\in\Z$. Diremos que $[(a,b)]$ es \textbf{positivo} si $0<_{\Z}[(a,b)]$, y que es \textbf{negativo} si $[(a,b)]<_{\Z}0$. Denotamos por $\Z_{>0}$ y $\Z_{<0}$ al conjunto de los enteros positivos y negativos, respectivamente.
+    \end{definicion}
+
+    \begin{lema}[Forma de los enteros positivos]
+        \label{lem:forma-positivos-Z}
+        Si $[(a,b)]\in\Z_{>0}$, existe un único $k\in\N$ tal que $[(a,b)]=[(b+k,b)]$.
+    \end{lema}
+    \begin{proof}
+        Como $0=[(1,1)]<_{\Z}[(a,b)]$, por definición existe $j\in\N$ tal que $1+b+j=1+a$; por la conmutatividad y la cancelación de la suma en $\N$, $b+j=a$. Tomando $k:=j\in\N$, se tiene $a=b+k$, así que $[(a,b)]=[(b+k,b)]$.
+
+        Para la unicidad, supongamos que $k,k'\in\N$ son tales que $[(b+k,b)]=[(b+k',b)]$. Por definición de $\mathcal{R}$, $(b+k)+b=b+(b+k')$; cancelando $b$ dos veces (ley de cancelación de la suma en $\N$), se obtiene $k=k'$.
+    \end{proof}
+
+    Notemos que, más generalmente, para cualesquiera $b,k\in\N$ se tiene $[(b+k,b)]=[(1+k,1)]$, pues $(b+k)+1=b+(1+k)$.
+
+    \begin{proposicion}[Biyección entre $\N$ y $\Z_{>0}$]
+        \label{prop:biyeccion-positivos-Z}
+        La función $\varphi\colon\N\to\Z_{>0}$, $k\mapsto[(1+k,1)]$, es una biyección.
+    \end{proposicion}
+    \begin{proof}
+        Para cada $k\in\N$, $0=[(1,1)]<_{\Z}[(1+k,1)]$ pues $1+1<1+(1+k)$ (testigo $k$), así que $[(1+k,1)]\in\Z_{>0}$ y $\varphi$ está bien definida.
+
+        \textit{Inyectividad.} Si $\varphi(k)=\varphi(k')$, es decir $[(1+k,1)]=[(1+k',1)]$, por el argumento de unicidad de la demostración del Lema \ref{lem:forma-positivos-Z} (con $b=1$) se tiene $k=k'$.
+
+        \textit{Sobreyectividad.} Sea $[(a,b)]\in\Z_{>0}$. Por el Lema \ref{lem:forma-positivos-Z}, existe $k\in\N$ tal que $[(a,b)]=[(b+k,b)]$, y por la observación posterior al lema, $[(b+k,b)]=[(1+k,1)]=\varphi(k)$.
+    \end{proof}
+
+    \begin{corolario}
+        \label{coro:biyeccion-orden-Z}
+        Para $k,k'\in\N$, $k<k' \iff [(1+k,1)]<_{\Z}[(1+k',1)]$ (y por tanto $k\le k' \iff [(1+k,1)]\le_{\Z}[(1+k',1)]$).
+    \end{corolario}
+    \begin{proof}
+        ($\Rightarrow$) Si $k<k'$, existe $p\in\N$ tal que $k+p=k'$. Entonces $(1+k)+1+p = 2+k+p = 2+k' = 1+(1+k')$, así que $(1+k)+1<1+(1+k')$, es decir, $[(1+k,1)]<_{\Z}[(1+k',1)]$.
+
+        ($\Leftarrow$) Si $[(1+k,1)]<_{\Z}[(1+k',1)]$, existe $p\in\N$ tal que $(1+k)+1+p=1+(1+k')$, es decir $2+k+p=2+k'$; cancelando $2$, $k+p=k'$, así que $k<k'$.
+
+        La equivalencia para $\le$ se sigue agregando el caso de igualdad, inmediato pues $\varphi$ (Proposición \ref{prop:biyeccion-positivos-Z}) es inyectiva.
+    \end{proof}
+
+    \begin{lema}[Forma de los enteros negativos]
+        \label{lem:forma-negativos-Z}
+        Si $[(a,b)]\in\Z_{<0}$, existe un único $k\in\N$ tal que $[(a,b)]=[(a,a+k)]$.
+    \end{lema}
+    \begin{proof}
+        Como $[(a,b)]<_{\Z}0=[(1,1)]$, por definición existe $j\in\N$ tal que $a+1+j=b+1$; por la cancelación de la suma en $\N$, $a+j=b$. Tomando $k:=j$, se tiene $b=a+k$, así que $[(a,b)]=[(a,a+k)]$.
+
+        La unicidad es análoga a la del Lema \ref{lem:forma-positivos-Z}: si $[(a,a+k)]=[(a,a+k')]$, por definición de $\mathcal{R}$, $a+(a+k')=(a+k)+a$, y cancelando $a$ dos veces, se obtiene $k=k'$.
+    \end{proof}
+
+    Notemos que $[(a,a+k)]=[(1,1+k)]$ para todo $a\in\N$, pues $a+(1+k)=(a+k)+1$. Para $k\in\N$, denotamos
+    \begin{equation*}
+        -k := [(1,1+k)].
+    \end{equation*}
+    Notemos que $k+_{\Z}(-k)=[(1+k,1)]+_{\Z}[(1,1+k)]=[(2+k,2+k)]=0$, es decir, $-k$ (Definición \ref{def:resta-Z}) coincide con el inverso aditivo de $\varphi(k)=[(1+k,1)]$.
+
+    \begin{proposicion}[Biyección entre $\N$ y $\Z_{<0}$]
+        \label{prop:biyeccion-negativos-Z}
+        La función $\N\to\Z_{<0}$, $k\mapsto-k=[(1,1+k)]$, es una biyección.
+    \end{proposicion}
+    \begin{proof}
+        Análoga a la demostración de la Proposición \ref{prop:biyeccion-positivos-Z}, usando el Lema \ref{lem:forma-negativos-Z} y la observación posterior a éste.
+    \end{proof}
+
+    Dado $[(a,b)]\in\Z$, por la Tricotomía en $\N$ (Teorema \ref{thm:tricotomia}) se da exactamente una de las condiciones $a=b$, $a>b$ o $a<b$, que corresponden respectivamente a $[(a,b)]=0$, $[(a,b)]\in\Z_{>0}$ y $[(a,b)]\in\Z_{<0}$ (pues $a=b\iff[(a,b)]=0$ por cancelación de la suma en $\N$, y los otros dos casos son, respectivamente, la conclusión y el análogo de la demostración del Lema \ref{lem:forma-positivos-Z}). Mediante las biyecciones de las Proposiciones \ref{prop:biyeccion-positivos-Z} y \ref{prop:biyeccion-negativos-Z}, identificamos $\Z_{>0}$ con $\N$ y escribimos
+    \begin{equation*}
+        \Z = \{0\}\cup\N\cup\{-k:k\in\N\}.
+    \end{equation*}
+
+    \begin{proposicion}[Cerradura de $\Z_{>0}$ bajo la suma y el producto]
+        \label{prop:cerradura-positivos-Z}
+        Sean $[(a,b)],[(c,d)]\in\Z_{>0}$, con $[(a,b)]=[(b+k,b)]$ y $[(c,d)]=[(d+l,d)]$ para $k,l\in\N$ (Lema \ref{lem:forma-positivos-Z}). Entonces, con $\varphi$ como en la Proposición \ref{prop:biyeccion-positivos-Z},
+        \begin{equation*}
+            [(a,b)]+_{\Z}[(c,d)] = \varphi(k+l) \in\Z_{>0}, \qquad [(a,b)]\cdot_{\Z}[(c,d)] = \varphi(kl) \in\Z_{>0}.
+        \end{equation*}
+        En particular, $\Z_{>0}$ es cerrado bajo la suma y el producto.
+    \end{proposicion}
+    \begin{proof}
+        Para la suma,
+        \begin{equation*}
+            [(b+k,b)]+_{\Z}[(d+l,d)] = [(b+k+d+l,b+d)] = [((b+d)+(k+l),b+d)] = [(1+(k+l),1)] = \varphi(k+l),
+        \end{equation*}
+        usando la observación posterior al Lema \ref{lem:forma-positivos-Z} (con $b+d$ en el papel de $b$).
+
+        Para el producto,
+        \begin{equation*}
+            [(b+k,b)]\cdot_{\Z}[(d+l,d)] = \big[\big((b+k)(d+l)+bd,\,b(d+l)+(b+k)d\big)\big].
+        \end{equation*}
+        Expandiendo, $(b+k)(d+l)+bd=2bd+bl+kd+kl$ y $b(d+l)+(b+k)d=2bd+bl+kd$; con $m:=2bd+bl+kd\in\N$, el producto es $[(m+kl,m)]$, y por la observación posterior al Lema \ref{lem:forma-positivos-Z} (con $m$ en el papel de $b$), $[(m+kl,m)]=[(1+kl,1)]=\varphi(kl)$.
+    \end{proof}
+
+    \begin{lema}[Signo de un factor]
+        \label{lem:signo-factor-Z}
+        Sean $x,y\in\Z$ con $y\in\Z_{>0}$. Si $x\cdot_{\Z}y\in\Z_{>0}$, entonces $x\in\Z_{>0}$.
+    \end{lema}
+    % [Pendiente de revisión: demostración añadida por Claude — quitar este aviso cuando esté aprobada]
+    \begin{proof}
+        Por la descomposición $\Z=\{0\}\cup\Z_{>0}\cup\Z_{<0}$ (vista arriba), $x=0$, $x\in\Z_{>0}$, o $x\in\Z_{<0}$.
+
+        Si $x=0$: $x\cdot_{\Z}y=0\cdot_{\Z}y=y\cdot_{\Z}0=0\notin\Z_{>0}$, contradicción.
+
+        Si $x\in\Z_{<0}$: escribimos $x=-m$, $m\in\N$; por la Regla de signos (Lema \ref{lem:regla-signos-Z}), $x\cdot_{\Z}y=(-m)\cdot_{\Z}y=-(m\cdot_{\Z}y)$. Como $m,y\in\Z_{>0}$, $m\cdot_{\Z}y\in\Z_{>0}$ (Proposición \ref{prop:cerradura-positivos-Z}); de $0<_{\Z}m\cdot_{\Z}y$, sumando $-(m\cdot_{\Z}y)$ (Proposición \ref{prop:orden-compatible-suma-Z}, abajo), $-(m\cdot_{\Z}y)<_{\Z}0$. Así, $x\cdot_{\Z}y=-(m\cdot_{\Z}y)\in\Z_{<0}$, lo cual contradice $x\cdot_{\Z}y\in\Z_{>0}$ (pues $\Z_{>0}\cap\Z_{<0}=\emptyset$).
+
+        Por tanto $x\in\Z_{>0}$.
+    \end{proof}
+
+    \begin{proposicion}[Compatibilidad del orden con la suma en $\Z$]
+        \label{prop:orden-compatible-suma-Z}
+        Sean $a,b,c\in\Z$ con $a<_{\Z}b$. Entonces $a+_{\Z}c<_{\Z}b+_{\Z}c$.
+    \end{proposicion}
+    % [Pendiente de revisión: demostración añadida por Claude — quitar este aviso cuando esté aprobada]
+    \begin{proof}
+        Escribamos $a=[(a_{1},a_{2})]$, $b=[(b_{1},b_{2})]$, $c=[(c_{1},c_{2})]$. Como $a<_{\Z}b$, existe $k\in\N$ tal que $a_{1}+b_{2}+k=a_{2}+b_{1}$. Entonces
+        \begin{equation*}
+            (a_{1}+c_{1})+(b_{2}+c_{2})+k = (a_{1}+b_{2}+k)+(c_{1}+c_{2}) = (a_{2}+b_{1})+(c_{1}+c_{2}) = (a_{2}+c_{2})+(b_{1}+c_{1}),
+        \end{equation*}
+        es decir, $(a_{1}+c_{1})+(b_{2}+c_{2})<(a_{2}+c_{2})+(b_{1}+c_{1})$. Como $a+_{\Z}c=[(a_{1}+c_{1},a_{2}+c_{2})]$ y $b+_{\Z}c=[(b_{1}+c_{1},b_{2}+c_{2})]$, esto significa que $a+_{\Z}c<_{\Z}b+_{\Z}c$.
+    \end{proof}
+
+    \begin{teorema}[Buen orden en $\Z$]
+        \label{thm:buen-orden-Z}
+        Sea $S\subset\Z$ no vacío y acotado inferiormente, es decir, tal que existe $m\in\Z$ con $m\le_{\Z}s$ para todo $s\in S$. Entonces $S$ tiene un elemento mínimo.
+    \end{teorema}
+    \begin{proof}
+        Si $m\in S$, $m$ es el elemento mínimo de $S$ y hemos terminado. Supongamos que $m\notin S$ y definamos $T=\{s-m : s\in S\}$ (Definición \ref{def:resta-Z}). Para $s\in S$, $m\le_{\Z}s$ y $m\neq s$, así que $m<_{\Z}s$; por la Proposición \ref{prop:orden-compatible-suma-Z} (sumando $-m$), $0<_{\Z}s-m$. Por tanto $T\subset\Z_{>0}$, no vacío.
+
+        Mediante la biyección $\varphi$ de la Proposición \ref{prop:biyeccion-positivos-Z}, sea $T'=\varphi^{-1}(T)\subset\N$, no vacío. Por el Principio del buen orden en $\N$ (Proposición \ref{prop:buen-orden}), $T'$ tiene un elemento mínimo $k_{0}\in T'$. Sea $t:=\varphi(k_{0})\in T$, y sea $a\in S$ tal que $t=a-m$, es decir, $a=t+_{\Z}m$.
+
+        Veamos que $a$ es el elemento mínimo de $S$. Sea $b\in S$; entonces $b-m\in T$, digamos $b-m=\varphi(k')$ con $k'\in T'$. Como $k_{0}$ es el mínimo de $T'$, $k_{0}\le k'$. Si $k_{0}=k'$, entonces $t=b-m$, así que $a=t+_{\Z}m=b$. Si $k_{0}<k'$, por el Corolario \ref{coro:biyeccion-orden-Z}, $t=\varphi(k_{0})<_{\Z}\varphi(k')=b-m$, y por la Proposición \ref{prop:orden-compatible-suma-Z} (sumando $m$), $a=t+_{\Z}m<_{\Z}b$. En ambos casos, $a\le_{\Z}b$.
+    \end{proof}
+
+    \subsection{Valor absoluto}
+
+    \begin{definicion}[Valor absoluto]
+        \label{def:valor-absoluto-Z}
+        Definimos la función \textbf{valor absoluto} en $\Z$ como
+        \begin{align*}
+            |\cdot|\colon\Z&\to\N\cup\{0\},\\
+            a&\mapsto\begin{cases} a & \text{si } a\ge_{\Z}0,\\ -a & \text{si } a<_{\Z}0.\end{cases}
+        \end{align*}
+    \end{definicion}
+
+    \begin{lema}
+        \label{lem:valor-absoluto-Z}
+        Sean $a,b\in\Z$. Entonces:
+        \begin{enumerate}
+            \item[(1)] $-|a|\le_{\Z}a\le_{\Z}|a|$.
+            \item[(2)] Si $c\in\Z_{>0}$ y $-c\le_{\Z}a\le_{\Z}c$, entonces $|a|\le_{\Z}c$.
+            \item[(3)] (Desigualdad del triángulo) $|a+_{\Z}b|\le_{\Z}|a|+_{\Z}|b|$.
+        \end{enumerate}
+    \end{lema}
+    % [Pendiente de revisión: demostración completada por Claude (parte (3)) — quitar este aviso cuando esté aprobada]
+    \begin{proof}
+        (1) Si $a\ge_{\Z}0$, entonces $|a|=a\le_{\Z}|a|$. Sumando $-a$ a ambos lados de $0\le_{\Z}a$ (Proposición \ref{prop:orden-compatible-suma-Z}), $-a\le_{\Z}0$, es decir $-|a|\le_{\Z}0\le_{\Z}a$. Por tanto $-|a|\le_{\Z}a\le_{\Z}|a|$.
+
+        Si $a<_{\Z}0$, entonces $|a|=-a$, así que $-|a|=a$. Sumando $-a$ a ambos lados de $a<_{\Z}0$, $0<_{\Z}-a=|a|$; en particular $a<_{\Z}0<_{\Z}|a|$, así que $a\le_{\Z}|a|$. Por tanto $-|a|=a\le_{\Z}a\le_{\Z}|a|$.
+
+        (2) Supongamos que $-c\le_{\Z}a\le_{\Z}c$. Si $a\ge_{\Z}0$, entonces $|a|=a\le_{\Z}c$. Si $a<_{\Z}0$, entonces $|a|=-a$; sumando $-a$ a ambos lados de $-c\le_{\Z}a$ y luego $c$ a ambos lados, se obtiene $-a\le_{\Z}c$, es decir $|a|\le_{\Z}c$. En cualquier caso, $|a|\le_{\Z}c$.
+
+        (3) Por (1), $-|a|\le_{\Z}a\le_{\Z}|a|$ y $-|b|\le_{\Z}b\le_{\Z}|b|$. Sumando ambas cadenas (Proposición \ref{prop:orden-compatible-suma-Z}),
+        \begin{equation*}
+            -(|a|+_{\Z}|b|) = (-|a|)+_{\Z}(-|b|) \le_{\Z} a+_{\Z}b \le_{\Z} |a|+_{\Z}|b|
+        \end{equation*}
+        (pues el inverso aditivo de $|a|+_{\Z}|b|$ es $(-|a|)+_{\Z}(-|b|)$, ya que su suma da $0$). Si $|a|+_{\Z}|b|=0$, como $|a|,|b|\ge_{\Z}0$ se tiene $|a|=|b|=0$ (si alguno fuera positivo, la suma sería positiva por la Proposición \ref{prop:cerradura-positivos-Z}), así que $a=b=0$ y $|a+_{\Z}b|=0=|a|+_{\Z}|b|$. Si $|a|+_{\Z}|b|\in\Z_{>0}$, aplicando (2) con $c=|a|+_{\Z}|b|$ se obtiene $|a+_{\Z}b|\le_{\Z}|a|+_{\Z}|b|$.
+    \end{proof}
+
+    \subsection{El algoritmo de la división}
+
+    \begin{teorema}[Algoritmo de la división en $\Z$]
+        \label{thm:algoritmo-division-Z}
+        Sean $a,d\in\Z$ con $d\neq0$. Entonces existen únicos $q,r\in\Z$ tales que
+        \begin{equation*}
+            a=q\cdot_{\Z}d+_{\Z}r, \qquad 0\le_{\Z}r<_{\Z}|d|.
+        \end{equation*}
+    \end{teorema}
+    \begin{proof}
+        Como $d\neq0$, se tiene $d\in\Z_{>0}$ o $d\in\Z_{<0}$ (Definición \ref{def:positivo-negativo-Z}).
+
+        \textbf{Existencia, caso $d\in\Z_{>0}$.} Definimos
+        \begin{equation*}
+            S = \{a-q\cdot_{\Z}d : q\in\Z\}\cap\Z_{\ge0}.
+        \end{equation*}
+        Veamos que $S\neq\emptyset$:
+        \begin{itemize}
+            \item Si $a=0$: con $q=0$, $a-q\cdot_{\Z}d=0\in S$.
+            \item Si $a\in\Z_{>0}$: con $q=-a$, $a-q\cdot_{\Z}d = a+_{\Z}a\cdot_{\Z}d = a\cdot_{\Z}(1+_{\Z}d)\in\Z_{>0}\subset\Z_{\ge0}$ (Proposición \ref{prop:cerradura-positivos-Z}).
+            \item Si $a\in\Z_{<0}$, escribimos $a=-k$, $k\in\N$: con $q=-k$, $a-q\cdot_{\Z}d = -k+_{\Z}k\cdot_{\Z}d = k\cdot_{\Z}(d-1)\in\Z_{\ge0}$, pues $d\ge_{\Z}1$ (ya que $d\in\Z_{>0}$) implica $d-1\ge_{\Z}0$ (Proposición \ref{prop:orden-compatible-suma-Z}), y por tanto $k\cdot_{\Z}(d-1)\ge_{\Z}0$ (trivial si $d-1=0$; si $d-1\in\Z_{>0}$, por la Proposición \ref{prop:cerradura-positivos-Z}).
+        \end{itemize}
+        Además $S\subset\Z_{\ge0}$ está acotado inferiormente por $0$. Por el Teorema \ref{thm:buen-orden-Z}, $S$ tiene un elemento mínimo $r\in S$; sea $q\in\Z$ tal que $r=a-q\cdot_{\Z}d$, es decir, $a=q\cdot_{\Z}d+_{\Z}r$, $0\le_{\Z}r$.
+
+        Veamos que $r<_{\Z}d$. Si $r\ge_{\Z}d$, entonces $r-d\ge_{\Z}0$ (Proposición \ref{prop:orden-compatible-suma-Z}) y
+        \begin{equation*}
+            r-d = (a-q\cdot_{\Z}d)-d = a-(q+_{\Z}1)\cdot_{\Z}d \in S,
+        \end{equation*}
+        con $r-d<_{\Z}r$ (pues $d\in\Z_{>0}$), lo cual contradice que $r$ es el elemento mínimo de $S$. Por tanto $r<_{\Z}d=|d|$.
+
+        \textbf{Unicidad, caso $d\in\Z_{>0}$.} Supongamos que $a=q'\cdot_{\Z}d+_{\Z}r'$ con $0\le_{\Z}r'<_{\Z}d$, además de la pareja $(q,r)$ hallada arriba. Como $r'=a-q'd\ge_{\Z}0$, $r'\in S$; como $r$ es el mínimo de $S$, $r\le_{\Z}r'$.
+
+        Supongamos, por contradicción, que $r\neq r'$, es decir $r<_{\Z}r'$. Entonces $r'-r\in\Z_{>0}$, y de $q\cdot_{\Z}d+_{\Z}r=q'\cdot_{\Z}d+_{\Z}r'$ se obtiene
+        \begin{equation*}
+            (q-q')\cdot_{\Z}d = r'-r \in\Z_{>0}.
+        \end{equation*}
+        Por el Lema \ref{lem:signo-factor-Z}, $q-q'\in\Z_{>0}$, así que $q-q'\ge_{\Z}1$, es decir $q-q'-1\ge_{\Z}0$; como $d\in\Z_{>0}$, $(q-q'-1)\cdot_{\Z}d\ge_{\Z}0$ (trivial si $q-q'-1=0$, y por la Proposición \ref{prop:cerradura-positivos-Z} si $q-q'-1\in\Z_{>0}$), es decir, $(q-q')\cdot_{\Z}d\ge_{\Z}d$, así que $r'-r\ge_{\Z}d$.
+
+        Por otro lado, de $r'<_{\Z}d$ y $r\ge_{\Z}0$ (Proposición \ref{prop:orden-compatible-suma-Z}, restando $r$), $r'-r<_{\Z}d-r\le_{\Z}d$, así que $r'-r<_{\Z}d$. Esto contradice $r'-r\ge_{\Z}d$.
+
+        Por tanto $r=r'$, y de $(q-q')\cdot_{\Z}d=0$ con $d\neq0$, por la cancelación del producto (Proposición \ref{prop:cancelacion-Z}) se sigue que $q=q'$.
+
+        \textbf{Caso $d\in\Z_{<0}$.} Sea $e:=-d\in\Z_{>0}$. Por el caso anterior (aplicado a $a$ y $e$), existen únicos $q_{0},r\in\Z$ con $a=q_{0}\cdot_{\Z}e+_{\Z}r$ y $0\le_{\Z}r<_{\Z}e=|d|$. Tomando $q:=-q_{0}$, por la Regla de signos (Lema \ref{lem:regla-signos-Z}), $q\cdot_{\Z}d=(-q_{0})\cdot_{\Z}d=q_{0}\cdot_{\Z}(-d)=q_{0}\cdot_{\Z}e$, así que $a=q\cdot_{\Z}d+_{\Z}r$, con $0\le_{\Z}r<_{\Z}|d|$; esto prueba la existencia.
+
+        Para la unicidad, si $a=q'\cdot_{\Z}d+_{\Z}r'$ con $0\le_{\Z}r'<_{\Z}|d|=e$, escribiendo $q'\cdot_{\Z}d=(-q')\cdot_{\Z}e$ (de nuevo por la Regla de signos), se tiene $a=(-q')\cdot_{\Z}e+_{\Z}r'$; por la unicidad en el caso $e\in\Z_{>0}$, $-q'=q_{0}$ y $r'=r$, es decir $q'=q$ y $r'=r$.
+    \end{proof}
+
+    \subsection{Divisibilidad y máximo común divisor}
+
+    \begin{definicion}[Divisor]
+        \label{def:divide-Z}
+        Sean $a,d\in\Z$ con $d\neq0$. Decimos que $d$ \textbf{divide} a $a$ (o que $d$ es un \textbf{divisor} de $a$), denotado $d\mid a$, si existe $b\in\Z$ tal que $a=d\cdot_{\Z}b$.
+    \end{definicion}
+
+    \begin{definicion}[Máximo común divisor]
+        \label{def:mcd-Z}
+        Dados $a,b\in\Z$ con $a\neq0$, un \textbf{máximo común divisor} de $a$ y $b$ es un entero $d\in\Z_{>0}$ tal que:
+        \begin{enumerate}
+            \item[(1)] $d\mid a$ y $d\mid b$;
+            \item[(2)] si $e\in\Z_{>0}$ es tal que $e\mid a$ y $e\mid b$, entonces $e\mid d$.
+        \end{enumerate}
+    \end{definicion}
+
+    \begin{teorema}[Existencia y unicidad del máximo común divisor]
+        \label{thm:existencia-mcd-Z}
+        Dados $a,b\in\Z$ con $a\neq0$, existe un máximo común divisor de $a$ y $b$, y es único.
+    \end{teorema}
+    % [Pendiente de revisión: demostración completada por Claude — quitar este aviso cuando esté aprobada]
+    \begin{proof}
+        \textbf{Existencia.} Definimos
+        \begin{equation*}
+            S = \{m\cdot_{\Z}a+_{\Z}n\cdot_{\Z}b \in\Z_{>0} : m,n\in\Z\}.
+        \end{equation*}
+        Veamos que $S\neq\emptyset$: como $a\neq0$, $a\cdot_{\Z}a\in\Z_{>0}$ (si $a\in\Z_{>0}$, por la Proposición \ref{prop:cerradura-positivos-Z}; si $a\in\Z_{<0}$, escribiendo $a=-k$ con $k\in\N$, por la Regla de signos (Lema \ref{lem:regla-signos-Z}), $a\cdot_{\Z}a=(-k)\cdot_{\Z}(-k)=-(k\cdot_{\Z}(-k))=-(-(k\cdot_{\Z}k))=k\cdot_{\Z}k\in\Z_{>0}$ por la Proposición \ref{prop:cerradura-positivos-Z}). Tomando $m=a,n=0$, $m\cdot_{\Z}a+_{\Z}n\cdot_{\Z}b=a\cdot_{\Z}a\in S$.
+
+        Como $S\subset\Z_{>0}\subset\Z_{\ge0}$, $S$ está acotado inferiormente por $0$. Por el Teorema \ref{thm:buen-orden-Z}, $S$ tiene un elemento mínimo $d\in S$; sean $m_{0},n_{0}\in\Z$ tales que $d=m_{0}\cdot_{\Z}a+_{\Z}n_{0}\cdot_{\Z}b$.
+
+        \emph{$d\mid a$.} Por el algoritmo de la división (Teorema \ref{thm:algoritmo-division-Z}), existen $q,r\in\Z$ tales que $a=q\cdot_{\Z}d+_{\Z}r$, $0\le_{\Z}r<_{\Z}d$ (pues $d\in\Z_{>0}$, $|d|=d$). Usando la distributividad y la Regla de signos,
+        \begin{equation*}
+            r = a-q\cdot_{\Z}d = a-q\cdot_{\Z}(m_{0}\cdot_{\Z}a+_{\Z}n_{0}\cdot_{\Z}b) = (1-q\cdot_{\Z}m_{0})\cdot_{\Z}a+_{\Z}(-q\cdot_{\Z}n_{0})\cdot_{\Z}b.
+        \end{equation*}
+        Si $r\in\Z_{>0}$, entonces $r\in S$ (es de la forma $m\cdot_{\Z}a+_{\Z}n\cdot_{\Z}b$ con $r\in\Z_{>0}$), y $r<_{\Z}d$ contradice que $d$ es el elemento mínimo de $S$. Por tanto $r=0$, es decir, $a=q\cdot_{\Z}d$, así que $d\mid a$.
+
+        \emph{$d\mid b$.} Análogamente, intercambiando los papeles de $a$ y $b$ (y de $m_{0}$ y $n_{0}$).
+
+        \emph{Condición (2).} Sea $e\in\Z_{>0}$ tal que $e\mid a$ y $e\mid b$; existen $a',b'\in\Z$ tales que $a=e\cdot_{\Z}a'$ y $b=e\cdot_{\Z}b'$. Entonces, por la distributividad,
+        \begin{equation*}
+            d = m_{0}\cdot_{\Z}a+_{\Z}n_{0}\cdot_{\Z}b = m_{0}\cdot_{\Z}(e\cdot_{\Z}a')+_{\Z}n_{0}\cdot_{\Z}(e\cdot_{\Z}b') = e\cdot_{\Z}(m_{0}\cdot_{\Z}a'+_{\Z}n_{0}\cdot_{\Z}b'),
+        \end{equation*}
+        así que $e\mid d$.
+
+        Por tanto $d$ es un máximo común divisor de $a$ y $b$.
+
+        \textbf{Unicidad.} Supongamos que $d,d'\in\Z_{>0}$ son ambos máximos comunes divisores de $a$ y $b$. Como $d'$ satisface (1) (es decir, $d'\mid a$ y $d'\mid b$), aplicando la condición (2) de $d$ con $e=d'$ se obtiene $d'\mid d$. Simétricamente, $d\mid d'$. Así, existen $k,l\in\Z$ tales que $d'=d\cdot_{\Z}k$ y $d=d'\cdot_{\Z}l$. Sustituyendo,
+        \begin{equation*}
+            d = d'\cdot_{\Z}l = (d\cdot_{\Z}k)\cdot_{\Z}l = d\cdot_{\Z}(k\cdot_{\Z}l),
+        \end{equation*}
+        y como $d=d\cdot_{\Z}1$ (Proposición \ref{prop:uno-neutro-Z}) y $d\neq0$, por la cancelación del producto (Proposición \ref{prop:cancelacion-Z}) se sigue que $k\cdot_{\Z}l=1$.
+
+        Como $d'=d\cdot_{\Z}k$ con $d,d'\in\Z_{>0}$, por el Lema \ref{lem:signo-factor-Z} (con $x=k,y=d$) se tiene $k\in\Z_{>0}$; análogamente $l\in\Z_{>0}$. Identificando con naturales (Proposición \ref{prop:biyeccion-positivos-Z}), $k,l\in\N$ con $kl=1$. Por la Tricotomía (Teorema \ref{thm:tricotomia}) y el Lema \ref{lem:uno-minimo}, si $k\neq1$ entonces $k>1$, así que $k=1+p$ para algún $p\in\N$; entonces $kl=l+pl$, y como $pl\in\N$, por definición del orden en $\N$, $l<l+pl=kl$. Si $l=1$, entonces $kl>1$; si $l>1$, por la transitividad del orden (Lema \ref{lem:orden-transitivo}), $kl>l>1$. En cualquier caso $kl\neq1$, contradicción. Por tanto $k=1$, y simétricamente $l=1$.
+
+        Así, $d'=d\cdot_{\Z}k=d\cdot_{\Z}1=d$ (Proposición \ref{prop:uno-neutro-Z}).
+    \end{proof}
 
 \end{document}

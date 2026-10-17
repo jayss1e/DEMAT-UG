@@ -1,0 +1,247 @@
+\documentclass[12pt,a4paper]{article}
+\raggedbottom
+
+\usepackage{ugmath}
+\usepackage{float}
+\usepackage{placeins}
+\usepackage[labelfont=bf,labelsep=space]{caption}
+\usepackage{pdfpages}
+\usepackage{tikz-cd}
+\usepackage{amsthm}
+\renewcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\llaves}[1]{\{#1\}}
+\newcommand{\parentesis}[1]{\left(#1\right)}
+\newcommand{\corchetes}[1]{\left[#1\right]}
+\newcommand{\llavesgrande}[1]{\big\{#1\big\}}
+\newcommand{\llavesgrandes}[1]{\left\{#1\right\}}
+
+
+\begin{document}
+
+    \thispagestyle{empty}
+    \includepdf[pages=1]{portada.pdf}
+
+    \begin{problema}
+        Sean $[(a_1,a_2)],[(b_1,b_2)]\in\Z$. Demuestra lo siguiente: si
+        \begin{equation*}
+            [(a_1,a_2)]+_{\Z}[(b_1,b_2)]=[(a_1,a_2)],
+        \end{equation*}
+        entonces $[(b_1,b_2)]=0$.
+    \end{problema}
+
+    \begin{proof}
+        Por la definición de la suma en $\Z$, la hipótesis dice que $[(a_1+b_1,a_2+b_2)]=[(a_1,a_2)]$. Como
+        $[(x,y)]=[(z,w)]$ si y sólo si $x+w=y+z$, esto significa que
+        \begin{equation*}
+            (a_1+b_1)+a_2=(a_2+b_2)+a_1.
+        \end{equation*}
+        Por la asociatividad y la conmutatividad de la suma en $\N$, el lado izquierdo es $b_1+(a_1+a_2)$ y el
+        derecho es $b_2+(a_1+a_2)$. Así que
+        \begin{equation*}
+            b_1+(a_1+a_2)=b_2+(a_1+a_2),
+        \end{equation*}
+        y por la cancelación de la suma, $b_1=b_2$. Así que $b_1+1=b_2+1$, es decir, $[(b_1,b_2)]=[(1,1)]=0$.
+    \end{proof}
+
+    \begin{problema}
+        Demuestra que la operación producto en $\Z$, dada por
+        \begin{align*}
+            \cdot_{\Z}\colon\Z\times\Z&\to\Z,\\
+            \big([(a,b)],[(c,d)]\big)&\mapsto[(ac+bd,ad+bc)],
+        \end{align*}
+        está bien definida.
+    \end{problema}
+
+    \begin{proof}
+        Hay que ver que el resultado no depende de los representantes. Sean
+        $(a,b),(a',b')\in\N\times\N$ con $[(a,b)]=[(a',b')]$, y $(c,d),(c',d')\in\N\times\N$ con
+        $[(c,d)]=[(c',d')]$. Como $[(x,y)]=[(z,w)]$ si y sólo si $x+w=y+z$, se tiene
+        \begin{equation*}
+            a+b'=b+a' \qquad\text{y}\qquad c+d'=d+c'.
+        \end{equation*}
+        Queremos probar que $[(ac+bd,ad+bc)]=[(a'c'+b'd',a'd'+b'c')]$. Lo hacemos cambiando un representante a la vez.
+
+        Primero veamos que
+        \begin{equation}\label{eq:cambio-primero}
+            [(ac+bd,ad+bc)]=[(a'c+b'd,a'd+b'c)].
+        \end{equation}
+        Para esto basta ver que
+        \begin{equation*}
+            (ac+bd)+(a'd+b'c)=(ad+bc)+(a'c+b'd).
+        \end{equation*}
+        Sea $s=a+b'=b+a'$. Usando la asociatividad y conmutatividad de la suma, la conmutatividad del producto y la
+        distributividad,
+        \begin{align*}
+            (ac+bd)+(a'd+b'c) &= (ca+cb')+(db+da') = c(a+b')+d(b+a') = cs+ds,\\
+            (ad+bc)+(a'c+b'd) &= (da+db')+(cb+ca') = d(a+b')+c(b+a') = ds+cs.
+        \end{align*}
+        Como $cs+ds=ds+cs$, se cumple \eqref{eq:cambio-primero}.
+
+        Ahora veamos que
+        \begin{equation}\label{eq:cambio-segundo}
+            [(a'c+b'd,a'd+b'c)]=[(a'c'+b'd',a'd'+b'c')].
+        \end{equation}
+        Para esto basta ver que
+        \begin{equation*}
+            (a'c+b'd)+(a'd'+b'c')=(a'd+b'c)+(a'c'+b'd').
+        \end{equation*}
+        Sea $t=c+d'=d+c'$. Por las mismas propiedades,
+        \begin{align*}
+            (a'c+b'd)+(a'd'+b'c') &= (a'c+a'd')+(b'd+b'c') = a'(c+d')+b'(d+c') = a't+b't,\\
+            (a'd+b'c)+(a'c'+b'd') &= (a'd+a'c')+(b'c+b'd') = a'(d+c')+b'(c+d') = a't+b't.
+        \end{align*}
+        Así que ambos lados son iguales, y se cumple \eqref{eq:cambio-segundo}.
+
+        De \eqref{eq:cambio-primero} y \eqref{eq:cambio-segundo},
+        \begin{equation*}
+            [(ac+bd,ad+bc)]=[(a'c+b'd,a'd+b'c)]=[(a'c'+b'd',a'd'+b'c')],
+        \end{equation*}
+        es decir, $[(a,b)]\cdot_{\Z}[(c,d)]$ no depende de los representantes elegidos, y $\cdot_{\Z}$ está bien
+        definida.
+    \end{proof}
+
+    \begin{problema}
+        Demuestra que la suma y el producto en $\Z$ satisfacen la propiedad distributiva. Es decir, dados
+        $[(a_1,a_2)],[(b_1,b_2)],[(c_1,c_2)]\in\Z$ se tiene
+        \begin{equation*}
+            [(a_1,a_2)]\cdot_{\Z}\big([(b_1,b_2)]+_{\Z}[(c_1,c_2)]\big)
+            =[(a_1,a_2)]\cdot_{\Z}[(b_1,b_2)]+_{\Z}[(a_1,a_2)]\cdot_{\Z}[(c_1,c_2)].
+        \end{equation*}
+    \end{problema}
+
+    \begin{proof}
+        Por las definiciones de $+_{\Z}$ y $\cdot_{\Z}$ y la distributividad en $\N$, el lado izquierdo es
+        \begin{align*}
+            [(a_1,a_2)]\cdot_{\Z}[(b_1+c_1,b_2+c_2)]
+            &= \big[\big(a_1(b_1+c_1)+a_2(b_2+c_2),\ a_1(b_2+c_2)+a_2(b_1+c_1)\big)\big]\\
+            &= \big[\big((a_1b_1+a_1c_1)+(a_2b_2+a_2c_2),\ (a_1b_2+a_1c_2)+(a_2b_1+a_2c_1)\big)\big].
+        \end{align*}
+        Por otro lado, el lado derecho es
+        \begin{align*}
+            &[(a_1b_1+a_2b_2,\ a_1b_2+a_2b_1)]+_{\Z}[(a_1c_1+a_2c_2,\ a_1c_2+a_2c_1)]\\
+            &\qquad= \big[\big((a_1b_1+a_2b_2)+(a_1c_1+a_2c_2),\ (a_1b_2+a_2b_1)+(a_1c_2+a_2c_1)\big)\big].
+        \end{align*}
+        Por la asociatividad y la conmutatividad de la suma en $\N$, las primeras coordenadas de ambas parejas
+        coinciden (las dos son la suma de $a_1b_1$, $a_1c_1$, $a_2b_2$, $a_2c_2$), y lo mismo ocurre con las segundas
+        (las dos son la suma de $a_1b_2$, $a_1c_2$, $a_2b_1$, $a_2c_1$). Por lo tanto ambas clases son la clase de
+        la misma pareja, y la igualdad se cumple.
+    \end{proof}
+
+    \begin{problema}
+        Demuestra que para todo $[(a_1,a_2)]\in\Z$ y $n\in\N$ se tiene que
+        $[(a_1,a_2)]\cdot[(n+1,n)]=[(a_1,a_2)]$.
+    \end{problema}
+
+    \begin{proof}
+        Por la definición del producto en $\Z$, la distributividad y la definición del producto en $\N$
+        ($a_1\cdot1=a_1$, $a_2\cdot1=a_2$),
+        \begin{equation*}
+            [(a_1,a_2)]\cdot_{\Z}[(n+1,n)]=\big[\big(a_1(n+1)+a_2n,\ a_1n+a_2(n+1)\big)\big]
+            =\big[\big((a_1n+a_1)+a_2n,\ a_1n+(a_2n+a_2)\big)\big].
+        \end{equation*}
+        Como $[(x,y)]=[(z,w)]$ si y sólo si $x+w=y+z$, esta clase es igual a $[(a_1,a_2)]$ si y sólo si
+        \begin{equation*}
+            \big((a_1n+a_1)+a_2n\big)+a_2=\big(a_1n+(a_2n+a_2)\big)+a_1.
+        \end{equation*}
+        Por la asociatividad y la conmutatividad de la suma en $\N$, ambos lados son iguales a
+        $(a_1n+a_2n)+(a_1+a_2)$, así que la igualdad se cumple. Por lo tanto
+        $[(a_1,a_2)]\cdot_{\Z}[(n+1,n)]=[(a_1,a_2)]$.
+    \end{proof}
+
+    \begin{problema}
+        Sean $[(a_1,a_2)],[(b_1,b_2)]\in\Z$ con $[(a_1,a_2)]\neq0$. Demuestra lo siguiente: si
+        \begin{equation*}
+            [(a_1,a_2)]\cdot_{\Z}[(b_1,b_2)]=[(a_1,a_2)],
+        \end{equation*}
+        entonces $[(b_1,b_2)]=[(\sigma(1),1)]$.
+    \end{problema}
+
+    \begin{proof}
+        Por el Ejercicio~4 con $n=1$, $[(a_1,a_2)]\cdot_{\Z}[(\sigma(1),1)]=[(a_1,a_2)]$, así que la hipótesis da
+        \begin{equation*}
+            [(a_1,a_2)]\cdot_{\Z}[(b_1,b_2)]=[(a_1,a_2)]\cdot_{\Z}[(\sigma(1),1)].
+        \end{equation*}
+        Como $[(a_1,a_2)]\neq0$, por la cancelación del producto en $\Z$ se concluye que
+        $[(b_1,b_2)]=[(\sigma(1),1)]$.
+    \end{proof}
+
+    \begin{problema}
+        Demuestra que si $[(a_1,a_2)],[(b_1,b_2)]\in\Z$ satisfacen $[(a_1,a_2)]\cdot_{\Z}[(b_1,b_2)]=0$, entonces
+        $[(a_1,a_2)]=0$ o $[(b_1,b_2)]=0$.
+    \end{problema}
+
+    \begin{proof}
+        Por la definición del producto en $\Z$, la hipótesis es $[(a_1b_1+a_2b_2,\ a_1b_2+a_2b_1)]=[(1,1)]$, es
+        decir, $(a_1b_1+a_2b_2)+1=(a_1b_2+a_2b_1)+1$, y por la cancelación de la suma,
+        \begin{equation}\label{eq:producto-cero}
+            a_1b_1+a_2b_2=a_1b_2+a_2b_1.
+        \end{equation}
+        Supongamos que $[(a_1,a_2)]\neq0$; probaremos que $[(b_1,b_2)]=0$. Si fuera $a_1=a_2$, tendríamos
+        $a_1+1=a_2+1$, es decir, $[(a_1,a_2)]=[(1,1)]=0$; así que $a_1\neq a_2$, y por
+        la Tricotomía se tiene $a_2<a_1$ o $a_1<a_2$.
+
+        \emph{Caso $a_2<a_1$.} Existe $k\in\N$ con $a_1=a_2+k$. Por la conmutatividad del producto y la
+        distributividad, $a_1b_1=a_2b_1+kb_1$ y $a_1b_2=a_2b_2+kb_2$. Sustituyendo en \eqref{eq:producto-cero},
+        \begin{equation*}
+            (a_2b_1+kb_1)+a_2b_2=(a_2b_2+kb_2)+a_2b_1,
+        \end{equation*}
+        y por la asociatividad y la conmutatividad de la suma,
+        \begin{equation*}
+            kb_1+(a_2b_1+a_2b_2)=kb_2+(a_2b_1+a_2b_2).
+        \end{equation*}
+        Por la cancelación de la suma, $kb_1=kb_2$; por la conmutatividad del producto, $b_1k=b_2k$, y por la
+        cancelación del producto, $b_1=b_2$.
+
+        \emph{Caso $a_1<a_2$.} Existe $k\in\N$ con $a_2=a_1+k$. Análogamente, $a_2b_2=a_1b_2+kb_2$ y
+        $a_2b_1=a_1b_1+kb_1$, y \eqref{eq:producto-cero} se convierte en
+        \begin{equation*}
+            a_1b_1+(a_1b_2+kb_2)=a_1b_2+(a_1b_1+kb_1),
+        \end{equation*}
+        es decir, $kb_2+(a_1b_1+a_1b_2)=kb_1+(a_1b_1+a_1b_2)$. Cancelando como antes, $kb_2=kb_1$ y $b_1=b_2$.
+
+        En ambos casos $b_1=b_2$, así que $b_1+1=b_2+1$, es decir, $[(b_1,b_2)]=[(1,1)]=0$. Por lo tanto, $[(a_1,a_2)]=0$ o
+        $[(b_1,b_2)]=0$.
+    \end{proof}
+
+    \begin{problema}
+        Sean $n,m,k,l\in\N$. Considera los enteros positivos $[(m+k,m)]$, $[(n+l,n)]$. Demuestra que existe
+        $s\in\N$ tal que $[(m+k,m)]\cdot_{\Z}[(n+l,n)]=[(s+kl,s)]$.
+    \end{problema}
+
+    \begin{proof}
+        Por la definición del producto en $\Z$,
+        \begin{equation*}
+            [(m+k,m)]\cdot_{\Z}[(n+l,n)]=\big[\big((m+k)(n+l)+mn,\ (m+k)n+m(n+l)\big)\big].
+        \end{equation*}
+        Definimos
+        \begin{equation*}
+            s=(m+k)n+m(n+l)\in\N.
+        \end{equation*}
+        Por la distributividad (junto con la conmutatividad del producto), $(m+k)(n+l)=(m+k)n+(m+k)l$,
+        $(m+k)l=ml+kl$ y $m(n+l)=mn+ml$. Usando además la asociatividad y la conmutatividad de la suma,
+        \begin{align*}
+            (m+k)(n+l)+mn &= \big((m+k)n+(ml+kl)\big)+mn = \big((m+k)n+(mn+ml)\big)+kl\\
+            &= \big((m+k)n+m(n+l)\big)+kl = s+kl.
+        \end{align*}
+        Así que la pareja que representa al producto es exactamente $(s+kl,s)$, y por lo tanto
+        $[(m+k,m)]\cdot_{\Z}[(n+l,n)]=[(s+kl,s)]$.
+    \end{proof}
+
+    \begin{problema}
+        Sea $[(a,b)]\in\Z$. Demuestra que $[(a,b)]$ es positivo si y sólo si $[(b,a)]$ es negativo.
+    \end{problema}
+
+    \begin{proof}
+        Como $0=[(1,1)]$, por la definición del orden en $\Z$,
+        \begin{equation*}
+            [(a,b)] \text{ es positivo} \iff [(1,1)]<_{\Z}[(a,b)] \iff 1+b<1+a,
+        \end{equation*}
+        y
+        \begin{equation*}
+            [(b,a)] \text{ es negativo} \iff [(b,a)]<_{\Z}[(1,1)] \iff b+1<a+1.
+        \end{equation*}
+        Por la conmutatividad de la suma en $\N$, $1+b=b+1$ y $1+a=a+1$, así que las condiciones $1+b<1+a$ y
+        $b+1<a+1$ son la misma. Por lo tanto $[(a,b)]$ es positivo si y sólo si $[(b,a)]$ es negativo.
+    \end{proof}
+
+\end{document}
