@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.9.16)  12 OCT 2026 19:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.8.25)  19 OCT 2026 10:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1207,12 +1207,7 @@ LaTeX Font Info:    Trying to load font information for T1+lmr on input line 19
 .
  (/usr/share/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) (./notas.aux
-LaTeX Info: Redefining \. on input line 12.
-LaTeX Info: Redefining \% on input line 12.
-Package babel Info: 'spanish' activates 'spanish' shorthands.
-(babel)             Reported on input line 12.
-)
+) (./notas.aux)
 \openout1 = `notas.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
@@ -1235,6 +1230,8 @@ LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 19.
 LaTeX Font Info:    ... okay on input line 19.
 LaTeX Info: Redefining \. on input line 19.
 LaTeX Info: Redefining \% on input line 19.
+Package babel Info: 'spanish' activates 'spanish' shorthands.
+(babel)             Reported on input line 19.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1317,14 +1314,14 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 ))
-<portada-matematicas-elementales.pdf, id=199, 597.50786pt x 845.04686pt>
+<portada-matematicas-elementales.pdf, id=31, 597.50786pt x 845.04686pt>
 File: portada-matematicas-elementales.pdf Graphic file (type pdf)
 <use portada-matematicas-elementales.pdf>
 Package pdftex.def Info: portada-matematicas-elementales.pdf  used on input lin
 e 23.
 (pdftex.def)             Requested size: 597.5064pt x 845.0448pt.
-<portada-matematicas-elementales.pdf, id=201, page=1, 597.50786pt x 845.04686pt
->
+<portada-matematicas-elementales.pdf, id=33, page=1, 597.50786pt x 845.04686pt>
+
 File: portada-matematicas-elementales.pdf Graphic file (type pdf)
 <use portada-matematicas-elementales.pdf, page 1>
 Package pdftex.def Info: portada-matematicas-elementales.pdf , page1 used on in
@@ -1360,70 +1357,24 @@ Package mdframed Info: mdframed detected package amsthm
  changed the theorem header of amsthm
 (mdframed)              on input line 49.
 Package mdframed Info: Not enough space on this page on input line 61.
- (./notas.toc
-LaTeX Info: Redefining \. on input line 1.
-LaTeX Info: Redefining \% on input line 1.
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 2
+
+
+LaTeX Warning: Reference `mdf@pagelabel-1' on page 3 undefined on input line 61
 .
 
-(/usr/share/texmf-dist/tex/latex/lm/ot1lmr.fd
-File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 2
-.
-
-(/usr/share/texmf-dist/tex/latex/lm/omllmm.fd
-File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-2.
-
-(/usr/share/texmf-dist/tex/latex/lm/omslmsy.fd
-File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-2.
-
-(/usr/share/texmf-dist/tex/latex/lm/omxlmex.fd
-File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 2.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 2.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 2.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 2.
-
-(/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 2.
-
-(/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 2.
+(./notas.toc)
+\tf@toc=\write5
+\openout5 = `notas.toc'.
 
 
-(/usr/share/texmf-dist/tex/latex/jknapltx/ursfs.fd
-File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
-)
-LaTeX Font Info:    Trying to load font information for U+stmry on input line 2
-.
-
-(/usr/share/texmf-dist/tex/latex/stmaryrd/Ustmry.fd)
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.29 ...3}Clases de equivalencia}{28}{section.6.3}
-                                                  % [1
+l.68     \chapter
+                 {Lógica proposicional} [1
 
-])
-\tf@toc=\write5
-\openout5 = `notas.toc'.
-
+]
 LaTeX Info: Redefining \. on input line 68.
 LaTeX Info: Redefining \% on input line 68.
 Package babel Info: 'spanish' activates 'spanish' shorthands.
@@ -1434,7 +1385,9 @@ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.68     \chapter
-                 {Lógica proposicional} [2]
+                 {Lógica proposicional} [2
+
+]
 Cap\'{\i }tulo 1.
 Package mdframed Info: mdframed works in twoside mode on input line 74.
 Package mdframed Info: mdframed detected package amsthm 
@@ -1443,13 +1396,73 @@ Package mdframed Info: mdframed detected package amsthm
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 76.
+
+LaTeX Warning: Reference `mdf@pagelabel-2' on page 3 undefined on input line 76
+.
+
 Package mdframed Info: mdframed works in twoside mode on input line 80.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 80.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 8
+1.
+(/usr/share/texmf-dist/tex/latex/lm/ot1lmr.fd
+File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 8
+1.
+
+(/usr/share/texmf-dist/tex/latex/lm/omllmm.fd
+File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
+81.
+
+(/usr/share/texmf-dist/tex/latex/lm/omslmsy.fd
+File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
+81.
+
+(/usr/share/texmf-dist/tex/latex/lm/omxlmex.fd
+File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <12> on input line 81.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 81.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 81.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 81.
+
+
+(/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 81.
+
+
+(/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 81
+.
+
+(/usr/share/texmf-dist/tex/latex/jknapltx/ursfs.fd
+File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
+)
+LaTeX Font Info:    Trying to load font information for U+stmry on input line 8
+1.
+
+(/usr/share/texmf-dist/tex/latex/stmaryrd/Ustmry.fd)
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 90.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-3' on page 3 undefined on input line 90
+.
+
 Package mdframed Info: mdframed works in twoside mode on input line 92.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
@@ -1457,10 +1470,12 @@ Package mdframed Info: mdframed detected package amsthm
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 103.
-[3
 
-{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf-dist/
-fonts/enc/dvips/lm/lm-mathsy.enc}]
+LaTeX Warning: Reference `mdf@pagelabel-4' on page 3 undefined on input line 10
+3.
+
+[3{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf-dis
+t/fonts/enc/dvips/lm/lm-mathsy.enc}]
 Package mdframed Info: mdframed works in twoside mode on input line 105.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
@@ -1468,6 +1483,11 @@ Package mdframed Info: mdframed detected package amsthm
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 116.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-5' on page 4 undefined on input line 11
+6.
+
 Package mdframed Info: mdframed works in twoside mode on input line 118.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
@@ -1475,6 +1495,10 @@ Package mdframed Info: mdframed detected package amsthm
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 129.
+
+LaTeX Warning: Reference `mdf@pagelabel-6' on page 4 undefined on input line 12
+9.
+
 Package mdframed Info: mdframed works in twoside mode on input line 137.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
@@ -1482,9 +1506,13 @@ Package mdframed Info: mdframed detected package amsthm
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 145.
+
+LaTeX Warning: Reference `mdf@pagelabel-7' on page 4 undefined on input line 14
+5.
+
 LaTeX Info: Redefining \. on input line 145.
 LaTeX Info: Redefining \% on input line 145.
- [4]
+[4]
 Package mdframed Info: mdframed works in twoside mode on input line 164.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
@@ -1492,14 +1520,18 @@ Package mdframed Info: mdframed detected package amsthm
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 172.
-LaTeX Info: Redefining \. on input line 176.
-LaTeX Info: Redefining \% on input line 176.
- [5{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf-dist/f
-onts/enc/dvips/lm/lm-mathex.enc}]
-LaTeX Info: Redefining \. on input line 176.
-LaTeX Info: Redefining \% on input line 176.
 
-[6
+
+LaTeX Warning: Reference `mdf@pagelabel-8' on page 5 undefined on input line 17
+2.
+
+LaTeX Info: Redefining \. on input line 176.
+LaTeX Info: Redefining \% on input line 176.
+[5{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf-dist/fo
+nts/enc/dvips/lm/lm-mathex.enc}]
+LaTeX Info: Redefining \. on input line 176.
+LaTeX Info: Redefining \% on input line 176.
+ [6
 
 ]
 Cap\'{\i }tulo 2.
@@ -1523,9 +1555,21 @@ Package mdframed Info: mdframed detected package amsthm
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 231.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-9' on page 8 undefined on input line 23
+1.
+
+
+LaTeX Warning: Reference `chap:induccion' on page 8 undefined on input line 233
+.
+
+
+LaTeX Warning: Reference `chap:numeros' on page 8 undefined on input line 233.
+
 LaTeX Info: Redefining \. on input line 252.
 LaTeX Info: Redefining \% on input line 252.
- [8]
+[8]
 LaTeX Info: Redefining \. on input line 253.
 LaTeX Info: Redefining \% on input line 253.
  [9]
@@ -1550,6 +1594,11 @@ Package mdframed Info: mdframed detected package amsthm
  changed the theorem header of amsthm
 (mdframed)              on input line 261.
 
+
+LaTeX Warning: Reference `mdf@pagelabel-10' on page 11 undefined on input line 
+261.
+
+
 pdfTeX warning (ext4): destination with the same identifier (name{prop.1}) has 
 been already used, duplicate ignored
 <to be read again> 
@@ -1564,6 +1613,10 @@ Package mdframed Info: mdframed detected package amsthm
  changed the theorem header of amsthm
 (mdframed)              on input line 265.
 
+LaTeX Warning: Reference `mdf@pagelabel-11' on page 11 undefined on input line 
+265.
+
+
 pdfTeX warning (ext4): destination with the same identifier (name{defn.2}) has 
 been already used, duplicate ignored
 <to be read again> 
@@ -1577,6 +1630,11 @@ Package mdframed Info: mdframed detected package amsthm
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 278.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-12' on page 11 undefined on input line 
+278.
+
 
 pdfTeX warning (ext4): destination with the same identifier (name{ejemplo.1}) h
 as been already used, duplicate ignored
@@ -1599,31 +1657,14 @@ Package mdframed Info: mdframed detected package amsthm
  changed the theorem header of amsthm
 (mdframed)              on input line 292.
 
+
+LaTeX Warning: Reference `mdf@pagelabel-13' on page 12 undefined on input line 
+292.
+
+
 pdfTeX warning (ext4): destination with the same identifier (name{defn.4}) has 
 been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.296     \begin{definicion}[Complemento]
-                                         
-Package mdframed Info: mdframed works in twoside mode on input line 296.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 296.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 301.
-
-pdfTeX warning (ext4): destination with the same identifier (name{defn.5}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.305     \begin{definicion}[Diferencia]
-                                        
-Package mdframed Info: mdframed works in twoside mode on input line 305.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 305.
-Package mdframed Info: mdframed detected package amsthm 
+<to be read agaietected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 310.
 Package mdframed Info: mdframed works in twoside mode on input line 314.
@@ -1668,8 +1709,7 @@ Package mdframed Info: mdframed detected package amsthm
  changed the theorem header of amsthm
 (mdframed)              on input line 378.
 
-pdfTeX warning (ext4): destination with the same identifier (name{defn.6}) has 
-been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{defn.6}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.384     \begin{definicion}[Producto cartesiano]
@@ -1694,8 +1734,7 @@ LaTeX Info: Redefining \% on input line 392.
 ]
 Cap\'{\i }tulo 4.
 
-pdfTeX warning (ext4): destination with the same identifier (name{defn.1}) has 
-been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{defn.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.396     \begin{definicion}[Relación]
@@ -1708,14 +1747,12 @@ Package mdframed Info: mdframed detected package amsthm
  changed the theorem header of amsthm
 (mdframed)              on input line 398.
 
-pdfTeX warning (ext4): destination with the same identifier (name{ejemplo.1}) h
-as been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{ejemplo.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.401         S
                ean $A=\{1,2,3\}$, $B=\{5,6,7\}$. Consideremos
-pdfTeX warning (ext4): destination with the same identifier (name{defn.2}) has 
-been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{defn.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.409 ...n{definicion}[Composición de relaciones]
@@ -1728,15 +1765,12 @@ Package mdframed Info: mdframed detected package amsthm
  changed the theorem header of amsthm
 (mdframed)              on input line 414.
 
-pdfTeX warning (ext4): destination with the same identifier (name{ejemplo.2}) h
-as been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{ejemplo.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.417         S
                ean $A=\{1,2\}$, $B=\{\alpha,\beta\}$, $C=\{e,\pi\}$, $R=\{(1...
-
-pdfTeX warning (ext4): destination with the same identifier (name{prop.1}) has 
-been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{prop.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.423 ...sicion}[Asociatividad de la composición]
@@ -1749,8 +1783,7 @@ Package mdframed Info: mdframed detected package amsthm
  changed the theorem header of amsthm
 (mdframed)              on input line 428.
  [17]
-pdfTeX warning (ext4): destination with the same identifier (name{defn.3}) has 
-been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{defn.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.445     \begin{definicion}[Función]
@@ -1763,15 +1796,12 @@ Package mdframed Info: mdframed detected package amsthm
  changed the theorem header of amsthm
 (mdframed)              on input line 451.
 
-pdfTeX warning (ext4): destination with the same identifier (name{ejemplo.3}) h
-as been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{ejemplo.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.459         $
                f:\N\to\N$, $n\mapsto n+1$. El dominio y el codominio coincid...
-
-pdfTeX warning (ext4): destination with the same identifier (name{prop.2}) has 
-been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{prop.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.463         S
@@ -1785,9 +1815,8 @@ Package mdframed Info: mdframed detected package amsthm
 (mdframed)              on input line 464.
 LaTeX Info: Redefining \. on input line 468.
 LaTeX Info: Redefining \% on input line 468.
-[18]
-pdfTeX warning (ext4): destination with the same identifier (name{defn.4}) has 
-been already used, duplicate ignored
+ [18]
+pdfTeX warning (ext4): destination with the same identifier (name{defn.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.472     \begin{definicion}[Relación inversa]
@@ -1800,8 +1829,7 @@ Package mdframed Info: mdframed detected package amsthm
  changed the theorem header of amsthm
 (mdframed)              on input line 477.
 
-pdfTeX warning (ext4): destination with the same identifier (name{prop.3}) has 
-been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{prop.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.480         S
@@ -1814,8 +1842,7 @@ Package mdframed Info: mdframed detected package amsthm
  changed the theorem header of amsthm
 (mdframed)              on input line 481.
 
-pdfTeX warning (ext4): destination with the same identifier (name{defn.5}) has 
-been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{defn.5}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.487     \begin{definicion}[Función identidad]
@@ -1828,8 +1855,7 @@ Package mdframed Info: mdframed detected package amsthm
  changed the theorem header of amsthm
 (mdframed)              on input line 492.
 
-pdfTeX warning (ext4): destination with the same identifier (name{defn.6}) has 
-been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{defn.6}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.494 ...gin{definicion}[Función característica]
@@ -1859,8 +1885,7 @@ Package mdframed Info: mdframed detected package amsthm
  changed the theorem header of amsthm
 (mdframed)              on input line 519.
 
-pdfTeX warning (ext4): destination with the same identifier (name{ejemplo.4}) h
-as been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{ejemplo.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.522         $
@@ -1881,7 +1906,7 @@ Package mdframed Info: mdframed detected package amsthm
 (mdframed)              on input line 537.
 LaTeX Info: Redefining \. on input line 558.
 LaTeX Info: Redefining \% on input line 558.
-[20]
+ [20]
 Package mdframed Info: mdframed works in twoside mode on input line 558.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
@@ -1890,8 +1915,7 @@ Package mdframed Info: mdframed detected package amsthm
  changed the theorem header of amsthm
 (mdframed)              on input line 560.
 
-pdfTeX warning (ext4): destination with the same identifier (name{teor.1}) has 
-been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{teor.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.571         S
@@ -1912,9 +1936,8 @@ Package mdframed Info: mdframed detected package amsthm
 (mdframed)              on input line 600.
 LaTeX Info: Redefining \. on input line 600.
 LaTeX Info: Redefining \% on input line 600.
-[21]
-pdfTeX warning (ext4): destination with the same identifier (name{prop.4}) has 
-been already used, duplicate ignored
+ [21]
+pdfTeX warning (ext4): destination with the same identifier (name{prop.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.620         S
@@ -1942,7 +1965,7 @@ Package mdframed Info: mdframed detected package amsthm
 (mdframed)              on input line 638.
 LaTeX Info: Redefining \. on input line 638.
 LaTeX Info: Redefining \% on input line 638.
-[22]
+ [22]
 Package mdframed Info: mdframed works in twoside mode on input line 643.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
@@ -1951,8 +1974,7 @@ Package mdframed Info: mdframed detected package amsthm
  changed the theorem header of amsthm
 (mdframed)              on input line 647.
 
-pdfTeX warning (ext4): destination with the same identifier (name{prop.5}) has 
-been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{prop.5}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.650         $
@@ -1986,8 +2008,7 @@ LaTeX Info: Redefining \% on input line 708.
  [24]
 Cap\'{\i }tulo 5.
 
-pdfTeX warning (ext4): destination with the same identifier (name{prop.1}) has 
-been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{prop.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.715 ...rincipio de inducción, versión general]
@@ -2000,14 +2021,12 @@ Package mdframed Info: mdframed detected package amsthm
  changed the theorem header of amsthm
 (mdframed)              on input line 722.
 
-pdfTeX warning (ext4): destination with the same identifier (name{ejemplo.1}) h
-as been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{ejemplo.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.725         P
                ara todo $n\in\N$ con $n\ge 5$, $2^n > n^2$.
-pdfTeX warning (ext4): destination with the same identifier (name{prop.2}) has 
-been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{prop.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.736 ...posicion}[Principio de inducción fuerte]
@@ -2027,8 +2046,7 @@ LaTeX Info: Redefining \% on input line 755.
  [26]
 Cap\'{\i }tulo 6.
 
-pdfTeX warning (ext4): destination with the same identifier (name{defn.1}) has 
-been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{defn.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.761 ...definicion}[Propiedades de una relación]
@@ -2041,15 +2059,12 @@ Package mdframed Info: mdframed detected package amsthm
  changed the theorem header of amsthm
 (mdframed)              on input line 768.
 
-pdfTeX warning (ext4): destination with the same identifier (name{ejemplo.1}) h
-as been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{ejemplo.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.771         S
                ea $A=\N$ y $R_1 = \{(n,m)\in A\times A : n-m \text{ es par}\}$.
-
-pdfTeX warning (ext4): destination with the same identifier (name{defn.2}) has 
-been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{defn.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.786 ...in{definicion}[Relación de equivalencia]
@@ -2064,14 +2079,12 @@ Package mdframed Info: mdframed detected package amsthm
  changed the theorem header of amsthm
 (mdframed)              on input line 788.
 
-pdfTeX warning (ext4): destination with the same identifier (name{ejemplo.2}) h
-as been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{ejemplo.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.791         \textbf
                      {Congruencia módulo $n$.}
-pdfTeX warning (ext4): destination with the same identifier (name{defn.3}) has 
-been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{defn.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.809 ...\begin{definicion}[Clase de equivalencia]
@@ -2084,8 +2097,7 @@ Package mdframed Info: mdframed detected package amsthm
  changed the theorem header of amsthm
 (mdframed)              on input line 814.
 
-pdfTeX warning (ext4): destination with the same identifier (name{prop.1}) has 
-been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{prop.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.819         \label
@@ -2110,8 +2122,7 @@ LaTeX Info: Redefining \% on input line 837.
 ]
 Cap\'{\i }tulo 7.
 [31]
-pdfTeX warning (ext4): destination with the same identifier (name{defn.1}) has 
-been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{defn.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.872     \begin{definicion}[Suma]
@@ -2124,8 +2135,7 @@ Package mdframed Info: mdframed detected package amsthm
  changed the theorem header of amsthm
 (mdframed)              on input line 881.
 
-pdfTeX warning (ext4): destination with the same identifier (name{prop.1}) has 
-been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{prop.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.884         D
@@ -2138,17 +2148,15 @@ Package mdframed Info: mdframed detected package amsthm
  changed the theorem header of amsthm
 (mdframed)              on input line 888.
 
-pdfTeX warning (ext4): destination with the same identifier (name{ejemplo.1}) h
-as been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{ejemplo.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.913         C
                onsideremos la afirmación ``para todo $n \in \N$, $n^2+n+1$ ...
 LaTeX Info: Redefining \. on input line 916.
 LaTeX Info: Redefining \% on input line 916.
-[32]
-pdfTeX warning (ext4): destination with the same identifier (name{prop.2}) has 
-been already used, duplicate ignored
+ [32]
+pdfTeX warning (ext4): destination with the same identifier (name{prop.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.925         L
@@ -2161,8 +2169,7 @@ Package mdframed Info: mdframed detected package amsthm
  changed the theorem header of amsthm
 (mdframed)              on input line 929.
 
-pdfTeX warning (ext4): destination with the same identifier (name{prop.3}) has 
-been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{prop.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.954         S
@@ -2176,10 +2183,8 @@ Package mdframed Info: mdframed detected package amsthm
 (mdframed)              on input line 955.
 LaTeX Info: Redefining \. on input line 964.
 LaTeX Info: Redefining \% on input line 964.
-
-[33]
-pdfTeX warning (ext4): destination with the same identifier (name{defn.2}) has 
-been already used, duplicate ignored
+ [33]
+pdfTeX warning (ext4): destination with the same identifier (name{defn.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.976     \begin{definicion}[Producto]
@@ -2192,8 +2197,7 @@ Package mdframed Info: mdframed detected package amsthm
  changed the theorem header of amsthm
 (mdframed)              on input line 985.
 
-pdfTeX warning (ext4): destination with the same identifier (name{prop.4}) has 
-been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{prop.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.988         P
@@ -2206,8 +2210,7 @@ Package mdframed Info: mdframed detected package amsthm
  changed the theorem header of amsthm
 (mdframed)              on input line 992.
 
-pdfTeX warning (ext4): destination with the same identifier (name{prop.5}) has 
-been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{prop.5}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.1006         P
@@ -2222,8 +2225,7 @@ Package mdframed Info: mdframed detected package amsthm
 LaTeX Info: Redefining \. on input line 1011.
 LaTeX Info: Redefining \% on input line 1011.
  [34]
-pdfTeX warning (ext4): destination with the same identifier (name{prop.6}) has 
-been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{prop.6}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.1014         S
@@ -2236,8 +2238,7 @@ Package mdframed Info: mdframed detected package amsthm
  changed the theorem header of amsthm
 (mdframed)              on input line 1018.
 
-pdfTeX warning (ext4): destination with the same identifier (name{defn.3}) has 
-been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{defn.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.1039         S
@@ -2250,8 +2251,7 @@ Package mdframed Info: mdframed detected package amsthm
  changed the theorem header of amsthm
 (mdframed)              on input line 1044.
 
-pdfTeX warning (ext4): destination with the same identifier (name{lema.1}) has 
-been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{lema.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.1046     \begin{lema}[Transitividad del orden]
@@ -2281,8 +2281,7 @@ Package mdframed Info: mdframed detected package amsthm
  changed the theorem header of amsthm
 (mdframed)              on input line 1077.
 
-pdfTeX warning (ext4): destination with the same identifier (name{teor.1}) has 
-been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{teor.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.1092     \begin{teorema}[Tricotomía de $\N$]
@@ -2297,8 +2296,7 @@ Package mdframed Info: mdframed detected package amsthm
 LaTeX Info: Redefining \. on input line 1103.
 LaTeX Info: Redefining \% on input line 1103.
  [36]
-pdfTeX warning (ext4): destination with the same identifier (name{defn.4}) has 
-been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{defn.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.1135     \begin{definicion}[Elemento mínimo]
@@ -2335,8 +2333,7 @@ Package mdframed Info: mdframed detected package amsthm
  changed the theorem header of amsthm
 (mdframed)              on input line 1155.
 
-pdfTeX warning (ext4): destination with the same identifier (name{teor.2}) has 
-been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{teor.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.1161         \label
@@ -2359,15 +2356,14 @@ Package mdframed Info: mdframed detected package amsthm
  changed the theorem header of amsthm
 (mdframed)              on input line 1191.
 
-pdfTeX warning (ext4): destination with the same identifier (name{ejemplo.2}) h
-as been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{ejemplo.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.1199         D
                 efinimos una sucesión $(a_n)_{n\in\N}$ de la siguiente mane...
 LaTeX Info: Redefining \. on input line 1214.
 LaTeX Info: Redefining \% on input line 1214.
-[39]
+ [39]
 Package mdframed Info: mdframed works in twoside mode on input line 1222.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
@@ -2376,8 +2372,7 @@ Package mdframed Info: mdframed detected package amsthm
  changed the theorem header of amsthm
 (mdframed)              on input line 1225.
 
-pdfTeX warning (ext4): destination with the same identifier (name{coro.1}) has 
-been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{coro.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.1235         \label
@@ -2390,8 +2385,7 @@ Package mdframed Info: mdframed detected package amsthm
  changed the theorem header of amsthm
 (mdframed)              on input line 1237.
 
-pdfTeX warning (ext4): destination with the same identifier (name{defn.5}) has 
-been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{defn.5}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.1242     \begin{definicion}[Divisor y múltiplo]
@@ -2404,8 +2398,7 @@ Package mdframed Info: mdframed detected package amsthm
  changed the theorem header of amsthm
 (mdframed)              on input line 1247.
 
-pdfTeX warning (ext4): destination with the same identifier (name{defn.6}) has 
-been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{defn.6}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.1249     \begin{definicion}[Número primo]
@@ -2427,8 +2420,7 @@ Package mdframed Info: mdframed detected package amsthm
 LaTeX Info: Redefining \. on input line 1261.
 LaTeX Info: Redefining \% on input line 1261.
  [40]
-pdfTeX warning (ext4): destination with the same identifier (name{defn.7}) has 
-been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{defn.7}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.1275 ...n{definicion}[Relación en $\N\times\N$]
@@ -2450,8 +2442,7 @@ Package mdframed Info: mdframed detected package amsthm
 LaTeX Info: Redefining \. on input line 1302.
 LaTeX Info: Redefining \% on input line 1302.
  [41]
-pdfTeX warning (ext4): destination with the same identifier (name{defn.8}) has 
-been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{defn.8}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.1306     \begin{definicion}[Números enteros]
@@ -2464,8 +2455,7 @@ Package mdframed Info: mdframed detected package amsthm
  changed the theorem header of amsthm
 (mdframed)              on input line 1316.
 
-pdfTeX warning (ext4): destination with the same identifier (name{defn.9}) has 
-been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{defn.9}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.1318     \begin{definicion}[Suma en $\Z$]
@@ -2485,8 +2475,7 @@ Package mdframed Info: mdframed detected package amsthm
  changed the theorem header of amsthm
 (mdframed)              on input line 1333.
 
-pdfTeX warning (ext4): destination with the same identifier (name{defn.10}) has
- been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{defn.10}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.1346     \begin{definicion}[Cero de $\Z$]
@@ -2511,8 +2500,7 @@ Package mdframed Info: mdframed detected package amsthm
 LaTeX Info: Redefining \. on input line 1397.
 LaTeX Info: Redefining \% on input line 1397.
  [43]
-pdfTeX warning (ext4): destination with the same identifier (name{defn.11}) has
- been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{defn.11}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.1407     \begin{definicion}[Grupo abeliano]
@@ -2525,15 +2513,12 @@ Package mdframed Info: mdframed detected package amsthm
  changed the theorem header of amsthm
 (mdframed)              on input line 1414.
 
-pdfTeX warning (ext4): destination with the same identifier (name{ejemplo.3}) h
-as been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{ejemplo.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.1417         P
                 or la Proposición \ref{prop:suma-Z-grupo}, $\Z$ con $+_{\Z}...
-
-pdfTeX warning (ext4): destination with the same identifier (name{defn.12}) has
- been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{defn.12}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.1420     \begin{definicion}[Producto en $\Z$]
@@ -2573,8 +2558,7 @@ Package mdframed Info: mdframed detected package amsthm
  changed the theorem header of amsthm
 (mdframed)              on input line 1512.
 
-pdfTeX warning (ext4): destination with the same identifier (name{defn.13}) has
- been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{defn.13}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.1528 ...gin{definicion}[Inverso aditivo y resta]
@@ -2708,8 +2692,7 @@ Package mdframed Info: mdframed detected package amsthm
 (mdframed)              on input line 1746.
 LaTeX Info: Redefining \. on input line 1746.
 LaTeX Info: Redefining \% on input line 1746.
-
-[51]
+ [51]
 Package mdframed Info: mdframed works in twoside mode on input line 1761.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
@@ -2785,8 +2768,8 @@ Package mdframed Info: mdframed detected package amsthm
 LaTeX Info: Redefining \. on input line 1908.
 LaTeX Info: Redefining \% on input line 1908.
  [55]
-LaTeX Info: Redefining \. on input line 1940.
-LaTeX Info: Redefining \% on input line 1940.
+LaTeX Info: Redefining \. on input line 1942.
+LaTeX Info: Redefining \% on input line 1942.
  [56] (./notas.aux
 LaTeX Info: Redefining \. on input line 12.
 LaTeX Info: Redefining \% on input line 12.
@@ -2796,16 +2779,537 @@ LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
 Package rerunfilecheck Info: File `notas.out' has not changed.
-(rerunfilecheck)             Checksum: A3789D38074FEAE53072A8AE1334911B;7651.
+(rerunfilecheck)             Checksum: 646BCD1D623A3743DE705E080B7A9F7B;7736.
  ) 
 Here is how much of TeX's memory you used:
- 41842 strings out of 467525
- 932518 string characters out of 5425861
- 1474874 words of memory out of 5000000
- 69820 multiletter control sequences out of 15000+600000
+ 41845 strings out of 467525
+ 932773 string characters out of 5425861
+ 1475874 words of memory out of 5000000
+ 69821 multiletter control sequences out of 15000+600000
  689593 words of font info for 85 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,17n,108p,747b,1221s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,17n,108p,826b,1221s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmro12.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on notas.pdf (58 pages, 459229 bytes).
+PDF statistics:
+ 821 PDF objects out of 1000 (max. 8388607)
+ 703 compressed objects within 8 object streams
+ 203 named destinations out of 1000 (max. 500000)
+ 468 words of extra memory for PDF output out of 10000 (max. 10000000)
+
+rning: Reference `prop:distributividad-Z' on page 48 undefined on input
+ line 1601.
+
+
+LaTeX Warning: Reference `prop:sin-divisores-cero-Z' on page 48 undefined on in
+put line 1606.
+
+Package mdframed Info: mdframed works in twoside mode on input line 1612.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1612.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1619.
+
+LaTeX Warning: Reference `mdf@pagelabel-91' on page 48 undefined on input line 
+1619.
+
+Package mdframed Info: mdframed works in twoside mode on input line 1621.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1621.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1624.
+
+LaTeX Warning: Reference `mdf@pagelabel-92' on page 48 undefined on input line 
+1624.
+
+LaTeX Info: Redefining \. on input line 1624.
+LaTeX Info: Redefining \% on input line 1624.
+[48]
+
+LaTeX Warning: Reference `def:uno-Z' on page 49 undefined on input line 1626.
+
+Package mdframed Info: mdframed works in twoside mode on input line 1633.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1633.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1636.
+
+LaTeX Warning: Reference `mdf@pagelabel-93' on page 49 undefined on input line 
+1636.
+
+
+LaTeX Warning: Reference `prop:uno-neutro-Z' on page 49 undefined on input line
+ 1639.
+
+
+LaTeX Warning: Reference `prop:cancelacion-Z' on page 49 undefined on input lin
+e 1639.
+
+Package mdframed Info: mdframed works in twoside mode on input line 1644.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1644.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1651.
+
+LaTeX Warning: Reference `mdf@pagelabel-94' on page 49 undefined on input line 
+1651.
+
+Package mdframed Info: mdframed works in twoside mode on input line 1653.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1653.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1656.
+
+LaTeX Warning: Reference `mdf@pagelabel-95' on page 49 undefined on input line 
+1656.
+
+LaTeX Info: Redefining \. on input line 1665.
+LaTeX Info: Redefining \% on input line 1665.
+[49]
+Package mdframed Info: mdframed works in twoside mode on input line 1669.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1669.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1672.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-96' on page 50 undefined on input line 
+1672.
+
+Package mdframed Info: mdframed works in twoside mode on input line 1674.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1674.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1677.
+
+LaTeX Warning: Reference `mdf@pagelabel-97' on page 50 undefined on input line 
+1677.
+
+Package mdframed Info: mdframed works in twoside mode on input line 1686.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1686.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1689.
+
+LaTeX Warning: Reference `mdf@pagelabel-98' on page 50 undefined on input line 
+1689.
+
+
+LaTeX Warning: Reference `lem:forma-positivos-Z' on page 50 undefined on input 
+line 1693.
+
+
+LaTeX Warning: Reference `lem:forma-positivos-Z' on page 50 undefined on input 
+line 1695.
+
+Package mdframed Info: mdframed works in twoside mode on input line 1699.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1699.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1701.
+
+LaTeX Warning: Reference `mdf@pagelabel-99' on page 50 undefined on input line 
+1701.
+
+LaTeX Info: Redefining \. on input line 1704.
+LaTeX Info: Redefining \% on input line 1704.
+[50]
+
+LaTeX Warning: Reference `prop:biyeccion-positivos-Z' on page 51 undefined on i
+nput line 1707.
+
+Package mdframed Info: mdframed works in twoside mode on input line 1710.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1710.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1713.
+
+LaTeX Warning: Reference `mdf@pagelabel-100' on page 51 undefined on input line
+ 1713.
+
+
+LaTeX Warning: Reference `lem:forma-positivos-Z' on page 51 undefined on input 
+line 1717.
+
+
+LaTeX Warning: Reference `def:resta-Z' on page 51 undefined on input line 1724.
+
+
+Package mdframed Info: mdframed works in twoside mode on input line 1726.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1726.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1729.
+
+LaTeX Warning: Reference `mdf@pagelabel-101' on page 51 undefined on input line
+ 1729.
+
+
+LaTeX Warning: Reference `prop:biyeccion-positivos-Z' on page 51 undefined on i
+nput line 1731.
+
+
+LaTeX Warning: Reference `lem:forma-negativos-Z' on page 51 undefined on input 
+line 1731.
+
+
+LaTeX Warning: Reference `thm:tricotomia' on page 51 undefined on input line 17
+34.
+
+
+LaTeX Warning: Reference `lem:forma-positivos-Z' on page 51 undefined on input 
+line 1734.
+
+
+LaTeX Warning: Reference `prop:biyeccion-positivos-Z' on page 51 undefined on i
+nput line 1734.
+
+
+LaTeX Warning: Reference `prop:biyeccion-negativos-Z' on page 51 undefined on i
+nput line 1734.
+
+Package mdframed Info: mdframed works in twoside mode on input line 1739.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1739.
+
+LaTeX Warning: Reference `lem:forma-positivos-Z' on page 51 undefined on input 
+line 1741.
+
+
+LaTeX Warning: Reference `prop:biyeccion-positivos-Z' on page 51 undefined on i
+nput line 1741.
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1746.
+
+LaTeX Warning: Reference `mdf@pagelabel-102' on page 51 undefined on input line
+ 1746.
+
+LaTeX Info: Redefining \. on input line 1746.
+LaTeX Info: Redefining \% on input line 1746.
+[51]
+
+LaTeX Warning: Reference `lem:forma-positivos-Z' on page 52 undefined on input 
+line 1752.
+
+
+LaTeX Warning: Reference `lem:forma-positivos-Z' on page 52 undefined on input 
+line 1758.
+
+Package mdframed Info: mdframed works in twoside mode on input line 1761.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1761.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1764.
+
+LaTeX Warning: Reference `mdf@pagelabel-103' on page 52 undefined on input line
+ 1764.
+
+
+LaTeX Warning: Reference `lem:regla-signos-Z' on page 52 undefined on input lin
+e 1771.
+
+
+LaTeX Warning: Reference `prop:cerradura-positivos-Z' on page 52 undefined on i
+nput line 1771.
+
+
+LaTeX Warning: Reference `prop:orden-compatible-suma-Z' on page 52 undefined on
+ input line 1771.
+
+Package mdframed Info: mdframed works in twoside mode on input line 1776.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1776.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1779.
+
+LaTeX Warning: Reference `mdf@pagelabel-104' on page 52 undefined on input line
+ 1779.
+
+LaTeX Info: Redefining \. on input line 1785.
+LaTeX Info: Redefining \% on input line 1785.
+[52]
+Package mdframed Info: mdframed works in twoside mode on input line 1789.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1789.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1792.
+
+
+LaTeX Warning: Reference `mdf@pagelabel-105' on page 53 undefined on input line
+ 1792.
+
+
+LaTeX Warning: Reference `def:resta-Z' on page 53 undefined on input line 1794.
+
+
+
+LaTeX Warning: Reference `prop:orden-compatible-suma-Z' on page 53 undefined on
+ input line 1794.
+
+
+LaTeX Warning: Reference `prop:biyeccion-positivos-Z' on page 53 undefined on i
+nput line 1796.
+
+
+LaTeX Warning: Reference `prop:buen-orden' on page 53 undefined on input line 1
+796.
+
+
+LaTeX Warning: Reference `coro:biyeccion-orden-Z' on page 53 undefined on input
+ line 1798.
+
+
+LaTeX Warning: Reference `prop:orden-compatible-suma-Z' on page 53 undefined on
+ input line 1798.
+
+Package mdframed Info: mdframed works in twoside mode on input line 1803.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1803.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1810.
+
+LaTeX Warning: Reference `mdf@pagelabel-106' on page 53 undefined on input line
+ 1810.
+
+Package mdframed Info: mdframed works in twoside mode on input line 1813.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1813.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1820.
+
+LaTeX Warning: Reference `mdf@pagelabel-107' on page 53 undefined on input line
+ 1820.
+
+
+LaTeX Warning: Reference `prop:orden-compatible-suma-Z' on page 53 undefined on
+ input line 1823.
+
+LaTeX Info: Redefining \. on input line 1824.
+LaTeX Info: Redefining \% on input line 1824.
+[53]
+
+LaTeX Warning: Reference `prop:orden-compatible-suma-Z' on page 54 undefined on
+ input line 1829.
+
+
+LaTeX Warning: Reference `prop:cerradura-positivos-Z' on page 54 undefined on i
+nput line 1833.
+
+Package mdframed Info: mdframed works in twoside mode on input line 1838.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1838.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1844.
+
+LaTeX Warning: Reference `mdf@pagelabel-108' on page 54 undefined on input line
+ 1844.
+
+
+LaTeX Warning: Reference `def:positivo-negativo-Z' on page 54 undefined on inpu
+t line 1846.
+
+
+LaTeX Warning: Reference `prop:cerradura-positivos-Z' on page 54 undefined on i
+nput line 1855.
+
+
+LaTeX Warning: Reference `prop:orden-compatible-suma-Z' on page 54 undefined on
+ input line 1856.
+
+
+LaTeX Warning: Reference `prop:cerradura-positivos-Z' on page 54 undefined on i
+nput line 1856.
+
+
+LaTeX Warning: Reference `thm:buen-orden-Z' on page 54 undefined on input line 
+1858.
+
+
+LaTeX Warning: Reference `prop:orden-compatible-suma-Z' on page 54 undefined on
+ input line 1860.
+
+LaTeX Info: Redefining \. on input line 1865.
+LaTeX Info: Redefining \% on input line 1865.
+[54]
+
+LaTeX Warning: Reference `lem:signo-factor-Z' on page 55 undefined on input lin
+e 1872.
+
+
+LaTeX Warning: Reference `prop:cerradura-positivos-Z' on page 55 undefined on i
+nput line 1872.
+
+
+LaTeX Warning: Reference `prop:orden-compatible-suma-Z' on page 55 undefined on
+ input line 1874.
+
+
+LaTeX Warning: Reference `prop:cancelacion-Z' on page 55 undefined on input lin
+e 1876.
+
+
+LaTeX Warning: Reference `lem:regla-signos-Z' on page 55 undefined on input lin
+e 1878.
+
+Package mdframed Info: mdframed works in twoside mode on input line 1885.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1885.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1888.
+
+LaTeX Warning: Reference `mdf@pagelabel-109' on page 55 undefined on input line
+ 1888.
+
+Package mdframed Info: mdframed works in twoside mode on input line 1890.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1890.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1897.
+
+LaTeX Warning: Reference `mdf@pagelabel-110' on page 55 undefined on input line
+ 1897.
+
+Package mdframed Info: mdframed works in twoside mode on input line 1899.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1899.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1902.
+
+LaTeX Warning: Reference `mdf@pagelabel-111' on page 55 undefined on input line
+ 1902.
+
+LaTeX Info: Redefining \. on input line 1908.
+LaTeX Info: Redefining \% on input line 1908.
+[55]
+
+LaTeX Warning: Reference `prop:cerradura-positivos-Z' on page 56 undefined on i
+nput line 1909.
+
+
+LaTeX Warning: Reference `lem:regla-signos-Z' on page 56 undefined on input lin
+e 1909.
+
+
+LaTeX Warning: Reference `prop:cerradura-positivos-Z' on page 56 undefined on i
+nput line 1909.
+
+
+LaTeX Warning: Reference `thm:buen-orden-Z' on page 56 undefined on input line 
+1911.
+
+
+LaTeX Warning: Reference `thm:algoritmo-division-Z' on page 56 undefined on inp
+ut line 1913.
+
+
+LaTeX Warning: Reference `prop:uno-neutro-Z' on page 56 undefined on input line
+ 1933.
+
+
+LaTeX Warning: Reference `prop:cancelacion-Z' on page 56 undefined on input lin
+e 1933.
+
+
+LaTeX Warning: Reference `lem:signo-factor-Z' on page 56 undefined on input lin
+e 1935.
+
+
+LaTeX Warning: Reference `prop:biyeccion-positivos-Z' on page 56 undefined on i
+nput line 1935.
+
+
+LaTeX Warning: Reference `thm:tricotomia' on page 56 undefined on input line 19
+35.
+
+
+LaTeX Warning: Reference `lem:uno-minimo' on page 56 undefined on input line 19
+35.
+
+
+LaTeX Warning: Reference `lem:orden-transitivo' on page 56 undefined on input l
+ine 1935.
+
+
+LaTeX Warning: Reference `prop:uno-neutro-Z' on page 56 undefined on input line
+ 1937.
+
+LaTeX Info: Redefining \. on input line 1942.
+LaTeX Info: Redefining \% on input line 1942.
+[56] (./notas.aux
+LaTeX Info: Redefining \. on input line 12.
+LaTeX Info: Redefining \% on input line 12.
+)
+ ***********
+LaTeX2e <2025-11-01>
+L3 programming layer <2026-01-19>
+ ***********
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `notas.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `notas.out':
+(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
+(rerunfilecheck)             After:  646BCD1D623A3743DE705E080B7A9F7B;7736.
+ ) 
+Here is how much of TeX's memory you used:
+ 41800 strings out of 467525
+ 931930 string characters out of 5425861
+ 1467839 words of memory out of 5000000
+ 69777 multiletter control sequences out of 15000+600000
+ 689593 words of font info for 85 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 99i,17n,108p,747b,1220s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf-dis
 t/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texmf-dist/fonts/type1/public/l
 m/lmex10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/shar
@@ -2817,10 +3321,10 @@ fb></usr/share/texmf-dist/fonts/type1/public/lm/lmro12.pfb></usr/share/texmf-di
 st/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/l
 m/lmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.p
 fb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on notas.pdf (58 pages, 458795 bytes).
+Output written on notas.pdf (58 pages, 449301 bytes).
 PDF statistics:
- 815 PDF objects out of 1000 (max. 8388607)
- 698 compressed objects within 7 object streams
- 202 named destinations out of 1000 (max. 500000)
- 460 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 560 PDF objects out of 1000 (max. 8388607)
+ 445 compressed objects within 5 object streams
+ 203 named destinations out of 1000 (max. 500000)
+ 124 words of extra memory for PDF output out of 10000 (max. 10000000)
 

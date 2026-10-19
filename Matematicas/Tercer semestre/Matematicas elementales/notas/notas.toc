@@ -41,3 +41,4 @@
 \contentsline {subsection}{\numberline {7.2.3}Valor absoluto}{53}{subsection.7.2.3}%
 \contentsline {subsection}{\numberline {7.2.4}El algoritmo de la división}{54}{subsection.7.2.4}%
 \contentsline {subsection}{\numberline {7.2.5}Divisibilidad y máximo común divisor}{55}{subsection.7.2.5}%
+\contentsline {section}{\numberline {7.3}Reales}{56}{section.7.3}%

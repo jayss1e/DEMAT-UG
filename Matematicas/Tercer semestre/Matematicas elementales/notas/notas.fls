@@ -1,4 +1,4 @@
-PWD /home/radojka/DEMAT-UG/Matematicas/Tercer semestre/Matematicas elementales/notas
+PWD /home/god/DEMAT-UG/Matematicas/Tercer semestre/Matematicas elementales/notas
 INPUT /usr/share/texmf-dist/web2c/texmf.cnf
 INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
 INPUT notas.tex
@@ -446,6 +446,10 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/ec-lmbx12.tfm
 INPUT ./notas.toc
 INPUT ./notas.toc
 INPUT notas.toc
+OUTPUT notas.toc
+INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/ec-lmro12.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/ec-lmr17.tfm
+INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/ec-lmbx12.tfm
 INPUT /usr/share/texmf-dist/tex/latex/lm/ot1lmr.fd
 INPUT /usr/share/texmf-dist/tex/latex/lm/ot1lmr.fd
 INPUT /usr/share/texmf-dist/tex/latex/lm/ot1lmr.fd
@@ -492,10 +496,6 @@ INPUT /usr/share/texmf-dist/tex/latex/stmaryrd/Ustmry.fd
 INPUT /usr/share/texmf-dist/fonts/tfm/public/stmaryrd/stmary10.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/stmaryrd/stmary8.tfm
 INPUT /usr/share/texmf-dist/fonts/tfm/public/stmaryrd/stmary6.tfm
-OUTPUT notas.toc
-INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/ec-lmro12.tfm
-INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/ec-lmr17.tfm
-INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/ec-lmbx12.tfm
 INPUT /usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc
 INPUT /usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc
 INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/ec-lmr8.tfm
