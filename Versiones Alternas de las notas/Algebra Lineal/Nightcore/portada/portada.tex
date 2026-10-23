@@ -1,0 +1,54 @@
+% Portada nightcore de Álgebra Lineal I. Imagen: Konachan #90735.
+\documentclass[tikz,border=0pt]{standalone}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{libertinus}
+\renewcommand{\sfdefault}{LibertinusSans-TLF}
+\usepackage{textcomp}
+\newcommand{\nota}{{\fontfamily{LibertinusSerif-TLF}\selectfont\textmusicalnote}}
+\usetikzlibrary{calc,fadings}
+
+\definecolor{ncPage}{HTML}{0A0718}
+\definecolor{ncText}{HTML}{ECE8FF}
+\definecolor{ncDim}{HTML}{8F86B8}
+\definecolor{ncCyan}{HTML}{3FE3FF}
+\definecolor{ncPink}{HTML}{FF4FCB}
+
+% Texto blanco con contorno de color, como los títulos de los videos.
+\newcommand{\glow}[3][ncPink]{% color, posición, texto
+  \foreach \a in {0,20,...,340}{%
+    \node[text=#1, opacity=0.6, inner sep=0pt] at ($#2+(\a:1.6pt)$) {#3};
+    \node[text=#1, opacity=0.2, inner sep=0pt] at ($#2+(\a:4pt)$) {#3};}
+  \node[text=white, inner sep=0pt] at #2 {#3};}
+
+\begin{document}
+\begin{tikzpicture}
+  \useasboundingbox (0,0) rectangle (21,29.7);
+  \fill[ncPage] (0,0) rectangle (21,29.7);
+  \begin{scope}
+    \clip (0,0) rectangle (21,29.7);
+    % imagen apaisada: se ajusta a la altura y se recorta a los lados
+    \node[inner sep=0pt] at (10.5,17.6) {\includegraphics[height=24.3cm]{../imagenes/portada.jpg}};
+  \end{scope}
+  \fill[ncPage, path fading=north] (0,5.5) rectangle (21,13);
+  \fill[ncPage] (0,0) rectangle (21,5.5);
+
+  \node[text=ncCyan, font=\sffamily\bfseries\large, fill=ncPage, fill opacity=0.8,
+        text opacity=1, rounded corners=8pt, inner xsep=12pt, inner ysep=6pt,
+        draw=ncCyan, draw opacity=0.6] at (10.5,12.1)
+    {\nota\ NIGHTCORE \textperiodcentered\ NOTAS DE CLASE \textperiodcentered\ VOL. I\ \nota};
+  \glow{(10.5,10.2)}{\sffamily\bfseries\fontsize{58}{60}\selectfont Álgebra Lineal}
+  \node[text=ncText, font=\itshape\Large] at (10.5,8.4) {Notas de clase para un curso introductorio};
+
+  \draw[ncCyan, line width=0.8pt] (4,7.4) -- (17,7.4);
+  \node[text=ncDim, font=\sffamily\small] at (10.5,6.7) {ELABORADAS POR};
+  \node[text=ncText, font=\large] at (10.5,5.95) {Ricardo León Martínez};
+  \node[text=ncText, font=\large] at (10.5,5.25) {Carlos Alberto Román Rodríguez};
+  \node[text=ncDim, font=\sffamily\small] at (10.5,4.3) {PROFESORA};
+  \node[text=ncText, font=\large] at (10.5,3.6) {Dra. Claudia Reynoso Alcántara};
+  \node[text=ncDim, font=\small] at (10.5,2.55) {Departamento de Matemáticas};
+  \node[text=ncDim, font=\small] at (10.5,2.05) {División de Ciencias Naturales y Exactas \textperiodcentered\ Universidad de Guanajuato};
+  \node[text=ncPink, font=\sffamily\bfseries] at (10.5,1.1) {2026};
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,37 @@
+% Página final nightcore de Álgebra Lineal I. Imagen: Konachan #66165.
+\documentclass[tikz,border=0pt]{standalone}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{libertinus}
+\renewcommand{\sfdefault}{LibertinusSans-TLF}
+\usepackage{textcomp}
+\newcommand{\nota}{{\fontfamily{LibertinusSerif-TLF}\selectfont\textmusicalnote}}
+\usetikzlibrary{calc}
+
+\definecolor{ncPage}{HTML}{0A0718}
+\definecolor{ncText}{HTML}{ECE8FF}
+\definecolor{ncCyan}{HTML}{3FE3FF}
+\definecolor{ncPink}{HTML}{FF4FCB}
+
+\newcommand{\glow}[3][ncPink]{% color, posición, texto
+  \foreach \a in {0,20,...,340}{%
+    \node[text=#1, opacity=0.6, inner sep=0pt] at ($#2+(\a:1.4pt)$) {#3};
+    \node[text=#1, opacity=0.2, inner sep=0pt] at ($#2+(\a:3.5pt)$) {#3};}
+  \node[text=white, inner sep=0pt] at #2 {#3};}
+
+\begin{document}
+\begin{tikzpicture}
+  \useasboundingbox (0,0) rectangle (21,29.7);
+  \fill[ncPage] (0,0) rectangle (21,29.7);
+  \begin{scope}
+    \clip[rounded corners=12pt] (1.5,9) rectangle (19.5,23.4);
+    \node[inner sep=0pt] at (10.5,16.2) {\includegraphics[height=14.4cm]{../imagenes/final.jpg}};
+  \end{scope}
+  \draw[ncCyan!35!ncPage, line width=4pt, rounded corners=12pt] (1.5,9) rectangle (19.5,23.4);
+  \draw[ncCyan, line width=1.2pt, rounded corners=12pt] (1.5,9) rectangle (19.5,23.4);
+  \glow{(10.5,6.6)}{\sffamily\bfseries\fontsize{40}{44}\selectfont Fin}
+  \node[text=ncCyan, font=\sffamily\bfseries\large] at (10.5,4.9)
+    {\nota\ gracias por leer \nota};
+\end{tikzpicture}
+\end{document}

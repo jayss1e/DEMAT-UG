@@ -1,0 +1,596 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{ugmath}[2026/10/22 Estilo matemático personal (nightcore)]
+% Variante "Nightcore": hoja índigo casi negra con estrellas en los márgenes,
+% texto lavanda claro, cajas con borde neón (cian, rosa, morado) y aperturas
+% de capítulo con imagen, al estilo de las miniaturas nightcore de ~2010.
+% Copia independiente de ugmath.sty; los cambios aquí no afectan a las
+% notas originales ni a las otras versiones alternas.
+
+% ========== CONFIGURACIÓN INICIAL ==========
+\RequirePackage[spanish]{babel}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[T1]{fontenc}
+\RequirePackage{libertinus}
+\renewcommand{\sfdefault}{LibertinusSans-TLF} % sans con negrita real para los títulos con brillo
+\RequirePackage{microtype}
+
+% ========== GEOMETRÍA (MÁRGENES) ==========
+% ¡IMPORTANTE! Esto debe ir ANTES de otros paquetes que usen geometry
+\RequirePackage[%
+    top=1.5cm,      % Margen superior
+    bottom=1.5cm,   % Margen inferior
+    left=1.5cm,     % Margen izquierdo
+    right=1.5cm,    % Margen derecho
+    marginparwidth=2.0cm,  % Ancho del margen para notas
+    marginparsep=10pt      % Separación del texto principal
+]{geometry}
+
+% ========== COLORES (nightcore) ==========
+\RequirePackage[dvipsnames]{xcolor}
+
+% Hoja y texto
+\definecolor{ncPage}{HTML}{0A0718}      % la hoja: índigo casi negro
+\definecolor{ncText}{HTML}{ECE8FF}      % texto: lavanda muy claro
+\definecolor{ncDim}{HTML}{8F86B8}       % lavanda apagado, texto secundario/reglas
+
+% Neón
+\definecolor{ncCyan}{HTML}{3FE3FF}      % definiciones, enlaces
+\definecolor{ncPink}{HTML}{FF4FCB}      % teoremas, proposiciones, lemas, corolarios
+\definecolor{ncPurple}{HTML}{A970FF}    % notas
+\definecolor{ncBoxBg}{HTML}{15102B}     % fondo de caja
+
+% Se conservan estos nombres (usados en \mdfdefinestyle más abajo) para
+% minimizar el diff frente a la versión original.
+\definecolor{UGblue}{HTML}{3FE3FF}
+\definecolor{UGgold}{HTML}{FF4FCB}
+\definecolor{mutedyellow}{HTML}{A970FF}
+\definecolor{myblue}{HTML}{3FE3FF}
+\definecolor{softgray}{HTML}{FF4FCB}
+\definecolor{lightgray}{HTML}{15102B}
+\definecolor{elegantpurple}{HTML}{FF4FCB}
+\definecolor{lightpurple}{HTML}{15102B}
+\definecolor{darkred}{HTML}{A970FF}
+\definecolor{lightred}{HTML}{15102B}
+
+% La hoja oscura y el color de texto por omisión (\pagecolor lo da xcolor).
+% \default@color es el que usa \normalcolor en encabezados y pies de página.
+\AtBeginDocument{%
+  \pagecolor{ncPage}%
+  \color{ncText}%
+  \let\default@color\current@color
+}
+
+% ========== PAQUETES ==========
+\RequirePackage{setspace}
+\setstretch{1.2}
+
+\RequirePackage{amsmath,amssymb,amsthm,mathtools}
+\RequirePackage{graphicx}
+\RequirePackage{tikz}
+\usetikzlibrary{calc,decorations.pathreplacing,angles,quotes,shadows,shadows.blur,arrows}
+\RequirePackage{pgfplots}
+\pgfplotsset{compat=newest}
+\pgfplotsset{compat=1.18}
+\RequirePackage{caption}
+\RequirePackage{thmtools}
+\RequirePackage{mathrsfs}
+\RequirePackage{stmaryrd}
+\RequirePackage{physics}
+\RequirePackage{enumitem}
+\RequirePackage{csquotes}
+\RequirePackage{multicol}
+\RequirePackage{tocloft}
+\RequirePackage{tikz-3dplot}
+
+% ========== MDFRAMED ==========
+\RequirePackage[framemethod=TikZ]{mdframed}
+
+\mdfdefinestyle{mdpinkbox}{
+    linecolor=ncPurple,
+    linewidth=1.2pt,
+    outerlinewidth=2.5pt,
+    outerlinecolor=ncPurple!35!ncPage,
+    backgroundcolor=ncBoxBg,
+    roundcorner=8pt,
+    frametitlebackgroundcolor=ncPurple,
+    frametitlefont=\bfseries\color{ncPage},
+    frametitlealignment=\raggedright, %\raggedleft o \centering
+    innertopmargin=12pt,
+    innerbottommargin=12pt,
+    innerleftmargin=15pt,
+    innerrightmargin=15pt,
+    skipabove=20pt,     % Espacio antes de la caja
+    skipbelow=15pt,     % Espacio después de la caja
+    nobreak=true,      % Permite que se rompa en páginas
+    splitbottomskip=10pt,
+    splittopskip=10pt
+}
+
+\mdfdefinestyle{mdbluebox}{
+    linecolor=ncCyan,
+    linewidth=1.2pt,
+    outerlinewidth=2.5pt,
+    outerlinecolor=ncCyan!35!ncPage,
+    backgroundcolor=ncBoxBg,
+    roundcorner=8pt,
+    frametitlebackgroundcolor=ncCyan,
+    frametitlefont=\bfseries\color{ncPage},
+    frametitlealignment=\raggedright,
+    innertopmargin=12pt,
+    innerbottommargin=12pt,
+    innerleftmargin=15pt,
+    innerrightmargin=15pt,
+    skipabove=20pt,
+    skipbelow=15pt,
+    nobreak=true,
+    splitbottomskip=10pt,
+    splittopskip=10pt
+}
+
+\mdfdefinestyle{mdorangebox}{
+    linecolor=ncCyan,
+    linewidth=1.2pt,
+    outerlinewidth=2.5pt,
+    outerlinecolor=ncCyan!35!ncPage,
+    backgroundcolor=ncBoxBg,
+    roundcorner=8pt,
+    frametitlebackgroundcolor=ncCyan,
+    frametitlefont=\bfseries\color{ncPage},
+    frametitlealignment=\raggedright,
+    innertopmargin=12pt,
+    innerbottommargin=12pt,
+    innerleftmargin=15pt,
+    innerrightmargin=15pt,
+    skipabove=20pt,
+    skipbelow=15pt,
+    nobreak=false,
+    splitbottomskip=10pt,
+    splittopskip=10pt
+}
+
+\mdfdefinestyle{mdgreenbox}{
+    linecolor=ncPurple,
+    linewidth=1.2pt,
+    outerlinewidth=2.5pt,
+    outerlinecolor=ncPurple!35!ncPage,
+    backgroundcolor=ncBoxBg,
+    roundcorner=8pt,
+    frametitlebackgroundcolor=ncPurple,
+    frametitlefont=\bfseries\color{ncPage},
+    frametitlealignment=\raggedright,
+    innertopmargin=12pt,
+    innerbottommargin=12pt,
+    innerleftmargin=15pt,
+    innerrightmargin=15pt,
+    skipabove=20pt,
+    skipbelow=15pt,
+    nobreak=false,
+    splitbottomskip=10pt,
+    splittopskip=10pt
+}
+
+\mdfdefinestyle{mdgraybox}{
+    linecolor=softgray,             % = ncPink, redefinido arriba
+    linewidth=1.2pt,
+    outerlinewidth=2.5pt,
+    outerlinecolor=softgray!35!ncPage,
+    backgroundcolor=lightgray,      % = ncBoxBg, redefinido arriba
+    roundcorner=8pt,
+    frametitlebackgroundcolor=softgray,
+    frametitlefont=\bfseries\color{ncPage},
+    frametitlealignment=\raggedright,
+    innertopmargin=12pt,
+    innerbottommargin=12pt,
+    innerleftmargin=15pt,
+    innerrightmargin=15pt,
+    skipabove=20pt,
+    skipbelow=15pt,
+    nobreak=true,
+    splitbottomskip=10pt,
+    splittopskip=10pt
+}
+
+\mdfdefinestyle{mdpurplebox}{
+    linecolor=elegantpurple,        % = ncPink, redefinido arriba
+    linewidth=1.2pt,
+    outerlinewidth=2.5pt,
+    outerlinecolor=elegantpurple!35!ncPage,
+    backgroundcolor=lightpurple,    % = ncBoxBg, redefinido arriba
+    roundcorner=8pt,
+    frametitlebackgroundcolor=elegantpurple,
+    frametitlefont=\bfseries\color{ncPage},
+    frametitlealignment=\raggedright,
+    innertopmargin=12pt,
+    innerbottommargin=12pt,
+    innerleftmargin=15pt,
+    innerrightmargin=15pt,
+    skipabove=20pt,
+    skipbelow=15pt,
+    nobreak=false,
+    splitbottomskip=10pt,
+    splittopskip=10pt
+}
+
+\mdfdefinestyle{mdredbox}{
+    linecolor=darkred,              % = ncPurple, redefinido arriba
+    linewidth=1.2pt,
+    outerlinewidth=2.5pt,
+    outerlinecolor=darkred!35!ncPage,
+    backgroundcolor=lightred,       % = ncBoxBg, redefinido arriba
+    roundcorner=8pt,
+    frametitlebackgroundcolor=darkred,
+    frametitlefont=\bfseries\color{ncPage},
+    frametitlealignment=\raggedright,
+    innertopmargin=12pt,
+    innerbottommargin=12pt,
+    innerleftmargin=15pt,
+    innerrightmargin=15pt,
+    skipabove=20pt,
+    skipbelow=15pt,
+    nobreak=false,
+    splitbottomskip=10pt,
+    splittopskip=10pt
+}
+
+% =========================================================
+% ENTORNOS MATEMÁTICOS CON MDFRAMED
+% =========================================================
+
+% ─── Contadores ────────────────────────────────────────────────────
+\newcounter{defn}[chapter]
+\newcounter{teor}[chapter]
+\newcounter{prop}[chapter]
+\newcounter{lema}[chapter]
+\newcounter{coro}[chapter]
+
+% Formato: 1.1, 1.2, 2.1 … (capítulo.número)
+\renewcommand{\thedefn}{\thechapter.\arabic{defn}}
+\renewcommand{\theteor}{\thechapter.\arabic{teor}}
+\renewcommand{\theprop}{\thechapter.\arabic{prop}}
+\renewcommand{\thelema}{\thechapter.\arabic{lema}}
+\renewcommand{\thecoro}{\thechapter.\arabic{coro}}
+
+% ─── Entornos ──────────────────────────────────────────────────────
+
+% DEFINICIÓN — caja azul
+\newenvironment{definicion}[1][]{%
+  \refstepcounter{defn}%
+  \ifx&#1&%                      % si no hay título opcional
+    \begin{mdframed}[style=mdbluebox,
+      frametitle={Definición \thedefn}]%
+  \else%                         % si hay título opcional
+    \begin{mdframed}[style=mdbluebox,
+      frametitle={Definición \thedefn: #1}]%
+  \fi
+  \color{ncText}%
+}{%
+  \end{mdframed}
+}
+
+% TEOREMA — caja gris
+\newenvironment{teorema}[1][]{%
+  \refstepcounter{teor}%
+  \ifx&#1&%
+    \begin{mdframed}[style=mdgraybox,
+      frametitle={Teorema \theteor}]%
+  \else%
+    \begin{mdframed}[style=mdgraybox,
+      frametitle={Teorema \theteor: #1}]%
+  \fi
+  \color{ncText}%
+}{%
+  \end{mdframed}
+}
+
+% PROPOSICIÓN — caja gris
+\newenvironment{proposicion}[1][]{%
+  \refstepcounter{prop}%
+  \ifx&#1&%
+    \begin{mdframed}[style=mdgraybox,
+      frametitle={Proposición \theprop}]%
+  \else%
+    \begin{mdframed}[style=mdgraybox,
+      frametitle={Proposición \theprop: #1}]%
+  \fi
+  \color{ncText}%
+}{%
+  \end{mdframed}
+}
+
+% LEMA — caja gris
+\newenvironment{lema}[1][]{%
+  \refstepcounter{lema}%
+  \ifx&#1&%
+    \begin{mdframed}[style=mdgraybox,
+      frametitle={Lema \thelema}]%
+  \else%
+    \begin{mdframed}[style=mdgraybox,
+      frametitle={Lema \thelema: #1}]%
+  \fi
+  \color{ncText}%
+}{%
+  \end{mdframed}
+}
+
+% COROLARIO — caja gris
+\newenvironment{corolario}[1][]{%
+  \refstepcounter{coro}%
+  \ifx&#1&%
+    \begin{mdframed}[style=mdgraybox,
+      frametitle={Corolario \thecoro}]%
+  \else%
+    \begin{mdframed}[style=mdgraybox,
+      frametitle={Corolario \thecoro: #1}]%
+  \fi
+  \color{ncText}%
+}{%
+  \end{mdframed}
+}
+
+% ─── Protección contra encabezados huérfanos ────────────────────────
+% Si no cabe el encabezado más algo de contenido antes del fin de
+% página, se fuerza el salto antes del encabezado (en vez de dejarlo
+% solo al final de la hoja).
+\newcommand{\avoidorphan}[1]{\ifdim\dimexpr\pagegoal-\pagetotal\relax<#1\baselineskip \newpage \fi}
+
+% ─── Contador de ejemplos ──────────────────────────────────────────
+\newcounter{ejemplo}[chapter]
+\renewcommand{\theejemplo}{\thechapter.\arabic{ejemplo}}
+
+% ─── Entorno ejemplo ───────────────────────────────────────────────
+\newenvironment{ejemplo}{%
+  \par
+  \avoidorphan{3}%
+  \refstepcounter{ejemplo}%
+  \medskip
+  \noindent\textbf{Ejemplo \theejemplo}\nobreak
+  \par\nobreak\smallskip\nobreak
+}{%
+  \hfill$\blacktriangle$\par\medskip
+}
+
+% ─── Contador de ejercicios ────────────────────────────────────────
+\newcounter{ejercicio}[chapter]
+\renewcommand{\theejercicio}{\thechapter.\arabic{ejercicio}}
+
+% ─── Entorno ejercicio ─────────────────────────────────────────────
+\newenvironment{ejercicio}{%
+  \par
+  \avoidorphan{3}%
+  \refstepcounter{ejercicio}%
+  \medskip
+  \noindent\textbf{Ejercicio \theejercicio}\nobreak\space\ignorespaces
+}{%
+  \par\medskip
+}
+
+% ========== HIPERVÍNCULOS ==========
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=UGblue,
+    urlcolor=UGgold,
+    citecolor=UGblue,
+    pdftitle={Documento},
+    pdfauthor={Autor}
+}
+
+% ========== COMANDOS MATEMÁTICOS ==========
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\FF}{\mathcal{F}}
+\newcommand{\BB}{\mathcal{B}}
+\newcommand{\PP}{\mathcal{P}}
+\newcommand{\pfrac}[2]{\left( \frac{#1}{#2} \right)} %
+\newcommand{\bfrac}[2]{\left[ \frac{#1}{#2} \right]} %corchetes
+\newcommand{\vecpar}[1]{\left( #1 \right)}
+\newcommand{\point}[2]{\left( #1, #2 \right)}
+\newcommand{\pointfrac}[4]{\left( \frac{#1}{#2}, \frac{#3}{#4} \right)}
+\newcommand{\pointmix}[4]{\left( #1, \frac{#3}{#4} \right)}
+\newcommand{\gt}{\ensuremath{>}}
+\newcommand{\lt}{\ensuremath{<}}
+\DeclareMathOperator{\nul}{nul}
+\newcommand{\gen}[1]{\langle #1 \rangle}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\let\a\alpha
+
+% ========== CONFIGURACIÓN DE PÁRRAFOS ==========
+\setlength{\parindent}{0pt}      % Sin sangría
+\setlength{\parskip}{6pt}        % Espacio entre párrafos
+
+% ========== ENTORNOS ==========
+\newenvironment{solucion}
+  {\par\noindent\textit{Solución. }\ignorespaces}
+  {\hfill$\blacktriangle$\par}
+
+  \renewcommand{\qedsymbol}{$\blacksquare$}
+% ========== NIGHTCORE ==========
+\RequirePackage{textcomp}   % \textmusicalnote
+% Libertinus Sans no trae la nota musical, se toma de Libertinus Serif.
+\newcommand{\ncnota}{{\fontfamily{LibertinusSerif-TLF}\selectfont\textmusicalnote}}
+\usetikzlibrary{fadings}
+
+% ─── Texto con brillo ──────────────────────────────────────────────
+% \ncglow[color del brillo]{texto}: texto blanco con contorno de color,
+% como el título de los videos nightcore. Se usa dentro de un tikzpicture.
+\newcommand{\ncglow}[2][ncPink]{%
+  \foreach \ncang in {0,30,...,330}{%
+    \node[text=#1, opacity=0.55, anchor=base west, inner sep=0pt]
+      at ($(ncglowpos)+(\ncang:1.1pt)$) {#2};%
+    \node[text=#1, opacity=0.18, anchor=base west, inner sep=0pt]
+      at ($(ncglowpos)+(\ncang:2.6pt)$) {#2};%
+  }%
+  \node[text=white, anchor=base west, inner sep=0pt] at (ncglowpos) {#2};%
+}
+
+% ─── Estrellas en los márgenes ─────────────────────────────────────
+% Puntos y destellos de cuatro puntas, solo en la franja de los márgenes
+% para no estorbar al texto. La semilla depende de la página, así que
+% cada hoja tiene su propio cielo y es el mismo en cada compilación.
+\newcommand{\ncsparkle}[3]{% centro, tamaño, color
+  \fill[#3] #1 ++(0,#2) .. controls +(0,-0.7*#2) and +(0.7*#2,0) .. ++(-#2,-#2)
+    .. controls +(0.7*#2,0) and +(0,0.7*#2) .. ++(#2,-#2)
+    .. controls +(0,0.7*#2) and +(-0.7*#2,0) .. ++(#2,#2)
+    .. controls +(-0.7*#2,0) and +(0,-0.7*#2) .. cycle;}
+\newcommand{\ncstarfield}{%
+  \begin{tikzpicture}[x=1cm,y=1cm]
+    \useasboundingbox (0,0) rectangle (\paperwidth,\paperheight);
+    \pgfmathsetseed{\value{page}+7}%
+    \foreach \i in {1,...,70}{%
+      \pgfmathsetmacro{\ncside}{int(random(1,4))}%
+      \pgfmathsetmacro{\ncu}{rnd}%
+      \pgfmathsetmacro{\ncv}{rnd}%
+      \ifcase\ncside\or
+        \coordinate (ncp) at (\ncv*1.2, \ncu*\paperheight);\or
+        \coordinate (ncp) at (\paperwidth-\ncv*1.2cm, \ncu*\paperheight);\or
+        \coordinate (ncp) at (\ncu*\paperwidth, \ncv*1.2);\or
+        \coordinate (ncp) at (\ncu*\paperwidth, \paperheight-\ncv*1.2cm);\fi
+      \pgfmathsetmacro{\ncop}{0.15+0.5*rnd}%
+      \fill[ncText, opacity=\ncop] (ncp) circle[radius=0.25pt+0.6pt*rnd];%
+    }%
+    \foreach \i in {1,...,5}{%
+      \pgfmathsetmacro{\ncu}{rnd}%
+      \pgfmathsetmacro{\ncv}{rnd}%
+      \pgfmathsetmacro{\ncc}{int(random(1,2))}%
+      \ifodd\i
+        \coordinate (ncp) at (0.25+\ncv*0.7, \ncu*\paperheight);
+      \else
+        \coordinate (ncp) at (\paperwidth-0.25cm-\ncv*0.7cm, \ncu*\paperheight);
+      \fi
+      \ifnum\ncc=1 \ncsparkle{(ncp)}{2.2pt}{ncPink!80}\else\ncsparkle{(ncp)}{2.2pt}{ncCyan!80}\fi
+    }%
+  \end{tikzpicture}}
+\AddToHook{shipout/background}{\put(0pt,-\paperheight){\ncstarfield}}
+
+% ─── Aperturas de capítulo ─────────────────────────────────────────
+% \ncimagen{n}{archivo}{f}: imagen del capítulo n. f (entre 0 y 1) es la
+% altura, medida desde arriba, que queda al centro de la franja.
+\newlength{\ncbannerht}
+\setlength{\ncbannerht}{7.2cm}
+\newsavebox{\ncimgbox}
+\newcommand{\ncimagen}[3]{%
+  \expandafter\def\csname ncimg@#1\endcsname{#2}%
+  \expandafter\def\csname ncpos@#1\endcsname{#3}}
+
+% Encabezado de capítulo numerado: franja con la imagen, degradado hacia la
+% hoja y el título con brillo encima.
+\newcommand{\ncchapter}[1]{%
+  \begin{tikzpicture}
+    \useasboundingbox (0,0) rectangle (\textwidth,\ncbannerht);
+    \pgfmathsetmacro{\ncfrac}{\csname ncpos@\thechapter\endcsname}%
+    \sbox{\ncimgbox}{\includegraphics[width=\textwidth]{\csname ncimg@\thechapter\endcsname}}%
+    \begin{scope}
+      \clip[rounded corners=10pt] (0,0) rectangle (\textwidth,\ncbannerht);
+      \node[anchor=north west, inner sep=0pt]
+        at (0,{\ncbannerht/2+\ncfrac*\ht\ncimgbox}) {\usebox{\ncimgbox}};
+      \fill[ncPage, path fading=north] (0,0) rectangle (\textwidth,0.55\ncbannerht);
+      \fill[ncPage, opacity=0.35, path fading=north] (0,0) rectangle (\textwidth,0.35\ncbannerht);
+    \end{scope}
+    \draw[ncCyan!35!ncPage, line width=3pt, rounded corners=10pt] (0,0) rectangle (\textwidth,\ncbannerht);
+    \draw[ncCyan, line width=1pt, rounded corners=10pt] (0,0) rectangle (\textwidth,\ncbannerht);
+    \node[anchor=base west, text=ncCyan, font=\sffamily\bfseries\small,
+          fill=ncPage, fill opacity=0.8, text opacity=1, rounded corners=5pt,
+          inner xsep=7pt, inner ysep=3pt, draw=ncCyan, draw opacity=0.6]
+      at (0.45,1.75) {\ncnota\ NIGHTCORE \textperiodcentered\ CAPÍTULO \thechapter};
+    \coordinate (ncglowpos) at (0.6,0.6);
+    \ncglow{\sffamily\bfseries\huge #1}
+  \end{tikzpicture}}
+
+% Encabezado sin número (Índice, etc.): solo el título con brillo.
+\newcommand{\ncchapterstar}[1]{%
+  \begin{tikzpicture}
+    \useasboundingbox (0,-0.2) rectangle (\textwidth,1.1);
+    \coordinate (ncglowpos) at (0,0);
+    \ncglow{\sffamily\bfseries\huge #1}
+    \draw[ncCyan, line width=0.8pt] (0,-0.35) -- (\textwidth,-0.35);
+  \end{tikzpicture}}
+
+% ─── Interludios: páginas completas con imagen ─────────────────────
+% \ncinterludioimagen{archivo}{x}: agrega una imagen a la fila de
+% interludios. x (entre 0 y 1) es la posición horizontal de la imagen que
+% queda al centro de la hoja. \ncinterludio usa la siguiente imagen de la
+% fila en una página completa. Las páginas en blanco que deja
+% \cleardoublepage antes de un capítulo también se llenan así.
+\newcounter{ncintdef}
+\newcounter{ncintuso}
+\newcommand{\ncinterludioimagen}[2]{%
+  \stepcounter{ncintdef}%
+  \expandafter\def\csname ncint@img@\the\value{ncintdef}\endcsname{#1}%
+  \expandafter\def\csname ncint@pos@\the\value{ncintdef}\endcsname{#2}}
+
+\newcommand{\ncinterludiopagina}[2]{% archivo, x
+  \begin{tikzpicture}
+    \useasboundingbox (0,0) rectangle (\paperwidth,\paperheight);
+    \fill[ncPage] (0,0) rectangle (\paperwidth,\paperheight);
+    \sbox{\ncimgbox}{\includegraphics[height=\paperheight]{#1}}%
+    \begin{scope}
+      \clip (0,0) rectangle (\paperwidth,\paperheight);
+      \node[anchor=south west, inner sep=0pt]
+        at ({0.5\paperwidth-#2*\wd\ncimgbox},0) {\usebox{\ncimgbox}};
+    \end{scope}
+    \draw[ncCyan!35!ncPage, line width=4pt, rounded corners=14pt]
+      (0.8,0.8) rectangle (\paperwidth-0.8cm,\paperheight-0.8cm);
+    \draw[ncCyan, line width=1.2pt, rounded corners=14pt]
+      (0.8,0.8) rectangle (\paperwidth-0.8cm,\paperheight-0.8cm);
+    \node[text=ncCyan, font=\sffamily\bfseries, fill=ncPage, fill opacity=0.8,
+          text opacity=1, rounded corners=5pt, inner xsep=8pt, inner ysep=4pt,
+          draw=ncCyan, draw opacity=0.6]
+      at (0.5\paperwidth,0.8) {\ncnota\ interludio \ncnota};
+  \end{tikzpicture}}
+
+\newcommand{\ncinterludio}{%
+  \clearpage
+  \ifnum\value{ncintuso}<\value{ncintdef}%
+    \stepcounter{ncintuso}%
+    \edef\ncint@img{\csname ncint@img@\the\value{ncintuso}\endcsname}%
+    \edef\ncint@pos{\csname ncint@pos@\the\value{ncintuso}\endcsname}%
+    \edef\ncint@do{\noexpand\AddToHookNext{shipout/foreground}{%
+      \noexpand\put(0pt,-\noexpand\paperheight){%
+        \noexpand\ncinterludiopagina{\ncint@img}{\ncint@pos}}}}%
+    \ncint@do
+  \fi
+  \thispagestyle{empty}\null\newpage}
+
+\renewcommand{\cleardoublepage}{%
+  \clearpage
+  \if@twoside\ifodd\c@page\else\ncinterludio\fi\fi}
+
+% ─── Secciones con franja de imagen ────────────────────────────────
+% \ncseccionimagen{1.2}{archivo}{f}: imagen de la sección 1.2. f (entre 0
+% y 1) es la altura de la imagen, desde arriba, que queda al centro de la
+% franja. Una sección sin imagen lleva el encabezado sencillo.
+\newlength{\ncstripht}
+\setlength{\ncstripht}{2.6cm}
+\newcommand{\ncseccionimagen}[3]{%
+  \expandafter\def\csname ncsec@img@#1\endcsname{#2}%
+  \expandafter\def\csname ncsec@pos@#1\endcsname{#3}}
+
+\newcommand{\ncsection}[1]{%
+  \ifcsname ncsec@img@\thesection\endcsname
+    \begin{tikzpicture}
+      \useasboundingbox (0,0) rectangle (\textwidth,\ncstripht);
+      \pgfmathsetmacro{\ncfrac}{\csname ncsec@pos@\thesection\endcsname}%
+      \sbox{\ncimgbox}{\includegraphics[width=0.5\textwidth]{\csname ncsec@img@\thesection\endcsname}}%
+      \begin{scope}
+        \clip[rounded corners=8pt] (0,0) rectangle (\textwidth,\ncstripht);
+        \fill[ncBoxBg] (0,0) rectangle (\textwidth,\ncstripht);
+        \node[anchor=north east, inner sep=0pt]
+          at (\textwidth,{\ncstripht/2+\ncfrac*\ht\ncimgbox}) {\usebox{\ncimgbox}};
+        \fill[ncBoxBg, path fading=east] (0.5\textwidth-1pt,0) rectangle (0.72\textwidth,\ncstripht);
+      \end{scope}
+      \draw[ncPink!35!ncPage, line width=3pt, rounded corners=8pt] (0,0) rectangle (\textwidth,\ncstripht);
+      \draw[ncPink, line width=1pt, rounded corners=8pt] (0,0) rectangle (\textwidth,\ncstripht);
+      \node[anchor=west, text=ncPage, fill=ncCyan, rounded corners=4pt,
+            font=\sffamily\bfseries, inner xsep=6pt, inner ysep=3pt]
+        (ncnum) at (0.45,0.5\ncstripht) {\thesection};
+      \path (ncnum.east) ++(0.35,0) coordinate (ncglowpos);
+      \path (ncglowpos) ++(0,-0.6ex) coordinate (ncglowpos);
+      \ncglow{\sffamily\bfseries\Large #1}
+    \end{tikzpicture}%
+  \else
+    {\sffamily\bfseries\normalsize\textcolor{ncCyan}{\thesection}\hspace{1em}#1}%
+  \fi}

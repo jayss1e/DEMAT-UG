@@ -104,50 +104,27 @@
     \end{problema}
 
     \begin{proof}
-        En lo que sigue, el polinomio cero se considera de grado $-\infty$, de modo que tiene grado a lo más $k$ para todo entero $k$.
+        \textbf{(a)} Sea $C=A-tI_{n}=(c_{ij})$, de modo que $c_{ii}=a_{ii}-t$ y $c_{ij}=a_{ij}$ si $i\neq j$. Por la fórmula de Leibniz para el determinante,
+        \begin{equation*}
+            f(t)=\det(C)=\sum_{\sigma\in S_{n}}\text{signo}(\sigma)\,c_{1\sigma(1)}c_{2\sigma(2)}\cdots c_{n\sigma(n)}.
+        \end{equation*}
+        Como $\text{signo}(\mathrm{id})=1$, el sumando correspondiente a la permutación identidad es
+        \begin{equation*}
+            c_{11}c_{22}\cdots c_{nn}=(a_{11}-t)(a_{22}-t)\cdots(a_{nn}-t).
+        \end{equation*}
+        Sea $\sigma\in S_{n}$ con $\sigma\neq\mathrm{id}$. Entonces existe $i$ con $\sigma(i)\neq i$. Sea $j=\sigma(i)$. Si $\sigma(j)=j$, se tendría $\sigma(j)=\sigma(i)$ con $j\neq i$, lo cual contradice que $\sigma$ es inyectiva. Así, $\sigma(j)\neq j$, y los factores $c_{i\sigma(i)}$ y $c_{j\sigma(j)}$ están fuera de la diagonal, es decir, son constantes. Cada uno de los $n-2$ factores restantes tiene grado a lo más $1$, así que el sumando correspondiente a $\sigma$ tiene grado a lo más $n-2$. Sea $q(t)$ la suma de los sumandos correspondientes a las permutaciones $\sigma\neq\mathrm{id}$. Entonces $q(t)$ tiene grado a lo más $n-2$ y
+        \begin{equation*}
+            f(t)=(a_{11}-t)(a_{22}-t)\cdots(a_{nn}-t)+q(t).
+        \end{equation*}
+        Si $n=1$, la única permutación es la identidad y $q=0$.
 
-        \textbf{(a)} Sea $B=(b_{ij})$ una matriz $m\times m$ cuyas entradas son polinomios en $t$ y supongamos que todas las entradas de la fila $k$ de $B$ tienen grado a lo más $d_{k}$, para $k=1,\dots,m$. Entonces $\det(B)$ tiene grado a lo más $d_{1}+\cdots+d_{m}$. En efecto, procedemos por inducción sobre $m$. Si $m=1$, $\det(B)=b_{11}$, que tiene grado a lo más $d_{1}$. Si $m\geq2$, desarrollando por cofactores a lo largo de la primera fila,
+        \textbf{(b)} Al desarrollar el producto $(a_{11}-t)(a_{22}-t)\cdots(a_{nn}-t)$, cada término se obtiene al escoger, en cada factor $a_{ii}-t$, el sumando $a_{ii}$ o el sumando $-t$. Los términos en $t^{n-1}$ se obtienen al escoger $-t$ en $n-1$ de los factores y $a_{ii}$ en el restante, así que el coeficiente de $t^{n-1}$ en este producto es
         \begin{equation*}
-            \det(B)=\sum_{j=1}^{m}(-1)^{1+j}b_{1j}\det(B(1|j)),
+            (-1)^{n-1}a_{11}+(-1)^{n-1}a_{22}+\cdots+(-1)^{n-1}a_{nn}=(-1)^{n-1}\Tr(A).
         \end{equation*}
-        donde $B(1|j)$ se obtiene al eliminar la fila $1$ y la columna $j$ de $B$. Las filas de $B(1|j)$ provienen de las filas $2,\dots,m$ de $B$, así que, por hipótesis de inducción, $\det(B(1|j))$ tiene grado a lo más $d_{2}+\cdots+d_{m}$. Como $b_{1j}$ tiene grado a lo más $d_{1}$, cada sumando tiene grado a lo más $d_{1}+\cdots+d_{m}$, y por lo tanto $\det(B)$ también.
-
-        Ahora procedemos por inducción sobre $n$. Si $n=1$, $f(t)=a_{11}-t$ y basta tomar $q=0$. Supongamos que $n\geq2$ y que el resultado vale para matrices de tamaño $(n-1)\times(n-1)$. Sea $C=A-tI_{n}$. Desarrollando $\det(C)$ por cofactores a lo largo de la primera columna,
+        Como $q(t)$ tiene grado a lo más $n-2$, no aporta nada al coeficiente de $t^{n-1}$. Por el inciso (a), el coeficiente de $t^{n-1}$ en $f$ es entonces
         \begin{equation*}
-            f(t)=(a_{11}-t)\det(C(1|1))+\sum_{i=2}^{n}(-1)^{i+1}a_{i1}\det(C(i|1)),
-        \end{equation*}
-        donde $C(i|1)$ es la matriz que se obtiene al eliminar la fila $i$ y la columna $1$ de $C$. La matriz $C(1|1)$ es igual a $A(1|1)-tI_{n-1}$, y las entradas diagonales de $A(1|1)$ son $a_{22},\dots,a_{nn}$. Por hipótesis de inducción,
-        \begin{equation*}
-            \det(C(1|1))=(a_{22}-t)\cdots(a_{nn}-t)+q_{1}(t),
-        \end{equation*}
-        donde $q_{1}(t)$ tiene grado a lo más $n-3$. Sea $i\geq2$. En la matriz $C$, la variable $t$ solo aparece en las entradas diagonales. Las filas de $C(i|1)$ son las filas $k\neq i$ de $C$ sin su primera entrada. La que proviene de la fila $1$ tiene entradas constantes $a_{12},\dots,a_{1n}$, es decir, de grado a lo más $0$, y las $n-2$ restantes, que provienen de las filas $k\notin\{1,i\}$, tienen entradas de grado a lo más $1$. Por lo anterior, $\det(C(i|1))$ tiene grado a lo más $n-2$. Así,
-        \begin{equation*}
-            f(t)=(a_{11}-t)(a_{22}-t)\cdots(a_{nn}-t)+q(t),
-        \end{equation*}
-        donde
-        \begin{equation*}
-            q(t)=(a_{11}-t)q_{1}(t)+\sum_{i=2}^{n}(-1)^{i+1}a_{i1}\det(C(i|1)).
-        \end{equation*}
-        El primer sumando tiene grado a lo más $1+(n-3)=n-2$ y cada término de la suma tiene grado a lo más $n-2$, así que $q(t)$ tiene grado a lo más $n-2$.
-
-        \textbf{(b)} Sean $c_{1},\dots,c_{n}\in K$. Procederemos por inducción sobre $n$ para probar que
-        \begin{equation*}
-            (c_{1}-t)\cdots(c_{n}-t)=(-1)^{n}t^{n}+(-1)^{n-1}(c_{1}+\cdots+c_{n})t^{n-1}+r_{n}(t),
-        \end{equation*}
-        donde $r_{n}(t)$ tiene grado a lo más $n-2$. Si $n=1$, el lado izquierdo es $c_{1}-t$, y basta tomar $r_{1}=0$. Si vale para $n$, entonces
-        \begin{align*}
-            (c_{1}-t)\cdots(c_{n}-t)(c_{n+1}-t)&=\big((-1)^{n}t^{n}+(-1)^{n-1}(c_{1}+\cdots+c_{n})t^{n-1}+r_{n}(t)\big)(c_{n+1}-t)\\
-            &=(-1)^{n+1}t^{n+1}+(-1)^{n}(c_{1}+\cdots+c_{n}+c_{n+1})t^{n}+r_{n+1}(t),
-        \end{align*}
-        donde $r_{n+1}(t)=(-1)^{n-1}(c_{1}+\cdots+c_{n})c_{n+1}t^{n-1}+(c_{n+1}-t)r_{n}(t)$ tiene grado a lo más $n-1$.
-
-        Aplicando esto con $c_{i}=a_{ii}$ y usando el inciso (a),
-        \begin{equation*}
-            f(t)=(-1)^{n}t^{n}+(-1)^{n-1}(a_{11}+\cdots+a_{nn})t^{n-1}+r_{n}(t)+q(t),
-        \end{equation*}
-        donde $r_{n}(t)+q(t)$ tiene grado a lo más $n-2$. Comparando el coeficiente de $t^{n-1}$ con la expresión de $f$,
-        \begin{equation*}
-            a_{n-1}=(-1)^{n-1}(a_{11}+\cdots+a_{nn})=(-1)^{n-1}\Tr(A).
+            a_{n-1}=(-1)^{n-1}\Tr(A).
         \end{equation*}
         Multiplicando por $(-1)^{n-1}$ y usando que $(-1)^{2(n-1)}=1$, obtenemos
         \begin{equation*}
@@ -424,15 +401,7 @@
         \begin{equation*}
             f(t)=(-1)^{n}(t-\lambda_{1})^{c_{1}}\cdots(t-\lambda_{r})^{c_{r}}.
         \end{equation*}
-        Fijemos $i$ y sea
-        \begin{equation*}
-            g_{i}(t)=(-1)^{n}\prod_{j\neq i}(t-\lambda_{j})^{c_{j}},
-        \end{equation*}
-        de modo que $f(t)=(t-\lambda_{i})^{c_{i}}g_{i}(t)$. Como $\lambda_{j}\neq\lambda_{i}$ para $j\neq i$, se tiene $g_{i}(\lambda_{i})\neq0$. Así, $(t-\lambda_{i})^{c_{i}}$ es un factor de $f(t)$. Si $(t-\lambda_{i})^{c_{i}+1}$ también lo fuera, existiría $h(t)\in K[t]$ con $f(t)=(t-\lambda_{i})^{c_{i}+1}h(t)$, y entonces
-        \begin{equation*}
-            (t-\lambda_{i})^{c_{i}}\big(g_{i}(t)-(t-\lambda_{i})h(t)\big)=0.
-        \end{equation*}
-        Como el producto de dos polinomios no nulos en $K[t]$ es no nulo, se tendría $g_{i}(t)=(t-\lambda_{i})h(t)$, y evaluando en $\lambda_{i}$, $g_{i}(\lambda_{i})=0$, lo cual es una contradicción. Por lo tanto, la multiplicidad de $\lambda_{i}$ es $m_{i}=c_{i}$. Como $\lambda_{i}$ es valor propio, $m_{i}\geq1$, así que $\lambda_{i}$ aparece en la diagonal de $D$, y lo hace exactamente $m_{i}$ veces. Así, los elementos diagonales de $[T]_{\BB}$ son $\lambda_{1},\dots,\lambda_{r}$ y cada $\lambda_{i}$ aparece $m_{i}$ veces.
+        Fijemos $i$. Entonces $f(t)=(t-\lambda_{i})^{c_{i}}g_{i}(t)$, donde $g_{i}(t)$ es el producto de los factores $t-\lambda_{j}$ con $j\neq i$ y de $(-1)^{n}$. Como $\lambda_{j}\neq\lambda_{i}$ para $j\neq i$, se tiene $g_{i}(\lambda_{i})\neq0$. Si $(t-\lambda_{i})^{c_{i}+1}$ fuera un factor de $f(t)$, es decir, $f(t)=(t-\lambda_{i})^{c_{i}+1}h(t)$, al cancelar $(t-\lambda_{i})^{c_{i}}$ se tendría $g_{i}(t)=(t-\lambda_{i})h(t)$, y entonces $g_{i}(\lambda_{i})=0$, lo cual es una contradicción. Así, $c_{i}$ es el mayor entero tal que $(t-\lambda_{i})^{c_{i}}$ es un factor de $f(t)$, es decir, $c_{i}=m_{i}$. Como $m_{i}\geq1$, cada $\lambda_{i}$ aparece en la diagonal de $D$, y lo hace exactamente $m_{i}$ veces.
     \end{proof}
 
     \begin{problema}
@@ -447,11 +416,15 @@
         \begin{equation*}
             f(t)=(-1)^{n}(t-\mu_{1})\cdots(t-\mu_{n})=(\mu_{1}-t)\cdots(\mu_{n}-t).
         \end{equation*}
-        Por el mismo argumento del ejercicio 8, los $\mu_{k}$ son valores propios de $A$ y cada $\lambda_{j}$ aparece exactamente $m_{j}$ veces en la lista $\mu_{1},\dots,\mu_{n}$, de modo que
+        Cada $\mu_{k}$ es raíz de $f$ y está en $K$, así que es un valor propio de $A$, es decir, $\mu_{k}\in\{\lambda_{1},\dots,\lambda_{r}\}$. Para cada $j$, sea $c_{j}$ el número de índices $k$ tales que $\mu_{k}=\lambda_{j}$. Agrupando factores iguales,
+        \begin{equation*}
+            f(t)=(-1)^{n}(t-\lambda_{1})^{c_{1}}\cdots(t-\lambda_{r})^{c_{r}}.
+        \end{equation*}
+        Fijemos $j$. Entonces $f(t)=(t-\lambda_{j})^{c_{j}}g_{j}(t)$, donde $g_{j}(t)$ es el producto de los factores $t-\lambda_{l}$ con $l\neq j$ y de $(-1)^{n}$. Como $\lambda_{l}\neq\lambda_{j}$ para $l\neq j$, se tiene $g_{j}(\lambda_{j})\neq0$. Si $(t-\lambda_{j})^{c_{j}+1}$ fuera un factor de $f(t)$, es decir, $f(t)=(t-\lambda_{j})^{c_{j}+1}h(t)$, al cancelar $(t-\lambda_{j})^{c_{j}}$ se tendría $g_{j}(t)=(t-\lambda_{j})h(t)$, y entonces $g_{j}(\lambda_{j})=0$, lo cual es una contradicción. Así, $c_{j}=m_{j}$, es decir, $\lambda_{j}$ aparece exactamente $m_{j}$ veces en la lista $\mu_{1},\dots,\mu_{n}$. Agrupando los sumandos iguales,
         \begin{equation*}
             \mu_{1}+\cdots+\mu_{n}=\sum_{j=1}^{r}m_{j}\lambda_{j}.
         \end{equation*}
-        Por la fórmula para $(c_{1}-t)\cdots(c_{n}-t)$ obtenida en el inciso (b) del ejercicio 4, aplicada con $c_{k}=\mu_{k}$, el coeficiente de $t^{n-1}$ en $f$ es
+        Al desarrollar el producto $(\mu_{1}-t)\cdots(\mu_{n}-t)$, los términos en $t^{n-1}$ se obtienen al escoger $-t$ en $n-1$ de los factores y $\mu_{k}$ en el restante, así que
         \begin{equation*}
             a_{n-1}=(-1)^{n-1}(\mu_{1}+\cdots+\mu_{n}).
         \end{equation*}
